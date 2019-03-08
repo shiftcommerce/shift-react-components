@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when passed a rating 1`] = `
+<span
+  className="o-rating"
+  key="4"
+>
+  <span
+    className="o-rating__star o-rating__star--fill"
+    key="1"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--fill"
+    key="2"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--fill"
+    key="3"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--fill"
+    key="4"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--empty"
+    key="5"
+  >
+    ★
+  </span>
+</span>
+`;
+
+exports[`renders correctly without a rating 1`] = `
+<span
+  className="o-rating"
+  key="0"
+>
+  <span
+    className="o-rating__star o-rating__star--empty"
+    key="1"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--empty"
+    key="2"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--empty"
+    key="3"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--empty"
+    key="4"
+  >
+    ★
+  </span>
+  <span
+    className="o-rating__star o-rating__star--empty"
+    key="5"
+  >
+    ★
+  </span>
+</span>
+`;

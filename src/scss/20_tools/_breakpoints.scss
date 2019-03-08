@@ -1,0 +1,30 @@
+/* ==========================================================================
+   # Breakpoints Tool
+   ========================================================================== */
+$break-small: 768px !default;
+$break-large: 1024px !default;
+
+$breakpoints: (
+  mob: mobile,
+  tab: tablet,
+  mobtab: mobile-tablet,
+  des: desktop
+);
+
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media only screen and (max-width: $break-small - 1px) { @content; }
+  }
+
+  @else if $point == tablet {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+
+  @else if $point == mobile-tablet {
+    @media only screen and (max-width: $break-large - 1px) { @content; }
+  }
+
+  @else if $point == desktop {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}

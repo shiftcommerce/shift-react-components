@@ -1,0 +1,37 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-register {
+  width: 80%;
+  margin: auto;
+  padding-bottom: $global-spacing-unit;
+
+  @include breakpoint(tablet) {
+    width: 60%;
+  }
+}
+
+  .c-register__anchor {
+    display: block;
+    text-align: center;
+  }
+
+  .c-register__button {
+    text-align: center;
+    width: 100%;
+  }
+
+  .c-register__text {
+    text-align: center;
+  }
+
+    .c-register__text-caption {
+      color: $medium-grey;
+      font-weight: 300;
+    }
+
+    .c-register__text-title {
+      color: $background-primary;
+      font-weight: 500;
+      padding-top: $global-spacing-unit;
+    }

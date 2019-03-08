@@ -1,0 +1,26 @@
+.c-address-form__buttons {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.c-address-form__header {
+  @include breakpoint(tablet) {
+    padding-left: 0;
+  }
+
+  @include breakpoint(desktop) {
+    width: 100%;
+  }
+}
+
+.c-address-form__header-title {
+  margin: 0;
+}
+
+.c-address-form__summary {
+  padding-left: 2px;
+
+  @include breakpoint(tablet) {
+    padding-left: 0;
+  }
+}

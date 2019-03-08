@@ -1,0 +1,233 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-hero {
+  text-align: center;
+  padding-bottom: $global-spacing-unit-tiny;
+}
+
+  .c-hero__content {
+    @include breakpoint(desktop) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $global-body-max-width;
+    }
+  }
+
+  .c-hero__overlay {
+    display: block;
+    background-color: $background-white;
+    z-index: 1;
+    position: relative;
+    padding: 0 $global-spacing-unit-tiny;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+      width: 50%; /* set default width */
+      width: fit-content; /* set better width for browsers that support */
+      min-width: 50%;
+      margin: 0 auto;
+
+      &--overlap_above_tiny {
+        margin-bottom: -$global-spacing-unit-small;
+      }
+
+      &--overlap_below_tiny {
+        margin-top: -$global-spacing-unit-small;
+      }
+
+      &--overlap_above_small {
+        margin-bottom: -$global-spacing-unit;
+      }
+
+      &--overlap_below_small {
+        margin-top: -$global-spacing-unit;
+      }
+
+      &--overlap_above_medium {
+        margin-bottom: -$global-spacing-unit * 2;
+      }
+
+      &--overlap_below_medium {
+        margin-top: -$global-spacing-unit * 2;
+      }
+
+      &--overlap_above_large {
+        margin-bottom: -$global-spacing-unit * 4;
+      }
+
+      &--offset_above_large_1 {
+        margin-top: calc(#{$global-spacing-unit} * 4 - 2rem);
+      }
+
+      &--offset_above_large_2 {
+        margin-top: calc(#{$global-spacing-unit} * 4 - 4rem);
+      }
+
+      &--offset_above_large_3 {
+        margin-top: calc(#{$global-spacing-unit} * 4 - 7rem);
+      }
+
+      &--offset_above_large_4 {
+        margin-top: calc(#{$global-spacing-unit} * 4 - 7rem);
+      }
+
+      &--overlap_below_large {
+        margin-top: -$global-spacing-unit * 4;
+      }
+
+      &--offset_below_large_1 {
+        margin-bottom: calc(#{$global-spacing-unit} * 4 - 2rem);
+      }
+
+      &--offset_below_large_2 {
+        margin-bottom: calc(#{$global-spacing-unit} * 4 - 4rem);
+      }
+
+      &--offset_below_large_3 {
+        margin-bottom: calc(#{$global-spacing-unit} * 4 - 7rem);
+      }
+
+      &--offset_below_large_4 {
+        // margin-bottom: calc(#{$global-spacing-unit} * 4 - 7rem);
+      }
+
+      &--overlap_above_huge {
+        margin-bottom: -$global-spacing-unit * 6;
+      }
+
+      &--offset_above_huge_1 {
+        margin-top: calc(#{$global-spacing-unit} * 6 - 2rem);
+      }
+
+      &--offset_above_huge_2 {
+        margin-top: calc(#{$global-spacing-unit} * 6 - 4rem);
+      }
+
+      &--offset_above_huge_3 {
+        margin-top: calc(#{$global-spacing-unit} * 6 - 7rem);
+      }
+
+      &--offset_above_huge_4 {
+        margin-top: calc(#{$global-spacing-unit} * 6 - 9rem);
+      }
+
+      &--overlap_below_huge {
+        margin-top: -$global-spacing-unit * 6;
+      }
+
+      &--offset_below_huge_1 {
+        margin-bottom: calc(#{$global-spacing-unit} * 6 - 2rem);
+      }
+
+      &--offset_below_huge_2 {
+        margin-bottom: calc(#{$global-spacing-unit} * 6 - 4rem);
+      }
+
+      &--offset_below_huge_3 {
+        margin-bottom: calc(#{$global-spacing-unit} * 6 - 7rem);
+      }
+
+      &--offset_below_huge_4 {
+        margin-bottom: calc(#{$global-spacing-unit} * 6 - 9rem);
+      }
+
+      &--overlap_above_massive {
+        margin-bottom: -$global-spacing-unit * 10;
+      }
+
+      &--offset_above_massive_1 {
+        margin-top: calc(#{$global-spacing-unit} * 10 - 2rem);
+      }
+
+      &--offset_above_massive_2 {
+        margin-top: calc(#{$global-spacing-unit} * 10 - 4rem);
+      }
+
+      &--offset_above_massive_3 {
+        margin-top: calc(#{$global-spacing-unit} * 10 - 7rem);
+      }
+
+      &--offset_above_massive_4 {
+        margin-top: calc(#{$global-spacing-unit} * 10 - 9rem);
+      }
+
+      &--overlap_below_massive {
+        margin-top: -$global-spacing-unit * 10;
+      }
+
+      &--offset_below_massive_1 {
+        margin-bottom: calc(#{$global-spacing-unit} * 10 - 2rem);
+      }
+
+      &--offset_below_massive_2 {
+        margin-bottom: calc(#{$global-spacing-unit} * 10 - 4rem);
+      }
+
+      &--offset_below_massive_3 {
+        margin-bottom: calc(#{$global-spacing-unit} * 10 - 7rem);
+      }
+
+      &--offset_below_massive_4 {
+        margin-bottom: calc(#{$global-spacing-unit} * 10 - 9rem);
+      }
+    }
+  }
+
+  .c-hero__overlay_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: $global-spacing-unit-small auto;
+  }
+
+  .c-hero__overlay_pointer {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2rem solid transparent;
+
+    &--above {
+      border-top: 2rem solid transparent;
+      border-bottom: 2rem solid $background-white;
+      top: -3.9rem; /* - total border height + small margin to ensure it is flush on overlay */
+    }
+
+    &--below {
+      border-top: 2rem solid $background-white;
+      border-bottom: 2rem solid transparent;
+      bottom: -3.9rem; /* small margin to ensure it is flush on overlay  */
+    }
+  }
+
+  .c-hero__overlay_content {
+    padding-top: $global-spacing-unit-tiny;
+    margin-bottom: $global-spacing-unit-small;
+  }
+
+  .c-hero__button {
+    text-align: center;
+    margin-top: $global-spacing-unit-small;
+  }
+
+    .c-hero__button-icon {
+      display: inline-block;
+      background-color: $background-primary;
+      color: $text-light;
+      font-size: .8rem;
+      padding: $global-spacing-unit-small;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+
+      &:visited {
+        color: $text-light;
+      }
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($background-primary, .2);
+        }
+      }
+    }

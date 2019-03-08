@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct props and classnames 1`] = `
+<StaticPageErrorDetails
+  className="dummy-classname"
+  detailsShown={true}
+  errorDetails={
+    Object {
+      "Endpoint": "\\"Lorem ipsum\\"",
+      "Query": "\\"Dolor sit amet\\"",
+      "Response data": "\\"Consectetur adipiscing elit\\"",
+    }
+  }
+  isProduction={false}
+>
+  <div
+    className="dummy-classname c-static-page-error-details"
+  >
+    <p
+      className="c-static-page-error-details__toggle"
+      onClick={[Function]}
+    >
+      Hide details
+    </p>
+    <div
+      className="c-static-page-error-details__list"
+    >
+      <p
+        className="c-static-page-error-details__title"
+      >
+        Endpoint
+      </p>
+      <p
+        className="c-static-page-error-details__value"
+      >
+        "Lorem ipsum"
+      </p>
+      <p
+        className="c-static-page-error-details__title"
+      >
+        Query
+      </p>
+      <p
+        className="c-static-page-error-details__value"
+      >
+        "Dolor sit amet"
+      </p>
+      <p
+        className="c-static-page-error-details__title"
+      >
+        Response data
+      </p>
+      <p
+        className="c-static-page-error-details__value"
+      >
+        "Consectetur adipiscing elit"
+      </p>
+    </div>
+  </div>
+</StaticPageErrorDetails>
+`;
+
+exports[`renders nothing if isProduction is set to true 1`] = `""`;

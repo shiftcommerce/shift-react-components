@@ -1,0 +1,29 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.o-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpoint(desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.o-flex__space-between {
+  justify-content: space-between;
+}
+
+.o-flex-full-width-s {
+  flex-basis: 100%;
+
+  @include breakpoint(desktop) {
+    flex-basis: auto;
+    flex-grow: 1;
+    padding-right: $global-spacing-unit-small;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}

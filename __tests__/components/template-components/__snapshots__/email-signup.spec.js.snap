@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows an error message when submitting an invalid email 1`] = `
+<EmailSignup
+  componentData={
+    Object {
+      "background_colour": "Background colour",
+      "button_text": "Button text",
+      "confirmation_text": "Confirmation text",
+      "cta_text": "CTA Text",
+      "desktop_header": "Desktop header",
+      "placeholder_text": "Placeholder text",
+    }
+  }
+>
+  <section
+    className="o-template-component o-template-component--full-width c-email-signup u-center-align"
+    style={
+      Object {
+        "backgroundColor": "Background colour",
+      }
+    }
+  >
+    <div
+      className="o-template-component__inner-wrapper"
+    >
+      <h1
+        className="c-email-signup__title u-hidden-m"
+      >
+        Desktop header
+      </h1>
+      <p
+        className="c-email-signup__cat"
+      >
+        CTA Text
+      </p>
+      <div
+        className="c-email-signup__form-wrapper"
+      >
+        <input
+          className="c-email-signup__input c-email-signup__input--invalid"
+          onKeyPress={[Function]}
+          placeholder="Placeholder text"
+          required={true}
+          type="email"
+        />
+        <Button
+          className="c-email-signup__button"
+          label="Button text"
+          onClick={[Function]}
+          size="sml"
+          status="primary"
+        >
+          <button
+            className="c-email-signup__button o-button o-button--primary o-button--sml"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Button text
+          </button>
+        </Button>
+      </div>
+      <p
+        className="c-email-signup__error-message"
+      >
+        Constraints not satisfied
+      </p>
+    </div>
+  </section>
+</EmailSignup>
+`;
+
+exports[`shows an error message when submitting and empty form 1`] = `
+<EmailSignup
+  componentData={
+    Object {
+      "background_colour": "Background colour",
+      "button_text": "Button text",
+      "confirmation_text": "Confirmation text",
+      "cta_text": "CTA Text",
+      "desktop_header": "Desktop header",
+      "placeholder_text": "Placeholder text",
+    }
+  }
+>
+  <section
+    className="o-template-component o-template-component--full-width c-email-signup u-center-align"
+    style={
+      Object {
+        "backgroundColor": "Background colour",
+      }
+    }
+  >
+    <div
+      className="o-template-component__inner-wrapper"
+    >
+      <h1
+        className="c-email-signup__title u-hidden-m"
+      >
+        Desktop header
+      </h1>
+      <p
+        className="c-email-signup__cat"
+      >
+        CTA Text
+      </p>
+      <div
+        className="c-email-signup__form-wrapper"
+      >
+        <input
+          className="c-email-signup__input c-email-signup__input--invalid"
+          onKeyPress={[Function]}
+          placeholder="Placeholder text"
+          required={true}
+          type="email"
+        />
+        <Button
+          className="c-email-signup__button"
+          label="Button text"
+          onClick={[Function]}
+          size="sml"
+          status="primary"
+        >
+          <button
+            className="c-email-signup__button o-button o-button--primary o-button--sml"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            Button text
+          </button>
+        </Button>
+      </div>
+      <p
+        className="c-email-signup__error-message"
+      >
+        Constraints not satisfied
+      </p>
+    </div>
+  </section>
+</EmailSignup>
+`;
+
+exports[`shows the confirmation message when submitting something that looks like a valid email 1`] = `
+<EmailSignup
+  componentData={
+    Object {
+      "background_colour": "Background colour",
+      "button_text": "Button text",
+      "confirmation_text": "Confirmation text",
+      "cta_text": "CTA Text",
+      "desktop_header": "Desktop header",
+      "placeholder_text": "Placeholder text",
+    }
+  }
+>
+  <section
+    className="o-template-component o-template-component--full-width c-email-signup u-center-align"
+    style={
+      Object {
+        "backgroundColor": "Background colour",
+      }
+    }
+  >
+    <p
+      className="c-email-signup__cat"
+    >
+      Confirmation text
+    </p>
+  </section>
+</EmailSignup>
+`;

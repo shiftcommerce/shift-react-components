@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="c-product-listing__menu-options"
+>
+  <div
+    className="c-product-listing__menu-options-filters"
+  >
+    <h2
+      className="c-product-listing__menu-options-filters-title"
+    >
+      Filters
+    </h2>
+    <div
+      className="c-product-listing__menu-options-filters-applied"
+    >
+      <AlgoliaCurrentRefinements(UnknownComponent) />
+    </div>
+    <Button
+      className="c-product-listing__menu-options-filters-button"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="c-product-listing__menu-options-sort-by"
+  >
+    <h2
+      className="c-product-listing__menu-options-sort-by-title"
+    >
+      Sort by:
+    </h2>
+    <AlgoliaSortBy(SortBy)
+      defaultRefinement="test_index"
+      items={
+        Array [
+          Object {
+            "label": "Featured",
+            "value": "test_index",
+          },
+          Object {
+            "label": "Rating asc.",
+            "value": "test_index_product_rating_asc",
+          },
+          Object {
+            "label": "Rating desc.",
+            "value": "test_index_product_rating_desc",
+          },
+        ]
+      }
+    />
+    <Button
+      className="c-product-listing__menu-options-sort-by-button u-hidden-d"
+    />
+  </div>
+</div>
+`;

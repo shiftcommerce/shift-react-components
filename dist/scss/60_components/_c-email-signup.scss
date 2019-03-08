@@ -1,0 +1,55 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-email-signup {
+  background-color: $accent-global;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+  .c-email-signup__title {
+    margin: 0;
+    padding: 0;
+    padding-top: $global-spacing-unit;
+  }
+
+  .c-email-signup__cat {
+    font-size: .9rem;
+    padding: $global-spacing-unit $global-spacing-unit-tiny;
+    margin: 0;
+  }
+
+  .c-email-signup__form-wrapper {
+    display: flex;
+    padding: 0 $global-spacing-unit-large;
+    padding-bottom: $global-spacing-unit;
+  }
+
+  .c-email-signup__input {
+    height: 100%;
+    margin-right: 0;
+    font-size: .8rem;
+    padding: $global-spacing-unit-small;
+    border-width: 1px;
+    border-radius: 0;
+    flex-grow: 1;
+
+    &--invalid {
+      background: $background-warning;
+      border: 1px solid $background-primary;
+    }
+  }
+
+  .c-email-signup__button {
+    margin: 0;
+    height: 100%;
+  }
+
+  .c-email-signup__error-message {
+    font-size: .9rem;
+    margin: 0;
+    margin-top: -$global-spacing-unit-tiny;
+    padding: 0 $global-spacing-unit-small;
+    padding-bottom: $global-spacing-unit-small;
+  }

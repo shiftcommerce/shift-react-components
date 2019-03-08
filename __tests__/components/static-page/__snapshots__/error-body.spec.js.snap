@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct child elements and classnames 1`] = `
+<StaticPageErrorBody
+  className="dummy-classname"
+>
+  <div
+    className="dummy-classname c-static-page-error-body"
+  >
+    <h1>
+      Oh no, something went wrong.
+    </h1>
+    <h2>
+      We weren't able to process your request.
+    </h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </div>
+</StaticPageErrorBody>
+`;
+
+exports[`renders correct title and subtitle when passed through as props 1`] = `
+<StaticPageErrorBody
+  subtitle="Dummy Subtitle"
+  title="Dummy Title"
+>
+  <div
+    className="c-static-page-error-body"
+  >
+    <h1>
+      Dummy Title
+    </h1>
+    <h2>
+      Dummy Subtitle
+    </h2>
+  </div>
+</StaticPageErrorBody>
+`;

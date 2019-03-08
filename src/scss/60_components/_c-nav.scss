@@ -1,0 +1,200 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-nav {
+  border: none;
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    width: auto;
+    text-align: left;
+  }
+}
+
+  .c-nav__checkbox {
+    display: none;
+  }
+
+  .c-nav__menu {
+    height: 100vh;
+    overflow-y: scroll;
+    border-right: 1px solid $border-default;
+    background-color: $background-white;
+    position: fixed;
+    right: 100%;
+    transition: right .25s;
+    z-index: $nav-z-index;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+
+    @include breakpoint(desktop) {
+      overflow-y: visible;
+      overflow: hidden;
+      transition: none;
+      border-right: none;
+      position: static;
+      height: auto;
+    }
+  }
+
+    .c-nav__menu-button {
+      flex-basis: 33.3%;
+      flex-grow: 1;
+      cursor: pointer;
+      margin: auto;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+
+      p {
+        text-decoration: none;
+        font-size: .8em;
+        display: inline-block;
+        padding-left: $global-spacing-unit-small;
+      }
+    }
+
+      .c-nav__menu-button-image {
+        display: inline-block;
+
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+
+    .c-nav__menu-list {
+      font-size: 1.25em;
+      margin-top: 136px; // height of the logo and search-bar in mobile menu
+
+      @include breakpoint(desktop) {
+        margin-top: 0;
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .c-nav__menu-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: $background-white;
+      z-index: $nav-z-index + 1;
+      right: 100%;
+      transition: right .25s;
+    }
+
+      .c-nav__menu-header-logo {
+        margin: $global-spacing-unit-small;
+        padding-left: $global-spacing-unit-small;
+        flex-grow: 1;
+
+        @include breakpoint(desktop) {
+          display: none;
+        }
+      }
+
+      .c-nav__menu-header-cross {
+        background: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='isolation:isolate' viewBox='214.188 114.293 16.039 16.056' width='16.039' height='16.056'><g><line x1='214.895' y1='115' x2='229.521' y2='129.643' vector-effect='non-scaling-stroke' stroke-width='1' stroke='rgb(255,255,255)' stroke-linejoin='miter' stroke-linecap='square' stroke-miterlimit='3'/><line x1='229.521' y1='115' x2='214.895' y2='129.643' vector-effect='non-scaling-stroke' stroke-width='1' stroke='rgb(255,255,255)' stroke-linejoin='miter' stroke-linecap='square' stroke-miterlimit='3'/></g></svg>") no-repeat center;
+        height: 4em;
+        width: 4em;
+        background-color: $background-primary;
+
+        @include breakpoint(desktop) {
+          display: none;
+        }
+      }
+
+      .c-nav__menu-header-search {
+        text-align: left;
+        flex-basis: 100%;
+        background-color: $background-light-grey;
+
+        @include breakpoint(desktop) {
+          display: none;
+        }
+      }
+
+  .c-nav__checkbox:checked ~ .c-nav__menu,
+  .c-nav__checkbox:checked ~ .c-nav__menu-header {
+    right: 0;
+  }
+
+  .c-nav__option {
+    background-color: $background-light-grey;
+    padding-left: $global-spacing-unit;
+    padding-top: $global-spacing-unit;
+    text-align: left;
+    width: 100%;
+    display: block;
+    font-weight: 700;
+    border-top: 1px solid $border-default;
+    height: 6em;
+
+    @include breakpoint(desktop) {
+      padding: 0 $global-spacing-unit-small;
+      border-top: none;
+      font-weight: normal;
+      background-color: $background-white;
+      border-left: 1px solid $border-default;
+      height: auto;
+      text-align: center;
+    }
+  }
+
+    .c-nav__option:first-of-type {
+      @include breakpoint(desktop) {
+        border-left: none;
+      }
+    }
+
+    .c-nav__option-label {
+      @include breakpoint(desktop) {
+        padding: $global-spacing-unit-tiny 0;
+        white-space: nowrap;
+        position: relative;
+      }
+    }
+
+      .c-nav__option-label::after {
+        @include breakpoint(desktop) {
+          content: '';
+          display: block;
+          width: 0;
+          margin: auto;
+          height: 3px;
+          background: $alert-orange;
+          transition: width .2s;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .c-nav__option-label:hover::after {
+        @include breakpoint(desktop) {
+          width: 100%;
+        }
+      }
+
+    .c-nav__option-text {
+      font-size: .6em;
+      font-weight: 500;
+      margin-top: $global-spacing-unit-small;
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+
+  .c-nav__error {
+    text-align: center;
+  }

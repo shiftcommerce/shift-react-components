@@ -1,0 +1,1528 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<OrderList
+  orders={
+    Object {
+      "data": Array [
+        Object {
+          "account_reference": "shiftacc",
+          "customer": Object {
+            "email": "test@shiftcommerce.com",
+            "id": "61c40964-4b4c-4f54-b580-958798087312",
+            "meta_attributes": Object {},
+            "name": "SHIFT",
+            "reference": "23063301",
+          },
+          "id": "61c40964-4b4c-4f54-b580-958798087312",
+          "line_items": Array [
+            Object {
+              "discounts": Array [],
+              "id": "61c40964-4b4c-4f54-b580-958798087312_0",
+              "image_urls": Array [
+                "https://example.com/path/to/image.jpg",
+                "https://example.com/path/to/image1.jpg",
+              ],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 1200,
+                "each_inc_tax": 1440,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 6000,
+                "line_inc_tax": 7200,
+                "tax_rate": 12000,
+              },
+              "quantity": 5,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-XXL",
+            },
+            Object {
+              "discounts": Array [
+                Object {
+                  "amount_ex_tax": 200,
+                  "amount_inc_tax": 240,
+                  "coupon_code": "3FOR2SOCKS",
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+                  "label": "3 for 2 on Socks",
+                  "meta_attributes": Object {},
+                },
+              ],
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+              "image_urls": Array [],
+              "individual_prices": Array [
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "61c40964-4b4c-4f54-b580-958798087312_1_0_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "61c40964-4b4c-4f54-b580-958798087312_1_1_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_1",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 66,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 66,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "61c40964-4b4c-4f54-b580-958798087312_1_2_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 134,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_2",
+                  "inc_tax": 160,
+                },
+              ],
+              "pricing": Object {
+                "each_ex_tax": 200,
+                "each_inc_tax": 240,
+                "line_discount_ex_tax": 200,
+                "line_discount_inc_tax": 240,
+                "line_ex_tax": 400,
+                "line_inc_tax": 480,
+                "tax_rate": 12000,
+              },
+              "quantity": 3,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": null,
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+                "lines": Array [
+                  "SHIFT Commerce",
+                  "The Calls Landing",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer 2",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+                "label": "Two-man Delivery",
+                "meta_attributes": Object {
+                  "sku": "DROPSHIP",
+                },
+                "price": 2499,
+              },
+              "sku": "BLACK-SOCKS-001",
+            },
+            Object {
+              "discounts": Array [],
+              "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+              "image_urls": Array [],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 120000,
+                "each_inc_tax": 144000,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 120000,
+                "line_inc_tax": 144000,
+                "tax_rate": 12000,
+              },
+              "quantity": 1,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-L",
+            },
+          ],
+          "placed_at": "2018-01-01T12:00:00.000Z",
+          "pricing": Object {
+            "currency": "GBP",
+            "pre_discount_total_ex_tax": 126600,
+            "pre_discount_total_inc_tax": 151440,
+            "total_discount_ex_tax": 700,
+            "total_discount_inc_tax": 840,
+            "total_ex_tax": 125900,
+            "total_inc_tax": 150600,
+          },
+          "reference": "1000",
+          "shipping_addresses": Array [
+            Object {
+              "city": "Leeds",
+              "company": "SHIFT Commerce",
+              "country": "United Kingdom",
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+              "lines": Array [
+                "The Calls",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+            Object {
+              "city": "Leeds",
+              "company": null,
+              "country": "United Kingdom",
+              "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+              "lines": Array [
+                "SHIFT Commerce",
+                "The Calls Landing",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer 2",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+          ],
+          "shipping_methods": Array [
+            Object {
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+              "label": "Next Day Delivery",
+              "meta_attributes": Object {
+                "sku": "NEXTDAY",
+              },
+              "price": 599,
+            },
+            Object {
+              "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+              "label": "Two-man Delivery",
+              "meta_attributes": Object {
+                "sku": "DROPSHIP",
+              },
+              "price": 2499,
+            },
+          ],
+        },
+        Object {
+          "account_reference": "shiftacc",
+          "customer": Object {
+            "email": "test@shiftcommerce.com",
+            "id": "fda3fcff-92c7-414a-bdea-156cde21a926",
+            "meta_attributes": Object {},
+            "name": "SHIFT",
+            "reference": "23063301",
+          },
+          "id": "fda3fcff-92c7-414a-bdea-156cde21a926",
+          "line_items": Array [
+            Object {
+              "discounts": Array [],
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_0",
+              "image_urls": Array [
+                "https://example.com/path/to/image.jpg",
+                "https://example.com/path/to/image1.jpg",
+              ],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 1200,
+                "each_inc_tax": 1440,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 6000,
+                "line_inc_tax": 7200,
+                "tax_rate": 12000,
+              },
+              "quantity": 5,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-XXL",
+            },
+            Object {
+              "discounts": Array [
+                Object {
+                  "amount_ex_tax": 200,
+                  "amount_inc_tax": 240,
+                  "coupon_code": "3FOR2SOCKS",
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_0",
+                  "label": "3 for 2 on Socks",
+                  "meta_attributes": Object {},
+                },
+              ],
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+              "image_urls": Array [],
+              "individual_prices": Array [
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_0_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_0",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_1_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_1",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 66,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 66,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_2_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 134,
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_2",
+                  "inc_tax": 160,
+                },
+              ],
+              "pricing": Object {
+                "each_ex_tax": 200,
+                "each_inc_tax": 240,
+                "line_discount_ex_tax": 200,
+                "line_discount_inc_tax": 240,
+                "line_ex_tax": 400,
+                "line_inc_tax": 480,
+                "tax_rate": 12000,
+              },
+              "quantity": 3,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": null,
+                "country": "United Kingdom",
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+                "lines": Array [
+                  "SHIFT Commerce",
+                  "The Calls Landing",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer 2",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+                "label": "Two-man Delivery",
+                "meta_attributes": Object {
+                  "sku": "DROPSHIP",
+                },
+                "price": 2499,
+              },
+              "sku": "BLACK-SOCKS-001",
+            },
+            Object {
+              "discounts": Array [],
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+              "image_urls": Array [],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 120000,
+                "each_inc_tax": 144000,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 120000,
+                "line_inc_tax": 144000,
+                "tax_rate": 12000,
+              },
+              "quantity": 1,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-L",
+            },
+          ],
+          "placed_at": "2018-01-01T12:00:00.000Z",
+          "pricing": Object {
+            "currency": "GBP",
+            "pre_discount_total_ex_tax": 126600,
+            "pre_discount_total_inc_tax": 151440,
+            "total_discount_ex_tax": 700,
+            "total_discount_inc_tax": 840,
+            "total_ex_tax": 125900,
+            "total_inc_tax": 160600,
+          },
+          "reference": "1001",
+          "shipping_addresses": Array [
+            Object {
+              "city": "Leeds",
+              "company": "SHIFT Commerce",
+              "country": "United Kingdom",
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+              "lines": Array [
+                "The Calls",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+            Object {
+              "city": "Leeds",
+              "company": null,
+              "country": "United Kingdom",
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+              "lines": Array [
+                "SHIFT Commerce",
+                "The Calls Landing",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer 2",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+          ],
+          "shipping_methods": Array [
+            Object {
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+              "label": "Next Day Delivery",
+              "meta_attributes": Object {
+                "sku": "NEXTDAY",
+              },
+              "price": 599,
+            },
+            Object {
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+              "label": "Two-man Delivery",
+              "meta_attributes": Object {
+                "sku": "DROPSHIP",
+              },
+              "price": 2499,
+            },
+          ],
+        },
+      ],
+      "loading": false,
+      "pagination": Object {
+        "first": "http://host.docker.internal:4000/oms/v1/order_histories?fields%5Border_histories%5D=account_reference%2Creference%2Cplaced_at%2Ccustomer%2Cpricing%2Cline_items%2Cshipping_addresses%2Cshipping_methods&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cbilling_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cline_items.individual_prices%2Cline_items.individual_prices.discounts%2Cpayments.billing_address&page%5Blimit%5D=10&page%5Boffset%5D=0",
+        "last": "http://host.docker.internal:4000/oms/v1/order_histories?fields%5Border_histories%5D=account_reference%2Creference%2Cplaced_at%2Ccustomer%2Cpricing%2Cline_items%2Cshipping_addresses%2Cshipping_methods&include=customer%2Cshipping_methods%2Cshipping_addresses%2Cbilling_addresses%2Cdiscounts%2Cline_items%2Cline_items.shipping_method%2Cline_items.shipping_address%2Cline_items.discounts%2Cline_items.individual_prices%2Cline_items.individual_prices.discounts%2Cpayments.billing_address&page%5Blimit%5D=10&page%5Boffset%5D=0",
+      },
+    }
+  }
+>
+  <div
+    className="c-order-history__header"
+    key="61c40964-4b4c-4f54-b580-958798087312"
+  >
+    <h4>
+      Jan 1, 2018
+       - 
+      1000
+       - £
+      1506.00
+    </h4>
+    <label
+      className="c-order-history__header-label"
+      htmlFor="1000"
+    />
+    <input
+      id="1000"
+      type="checkbox"
+    />
+    <span
+      className="c-order-history__arrow"
+    />
+    <div
+      className="c-order-history__details"
+    >
+      <div
+        className="c-order-history__order-summary"
+      >
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Date of Order: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            Jan 1, 2018
+          </a>
+        </div>
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Items: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            3
+          </a>
+        </div>
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Order Number: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            1000
+          </a>
+        </div>
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Total: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            £
+            1506.00
+          </a>
+        </div>
+      </div>
+      <OrderLineItems
+        items={
+          Array [
+            Object {
+              "discounts": Array [],
+              "id": "61c40964-4b4c-4f54-b580-958798087312_0",
+              "image_urls": Array [
+                "https://example.com/path/to/image.jpg",
+                "https://example.com/path/to/image1.jpg",
+              ],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 1200,
+                "each_inc_tax": 1440,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 6000,
+                "line_inc_tax": 7200,
+                "tax_rate": 12000,
+              },
+              "quantity": 5,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-XXL",
+            },
+            Object {
+              "discounts": Array [
+                Object {
+                  "amount_ex_tax": 200,
+                  "amount_inc_tax": 240,
+                  "coupon_code": "3FOR2SOCKS",
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+                  "label": "3 for 2 on Socks",
+                  "meta_attributes": Object {},
+                },
+              ],
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+              "image_urls": Array [],
+              "individual_prices": Array [
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "61c40964-4b4c-4f54-b580-958798087312_1_0_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "61c40964-4b4c-4f54-b580-958798087312_1_1_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_1",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 66,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 66,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "61c40964-4b4c-4f54-b580-958798087312_1_2_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 134,
+                  "id": "61c40964-4b4c-4f54-b580-958798087312_1_2",
+                  "inc_tax": 160,
+                },
+              ],
+              "pricing": Object {
+                "each_ex_tax": 200,
+                "each_inc_tax": 240,
+                "line_discount_ex_tax": 200,
+                "line_discount_inc_tax": 240,
+                "line_ex_tax": 400,
+                "line_inc_tax": 480,
+                "tax_rate": 12000,
+              },
+              "quantity": 3,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": null,
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+                "lines": Array [
+                  "SHIFT Commerce",
+                  "The Calls Landing",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer 2",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+                "label": "Two-man Delivery",
+                "meta_attributes": Object {
+                  "sku": "DROPSHIP",
+                },
+                "price": 2499,
+              },
+              "sku": "BLACK-SOCKS-001",
+            },
+            Object {
+              "discounts": Array [],
+              "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+              "image_urls": Array [],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 120000,
+                "each_inc_tax": 144000,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 120000,
+                "line_inc_tax": 144000,
+                "tax_rate": 12000,
+              },
+              "quantity": 1,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-L",
+            },
+          ]
+        }
+      >
+        <div
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-XXL"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              WHITE-TSHIRT-XXL
+            </h5>
+            <h4>
+              WHITE-TSHIRT-XXL
+            </h4>
+            <span>
+              Quantity: 
+              5
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              72.00
+            </a>
+          </div>
+        </div>
+        <div
+          className="c-order-history__line-items_grid"
+          key="BLACK-SOCKS-001"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              BLACK-SOCKS-001
+            </h5>
+            <h4>
+              BLACK-SOCKS-001
+            </h4>
+            <span>
+              Quantity: 
+              3
+            </span>
+            <span>
+              Delivery: 
+              Two-man Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer 2
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              4.80
+            </a>
+          </div>
+        </div>
+        <div
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-L"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              WHITE-TSHIRT-L
+            </h5>
+            <h4>
+              WHITE-TSHIRT-L
+            </h4>
+            <span>
+              Quantity: 
+              1
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              1440.00
+            </a>
+          </div>
+        </div>
+      </OrderLineItems>
+      <div
+        className="c-order-history__totals"
+      >
+        <p>
+          Shipping: £
+          30.98
+           
+        </p>
+        <p
+          className="u-bold"
+        >
+          Total: £
+          1506.00
+        </p>
+      </div>
+      <h3>
+        Shipping Details
+      </h3>
+      <ShippingAddresses
+        addresses={
+          Array [
+            Object {
+              "city": "Leeds",
+              "company": "SHIFT Commerce",
+              "country": "United Kingdom",
+              "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+              "lines": Array [
+                "The Calls",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+            Object {
+              "city": "Leeds",
+              "company": null,
+              "country": "United Kingdom",
+              "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+              "lines": Array [
+                "SHIFT Commerce",
+                "The Calls Landing",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer 2",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+          ]
+        }
+      >
+        <div
+          className="c-order-history__shipping-address"
+          key="61c40964-4b4c-4f54-b580-958798087312_1"
+        >
+          <p
+            className="u-bold"
+          >
+            Test Customer
+          </p>
+          <p>
+            SHIFT Commerce
+          </p>
+          <p>
+            The Calls
+          </p>
+          <p>
+            Leeds
+          </p>
+          <p>
+            West Yorkshire
+          </p>
+          <p>
+            LS2 7EY
+          </p>
+          <p>
+            United Kingdom
+          </p>
+        </div>
+        <div
+          className="c-order-history__shipping-address"
+          key="61c40964-4b4c-4f54-b580-958798087312_2"
+        >
+          <p
+            className="u-bold"
+          >
+            Test Customer 2
+          </p>
+          <p />
+          <p>
+            SHIFT Commerce,The Calls Landing
+          </p>
+          <p>
+            Leeds
+          </p>
+          <p>
+            West Yorkshire
+          </p>
+          <p>
+            LS2 7EY
+          </p>
+          <p>
+            United Kingdom
+          </p>
+        </div>
+      </ShippingAddresses>
+    </div>
+  </div>
+  <div
+    className="c-order-history__header"
+    key="fda3fcff-92c7-414a-bdea-156cde21a926"
+  >
+    <h4>
+      Jan 1, 2018
+       - 
+      1001
+       - £
+      1606.00
+    </h4>
+    <label
+      className="c-order-history__header-label"
+      htmlFor="1001"
+    />
+    <input
+      id="1001"
+      type="checkbox"
+    />
+    <span
+      className="c-order-history__arrow"
+    />
+    <div
+      className="c-order-history__details"
+    >
+      <div
+        className="c-order-history__order-summary"
+      >
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Date of Order: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            Jan 1, 2018
+          </a>
+        </div>
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Items: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            3
+          </a>
+        </div>
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Order Number: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            1001
+          </a>
+        </div>
+        <div
+          className="c-order-history__order-summary_params"
+        >
+          <p
+            className="u-bold u-inline-block"
+          >
+            Total: 
+          </p>
+          <a
+            className="u-inline-block"
+          >
+            £
+            1606.00
+          </a>
+        </div>
+      </div>
+      <OrderLineItems
+        items={
+          Array [
+            Object {
+              "discounts": Array [],
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_0",
+              "image_urls": Array [
+                "https://example.com/path/to/image.jpg",
+                "https://example.com/path/to/image1.jpg",
+              ],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 1200,
+                "each_inc_tax": 1440,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 6000,
+                "line_inc_tax": 7200,
+                "tax_rate": 12000,
+              },
+              "quantity": 5,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-XXL",
+            },
+            Object {
+              "discounts": Array [
+                Object {
+                  "amount_ex_tax": 200,
+                  "amount_inc_tax": 240,
+                  "coupon_code": "3FOR2SOCKS",
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_0",
+                  "label": "3 for 2 on Socks",
+                  "meta_attributes": Object {},
+                },
+              ],
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+              "image_urls": Array [],
+              "individual_prices": Array [
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_0_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_0",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 67,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 67,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_1_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 133,
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_1",
+                  "inc_tax": 160,
+                },
+                Object {
+                  "discount_ex_tax": 66,
+                  "discount_inc_tax": 80,
+                  "discounts": Array [
+                    Object {
+                      "amount_ex_tax": 66,
+                      "amount_inc_tax": 80,
+                      "coupon_code": null,
+                      "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_2_0",
+                      "label": "3 for 2 on Socks",
+                      "meta_attributes": Object {},
+                    },
+                  ],
+                  "ex_tax": 134,
+                  "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1_2",
+                  "inc_tax": 160,
+                },
+              ],
+              "pricing": Object {
+                "each_ex_tax": 200,
+                "each_inc_tax": 240,
+                "line_discount_ex_tax": 200,
+                "line_discount_inc_tax": 240,
+                "line_ex_tax": 400,
+                "line_inc_tax": 480,
+                "tax_rate": 12000,
+              },
+              "quantity": 3,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": null,
+                "country": "United Kingdom",
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+                "lines": Array [
+                  "SHIFT Commerce",
+                  "The Calls Landing",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer 2",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+                "label": "Two-man Delivery",
+                "meta_attributes": Object {
+                  "sku": "DROPSHIP",
+                },
+                "price": 2499,
+              },
+              "sku": "BLACK-SOCKS-001",
+            },
+            Object {
+              "discounts": Array [],
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+              "image_urls": Array [],
+              "individual_prices": Array [],
+              "pricing": Object {
+                "each_ex_tax": 120000,
+                "each_inc_tax": 144000,
+                "line_discount_ex_tax": 0,
+                "line_discount_inc_tax": 0,
+                "line_ex_tax": 120000,
+                "line_inc_tax": 144000,
+                "tax_rate": 12000,
+              },
+              "quantity": 1,
+              "shipping_address": Object {
+                "city": "Leeds",
+                "company": "SHIFT Commerce",
+                "country": "United Kingdom",
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "lines": Array [
+                  "The Calls",
+                ],
+                "meta_attributes": Object {
+                  "further": "information",
+                },
+                "name": "Test Customer",
+                "postcode": "LS2 7EY",
+                "state": "West Yorkshire",
+              },
+              "shipping_method": Object {
+                "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+                "label": "Next Day Delivery",
+                "meta_attributes": Object {
+                  "sku": "NEXTDAY",
+                },
+                "price": 599,
+              },
+              "sku": "WHITE-TSHIRT-L",
+            },
+          ]
+        }
+      >
+        <div
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-XXL"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              WHITE-TSHIRT-XXL
+            </h5>
+            <h4>
+              WHITE-TSHIRT-XXL
+            </h4>
+            <span>
+              Quantity: 
+              5
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              72.00
+            </a>
+          </div>
+        </div>
+        <div
+          className="c-order-history__line-items_grid"
+          key="BLACK-SOCKS-001"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              BLACK-SOCKS-001
+            </h5>
+            <h4>
+              BLACK-SOCKS-001
+            </h4>
+            <span>
+              Quantity: 
+              3
+            </span>
+            <span>
+              Delivery: 
+              Two-man Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer 2
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              4.80
+            </a>
+          </div>
+        </div>
+        <div
+          className="c-order-history__line-items_grid"
+          key="WHITE-TSHIRT-L"
+        >
+          <div
+            className="c-order-history__line-items_grid_item1"
+          >
+            <h5>
+              WHITE-TSHIRT-L
+            </h5>
+            <h4>
+              WHITE-TSHIRT-L
+            </h4>
+            <span>
+              Quantity: 
+              1
+            </span>
+            <span>
+              Delivery: 
+              Next Day Delivery
+            </span>
+            <span>
+              Address: 
+              Test Customer
+            </span>
+          </div>
+          <div
+            className="c-order-history__line-items_grid_item2"
+          >
+            <a>
+              £
+              1440.00
+            </a>
+          </div>
+        </div>
+      </OrderLineItems>
+      <div
+        className="c-order-history__totals"
+      >
+        <p>
+          Shipping: £
+          30.98
+           
+        </p>
+        <p
+          className="u-bold"
+        >
+          Total: £
+          1606.00
+        </p>
+      </div>
+      <h3>
+        Shipping Details
+      </h3>
+      <ShippingAddresses
+        addresses={
+          Array [
+            Object {
+              "city": "Leeds",
+              "company": "SHIFT Commerce",
+              "country": "United Kingdom",
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_1",
+              "lines": Array [
+                "The Calls",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+            Object {
+              "city": "Leeds",
+              "company": null,
+              "country": "United Kingdom",
+              "id": "fda3fcff-92c7-414a-bdea-156cde21a926_2",
+              "lines": Array [
+                "SHIFT Commerce",
+                "The Calls Landing",
+              ],
+              "meta_attributes": Object {
+                "further": "information",
+              },
+              "name": "Test Customer 2",
+              "postcode": "LS2 7EY",
+              "state": "West Yorkshire",
+            },
+          ]
+        }
+      >
+        <div
+          className="c-order-history__shipping-address"
+          key="fda3fcff-92c7-414a-bdea-156cde21a926_1"
+        >
+          <p
+            className="u-bold"
+          >
+            Test Customer
+          </p>
+          <p>
+            SHIFT Commerce
+          </p>
+          <p>
+            The Calls
+          </p>
+          <p>
+            Leeds
+          </p>
+          <p>
+            West Yorkshire
+          </p>
+          <p>
+            LS2 7EY
+          </p>
+          <p>
+            United Kingdom
+          </p>
+        </div>
+        <div
+          className="c-order-history__shipping-address"
+          key="fda3fcff-92c7-414a-bdea-156cde21a926_2"
+        >
+          <p
+            className="u-bold"
+          >
+            Test Customer 2
+          </p>
+          <p />
+          <p>
+            SHIFT Commerce,The Calls Landing
+          </p>
+          <p>
+            Leeds
+          </p>
+          <p>
+            West Yorkshire
+          </p>
+          <p>
+            LS2 7EY
+          </p>
+          <p>
+            United Kingdom
+          </p>
+        </div>
+      </ShippingAddresses>
+    </div>
+  </div>
+</OrderList>
+`;

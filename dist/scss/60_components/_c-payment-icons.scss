@@ -1,0 +1,33 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-payment-icons {
+  display: none;
+  border-top: 1px solid $border-default;
+
+  @include breakpoint(desktop) {
+    display: block;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: .9em;
+  }
+}
+
+.c-payment-icons__images {
+  margin: auto;
+  text-align: center;
+}
+
+.c-payment-icons__image {
+  width: 35px;
+  display: inline-block;
+  margin: $global-spacing-unit-tiny;
+
+  @include breakpoint(desktop) {
+    width: 45px;
+    margin: $global-spacing-unit-small;
+    margin-bottom: $global-spacing-unit;
+  }
+}

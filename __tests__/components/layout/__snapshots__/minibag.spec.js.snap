@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Minibag renders a disabled checkout button when cart is empty 1`] = `
+<Minibag
+  cart={
+    Object {
+      "line_items": Array [],
+      "line_items_count": 0,
+    }
+  }
+>
+  <div
+    className="c-header__minibag c-minibag"
+  >
+    <Link
+      className="c-minibag__cart"
+      href="/cart"
+    >
+      <a
+        className="c-minibag__cart"
+        href="/cart"
+      >
+        <div
+          className="c-minibag__cart-image"
+        >
+          <span
+            className="c-minibag__cart-image-count"
+          >
+            0
+          </span>
+          <Image
+            className="c-minibag__cart-image-icon"
+            src={Object {}}
+          >
+            <div
+              className="c-minibag__cart-image-icon"
+            >
+              <picture>
+                <img
+                  className="o-image"
+                  src={Object {}}
+                  srcSet="[object Object] 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+        </div>
+        <span
+          className="c-minibag__cart-label"
+        >
+          Basket
+        </span>
+      </a>
+    </Link>
+    <div
+      className="c-minibag__checkout"
+    >
+      <Link
+        className="o-button o-button--primary o-button--disabled"
+        href=""
+      >
+        <a
+          className="o-button o-button--primary o-button--disabled"
+          href=""
+        >
+          Checkout
+        </a>
+      </Link>
+    </div>
+  </div>
+</Minibag>
+`;
+
+exports[`Minibag renders an active checkout button when cart has items 1`] = `
+<Minibag
+  cart={
+    Object {
+      "line_items": Array [
+        Object {
+          "discount": 0,
+          "image_url": "",
+          "price": 10,
+          "productID": 1,
+          "productSku": "1231",
+          "quantity": 2,
+          "size": "size - 8",
+          "sku": "123",
+          "title": "test",
+        },
+      ],
+      "line_items_count": 2,
+    }
+  }
+>
+  <div
+    className="c-header__minibag c-minibag"
+  >
+    <Link
+      className="c-minibag__cart"
+      href="/cart"
+    >
+      <a
+        className="c-minibag__cart"
+        href="/cart"
+      >
+        <div
+          className="c-minibag__cart-image"
+        >
+          <span
+            className="c-minibag__cart-image-count"
+          >
+            2
+          </span>
+          <Image
+            className="c-minibag__cart-image-icon"
+            src={Object {}}
+          >
+            <div
+              className="c-minibag__cart-image-icon"
+            >
+              <picture>
+                <img
+                  className="o-image"
+                  src={Object {}}
+                  srcSet="[object Object] 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+        </div>
+        <span
+          className="c-minibag__cart-label"
+        >
+          Basket
+        </span>
+      </a>
+    </Link>
+    <div
+      className="c-minibag__checkout"
+    >
+      <Link
+        className="o-button o-button--primary"
+        href="/checkout"
+      >
+        <a
+          className="o-button o-button--primary"
+          href="/checkout"
+        >
+          Checkout
+        </a>
+      </Link>
+    </div>
+  </div>
+</Minibag>
+`;
+
+exports[`Minibag renders the minibag links 1`] = `
+<Minibag
+  cart={
+    Object {
+      "line_items": Array [],
+      "line_items_count": 0,
+    }
+  }
+  className="dummy-classname"
+>
+  <div
+    className="dummy-classname c-header__minibag c-minibag"
+  >
+    <Link
+      className="c-minibag__cart"
+      href="/cart"
+    >
+      <a
+        className="c-minibag__cart"
+        href="/cart"
+      >
+        <div
+          className="c-minibag__cart-image"
+        >
+          <span
+            className="c-minibag__cart-image-count"
+          >
+            0
+          </span>
+          <Image
+            className="c-minibag__cart-image-icon"
+            src={Object {}}
+          >
+            <div
+              className="c-minibag__cart-image-icon"
+            >
+              <picture>
+                <img
+                  className="o-image"
+                  src={Object {}}
+                  srcSet="[object Object] 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+        </div>
+        <span
+          className="c-minibag__cart-label"
+        >
+          Basket
+        </span>
+      </a>
+    </Link>
+    <div
+      className="c-minibag__checkout"
+    >
+      <Link
+        className="o-button o-button--primary o-button--disabled"
+        href=""
+      >
+        <a
+          className="o-button o-button--primary o-button--disabled"
+          href=""
+        >
+          Checkout
+        </a>
+      </Link>
+    </div>
+  </div>
+</Minibag>
+`;

@@ -1,0 +1,3204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PDP renders correctly when an in stock variant has been selected 1`] = `
+<ProductDisplay
+  addToBag={[Function]}
+  changeVariant={[Function]}
+  price=""
+  product={
+    Object {
+      "asset_files": Array [
+        Object {
+          "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "created_at": "2018-09-24T15:41:57Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+          "file_content_size": 24096,
+          "id": "139",
+          "image_height": 600,
+          "image_width": 600,
+          "meta_attributes": Object {},
+          "name": "SEPIA nonslip tray 420×210mm.jpg",
+          "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "updated_at": "2018-09-24T15:43:05Z",
+        },
+      ],
+      "attribute_merchandising": Object {},
+      "available_to_browse": false,
+      "average_rating": 0,
+      "bundles": Array [],
+      "canonical_path": "/products/seed_product_51",
+      "category_ids_cache": Array [
+        58,
+        59,
+      ],
+      "content_type": "markdown",
+      "created_at": "2018-09-24T15:43:05Z",
+      "deleted_at": null,
+      "description": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "error": false,
+      "ewis_status": "not_ewis_eligible",
+      "has_assets": true,
+      "id": "175",
+      "loading": false,
+      "max_current_price": 97.68,
+      "max_price": 97.68,
+      "merchandised": true,
+      "merged_attribute_merchandising": Object {},
+      "meta_attributes": Object {},
+      "min_current_price": 16.95,
+      "min_price": 16.95,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "published": true,
+      "rating": 0,
+      "reference": "seed_product_51",
+      "sellable": true,
+      "seo_meta_description": "Product 51 - Ut quam iusto ea.",
+      "seo_meta_keywords": "in, voluptatem, aut, fugit, quo",
+      "seo_meta_title": "SEPIA nonslip tray 420×210mm",
+      "slug": "seed_product_51",
+      "template": null,
+      "title": "SEPIA nonslip tray 420×210mm",
+      "total_ratings": null,
+      "updated_at": "2018-11-05T11:23:18Z",
+      "variants": Array [
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 16.95,
+          "deleted_at": null,
+          "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "343",
+          "meta_attributes": Object {},
+          "ordered_total": 10,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 16.95,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "dolor_50_1",
+          "sku": "9337040128595",
+          "stock_allocated_level": 10,
+          "stock_available_level": 1,
+          "stock_level": 11,
+          "tax_code": "vat",
+          "title": "Variant 1",
+          "updated_at": "2018-11-05T11:23:16Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "344",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_2",
+          "sku": "0927967530244",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 2",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": true,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "345",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_3",
+          "sku": "0927967530245",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 3",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+      ],
+      "web_product_description": "Product 51 - Perspiciatis recusandae voluptatem culpa.",
+      "web_product_name": "SEPIA nonslip tray 420×210mm",
+    }
+  }
+  quantity={1}
+  selectedVariant={
+    Object {
+      "available_to_browse": false,
+      "available_to_order": false,
+      "created_at": "2018-09-24T15:43:05Z",
+      "current_price": 16.95,
+      "deleted_at": null,
+      "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "ewis_eligible": false,
+      "expected_availability_date": null,
+      "has_assets": true,
+      "id": "343",
+      "meta_attributes": Object {},
+      "ordered_total": 10,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "position": null,
+      "price": 16.95,
+      "price_includes_taxes": true,
+      "product_id": 175,
+      "reference": "dolor_50_1",
+      "sku": "9337040128595",
+      "stock_allocated_level": 10,
+      "stock_available_level": 1,
+      "stock_level": 11,
+      "tax_code": "vat",
+      "title": "Variant 1",
+      "updated_at": "2018-11-05T11:23:16Z",
+    }
+  }
+  sku=""
+  stockAvailableLevel={0}
+  variant=""
+  variantId="343"
+>
+  <div
+    className="c-product-display"
+  >
+    <div
+      className="c-product-display__body"
+    >
+      <div
+        className="c-product-display__content-image"
+      >
+        <div
+          className="c-product-display__carousel"
+        >
+          <ProductCarousel
+            assetFiles={
+              Array [
+                Object {
+                  "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "created_at": "2018-09-24T15:41:57Z",
+                  "deleted_at": null,
+                  "file_content_content_type": "image/jpeg",
+                  "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+                  "file_content_size": 24096,
+                  "id": "139",
+                  "image_height": 600,
+                  "image_width": 600,
+                  "meta_attributes": Object {},
+                  "name": "SEPIA nonslip tray 420×210mm.jpg",
+                  "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+                  "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "updated_at": "2018-09-24T15:43:05Z",
+                },
+              ]
+            }
+          >
+            <Carousel
+              autoPlay={false}
+              axis="horizontal"
+              centerMode={false}
+              centerSlidePercentage={80}
+              dynamicHeight={false}
+              emulateTouch={false}
+              infiniteLoop={false}
+              interval={3000}
+              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+              onChange={[Function]}
+              onClickItem={[Function]}
+              onClickThumb={[Function]}
+              selectedItem={0}
+              showArrows={true}
+              showIndicators={true}
+              showStatus={false}
+              showThumbs={true}
+              statusFormatter={[Function]}
+              stopOnHover={true}
+              swipeScrollTolerance={5}
+              swipeable={true}
+              transitionTime={350}
+              useKeyboardArrows={true}
+              verticalSwipe="standard"
+              width="100%"
+            >
+              <div>
+                <div
+                  className="carousel carousel-slider"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <button
+                    className="control-arrow control-prev control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <div
+                    className="slider-wrapper axis-horizontal"
+                    style={Object {}}
+                  >
+                    <ReactSwipe
+                      allowMouseEvents={false}
+                      className="slider animated"
+                      onSwipeDown={[Function]}
+                      onSwipeEnd={[Function]}
+                      onSwipeLeft={[Function]}
+                      onSwipeMove={[Function]}
+                      onSwipeRight={[Function]}
+                      onSwipeStart={[Function]}
+                      onSwipeUp={[Function]}
+                      selectedItem={0}
+                      style={
+                        Object {
+                          "MozTransform": "translate3d(0%,0,0)",
+                          "MozTransitionDuration": "350ms",
+                          "MsTransform": "translate3d(0%,0,0)",
+                          "MsTransitionDuration": "350ms",
+                          "OTransform": "translate3d(0%,0,0)",
+                          "OTransitionDuration": "350ms",
+                          "WebkitTransform": "translate3d(0%,0,0)",
+                          "WebkitTransitionDuration": "350ms",
+                          "msTransform": "translate3d(0%,0,0)",
+                          "msTransitionDuration": "350ms",
+                          "transform": "translate3d(0%,0,0)",
+                          "transitionDuration": "350ms",
+                        }
+                      }
+                      tagName="ul"
+                      tolerance={5}
+                    >
+                      <ul
+                        className="slider animated"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(0%,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(0%,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(0%,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(0%,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(0%,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(0%,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                      >
+                        <li
+                          className="slide selected"
+                          key="itemKey0/.$0"
+                          onClick={[Function]}
+                        >
+                          <img
+                            key="0"
+                            src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                          />
+                        </li>
+                      </ul>
+                    </ReactSwipe>
+                  </div>
+                  <button
+                    className="control-arrow control-next control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <ul
+                    className="control-dots"
+                  >
+                    <li
+                      className="dot selected"
+                      key=".$0"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={0}
+                      value={0}
+                    />
+                  </ul>
+                </div>
+                <Thumbs
+                  axis="horizontal"
+                  onSelectItem={[Function]}
+                  selectedItem={0}
+                  transitionTime={350}
+                >
+                  <div
+                    className="carousel"
+                  >
+                    <div
+                      className="thumbs-wrapper axis-vertical"
+                    >
+                      <button
+                        className="control-arrow control-prev control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                      <ReactSwipe
+                        allowMouseEvents={false}
+                        className="thumbs animated"
+                        onSwipeDown={[Function]}
+                        onSwipeEnd={[Function]}
+                        onSwipeLeft={[Function]}
+                        onSwipeMove={[Function]}
+                        onSwipeRight={[Function]}
+                        onSwipeStart={[Function]}
+                        onSwipeUp={[Function]}
+                        selectedItem={0}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(NaNpx,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(NaNpx,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(NaNpx,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(NaNpx,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(NaNpx,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(NaNpx,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                        tagName="ul"
+                        tolerance={0}
+                      >
+                        <ul
+                          className="thumbs animated"
+                          onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "MozTransform": "translate3d(NaNpx,0,0)",
+                              "MozTransitionDuration": "350ms",
+                              "MsTransform": "translate3d(NaNpx,0,0)",
+                              "MsTransitionDuration": "350ms",
+                              "OTransform": "translate3d(NaNpx,0,0)",
+                              "OTransitionDuration": "350ms",
+                              "WebkitTransform": "translate3d(NaNpx,0,0)",
+                              "WebkitTransitionDuration": "350ms",
+                              "msTransform": "translate3d(NaNpx,0,0)",
+                              "msTransitionDuration": "350ms",
+                              "transform": "translate3d(NaNpx,0,0)",
+                              "transitionDuration": "350ms",
+                            }
+                          }
+                        >
+                          <li
+                            className="thumb"
+                            key="0"
+                            onClick={[Function]}
+                            onKeyDown={[Function]}
+                            role="button"
+                            tabIndex={0}
+                          >
+                            <img
+                              key=".$0"
+                              onLoad={[Function]}
+                              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                            />
+                          </li>
+                        </ul>
+                      </ReactSwipe>
+                      <button
+                        className="control-arrow control-next control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </div>
+                  </div>
+                </Thumbs>
+              </div>
+            </Carousel>
+          </ProductCarousel>
+        </div>
+      </div>
+      <div
+        className="c-product-display__content-details"
+      >
+        <div
+          className="c-product-display__info"
+        >
+          <div
+            className="c-product-display__info-title"
+          >
+            SEPIA nonslip tray 420×210mm - Variant 1
+          </div>
+          <div
+            className="c-product-display__info-sku"
+          >
+            9337040128595
+          </div>
+          <div
+            className="c-product-display__info-price"
+          >
+            <ProductPrice
+              maxPrice={16.95}
+              minPrice={16.95}
+            >
+              <div
+                className="c-product-price"
+              >
+                <span>
+                  £
+                  16.95
+                </span>
+              </div>
+            </ProductPrice>
+          </div>
+          <div
+            className="c-product-display__info-rating"
+          >
+            <Rating
+              className="o-rating__star--has-spacing o-rating__star--fs-small"
+              rating={0}
+            >
+              <span
+                className="o-rating"
+                key="0"
+              >
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+              </span>
+            </Rating>
+            <p
+              className="c-product-display__info-reviews"
+            >
+              Read Reviews
+            </p>
+          </div>
+          <div
+            className="c-product-display__info-variant"
+          >
+            <VariantSelector
+              aria-label="Variant Selector"
+              name="line_item[item_id]"
+              onClick={[Function]}
+              prompt="Select a Product"
+              value=""
+              variants={
+                Array [
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 16.95,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "343",
+                    "meta_attributes": Object {},
+                    "ordered_total": 10,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 16.95,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "dolor_50_1",
+                    "sku": "9337040128595",
+                    "stock_allocated_level": 10,
+                    "stock_available_level": 1,
+                    "stock_level": 11,
+                    "tax_code": "vat",
+                    "title": "Variant 1",
+                    "updated_at": "2018-11-05T11:23:16Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "344",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_2",
+                    "sku": "0927967530244",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 2",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": true,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "345",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_3",
+                    "sku": "0927967530245",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 3",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                ]
+              }
+            >
+              <div
+                aria-label="Variant Selector"
+                className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
+              >
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
+                >
+                  <button
+                    aria-posinset={1}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={16.95}
+                    data-stock-available-level={1}
+                    data-variant-id="343"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="9337040128595"
+                  >
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
+                    aria-posinset={2}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="344"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530244"
+                  >
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
+                    aria-posinset={3}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="345"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530245"
+                  >
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
+              </div>
+            </VariantSelector>
+          </div>
+        </div>
+        <div
+          className="c-product-display__buttons"
+        >
+          <Button
+            aria-label="Add to Basket"
+            className="c-product-display__buttons-basket o-button--sml"
+            label="add to basket"
+            onClick={[Function]}
+            status="positive"
+          >
+            <button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+              disabled={false}
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+            >
+              add to basket
+            </button>
+          </Button>
+        </div>
+        <div
+          className="c-product-display__body-dropdowns"
+        >
+          <div
+            className="c-product-display__description"
+          >
+            <h1
+              className="c-product-display__description-title"
+            >
+              Product Details
+            </h1>
+            <label
+              className="c-product-dispay__label"
+              htmlFor="description"
+            />
+            <input
+              id="description"
+              type="checkbox"
+            />
+            <span
+              className="c-product-display__arrow"
+            />
+            <div
+              className="c-product-display__description-text"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ProductDisplay>
+`;
+
+exports[`PDP renders correctly when an out of stock variant has been selected 1`] = `
+<ProductDisplay
+  addToBag={[Function]}
+  changeVariant={[Function]}
+  price=""
+  product={
+    Object {
+      "asset_files": Array [
+        Object {
+          "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "created_at": "2018-09-24T15:41:57Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+          "file_content_size": 24096,
+          "id": "139",
+          "image_height": 600,
+          "image_width": 600,
+          "meta_attributes": Object {},
+          "name": "SEPIA nonslip tray 420×210mm.jpg",
+          "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "updated_at": "2018-09-24T15:43:05Z",
+        },
+      ],
+      "attribute_merchandising": Object {},
+      "available_to_browse": false,
+      "average_rating": 0,
+      "bundles": Array [],
+      "canonical_path": "/products/seed_product_51",
+      "category_ids_cache": Array [
+        58,
+        59,
+      ],
+      "content_type": "markdown",
+      "created_at": "2018-09-24T15:43:05Z",
+      "deleted_at": null,
+      "description": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "error": false,
+      "ewis_status": "not_ewis_eligible",
+      "has_assets": true,
+      "id": "175",
+      "loading": false,
+      "max_current_price": 97.68,
+      "max_price": 97.68,
+      "merchandised": true,
+      "merged_attribute_merchandising": Object {},
+      "meta_attributes": Object {},
+      "min_current_price": 16.95,
+      "min_price": 16.95,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "published": true,
+      "rating": 0,
+      "reference": "seed_product_51",
+      "sellable": true,
+      "seo_meta_description": "Product 51 - Ut quam iusto ea.",
+      "seo_meta_keywords": "in, voluptatem, aut, fugit, quo",
+      "seo_meta_title": "SEPIA nonslip tray 420×210mm",
+      "slug": "seed_product_51",
+      "template": null,
+      "title": "SEPIA nonslip tray 420×210mm",
+      "total_ratings": null,
+      "updated_at": "2018-11-05T11:23:18Z",
+      "variants": Array [
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 16.95,
+          "deleted_at": null,
+          "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "343",
+          "meta_attributes": Object {},
+          "ordered_total": 10,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 16.95,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "dolor_50_1",
+          "sku": "9337040128595",
+          "stock_allocated_level": 10,
+          "stock_available_level": 1,
+          "stock_level": 11,
+          "tax_code": "vat",
+          "title": "Variant 1",
+          "updated_at": "2018-11-05T11:23:16Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "344",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_2",
+          "sku": "0927967530244",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 2",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": true,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "345",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_3",
+          "sku": "0927967530245",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 3",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+      ],
+      "web_product_description": "Product 51 - Perspiciatis recusandae voluptatem culpa.",
+      "web_product_name": "SEPIA nonslip tray 420×210mm",
+    }
+  }
+  quantity={1}
+  selectedVariant={
+    Object {
+      "available_to_browse": false,
+      "available_to_order": false,
+      "created_at": "2018-09-24T15:43:05Z",
+      "current_price": 97.68,
+      "deleted_at": null,
+      "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "ewis_eligible": false,
+      "expected_availability_date": null,
+      "has_assets": true,
+      "id": "344",
+      "meta_attributes": Object {},
+      "ordered_total": 1,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "position": null,
+      "price": 97.68,
+      "price_includes_taxes": true,
+      "product_id": 175,
+      "reference": "voluptas_50_2",
+      "sku": "0927967530244",
+      "stock_allocated_level": 1,
+      "stock_available_level": 0,
+      "stock_level": 1,
+      "tax_code": "vat",
+      "title": "Variant 2",
+      "updated_at": "2018-10-31T10:24:00Z",
+    }
+  }
+  sku=""
+  stockAvailableLevel={0}
+  variant=""
+  variantId="344"
+>
+  <div
+    className="c-product-display"
+  >
+    <div
+      className="c-product-display__body"
+    >
+      <div
+        className="c-product-display__content-image"
+      >
+        <div
+          className="c-product-display__carousel"
+        >
+          <ProductCarousel
+            assetFiles={
+              Array [
+                Object {
+                  "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "created_at": "2018-09-24T15:41:57Z",
+                  "deleted_at": null,
+                  "file_content_content_type": "image/jpeg",
+                  "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+                  "file_content_size": 24096,
+                  "id": "139",
+                  "image_height": 600,
+                  "image_width": 600,
+                  "meta_attributes": Object {},
+                  "name": "SEPIA nonslip tray 420×210mm.jpg",
+                  "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+                  "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "updated_at": "2018-09-24T15:43:05Z",
+                },
+              ]
+            }
+          >
+            <Carousel
+              autoPlay={false}
+              axis="horizontal"
+              centerMode={false}
+              centerSlidePercentage={80}
+              dynamicHeight={false}
+              emulateTouch={false}
+              infiniteLoop={false}
+              interval={3000}
+              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+              onChange={[Function]}
+              onClickItem={[Function]}
+              onClickThumb={[Function]}
+              selectedItem={0}
+              showArrows={true}
+              showIndicators={true}
+              showStatus={false}
+              showThumbs={true}
+              statusFormatter={[Function]}
+              stopOnHover={true}
+              swipeScrollTolerance={5}
+              swipeable={true}
+              transitionTime={350}
+              useKeyboardArrows={true}
+              verticalSwipe="standard"
+              width="100%"
+            >
+              <div>
+                <div
+                  className="carousel carousel-slider"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <button
+                    className="control-arrow control-prev control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <div
+                    className="slider-wrapper axis-horizontal"
+                    style={Object {}}
+                  >
+                    <ReactSwipe
+                      allowMouseEvents={false}
+                      className="slider animated"
+                      onSwipeDown={[Function]}
+                      onSwipeEnd={[Function]}
+                      onSwipeLeft={[Function]}
+                      onSwipeMove={[Function]}
+                      onSwipeRight={[Function]}
+                      onSwipeStart={[Function]}
+                      onSwipeUp={[Function]}
+                      selectedItem={0}
+                      style={
+                        Object {
+                          "MozTransform": "translate3d(0%,0,0)",
+                          "MozTransitionDuration": "350ms",
+                          "MsTransform": "translate3d(0%,0,0)",
+                          "MsTransitionDuration": "350ms",
+                          "OTransform": "translate3d(0%,0,0)",
+                          "OTransitionDuration": "350ms",
+                          "WebkitTransform": "translate3d(0%,0,0)",
+                          "WebkitTransitionDuration": "350ms",
+                          "msTransform": "translate3d(0%,0,0)",
+                          "msTransitionDuration": "350ms",
+                          "transform": "translate3d(0%,0,0)",
+                          "transitionDuration": "350ms",
+                        }
+                      }
+                      tagName="ul"
+                      tolerance={5}
+                    >
+                      <ul
+                        className="slider animated"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(0%,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(0%,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(0%,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(0%,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(0%,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(0%,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                      >
+                        <li
+                          className="slide selected"
+                          key="itemKey0/.$0"
+                          onClick={[Function]}
+                        >
+                          <img
+                            key="0"
+                            src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                          />
+                        </li>
+                      </ul>
+                    </ReactSwipe>
+                  </div>
+                  <button
+                    className="control-arrow control-next control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <ul
+                    className="control-dots"
+                  >
+                    <li
+                      className="dot selected"
+                      key=".$0"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={0}
+                      value={0}
+                    />
+                  </ul>
+                </div>
+                <Thumbs
+                  axis="horizontal"
+                  onSelectItem={[Function]}
+                  selectedItem={0}
+                  transitionTime={350}
+                >
+                  <div
+                    className="carousel"
+                  >
+                    <div
+                      className="thumbs-wrapper axis-vertical"
+                    >
+                      <button
+                        className="control-arrow control-prev control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                      <ReactSwipe
+                        allowMouseEvents={false}
+                        className="thumbs animated"
+                        onSwipeDown={[Function]}
+                        onSwipeEnd={[Function]}
+                        onSwipeLeft={[Function]}
+                        onSwipeMove={[Function]}
+                        onSwipeRight={[Function]}
+                        onSwipeStart={[Function]}
+                        onSwipeUp={[Function]}
+                        selectedItem={0}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(NaNpx,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(NaNpx,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(NaNpx,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(NaNpx,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(NaNpx,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(NaNpx,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                        tagName="ul"
+                        tolerance={0}
+                      >
+                        <ul
+                          className="thumbs animated"
+                          onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "MozTransform": "translate3d(NaNpx,0,0)",
+                              "MozTransitionDuration": "350ms",
+                              "MsTransform": "translate3d(NaNpx,0,0)",
+                              "MsTransitionDuration": "350ms",
+                              "OTransform": "translate3d(NaNpx,0,0)",
+                              "OTransitionDuration": "350ms",
+                              "WebkitTransform": "translate3d(NaNpx,0,0)",
+                              "WebkitTransitionDuration": "350ms",
+                              "msTransform": "translate3d(NaNpx,0,0)",
+                              "msTransitionDuration": "350ms",
+                              "transform": "translate3d(NaNpx,0,0)",
+                              "transitionDuration": "350ms",
+                            }
+                          }
+                        >
+                          <li
+                            className="thumb"
+                            key="0"
+                            onClick={[Function]}
+                            onKeyDown={[Function]}
+                            role="button"
+                            tabIndex={0}
+                          >
+                            <img
+                              key=".$0"
+                              onLoad={[Function]}
+                              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                            />
+                          </li>
+                        </ul>
+                      </ReactSwipe>
+                      <button
+                        className="control-arrow control-next control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </div>
+                  </div>
+                </Thumbs>
+              </div>
+            </Carousel>
+          </ProductCarousel>
+        </div>
+      </div>
+      <div
+        className="c-product-display__content-details"
+      >
+        <div
+          className="c-product-display__info"
+        >
+          <div
+            className="c-product-display__info-title"
+          >
+            SEPIA nonslip tray 420×210mm - Variant 2
+          </div>
+          <div
+            className="c-product-display__info-sku"
+          >
+            0927967530244
+          </div>
+          <div
+            className="c-product-display__info-price"
+          >
+            <ProductPrice
+              maxPrice={97.68}
+              minPrice={97.68}
+            >
+              <div
+                className="c-product-price"
+              >
+                <span>
+                  £
+                  97.68
+                </span>
+              </div>
+            </ProductPrice>
+          </div>
+          <div
+            className="c-product-display__info-rating"
+          >
+            <Rating
+              className="o-rating__star--has-spacing o-rating__star--fs-small"
+              rating={0}
+            >
+              <span
+                className="o-rating"
+                key="0"
+              >
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+              </span>
+            </Rating>
+            <p
+              className="c-product-display__info-reviews"
+            >
+              Read Reviews
+            </p>
+          </div>
+          <div
+            className="c-product-display__info-variant"
+          >
+            <VariantSelector
+              aria-label="Variant Selector"
+              name="line_item[item_id]"
+              onClick={[Function]}
+              prompt="Select a Product"
+              value=""
+              variants={
+                Array [
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 16.95,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "343",
+                    "meta_attributes": Object {},
+                    "ordered_total": 10,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 16.95,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "dolor_50_1",
+                    "sku": "9337040128595",
+                    "stock_allocated_level": 10,
+                    "stock_available_level": 1,
+                    "stock_level": 11,
+                    "tax_code": "vat",
+                    "title": "Variant 1",
+                    "updated_at": "2018-11-05T11:23:16Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "344",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_2",
+                    "sku": "0927967530244",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 2",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": true,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "345",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_3",
+                    "sku": "0927967530245",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 3",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                ]
+              }
+            >
+              <div
+                aria-label="Variant Selector"
+                className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
+              >
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
+                >
+                  <button
+                    aria-posinset={1}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={16.95}
+                    data-stock-available-level={1}
+                    data-variant-id="343"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="9337040128595"
+                  >
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
+                    aria-posinset={2}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="344"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530244"
+                  >
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
+                    aria-posinset={3}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="345"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530245"
+                  >
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
+              </div>
+            </VariantSelector>
+          </div>
+        </div>
+        <div
+          className="c-product-display__buttons"
+        >
+          <Button
+            aria-label="Add to Basket"
+            className="c-product-display__buttons-basket o-button--sml"
+            label="add to basket"
+            onClick={null}
+            status="disabled"
+          >
+            <button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket o-button--sml o-button o-button--disabled"
+              disabled={false}
+              onClick={null}
+              role="button"
+              tabIndex="0"
+            >
+              add to basket
+            </button>
+          </Button>
+        </div>
+        <div
+          className="c-product-display__body-dropdowns"
+        >
+          <div
+            className="c-product-display__description"
+          >
+            <h1
+              className="c-product-display__description-title"
+            >
+              Product Details
+            </h1>
+            <label
+              className="c-product-dispay__label"
+              htmlFor="description"
+            />
+            <input
+              id="description"
+              type="checkbox"
+            />
+            <span
+              className="c-product-display__arrow"
+            />
+            <div
+              className="c-product-display__description-text"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ProductDisplay>
+`;
+
+exports[`PDP renders correctly when an out of stock, "Email When In Stock" enabled variant has been selected 1`] = `
+<ProductDisplay
+  addToBag={[Function]}
+  changeVariant={[Function]}
+  price=""
+  product={
+    Object {
+      "asset_files": Array [
+        Object {
+          "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "created_at": "2018-09-24T15:41:57Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+          "file_content_size": 24096,
+          "id": "139",
+          "image_height": 600,
+          "image_width": 600,
+          "meta_attributes": Object {},
+          "name": "SEPIA nonslip tray 420×210mm.jpg",
+          "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "updated_at": "2018-09-24T15:43:05Z",
+        },
+      ],
+      "attribute_merchandising": Object {},
+      "available_to_browse": false,
+      "average_rating": 0,
+      "bundles": Array [],
+      "canonical_path": "/products/seed_product_51",
+      "category_ids_cache": Array [
+        58,
+        59,
+      ],
+      "content_type": "markdown",
+      "created_at": "2018-09-24T15:43:05Z",
+      "deleted_at": null,
+      "description": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "error": false,
+      "ewis_status": "not_ewis_eligible",
+      "has_assets": true,
+      "id": "175",
+      "loading": false,
+      "max_current_price": 97.68,
+      "max_price": 97.68,
+      "merchandised": true,
+      "merged_attribute_merchandising": Object {},
+      "meta_attributes": Object {},
+      "min_current_price": 16.95,
+      "min_price": 16.95,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "published": true,
+      "rating": 0,
+      "reference": "seed_product_51",
+      "sellable": true,
+      "seo_meta_description": "Product 51 - Ut quam iusto ea.",
+      "seo_meta_keywords": "in, voluptatem, aut, fugit, quo",
+      "seo_meta_title": "SEPIA nonslip tray 420×210mm",
+      "slug": "seed_product_51",
+      "template": null,
+      "title": "SEPIA nonslip tray 420×210mm",
+      "total_ratings": null,
+      "updated_at": "2018-11-05T11:23:18Z",
+      "variants": Array [
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 16.95,
+          "deleted_at": null,
+          "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "343",
+          "meta_attributes": Object {},
+          "ordered_total": 10,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 16.95,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "dolor_50_1",
+          "sku": "9337040128595",
+          "stock_allocated_level": 10,
+          "stock_available_level": 1,
+          "stock_level": 11,
+          "tax_code": "vat",
+          "title": "Variant 1",
+          "updated_at": "2018-11-05T11:23:16Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "344",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_2",
+          "sku": "0927967530244",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 2",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": true,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "345",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_3",
+          "sku": "0927967530245",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 3",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+      ],
+      "web_product_description": "Product 51 - Perspiciatis recusandae voluptatem culpa.",
+      "web_product_name": "SEPIA nonslip tray 420×210mm",
+    }
+  }
+  quantity={1}
+  selectedVariant={
+    Object {
+      "available_to_browse": false,
+      "available_to_order": false,
+      "created_at": "2018-09-24T15:43:05Z",
+      "current_price": 97.68,
+      "deleted_at": null,
+      "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "ewis_eligible": true,
+      "expected_availability_date": null,
+      "has_assets": true,
+      "id": "345",
+      "meta_attributes": Object {},
+      "ordered_total": 1,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "position": null,
+      "price": 97.68,
+      "price_includes_taxes": true,
+      "product_id": 175,
+      "reference": "voluptas_50_3",
+      "sku": "0927967530245",
+      "stock_allocated_level": 1,
+      "stock_available_level": 0,
+      "stock_level": 1,
+      "tax_code": "vat",
+      "title": "Variant 3",
+      "updated_at": "2018-10-31T10:24:00Z",
+    }
+  }
+  sku=""
+  stockAvailableLevel={0}
+  variant=""
+  variantId="345"
+>
+  <div
+    className="c-product-display"
+  >
+    <div
+      className="c-product-display__body"
+    >
+      <div
+        className="c-product-display__content-image"
+      >
+        <div
+          className="c-product-display__carousel"
+        >
+          <ProductCarousel
+            assetFiles={
+              Array [
+                Object {
+                  "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "created_at": "2018-09-24T15:41:57Z",
+                  "deleted_at": null,
+                  "file_content_content_type": "image/jpeg",
+                  "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+                  "file_content_size": 24096,
+                  "id": "139",
+                  "image_height": 600,
+                  "image_width": 600,
+                  "meta_attributes": Object {},
+                  "name": "SEPIA nonslip tray 420×210mm.jpg",
+                  "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+                  "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "updated_at": "2018-09-24T15:43:05Z",
+                },
+              ]
+            }
+          >
+            <Carousel
+              autoPlay={false}
+              axis="horizontal"
+              centerMode={false}
+              centerSlidePercentage={80}
+              dynamicHeight={false}
+              emulateTouch={false}
+              infiniteLoop={false}
+              interval={3000}
+              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+              onChange={[Function]}
+              onClickItem={[Function]}
+              onClickThumb={[Function]}
+              selectedItem={0}
+              showArrows={true}
+              showIndicators={true}
+              showStatus={false}
+              showThumbs={true}
+              statusFormatter={[Function]}
+              stopOnHover={true}
+              swipeScrollTolerance={5}
+              swipeable={true}
+              transitionTime={350}
+              useKeyboardArrows={true}
+              verticalSwipe="standard"
+              width="100%"
+            >
+              <div>
+                <div
+                  className="carousel carousel-slider"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <button
+                    className="control-arrow control-prev control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <div
+                    className="slider-wrapper axis-horizontal"
+                    style={Object {}}
+                  >
+                    <ReactSwipe
+                      allowMouseEvents={false}
+                      className="slider animated"
+                      onSwipeDown={[Function]}
+                      onSwipeEnd={[Function]}
+                      onSwipeLeft={[Function]}
+                      onSwipeMove={[Function]}
+                      onSwipeRight={[Function]}
+                      onSwipeStart={[Function]}
+                      onSwipeUp={[Function]}
+                      selectedItem={0}
+                      style={
+                        Object {
+                          "MozTransform": "translate3d(0%,0,0)",
+                          "MozTransitionDuration": "350ms",
+                          "MsTransform": "translate3d(0%,0,0)",
+                          "MsTransitionDuration": "350ms",
+                          "OTransform": "translate3d(0%,0,0)",
+                          "OTransitionDuration": "350ms",
+                          "WebkitTransform": "translate3d(0%,0,0)",
+                          "WebkitTransitionDuration": "350ms",
+                          "msTransform": "translate3d(0%,0,0)",
+                          "msTransitionDuration": "350ms",
+                          "transform": "translate3d(0%,0,0)",
+                          "transitionDuration": "350ms",
+                        }
+                      }
+                      tagName="ul"
+                      tolerance={5}
+                    >
+                      <ul
+                        className="slider animated"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(0%,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(0%,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(0%,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(0%,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(0%,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(0%,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                      >
+                        <li
+                          className="slide selected"
+                          key="itemKey0/.$0"
+                          onClick={[Function]}
+                        >
+                          <img
+                            key="0"
+                            src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                          />
+                        </li>
+                      </ul>
+                    </ReactSwipe>
+                  </div>
+                  <button
+                    className="control-arrow control-next control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <ul
+                    className="control-dots"
+                  >
+                    <li
+                      className="dot selected"
+                      key=".$0"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={0}
+                      value={0}
+                    />
+                  </ul>
+                </div>
+                <Thumbs
+                  axis="horizontal"
+                  onSelectItem={[Function]}
+                  selectedItem={0}
+                  transitionTime={350}
+                >
+                  <div
+                    className="carousel"
+                  >
+                    <div
+                      className="thumbs-wrapper axis-vertical"
+                    >
+                      <button
+                        className="control-arrow control-prev control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                      <ReactSwipe
+                        allowMouseEvents={false}
+                        className="thumbs animated"
+                        onSwipeDown={[Function]}
+                        onSwipeEnd={[Function]}
+                        onSwipeLeft={[Function]}
+                        onSwipeMove={[Function]}
+                        onSwipeRight={[Function]}
+                        onSwipeStart={[Function]}
+                        onSwipeUp={[Function]}
+                        selectedItem={0}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(NaNpx,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(NaNpx,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(NaNpx,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(NaNpx,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(NaNpx,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(NaNpx,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                        tagName="ul"
+                        tolerance={0}
+                      >
+                        <ul
+                          className="thumbs animated"
+                          onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "MozTransform": "translate3d(NaNpx,0,0)",
+                              "MozTransitionDuration": "350ms",
+                              "MsTransform": "translate3d(NaNpx,0,0)",
+                              "MsTransitionDuration": "350ms",
+                              "OTransform": "translate3d(NaNpx,0,0)",
+                              "OTransitionDuration": "350ms",
+                              "WebkitTransform": "translate3d(NaNpx,0,0)",
+                              "WebkitTransitionDuration": "350ms",
+                              "msTransform": "translate3d(NaNpx,0,0)",
+                              "msTransitionDuration": "350ms",
+                              "transform": "translate3d(NaNpx,0,0)",
+                              "transitionDuration": "350ms",
+                            }
+                          }
+                        >
+                          <li
+                            className="thumb"
+                            key="0"
+                            onClick={[Function]}
+                            onKeyDown={[Function]}
+                            role="button"
+                            tabIndex={0}
+                          >
+                            <img
+                              key=".$0"
+                              onLoad={[Function]}
+                              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                            />
+                          </li>
+                        </ul>
+                      </ReactSwipe>
+                      <button
+                        className="control-arrow control-next control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </div>
+                  </div>
+                </Thumbs>
+              </div>
+            </Carousel>
+          </ProductCarousel>
+        </div>
+      </div>
+      <div
+        className="c-product-display__content-details"
+      >
+        <div
+          className="c-product-display__info"
+        >
+          <div
+            className="c-product-display__info-title"
+          >
+            SEPIA nonslip tray 420×210mm - Variant 3
+          </div>
+          <div
+            className="c-product-display__info-sku"
+          >
+            0927967530245
+          </div>
+          <div
+            className="c-product-display__info-price"
+          >
+            <ProductPrice
+              maxPrice={97.68}
+              minPrice={97.68}
+            >
+              <div
+                className="c-product-price"
+              >
+                <span>
+                  £
+                  97.68
+                </span>
+              </div>
+            </ProductPrice>
+          </div>
+          <div
+            className="c-product-display__info-rating"
+          >
+            <Rating
+              className="o-rating__star--has-spacing o-rating__star--fs-small"
+              rating={0}
+            >
+              <span
+                className="o-rating"
+                key="0"
+              >
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+              </span>
+            </Rating>
+            <p
+              className="c-product-display__info-reviews"
+            >
+              Read Reviews
+            </p>
+          </div>
+          <div
+            className="c-product-display__info-variant"
+          >
+            <VariantSelector
+              aria-label="Variant Selector"
+              name="line_item[item_id]"
+              onClick={[Function]}
+              prompt="Select a Product"
+              value=""
+              variants={
+                Array [
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 16.95,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "343",
+                    "meta_attributes": Object {},
+                    "ordered_total": 10,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 16.95,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "dolor_50_1",
+                    "sku": "9337040128595",
+                    "stock_allocated_level": 10,
+                    "stock_available_level": 1,
+                    "stock_level": 11,
+                    "tax_code": "vat",
+                    "title": "Variant 1",
+                    "updated_at": "2018-11-05T11:23:16Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "344",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_2",
+                    "sku": "0927967530244",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 2",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": true,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "345",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_3",
+                    "sku": "0927967530245",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 3",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                ]
+              }
+            >
+              <div
+                aria-label="Variant Selector"
+                className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
+              >
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
+                >
+                  <button
+                    aria-posinset={1}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={16.95}
+                    data-stock-available-level={1}
+                    data-variant-id="343"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="9337040128595"
+                  >
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
+                    aria-posinset={2}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="344"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530244"
+                  >
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
+                    aria-posinset={3}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="345"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530245"
+                  >
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
+              </div>
+            </VariantSelector>
+          </div>
+        </div>
+        <div
+          className="c-product-display__buttons"
+        >
+          <ProductEwisForm>
+            <_class
+              className="c-ewis-form__input-field"
+              placeholder="Email"
+            >
+              <Input
+                className="c-ewis-form__input-field"
+                placeholder="Email"
+                renderValidationMessage={[Function]}
+              >
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    className="o-form__label"
+                  >
+                    <b>
+                       
+                    </b>
+                    <input
+                      checked={false}
+                      className="o-form__input-field c-ewis-form__input-field"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="Email"
+                    />
+                  </label>
+                </div>
+              </Input>
+            </_class>
+            <Button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket o-button--sml"
+              label="Email When in Stock"
+              onClick={[Function]}
+              status="positive"
+            >
+              <button
+                aria-label="Add to Basket"
+                className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+                disabled={false}
+                onClick={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                Email When in Stock
+              </button>
+            </Button>
+          </ProductEwisForm>
+        </div>
+        <div
+          className="c-product-display__body-dropdowns"
+        >
+          <div
+            className="c-product-display__description"
+          >
+            <h1
+              className="c-product-display__description-title"
+            >
+              Product Details
+            </h1>
+            <label
+              className="c-product-dispay__label"
+              htmlFor="description"
+            />
+            <input
+              id="description"
+              type="checkbox"
+            />
+            <span
+              className="c-product-display__arrow"
+            />
+            <div
+              className="c-product-display__description-text"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ProductDisplay>
+`;
+
+exports[`PDP renders correctly when no variant is selected 1`] = `
+<ProductDisplay
+  addToBag={[Function]}
+  changeVariant={[Function]}
+  price=""
+  product={
+    Object {
+      "asset_files": Array [
+        Object {
+          "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "created_at": "2018-09-24T15:41:57Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+          "file_content_size": 24096,
+          "id": "139",
+          "image_height": 600,
+          "image_width": 600,
+          "meta_attributes": Object {},
+          "name": "SEPIA nonslip tray 420×210mm.jpg",
+          "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "updated_at": "2018-09-24T15:43:05Z",
+        },
+      ],
+      "attribute_merchandising": Object {},
+      "available_to_browse": false,
+      "average_rating": 0,
+      "bundles": Array [],
+      "canonical_path": "/products/seed_product_51",
+      "category_ids_cache": Array [
+        58,
+        59,
+      ],
+      "content_type": "markdown",
+      "created_at": "2018-09-24T15:43:05Z",
+      "deleted_at": null,
+      "description": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+      "error": false,
+      "ewis_status": "not_ewis_eligible",
+      "has_assets": true,
+      "id": "175",
+      "loading": false,
+      "max_current_price": 97.68,
+      "max_price": 97.68,
+      "merchandised": true,
+      "merged_attribute_merchandising": Object {},
+      "meta_attributes": Object {},
+      "min_current_price": 16.95,
+      "min_price": 16.95,
+      "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+      "published": true,
+      "rating": 0,
+      "reference": "seed_product_51",
+      "sellable": true,
+      "seo_meta_description": "Product 51 - Ut quam iusto ea.",
+      "seo_meta_keywords": "in, voluptatem, aut, fugit, quo",
+      "seo_meta_title": "SEPIA nonslip tray 420×210mm",
+      "slug": "seed_product_51",
+      "template": null,
+      "title": "SEPIA nonslip tray 420×210mm",
+      "total_ratings": null,
+      "updated_at": "2018-11-05T11:23:18Z",
+      "variants": Array [
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 16.95,
+          "deleted_at": null,
+          "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "343",
+          "meta_attributes": Object {},
+          "ordered_total": 10,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 16.95,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "dolor_50_1",
+          "sku": "9337040128595",
+          "stock_allocated_level": 10,
+          "stock_available_level": 1,
+          "stock_level": 11,
+          "tax_code": "vat",
+          "title": "Variant 1",
+          "updated_at": "2018-11-05T11:23:16Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": false,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "344",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_2",
+          "sku": "0927967530244",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 2",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+        Object {
+          "available_to_browse": false,
+          "available_to_order": false,
+          "created_at": "2018-09-24T15:43:05Z",
+          "current_price": 97.68,
+          "deleted_at": null,
+          "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+          "ewis_eligible": true,
+          "expected_availability_date": null,
+          "has_assets": true,
+          "id": "345",
+          "meta_attributes": Object {},
+          "ordered_total": 1,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+          "position": null,
+          "price": 97.68,
+          "price_includes_taxes": true,
+          "product_id": 175,
+          "reference": "voluptas_50_3",
+          "sku": "0927967530245",
+          "stock_allocated_level": 1,
+          "stock_available_level": 0,
+          "stock_level": 1,
+          "tax_code": "vat",
+          "title": "Variant 3",
+          "updated_at": "2018-10-31T10:24:00Z",
+        },
+      ],
+      "web_product_description": "Product 51 - Perspiciatis recusandae voluptatem culpa.",
+      "web_product_name": "SEPIA nonslip tray 420×210mm",
+    }
+  }
+  quantity={1}
+  sku=""
+  stockAvailableLevel={0}
+  variant=""
+  variantId={null}
+>
+  <div
+    className="c-product-display"
+  >
+    <div
+      className="c-product-display__body"
+    >
+      <div
+        className="c-product-display__content-image"
+      >
+        <div
+          className="c-product-display__carousel"
+        >
+          <ProductCarousel
+            assetFiles={
+              Array [
+                Object {
+                  "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "created_at": "2018-09-24T15:41:57Z",
+                  "deleted_at": null,
+                  "file_content_content_type": "image/jpeg",
+                  "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+                  "file_content_size": 24096,
+                  "id": "139",
+                  "image_height": 600,
+                  "image_width": 600,
+                  "meta_attributes": Object {},
+                  "name": "SEPIA nonslip tray 420×210mm.jpg",
+                  "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+                  "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                  "updated_at": "2018-09-24T15:43:05Z",
+                },
+              ]
+            }
+          >
+            <Carousel
+              autoPlay={false}
+              axis="horizontal"
+              centerMode={false}
+              centerSlidePercentage={80}
+              dynamicHeight={false}
+              emulateTouch={false}
+              infiniteLoop={false}
+              interval={3000}
+              key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+              onChange={[Function]}
+              onClickItem={[Function]}
+              onClickThumb={[Function]}
+              selectedItem={0}
+              showArrows={true}
+              showIndicators={true}
+              showStatus={false}
+              showThumbs={true}
+              statusFormatter={[Function]}
+              stopOnHover={true}
+              swipeScrollTolerance={5}
+              swipeable={true}
+              transitionTime={350}
+              useKeyboardArrows={true}
+              verticalSwipe="standard"
+              width="100%"
+            >
+              <div>
+                <div
+                  className="carousel carousel-slider"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <button
+                    className="control-arrow control-prev control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <div
+                    className="slider-wrapper axis-horizontal"
+                    style={Object {}}
+                  >
+                    <ReactSwipe
+                      allowMouseEvents={false}
+                      className="slider animated"
+                      onSwipeDown={[Function]}
+                      onSwipeEnd={[Function]}
+                      onSwipeLeft={[Function]}
+                      onSwipeMove={[Function]}
+                      onSwipeRight={[Function]}
+                      onSwipeStart={[Function]}
+                      onSwipeUp={[Function]}
+                      selectedItem={0}
+                      style={
+                        Object {
+                          "MozTransform": "translate3d(0%,0,0)",
+                          "MozTransitionDuration": "350ms",
+                          "MsTransform": "translate3d(0%,0,0)",
+                          "MsTransitionDuration": "350ms",
+                          "OTransform": "translate3d(0%,0,0)",
+                          "OTransitionDuration": "350ms",
+                          "WebkitTransform": "translate3d(0%,0,0)",
+                          "WebkitTransitionDuration": "350ms",
+                          "msTransform": "translate3d(0%,0,0)",
+                          "msTransitionDuration": "350ms",
+                          "transform": "translate3d(0%,0,0)",
+                          "transitionDuration": "350ms",
+                        }
+                      }
+                      tagName="ul"
+                      tolerance={5}
+                    >
+                      <ul
+                        className="slider animated"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(0%,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(0%,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(0%,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(0%,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(0%,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(0%,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                      >
+                        <li
+                          className="slide selected"
+                          key="itemKey0/.$0"
+                          onClick={[Function]}
+                        >
+                          <img
+                            key="0"
+                            src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                          />
+                        </li>
+                      </ul>
+                    </ReactSwipe>
+                  </div>
+                  <button
+                    className="control-arrow control-next control-disabled"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <ul
+                    className="control-dots"
+                  >
+                    <li
+                      className="dot selected"
+                      key=".$0"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      role="button"
+                      tabIndex={0}
+                      value={0}
+                    />
+                  </ul>
+                </div>
+                <Thumbs
+                  axis="horizontal"
+                  onSelectItem={[Function]}
+                  selectedItem={0}
+                  transitionTime={350}
+                >
+                  <div
+                    className="carousel"
+                  >
+                    <div
+                      className="thumbs-wrapper axis-vertical"
+                    >
+                      <button
+                        className="control-arrow control-prev control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                      <ReactSwipe
+                        allowMouseEvents={false}
+                        className="thumbs animated"
+                        onSwipeDown={[Function]}
+                        onSwipeEnd={[Function]}
+                        onSwipeLeft={[Function]}
+                        onSwipeMove={[Function]}
+                        onSwipeRight={[Function]}
+                        onSwipeStart={[Function]}
+                        onSwipeUp={[Function]}
+                        selectedItem={0}
+                        style={
+                          Object {
+                            "MozTransform": "translate3d(NaNpx,0,0)",
+                            "MozTransitionDuration": "350ms",
+                            "MsTransform": "translate3d(NaNpx,0,0)",
+                            "MsTransitionDuration": "350ms",
+                            "OTransform": "translate3d(NaNpx,0,0)",
+                            "OTransitionDuration": "350ms",
+                            "WebkitTransform": "translate3d(NaNpx,0,0)",
+                            "WebkitTransitionDuration": "350ms",
+                            "msTransform": "translate3d(NaNpx,0,0)",
+                            "msTransitionDuration": "350ms",
+                            "transform": "translate3d(NaNpx,0,0)",
+                            "transitionDuration": "350ms",
+                          }
+                        }
+                        tagName="ul"
+                        tolerance={0}
+                      >
+                        <ul
+                          className="thumbs animated"
+                          onMouseDown={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          style={
+                            Object {
+                              "MozTransform": "translate3d(NaNpx,0,0)",
+                              "MozTransitionDuration": "350ms",
+                              "MsTransform": "translate3d(NaNpx,0,0)",
+                              "MsTransitionDuration": "350ms",
+                              "OTransform": "translate3d(NaNpx,0,0)",
+                              "OTransitionDuration": "350ms",
+                              "WebkitTransform": "translate3d(NaNpx,0,0)",
+                              "WebkitTransitionDuration": "350ms",
+                              "msTransform": "translate3d(NaNpx,0,0)",
+                              "msTransitionDuration": "350ms",
+                              "transform": "translate3d(NaNpx,0,0)",
+                              "transitionDuration": "350ms",
+                            }
+                          }
+                        >
+                          <li
+                            className="thumb"
+                            key="0"
+                            onClick={[Function]}
+                            onKeyDown={[Function]}
+                            role="button"
+                            tabIndex={0}
+                          >
+                            <img
+                              key=".$0"
+                              onLoad={[Function]}
+                              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                            />
+                          </li>
+                        </ul>
+                      </ReactSwipe>
+                      <button
+                        className="control-arrow control-next control-disabled"
+                        onClick={[Function]}
+                        type="button"
+                      />
+                    </div>
+                  </div>
+                </Thumbs>
+              </div>
+            </Carousel>
+          </ProductCarousel>
+        </div>
+      </div>
+      <div
+        className="c-product-display__content-details"
+      >
+        <div
+          className="c-product-display__info"
+        >
+          <div
+            className="c-product-display__info-title"
+          >
+            SEPIA nonslip tray 420×210mm
+          </div>
+          <div
+            className="c-product-display__info-price"
+          >
+            <ProductPrice
+              maxPrice={97.68}
+              minPrice={16.95}
+            >
+              <div
+                className="c-product-price"
+              >
+                <span>
+                  £
+                  16.95
+                   - £
+                  97.68
+                </span>
+              </div>
+            </ProductPrice>
+          </div>
+          <div
+            className="c-product-display__info-rating"
+          >
+            <Rating
+              className="o-rating__star--has-spacing o-rating__star--fs-small"
+              rating={0}
+            >
+              <span
+                className="o-rating"
+                key="0"
+              >
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="1"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="2"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="3"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="4"
+                >
+                  ★
+                </span>
+                <span
+                  className="o-rating__star o-rating__star--has-spacing o-rating__star--fs-small o-rating__star--empty"
+                  key="5"
+                >
+                  ★
+                </span>
+              </span>
+            </Rating>
+            <p
+              className="c-product-display__info-reviews"
+            >
+              Read Reviews
+            </p>
+          </div>
+          <div
+            className="c-product-display__info-variant"
+          >
+            <VariantSelector
+              aria-label="Variant Selector"
+              name="line_item[item_id]"
+              onClick={[Function]}
+              prompt="Select a Product"
+              value=""
+              variants={
+                Array [
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 16.95,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 1
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "343",
+                    "meta_attributes": Object {},
+                    "ordered_total": 10,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 16.95,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "dolor_50_1",
+                    "sku": "9337040128595",
+                    "stock_allocated_level": 10,
+                    "stock_available_level": 1,
+                    "stock_level": 11,
+                    "tax_code": "vat",
+                    "title": "Variant 1",
+                    "updated_at": "2018-11-05T11:23:16Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": false,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "344",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_2",
+                    "sku": "0927967530244",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 2",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                  Object {
+                    "available_to_browse": false,
+                    "available_to_order": false,
+                    "created_at": "2018-09-24T15:43:05Z",
+                    "current_price": 97.68,
+                    "deleted_at": null,
+                    "description": "Product 51 - variant 2
+
+Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                    "ewis_eligible": true,
+                    "expected_availability_date": null,
+                    "has_assets": true,
+                    "id": "345",
+                    "meta_attributes": Object {},
+                    "ordered_total": 1,
+                    "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+                    "position": null,
+                    "price": 97.68,
+                    "price_includes_taxes": true,
+                    "product_id": 175,
+                    "reference": "voluptas_50_3",
+                    "sku": "0927967530245",
+                    "stock_allocated_level": 1,
+                    "stock_available_level": 0,
+                    "stock_level": 1,
+                    "tax_code": "vat",
+                    "title": "Variant 3",
+                    "updated_at": "2018-10-31T10:24:00Z",
+                  },
+                ]
+              }
+            >
+              <div
+                aria-label="Variant Selector"
+                className="o-variant-selector"
+                name="line_item[item_id]"
+                onClick={[Function]}
+                value=""
+              >
+                <Button
+                  aria-posinset={1}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={16.95}
+                  data-stock-available-level={1}
+                  data-variant-id="343"
+                  key="343"
+                  label="Variant 1 - £16.95"
+                  onClick={[Function]}
+                  type="button"
+                  value="9337040128595"
+                >
+                  <button
+                    aria-posinset={1}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={16.95}
+                    data-stock-available-level={1}
+                    data-variant-id="343"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="9337040128595"
+                  >
+                    Variant 1 - £16.95
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={2}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="344"
+                  key="344"
+                  label="Variant 2 - £97.68- Out of Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530244"
+                >
+                  <button
+                    aria-posinset={2}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="344"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530244"
+                  >
+                    Variant 2 - £97.68- Out of Stock
+                  </button>
+                </Button>
+                <Button
+                  aria-posinset={3}
+                  aria-setsize={3}
+                  className="c-product-display__option-button "
+                  data-price={97.68}
+                  data-stock-available-level={0}
+                  data-variant-id="345"
+                  key="345"
+                  label="Variant 3 - £97.68- Email When in Stock"
+                  onClick={[Function]}
+                  type="button"
+                  value="0927967530245"
+                >
+                  <button
+                    aria-posinset={3}
+                    aria-setsize={3}
+                    className="c-product-display__option-button  o-button"
+                    data-price={97.68}
+                    data-stock-available-level={0}
+                    data-variant-id="345"
+                    disabled={false}
+                    onClick={[Function]}
+                    role="button"
+                    tabIndex="0"
+                    type="button"
+                    value="0927967530245"
+                  >
+                    Variant 3 - £97.68- Email When in Stock
+                  </button>
+                </Button>
+              </div>
+            </VariantSelector>
+          </div>
+        </div>
+        <div
+          className="c-product-display__buttons"
+        >
+          <Button
+            aria-label="Add to Basket"
+            className="c-product-display__buttons-basket o-button--sml"
+            label="add to basket"
+            onClick={null}
+            status="disabled"
+          >
+            <button
+              aria-label="Add to Basket"
+              className="c-product-display__buttons-basket o-button--sml o-button o-button--disabled"
+              disabled={false}
+              onClick={null}
+              role="button"
+              tabIndex="0"
+            >
+              add to basket
+            </button>
+          </Button>
+        </div>
+        <div
+          className="c-product-display__body-dropdowns"
+        >
+          <div
+            className="c-product-display__description"
+          >
+            <h1
+              className="c-product-display__description-title"
+            >
+              Product Details
+            </h1>
+            <label
+              className="c-product-dispay__label"
+              htmlFor="description"
+            />
+            <input
+              id="description"
+              type="checkbox"
+            />
+            <span
+              className="c-product-display__arrow"
+            />
+            <div
+              className="c-product-display__description-text"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Assam in north-eastern India grows exceptional tea in the lush soil of the Brahmaputra valley – and we pick ours at the peak of the season from some of the region's finest estates during the second flush harvest. It's rich, strong and full-bodied with malty notes.",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ProductDisplay>
+`;

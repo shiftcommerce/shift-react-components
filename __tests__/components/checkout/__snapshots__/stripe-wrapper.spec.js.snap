@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StripeWrapper renders StripeProvider component if the api key is present 1`] = `
+<Provider
+  apiKey="TEST_API_KEY"
+>
+  <Elements>
+    <InjectStripe(StripeFields) />
+  </Elements>
+</Provider>
+`;
+
+exports[`StripeWrapper renders the payment method is not available if api key is not present 1`] = `
+<div
+  className="u-bold u-text-color--red"
+>
+  * PAYMENT THROUGH STRIPE IS CURRENTLY NOT AVAILABLE *
+</div>
+`;

@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the full HeroImage component 1`] = `
+<HeroFull
+  componentData={
+    Object {
+      "background_colour": "antiquewhite",
+      "heading": "",
+      "id": "4_1",
+      "image": Array [
+        Object {
+          "asset_file": "1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "canonical_path": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "created_at": "2017-12-18T11:29:27Z",
+          "file_content_content_type": "image/jpeg",
+          "file_content_filename": "Week-44-Department-Homeware-2_24.jpg",
+          "file_content_size": 354806,
+          "id": "157604",
+          "image_height": 1483,
+          "image_width": 2396,
+          "reference": "26418193-2571-4bb8-943b-bb567065c4f8",
+          "s3_url": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg",
+          "updated_at": "2017-12-18T11:29:27Z",
+        },
+      ],
+      "mobile_image": null,
+      "overlay_background_colour": "antiquewhite",
+      "overlay_image_overlap": Array [
+        "medium",
+      ],
+      "overlay_link_1_text": "Test Product",
+      "overlay_link_1_url": Array [
+        Object {
+          "canonical_path": "/homeware/dining/glassware",
+          "id": "/homeware/dining/glassware",
+          "path": "/homeware/dining/glassware",
+          "url": "/homeware/dining/glassware",
+        },
+      ],
+      "overlay_link_2_text": "",
+      "overlay_link_2_url": null,
+      "overlay_link_3_text": "",
+      "overlay_link_3_url": null,
+      "overlay_link_4_text": "",
+      "overlay_link_4_url": null,
+      "overlay_link_5_text": "",
+      "overlay_link_5_url": null,
+      "overlay_link_background_colour": "aquamarine",
+      "overlay_link_border_colour": "mediumseagreen",
+      "overlay_link_hover_background_colour": "black",
+      "overlay_link_hover_border_colour": "white",
+      "overlay_link_hover_text_colour": "white",
+      "overlay_link_text_colour": "goldenrod",
+      "overlay_position": Array [
+        "below",
+      ],
+      "overlay_text": "Words Words Words",
+      "overlay_text_colour": "blueviolet",
+      "overlay_title": "Title",
+      "reference": "hero_full",
+      "type": "components",
+    }
+  }
+>
+  <section
+    className="o-template-component o-template-component--full-width c-hero u-padding-top-des"
+    style={
+      Object {
+        "backgroundColor": "antiquewhite",
+      }
+    }
+  >
+    <div
+      className="c-hero__content"
+    >
+      <ConditionalLink
+        href="/homeware/dining/glassware"
+      >
+        <Link
+          as="/homeware/dining/glassware"
+          href="/slug?slug=/homeware/dining/glassware"
+        >
+          <a
+            href="/slug?slug=/homeware/dining/glassware"
+          >
+            <LazyLoad
+              className="c-hero__image"
+              src="https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/157604/1513596567.2856915-Week-44-Department-Homeware-2_24.jpg"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#EEEFF3",
+                    "height": 0,
+                    "paddingBottom": "NaN%",
+                    "width": "100%",
+                  }
+                }
+              >
+                <FadeIn
+                  offset={150}
+                  once={true}
+                  render={[Function]}
+                >
+                  <LazyLoad
+                    offset={150}
+                    once={true}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </FadeIn>
+              </div>
+            </LazyLoad>
+          </a>
+        </Link>
+      </ConditionalLink>
+      <div
+        className="c-hero__overlay c-hero__overlay--overlap_below_medium c-hero__overlay--offset_below_medium_4"
+        style={
+          Object {
+            "backgroundColor": "antiquewhite",
+            "color": "blueviolet",
+          }
+        }
+      >
+        <div
+          className="c-hero__overlay_pointer c-hero__overlay_pointer--above"
+          style={
+            Object {
+              "borderBottomColor": "antiquewhite",
+            }
+          }
+        />
+        <div
+          className="c-hero__overlay_content"
+        >
+          <div
+            className="c-hero__overlay_title"
+          >
+            Title
+          </div>
+          <div
+            className="u-whitespace_preline"
+          >
+            Words Words Words
+          </div>
+          <div
+            className="c-hero__button"
+            key="1"
+          >
+            <Link
+              as="/homeware/dining/glassware"
+              className="c-hero__button-icon"
+              href="/slug?slug=/homeware/dining/glassware"
+            >
+              <a
+                className="c-hero__button-icon"
+                href="/slug?slug=/homeware/dining/glassware"
+              >
+                Test Product
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</HeroFull>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loading spinner renders correctly 1`] = `
+<Loading
+  className="o-loading"
+  color="#f5c6cb"
+  delay={250}
+  height={50}
+  type="spin"
+  width={50}
+/>
+`;

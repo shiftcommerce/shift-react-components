@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ProductEwisForm>
+  <_class
+    className="c-ewis-form__input-field"
+    placeholder="Email"
+  >
+    <Input
+      className="c-ewis-form__input-field"
+      placeholder="Email"
+      renderValidationMessage={[Function]}
+    >
+      <div
+        className="o-form__input-group"
+      >
+        <label
+          className="o-form__label"
+        >
+          <b>
+             
+          </b>
+          <input
+            checked={false}
+            className="o-form__input-field c-ewis-form__input-field"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Email"
+          />
+        </label>
+      </div>
+    </Input>
+  </_class>
+  <Button
+    aria-label="Add to Basket"
+    className="c-product-display__buttons-basket o-button--sml"
+    label="Email When in Stock"
+    onClick={[Function]}
+    status="positive"
+  >
+    <button
+      aria-label="Add to Basket"
+      className="c-product-display__buttons-basket o-button--sml o-button o-button--positive"
+      disabled={false}
+      onClick={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      Email When in Stock
+    </button>
+  </Button>
+</ProductEwisForm>
+`;

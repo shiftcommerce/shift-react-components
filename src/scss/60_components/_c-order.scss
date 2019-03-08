@@ -1,0 +1,214 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-order {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-bottom: $global-spacing-unit;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+  }
+
+  h2,
+  h3 {
+    font-size: .9em;
+  }
+
+  p {
+    line-height: 1.8em;
+    font-size: .8em;
+  }
+
+  @include breakpoint(desktop) {
+    h2,
+    h3 {
+      font-size: 1.2em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+  }
+
+  > * {
+    flex: 1 100%;
+  }
+}
+
+  .c-order__header {
+    display: flex;
+    padding: 0 $global-spacing-unit $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      padding: $global-spacing-unit-small;
+    }
+  }
+
+    .c-order__header-tick {
+      align-self: center;
+      position: absolute;
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+      background-color: $alert-orange;
+      color: white;
+      text-align: center;
+      font-size: 1.6em;
+      padding: 8px;
+    }
+
+    .c-order__header-text {
+      display: inline-block;
+      padding: $global-spacing-unit-tiny;
+      margin-left: $global-spacing-unit-large;
+    }
+
+      .c-order__header-text-id {
+        font-size: 1.2em;
+      }
+
+  .c-order__body {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(desktop) {
+      flex-direction: row;
+    }
+  }
+
+    .c-order__body-panel-left {
+      padding: 0;
+
+      @include breakpoint(desktop) {
+        flex: 2;
+        padding: $global-spacing-unit-small;
+        padding-right: $global-spacing-unit-large;
+      }
+    }
+
+    .c-order__body-panel-right {
+      padding: 0;
+
+      @include breakpoint(desktop) {
+        flex: 1;
+        padding: $global-spacing-unit-small;
+        padding-right: $global-spacing-unit-large;
+      }
+    }
+
+.c-order__detail {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(desktop) {
+    h2 {
+      margin: $global-spacing-unit-small 0;
+    }
+  }
+}
+
+.c-order__detail-map {
+  display: flex;
+  align-items: center;
+  margin-bottom: $global-spacing-unit-small;
+}
+
+.c-order__detail-map-image {
+  overflow: hidden;
+
+  @include breakpoint(desktop) {
+    height: 350px;
+  }
+}
+
+.c-order__detail-confirmation-message {
+  padding-bottom: 0;
+}
+
+.c-order__detail-confirmation-message,
+.c-order__detail-shipping-address,
+.c-order__detail-shipping-method,
+.c-order__detail-payment-method {
+  margin: $global-spacing-unit-small $global-spacing-unit;
+  padding-bottom: $global-spacing-unit;
+
+  h2 {
+    margin-bottom: $global-spacing-unit-small;
+  }
+
+  @include breakpoint(desktop) {
+    margin: $global-spacing-unit-small 0;
+  }
+}
+
+.c-order__detail-shipping-address,
+.c-order__detail-shipping-method,
+.c-order__detail-payment-method {
+  border-bottom: 1px solid $border-default;
+}
+
+.c-order__detail-payment-method-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: $global-spacing-unit 0;
+}
+
+.c-order__detail-payment-method-card-image {
+  flex-basis: 20%;
+
+  @include breakpoint(desktop) {
+    flex-basis: 10%;
+  }
+
+  img {
+    height: 20px;
+    margin-right: $global-spacing-unit-small;
+  }
+}
+
+.c-order__detail-payment-method-card-details {
+  flex-basis: 80%;
+  font-size: .8em;
+
+  @include breakpoint(desktop) {
+    flex-basis: 90%;
+    font-size: 1em;
+  }
+
+  span {
+    margin-left: $global-spacing-unit-small;
+  }
+}
+
+.c-order__button {
+  margin: $global-spacing-unit-tiny $global-spacing-unit;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    justify-content: flex-end;
+    margin: $global-spacing-unit-tiny 0;
+  }
+
+  &--continue {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: .8em;
+    padding-top: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit;
+    margin: 0;
+
+    @include breakpoint(desktop) {
+      font-size: 1em;
+      padding: $global-spacing-unit-small $global-spacing-unit-large;
+      margin: $global-spacing-unit-tiny 0;
+    }
+  }
+}

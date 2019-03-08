@@ -1,0 +1,107 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-step-indicators {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.c-step-indicators__steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid $border-default;
+
+  @include breakpoint(desktop) {
+    width: 70%;
+    border-bottom: none;
+  }
+}
+
+.c-step-indicator {
+  display: flex;
+  flex-direction: column;
+  color: $text-default;
+  margin: $global-spacing-unit-small 0;
+
+  a,
+  a:link,
+  a:hover,
+  a:visited {
+    color: inherit;
+  }
+
+  &--active {
+    color: $text-light;
+  }
+
+  &--completed {
+    color: $text-light;
+  }
+}
+
+.c-step-indicator__line {
+  &--completed {
+    display: flex;
+    position: relative;
+    margin-top: -$global-spacing-unit;
+    margin-left: $global-spacing-unit;
+    margin-bottom: $global-spacing-unit;
+    width: 100%;
+    border: 1px solid $background-positive;
+
+    @include breakpoint(desktop) {
+      margin-left: $global-spacing-unit-huge;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.c-step-indicator__position {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: $checkout-grey;
+  z-index: $nav-z-index;
+
+  &--active {
+    background-color: $background-positive;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+  }
+
+  &--completed {
+    background-color: $background-positive;
+  }
+}
+
+.c-step-indicator__subtitle {
+  padding-top: $global-spacing-unit-tiny;
+  font-size: .6em;
+  width: 100%;
+  color: black;
+
+  @include breakpoint(desktop) {
+    font-size: 1em;
+    width: auto;
+  }
+
+  &--active {
+    color: $background-positive;
+  }
+
+  &--completed {
+    color: $background-positive;
+
+    @include breakpoint(desktop) {
+      margin-top: 22px;
+    }
+  }
+}

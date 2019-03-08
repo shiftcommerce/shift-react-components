@@ -1,0 +1,8 @@
+.o-variant-selector {
+  position: relative;
+  border-radius: 0;
+  display: grid;
+  grid-template-columns: [col1-start] 48.5% [col2-start] 48.5% [col2-end];
+  grid-gap: 3%;
+  text-align: end;
+}

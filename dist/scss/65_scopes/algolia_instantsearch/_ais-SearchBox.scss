@@ -1,0 +1,56 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
+.ais-SearchBox {
+  width: 100%;
+}
+
+.ais-SearchBox-form {
+  display: flex;
+}
+
+.ais-SearchBox-input,
+.ais-SearchBox-submit {
+  border: 1px solid $border-default;
+  background-color: $background-white;
+  height: 3rem;
+}
+
+.ais-SearchBox-input {
+  flex-grow: 1;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  color: $text-dark;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0 $global-spacing-unit-small;
+  // Remove rounded edges on iOS
+  -webkit-appearance: none;
+  margin-right: -5px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ais-SearchBox-submit {
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  background-image: url('data:image/svg+xml;charset=UTF8,<?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="338 179.4 15.372 19.971" width="15.372" height="19.971"><g><circle vector-effect="non-scaling-stroke" cx="0" cy="0" r="1" transform="matrix(6.5,0,0,6.5,345.5,186.9)" fill="none" stroke-width="2" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><line x1="349" y1="193" x2="352" y2="198" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/></g></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  right: -.6em;
+  left: initial;
+  cursor: pointer;
+
+  // Don't show the default magnifying glass icon
+  svg {
+    display: none;
+  }
+}
+
+// Don't show the reset button
+.ais-SearchBox-reset {
+  display: none;
+}

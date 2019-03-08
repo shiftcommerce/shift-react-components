@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ProductListingCard correctly 1`] = `
+<ProductListingCard
+  assetFileAltText="SEPIA nonslip tray 420×210mm"
+  assetFileUrl="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+  maxPrice={97.68}
+  minPrice={97.68}
+  productPath="/products/seed_product_51"
+  productRating={0}
+  title="SEPIA nonslip tray 420×210mm"
+>
+  <div
+    className="c-product-listing-card"
+  >
+    <div
+      className="c-product-listing-card__body"
+    >
+      <Link
+        as="/products/seed_product_51"
+        href="/slug?slug=/products/seed_product_51"
+      >
+        <a
+          href="/slug?slug=/products/seed_product_51"
+        >
+          <div
+            className="c-product-listing-card__gallery o-image"
+          >
+            <LazyLoad
+              alt="SEPIA nonslip tray 420×210mm"
+              aria-label="SEPIA nonslip tray 420×210mm"
+              className="c-product-listing-card__image u-image-shadow"
+              imageHeight={280}
+              imageWidth={280}
+              src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#EEEFF3",
+                    "height": 0,
+                    "paddingBottom": "100.00%",
+                    "width": "100%",
+                  }
+                }
+              >
+                <FadeIn
+                  offset={150}
+                  once={true}
+                  render={[Function]}
+                >
+                  <LazyLoad
+                    offset={150}
+                    once={true}
+                    overflow={false}
+                    resize={false}
+                    scroll={true}
+                    unmountIfInvisible={false}
+                  >
+                    <div
+                      className="lazyload-placeholder"
+                      style={
+                        Object {
+                          "height": undefined,
+                        }
+                      }
+                    />
+                  </LazyLoad>
+                </FadeIn>
+              </div>
+            </LazyLoad>
+          </div>
+          <div
+            className="c-product-listing-card__title"
+          >
+            <p
+              aria-level="1"
+              role="heading"
+            >
+              SEPIA nonslip tray 420×210mm
+            </p>
+          </div>
+        </a>
+      </Link>
+      <div
+        className="c-product-listing-card__price"
+      >
+        <ProductPrice
+          maxPrice={97.68}
+          minPrice={97.68}
+        >
+          <div
+            className="c-product-price"
+          >
+            <span>
+              £
+              97.68
+            </span>
+          </div>
+        </ProductPrice>
+      </div>
+      <div
+        className="c-product-listing-card__rating"
+      >
+        <Rating
+          rating={0}
+        >
+          <span
+            className="o-rating"
+            key="0"
+          >
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="1"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="2"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="3"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="4"
+            >
+              ★
+            </span>
+            <span
+              className="o-rating__star o-rating__star--empty"
+              key="5"
+            >
+              ★
+            </span>
+          </span>
+        </Rating>
+      </div>
+    </div>
+  </div>
+</ProductListingCard>
+`;

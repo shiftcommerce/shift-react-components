@@ -1,0 +1,25 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
+.ais-ClearRefinements {
+  padding: .1rem;
+}
+
+.ais-ClearRefinements-button {
+  right: 0;
+  padding: .5rem;
+  background: $background-light-grey;
+  margin: 1rem .2rem .2rem .2rem;
+  border-radius: 5%;
+  border: 1px solid $border-shadow;
+  cursor: pointer;
+  color: $text-dark;
+
+  &--disabled {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $background-dark;
+  }
+}

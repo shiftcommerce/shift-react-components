@@ -1,0 +1,13 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-checkout-cart-total {
+  margin: 0 $global-spacing-unit-small;
+  padding: 0 $global-spacing-unit-small;
+}
+
+.c-checkout-cart-total__payment-error {
+  color: $text-error;
+  padding: $global-spacing-unit-small;
+  border: 1px solid $border-error;
+}

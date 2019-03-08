@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<OrderLineItems
+  items={
+    Array [
+      Object {
+        "discounts": Array [],
+        "id": "61c40964-4b4c-4f54-b580-958798087312_0",
+        "image_urls": Array [
+          "https://example.com/path/to/image.jpg",
+          "https://example.com/path/to/image1.jpg",
+        ],
+        "individual_prices": Array [],
+        "pricing": Object {
+          "each_ex_tax": 1200,
+          "each_inc_tax": 1440,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "line_ex_tax": 6000,
+          "line_inc_tax": 7200,
+          "tax_rate": 12000,
+        },
+        "quantity": 5,
+        "shipping_address": Object {
+          "city": "Leeds",
+          "company": "SHIFT Commerce",
+          "country": "United Kingdom",
+          "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+          "lines": Array [
+            "The Calls",
+          ],
+          "meta_attributes": Object {
+            "further": "information",
+          },
+          "name": "Test Customer",
+          "postcode": "LS2 7EY",
+          "state": "West Yorkshire",
+        },
+        "shipping_method": Object {
+          "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+          "label": "Next Day Delivery",
+          "meta_attributes": Object {
+            "sku": "NEXTDAY",
+          },
+          "price": 599,
+        },
+        "sku": "WHITE-TSHIRT-XXL",
+      },
+      Object {
+        "discounts": Array [
+          Object {
+            "amount_ex_tax": 200,
+            "amount_inc_tax": 240,
+            "coupon_code": "3FOR2SOCKS",
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+            "label": "3 for 2 on Socks",
+            "meta_attributes": Object {},
+          },
+        ],
+        "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+        "image_urls": Array [],
+        "individual_prices": Array [
+          Object {
+            "discount_ex_tax": 67,
+            "discount_inc_tax": 80,
+            "discounts": Array [
+              Object {
+                "amount_ex_tax": 67,
+                "amount_inc_tax": 80,
+                "coupon_code": null,
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1_0_0",
+                "label": "3 for 2 on Socks",
+                "meta_attributes": Object {},
+              },
+            ],
+            "ex_tax": 133,
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1_0",
+            "inc_tax": 160,
+          },
+          Object {
+            "discount_ex_tax": 67,
+            "discount_inc_tax": 80,
+            "discounts": Array [
+              Object {
+                "amount_ex_tax": 67,
+                "amount_inc_tax": 80,
+                "coupon_code": null,
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1_1_0",
+                "label": "3 for 2 on Socks",
+                "meta_attributes": Object {},
+              },
+            ],
+            "ex_tax": 133,
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1_1",
+            "inc_tax": 160,
+          },
+          Object {
+            "discount_ex_tax": 66,
+            "discount_inc_tax": 80,
+            "discounts": Array [
+              Object {
+                "amount_ex_tax": 66,
+                "amount_inc_tax": 80,
+                "coupon_code": null,
+                "id": "61c40964-4b4c-4f54-b580-958798087312_1_2_0",
+                "label": "3 for 2 on Socks",
+                "meta_attributes": Object {},
+              },
+            ],
+            "ex_tax": 134,
+            "id": "61c40964-4b4c-4f54-b580-958798087312_1_2",
+            "inc_tax": 160,
+          },
+        ],
+        "pricing": Object {
+          "each_ex_tax": 200,
+          "each_inc_tax": 240,
+          "line_discount_ex_tax": 200,
+          "line_discount_inc_tax": 240,
+          "line_ex_tax": 400,
+          "line_inc_tax": 480,
+          "tax_rate": 12000,
+        },
+        "quantity": 3,
+        "shipping_address": Object {
+          "city": "Leeds",
+          "company": null,
+          "country": "United Kingdom",
+          "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+          "lines": Array [
+            "SHIFT Commerce",
+            "The Calls Landing",
+          ],
+          "meta_attributes": Object {
+            "further": "information",
+          },
+          "name": "Test Customer 2",
+          "postcode": "LS2 7EY",
+          "state": "West Yorkshire",
+        },
+        "shipping_method": Object {
+          "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+          "label": "Two-man Delivery",
+          "meta_attributes": Object {
+            "sku": "DROPSHIP",
+          },
+          "price": 2499,
+        },
+        "sku": "BLACK-SOCKS-001",
+      },
+      Object {
+        "discounts": Array [],
+        "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+        "image_urls": Array [],
+        "individual_prices": Array [],
+        "pricing": Object {
+          "each_ex_tax": 120000,
+          "each_inc_tax": 144000,
+          "line_discount_ex_tax": 0,
+          "line_discount_inc_tax": 0,
+          "line_ex_tax": 120000,
+          "line_inc_tax": 144000,
+          "tax_rate": 12000,
+        },
+        "quantity": 1,
+        "shipping_address": Object {
+          "city": "Leeds",
+          "company": "SHIFT Commerce",
+          "country": "United Kingdom",
+          "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+          "lines": Array [
+            "The Calls",
+          ],
+          "meta_attributes": Object {
+            "further": "information",
+          },
+          "name": "Test Customer",
+          "postcode": "LS2 7EY",
+          "state": "West Yorkshire",
+        },
+        "shipping_method": Object {
+          "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+          "label": "Next Day Delivery",
+          "meta_attributes": Object {
+            "sku": "NEXTDAY",
+          },
+          "price": 599,
+        },
+        "sku": "WHITE-TSHIRT-L",
+      },
+    ]
+  }
+>
+  <div
+    className="c-order-history__line-items_grid"
+    key="WHITE-TSHIRT-XXL"
+  >
+    <div
+      className="c-order-history__line-items_grid_item1"
+    >
+      <h5>
+        WHITE-TSHIRT-XXL
+      </h5>
+      <h4>
+        WHITE-TSHIRT-XXL
+      </h4>
+      <span>
+        Quantity: 
+        5
+      </span>
+      <span>
+        Delivery: 
+        Next Day Delivery
+      </span>
+      <span>
+        Address: 
+        Test Customer
+      </span>
+    </div>
+    <div
+      className="c-order-history__line-items_grid_item2"
+    >
+      <a>
+        £
+        72.00
+      </a>
+    </div>
+  </div>
+  <div
+    className="c-order-history__line-items_grid"
+    key="BLACK-SOCKS-001"
+  >
+    <div
+      className="c-order-history__line-items_grid_item1"
+    >
+      <h5>
+        BLACK-SOCKS-001
+      </h5>
+      <h4>
+        BLACK-SOCKS-001
+      </h4>
+      <span>
+        Quantity: 
+        3
+      </span>
+      <span>
+        Delivery: 
+        Two-man Delivery
+      </span>
+      <span>
+        Address: 
+        Test Customer 2
+      </span>
+    </div>
+    <div
+      className="c-order-history__line-items_grid_item2"
+    >
+      <a>
+        £
+        4.80
+      </a>
+    </div>
+  </div>
+  <div
+    className="c-order-history__line-items_grid"
+    key="WHITE-TSHIRT-L"
+  >
+    <div
+      className="c-order-history__line-items_grid_item1"
+    >
+      <h5>
+        WHITE-TSHIRT-L
+      </h5>
+      <h4>
+        WHITE-TSHIRT-L
+      </h4>
+      <span>
+        Quantity: 
+        1
+      </span>
+      <span>
+        Delivery: 
+        Next Day Delivery
+      </span>
+      <span>
+        Address: 
+        Test Customer
+      </span>
+    </div>
+    <div
+      className="c-order-history__line-items_grid_item2"
+    >
+      <a>
+        £
+        1440.00
+      </a>
+    </div>
+  </div>
+</OrderLineItems>
+`;

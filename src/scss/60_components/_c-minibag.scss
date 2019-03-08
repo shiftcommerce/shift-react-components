@@ -1,0 +1,60 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-minibag {
+}
+
+  .c-minibag__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    cursor: pointer;
+    text-align: center;
+    font-size: .8em;
+
+    @include breakpoint(desktop) {
+      font-size: 1em;
+    }
+  }
+
+  .c-minibag__cart-image {
+    height: 22px;
+    width: 22px;
+    position: relative;
+  }
+
+    .c-minibag__cart-image-icon {
+      display: inline-block;
+
+      img {
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+    .c-minibag__cart-image-count {
+      display: block;
+      background-color: $background-positive;
+      border-radius: 50%;
+      color: $text-light;
+      font-size: .5em;
+      text-align: center;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      margin-right: -$global-spacing-unit-small;
+      z-index: 1;
+      position: absolute;
+      left: -6px;
+      top: -6px;
+    }
+
+    .c-minibag__cart-label {
+      display: block;
+      padding-left: $global-spacing-unit-small;
+    }
+
+  .c-minibag__checkout {
+    display: none;
+  }

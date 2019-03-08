@@ -1,0 +1,45 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-footer__links {
+  font-size: .8em;
+  text-align: center;
+  background-color: $light-grey;
+  padding: $global-spacing-unit 0;
+  width: 100%;
+
+  a {
+    padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+    border-left: 1px solid $border-divider;
+  }
+
+  a:first-child {
+    border: 0;
+  }
+}
+
+.c-footer__social {
+  margin: $global-spacing-unit 0;
+  text-align: center;
+
+  .c-footer__social-text {
+    font-size: .9em;
+  }
+
+  .c-footer__social-links {
+    margin: $global-spacing-unit-small;
+
+    div {
+      display: inline-block;
+      margin-right: $global-spacing-unit-tiny;
+
+      &:first-child {
+        margin-left: $global-spacing-unit-tiny;
+      }
+    }
+
+    img {
+      width: 35px;
+    }
+  }
+}

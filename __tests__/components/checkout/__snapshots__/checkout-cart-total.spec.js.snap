@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders payment errors 1`] = `
+<CheckoutCartTotal
+  continueButtonProps={Object {}}
+  discountSummaries={Array []}
+  paymentError="Payment authentication failed"
+  shippingTotal={5}
+  subTotal={15}
+  total={20}
+>
+  <Sticker>
+    <div>
+      <div
+        aria-label="Cart total summary"
+        className="u-sticky c-cart-summary"
+      >
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Total Price: 
+          </dt>
+          <dd>
+             £
+            15.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping costs: 
+          </dt>
+          <dd>
+             
+            £5.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="u-bold"
+        >
+          <dt>
+             TOTAL: 
+          </dt>
+          <dd>
+             £
+            20.00
+             
+          </dd>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
+        </dl>
+        <div
+          className="c-checkout-cart-total__payment-error"
+        >
+          Payment authentication failed
+        </div>
+      </div>
+      <div
+        className="c-cart-summary-buttons"
+      >
+        <Link
+          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
+          href="/"
+        >
+          <a
+            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
+            href="/"
+          >
+            Continue Shopping
+          </a>
+        </Link>
+        <Button
+          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
+          type="button"
+        >
+          <button
+            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml o-button"
+            disabled={false}
+            role="button"
+            tabIndex="0"
+            type="button"
+          />
+        </Button>
+      </div>
+    </div>
+  </Sticker>
+</CheckoutCartTotal>
+`;
+
+exports[`renders the cart's total, subtotal and shipping cost 1`] = `
+<CheckoutCartTotal
+  continueButtonProps={Object {}}
+  discountSummaries={Array []}
+  shippingTotal={5}
+  subTotal={15}
+  total={20}
+>
+  <Sticker>
+    <div>
+      <div
+        aria-label="Cart total summary"
+        className="u-sticky c-cart-summary"
+      >
+        <dl
+          aria-label="Subtotal"
+        >
+          <dt>
+             Total Price: 
+          </dt>
+          <dd>
+             £
+            15.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Shipping cost"
+        >
+          <dt>
+             Shipping costs: 
+          </dt>
+          <dd>
+             
+            £5.00
+             
+          </dd>
+        </dl>
+        <dl
+          aria-label="Total"
+          className="u-bold"
+        >
+          <dt>
+             TOTAL: 
+          </dt>
+          <dd>
+             £
+            20.00
+             
+          </dd>
+        </dl>
+        <dl>
+          <dt
+            className="c-cart-summary__VAT"
+          >
+            * Including VAT
+          </dt>
+        </dl>
+      </div>
+      <div
+        className="c-cart-summary-buttons"
+      >
+        <Link
+          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
+          href="/"
+        >
+          <a
+            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
+            href="/"
+          >
+            Continue Shopping
+          </a>
+        </Link>
+        <Button
+          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
+          type="button"
+        >
+          <button
+            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml o-button"
+            disabled={false}
+            role="button"
+            tabIndex="0"
+            type="button"
+          />
+        </Button>
+      </div>
+    </div>
+  </Sticker>
+</CheckoutCartTotal>
+`;

@@ -1,0 +1,116 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-product-listing-filter {
+  font-size: .85rem;
+  text-transform: capitalize;
+  width: 100%;
+
+  @include breakpoint(mobile-tablet) {
+    background: $background-white;
+    bottom: 0;
+    overflow-y: scroll;
+    padding: $global-spacing-unit-small;
+    padding-top: 3.5rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: right .25s;
+    z-index: $modal-z-index;
+  }
+
+  @include breakpoint(desktop) {
+    float: left;
+    margin-right: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit-small;
+    padding-top: $global-spacing-unit-small;
+    width: 200px;
+  }
+
+  &--hide {
+    @include breakpoint(mobile-tablet) {
+      display: block;
+      right: 100%;
+    }
+  }
+}
+
+.c-product-listing-filter-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  float: right;
+  height: 2rem;
+  opacity: .5;
+  width: 2rem;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active,
+  &:focus {
+    border-style: none;
+    outline: -webkit-focus-ring-color auto 0;
+  }
+
+  &:before,
+  &:after {
+    margin: auto;
+    padding: auto;
+    position: absolute;
+    height: 2rem;
+    margin-top: -1.25rem; /* Minus half the difference between the height and the h2 font size 2rem - 1.5rem and half the height of close 1rem */
+    width: 2px;
+    content: ' ';
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.c-product-listing-filter__header {
+  @include breakpoint(desktop) {
+    display: block;
+  }
+}
+
+.c-product-listing-filter-heading {
+  background-color: $background-white;
+  border-bottom: 1px solid $border-default;
+  margin: 0 2.5%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: right .25s;
+  width: 95%;
+  z-index: $modal-z-index + 1;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+
+  &--hide {
+    right: 100%;
+  }
+
+  h2 {
+    margin: 1rem auto; /* Normalizing this h2 margins so it's easier to manage the margin at the top of the page */
+  }
+}
+
+.c-product-listing-filter__body-option {
+  @include breakpoint(mobile-tablet) {
+    border-top: 1px solid $border-default;
+  }
+}

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the algolia hits 1`] = `
+<AlgoliaInfiniteHits(SearchResults)>
+  <SearchResults
+    createURL={[Function]}
+    hasMore={false}
+    hits={Array []}
+    refine={[Function]}
+  >
+    <AlgoliaStateResults(productListingInfo)
+      products={Array []}
+    >
+      <productListingInfo
+        products={Array []}
+        props={
+          Object {
+            "canRender": false,
+            "products": Array [],
+          }
+        }
+        searchResults={null}
+      >
+        <div
+          className="c-product-listing__info"
+        >
+          <p
+            className="c-product-listing__counts"
+          >
+            Showing 
+            0
+             of 
+             products
+          </p>
+          <p
+            className="c-product-listing__grid-toggles u-visible-d"
+          >
+            View 
+            <button
+              className="c-product-listing__grid-toggle c-product-listing__grid-toggle--disabled"
+            >
+              2 
+            </button>
+            <button
+              className="c-product-listing__grid-toggle"
+            >
+              4
+            </button>
+          </p>
+        </div>
+      </productListingInfo>
+    </AlgoliaStateResults(productListingInfo)>
+    <div
+      className="c-product-listing__products"
+    />
+    <div
+      className="c-product-listing__view-more"
+    >
+      <p
+        className="c-product-listing__view-more-message"
+      >
+        There are no results for this search
+      </p>
+    </div>
+  </SearchResults>
+</AlgoliaInfiniteHits(SearchResults)>
+`;

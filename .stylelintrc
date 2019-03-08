@@ -1,0 +1,42 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "at-rule-empty-line-before": [ "always", {
+      "except": [
+        "blockless-after-same-name-blockless",
+        "first-nested",
+      ],
+      "ignore": ["after-comment"],
+    } ],
+    "at-rule-name-case": "lower",
+    "at-rule-name-space-after": "always-single-line",
+    "at-rule-semicolon-newline-after": "always",
+    "block-closing-brace-newline-after": "always",
+    "block-no-empty": null,
+    "block-opening-brace-space-before": "always",
+    "declaration-block-no-duplicate-properties": [ true, {
+      "ignore": ["consecutive-duplicates-with-different-values"],
+    } ],
+    "declaration-colon-space-after": "always-single-line",
+    "length-zero-no-unit": true,
+    "max-empty-lines": [ 1, {
+      "ignore": ["comments"]
+    }],
+    "no-descending-specificity": null,
+    "no-empty-source": null,
+    "no-eol-whitespace": true,
+    "no-missing-end-of-source-newline": true,
+    "number-leading-zero": "never",
+    "rule-empty-line-before": ["always-multi-line", {
+      "except": [
+        "after-single-line-comment",
+        "first-nested"
+      ],
+      "ignore": ["after-comment"],
+    } ],
+    "string-quotes": "single",
+    "selector-list-comma-newline-after": "always",
+    "selector-max-empty-lines": 0,
+    "value-list-max-empty-lines": 0
+  }
+}

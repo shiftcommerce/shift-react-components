@@ -1,0 +1,22 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+$o-body-container-width: 80% !default;
+$o-body-max-width: 1200px !default;
+$o-footer-height: 175px !default;
+$o-header-height-desktop: 127px !default;
+$o-header-height-mobile: 176px !default;
+
+.o-body {
+  width: 100%;
+  padding-top: $o-header-height-mobile;
+  min-height: calc(100vh - #{$o-footer-height});
+
+  @include breakpoint (desktop) {
+    width: $o-body-container-width;
+    margin: auto;
+    padding-top: 0;
+    max-width: $o-body-max-width;
+    min-height: calc(100vh - #{$o-footer-height + $o-header-height-desktop});
+  }
+}

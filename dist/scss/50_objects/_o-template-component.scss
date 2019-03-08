@@ -1,0 +1,47 @@
+// ==========================================================================
+// # Template Component Object
+// ==========================================================================
+
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+// Used around template components to
+// provide some left and right margins in
+// mobile and tablet views
+
+.o-template-component {
+  margin: 0 $global-spacing-unit-small;
+
+  @include breakpoint(desktop) {
+    margin: 0;
+  }
+}
+
+  .o-template-component__cat-button {
+    margin-top: 0;
+  }
+
+  .o-template-component__inner-wrapper {
+    @include breakpoint(desktop) {
+      width: $global-body-container-width;
+      max-width: $global-body-max-width;
+      margin: auto;
+    }
+  }
+
+// Modifiers
+
+// Calculates negative margin so that a constrained
+// body's child can take full screen width
+@function full-width-margin($body-wrapper-width) {
+  @return percentage(($body-wrapper-width - 100%) / (60%));
+}
+
+.o-template-component--full-width {
+  margin: 0;
+
+  @include breakpoint(desktop) {
+    margin-left: full-width-margin($global-body-container-width);
+    margin-right: full-width-margin($global-body-container-width);
+  }
+}

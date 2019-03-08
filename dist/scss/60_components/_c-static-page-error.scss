@@ -1,0 +1,43 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-static-page-error {
+
+}
+
+  .c-static-page-error-body {
+    text-align: center;
+  }
+
+  .c-static-page-error-details {
+
+  }
+
+    .c-static-page-error-details__toggle {
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .c-static-page-error-details__list {
+      border: 1px solid black;
+      padding: $global-spacing-unit;
+      background-color: $background-light-grey;
+
+      p:first-of-type {
+        margin-top: 0;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+      .c-static-page-error-details__title {
+        font-weight: bold;
+        font-size: 1.4em;
+      }
+
+      .c-static-page-error-details__value {
+        // monospace variable
+        font-family: $base-monospace-font-family;
+      }

@@ -1,0 +1,133 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-cart-summary {
+  overflow: hidden;
+  width: 100%;
+  text-align: right;
+  background-color: $light-grey;
+  padding: $global-spacing-unit-small;
+  font-size: .9em;
+
+  @include breakpoint(desktop) {
+    padding: 1.5em;
+  }
+
+  dl {
+    margin: 0;
+    margin-top: $global-spacing-unit-small;
+    font-size: .8rem;
+  }
+
+  p {
+    @include breakpoint(desktop) {
+      font-size: 1.4em;
+    }
+  }
+
+  dt {
+    margin-left: 30%;
+    display: inline-block;
+  }
+
+  dd {
+    margin: 0;
+    display: inline-block;
+    padding: 0 0 0 .5em;
+  }
+}
+
+  .c-cart-summary__VAT {
+    font-size: .6rem;
+  }
+
+  .c-cart-summary__promotion {
+    color: $text-error;
+  }
+
+  .c-cart-summary__mini-button-container {
+    display: flex;
+    align-items: center;
+    margin-top: $global-spacing-unit-huge;
+    margin-bottom: -$global-spacing-unit-huge;
+    background-color: $light-grey;
+    border: 1px solid $border-default;
+    justify-content: center;
+
+    @include breakpoint(desktop) {
+      margin-top: $global-spacing-unit-small;
+      margin-bottom: 0;
+    }
+  }
+
+    .c-cart-summary__mini-button-container-item {
+      width: 50%;
+      padding: $global-spacing-unit-tiny;
+
+      @include breakpoint(desktop) {
+        font-size: 1.3rem;
+        width: 25%;
+      }
+    }
+
+.c-cart-summary-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: $global-spacing-unit-small 0;
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    padding-bottom: $global-spacing-unit-small;
+    margin-top: $global-spacing-unit-small;
+    justify-content: space-between;
+  }
+}
+
+  .c-cart-summary-buttons__cta {
+    display: block;
+    width: 100%;
+    margin: $global-spacing-unit-small 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+
+    @include breakpoint(desktop) {
+      width: 49%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--proceed {
+      background: $background-positive;
+      color: $text-light;
+
+      &:visited {
+        color: $text-light;
+      }
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($background-positive, .2);
+          color: $text-light;
+        }
+      }
+    }
+
+    &--continue {
+      background: $background-secondary;
+      color: $text-dark;
+
+      &:visited {
+        color: $text-dark;
+      }
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($background-secondary, .2);
+        }
+      }
+    }
+  }

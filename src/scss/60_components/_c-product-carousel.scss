@@ -1,0 +1,34 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.carousel .dot.dot {
+  background-color: $button-base-color;
+  box-shadow: none;
+}
+
+.carousel .dot.selected {
+  background-color: $background-positive;
+  box-shadow: none;
+}
+
+.carousel .slide {
+  background: none;
+  margin: auto;
+}
+
+.carousel .control-dots {
+  padding: 0;
+}
+
+.carousel .thumbs {
+  padding: 0;
+}
+
+.carousel .thumb {
+  vertical-align: middle;
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 3px solid $background-positive;
+}

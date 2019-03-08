@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly if variants have different prices 1`] = `
+<ProductPrice
+  maxPrice="12.00"
+  minPrice="10.00"
+>
+  <div
+    className="c-product-price"
+  >
+    <span>
+      £
+      10.00
+       - £
+      12.00
+    </span>
+  </div>
+</ProductPrice>
+`;
+
+exports[`renders correctly if variants have similar price 1`] = `
+<ProductPrice
+  maxPrice="10.00"
+  minPrice="10.00"
+>
+  <div
+    className="c-product-price"
+  >
+    <span>
+      £
+      10.00
+    </span>
+  </div>
+</ProductPrice>
+`;

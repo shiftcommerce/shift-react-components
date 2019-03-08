@@ -1,0 +1,5 @@
+.c-gift__wrapper {
+  @include breakpoint(desktop) {
+    padding: 0;
+  }
+}

@@ -1,0 +1,145 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-line-items {
+
+}
+
+  .c-line-items__sections {
+    display: flex;
+    font-size: .9rem;
+    border-bottom: 1px solid $border-default;
+
+    @include breakpoint(desktop) {
+      margin-top: $global-spacing-unit-tiny;
+    }
+  }
+
+  .c-line-items__images {
+    order: 1;
+    width: 40%;
+    margin-right: $global-spacing-unit-tiny;
+    margin-top: $global-spacing-unit-small;
+    cursor: pointer;
+
+    @include breakpoint (desktop) {
+      margin-top: 0;
+    }
+  }
+
+  .c-line-items__information {
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    font-size: .8em;
+    margin-top: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      font-size: 1em;
+    }
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  .c-line-items__title {
+    order: 1;
+    width: 80%;
+
+    @include breakpoint(desktop) {
+      width: 70%;
+    }
+  }
+
+  .c-line-items__remove {
+    order: 2;
+    flex-grow: 3;
+    width: 20%;
+  }
+
+  .c-line-items__colour {
+    order: 3;
+    width: 20%;
+  }
+
+    .c-line-items__colour-selected {
+      order: 4;
+      width: 80%;
+      padding-left: $global-spacing-unit;
+
+      @include breakpoint(tablet) {
+        padding-left: $global-spacing-unit;
+      }
+    }
+
+  .c-line-items__quantity {
+    order: 7;
+    width: 20%;
+  }
+
+    .c-line-items__quantity-selected {
+      order: 8;
+      width: 80%;
+      padding-left: $global-spacing-unit;
+
+      @include breakpoint(tablet) {
+        padding-left: $global-spacing-unit;
+      }
+    }
+
+  .c-line-items__amounts {
+    order: 9;
+    width: 100%;
+    text-align: right;
+  }
+
+  .c-line-items__delete {
+    text-align: right;
+    margin-top: $global-spacing-unit-tiny;
+
+    @include breakpoint(desktop) {
+      font-size: .9em;
+    }
+  }
+
+    .c-line-items__delete-button {
+      color: $form-input-border;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+  .c-line-items__image {
+    margin-top: $global-spacing-unit-tiny;
+  }
+
+  .c-line-items__details-title {
+    margin: 0;
+    margin-top: $global-spacing-unit-tiny;
+  }
+
+  .c-line-items__details-sku {
+    color: $background-secondary;
+  }
+
+  .c-line-items__param {
+    margin: $global-spacing-unit-small 0;
+  }
+
+  .c-line-items__amount {
+    display: block;
+    margin-bottom: $global-spacing-unit-tiny;
+
+    @include breakpoint(desktop) {
+      font-size: 1.1em;
+    }
+
+    &--discount {
+      color: $text-error;
+    }
+
+    &--total {
+      font-weight: 700;
+    }
+  }

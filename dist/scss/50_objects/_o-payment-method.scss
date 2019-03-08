@@ -1,0 +1,38 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.o-payment-method {
+  width: 100%;
+  padding: 0 10%;
+  margin-top: $global-spacing-unit-small;
+}
+
+.o-payment-method__security-fields {
+  padding-top: $global-spacing-unit-small;
+}
+
+.o-payment-method__text {
+  padding: 0 $global-spacing-unit-small;
+}
+
+.o-payment-method__label {
+  padding-right: $global-spacing-unit-small;
+}
+
+.o-payment-method__label-cvv[for=cvv] {
+  padding-left: $global-spacing-unit-small;
+}
+
+.o-payment-method__input {
+  width: 25%;
+  padding-right: $global-spacing-unit-small;
+}
+
+.o-payment-method__address-summary {
+  padding-top: $global-spacing-unit-small;
+
+  h4,
+  p {
+    margin: $global-spacing-unit-tiny;
+  }
+}

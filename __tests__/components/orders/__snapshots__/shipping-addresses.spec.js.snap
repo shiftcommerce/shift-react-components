@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ShippingAddresses
+  addresses={
+    Array [
+      Object {
+        "city": "Leeds",
+        "company": "SHIFT Commerce",
+        "country": "United Kingdom",
+        "id": "61c40964-4b4c-4f54-b580-958798087312_1",
+        "lines": Array [
+          "The Calls",
+        ],
+        "meta_attributes": Object {
+          "further": "information",
+        },
+        "name": "Test Customer",
+        "postcode": "LS2 7EY",
+        "state": "West Yorkshire",
+      },
+      Object {
+        "city": "Leeds",
+        "company": null,
+        "country": "United Kingdom",
+        "id": "61c40964-4b4c-4f54-b580-958798087312_2",
+        "lines": Array [
+          "SHIFT Commerce",
+          "The Calls Landing",
+        ],
+        "meta_attributes": Object {
+          "further": "information",
+        },
+        "name": "Test Customer 2",
+        "postcode": "LS2 7EY",
+        "state": "West Yorkshire",
+      },
+    ]
+  }
+>
+  <div
+    className="c-order-history__shipping-address"
+    key="61c40964-4b4c-4f54-b580-958798087312_1"
+  >
+    <p
+      className="u-bold"
+    >
+      Test Customer
+    </p>
+    <p>
+      SHIFT Commerce
+    </p>
+    <p>
+      The Calls
+    </p>
+    <p>
+      Leeds
+    </p>
+    <p>
+      West Yorkshire
+    </p>
+    <p>
+      LS2 7EY
+    </p>
+    <p>
+      United Kingdom
+    </p>
+  </div>
+  <div
+    className="c-order-history__shipping-address"
+    key="61c40964-4b4c-4f54-b580-958798087312_2"
+  >
+    <p
+      className="u-bold"
+    >
+      Test Customer 2
+    </p>
+    <p />
+    <p>
+      SHIFT Commerce,The Calls Landing
+    </p>
+    <p>
+      Leeds
+    </p>
+    <p>
+      West Yorkshire
+    </p>
+    <p>
+      LS2 7EY
+    </p>
+    <p>
+      United Kingdom
+    </p>
+  </div>
+</ShippingAddresses>
+`;

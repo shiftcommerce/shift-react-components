@@ -1,0 +1,129 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-header__account {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  cursor: pointer;
+  text-align: center;
+  border-left: 1px solid $background-light-grey;
+  font-size: .8rem;
+
+  @include breakpoint(mobile-tablet) {
+    flex-basis: 30%;
+    justify-content: center;
+  }
+
+  @include breakpoint(desktop) {
+    order: 3;
+    width: 225px;
+    justify-content: center;
+    margin-right: $global-spacing-unit-tiny;
+    margin-left: $global-spacing-unit-tiny;
+    font-size: 1em;
+  }
+}
+
+.c-header__account-image {
+  height: 25px;
+  width: 25px;
+  margin-right: $global-spacing-unit-tiny;
+
+  @include breakpoint(desktop) {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.c-header__account-dropdown {
+  display: none;
+  position: absolute;
+  top: 117px;
+  background: $background-light-grey;
+  width: 95%;
+  align-items: center;
+  flex-direction: column;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+
+  &.show {
+    display: flex;
+  }
+
+  a {
+    width: 100%;
+    border-bottom: 1px solid $border-default;
+    padding: $global-spacing-unit-small;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    width: 50%;
+  }
+
+  @include breakpoint(desktop) {
+    top: 75px;
+    width: 25%;
+    right: 60px;
+  }
+}
+
+.c-header__callout {
+  width: 0;
+  height: 0;
+  border-left: $global-spacing-unit-small solid transparent;
+  border-right: $global-spacing-unit-small solid transparent;
+  border-bottom: $global-spacing-unit-small solid $background-light-grey;
+  position: absolute;
+  top: -10px;
+
+  @include breakpoint(desktop) {
+    left: $global-spacing-unit-large;
+  }
+}
+
+.c-header__dropdown-wrapper {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 1000;
+
+  &.show {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.c-header__minibag {
+  flex-grow: 1;
+  border-left: 1px solid $border-default;
+
+  @include breakpoint(mobile-tablet) {
+    flex-basis: 30%;
+  }
+
+  @include breakpoint(desktop) {
+    padding-left: $global-spacing-unit;
+    padding-right: $global-spacing-unit;
+    order: 5;
+  }
+}
+
+.c-header__search {
+  display: block;
+  margin: auto;
+  width: 100%;
+  background: $background-light-grey;
+
+  @include breakpoint(desktop) {
+    order: 2;
+  }
+}

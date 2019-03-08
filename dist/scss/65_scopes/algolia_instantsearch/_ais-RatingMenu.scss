@@ -1,0 +1,66 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
+.ais-RatingMenu-list {
+  list-style: none;
+  padding: .1rem;
+}
+
+.ais-RatingMenu-item {
+  vertical-align: middle;
+  padding: 5px;
+
+  svg {
+    height: 18px;
+  }
+
+  &--selected > a:after {
+    content: '';
+  }
+
+  &--selected > a:before {
+    border-color: $border-dark;
+  }
+
+  &--disabled {
+    cursor: default;
+    opacity: .5;
+  }
+}
+
+.ais-RatingMenu-label {
+  display: none;
+}
+
+.ais-RatingMenu-count {
+  text-align: center;
+  vertical-align: middle;
+  color: $medium-grey;
+  font-size: 1rem;
+  line-height: 1rem;
+
+  &:after {
+    content: ')'
+  }
+
+  &:before {
+    content: '('
+  }
+}
+
+.ais-RatingMenu-link {
+  @include custom-checkbox
+}
+
+.ais-RatingMenu-starIcon {
+  stroke: transparent;
+
+  &--empty {
+    fill: $medium-grey;
+    stroke: transparent;
+  }
+
+  &--full {
+    stroke: transparent;
+  }
+}

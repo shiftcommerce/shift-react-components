@@ -1,0 +1,25 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-account-errors {
+  background-color: $background-alert;
+  border: 1px solid $border-alert;
+  border-radius: 2px;
+  color: $text-alert;
+  font-size: 1em;
+  font-weight: 300;
+  margin: $global-spacing-unit-small 0;
+  padding: $global-spacing-unit-small;
+  text-align: left;
+
+  li {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: $global-spacing-unit-small;
+  }
+}

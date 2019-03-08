@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct child elements and classnames 1`] = `
+<CartTablePaymentIcons
+  className="dummy-classname"
+>
+  <div
+    className="dummy-classname c-cart-table__icons"
+  >
+    <PaymentIcons>
+      <div
+        className="c-payment-icons"
+      >
+        <p>
+          We Accept
+        </p>
+        <div
+          className="c-payment-icons__images"
+        >
+          <Image
+            aria-label="VISA"
+            className="c-payment-icons__image"
+            src="/static/payments/visa.svg"
+          >
+            <div
+              className="c-payment-icons__image"
+            >
+              <picture>
+                <img
+                  aria-label="VISA"
+                  className="o-image"
+                  src="/static/payments/visa.svg"
+                  srcSet="/static/payments/visa.svg 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+          <Image
+            aria-label="Mastercard"
+            className="c-payment-icons__image"
+            src="/static/payments/mastercard.svg"
+          >
+            <div
+              className="c-payment-icons__image"
+            >
+              <picture>
+                <img
+                  aria-label="Mastercard"
+                  className="o-image"
+                  src="/static/payments/mastercard.svg"
+                  srcSet="/static/payments/mastercard.svg 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+          <Image
+            aria-label="American Express"
+            className="c-payment-icons__image"
+            src="/static/payments/american-express.svg"
+          >
+            <div
+              className="c-payment-icons__image"
+            >
+              <picture>
+                <img
+                  aria-label="American Express"
+                  className="o-image"
+                  src="/static/payments/american-express.svg"
+                  srcSet="/static/payments/american-express.svg 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+          <Image
+            aria-label="Maestro"
+            className="c-payment-icons__image"
+            src="/static/payments/maestro.svg"
+          >
+            <div
+              className="c-payment-icons__image"
+            >
+              <picture>
+                <img
+                  aria-label="Maestro"
+                  className="o-image"
+                  src="/static/payments/maestro.svg"
+                  srcSet="/static/payments/maestro.svg 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+          <Image
+            aria-label="PayPal"
+            className="c-payment-icons__image"
+            src="/static/payments/pay-pal.svg"
+          >
+            <div
+              className="c-payment-icons__image"
+            >
+              <picture>
+                <img
+                  aria-label="PayPal"
+                  className="o-image"
+                  src="/static/payments/pay-pal.svg"
+                  srcSet="/static/payments/pay-pal.svg 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+          <Image
+            aria-label="Apple Pay"
+            className="c-payment-icons__image"
+            src="/static/payments/apple-pay.svg"
+          >
+            <div
+              className="c-payment-icons__image"
+            >
+              <picture>
+                <img
+                  aria-label="Apple Pay"
+                  className="o-image"
+                  src="/static/payments/apple-pay.svg"
+                  srcSet="/static/payments/apple-pay.svg 769w"
+                />
+              </picture>
+            </div>
+          </Image>
+        </div>
+      </div>
+    </PaymentIcons>
+  </div>
+</CartTablePaymentIcons>
+`;

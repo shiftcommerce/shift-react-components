@@ -1,0 +1,67 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
+.ais-RefinementList-list {
+  display: block;
+  list-style: none;
+  padding: .1rem;
+  margin: .5rem 0;
+}
+
+.ais-RefinementList-item {
+  padding: 5px;
+
+  &--disabled {
+    cursor: default;
+    opacity: .5;
+  }
+}
+
+.ais-RefinementList-count {
+  color: $medium-grey;
+  background-color: transparent;
+
+  &:after {
+    content: ')';
+  }
+
+  &:before {
+    content: '(';
+  }
+}
+
+.ais-RefinementList-showMore {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  padding: 5px 0 15px 22px;
+  color: inherit;
+  cursor: pointer;
+
+  &--disabled {
+    display: none;
+  }
+}
+
+.ais-RefinementList-label {
+  /*Hide default checkbox*/
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  input[type='checkbox']:checked + span:after {
+    content: '';
+    color: $text-dark;
+  }
+
+  input[type='checkbox']:checked + span:before {
+    content: '';
+    border-color: $border-dark;
+  }
+}
+
+.ais-RefinementList-labelText {
+  cursor: pointer;
+
+  @include custom-checkbox
+}

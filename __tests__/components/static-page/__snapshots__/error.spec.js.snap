@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct child elements and classnames 1`] = `
+<StaticPageError
+  className="dummy-classname"
+>
+  <div
+    className="dummy-classname c-static-page-error"
+  >
+    <StaticPageErrorBody>
+      <div
+        className="c-static-page-error-body"
+      >
+        <h1>
+          Oh no, something went wrong.
+        </h1>
+        <h2>
+          We weren't able to process your request.
+        </h2>
+      </div>
+    </StaticPageErrorBody>
+    <StaticPageErrorDetails />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </div>
+</StaticPageError>
+`;

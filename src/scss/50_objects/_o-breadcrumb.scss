@@ -1,0 +1,50 @@
+/* ==========================================================================
+   # Breadcrumb Object
+   ========================================================================== */
+
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.o-breadcrumb {
+  display: none;
+  align-self: center;
+  padding: $global-spacing-unit-small;
+  padding-left: 0;
+  margin-bottom: $global-spacing-unit-small;
+  list-style: none;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    margin: 0;
+    font-size: .8rem;
+    height: auto;
+  }
+}
+
+.o-breadcrumb__item {
+  float: left;
+
+  &:not(:first-child) {
+    margin-left: $global-spacing-unit-small;
+
+    &:before {
+      position: relative;
+      right: .5em;
+      content: '>';
+      font-size: .8rem;
+    }
+  }
+}
+
+.o-breadcrumb__link {
+  text-decoration: none;
+
+  &:hover {
+    color: $text-default;
+
+    & > span {
+      text-decoration: none;
+      color: $text-default;
+    }
+  }
+}

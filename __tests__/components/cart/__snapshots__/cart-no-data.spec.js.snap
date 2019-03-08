@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders exception message when component is loaded 1`] = `
+<section
+  className="c-cart-no-data"
+>
+  <p>
+    You have no items in your cart. If you are expecting items in it, please refresh.
+  </p>
+  <p>
+    If issue still persists, please check with our customer care.
+  </p>
+</section>
+`;

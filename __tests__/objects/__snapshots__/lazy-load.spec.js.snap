@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a placeholder when image is loading 1`] = `
+<LazyLoad
+  height="35px"
+  src="test@test.com"
+  width="125px"
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#EEEFF3",
+        "height": 0,
+        "paddingBottom": "NaN%",
+        "width": "100%",
+      }
+    }
+  >
+    <FadeIn
+      offset={150}
+      once={true}
+      render={[Function]}
+    >
+      <LazyLoad
+        offset={150}
+        once={true}
+        overflow={false}
+        resize={false}
+        scroll={true}
+        unmountIfInvisible={false}
+      >
+        <div
+          className="lazyload-placeholder"
+          style={
+            Object {
+              "height": undefined,
+            }
+          }
+        />
+      </LazyLoad>
+    </FadeIn>
+  </div>
+</LazyLoad>
+`;

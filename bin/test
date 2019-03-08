@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# add "yarn run lint:scss" when this package is removed from the main reference site
+cd vendor/shift-react-components && yarn run test

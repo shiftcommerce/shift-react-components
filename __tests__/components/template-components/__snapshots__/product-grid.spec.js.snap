@@ -1,0 +1,800 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductGrid component renders correctly 1`] = `
+<ProductGrid
+  componentData={
+    Object {
+      "cat_text": "View All",
+      "cat_url": Array [
+        Object {
+          "canonical_path": "/trending",
+          "category_tree_id": 9,
+          "created_at": "2018-10-17T11:07:19Z",
+          "deleted_at": null,
+          "facets": Array [],
+          "id": "70",
+          "meta_attributes": Object {},
+          "products_leading_variants": Array [],
+          "published": true,
+          "reference": "trending",
+          "slug": "trending",
+          "sorting_rules": Array [],
+          "title": "Trending",
+          "updated_at": "2018-10-17T11:07:55Z",
+        },
+      ],
+      "header": "TRENDING NOW",
+      "id": "21_5",
+      "image_height": 280,
+      "image_width": 280,
+      "products": Array [
+        Object {
+          "attribute_merchandising": Object {},
+          "available_to_browse": true,
+          "average_rating": 0,
+          "canonical_path": "/trending/seed_product_4",
+          "category_ids_cache": Array [
+            51,
+            66,
+            70,
+          ],
+          "content_type": "markdown",
+          "created_at": "2018-09-24T15:42:37Z",
+          "deleted_at": null,
+          "description": "World's Best was a blend invented during the second world war. While all commodities were in short supply, Taylors purchased a small quantity of very high-quality beans which we saved to create our World's Best blend. The blend was so good that it lives on today.",
+          "ewis_status": "not_ewis_eligible",
+          "has_assets": true,
+          "id": "128",
+          "max_current_price": 87.53,
+          "max_price": 87.53,
+          "merchandised": true,
+          "merged_attribute_merchandising": Object {},
+          "meta_attributes": Object {},
+          "min_current_price": 82.85,
+          "min_price": 82.85,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/138/1537803717.2738314-CLK-151_large_mug.jpg",
+          "published": true,
+          "rating": 0,
+          "reference": "seed_product_4",
+          "sellable": true,
+          "seo_meta_description": "Product 4 - Ex omnis qui sed.",
+          "seo_meta_keywords": "quibusdam, quas, voluptatum, consequatur, omnis",
+          "seo_meta_title": "CLK-151 large mug",
+          "slug": "trending/seed_product_4",
+          "title": "CLK-151 large mug",
+          "total_ratings": null,
+          "updated_at": "2018-12-04T12:53:28Z",
+          "web_product_description": "Product 4 - Sed eveniet voluptatem nemo.",
+          "web_product_name": "CLK-151 large mug",
+        },
+        Object {
+          "attribute_merchandising": Object {},
+          "available_to_browse": true,
+          "average_rating": 0,
+          "canonical_path": "/cups/seed_product_2",
+          "category_ids_cache": Array [
+            68,
+            70,
+            54,
+          ],
+          "content_type": "html",
+          "created_at": "2018-09-24T15:42:35Z",
+          "deleted_at": null,
+          "description": "A smooth but full-bodied coffee with amazing dark chocolate flavours, grown in the rich volcanic soils of Indonesia.",
+          "ewis_status": "not_ewis_eligible",
+          "has_assets": true,
+          "id": "126",
+          "max_current_price": 94.41,
+          "max_price": 94.41,
+          "merchandised": true,
+          "merged_attribute_merchandising": Object {},
+          "meta_attributes": Object {},
+          "min_current_price": 52.74,
+          "min_price": 52.74,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/154/1537803732.9891176-CLK-151_cup_180ml.jpg",
+          "published": true,
+          "rating": 0,
+          "reference": "seed_product_2",
+          "sellable": true,
+          "seo_meta_description": "Product 2 - Tempora saepe eum et.",
+          "seo_meta_keywords": "sequi, mollitia, odit, accusamus, voluptas",
+          "seo_meta_title": "CLK-151 cup 180ml",
+          "slug": "cups/seed_product_2",
+          "title": "CLK-151 cup 180ml",
+          "total_ratings": null,
+          "updated_at": "2018-12-04T13:08:52Z",
+          "web_product_description": "Product 2 - Ut ea et ut.",
+          "web_product_name": "CLK-151 cup 180ml",
+        },
+        Object {
+          "attribute_merchandising": Object {},
+          "available_to_browse": true,
+          "average_rating": 0,
+          "canonical_path": "/trending/seed_product_11",
+          "category_ids_cache": Array [
+            51,
+            70,
+          ],
+          "content_type": "markdown",
+          "created_at": "2018-09-24T15:42:43Z",
+          "deleted_at": null,
+          "description": "Our decaffeinated coffee has had the caffeine gently removed using the water-process, a technique developed in Switzerland. This removes the caffeine gently without losing any of the rich coffee flavour.",
+          "ewis_status": "not_ewis_eligible",
+          "has_assets": true,
+          "id": "135",
+          "max_current_price": 70.61,
+          "max_price": 70.61,
+          "merchandised": true,
+          "merged_attribute_merchandising": Object {},
+          "meta_attributes": Object {},
+          "min_current_price": 52.38,
+          "min_price": 52.38,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/150/1537803727.924468-CLK-151_wide_mug.jpg",
+          "published": true,
+          "rating": 0,
+          "reference": "seed_product_11",
+          "sellable": true,
+          "seo_meta_description": "Product 11 - Mollitia qui tenetur vitae.",
+          "seo_meta_keywords": "corporis, quis, est, sed, facilis",
+          "seo_meta_title": "CLK-151 wide mug",
+          "slug": "trending/seed_product_11",
+          "title": "CLK-151 wide mug",
+          "total_ratings": null,
+          "updated_at": "2018-11-20T11:12:50Z",
+          "web_product_description": "Product 11 - Et neque quibusdam odio.",
+          "web_product_name": "CLK-151 wide mug",
+        },
+        Object {
+          "attribute_merchandising": Object {},
+          "available_to_browse": true,
+          "average_rating": 0,
+          "canonical_path": "/trending/seed_product_6",
+          "category_ids_cache": Array [],
+          "content_type": "html",
+          "created_at": "2018-09-24T15:42:39Z",
+          "deleted_at": null,
+          "description": "From the highlands of Ethiopia, the ancient home of coffee, this coffee grows at altitudes of more than 4,000 feet. Our coffee comes from the Limu region of Western Ethiopia and is perfectly roasted to bring about balance with a winey sweetness.",
+          "ewis_status": "not_ewis_eligible",
+          "has_assets": true,
+          "id": "130",
+          "max_current_price": 72.51,
+          "max_price": 72.51,
+          "merchandised": false,
+          "merged_attribute_merchandising": Object {},
+          "meta_attributes": Object {},
+          "min_current_price": 47.62,
+          "min_price": 47.62,
+          "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/110/1537803707.9308817-CLK-151_plate_200mm.jpg",
+          "published": true,
+          "rating": 0,
+          "reference": "seed_product_6",
+          "sellable": true,
+          "seo_meta_description": "Product 6 - Ea veniam architecto quo.",
+          "seo_meta_keywords": "ut, quia, totam, praesentium, voluptas",
+          "seo_meta_title": "CLK-151 plate 200mm",
+          "slug": "trending/seed_product_6",
+          "title": "CLK-151 plate 200mm",
+          "total_ratings": null,
+          "updated_at": "2019-01-09T15:36:16Z",
+          "web_product_description": "Product 6 - Aut est quidem voluptate.",
+          "web_product_name": "CLK-151 plate 200mm",
+        },
+      ],
+      "reference": "product_grid",
+    }
+  }
+>
+  <section
+    className="o-template-component u-center-align"
+  >
+    <h1
+      className="c-component-header"
+    >
+      TRENDING NOW
+    </h1>
+    <div
+      className="o-card-grid o-card-grid--4d-2m"
+    >
+      <ProductListingCard
+        assetFileAltText="CLK-151 large mug"
+        assetFileUrl="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/138/1537803717.2738314-CLK-151_large_mug.jpg"
+        className="o-card-grid__card"
+        imageHeight={280}
+        imageWidth={280}
+        key="128"
+        maxPrice={87.53}
+        minPrice={82.85}
+        productPath="/trending/seed_product_4"
+        title="CLK-151 large mug"
+      >
+        <div
+          className="c-product-listing-card o-card-grid__card"
+        >
+          <div
+            className="c-product-listing-card__body"
+          >
+            <Link
+              as="/trending/seed_product_4"
+              href="/slug?slug=/trending/seed_product_4"
+            >
+              <a
+                href="/slug?slug=/trending/seed_product_4"
+              >
+                <div
+                  className="c-product-listing-card__gallery o-image"
+                >
+                  <LazyLoad
+                    alt="CLK-151 large mug"
+                    aria-label="CLK-151 large mug"
+                    className="c-product-listing-card__image u-image-shadow"
+                    imageHeight={280}
+                    imageWidth={280}
+                    src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/138/1537803717.2738314-CLK-151_large_mug.jpg"
+                  >
+                    <div
+                      style={
+                        Object {
+                          "backgroundColor": "#EEEFF3",
+                          "height": 0,
+                          "paddingBottom": "100.00%",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <FadeIn
+                        offset={150}
+                        once={true}
+                        render={[Function]}
+                      >
+                        <LazyLoad
+                          offset={150}
+                          once={true}
+                          overflow={false}
+                          resize={false}
+                          scroll={true}
+                          unmountIfInvisible={false}
+                        >
+                          <div
+                            className="lazyload-placeholder"
+                            style={
+                              Object {
+                                "height": undefined,
+                              }
+                            }
+                          />
+                        </LazyLoad>
+                      </FadeIn>
+                    </div>
+                  </LazyLoad>
+                </div>
+                <div
+                  className="c-product-listing-card__title"
+                >
+                  <p
+                    aria-level="1"
+                    role="heading"
+                  >
+                    CLK-151 large mug
+                  </p>
+                </div>
+              </a>
+            </Link>
+            <div
+              className="c-product-listing-card__price"
+            >
+              <ProductPrice
+                maxPrice={87.53}
+                minPrice={82.85}
+              >
+                <div
+                  className="c-product-price"
+                >
+                  <span>
+                    £
+                    82.85
+                     - £
+                    87.53
+                  </span>
+                </div>
+              </ProductPrice>
+            </div>
+            <div
+              className="c-product-listing-card__rating"
+            >
+              <Rating>
+                <span
+                  className="o-rating"
+                  key="0"
+                >
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="1"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="2"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="3"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="4"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="5"
+                  >
+                    ★
+                  </span>
+                </span>
+              </Rating>
+            </div>
+          </div>
+        </div>
+      </ProductListingCard>
+      <ProductListingCard
+        assetFileAltText="CLK-151 cup 180ml"
+        assetFileUrl="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/154/1537803732.9891176-CLK-151_cup_180ml.jpg"
+        className="o-card-grid__card"
+        imageHeight={280}
+        imageWidth={280}
+        key="126"
+        maxPrice={94.41}
+        minPrice={52.74}
+        productPath="/cups/seed_product_2"
+        title="CLK-151 cup 180ml"
+      >
+        <div
+          className="c-product-listing-card o-card-grid__card"
+        >
+          <div
+            className="c-product-listing-card__body"
+          >
+            <Link
+              as="/cups/seed_product_2"
+              href="/slug?slug=/cups/seed_product_2"
+            >
+              <a
+                href="/slug?slug=/cups/seed_product_2"
+              >
+                <div
+                  className="c-product-listing-card__gallery o-image"
+                >
+                  <LazyLoad
+                    alt="CLK-151 cup 180ml"
+                    aria-label="CLK-151 cup 180ml"
+                    className="c-product-listing-card__image u-image-shadow"
+                    imageHeight={280}
+                    imageWidth={280}
+                    src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/154/1537803732.9891176-CLK-151_cup_180ml.jpg"
+                  >
+                    <div
+                      style={
+                        Object {
+                          "backgroundColor": "#EEEFF3",
+                          "height": 0,
+                          "paddingBottom": "100.00%",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <FadeIn
+                        offset={150}
+                        once={true}
+                        render={[Function]}
+                      >
+                        <LazyLoad
+                          offset={150}
+                          once={true}
+                          overflow={false}
+                          resize={false}
+                          scroll={true}
+                          unmountIfInvisible={false}
+                        >
+                          <div
+                            className="lazyload-placeholder"
+                            style={
+                              Object {
+                                "height": undefined,
+                              }
+                            }
+                          />
+                        </LazyLoad>
+                      </FadeIn>
+                    </div>
+                  </LazyLoad>
+                </div>
+                <div
+                  className="c-product-listing-card__title"
+                >
+                  <p
+                    aria-level="1"
+                    role="heading"
+                  >
+                    CLK-151 cup 180ml
+                  </p>
+                </div>
+              </a>
+            </Link>
+            <div
+              className="c-product-listing-card__price"
+            >
+              <ProductPrice
+                maxPrice={94.41}
+                minPrice={52.74}
+              >
+                <div
+                  className="c-product-price"
+                >
+                  <span>
+                    £
+                    52.74
+                     - £
+                    94.41
+                  </span>
+                </div>
+              </ProductPrice>
+            </div>
+            <div
+              className="c-product-listing-card__rating"
+            >
+              <Rating>
+                <span
+                  className="o-rating"
+                  key="0"
+                >
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="1"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="2"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="3"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="4"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="5"
+                  >
+                    ★
+                  </span>
+                </span>
+              </Rating>
+            </div>
+          </div>
+        </div>
+      </ProductListingCard>
+      <ProductListingCard
+        assetFileAltText="CLK-151 wide mug"
+        assetFileUrl="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/150/1537803727.924468-CLK-151_wide_mug.jpg"
+        className="o-card-grid__card"
+        imageHeight={280}
+        imageWidth={280}
+        key="135"
+        maxPrice={70.61}
+        minPrice={52.38}
+        productPath="/trending/seed_product_11"
+        title="CLK-151 wide mug"
+      >
+        <div
+          className="c-product-listing-card o-card-grid__card"
+        >
+          <div
+            className="c-product-listing-card__body"
+          >
+            <Link
+              as="/trending/seed_product_11"
+              href="/slug?slug=/trending/seed_product_11"
+            >
+              <a
+                href="/slug?slug=/trending/seed_product_11"
+              >
+                <div
+                  className="c-product-listing-card__gallery o-image"
+                >
+                  <LazyLoad
+                    alt="CLK-151 wide mug"
+                    aria-label="CLK-151 wide mug"
+                    className="c-product-listing-card__image u-image-shadow"
+                    imageHeight={280}
+                    imageWidth={280}
+                    src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/150/1537803727.924468-CLK-151_wide_mug.jpg"
+                  >
+                    <div
+                      style={
+                        Object {
+                          "backgroundColor": "#EEEFF3",
+                          "height": 0,
+                          "paddingBottom": "100.00%",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <FadeIn
+                        offset={150}
+                        once={true}
+                        render={[Function]}
+                      >
+                        <LazyLoad
+                          offset={150}
+                          once={true}
+                          overflow={false}
+                          resize={false}
+                          scroll={true}
+                          unmountIfInvisible={false}
+                        >
+                          <div
+                            className="lazyload-placeholder"
+                            style={
+                              Object {
+                                "height": undefined,
+                              }
+                            }
+                          />
+                        </LazyLoad>
+                      </FadeIn>
+                    </div>
+                  </LazyLoad>
+                </div>
+                <div
+                  className="c-product-listing-card__title"
+                >
+                  <p
+                    aria-level="1"
+                    role="heading"
+                  >
+                    CLK-151 wide mug
+                  </p>
+                </div>
+              </a>
+            </Link>
+            <div
+              className="c-product-listing-card__price"
+            >
+              <ProductPrice
+                maxPrice={70.61}
+                minPrice={52.38}
+              >
+                <div
+                  className="c-product-price"
+                >
+                  <span>
+                    £
+                    52.38
+                     - £
+                    70.61
+                  </span>
+                </div>
+              </ProductPrice>
+            </div>
+            <div
+              className="c-product-listing-card__rating"
+            >
+              <Rating>
+                <span
+                  className="o-rating"
+                  key="0"
+                >
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="1"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="2"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="3"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="4"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="5"
+                  >
+                    ★
+                  </span>
+                </span>
+              </Rating>
+            </div>
+          </div>
+        </div>
+      </ProductListingCard>
+      <ProductListingCard
+        assetFileAltText="CLK-151 plate 200mm"
+        assetFileUrl="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/110/1537803707.9308817-CLK-151_plate_200mm.jpg"
+        className="o-card-grid__card"
+        imageHeight={280}
+        imageWidth={280}
+        key="130"
+        maxPrice={72.51}
+        minPrice={47.62}
+        productPath="/trending/seed_product_6"
+        title="CLK-151 plate 200mm"
+      >
+        <div
+          className="c-product-listing-card o-card-grid__card"
+        >
+          <div
+            className="c-product-listing-card__body"
+          >
+            <Link
+              as="/trending/seed_product_6"
+              href="/slug?slug=/trending/seed_product_6"
+            >
+              <a
+                href="/slug?slug=/trending/seed_product_6"
+              >
+                <div
+                  className="c-product-listing-card__gallery o-image"
+                >
+                  <LazyLoad
+                    alt="CLK-151 plate 200mm"
+                    aria-label="CLK-151 plate 200mm"
+                    className="c-product-listing-card__image u-image-shadow"
+                    imageHeight={280}
+                    imageWidth={280}
+                    src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/110/1537803707.9308817-CLK-151_plate_200mm.jpg"
+                  >
+                    <div
+                      style={
+                        Object {
+                          "backgroundColor": "#EEEFF3",
+                          "height": 0,
+                          "paddingBottom": "100.00%",
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <FadeIn
+                        offset={150}
+                        once={true}
+                        render={[Function]}
+                      >
+                        <LazyLoad
+                          offset={150}
+                          once={true}
+                          overflow={false}
+                          resize={false}
+                          scroll={true}
+                          unmountIfInvisible={false}
+                        >
+                          <div
+                            className="lazyload-placeholder"
+                            style={
+                              Object {
+                                "height": undefined,
+                              }
+                            }
+                          />
+                        </LazyLoad>
+                      </FadeIn>
+                    </div>
+                  </LazyLoad>
+                </div>
+                <div
+                  className="c-product-listing-card__title"
+                >
+                  <p
+                    aria-level="1"
+                    role="heading"
+                  >
+                    CLK-151 plate 200mm
+                  </p>
+                </div>
+              </a>
+            </Link>
+            <div
+              className="c-product-listing-card__price"
+            >
+              <ProductPrice
+                maxPrice={72.51}
+                minPrice={47.62}
+              >
+                <div
+                  className="c-product-price"
+                >
+                  <span>
+                    £
+                    47.62
+                     - £
+                    72.51
+                  </span>
+                </div>
+              </ProductPrice>
+            </div>
+            <div
+              className="c-product-listing-card__rating"
+            >
+              <Rating>
+                <span
+                  className="o-rating"
+                  key="0"
+                >
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="1"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="2"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="3"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="4"
+                  >
+                    ★
+                  </span>
+                  <span
+                    className="o-rating__star o-rating__star--empty"
+                    key="5"
+                  >
+                    ★
+                  </span>
+                </span>
+              </Rating>
+            </div>
+          </div>
+        </div>
+      </ProductListingCard>
+    </div>
+    <Link
+      className="o-template-component__cat-button o-button o-button--primary"
+      href="/trending"
+    >
+      <a
+        className="o-template-component__cat-button o-button o-button--primary"
+        href="/trending"
+      >
+        View All
+      </a>
+    </Link>
+  </section>
+</ProductGrid>
+`;

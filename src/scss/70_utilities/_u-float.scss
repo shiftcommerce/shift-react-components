@@ -1,0 +1,14 @@
+.u-float {
+  &--left {
+    float: left;
+  }
+
+  &--right {
+    position: absolute;
+    left: 85%;
+  }
+
+  &--clear {
+    clear: both;
+  }
+}

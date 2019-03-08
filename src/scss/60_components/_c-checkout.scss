@@ -1,0 +1,51 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-checkout {
+  @include breakpoint(desktop) {
+    width: 80%;
+    margin: auto;
+    max-width: $global-body-max-width;
+  }
+}
+
+.c-checkout__addressform {
+  @include breakpoint(desktop) {
+    width: 90%;
+  }
+}
+
+.c-checkout__cart {
+  margin: auto;
+  padding-left: $global-spacing-unit-small;
+  padding-right: $global-spacing-unit-small;
+
+  @include breakpoint(tablet) {
+    padding-left: $global-spacing-unit;
+    padding-right: $global-spacing-unit;
+  }
+
+  @include breakpoint(desktop) {
+    padding-left: $global-spacing-unit-small;
+    padding-right: 0;
+  }
+}
+
+.c-checkout__steps {
+  @include breakpoint(desktop) {
+    margin: auto;
+    border-bottom: 1px solid $border-default;
+  }
+}
+
+.c-checkout__address-book-button {
+  margin: 0;
+  margin-bottom: $global-spacing-unit-small;
+  margin-right: $global-spacing-unit-small;
+}
+
+.c-checkout__edit-form-button {
+  margin: 0;
+  margin-bottom: $global-spacing-unit-small;
+  margin-right: $global-spacing-unit-small;
+}

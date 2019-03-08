@@ -1,0 +1,10 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-component-header {
+  text-transform: uppercase;
+  border-bottom: 6px solid $accent-global;
+  display: inline-block;
+  padding: 0 $global-spacing-unit;
+  padding-bottom: $global-spacing-unit-tiny;
+}

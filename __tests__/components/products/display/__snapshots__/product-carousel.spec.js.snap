@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ProductCarousel
+  assetFiles={
+    Array [
+      Object {
+        "asset_file": "1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+        "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+        "created_at": "2018-09-24T15:41:57Z",
+        "deleted_at": null,
+        "file_content_content_type": "image/jpeg",
+        "file_content_filename": "SEPIA_nonslip_tray_420_210mm.jpg",
+        "file_content_size": 24096,
+        "id": "139",
+        "image_height": 600,
+        "image_width": 600,
+        "meta_attributes": Object {},
+        "name": "SEPIA nonslip tray 420×210mm.jpg",
+        "reference": "1d6cc081-cbe6-4e90-b2e0-6f404ed68e64",
+        "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg",
+        "updated_at": "2018-09-24T15:43:05Z",
+      },
+    ]
+  }
+>
+  <Carousel
+    autoPlay={false}
+    axis="horizontal"
+    centerMode={false}
+    centerSlidePercentage={80}
+    dynamicHeight={false}
+    emulateTouch={false}
+    infiniteLoop={false}
+    interval={3000}
+    key="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+    onChange={[Function]}
+    onClickItem={[Function]}
+    onClickThumb={[Function]}
+    selectedItem={0}
+    showArrows={true}
+    showIndicators={true}
+    showStatus={false}
+    showThumbs={true}
+    statusFormatter={[Function]}
+    stopOnHover={true}
+    swipeScrollTolerance={5}
+    swipeable={true}
+    transitionTime={350}
+    useKeyboardArrows={true}
+    verticalSwipe="standard"
+    width="100%"
+  >
+    <div>
+      <div
+        className="carousel carousel-slider"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <button
+          className="control-arrow control-prev control-disabled"
+          onClick={[Function]}
+          type="button"
+        />
+        <div
+          className="slider-wrapper axis-horizontal"
+          style={Object {}}
+        >
+          <ReactSwipe
+            allowMouseEvents={false}
+            className="slider animated"
+            onSwipeDown={[Function]}
+            onSwipeEnd={[Function]}
+            onSwipeLeft={[Function]}
+            onSwipeMove={[Function]}
+            onSwipeRight={[Function]}
+            onSwipeStart={[Function]}
+            onSwipeUp={[Function]}
+            selectedItem={0}
+            style={
+              Object {
+                "MozTransform": "translate3d(0%,0,0)",
+                "MozTransitionDuration": "350ms",
+                "MsTransform": "translate3d(0%,0,0)",
+                "MsTransitionDuration": "350ms",
+                "OTransform": "translate3d(0%,0,0)",
+                "OTransitionDuration": "350ms",
+                "WebkitTransform": "translate3d(0%,0,0)",
+                "WebkitTransitionDuration": "350ms",
+                "msTransform": "translate3d(0%,0,0)",
+                "msTransitionDuration": "350ms",
+                "transform": "translate3d(0%,0,0)",
+                "transitionDuration": "350ms",
+              }
+            }
+            tagName="ul"
+            tolerance={5}
+          >
+            <ul
+              className="slider animated"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "MozTransform": "translate3d(0%,0,0)",
+                  "MozTransitionDuration": "350ms",
+                  "MsTransform": "translate3d(0%,0,0)",
+                  "MsTransitionDuration": "350ms",
+                  "OTransform": "translate3d(0%,0,0)",
+                  "OTransitionDuration": "350ms",
+                  "WebkitTransform": "translate3d(0%,0,0)",
+                  "WebkitTransitionDuration": "350ms",
+                  "msTransform": "translate3d(0%,0,0)",
+                  "msTransitionDuration": "350ms",
+                  "transform": "translate3d(0%,0,0)",
+                  "transitionDuration": "350ms",
+                }
+              }
+            >
+              <li
+                className="slide selected"
+                key="itemKey0/.$0"
+                onClick={[Function]}
+              >
+                <img
+                  key="0"
+                  src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                />
+              </li>
+            </ul>
+          </ReactSwipe>
+        </div>
+        <button
+          className="control-arrow control-next control-disabled"
+          onClick={[Function]}
+          type="button"
+        />
+        <ul
+          className="control-dots"
+        >
+          <li
+            className="dot selected"
+            key=".$0"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+            value={0}
+          />
+        </ul>
+      </div>
+      <Thumbs
+        axis="horizontal"
+        onSelectItem={[Function]}
+        selectedItem={0}
+        transitionTime={350}
+      >
+        <div
+          className="carousel"
+        >
+          <div
+            className="thumbs-wrapper axis-vertical"
+          >
+            <button
+              className="control-arrow control-prev control-disabled"
+              onClick={[Function]}
+              type="button"
+            />
+            <ReactSwipe
+              allowMouseEvents={false}
+              className="thumbs animated"
+              onSwipeDown={[Function]}
+              onSwipeEnd={[Function]}
+              onSwipeLeft={[Function]}
+              onSwipeMove={[Function]}
+              onSwipeRight={[Function]}
+              onSwipeStart={[Function]}
+              onSwipeUp={[Function]}
+              selectedItem={0}
+              style={
+                Object {
+                  "MozTransform": "translate3d(NaNpx,0,0)",
+                  "MozTransitionDuration": "350ms",
+                  "MsTransform": "translate3d(NaNpx,0,0)",
+                  "MsTransitionDuration": "350ms",
+                  "OTransform": "translate3d(NaNpx,0,0)",
+                  "OTransitionDuration": "350ms",
+                  "WebkitTransform": "translate3d(NaNpx,0,0)",
+                  "WebkitTransitionDuration": "350ms",
+                  "msTransform": "translate3d(NaNpx,0,0)",
+                  "msTransitionDuration": "350ms",
+                  "transform": "translate3d(NaNpx,0,0)",
+                  "transitionDuration": "350ms",
+                }
+              }
+              tagName="ul"
+              tolerance={0}
+            >
+              <ul
+                className="thumbs animated"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "MozTransform": "translate3d(NaNpx,0,0)",
+                    "MozTransitionDuration": "350ms",
+                    "MsTransform": "translate3d(NaNpx,0,0)",
+                    "MsTransitionDuration": "350ms",
+                    "OTransform": "translate3d(NaNpx,0,0)",
+                    "OTransitionDuration": "350ms",
+                    "WebkitTransform": "translate3d(NaNpx,0,0)",
+                    "WebkitTransitionDuration": "350ms",
+                    "msTransform": "translate3d(NaNpx,0,0)",
+                    "msTransitionDuration": "350ms",
+                    "transform": "translate3d(NaNpx,0,0)",
+                    "transitionDuration": "350ms",
+                  }
+                }
+              >
+                <li
+                  className="thumb"
+                  key="0"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <img
+                    key=".$0"
+                    onLoad={[Function]}
+                    src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/139/1537803717.9168365-SEPIA_nonslip_tray_420_210mm.jpg"
+                  />
+                </li>
+              </ul>
+            </ReactSwipe>
+            <button
+              className="control-arrow control-next control-disabled"
+              onClick={[Function]}
+              type="button"
+            />
+          </div>
+        </div>
+      </Thumbs>
+    </div>
+  </Carousel>
+</ProductCarousel>
+`;

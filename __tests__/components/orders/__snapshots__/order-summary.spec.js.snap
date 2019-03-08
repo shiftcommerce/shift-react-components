@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<OrderSummary
+  order={
+    Object {
+      "billing_address": Object {
+        "attributes": Object {
+          "address_line_1": "104 Quay One",
+          "address_line_2": "",
+          "city": "Leeds",
+          "country": "GB",
+          "first_name": "john",
+          "last_name": "smith",
+          "postcode": "LS9 8DS",
+        },
+        "id": "",
+        "type": "addresses",
+      },
+      "cardToken": Object {
+        "card": Object {
+          "address_city": "Leeds",
+          "address_country": "GB",
+          "address_line1": "104 Quay One",
+          "address_line1_check": "unchecked",
+          "address_line2": "",
+          "address_state": "Some state",
+          "address_zip": "LS9 8DS",
+          "address_zip_check": "unchecked",
+          "brand": "Visa",
+          "country": "US",
+          "cvc_check": "unchecked",
+          "dynamic_last4": null,
+          "exp_month": 9,
+          "exp_year": 2029,
+          "funding": "credit",
+          "id": "card_1DRhVLIZ9svPgtYNHTG1Vare",
+          "last4": "4242",
+          "metadata": Object {},
+          "name": "john smith",
+          "object": "card",
+          "tokenization_method": null,
+        },
+        "client_ip": "90.198.102.132",
+        "created": 1541083839,
+        "id": "tok_1DRhVLIZ9svPgtYNDsRIAYyp",
+        "livemode": false,
+        "object": "token",
+        "type": "card",
+        "used": false,
+      },
+      "cardTokenRequested": false,
+      "card_errors": false,
+      "channel": "web",
+      "coupons_applied": Array [],
+      "currency": "GBP",
+      "customer_account_id": null,
+      "deallocated": false,
+      "deallocated_at": null,
+      "discount_summaries": Array [
+        Object {
+          "attributes": Object {
+            "name": "",
+            "promotion_id": 0,
+            "total": 0,
+          },
+          "id": "",
+          "type": "discount_summaries",
+        },
+      ],
+      "email": "john.smith@shiftcommerce.com",
+      "error": false,
+      "free_shipping": false,
+      "id": "95",
+      "ip_address": "90.198.102.132",
+      "line_items": Array [
+        Object {
+          "gift": false,
+          "gift_unit_quantity": 0,
+          "id": "127",
+          "line_item_discounts": Array [],
+          "sku": "1425689355217",
+          "taxes": 0,
+          "title": "SCS-04-CJ coffee jug 600ml",
+          "tracking_url": null,
+          "unit_price": 90.31,
+          "unit_quantity": 1,
+        },
+        Object {
+          "gift": false,
+          "gift_unit_quantity": 0,
+          "id": "128",
+          "line_item_discounts": Array [],
+          "sku": "bdm1",
+          "taxes": 0,
+          "title": "Brazil Daterra Masterpiece - Curupira",
+          "tracking_url": null,
+          "unit_price": 16.5,
+          "unit_quantity": 1,
+        },
+      ],
+      "loading": false,
+      "paymentError": null,
+      "placed_at": "2018-11-01T14:50:39.968Z",
+      "reference": "_95_",
+      "shipping_address": Object {
+        "attributes": Object {
+          "address_line_1": "228 Query Avenue",
+          "address_line_2": "",
+          "city": "Manchester",
+          "country": "GB",
+          "first_name": "Terry",
+          "last_name": "Tibbs",
+          "postcode": "M1 1TP",
+        },
+        "id": "",
+        "type": "addresses",
+      },
+      "shipping_discount": 0,
+      "shipping_discount_name": null,
+      "shipping_method": Object {
+        "attributes": Object {
+          "created_at": "2018-11-01T14:50:35.544Z",
+          "description": "Sunday 2nd December",
+          "label": "Super Saver",
+          "meta_attributes": Object {},
+          "reference": "super_saver",
+          "sku": "super_saver",
+          "sub_total": 3.45,
+          "tax": 2,
+          "tax_rate": 20,
+          "total": 3.45,
+          "updated_at": "2018-11-01T14:50:35.544Z",
+        },
+        "id": "1",
+        "type": "shipping_methods",
+      },
+      "shipping_total": 3.45,
+      "status": "pending",
+      "sub_total": 106.81,
+      "tax": 0,
+      "test": true,
+      "total": 110.26,
+    }
+  }
+>
+  <div
+    className="c-order__summary"
+  >
+    <div
+      className="c-order__summary-header"
+    >
+      <div
+        className="c-order__summary-header-title"
+      >
+        <h2>
+          Your Order
+        </h2>
+      </div>
+      <div
+        className="c-order__summary-header-total"
+      >
+        <h2>
+          £
+          110.26
+        </h2>
+      </div>
+    </div>
+    <div
+      className="c-order__summary-line-item"
+      key="1425689355217"
+    >
+      <div
+        className="c-order__summary-line-item-image"
+      >
+        <Image
+          alt="SCS-04-CJ coffee jug 600ml"
+          aria-label="SCS-04-CJ coffee jug 600ml"
+          src="/static/placeholder.png"
+        >
+          <div>
+            <picture>
+              <img
+                alt="SCS-04-CJ coffee jug 600ml"
+                aria-label="SCS-04-CJ coffee jug 600ml"
+                className="o-image"
+                src="/static/placeholder.png"
+                srcSet="/static/placeholder.png 769w"
+              />
+            </picture>
+          </div>
+        </Image>
+      </div>
+      <div
+        className="c-order__summary-line-item-details"
+      >
+        <p
+          className="c-order__summary-line-item-details-title u-bold"
+        >
+          SCS-04-CJ coffee jug 600ml
+        </p>
+        <p
+          className="c-order__summary-line-item-details-sku"
+        >
+          1425689355217
+        </p>
+        <div
+          className="c-order__summary-line-item-details-param"
+          key="colour"
+        >
+          <div
+            className="c-order__summary-line-item-details-param-key"
+          >
+            <p>
+              colour
+              :
+            </p>
+          </div>
+          <div
+            className="c-order__summary-line-item-details-param-value"
+          >
+            <p>
+              Grey
+            </p>
+          </div>
+        </div>
+        <div
+          className="c-order__summary-line-item-details-param"
+          key="size"
+        >
+          <div
+            className="c-order__summary-line-item-details-param-key"
+          >
+            <p>
+              size
+              :
+            </p>
+          </div>
+          <div
+            className="c-order__summary-line-item-details-param-value"
+          >
+            <p>
+              L
+            </p>
+          </div>
+        </div>
+        <div
+          className="c-order__summary-line-item-details-param"
+          key="quantity"
+        >
+          <div
+            className="c-order__summary-line-item-details-param-key"
+          >
+            <p>
+              quantity
+              :
+            </p>
+          </div>
+          <div
+            className="c-order__summary-line-item-details-param-value"
+          >
+            <p>
+              1
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c-order__summary-line-item"
+      key="bdm1"
+    >
+      <div
+        className="c-order__summary-line-item-image"
+      >
+        <Image
+          alt="Brazil Daterra Masterpiece - Curupira"
+          aria-label="Brazil Daterra Masterpiece - Curupira"
+          src="/static/placeholder.png"
+        >
+          <div>
+            <picture>
+              <img
+                alt="Brazil Daterra Masterpiece - Curupira"
+                aria-label="Brazil Daterra Masterpiece - Curupira"
+                className="o-image"
+                src="/static/placeholder.png"
+                srcSet="/static/placeholder.png 769w"
+              />
+            </picture>
+          </div>
+        </Image>
+      </div>
+      <div
+        className="c-order__summary-line-item-details"
+      >
+        <p
+          className="c-order__summary-line-item-details-title u-bold"
+        >
+          Brazil Daterra Masterpiece - Curupira
+        </p>
+        <p
+          className="c-order__summary-line-item-details-sku"
+        >
+          bdm1
+        </p>
+        <div
+          className="c-order__summary-line-item-details-param"
+          key="colour"
+        >
+          <div
+            className="c-order__summary-line-item-details-param-key"
+          >
+            <p>
+              colour
+              :
+            </p>
+          </div>
+          <div
+            className="c-order__summary-line-item-details-param-value"
+          >
+            <p>
+              Grey
+            </p>
+          </div>
+        </div>
+        <div
+          className="c-order__summary-line-item-details-param"
+          key="size"
+        >
+          <div
+            className="c-order__summary-line-item-details-param-key"
+          >
+            <p>
+              size
+              :
+            </p>
+          </div>
+          <div
+            className="c-order__summary-line-item-details-param-value"
+          >
+            <p>
+              L
+            </p>
+          </div>
+        </div>
+        <div
+          className="c-order__summary-line-item-details-param"
+          key="quantity"
+        >
+          <div
+            className="c-order__summary-line-item-details-param-key"
+          >
+            <p>
+              quantity
+              :
+            </p>
+          </div>
+          <div
+            className="c-order__summary-line-item-details-param-value"
+          >
+            <p>
+              1
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c-order__summary-totals"
+    >
+      <Sticker>
+        <div
+          aria-label="Order total summary"
+          className="u-sticky"
+        >
+          <div>
+            <dl
+              aria-label="Order subtotal"
+            >
+              <dt>
+                Total products:
+              </dt>
+              <dd>
+                £
+                106.81
+              </dd>
+            </dl>
+            <dl
+              aria-label="Order shipping costs"
+            >
+              <dt>
+                Shipping costs:
+              </dt>
+              <dd>
+                £
+                3.45
+              </dd>
+            </dl>
+            <dl
+              aria-label="Order total"
+              className="u-bold"
+            >
+              <dt>
+                TOTAL:
+              </dt>
+              <dd>
+                £
+                110.26
+              </dd>
+            </dl>
+            <dl>
+              <dt>
+                * Including VAT
+              </dt>
+            </dl>
+          </div>
+        </div>
+      </Sticker>
+    </div>
+  </div>
+</OrderSummary>
+`;

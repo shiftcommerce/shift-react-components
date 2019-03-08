@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Fragment>
+  <AlgoliaStateResults(ProductMenu) />
+  <Breadcrumb />
+  <div
+    className="c-product-listing-wrapper"
+  >
+    <SearchFilters
+      filtersShown={false}
+      toggleFiltering={[Function]}
+    />
+    <div
+      className="c-product-listing"
+    >
+      <div
+        className="c-product-listing__menu"
+      >
+        <ProductMenuOptions
+          toggleFiltering={[Function]}
+        />
+      </div>
+      <AlgoliaInfiniteHits(SearchResults) />
+    </div>
+  </div>
+</Fragment>
+`;

@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays an input and a submit button 1`] = `
+<CouponForm>
+  <div
+    className="c-coupon-form"
+  >
+    <div
+      aria-label="Use gift card or rewards code"
+      className="c-gift__wrapper"
+    >
+      <p
+        className="c-coupon-form__title"
+      >
+        Promotion Code
+      </p>
+      <Formik
+        enableReinitialize={false}
+        initialValues={
+          Object {
+            "couponCode": "",
+          }
+        }
+        isInitialValid={false}
+        validate={[Function]}
+        validateOnBlur={true}
+        validateOnChange={true}
+      >
+        <Form>
+          <Component
+            formik={
+              Object {
+                "dirty": false,
+                "errors": Object {},
+                "handleBlur": [Function],
+                "handleChange": [Function],
+                "handleReset": [Function],
+                "handleSubmit": [Function],
+                "initialValues": Object {
+                  "couponCode": "",
+                },
+                "isSubmitting": false,
+                "isValid": false,
+                "isValidating": false,
+                "registerField": [Function],
+                "resetForm": [Function],
+                "setError": [Function],
+                "setErrors": [Function],
+                "setFieldError": [Function],
+                "setFieldTouched": [Function],
+                "setFieldValue": [Function],
+                "setFormikState": [Function],
+                "setStatus": [Function],
+                "setSubmitting": [Function],
+                "setTouched": [Function],
+                "setValues": [Function],
+                "submitCount": 0,
+                "submitForm": [Function],
+                "touched": Object {},
+                "unregisterField": [Function],
+                "validate": [Function],
+                "validateField": [Function],
+                "validateForm": [Function],
+                "validateOnBlur": true,
+                "validateOnChange": true,
+                "validationSchema": undefined,
+                "values": Object {
+                  "couponCode": "",
+                },
+              }
+            }
+          >
+            <form
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <div
+                className="c-coupon-form__field"
+              >
+                <FormikConnect(FieldInner)
+                  className="c-coupon-form__input"
+                  name="couponCode"
+                  placeholder="Enter Promotion Code"
+                  type="text"
+                >
+                  <FieldInner
+                    className="c-coupon-form__input"
+                    formik={
+                      Object {
+                        "dirty": false,
+                        "errors": Object {},
+                        "handleBlur": [Function],
+                        "handleChange": [Function],
+                        "handleReset": [Function],
+                        "handleSubmit": [Function],
+                        "initialValues": Object {
+                          "couponCode": "",
+                        },
+                        "isSubmitting": false,
+                        "isValid": false,
+                        "isValidating": false,
+                        "registerField": [Function],
+                        "resetForm": [Function],
+                        "setError": [Function],
+                        "setErrors": [Function],
+                        "setFieldError": [Function],
+                        "setFieldTouched": [Function],
+                        "setFieldValue": [Function],
+                        "setFormikState": [Function],
+                        "setStatus": [Function],
+                        "setSubmitting": [Function],
+                        "setTouched": [Function],
+                        "setValues": [Function],
+                        "submitCount": 0,
+                        "submitForm": [Function],
+                        "touched": Object {},
+                        "unregisterField": [Function],
+                        "validate": [Function],
+                        "validateField": [Function],
+                        "validateForm": [Function],
+                        "validateOnBlur": true,
+                        "validateOnChange": true,
+                        "validationSchema": undefined,
+                        "values": Object {
+                          "couponCode": "",
+                        },
+                      }
+                    }
+                    name="couponCode"
+                    placeholder="Enter Promotion Code"
+                    type="text"
+                  >
+                    <input
+                      className="c-coupon-form__input"
+                      name="couponCode"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="Enter Promotion Code"
+                      type="text"
+                      value=""
+                    />
+                  </FieldInner>
+                </FormikConnect(FieldInner)>
+                <div
+                  className="c-coupon-form__button-container"
+                >
+                  <Button
+                    aria-label="Apply Gift Code"
+                    className="c-coupon-form__button o-button--sml"
+                    label="Apply"
+                    status="primary"
+                  >
+                    <button
+                      aria-label="Apply Gift Code"
+                      className="c-coupon-form__button o-button--sml o-button o-button--primary"
+                      disabled={false}
+                      role="button"
+                      tabIndex="0"
+                    >
+                      Apply
+                    </button>
+                  </Button>
+                </div>
+              </div>
+              <FormikConnect(ErrorMessageImpl)
+                className="c-coupon-form__error"
+                component="div"
+                name="couponCode"
+              >
+                <ErrorMessageImpl
+                  className="c-coupon-form__error"
+                  component="div"
+                  formik={
+                    Object {
+                      "dirty": false,
+                      "errors": Object {},
+                      "handleBlur": [Function],
+                      "handleChange": [Function],
+                      "handleReset": [Function],
+                      "handleSubmit": [Function],
+                      "initialValues": Object {
+                        "couponCode": "",
+                      },
+                      "isSubmitting": false,
+                      "isValid": false,
+                      "isValidating": false,
+                      "registerField": [Function],
+                      "resetForm": [Function],
+                      "setError": [Function],
+                      "setErrors": [Function],
+                      "setFieldError": [Function],
+                      "setFieldTouched": [Function],
+                      "setFieldValue": [Function],
+                      "setFormikState": [Function],
+                      "setStatus": [Function],
+                      "setSubmitting": [Function],
+                      "setTouched": [Function],
+                      "setValues": [Function],
+                      "submitCount": 0,
+                      "submitForm": [Function],
+                      "touched": Object {},
+                      "unregisterField": [Function],
+                      "validate": [Function],
+                      "validateField": [Function],
+                      "validateForm": [Function],
+                      "validateOnBlur": true,
+                      "validateOnChange": true,
+                      "validationSchema": undefined,
+                      "values": Object {
+                        "couponCode": "",
+                      },
+                    }
+                  }
+                  name="couponCode"
+                />
+              </FormikConnect(ErrorMessageImpl)>
+            </form>
+          </Component>
+        </Form>
+      </Formik>
+    </div>
+  </div>
+</CouponForm>
+`;

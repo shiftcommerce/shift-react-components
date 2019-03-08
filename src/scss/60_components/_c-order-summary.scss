@@ -1,0 +1,130 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-order__summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-order__summary-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border-bottom: 1px solid $border-default;
+  padding-bottom: $global-spacing-unit;
+  margin: $global-spacing-unit-small $global-spacing-unit;
+
+  @include breakpoint(desktop) {
+    padding-bottom: $global-spacing-unit-small;
+    margin-bottom: $global-spacing-unit-small;
+  }
+}
+
+.c-order__summary-header-title,
+.c-order__summary-header-total {
+  flex: 1;
+}
+
+.c-order__summary-header-total {
+  text-align: right;
+
+  h2 {
+    font-weight: 400;
+    font-size: .9em;
+  }
+
+  @include breakpoint(desktop) {
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.c-order__summary-line-item {
+  display: flex;
+  margin: $global-spacing-unit-small $global-spacing-unit;
+  padding-bottom: $global-spacing-unit-small;
+  border-bottom: 1px solid $light-grey;
+
+  @include breakpoint(desktop) {
+    margin: $global-spacing-unit-small 0;
+  }
+}
+
+.c-order__summary-line-item-image {
+  display: flex;
+  align-items: center;
+  flex: 1;
+
+  img {
+    max-width: 100%;
+    padding: $global-spacing-unit-small;
+  }
+}
+
+.c-order__summary-line-item-details {
+  flex: 2;
+  flex-direction: column;
+}
+
+.c-order__summary-line-item-details-title {
+  font-size: .8em;
+
+  @include breakpoint(desktop) {
+    font-size: 1.2em;
+  }
+}
+
+.c-order__summary-line-item-details-sku {
+  color: $background-secondary;
+}
+
+.c-order__summary-line-item-details-param {
+  display: flex;
+  flex-direction: row;
+}
+
+.c-order__summary-line-item-details-param-key {
+  flex: 1;
+  font-weight: bold;
+}
+
+.c-order__summary-line-item-details-param-value {
+  flex: 2;
+}
+
+.c-order__summary-totals {
+  text-align: right;
+  background-color: $light-grey;
+  margin: $global-spacing-unit-small $global-spacing-unit;
+  padding: $global-spacing-unit-small;
+
+  @include breakpoint(desktop) {
+    margin: $global-spacing-unit-small 0;
+  }
+
+  dl,
+  dt,
+  dd {
+    margin: 0;
+  }
+
+  dl {
+    padding: $global-spacing-unit-tiny;
+    font-size: .8em;
+
+    @include breakpoint(desktop) {
+      font-size: 1em;
+    }
+  }
+
+  dt {
+    display: inline-block;
+    margin-left: 30%;
+  }
+
+  dd {
+    display: inline-block;
+    padding-left: $global-spacing-unit-tiny;
+  }
+}

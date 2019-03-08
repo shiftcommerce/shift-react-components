@@ -1,0 +1,20 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.u-text-color {
+  &--green {
+    color: $text-success;
+  }
+
+  &--red {
+    color: $text-error;
+  }
+
+  &--primary {
+    color: $text-primary;
+  }
+
+  &--orange {
+    color: $alert-orange;
+  }
+}

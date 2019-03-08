@@ -1,0 +1,29 @@
+// Baseline grid lines height.
+// Every spacing metric should be based on this.
+$global-baseline:     6px !default;
+
+// How many grid lines should our spacing unit variants span?
+// Each value should be an unitless integer.
+$global-spacing-unit-factor-tiny:   1 !default;   // 6px
+$global-spacing-unit-factor-small:  2 !default;   // 12px
+$global-spacing-unit-factor:        4 !default;   // 24px
+$global-spacing-unit-factor-large:  8 !default;   // 48px
+$global-spacing-unit-factor-huge:   16 !default;  // 96px
+
+// Spacing values are determined based on the project’s global baseline grid.
+// We shouldn't modify these following variables (it can break vertical rhythm)
+$global-spacing-unit:       $global-baseline * $global-spacing-unit-factor !default;
+$global-spacing-unit-tiny:  $global-baseline * $global-spacing-unit-factor-tiny !default;
+$global-spacing-unit-small: $global-baseline * $global-spacing-unit-factor-small !default;
+$global-spacing-unit-large: $global-baseline * $global-spacing-unit-factor-large !default;
+$global-spacing-unit-huge:  $global-baseline * $global-spacing-unit-factor-huge !default;
+
+// Used for auto-generation of utilities
+$directions: top right bottom left;
+$spacings: (
+  none: 0,
+  xs: $global-spacing-unit-tiny,
+  s: $global-spacing-unit-small,
+  l: $global-spacing-unit-large,
+  xl: $global-spacing-unit-huge
+);

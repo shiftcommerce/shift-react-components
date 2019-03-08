@@ -1,0 +1,562 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders current step 1 correctly 1`] = `
+<div
+  className="o-header--checkout"
+>
+  <div
+    className="c-checkout__steps"
+  >
+    <div
+      className="c-step-indicators"
+    >
+      <div
+        className="c-step-indicators__steps"
+      >
+        <div
+          className="o-header__step"
+          key="0"
+        >
+          <div
+            className="c-step-indicator c-step-indicator--active"
+          >
+            <div
+              className="c-step-indicator__position c-step-indicator__position--active"
+            >
+              1
+            </div>
+            <div
+              className="c-step-indicator__line c-step-indicator__line--active"
+            />
+            <div
+              className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
+            >
+              Shipping Address
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              2
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Shipping Method
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="2"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              3
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="3"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Review & Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders current step 2 correctly 1`] = `
+<div
+  className="o-header--checkout"
+>
+  <div
+    className="c-checkout__steps"
+  >
+    <div
+      className="c-step-indicators"
+    >
+      <div
+        className="c-step-indicators__steps"
+      >
+        <div
+          className="o-header__step"
+          key="0"
+        >
+          <Link
+            href="/checkout/shipping-address"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                ✔
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Shipping Address
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <div
+            className="c-step-indicator c-step-indicator--active"
+          >
+            <div
+              className="c-step-indicator__position c-step-indicator__position--active"
+            >
+              2
+            </div>
+            <div
+              className="c-step-indicator__line c-step-indicator__line--active"
+            />
+            <div
+              className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
+            >
+              Shipping Method
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="2"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              3
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="3"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Review & Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders current step 3 correctly 1`] = `
+<div
+  className="o-header--checkout"
+>
+  <div
+    className="c-checkout__steps"
+  >
+    <div
+      className="c-step-indicators"
+    >
+      <div
+        className="c-step-indicators__steps"
+      >
+        <div
+          className="o-header__step"
+          key="0"
+        >
+          <Link
+            href="/checkout/shipping-address"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                ✔
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Shipping Address
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <Link
+            href="/checkout/shipping-method"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                ✔
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Shipping Method
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="2"
+        >
+          <div
+            className="c-step-indicator c-step-indicator--active"
+          >
+            <div
+              className="c-step-indicator__position c-step-indicator__position--active"
+            >
+              3
+            </div>
+            <div
+              className="c-step-indicator__line c-step-indicator__line--active"
+            />
+            <div
+              className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="3"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Review & Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders current step 4 correctly 1`] = `
+<div
+  className="o-header--checkout"
+>
+  <div
+    className="c-checkout__steps"
+  >
+    <div
+      className="c-step-indicators"
+    >
+      <div
+        className="c-step-indicators__steps"
+      >
+        <div
+          className="o-header__step"
+          key="0"
+        >
+          <Link
+            href="/checkout/shipping-address"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                ✔
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Shipping Address
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <Link
+            href="/checkout/shipping-method"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                ✔
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Shipping Method
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="2"
+        >
+          <Link
+            as="/checkout/payment"
+            href="/checkout/payment"
+            shallow={true}
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                ✔
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Payment
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="3"
+        >
+          <div
+            className="c-step-indicator c-step-indicator--active"
+          >
+            <div
+              className="c-step-indicator__position c-step-indicator__position--active"
+            >
+              4
+            </div>
+            <div
+              className="c-step-indicator__line c-step-indicator__line--active"
+            />
+            <div
+              className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
+            >
+              Review & Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders steps correctly 1`] = `
+<div
+  className="o-header--checkout"
+>
+  <div
+    className="c-checkout__steps"
+  >
+    <div
+      className="c-step-indicators"
+    >
+      <div
+        className="c-step-indicators__steps"
+      >
+        <div
+          className="o-header__step"
+          key="0"
+        >
+          <div
+            className="c-step-indicator c-step-indicator--active"
+          >
+            <div
+              className="c-step-indicator__position c-step-indicator__position--active"
+            >
+              1
+            </div>
+            <div
+              className="c-step-indicator__line c-step-indicator__line--active"
+            />
+            <div
+              className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
+            >
+              Shipping Address
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              2
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Shipping Method
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="2"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              3
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="3"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Review & Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

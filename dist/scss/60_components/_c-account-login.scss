@@ -1,0 +1,70 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-login {
+  width: 80%;
+  margin: auto;
+  padding-bottom: $global-spacing-unit;
+
+  @include breakpoint(tablet) {
+    width: 60%;
+  }
+}
+
+  .c-login__anchor {
+    color: $medium-grey;
+    display: block;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .c-login__button {
+    text-align: center;
+    width: 100%;
+  }
+
+  .c-login__caption {
+    color: $text-default;
+    font-weight: 300;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .c-login__input {
+    background-color: $background-light;
+    border-color: $border-default;
+    border-radius: 0;
+    font-size: .9em;
+    font-weight: 200;
+    margin-top: $global-spacing-unit;
+  }
+
+  .c-login__register-button {
+    background-color: $background-primary;
+    color: $text-light;
+    display: block;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+    margin: $global-spacing-unit auto;
+    padding: $global-spacing-unit-small;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:visited {
+      color: $text-light;
+    }
+
+    &:hover {
+      @include breakpoint(desktop) {
+        background: transparentize($background-primary, .2);
+      }
+    }
+  }
+
+  .c-login__title {
+    color: $background-primary;
+    font-weight: 500;
+    padding-top: $global-spacing-unit;
+    text-align: center;
+  }

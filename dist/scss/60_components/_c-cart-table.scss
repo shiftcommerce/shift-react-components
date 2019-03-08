@@ -1,0 +1,219 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-cart-table {
+  display: grid;
+  padding-left: $global-spacing-unit-small;
+  padding-right: $global-spacing-unit-small;
+  padding-top: $global-spacing-unit-small;
+  margin: auto;
+  max-width: 100%;
+
+  @include breakpoint(tablet) {
+    padding-left: $global-spacing-unit;
+    padding-right: $global-spacing-unit;
+  }
+
+  h1 {
+    margin-top: $global-spacing-unit-tiny;
+    font-size: 1em;
+
+    @include breakpoint(tablet) {
+      font-size: 1.3em;
+    }
+  }
+
+  h2 {
+    margin-top: $global-spacing-unit-small;
+    font-size: 1.1em;
+
+    @include breakpoint(desktop) {
+      font-size: 1em;
+    }
+  }
+
+  h4 {
+    margin-top: $global-spacing-unit-tiny;
+
+    @include breakpoint(tablet) {
+      font-size: 1em;
+    }
+  }
+}
+
+  .c-cart-table__grid {
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: [col1-start] 48% [col2-start] 48% [col2-end];
+      grid-template-rows: [row1-start] 80% [row2-start] 20% [row2-end];
+      grid-gap: 4%;
+    }
+  }
+
+    .c-cart-table__grid-item {
+      @include breakpoint(desktop) {
+        grid-row-start: [row1-start];
+        grid-row-end: [row2-start];
+        padding-bottom: 0;
+      }
+
+      &--a {
+        @include breakpoint(desktop) {
+          grid-column-start: [col1-start];
+          grid-column-end: [col2-start];
+        }
+      }
+
+      &--b {
+        @include breakpoint(desktop) {
+          grid-column-start: [col2-start];
+          grid-column-end: [col2-end];
+        }
+      }
+    }
+
+  .c-cart-table__breadcrumb {
+    @include breakpoint(desktop) {
+      padding: $global-spacing-unit-small 0;
+    }
+  }
+
+  .c-cart-table__description {
+    margin: ($global-spacing-unit-tiny / 2) 0;
+    font-size: .7em;
+
+    @include breakpoint(desktop) {
+      font-size: .9em;
+    }
+
+    a {
+      color: $background-positive;
+    }
+  }
+
+  .c-cart-table__text {
+    margin-bottom: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      font-size: 1em;
+    }
+  }
+
+  .c-cart-table__total {
+    font-weight: 300;
+    float: right;
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  .c-cart-table__amount {
+    color: $background-positive;
+
+    &:hover {
+      color: $background-positive;
+    }
+  }
+
+  .c-cart-table__title {
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  .c-cart-table__header {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid $border-default;
+    border-bottom: 1px solid $border-default;
+    padding-bottom: $global-spacing-unit-small;
+    padding-top: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      display: inline-block;
+      border: none;
+      padding: 0;
+    }
+  }
+
+    .c-cart-table__header-grid {
+      width: 70%;
+
+      @include breakpoint(tablet) {
+        font-size: 1em;
+      }
+
+      @include breakpoint(desktop) {
+        display: grid;
+        grid-template-columns: [col1-start] 48% [col2-start] 48% [col2-end];
+        grid-template-rows: [row1-start] 100% [row1-end];
+        grid-gap: 4%;
+        width: 100%;
+      }
+    }
+
+      .c-cart-table__header-item {
+        @include breakpoint(desktop) {
+          grid-row-start: [row1-start];
+          grid-row-end: [row1-end];
+          border-bottom: 1px solid $border-default;
+        }
+
+        &--a {
+          @include breakpoint(desktop) {
+            grid-column-start: [col1-start];
+            grid-column-end: [col2-start];
+          }
+        }
+
+        &--b {
+          @include breakpoint(desktop) {
+            grid-column-start: [col2-start];
+            grid-column-end: [col2-end];
+          }
+
+          h1 {
+            display: none;
+
+            @include breakpoint(desktop) {
+              display: block;
+              font-weight: 500;
+            }
+          }
+
+          p {
+            display: none;
+
+            @include breakpoint(desktop) {
+              display: block;
+              font-size: .9em;
+            }
+          }
+
+          a {
+            display: none;
+
+            @include breakpoint(desktop) {
+              display: inline;
+              font-weight: 500;
+              font-size: .9em;
+            }
+          }
+        }
+      }
+
+    .c-cart-table__header-total {
+      width: 30%;
+
+      @include breakpoint(tablet) {
+        font-size: 1em;
+      }
+    }
+
+  .c-cart-table__icons {
+    p {
+      font-size: .9em;
+      font-weight: 500;
+    }
+  }

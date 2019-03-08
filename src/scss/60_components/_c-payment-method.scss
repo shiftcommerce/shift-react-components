@@ -1,0 +1,85 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-payment-method {
+  label {
+    font-size: .7rem;
+    font-weight: bold;
+  }
+}
+
+.c-payment-method__button {
+  display: inline-block;
+  font-size: .7rem;
+  text-transform: uppercase;
+  height: 35px;
+  width: 90%;
+  margin: 2.5%;
+  text-align: center;
+  color: $text-light;
+  background-color: $background-primary;
+
+  @include breakpoint(desktop) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  &--active {
+    background-color: $background-positive;
+  }
+}
+
+.c-payment-method__summary {
+  font-size: .75rem;
+  width: 95%;
+  margin: auto;
+  padding-bottom: $global-spacing-unit-small;
+  border-bottom: 1px solid $border-default;
+  padding-left: 2px;
+
+  @include breakpoint(tablet) {
+    padding-left: 0;
+  }
+
+  @include breakpoint(desktop) {
+    width: 90%;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.c-payment-method__address-summary {
+  p {
+    color: $text-dark;
+  }
+}
+
+.c-payment-method__section {
+  @include breakpoint(desktop) {
+    width: 90%;
+  }
+}
+
+.c-payment-method__header {
+  @include breakpoint(tablet) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: $global-spacing-unit-small;
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}

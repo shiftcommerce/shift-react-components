@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders line items correctly, on initial load 1`] = `
+<div
+  className="c-line-items"
+>
+  <div
+    className="c-line-items__sections"
+    key="3008557600817"
+  >
+    <div
+      className="c-line-items__images"
+    >
+      <Link
+        href="/slug?slug=/jugs/seed_product_40"
+      >
+        <Image
+          alt="Variant 1"
+          aria-label="Variant 1"
+          className="c-line-items__image"
+          key="jugs/seed_product_40"
+          src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
+        />
+      </Link>
+    </div>
+    <div
+      className="c-line-items__information"
+    >
+      <div
+        className="c-line-items__title"
+      >
+        <div
+          className="c-line-items__details"
+        >
+          <h4
+            className="c-line-items__details-title u-bold"
+          >
+            SCS-04-CJ coffee jug 600ml - Variant 1
+          </h4>
+          <div
+            className="c-line-items__details-sku"
+          >
+            <span>
+              3008557600817
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c-line-items__colour"
+      >
+        <div
+          className="c-line-items__param u-bold"
+        >
+          <span>
+            Colour
+          </span>
+        </div>
+      </div>
+      <div
+        className="c-line-items__quantity"
+      >
+        <div
+          className="c-line-items__param u-bold"
+        >
+          <span>
+            Quantity
+          </span>
+        </div>
+      </div>
+      <div
+        className="c-line-items__param c-line-items__colour-selected"
+      >
+        <span>
+          Grey
+        </span>
+      </div>
+      <div
+        className="c-line-items__param c-line-items__quantity-selected"
+      >
+        <span>
+          <select
+            data-id="311"
+            value={1}
+          >
+            <option
+              aria-posinset={2}
+              aria-setsize={1}
+              key="1"
+              value={1}
+            >
+              1
+            </option>
+            <option
+              aria-posinset={3}
+              aria-setsize={2}
+              key="2"
+              value={2}
+            >
+              2
+            </option>
+            <option
+              aria-posinset={4}
+              aria-setsize={3}
+              key="3"
+              value={3}
+            >
+              3
+            </option>
+            <option
+              aria-posinset={5}
+              aria-setsize={4}
+              key="4"
+              value={4}
+            >
+              4
+            </option>
+            <option
+              aria-posinset={6}
+              aria-setsize={5}
+              key="5"
+              value={5}
+            >
+              5
+            </option>
+            <option
+              aria-posinset={7}
+              aria-setsize={6}
+              key="6"
+              value={6}
+            >
+              6
+            </option>
+            <option
+              aria-posinset={8}
+              aria-setsize={7}
+              key="7"
+              value={7}
+            >
+              7
+            </option>
+            <option
+              aria-posinset={9}
+              aria-setsize={8}
+              key="8"
+              value={8}
+            >
+              8
+            </option>
+            <option
+              aria-posinset={10}
+              aria-setsize={9}
+              key="9"
+              value={9}
+            >
+              9
+            </option>
+            <option
+              aria-posinset={11}
+              aria-setsize={10}
+              key="10"
+              value={10}
+            >
+              10
+            </option>
+          </select>
+        </span>
+      </div>
+      <div
+        className="c-line-items__remove"
+      >
+        <div
+          className="c-line-items__delete"
+        >
+          <a
+            className="c-line-items__delete-button"
+            data-id="311"
+          >
+            Delete
+          </a>
+        </div>
+      </div>
+      <div
+        className="c-line-items__amounts"
+      >
+        <a
+          className="c-line-items__amount"
+        >
+          £
+          6.77
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--discount"
+        >
+          - £
+          1.50
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--total"
+        >
+          £
+          5.27
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`trigger updateQuantity function, on change of line item quantity 1`] = `
+<div
+  className="c-line-items"
+>
+  <div
+    className="c-line-items__sections"
+    key="3008557600817"
+  >
+    <div
+      className="c-line-items__images"
+    >
+      <Link
+        href="/slug?slug=/jugs/seed_product_40"
+      >
+        <Image
+          alt="Variant 1"
+          aria-label="Variant 1"
+          className="c-line-items__image"
+          key="jugs/seed_product_40"
+          src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
+        />
+      </Link>
+    </div>
+    <div
+      className="c-line-items__information"
+    >
+      <div
+        className="c-line-items__title"
+      >
+        <div
+          className="c-line-items__details"
+        >
+          <h4
+            className="c-line-items__details-title u-bold"
+          >
+            SCS-04-CJ coffee jug 600ml - Variant 1
+          </h4>
+          <div
+            className="c-line-items__details-sku"
+          >
+            <span>
+              3008557600817
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c-line-items__colour"
+      >
+        <div
+          className="c-line-items__param u-bold"
+        >
+          <span>
+            Colour
+          </span>
+        </div>
+      </div>
+      <div
+        className="c-line-items__quantity"
+      >
+        <div
+          className="c-line-items__param u-bold"
+        >
+          <span>
+            Quantity
+          </span>
+        </div>
+      </div>
+      <div
+        className="c-line-items__param c-line-items__colour-selected"
+      >
+        <span>
+          Grey
+        </span>
+      </div>
+      <div
+        className="c-line-items__param c-line-items__quantity-selected"
+      >
+        <span>
+          <select
+            data-id="311"
+            onChange={
+              [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "target": Object {
+                        "value": 3,
+                      },
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
+                ],
+              }
+            }
+            value={1}
+          >
+            <option
+              aria-posinset={2}
+              aria-setsize={1}
+              key="1"
+              value={1}
+            >
+              1
+            </option>
+            <option
+              aria-posinset={3}
+              aria-setsize={2}
+              key="2"
+              value={2}
+            >
+              2
+            </option>
+            <option
+              aria-posinset={4}
+              aria-setsize={3}
+              key="3"
+              value={3}
+            >
+              3
+            </option>
+            <option
+              aria-posinset={5}
+              aria-setsize={4}
+              key="4"
+              value={4}
+            >
+              4
+            </option>
+            <option
+              aria-posinset={6}
+              aria-setsize={5}
+              key="5"
+              value={5}
+            >
+              5
+            </option>
+            <option
+              aria-posinset={7}
+              aria-setsize={6}
+              key="6"
+              value={6}
+            >
+              6
+            </option>
+            <option
+              aria-posinset={8}
+              aria-setsize={7}
+              key="7"
+              value={7}
+            >
+              7
+            </option>
+            <option
+              aria-posinset={9}
+              aria-setsize={8}
+              key="8"
+              value={8}
+            >
+              8
+            </option>
+            <option
+              aria-posinset={10}
+              aria-setsize={9}
+              key="9"
+              value={9}
+            >
+              9
+            </option>
+            <option
+              aria-posinset={11}
+              aria-setsize={10}
+              key="10"
+              value={10}
+            >
+              10
+            </option>
+          </select>
+        </span>
+      </div>
+      <div
+        className="c-line-items__remove"
+      >
+        <div
+          className="c-line-items__delete"
+        >
+          <a
+            className="c-line-items__delete-button"
+            data-id="311"
+          >
+            Delete
+          </a>
+        </div>
+      </div>
+      <div
+        className="c-line-items__amounts"
+      >
+        <a
+          className="c-line-items__amount"
+        >
+          £
+          6.77
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--discount"
+        >
+          - £
+          1.50
+        </a>
+        <a
+          className="c-line-items__amount c-line-items__amount--total"
+        >
+          £
+          5.27
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

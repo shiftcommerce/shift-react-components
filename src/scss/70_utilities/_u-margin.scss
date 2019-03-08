@@ -1,0 +1,40 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.u-margin {
+  margin-top: $global-spacing-unit * 7;
+
+  @include breakpoint(desktop) {
+    margin-top: $global-spacing-unit-large;
+  }
+}
+
+// Utility classes for applying margins, e.g. u-margin-top-l
+// Also includes breakpoint variations, e.g. u-margin-bottom-xl-mob
+@each $direction in $directions {
+  .u-margin-#{$direction} {
+    margin-#{$direction}: $global-spacing-unit;
+  }
+
+  @each $b, $breakpoint in $breakpoints {
+    .u-margin-#{$direction}-#{$b} {
+      @include breakpoint($breakpoint) {
+        margin-#{$direction}: $global-spacing-unit;
+      }
+    }
+  }
+
+  @each $size, $spacing-unit in $spacings {
+    .u-margin-#{$direction}-#{$size} {
+      margin-#{$direction}: $spacing-unit;
+    }
+
+    @each $b, $breakpoint in $breakpoints {
+      .u-margin-#{$direction}-#{$size}-#{$b} {
+        @include breakpoint($breakpoint) {
+          margin-#{$direction}: $spacing-unit;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,903 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout Cart renders the correct cart summary with multiple line items 1`] = `
+<CheckoutCart
+  lineItems={
+    Array [
+      Object {
+        "item": Object {
+          "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+          "product": Object {
+            "canonical_path": "1",
+            "slug": "1",
+            "title": "Test Product",
+          },
+          "sku": "123",
+          "title": "Test Variant",
+        },
+        "stock_available_level": "1000",
+        "sub_total": 10,
+        "total": 10,
+        "total_discount": 0,
+        "unit_quantity": 2,
+      },
+      Object {
+        "item": Object {
+          "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+          "product": Object {
+            "canonical_path": "1",
+            "slug": "2",
+            "title": "Pretend Product",
+          },
+          "sku": "124",
+          "title": "Pretend Variant",
+        },
+        "stock_available_level": "1000",
+        "sub_total": 5,
+        "total": 5,
+        "total_discount": 0,
+        "unit_quantity": 1,
+      },
+    ]
+  }
+  lineItemsCount={3}
+  total={25}
+  updateQuantity={[MockFunction]}
+>
+  <section
+    className="c-checkout-cart__header"
+  >
+    <div
+      className="u-float--left c-checkout-cart__table"
+    >
+      <h1
+        className="c-checkout-cart__title"
+      >
+         Your Shopping Basket 
+        <a
+          className="c-checkout-cart__amount"
+        >
+          (
+          3
+          )
+        </a>
+      </h1>
+      <h4
+        className="c-checkout-cart__total"
+      >
+        £
+        25.00
+      </h4>
+      <div
+        className="c-checkout-cart__text"
+      >
+        <p
+          className="c-checkout-cart__description"
+        >
+          You have 
+          <a>
+            3
+          </a>
+           
+          <Plural
+            className={null}
+            count={3}
+            showCount={false}
+            singular="item"
+            style={Object {}}
+            zero={null}
+          >
+            <span
+              className={null}
+              style={Object {}}
+            >
+              items
+            </span>
+          </Plural>
+           in your shopping basket
+        </p>
+        <p
+          className="c-checkout-cart__description"
+        >
+          <Plural
+            className={null}
+            count={3}
+            plural="These"
+            showCount={false}
+            singular="This"
+            style={Object {}}
+            zero={null}
+          >
+            <span
+              className={null}
+              style={Object {}}
+            >
+              These
+            </span>
+          </Plural>
+           
+          <Plural
+            className={null}
+            count={3}
+            showCount={false}
+            singular="item"
+            style={Object {}}
+            zero={null}
+          >
+            <span
+              className={null}
+              style={Object {}}
+            >
+              items
+            </span>
+          </Plural>
+           will be saved for 48 hours depending on availablility
+        </p>
+      </div>
+    </div>
+  </section>
+  <LineItems
+    lineItems={
+      Array [
+        Object {
+          "item": Object {
+            "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+            "product": Object {
+              "canonical_path": "1",
+              "slug": "1",
+              "title": "Test Product",
+            },
+            "sku": "123",
+            "title": "Test Variant",
+          },
+          "stock_available_level": "1000",
+          "sub_total": 10,
+          "total": 10,
+          "total_discount": 0,
+          "unit_quantity": 2,
+        },
+        Object {
+          "item": Object {
+            "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+            "product": Object {
+              "canonical_path": "1",
+              "slug": "2",
+              "title": "Pretend Product",
+            },
+            "sku": "124",
+            "title": "Pretend Variant",
+          },
+          "stock_available_level": "1000",
+          "sub_total": 5,
+          "total": 5,
+          "total_discount": 0,
+          "unit_quantity": 1,
+        },
+      ]
+    }
+    lineItemsCount={3}
+    updateQuantity={[MockFunction]}
+  >
+    <div
+      className="c-line-items"
+    >
+      <div
+        className="c-line-items__sections"
+        key="123"
+      >
+        <div
+          className="c-line-items__images"
+        >
+          <Link
+            href="/slug?slug=1"
+          >
+            <a
+              href="/slug?slug=1"
+            >
+              <Image
+                alt="Test Variant"
+                aria-label="Test Variant"
+                className="c-line-items__image"
+                key="1"
+              />
+            </a>
+          </Link>
+        </div>
+        <div
+          className="c-line-items__information"
+        >
+          <div
+            className="c-line-items__title"
+          >
+            <div
+              className="c-line-items__details"
+            >
+              <h4
+                className="c-line-items__details-title u-bold"
+              >
+                Test Product - Test Variant
+              </h4>
+              <div
+                className="c-line-items__details-sku"
+              >
+                <span />
+              </div>
+            </div>
+          </div>
+          <div
+            className="c-line-items__colour"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Colour
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__quantity"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Quantity
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__param c-line-items__colour-selected"
+          >
+            <span>
+              Grey
+            </span>
+          </div>
+          <div
+            className="c-line-items__param c-line-items__quantity-selected"
+          >
+            <span>
+              <select
+                onChange={[MockFunction]}
+                value={2}
+              >
+                <option
+                  aria-posinset={2}
+                  aria-setsize={1}
+                  key="1"
+                  value={1}
+                >
+                  1
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={2}
+                  key="2"
+                  value={2}
+                >
+                  2
+                </option>
+                <option
+                  aria-posinset={4}
+                  aria-setsize={3}
+                  key="3"
+                  value={3}
+                >
+                  3
+                </option>
+                <option
+                  aria-posinset={5}
+                  aria-setsize={4}
+                  key="4"
+                  value={4}
+                >
+                  4
+                </option>
+                <option
+                  aria-posinset={6}
+                  aria-setsize={5}
+                  key="5"
+                  value={5}
+                >
+                  5
+                </option>
+                <option
+                  aria-posinset={7}
+                  aria-setsize={6}
+                  key="6"
+                  value={6}
+                >
+                  6
+                </option>
+                <option
+                  aria-posinset={8}
+                  aria-setsize={7}
+                  key="7"
+                  value={7}
+                >
+                  7
+                </option>
+                <option
+                  aria-posinset={9}
+                  aria-setsize={8}
+                  key="8"
+                  value={8}
+                >
+                  8
+                </option>
+                <option
+                  aria-posinset={10}
+                  aria-setsize={9}
+                  key="9"
+                  value={9}
+                >
+                  9
+                </option>
+                <option
+                  aria-posinset={11}
+                  aria-setsize={10}
+                  key="10"
+                  value={10}
+                >
+                  10
+                </option>
+              </select>
+            </span>
+          </div>
+          <div
+            className="c-line-items__remove"
+          >
+            <div
+              className="c-line-items__delete"
+            >
+              <a
+                className="c-line-items__delete-button"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__amounts"
+          >
+            <a
+              className="c-line-items__amount c-line-items__amount--total"
+            >
+              £
+              10.00
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c-line-items__sections"
+        key="124"
+      >
+        <div
+          className="c-line-items__images"
+        >
+          <Link
+            href="/slug?slug=1"
+          >
+            <a
+              href="/slug?slug=1"
+            >
+              <Image
+                alt="Pretend Variant"
+                aria-label="Pretend Variant"
+                className="c-line-items__image"
+                key="2"
+              />
+            </a>
+          </Link>
+        </div>
+        <div
+          className="c-line-items__information"
+        >
+          <div
+            className="c-line-items__title"
+          >
+            <div
+              className="c-line-items__details"
+            >
+              <h4
+                className="c-line-items__details-title u-bold"
+              >
+                Pretend Product - Pretend Variant
+              </h4>
+              <div
+                className="c-line-items__details-sku"
+              >
+                <span />
+              </div>
+            </div>
+          </div>
+          <div
+            className="c-line-items__colour"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Colour
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__quantity"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Quantity
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__param c-line-items__colour-selected"
+          >
+            <span>
+              Grey
+            </span>
+          </div>
+          <div
+            className="c-line-items__param c-line-items__quantity-selected"
+          >
+            <span>
+              <select
+                onChange={[MockFunction]}
+                value={1}
+              >
+                <option
+                  aria-posinset={2}
+                  aria-setsize={1}
+                  key="1"
+                  value={1}
+                >
+                  1
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={2}
+                  key="2"
+                  value={2}
+                >
+                  2
+                </option>
+                <option
+                  aria-posinset={4}
+                  aria-setsize={3}
+                  key="3"
+                  value={3}
+                >
+                  3
+                </option>
+                <option
+                  aria-posinset={5}
+                  aria-setsize={4}
+                  key="4"
+                  value={4}
+                >
+                  4
+                </option>
+                <option
+                  aria-posinset={6}
+                  aria-setsize={5}
+                  key="5"
+                  value={5}
+                >
+                  5
+                </option>
+                <option
+                  aria-posinset={7}
+                  aria-setsize={6}
+                  key="6"
+                  value={6}
+                >
+                  6
+                </option>
+                <option
+                  aria-posinset={8}
+                  aria-setsize={7}
+                  key="7"
+                  value={7}
+                >
+                  7
+                </option>
+                <option
+                  aria-posinset={9}
+                  aria-setsize={8}
+                  key="8"
+                  value={8}
+                >
+                  8
+                </option>
+                <option
+                  aria-posinset={10}
+                  aria-setsize={9}
+                  key="9"
+                  value={9}
+                >
+                  9
+                </option>
+                <option
+                  aria-posinset={11}
+                  aria-setsize={10}
+                  key="10"
+                  value={10}
+                >
+                  10
+                </option>
+              </select>
+            </span>
+          </div>
+          <div
+            className="c-line-items__remove"
+          >
+            <div
+              className="c-line-items__delete"
+            >
+              <a
+                className="c-line-items__delete-button"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__amounts"
+          >
+            <a
+              className="c-line-items__amount c-line-items__amount--total"
+            >
+              £
+              5.00
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </LineItems>
+</CheckoutCart>
+`;
+
+exports[`Checkout Cart renders the correct cart summary with single line item 1`] = `
+<CheckoutCart
+  lineItems={
+    Array [
+      Object {
+        "item": Object {
+          "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+          "product": Object {
+            "canonical_path": "1",
+            "slug": "1",
+            "title": "Test Product",
+          },
+          "sku": "123",
+          "title": "Test Variant",
+        },
+        "stock_available_level": "1000",
+        "sub_total": 20,
+        "total": 20,
+        "total_discount": 0,
+        "unit_quantity": 2,
+      },
+    ]
+  }
+  lineItemsCount={1}
+  total={20}
+  updateQuantity={[MockFunction]}
+>
+  <section
+    className="c-checkout-cart__header"
+  >
+    <div
+      className="u-float--left c-checkout-cart__table"
+    >
+      <h1
+        className="c-checkout-cart__title"
+      >
+         Your Shopping Basket 
+        <a
+          className="c-checkout-cart__amount"
+        >
+          (
+          1
+          )
+        </a>
+      </h1>
+      <h4
+        className="c-checkout-cart__total"
+      >
+        £
+        20.00
+      </h4>
+      <div
+        className="c-checkout-cart__text"
+      >
+        <p
+          className="c-checkout-cart__description"
+        >
+          You have 
+          <a>
+            1
+          </a>
+           
+          <Plural
+            className={null}
+            count={1}
+            showCount={false}
+            singular="item"
+            style={Object {}}
+            zero={null}
+          >
+            <span
+              className={null}
+              style={Object {}}
+            >
+              item
+            </span>
+          </Plural>
+           in your shopping basket
+        </p>
+        <p
+          className="c-checkout-cart__description"
+        >
+          <Plural
+            className={null}
+            count={1}
+            plural="These"
+            showCount={false}
+            singular="This"
+            style={Object {}}
+            zero={null}
+          >
+            <span
+              className={null}
+              style={Object {}}
+            >
+              This
+            </span>
+          </Plural>
+           
+          <Plural
+            className={null}
+            count={1}
+            showCount={false}
+            singular="item"
+            style={Object {}}
+            zero={null}
+          >
+            <span
+              className={null}
+              style={Object {}}
+            >
+              item
+            </span>
+          </Plural>
+           will be saved for 48 hours depending on availablility
+        </p>
+      </div>
+    </div>
+  </section>
+  <LineItems
+    lineItems={
+      Array [
+        Object {
+          "item": Object {
+            "imageUrl": "https://shift-platform-dev-assets.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/145854/1506433071.3858652-S2658934_C101_Main.jpg",
+            "product": Object {
+              "canonical_path": "1",
+              "slug": "1",
+              "title": "Test Product",
+            },
+            "sku": "123",
+            "title": "Test Variant",
+          },
+          "stock_available_level": "1000",
+          "sub_total": 20,
+          "total": 20,
+          "total_discount": 0,
+          "unit_quantity": 2,
+        },
+      ]
+    }
+    lineItemsCount={1}
+    updateQuantity={[MockFunction]}
+  >
+    <div
+      className="c-line-items"
+    >
+      <div
+        className="c-line-items__sections"
+        key="123"
+      >
+        <div
+          className="c-line-items__images"
+        >
+          <Link
+            href="/slug?slug=1"
+          >
+            <a
+              href="/slug?slug=1"
+            >
+              <Image
+                alt="Test Variant"
+                aria-label="Test Variant"
+                className="c-line-items__image"
+                key="1"
+              />
+            </a>
+          </Link>
+        </div>
+        <div
+          className="c-line-items__information"
+        >
+          <div
+            className="c-line-items__title"
+          >
+            <div
+              className="c-line-items__details"
+            >
+              <h4
+                className="c-line-items__details-title u-bold"
+              >
+                Test Product - Test Variant
+              </h4>
+              <div
+                className="c-line-items__details-sku"
+              >
+                <span />
+              </div>
+            </div>
+          </div>
+          <div
+            className="c-line-items__colour"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Colour
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__quantity"
+          >
+            <div
+              className="c-line-items__param u-bold"
+            >
+              <span>
+                Quantity
+              </span>
+            </div>
+          </div>
+          <div
+            className="c-line-items__param c-line-items__colour-selected"
+          >
+            <span>
+              Grey
+            </span>
+          </div>
+          <div
+            className="c-line-items__param c-line-items__quantity-selected"
+          >
+            <span>
+              <select
+                onChange={[MockFunction]}
+                value={2}
+              >
+                <option
+                  aria-posinset={2}
+                  aria-setsize={1}
+                  key="1"
+                  value={1}
+                >
+                  1
+                </option>
+                <option
+                  aria-posinset={3}
+                  aria-setsize={2}
+                  key="2"
+                  value={2}
+                >
+                  2
+                </option>
+                <option
+                  aria-posinset={4}
+                  aria-setsize={3}
+                  key="3"
+                  value={3}
+                >
+                  3
+                </option>
+                <option
+                  aria-posinset={5}
+                  aria-setsize={4}
+                  key="4"
+                  value={4}
+                >
+                  4
+                </option>
+                <option
+                  aria-posinset={6}
+                  aria-setsize={5}
+                  key="5"
+                  value={5}
+                >
+                  5
+                </option>
+                <option
+                  aria-posinset={7}
+                  aria-setsize={6}
+                  key="6"
+                  value={6}
+                >
+                  6
+                </option>
+                <option
+                  aria-posinset={8}
+                  aria-setsize={7}
+                  key="7"
+                  value={7}
+                >
+                  7
+                </option>
+                <option
+                  aria-posinset={9}
+                  aria-setsize={8}
+                  key="8"
+                  value={8}
+                >
+                  8
+                </option>
+                <option
+                  aria-posinset={10}
+                  aria-setsize={9}
+                  key="9"
+                  value={9}
+                >
+                  9
+                </option>
+                <option
+                  aria-posinset={11}
+                  aria-setsize={10}
+                  key="10"
+                  value={10}
+                >
+                  10
+                </option>
+              </select>
+            </span>
+          </div>
+          <div
+            className="c-line-items__remove"
+          >
+            <div
+              className="c-line-items__delete"
+            >
+              <a
+                className="c-line-items__delete-button"
+              >
+                Delete
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-line-items__amounts"
+          >
+            <a
+              className="c-line-items__amount c-line-items__amount--total"
+            >
+              £
+              20.00
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </LineItems>
+</CheckoutCart>
+`;

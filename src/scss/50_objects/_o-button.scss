@@ -1,0 +1,87 @@
+// ==========================================================================
+// # Button Object
+// ==========================================================================
+
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+$color-variations: (
+  info:      (background-color: $background-info, color: $text-light),
+  disabled:  (background-color: $background-disabled, color: $text-light),
+  primary:   (background-color: $background-primary, color: $text-light),
+  secondary: (background-color: $background-secondary, color: $text-dark),
+  positive:  (background-color: $background-positive, color: $text-light),
+  negative:  (background-color: $background-negative, color: $text-light),
+  warning:   (background-color: $background-warning, color: $text-light),
+  dark:      (background-color: $background-dark, color: $text-light),
+);
+
+$custom-base-color: map-get(map-get($color-variations, primary), background-color);
+$custom-text-color: map-get(map-get($color-variations, primary), color);
+
+.o-button {
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  padding: $global-spacing-unit-small $global-spacing-unit;
+  margin: $global-spacing-unit auto;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  white-space: nowrap;
+  border-color: $text-primary;
+  background: $button-base-color;
+  color: $text-primary;
+
+  &:focus {
+    box-shadow: rgba($background-secondary, .2) 0 0 0 2px;
+  }
+
+  @each $key in map-keys($color-variations) {
+    &--#{$key} {
+      $button-base-color: map-get(map-get($color-variations, $key), background-color);
+      $text-color: map-get(map-get($color-variations, $key), color);
+
+      border-color: $button-base-color;
+      background: $button-base-color;
+      color: $text-color;
+
+      &:focus {
+        box-shadow: rgba($button-base-color, .2) 0 0 0 2px;
+      }
+
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($button-base-color, .2);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &--sml {
+    font-size: .8rem;
+    padding: $global-spacing-unit-small;
+  }
+
+  &--lrg {
+    font-size: 1.2rem;
+    padding: $global-spacing-unit $global-spacing-unit-large;
+  }
+
+  &--disabled {
+    opacity: .5;
+    cursor: default;
+  }
+}
+
+.o-button-edit {
+  padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+  font-size: 1em;
+  margin: 0;
+
+  @include breakpoint(desktop) {
+    font-size: .8em;
+  }
+}

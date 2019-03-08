@@ -1,0 +1,33 @@
+// Utility classes for applying paddings, e.g. u-padding-top-l
+// Also includes breakpoint variations, e.g. u-padding-bottom-xl-mob
+
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+@each $direction in $directions {
+  .u-padding-#{$direction} {
+    padding-#{$direction}: $global-spacing-unit;
+  }
+
+  @each $b, $breakpoint in $breakpoints {
+    .u-padding-#{$direction}-#{$b} {
+      @include breakpoint($breakpoint) {
+        padding-#{$direction}: $global-spacing-unit;
+      }
+    }
+  }
+
+  @each $size, $spacing-unit in $spacings {
+    .u-padding-#{$direction}-#{$size} {
+      padding-#{$direction}: $spacing-unit;
+    }
+
+    @each $b, $breakpoint in $breakpoints {
+      .u-padding-#{$direction}-#{$size}-#{$b} {
+        @include breakpoint($breakpoint) {
+          padding-#{$direction}: $spacing-unit;
+        }
+      }
+    }
+  }
+}

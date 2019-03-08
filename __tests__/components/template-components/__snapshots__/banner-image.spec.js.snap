@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BannerImage component renders correctly 1`] = `
+<BannerImage
+  componentData={
+    Object {
+      "id": "4_1",
+      "image": Array [
+        Object {
+          "asset_file": "1539333286.4277663-BannerImage.png",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png",
+          "created_at": "2018-10-12T08:34:46Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/png",
+          "file_content_filename": "BannerImage.png",
+          "file_content_size": 248153,
+          "image_height": 320,
+          "image_width": 2360,
+          "meta_attributes": Object {},
+          "name": null,
+          "reference": "22142d96-19cb-44ca-b841-1e8a3e638b2e",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png",
+          "updated_at": "2018-10-12T08:34:46Z",
+        },
+      ],
+      "image_link": Array [
+        Object {
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png",
+        },
+      ],
+      "link_1_url": Array [
+        Object {
+          "canonical_path": "/offers/25%25off",
+          "id": "/offers/25%25off",
+          "path": "/offers/25%25off",
+          "url": "/offers/25%25off",
+        },
+      ],
+      "mobile_image": Array [
+        Object {
+          "asset_file": "1539334939.6073742-BannerImageMobile.png",
+          "canonical_path": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png",
+          "created_at": "2018-10-12T09:02:19Z",
+          "deleted_at": null,
+          "file_content_content_type": "image/png",
+          "file_content_filename": "BannerImageMobile.png",
+          "file_content_size": 105438,
+          "image_height": 352,
+          "image_width": 1520,
+          "meta_attributes": Object {},
+          "name": null,
+          "reference": "73d187f4-15a8-4f81-aca6-bedc576a5328",
+          "s3_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png",
+          "updated_at": "2018-10-12T09:02:19Z",
+        },
+      ],
+      "reference": "banner_image",
+      "type": "components",
+    }
+  }
+>
+  <Link
+    as="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
+    href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
+  >
+    <a
+      href="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
+    >
+      <LazyLoad
+        className="c-banner-image"
+        mobileSrc="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/162/1539334939.6073742-BannerImageMobile.png"
+        src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/159/1539333286.4277663-BannerImage.png"
+      >
+        <div
+          style={
+            Object {
+              "backgroundColor": "#EEEFF3",
+              "height": 0,
+              "paddingBottom": "NaN%",
+              "width": "100%",
+            }
+          }
+        >
+          <FadeIn
+            offset={150}
+            once={true}
+            render={[Function]}
+          >
+            <LazyLoad
+              offset={150}
+              once={true}
+              overflow={false}
+              resize={false}
+              scroll={true}
+              unmountIfInvisible={false}
+            >
+              <div
+                className="lazyload-placeholder"
+                style={
+                  Object {
+                    "height": undefined,
+                  }
+                }
+              />
+            </LazyLoad>
+          </FadeIn>
+        </div>
+      </LazyLoad>
+    </a>
+  </Link>
+</BannerImage>
+`;

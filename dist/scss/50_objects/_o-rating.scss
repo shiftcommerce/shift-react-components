@@ -1,0 +1,29 @@
+/* ==========================================================================
+   # Rating Object
+   ========================================================================== */
+
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.o-rating {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+  .o-rating__star {
+    &--has-spacing {
+      padding-right: $global-spacing-unit-tiny;
+    }
+
+    &--fs-small {
+      font-size: .75em;
+    }
+
+    &--fill {
+      color: $background-primary;
+    }
+
+    &--empty {
+      color: $background-dark;
+    }
+  }

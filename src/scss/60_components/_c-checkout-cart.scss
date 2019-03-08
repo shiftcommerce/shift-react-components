@@ -1,0 +1,73 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-checkout-cart__header {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $border-default;
+}
+
+.c-checkout-cart__title {
+  display: inline-block;
+  font-size: 1em;
+  margin-top: 0;
+  padding-top: $global-spacing-unit-small;
+  width: 70%;
+
+  @include breakpoint(tablet) {
+    font-size: 1.2em;
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: ($global-spacing-unit-tiny * 10);
+    width: 100%;
+  }
+}
+
+.c-checkout-cart__table {
+  @include breakpoint(tablet) {
+    width: 100%;
+    font-size: 1.3em;
+  }
+}
+
+.c-checkout-cart__total {
+  margin-top: $global-spacing-unit-small;
+  float: right;
+  font-weight: 300;
+
+  @include breakpoint(tablet) {
+    font-size: 1.2em;
+  }
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.c-checkout-cart__text {
+  font-size: .7em;
+  width: 70%;
+  padding-bottom: $global-spacing-unit;
+
+  @include breakpoint(desktop) {
+    font-size: .7em;
+    width: 100%;
+  }
+}
+
+.c-checkout-cart__description {
+  margin: 0;
+
+  a {
+    color: $background-positive;
+  }
+}
+
+.c-checkout-cart__amount {
+  color: $background-positive;
+
+  &:hover {
+    color: $background-positive;
+  }
+}

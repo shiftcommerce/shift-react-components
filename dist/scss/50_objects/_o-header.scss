@@ -1,0 +1,100 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.o-header {
+  background-color: $background-white;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: $nav-z-index;
+
+  @include breakpoint(desktop) {
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+  }
+
+  &--shrunk {
+    @include breakpoint(mobile-tablet) {
+      .o-header__logo {
+        max-height: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &--checkout {
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    @include breakpoint(desktop) {
+      margin: auto;
+      max-width: $global-body-max-width;
+      position: static;
+    }
+  }
+}
+
+.o-header__top {
+  width: 100%;
+
+  @include breakpoint(desktop) {
+    background: $background-light-grey;
+    position: fixed;
+    top: 0;
+    z-index: $nav-z-index;
+  }
+}
+
+.o-header__top-wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include breakpoint(desktop) {
+    flex-wrap: nowrap;
+    margin: auto;
+    max-width: $global-body-max-width;
+    padding: 0 $global-spacing-unit;
+    padding-right: 0;
+    width: $global-body-container-width;
+  }
+}
+
+.o-header__logo {
+  flex-basis: 100%;
+  margin: $global-spacing-unit-small auto;
+  max-height: 40px;
+  text-align: center;
+  transition: max-height .1s;
+  width: auto;
+
+  @include breakpoint(desktop) {
+    flex-basis: auto;
+    margin: 0;
+  }
+}
+
+.o-header__step {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  vertical-align: top;
+  width: 90px;
+
+  @include breakpoint(desktop) {
+    width: 25%;
+  }
+}
+
+.o-header__myaccount {
+  font-size: 1rem;
+}

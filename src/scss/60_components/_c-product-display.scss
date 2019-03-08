@@ -1,0 +1,264 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-product-display__arrow {
+  &:before {
+    background-image: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' width='11.175' height='7.295' viewBox='0 0 0 0 11.175 0 7.295' preserveAspectRatio='none'><path fill='none' stroke-linecap='round' d='M.55.55l5.069 5.923L10.625.549' stroke='#000' stroke-miterlimit='10'/></svg>");
+    background-repeat: no-repeat;
+    content: '';
+    float: right;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.c-product-display__body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $global-spacing-unit;
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    font-size: 1.2em;
+    margin-top: $global-spacing-unit;
+  }
+}
+
+  .c-product-display__body-dropdowns {
+    @include breakpoint(desktop) {
+      margin-bottom: $global-spacing-unit-huge * 2;
+      order: 2;
+      width: 100%;
+    }
+  }
+
+.c-product-display__buttons {
+  background-color: white;
+  order: 2;
+  padding: $global-spacing-unit-small;
+  padding-top: 0;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    margin: auto;
+    padding: 0;
+    padding-bottom: $global-spacing-unit-small;
+    width: 92.5%;
+  }
+
+  @include breakpoint(desktop) {
+    margin-bottom: $global-spacing-unit-small;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+  .c-product-display__buttons-basket {
+    font-size: .8em;
+    margin: auto;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+.c-product-display__carousel {
+  img {
+    width: 100%;
+  }
+
+  @include breakpoint(desktop) {
+    margin: auto;
+    max-width: 500px;
+  }
+}
+
+.c-product-display__content-details {
+  @include breakpoint(desktop) {
+    display: flex;
+    flex-direction: column;
+    margin-left: $global-spacing-unit-tiny;
+    margin-top: $global-spacing-unit-large;
+    order: 2;
+    width: 40%;
+  }
+}
+
+.c-product-display__content-image {
+  @include breakpoint(desktop) {
+    order: 1;
+    width: 60%;
+  }
+}
+
+.c-product-display__description {
+  border-top: .5px solid $border-default;
+  margin: auto;
+  padding: $global-spacing-unit-small 0;
+  width: 92.5%;
+
+  @include breakpoint(desktop) {
+    width: 100%;
+  }
+
+  input {
+    visibility: hidden;
+
+    &[type=checkbox]:checked ~.c-product-display__description-text {
+      display: none;
+    }
+
+    &[type=checkbox]:checked ~.c-product-display__arrow:before {
+      background-image: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' width='11.175' height='7.295' viewBox='0 0 0 0 11.175 0 7.295' preserveAspectRatio='none'><path fill='none' stroke-linecap='round' d='M.55 6.745L5.619.822l5.006 5.923' stroke='#000' stroke-miterlimit='10'/></svg>");
+    }
+  }
+
+  label {
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2.8em;
+    margin-top: -$global-spacing-unit;
+    position: absolute;
+    width: 92.5%;
+
+    @include breakpoint(desktop) {
+      width: 40%;
+    }
+  }
+}
+
+  .c-product-display__description-text {
+    display: block;
+    font-size: .7em;
+    margin-top: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      font-size: .8em;
+      padding-top: $global-spacing-unit-small;
+    }
+  }
+
+  .c-product-display__description-title {
+    display: inline;
+    font-size: .8em;
+    padding-bottom: $global-spacing-unit;
+
+    @include breakpoint(desktop) {
+      font-size: .9em
+    }
+  }
+
+.c-product-display__info {
+  margin-top: $global-spacing-unit;
+  padding: $global-spacing-unit-small;
+  padding-bottom: 0;
+  width: 100%;
+  order: 2;
+
+  @include breakpoint(tablet) {
+    margin: auto;
+    padding: 0;
+    padding-bottom: $global-spacing-unit-small;
+    width: 92.5%;
+  }
+
+  @include breakpoint(desktop) {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+  .c-product-display__info-colour {
+    padding: 1.2em 0;
+
+    label {
+      font-size: .6em;
+      padding-left: 3.5em;
+    }
+
+    input[type=radio] {
+      height: 22px;
+      margin-top: -1px;
+      position: absolute;
+      width: 22px;
+      -webkit-appearance: none;
+    }
+
+    input[type=radio]:checked {
+      background-image: url("data:image/svg+xml;charset=UTF8,<svg width='100%' height='100%' viewBox='0 0 40 10' version='1.1' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;'><path d='M13.111,1.124L19.492,8.886L25.911,1.105' style='fill:none;stroke:black;stroke-width:2.21px;'/></svg>");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+    .c-product-display__info-colour-title {
+      display: inline;
+      font-size: .75em;
+      padding-right: 1em;
+    }
+
+  .c-product-display__info-title {
+    font-size: .9em;
+    font-weight: 700;
+    padding-bottom: $global-spacing-unit-small;
+
+    @include breakpoint(desktop) {
+      font-size: 1em;
+    }
+  }
+
+  .c-product-display__info-reviews {
+    cursor: pointer;
+    display: inline;
+    font-size: .6em;
+    padding-left: $global-spacing-unit-tiny;
+    text-decoration: underline;
+  }
+
+  .c-product-display__info-sku {
+    color: $text-default;
+    font-size: .8em;
+    font-weight: 500;
+    padding-bottom: $global-spacing-unit-small;
+  }
+
+  .c-product-display__info-variant {
+    font-size: .75em;
+    padding-bottom: $global-spacing-unit-small;
+    padding-top: $global-spacing-unit-small;
+    width: 100%;
+
+    p {
+      font-size: .8em;
+    }
+
+    @include breakpoint(desktop) {
+      select {
+        font-size: .8em;
+      }
+    }
+  }
+
+.c-product-display__option-button {
+  background: $background-white;
+  border: 1px solid $border-default;
+  color: $text-dark;
+  font-size: .6rem;
+  margin: 0;
+  margin-top: $global-spacing-unit-tiny;
+  padding: $global-spacing-unit-small;
+  white-space: normal;
+
+  &.selected {
+    border-color: $border-dark;
+    font-weight: bold;
+  }
+
+  @include breakpoint(tablet) {
+    &:hover {
+      border-color: $border-dark;
+    }
+  }
+}

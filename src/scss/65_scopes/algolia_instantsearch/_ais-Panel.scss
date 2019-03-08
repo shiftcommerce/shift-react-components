@@ -1,0 +1,24 @@
+@import '../../10_settings/__all';
+@import '../../20_tools/__all';
+
+.ais-Panel {
+  &:nth-child(2) &-header {
+    border-top: 0;
+  }
+
+  &:nth-child(2) &-header h2 {
+    @include breakpoint(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &--noRefinement {
+    display: none;
+  }
+}
+
+.ais-Panel-header {
+  border-bottom: 0;
+  border-top: 1px solid $border-divider;
+  padding-bottom: 0;
+}

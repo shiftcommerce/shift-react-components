@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correct child elements and classnames 1`] = `
+<CartTableGrid
+  className="dummy-classname"
+>
+  <section
+    className="dummy-classname c-cart-table__grid"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </section>
+</CartTableGrid>
+`;

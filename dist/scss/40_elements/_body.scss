@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: $base-font-family;
+  overflow-x: hidden;
+
+  &.modal-open {
+    /* Stop background scrolling when mobile modal open */
+    @include breakpoint(mobile-tablet) {
+      overflow-y: hidden;
+      position: fixed;
+    }
+  }
+}

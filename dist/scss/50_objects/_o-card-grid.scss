@@ -1,0 +1,72 @@
+// ==========================================================================
+// # Card Grid Object
+// ==========================================================================
+
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+// Displays a grid of titled cards
+// Required a modifier, e.g.
+// o-card-grid o-card-grid--4d-2m (4 columns in desktop and tablet, 2 columns in mobile)
+// o-card-grid o-card-grid--3d-3m (3 columns in desktop and tablet, 3 columns in mobile)
+
+.o-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+  .o-card-grid__card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: $global-spacing-unit-tiny;
+    margin-bottom: $global-spacing-unit-small;
+
+    @include breakpoint(tablet) {
+      margin-right: $global-spacing-unit;
+      flex-basis: 20%;
+    }
+  }
+
+  .o-card-grid__title {
+    font-size: 1rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+
+// Modifiers
+.o-card-grid--3d-3m {
+  .o-card-grid__card {
+    flex-basis: 28%;
+  }
+
+  .o-card-grid__card:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+
+.o-card-grid--4d-2m {
+  /* stylelint-disable no-descending-specificity */
+  .o-card-grid__card {
+    flex-basis: 40%;
+
+    @include breakpoint(tablet) {
+      flex-basis: 20%;
+    }
+  }
+  /* stylelint-enable */
+
+  .o-card-grid__card:nth-of-type(2n) {
+    @include breakpoint(mobile) {
+      margin-right: 0;
+    }
+  }
+
+  .o-card-grid__card:nth-of-type(4n) {
+    @include breakpoint(tablet) {
+      margin-right: 0;
+    }
+  }
+}

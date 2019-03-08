@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<_class
+  checked={true}
+  label="Sign up for Weekly Newsletters (optional)"
+  name="newsletterOptIn"
+>
+  <Checkbox
+    checked={true}
+    label="Sign up for Weekly Newsletters (optional)"
+    name="newsletterOptIn"
+    renderValidationMessage={[Function]}
+  >
+    <div
+      className="o-form__input-group"
+    >
+      <label
+        className="o-form__label"
+        htmlFor="newsletterOptIn"
+      >
+        <input
+          checked={true}
+          className="o-form__checkbox"
+          id="newsletterOptIn"
+          name="newsletterOptIn"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="o-form__checkbox-caption"
+        >
+          Sign up for Weekly Newsletters (optional)
+           
+        </span>
+      </label>
+    </div>
+  </Checkbox>
+</_class>
+`;

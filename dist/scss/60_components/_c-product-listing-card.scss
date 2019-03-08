@@ -1,0 +1,28 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-product-listing-card {
+  font-size: .85rem;
+}
+
+  .c-product-listing-card__image {
+    cursor: pointer;
+  }
+
+  .c-product-listing-card__price,
+  .c-product-listing-card__rating,
+  .c-product-listing-card__view-details {
+    text-align: center;
+
+    &--empty {
+      color: $background-light;
+    }
+  }
+
+  .c-product-listing-card__title {
+    p {
+      text-align: center;
+      margin: 0;
+      padding: $global-spacing-unit-small 0;
+    }
+  }
