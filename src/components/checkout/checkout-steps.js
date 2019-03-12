@@ -6,8 +6,12 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
+// Assets
+import completedCheck from '../../static/white-check.svg'
+
 function CheckoutSteps ({ currentStep, stepActions }) {
   const Link = componentMapping('Link')
+  const Image = componentMapping('Image')
 
   const renderCheckoutSteps = () => {
     const checkoutSteps = [
@@ -32,7 +36,7 @@ function CheckoutSteps ({ currentStep, stepActions }) {
 
   const renderCheckoutStep = (step) => {
     const stepCompleted = step.position < currentStep
-    const content = stepCompleted ? '✔' : step.position
+    const content = stepCompleted ? <Image className='c-step-indicator__icon' src={completedCheck} /> : step.position
     const active = step.position === currentStep
 
     if (stepCompleted) {
