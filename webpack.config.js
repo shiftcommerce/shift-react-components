@@ -14,11 +14,7 @@ module.exports = {
   resolve: {
     modules: [
       path.join(__dirname, '/src'),
-      path.join(__dirname, '/node_modules'),
-      /**
-       * Temporary, until this becomes its own package
-       */
-      path.join(__dirname, '../../node_modules')
+      path.join(__dirname, '/node_modules')
     ],
     extensions: ['*', '.js', '.jsx', '.css', '.scss']
   },

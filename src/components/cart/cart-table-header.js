@@ -6,7 +6,7 @@ import t from 'typy'
 
 // Lib
 import { decimalPrice } from '../../lib/decimal-price'
-import { businessDaysFromNow } from '../../lib/business-days-from-now'
+import businessDaysFromNow from '../../lib/business-days-from-now'
 
 class CartTableHeader extends PureComponent {
   /**

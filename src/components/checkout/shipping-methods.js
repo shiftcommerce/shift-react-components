@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 // Libs
-import { businessDaysFromNow } from '../../lib/business-days-from-now'
+import businessDaysFromNow from '../../lib/business-days-from-now'
 import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
 
