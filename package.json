@@ -8,6 +8,7 @@
     "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p",
     "build:develop": "NODE_ENV=development ./node_modules/webpack/bin/webpack.js --bail --color -d",
     "test": "jest",
+    "jest-update-snapshot": "jest --updateSnapshot",
     "lint:scss": "stylelint src/scss",
     "lint:scss:fix": "stylelint src/scss --fix"
   },
