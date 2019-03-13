@@ -198,11 +198,11 @@ exports[`renders correct messages when cart has items 1`] = `
     </Link>
     <Link
       className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
-      href="/checkout/shipping-address"
+      href="/checkout/payment-method"
     >
       <a
         className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
-        href="/checkout/shipping-address"
+        href="/checkout/payment-method"
       >
         Checkout
       </a>
@@ -292,11 +292,11 @@ exports[`renders correct messages when cart has no shipping method 1`] = `
     </Link>
     <Link
       className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
-      href="/checkout/shipping-address"
+      href="/checkout/payment-method"
     >
       <a
         className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
-        href="/checkout/shipping-address"
+        href="/checkout/payment-method"
       >
         Checkout
       </a>
@@ -501,11 +501,11 @@ exports[`renders correct messages when loading shipping methods 1`] = `
     </Link>
     <Link
       className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
-      href="/checkout/shipping-address"
+      href="/checkout/payment-method"
     >
       <a
         className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
-        href="/checkout/shipping-address"
+        href="/checkout/payment-method"
       >
         Checkout
       </a>
