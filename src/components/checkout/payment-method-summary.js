@@ -12,6 +12,7 @@ const PaymentMethodSummary = ({ billingAddress, onClick, withErrors }) => {
   return (
     <>
       <PaymentMethodHeader
+        title={ 'Payment' }
         collapsed
         onClick={onClick}
       />

@@ -3,12 +3,12 @@ import React from 'react'
 import componentMapping from '../../lib/component-mapping'
 import PropTypes from 'prop-types'
 
-function PaymentMethodHeader ({ collapsed, onClick }) {
+function PaymentMethodHeader ({ title, collapsed, onClick }) {
   const Button = componentMapping('Button')
 
   return (
     <div className='o-form__header  c-payment-method__header'>
-      <h2>Payment</h2>
+      <h2>{ title }</h2>
       { collapsed && <Button
         aria-label='Edit your payment method'
         className='o-button-edit'
@@ -21,6 +21,7 @@ function PaymentMethodHeader ({ collapsed, onClick }) {
 }
 
 PaymentMethodHeader.propTypes = {
+  title: PropTypes.string.isRequired,
   collapsed: PropTypes.bool,
   onClick: PropTypes.func
 }

@@ -10,7 +10,7 @@ class PaymentMethods extends Component {
   constructor (props) {
     super(props)
 
-    this.PaymentMethodsHeader = componentMapping('PaymentMethodsHeader')
+    this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
   }
 
   render () {
@@ -21,7 +21,7 @@ class PaymentMethods extends Component {
     } = this.props
     return (
       <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-method')}>
-        <this.PaymentMethodsHeader />
+        <this.PaymentMethodHeader title={ 'Payment Method' } />
       </div>
     )
   }
