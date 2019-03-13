@@ -10,15 +10,6 @@ import SearchFilters from '../../../../src/components/search/search-filters'
 // Fixtures
 import searchResultState from '../../../fixtures/search-results-state'
 
-// Mock out the next/config
-jest.mock('next/config', () => () => ({
-  publicRuntimeConfig: {
-    ALGOLIA_API_KEY: 'FAKE-API-KEY',
-    ALGOLIA_APP_ID: 'FAKE-APP-ID',
-    ALGOLIA_INDEX_NAME: 'FAKE-INDEX'
-  }
-}))
-
 test('renders correctly', () => {
   // Arrange
   const searchState = {
