@@ -74069,6 +74069,96 @@ var payment_icons_PaymentIcons = function PaymentIcons(props) {
 };
 
 /* harmony default export */ var payment_icons = (payment_icons_PaymentIcons);
+// CONCATENATED MODULE: ./src/components/checkout/payment-methods.js
+function payment_methods_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_methods_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_methods_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_methods_typeof(obj); }
+
+function payment_methods_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function payment_methods_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function payment_methods_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_methods_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_methods_defineProperties(Constructor, staticProps); return Constructor; }
+
+function payment_methods_possibleConstructorReturn(self, call) { if (call && (payment_methods_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_methods_assertThisInitialized(self); }
+
+function payment_methods_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function payment_methods_getPrototypeOf(o) { payment_methods_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_methods_getPrototypeOf(o); }
+
+function payment_methods_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_methods_setPrototypeOf(subClass, superClass); }
+
+function payment_methods_setPrototypeOf(o, p) { payment_methods_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_methods_setPrototypeOf(o, p); }
+
+// Libraries
+
+
+ // Lib
+
+
+
+var payment_methods_PaymentMethods =
+/*#__PURE__*/
+function (_Component) {
+  payment_methods_inherits(PaymentMethods, _Component);
+
+  function PaymentMethods(props) {
+    var _this;
+
+    payment_methods_classCallCheck(this, PaymentMethods);
+
+    _this = payment_methods_possibleConstructorReturn(this, payment_methods_getPrototypeOf(PaymentMethods).call(this, props));
+    _this.PaymentMethodsHeader = component_mapping('PaymentMethodsHeader');
+    return _this;
+  }
+
+  payment_methods_createClass(PaymentMethods, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          cart = _this$props.cart,
+          className = _this$props.className,
+          nextSection = _this$props.nextSection;
+      return external_react_default.a.createElement("div", {
+        "aria-label": "Payment method",
+        className: classnames_default()(className, 'o-form c-payment-method')
+      }, external_react_default.a.createElement(this.PaymentMethodsHeader, null));
+    }
+  }]);
+
+  return PaymentMethods;
+}(external_react_["Component"]);
+
+payment_methods_PaymentMethods.propTypes = {
+  cart: prop_types_default.a.object,
+  className: prop_types_default.a.string,
+  nextSection: prop_types_default.a.func
+};
+/* harmony default export */ var payment_methods = (payment_methods_PaymentMethods);
+// CONCATENATED MODULE: ./src/components/checkout/payment-methods-header.js
+// Libraries
+
+
+
+
+function PaymentMethodsHeader(_ref) {
+  var collapsed = _ref.collapsed,
+      onClick = _ref.onClick;
+  var Button = component_mapping('Button');
+  return external_react_default.a.createElement("div", {
+    className: "o-form__header c-payment-method__header"
+  }, external_react_default.a.createElement("h2", null, "Payment Method"), collapsed && external_react_default.a.createElement(Button, {
+    "aria-label": "Edit your payment method",
+    className: "o-button-edit",
+    label: "Edit",
+    status: "secondary",
+    onClick: onClick
+  }));
+}
+
+PaymentMethodsHeader.propTypes = {
+  collapsed: prop_types_default.a.bool,
+  onClick: prop_types_default.a.func
+};
+/* harmony default export */ var payment_methods_header = (PaymentMethodsHeader);
 // CONCATENATED MODULE: ./src/components/checkout/payment-method.js
 function payment_method_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_method_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_method_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_method_typeof(obj); }
 
@@ -76012,6 +76102,8 @@ function (_PureComponent) {
 
 
 
+
+
 /**
  * Order Components
  */
@@ -76069,6 +76161,8 @@ var mapping = {
   OrderLineItems: order_line_items,
   OrderList: order_list,
   PaymentIcons: payment_icons,
+  PaymentMethods: payment_methods,
+  PaymentMethodsHeader: payment_methods_header,
   PaymentMethod: payment_method,
   PaymentMethodHeader: payment_method_header,
   ProductCarousel: product_carousel,
@@ -83544,6 +83638,8 @@ function (_Component) {
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
 /* concated harmony reexport MiniPlaceOrder */__webpack_require__.d(__webpack_exports__, "MiniPlaceOrder", function() { return mini_place_order; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
+/* concated harmony reexport PaymentMethods */__webpack_require__.d(__webpack_exports__, "PaymentMethods", function() { return payment_methods; });
+/* concated harmony reexport PaymentMethodsHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodsHeader", function() { return payment_methods_header; });
 /* concated harmony reexport PaymentMethod */__webpack_require__.d(__webpack_exports__, "PaymentMethod", function() { return payment_method; });
 /* concated harmony reexport PaymentMethodHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodHeader", function() { return payment_method_header; });
 /* concated harmony reexport PaymentMethodSummary */__webpack_require__.d(__webpack_exports__, "PaymentMethodSummary", function() { return payment_method_summary; });
@@ -83654,6 +83750,8 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
+
 
 
 
