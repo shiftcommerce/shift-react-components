@@ -74123,12 +74123,14 @@ function (_Component) {
         className: classnames_default()(className, 'o-form c-payment-methods c-payment-methods__header')
       }, external_react_default.a.createElement(this.PaymentMethodHeader, {
         title: 'Payment Method'
-      }), external_react_default.a.createElement(this.Button, {
-        className: "c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--lrg c-payment-methods__button",
+      }), external_react_default.a.createElement("div", {
+        className: "c-payment-methods-buttons"
+      }, external_react_default.a.createElement(this.Button, {
+        className: "c-payment-methods-buttons__cta c-payment-methods-buttons__cta--continue o-button--lrg",
         type: "button",
         label: 'Pay By Credit/Debit Card',
         onClick: nextSection
-      }));
+      })));
     }
   }]);
 

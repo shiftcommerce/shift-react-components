@@ -23,12 +23,15 @@ class PaymentMethods extends Component {
     return (
       <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-methods c-payment-methods__header')}>
         <this.PaymentMethodHeader title={ 'Payment Method' } />
-        <this.Button
-          className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--lrg c-payment-methods__button'
-          type='button'
-          label={ 'Pay By Credit/Debit Card' }
-          onClick={nextSection}
-        />
+
+        <div className='c-payment-methods-buttons'>
+          <this.Button
+            className='c-payment-methods-buttons__cta c-payment-methods-buttons__cta--continue o-button--lrg'
+            type='button'
+            label={ 'Pay By Credit/Debit Card' }
+            onClick={nextSection}
+          />
+        </div>
       </div>
     )
   }
