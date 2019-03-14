@@ -74120,19 +74120,19 @@ function (_Component) {
           nextSection = _this$props.nextSection;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
-        className: classnames_default()(className, 'o-form c-payment-methods c-payment-methods__header')
+        className: classnames_default()(className, 'o-form c-payment-methods')
       }, external_react_default.a.createElement(this.PaymentMethodHeader, {
         title: 'Payment Method'
       }), external_react_default.a.createElement("div", {
         className: "c-payment-methods__options"
       }, external_react_default.a.createElement(this.Button, {
-        className: "c-payment-methods__button o-button--lrg",
+        className: "o-button--lrg c-payment-methods__button",
         type: "button",
         label: 'Placeholder PayPal'
       }), external_react_default.a.createElement("h4", {
         className: "c-payment-methods__option-text"
       }, "OR"), external_react_default.a.createElement(this.Button, {
-        className: "c-payment-methods__button o-button--lrg",
+        className: "o-button--lrg c-payment-methods__button",
         type: "button",
         label: 'Pay By Credit/Debit Card',
         onClick: nextSection
@@ -82982,11 +82982,11 @@ function CheckoutCartButtons(_ref) {
 
   return external_react_default.a.createElement(react_stickyfill_lib_default.a, null, external_react_default.a.createElement("div", {
     className: "c-checkout-cart-buttons"
-  }, renderContinueShoppingButton(), renderContinueButton()));
+  }, renderContinueShoppingButton(), continueButtonProps && renderContinueButton()));
 }
 
 CheckoutCartButtons.propTypes = {
-  continueButtonProps: prop_types_default.a.object.isRequired
+  continueButtonProps: prop_types_default.a.object
 };
 /* harmony default export */ var checkout_cart_buttons = (CheckoutCartButtons);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart-total.js

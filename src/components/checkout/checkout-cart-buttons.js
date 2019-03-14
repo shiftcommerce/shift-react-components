@@ -30,14 +30,14 @@ function CheckoutCartButtons ({ continueButtonProps }) {
     <Sticky>
       <div className='c-checkout-cart-buttons'>
         { renderContinueShoppingButton() }
-        { renderContinueButton() }
+        { continueButtonProps && renderContinueButton() }
       </div>
     </Sticky>
   )
 }
 
 CheckoutCartButtons.propTypes = {
-  continueButtonProps: PropTypes.object.isRequired
+  continueButtonProps: PropTypes.object
 }
 
 export default CheckoutCartButtons

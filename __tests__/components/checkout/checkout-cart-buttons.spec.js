@@ -35,3 +35,15 @@ test('displays a correct enabled button based on passed props', () => {
   expect(wrapper.find('button.c-checkout-cart-buttons__cta--proceed')).toHaveText('Choose Shipping Method')
   expect(wrapper.find('button.c-checkout-cart-buttons__cta--proceed')).toHaveProp('disabled', false)
 })
+
+test('does not display a button when no props are passed', () => {
+  // Act
+  const wrapper = mount(
+    <CheckoutCartButtons
+      continueButtonProps={ null }
+    />
+  )
+
+  // Assert
+  expect(wrapper.find('div')).not.toHaveClassName('c-checkout-cart-buttons__cta--proceed')
+})
