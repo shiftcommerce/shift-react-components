@@ -6,7 +6,6 @@ module.exports = {
       '<rootDir>/node_modules/jest-enzyme/lib/index.js'
     */
     '<rootDir>/node_modules/jest-enzyme/lib/index.js',
-    // '../../node_modules/jest-enzyme/lib/index.js',
     './__tests__/support/setup-after-env.js'
   ],
   setupFiles: [

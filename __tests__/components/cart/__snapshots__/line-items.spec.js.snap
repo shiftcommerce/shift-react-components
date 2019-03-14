@@ -301,7 +301,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": undefined,
                   },
                 ],
