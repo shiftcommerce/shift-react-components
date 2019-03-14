@@ -74106,7 +74106,7 @@ function (_Component) {
     payment_methods_classCallCheck(this, PaymentMethods);
 
     _this = payment_methods_possibleConstructorReturn(this, payment_methods_getPrototypeOf(PaymentMethods).call(this, props));
-    _this.PaymentMethodsHeader = component_mapping('PaymentMethodsHeader');
+    _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
     return _this;
   }
 
@@ -74120,7 +74120,9 @@ function (_Component) {
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
         className: classnames_default()(className, 'o-form c-payment-method')
-      }, external_react_default.a.createElement(this.PaymentMethodsHeader, null));
+      }, external_react_default.a.createElement(this.PaymentMethodHeader, {
+        title: 'Payment Method'
+      }));
     }
   }]);
 
@@ -74133,32 +74135,6 @@ payment_methods_PaymentMethods.propTypes = {
   nextSection: prop_types_default.a.func
 };
 /* harmony default export */ var payment_methods = (payment_methods_PaymentMethods);
-// CONCATENATED MODULE: ./src/components/checkout/payment-methods-header.js
-// Libraries
-
-
-
-
-function PaymentMethodsHeader(_ref) {
-  var collapsed = _ref.collapsed,
-      onClick = _ref.onClick;
-  var Button = component_mapping('Button');
-  return external_react_default.a.createElement("div", {
-    className: "o-form__header c-payment-method__header"
-  }, external_react_default.a.createElement("h2", null, "Payment Method"), collapsed && external_react_default.a.createElement(Button, {
-    "aria-label": "Edit your payment method",
-    className: "o-button-edit",
-    label: "Edit",
-    status: "secondary",
-    onClick: onClick
-  }));
-}
-
-PaymentMethodsHeader.propTypes = {
-  collapsed: prop_types_default.a.bool,
-  onClick: prop_types_default.a.func
-};
-/* harmony default export */ var payment_methods_header = (PaymentMethodsHeader);
 // CONCATENATED MODULE: ./src/components/checkout/payment-method.js
 function payment_method_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_method_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_method_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_method_typeof(obj); }
 
@@ -74231,7 +74207,9 @@ function (_Component) {
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
         className: classnames_default()(className, 'o-form c-payment-method')
-      }, external_react_default.a.createElement(this.PaymentMethodHeader, null), external_react_default.a.createElement("div", {
+      }, external_react_default.a.createElement(this.PaymentMethodHeader, {
+        title: 'Payment'
+      }), external_react_default.a.createElement("div", {
         className: "c-payment-method__section",
         style: {
           display: 'block'
@@ -74300,12 +74278,13 @@ payment_method_PaymentMethod.propTypes = {
 
 
 function payment_method_header_PaymentMethodHeader(_ref) {
-  var collapsed = _ref.collapsed,
+  var title = _ref.title,
+      collapsed = _ref.collapsed,
       onClick = _ref.onClick;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header  c-payment-method__header"
-  }, external_react_default.a.createElement("h2", null, "Payment"), collapsed && external_react_default.a.createElement(Button, {
+  }, external_react_default.a.createElement("h2", null, title), collapsed && external_react_default.a.createElement(Button, {
     "aria-label": "Edit your payment method",
     className: "o-button-edit",
     label: "Edit",
@@ -74315,6 +74294,7 @@ function payment_method_header_PaymentMethodHeader(_ref) {
 }
 
 payment_method_header_PaymentMethodHeader.propTypes = {
+  title: prop_types_default.a.string.isRequired,
   collapsed: prop_types_default.a.bool,
   onClick: prop_types_default.a.func
 };
@@ -76103,7 +76083,6 @@ function (_PureComponent) {
 
 
 
-
 /**
  * Order Components
  */
@@ -76162,7 +76141,6 @@ var mapping = {
   OrderList: order_list,
   PaymentIcons: payment_icons,
   PaymentMethods: payment_methods,
-  PaymentMethodsHeader: payment_methods_header,
   PaymentMethod: payment_method,
   PaymentMethodHeader: payment_method_header,
   ProductCarousel: product_carousel,
@@ -82959,8 +82937,8 @@ CheckoutCart.propTypes = {
   updateQuantity: prop_types_default.a.func
 };
 /* harmony default export */ var checkout_cart = (CheckoutCart);
-// CONCATENATED MODULE: ./src/components/checkout/checkout-cart-total.js
-function checkout_cart_total_extends() { checkout_cart_total_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkout_cart_total_extends.apply(this, arguments); }
+// CONCATENATED MODULE: ./src/components/checkout/checkout-cart-buttons.js
+function checkout_cart_buttons_extends() { checkout_cart_buttons_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return checkout_cart_buttons_extends.apply(this, arguments); }
 
 // Libraries
 
@@ -82969,27 +82947,13 @@ function checkout_cart_total_extends() { checkout_cart_total_extends = Object.as
 
 
 
-
-function CheckoutCartTotal(_ref) {
-  var continueButtonProps = _ref.continueButtonProps,
-      discountSummaries = _ref.discountSummaries,
-      paymentError = _ref.paymentError,
-      shippingDiscount = _ref.shippingDiscount,
-      shippingDiscountName = _ref.shippingDiscountName,
-      shippingTotal = _ref.shippingTotal,
-      subTotal = _ref.subTotal,
-      total = _ref.total;
+function CheckoutCartButtons(_ref) {
+  var continueButtonProps = _ref.continueButtonProps;
   var Button = component_mapping('Button');
   var Link = component_mapping('Link');
 
-  var renderButtons = function renderButtons(continueButtonProps) {
-    return external_react_default.a.createElement("div", {
-      className: "c-cart-summary-buttons"
-    }, renderContinueShoppingButton(), renderContinueButton());
-  };
-
   var renderContinueButton = function renderContinueButton() {
-    return external_react_default.a.createElement(Button, checkout_cart_total_extends({
+    return external_react_default.a.createElement(Button, checkout_cart_buttons_extends({
       className: "c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml",
       type: "button"
     }, continueButtonProps));
@@ -83001,6 +82965,33 @@ function CheckoutCartTotal(_ref) {
       className: "c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
     }, "Continue Shopping");
   };
+
+  return external_react_default.a.createElement(react_stickyfill_lib_default.a, null, external_react_default.a.createElement("div", {
+    className: "c-cart-summary-buttons"
+  }, renderContinueShoppingButton(), renderContinueButton()));
+}
+
+CheckoutCartButtons.propTypes = {
+  continueButtonProps: prop_types_default.a.object.isRequired
+};
+/* harmony default export */ var checkout_cart_buttons = (CheckoutCartButtons);
+// CONCATENATED MODULE: ./src/components/checkout/checkout-cart-total.js
+// Libraries
+
+
+ // Lib
+
+
+
+
+function CheckoutCartTotal(_ref) {
+  var discountSummaries = _ref.discountSummaries,
+      paymentError = _ref.paymentError,
+      shippingDiscount = _ref.shippingDiscount,
+      shippingDiscountName = _ref.shippingDiscountName,
+      shippingTotal = _ref.shippingTotal,
+      subTotal = _ref.subTotal,
+      total = _ref.total;
 
   var renderPromotions = function renderPromotions() {
     return discountSummaries.map(function (discountSummary) {
@@ -83032,11 +83023,10 @@ function CheckoutCartTotal(_ref) {
     className: "c-cart-summary__VAT"
   }, "* Including VAT")), paymentError && external_react_default.a.createElement("div", {
     className: "c-checkout-cart-total__payment-error"
-  }, paymentError)), renderButtons()));
+  }, paymentError))));
 }
 
 CheckoutCartTotal.propTypes = {
-  continueButtonProps: prop_types_default.a.object.isRequired,
   discountSummaries: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
   paymentError: prop_types_default.a.string,
   shippingDiscount: prop_types_default.a.number,
@@ -83213,6 +83203,7 @@ var payment_method_summary_PaymentMethodSummary = function PaymentMethodSummary(
       withErrors = _ref.withErrors;
   var PaymentMethodHeader = component_mapping('PaymentMethodHeader');
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(PaymentMethodHeader, {
+    title: 'Payment',
     collapsed: true,
     onClick: onClick
   }), external_react_default.a.createElement("div", {
@@ -83633,13 +83624,13 @@ function (_Component) {
 /* concated harmony reexport AddressFormSummary */__webpack_require__.d(__webpack_exports__, "AddressFormSummary", function() { return address_form_summary; });
 /* concated harmony reexport CheckoutAddressForm */__webpack_require__.d(__webpack_exports__, "CheckoutAddressForm", function() { return address_form; });
 /* concated harmony reexport CheckoutCart */__webpack_require__.d(__webpack_exports__, "CheckoutCart", function() { return checkout_cart; });
+/* concated harmony reexport CheckoutCartButtons */__webpack_require__.d(__webpack_exports__, "CheckoutCartButtons", function() { return checkout_cart_buttons; });
 /* concated harmony reexport CheckoutCartTotal */__webpack_require__.d(__webpack_exports__, "CheckoutCartTotal", function() { return checkout_cart_total; });
 /* concated harmony reexport CheckoutSteps */__webpack_require__.d(__webpack_exports__, "CheckoutSteps", function() { return checkout_steps; });
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
 /* concated harmony reexport MiniPlaceOrder */__webpack_require__.d(__webpack_exports__, "MiniPlaceOrder", function() { return mini_place_order; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
 /* concated harmony reexport PaymentMethods */__webpack_require__.d(__webpack_exports__, "PaymentMethods", function() { return payment_methods; });
-/* concated harmony reexport PaymentMethodsHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodsHeader", function() { return payment_methods_header; });
 /* concated harmony reexport PaymentMethod */__webpack_require__.d(__webpack_exports__, "PaymentMethod", function() { return payment_method; });
 /* concated harmony reexport PaymentMethodHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodHeader", function() { return payment_method_header; });
 /* concated harmony reexport PaymentMethodSummary */__webpack_require__.d(__webpack_exports__, "PaymentMethodSummary", function() { return payment_method_summary; });

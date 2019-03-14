@@ -52,7 +52,6 @@ import AddressFormHeader from '../components/checkout/address-form-header'
 import LineItems from '../components/cart/line-items'
 import PaymentIcons from '../components/cart/payment-icons'
 import PaymentMethods from '../components/checkout/payment-methods'
-import PaymentMethodsHeader from '../components/checkout/payment-methods-header'
 import PaymentMethod from '../components/checkout/payment-method'
 import PaymentMethodHeader from '../components/checkout/payment-method-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
@@ -118,7 +117,6 @@ const mapping = {
   OrderList,
   PaymentIcons,
   PaymentMethods,
-  PaymentMethodsHeader,
   PaymentMethod,
   PaymentMethodHeader,
   ProductCarousel,
