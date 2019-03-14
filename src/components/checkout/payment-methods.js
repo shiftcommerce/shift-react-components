@@ -20,13 +20,22 @@ class PaymentMethods extends Component {
       className,
       nextSection
     } = this.props
+
     return (
       <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-methods c-payment-methods__header')}>
         <this.PaymentMethodHeader title={ 'Payment Method' } />
 
-        <div className='c-payment-methods-buttons'>
+        <div className='c-payment-methods__options'>
           <this.Button
-            className='c-payment-methods-buttons__cta c-payment-methods-buttons__cta--continue o-button--lrg'
+            className='c-payment-methods__button o-button--lrg'
+            type='button'
+            label={ 'Placeholder PayPal' }
+          />
+
+          <h4 className='c-payment-methods__option-text'>OR</h4>
+
+          <this.Button
+            className='c-payment-methods__button o-button--lrg'
             type='button'
             label={ 'Pay By Credit/Debit Card' }
             onClick={nextSection}

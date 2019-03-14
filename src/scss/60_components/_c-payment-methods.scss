@@ -8,27 +8,6 @@
   }
 }
 
-.c-payment-methods__button {
-  display: inline-block;
-  font-size: .7rem;
-  text-transform: uppercase;
-  height: 35px;
-  width: 90%;
-  margin: 2.5%;
-  text-align: center;
-  color: $text-light;
-  background-color: $background-primary;
-
-  @include breakpoint(desktop) {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  &--active {
-    background-color: $background-positive;
-  }
-}
-
 .c-payment-methods__header {
   @include breakpoint(tablet) {
     padding-left: 0;
@@ -50,48 +29,40 @@
   }
 }
 
-.c-payment-methods-buttons {
+.c-payment-methods__options {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  text-align: center;
   margin: $global-spacing-unit-small 0;
 
   @include breakpoint(desktop) {
-    flex-direction: row;
     padding-bottom: $global-spacing-unit-small;
     margin-top: $global-spacing-unit-small;
     justify-content: space-between;
   }
 }
 
-.c-payment-methods-buttons__cta {
-  display: block;
-  width: 100%;
-  margin: $global-spacing-unit-small 0;
-  text-align: center;
+.c-payment-methods__option-text {
+  color: $medium-grey;
+}
+
+.c-payment-methods__button {
+  display: flex;
+  justify-content: center;
+  font-size: .9rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
-  white-space: nowrap;
+  width: 50%;
+  margin: 1.5%;
+  color: $text-light;
+  background-color: $background-primary;
 
   @include breakpoint(desktop) {
-    width: 49%;
+    margin-left: 0;
+    width: 100%;
   }
 
-  &:hover {
-    cursor: pointer;
-  }
-
-  &--continue {
-    background: $background-secondary;
-    color: $text-dark;
-
-    &:visited {
-      color: $text-dark;
-    }
-
-    &:hover {
-      @include breakpoint(desktop) {
-        background: transparentize($background-secondary, .2);
-      }
-    }
+  &--active {
+    background-color: $background-positive;
   }
 }

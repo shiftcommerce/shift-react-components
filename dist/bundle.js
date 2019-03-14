@@ -74124,9 +74124,15 @@ function (_Component) {
       }, external_react_default.a.createElement(this.PaymentMethodHeader, {
         title: 'Payment Method'
       }), external_react_default.a.createElement("div", {
-        className: "c-payment-methods-buttons"
+        className: "c-payment-methods__options"
       }, external_react_default.a.createElement(this.Button, {
-        className: "c-payment-methods-buttons__cta c-payment-methods-buttons__cta--continue o-button--lrg",
+        className: "c-payment-methods__button o-button--lrg",
+        type: "button",
+        label: 'Placeholder PayPal'
+      }), external_react_default.a.createElement("h4", {
+        className: "c-payment-methods__option-text"
+      }, "OR"), external_react_default.a.createElement(this.Button, {
+        className: "c-payment-methods__button o-button--lrg",
         type: "button",
         label: 'Pay By Credit/Debit Card',
         onClick: nextSection
