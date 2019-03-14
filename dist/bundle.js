@@ -74106,6 +74106,7 @@ function (_Component) {
     payment_methods_classCallCheck(this, PaymentMethods);
 
     _this = payment_methods_possibleConstructorReturn(this, payment_methods_getPrototypeOf(PaymentMethods).call(this, props));
+    _this.Button = component_mapping('Button');
     _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
     return _this;
   }
@@ -74119,9 +74120,14 @@ function (_Component) {
           nextSection = _this$props.nextSection;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
-        className: classnames_default()(className, 'o-form c-payment-method')
+        className: classnames_default()(className, 'o-form c-payment-methods c-payment-methods__header')
       }, external_react_default.a.createElement(this.PaymentMethodHeader, {
         title: 'Payment Method'
+      }), external_react_default.a.createElement(this.Button, {
+        className: "c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--lrg c-payment-methods__button",
+        type: "button",
+        label: 'Pay By Credit/Debit Card',
+        onClick: nextSection
       }));
     }
   }]);

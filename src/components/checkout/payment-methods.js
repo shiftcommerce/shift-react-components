@@ -10,6 +10,7 @@ class PaymentMethods extends Component {
   constructor (props) {
     super(props)
 
+    this.Button = componentMapping('Button')
     this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
   }
 
@@ -20,8 +21,14 @@ class PaymentMethods extends Component {
       nextSection
     } = this.props
     return (
-      <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-method')}>
+      <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-methods c-payment-methods__header')}>
         <this.PaymentMethodHeader title={ 'Payment Method' } />
+        <this.Button
+          className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--lrg c-payment-methods__button'
+          type='button'
+          label={ 'Pay By Credit/Debit Card' }
+          onClick={nextSection}
+        />
       </div>
     )
   }
