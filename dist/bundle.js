@@ -82960,7 +82960,7 @@ function CheckoutCartButtons(_ref) {
 
   var renderContinueButton = function renderContinueButton() {
     return external_react_default.a.createElement(Button, checkout_cart_buttons_extends({
-      className: "c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml",
+      className: "c-checkout-cart-buttons__cta c-checkout-cart-buttons__cta--proceed o-button--sml",
       type: "button"
     }, continueButtonProps));
   };
@@ -82968,12 +82968,12 @@ function CheckoutCartButtons(_ref) {
   var renderContinueShoppingButton = function renderContinueShoppingButton() {
     return external_react_default.a.createElement(Link, {
       href: "/",
-      className: "c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
+      className: "c-checkout-cart-buttons__cta c-checkout-cart-buttons__cta--continue o-button--sml"
     }, "Continue Shopping");
   };
 
   return external_react_default.a.createElement(react_stickyfill_lib_default.a, null, external_react_default.a.createElement("div", {
-    className: "c-cart-summary-buttons"
+    className: "c-checkout-cart-buttons"
   }, renderContinueShoppingButton(), renderContinueButton()));
 }
 

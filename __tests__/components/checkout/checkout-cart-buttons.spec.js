@@ -16,8 +16,8 @@ test('displays a correct disabled button based on passed props', () => {
   )
 
   // Assert
-  expect(wrapper.find('button.c-cart-summary-buttons__cta--proceed')).toHaveText('Choose Shipping Method')
-  expect(wrapper.find('button.c-cart-summary-buttons__cta--proceed')).toHaveProp('disabled', true)
+  expect(wrapper.find('button.c-checkout-cart-buttons__cta--proceed')).toHaveText('Choose Shipping Method')
+  expect(wrapper.find('button.c-checkout-cart-buttons__cta--proceed')).toHaveProp('disabled', true)
 })
 
 test('displays a correct enabled button based on passed props', () => {
@@ -32,6 +32,6 @@ test('displays a correct enabled button based on passed props', () => {
   )
 
   // Assert
-  expect(wrapper.find('button.c-cart-summary-buttons__cta--proceed')).toHaveText('Choose Shipping Method')
-  expect(wrapper.find('button.c-cart-summary-buttons__cta--proceed')).toHaveProp('disabled', false)
+  expect(wrapper.find('button.c-checkout-cart-buttons__cta--proceed')).toHaveText('Choose Shipping Method')
+  expect(wrapper.find('button.c-checkout-cart-buttons__cta--proceed')).toHaveProp('disabled', false)
 })

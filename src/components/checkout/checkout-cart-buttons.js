@@ -12,7 +12,7 @@ function CheckoutCartButtons ({ continueButtonProps }) {
 
   const renderContinueButton = () => (
     <Button
-      className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml'
+      className='c-checkout-cart-buttons__cta c-checkout-cart-buttons__cta--proceed o-button--sml'
       type='button'
       {...continueButtonProps}
     />
@@ -21,14 +21,14 @@ function CheckoutCartButtons ({ continueButtonProps }) {
   const renderContinueShoppingButton = () => (
     <Link
       href='/'
-      className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml'>
+      className='c-checkout-cart-buttons__cta c-checkout-cart-buttons__cta--continue o-button--sml'>
       Continue Shopping
     </Link>
   )
 
   return (
     <Sticky>
-      <div className='c-cart-summary-buttons'>
+      <div className='c-checkout-cart-buttons'>
         { renderContinueShoppingButton() }
         { renderContinueButton() }
       </div>
