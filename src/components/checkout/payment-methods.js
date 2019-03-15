@@ -1,57 +1,72 @@
 // Libraries
 import React, { Component } from 'react'
-import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import paypal from 'paypal-checkout'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
+
+const PayPalButton = paypal.Buttons
 
 class PaymentMethods extends Component {
   constructor (props) {
     super(props)
 
     this.Button = componentMapping('Button')
+    this.Head = componentMapping('Head')
     this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
+  }
+
+  initializePayPal (paypalClientID) {
+    const script = document.createElement('script')
+
+    script.src = `https://www.paypal.com/sdk/js?client-id=${paypalClientID}`
+    script.async = true
+
+    document.body.appendChild(script)
   }
 
   render () {
     const {
-      cart,
-      className,
-      nextSection
+      nextSection,
+      paypalClientID,
+      paypalCreateOrder,
+      paypalOnApprove
     } = this.props
 
     return (
-      <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-methods')}>
-        <this.PaymentMethodHeader title={ 'Payment Method' } />
+      <>
+        { this.initializePayPal(paypalClientID) }
 
-        <div className='c-payment-methods__options'>
-          <this.Button
-            className='o-button--lrg c-payment-methods__button'
-            type='button'
-            label={ 'Placeholder PayPal' }
-          />
+        <div aria-label='Payment method' className='o-form c-payment-methods'>
+          <this.PaymentMethodHeader title={ 'Payment Method' } />
 
-          <h4 className='c-payment-methods__option-text'>
-            OR
-          </h4>
+          <div className='c-payment-methods__options'>
+            { paypalClientID && paypalCreateOrder && paypalOnApprove && <PayPalButton
+              createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
+              onApprove={ (data, actions) => paypalOnApprove(data, actions) }
+            /> }
 
-          <this.Button
-            className='o-button--lrg c-payment-methods__button'
-            type='button'
-            label={ 'Pay By Credit/Debit Card' }
-            onClick={nextSection}
-          />
+            <h4 className='c-payment-methods__option-text'>OR</h4>
+
+            <this.Button
+              className='o-button--lrg c-payment-methods__button'
+              type='button'
+              label={ 'Pay By Credit/Debit Card' }
+              onClick={nextSection}
+            />
+          </div>
         </div>
-      </div>
+      </>
     )
   }
 }
 
 PaymentMethods.propTypes = {
-  cart: PropTypes.object,
-  className: PropTypes.string,
-  nextSection: PropTypes.func
+  nextSection: PropTypes.func,
+  paypalClientID: PropTypes.string,
+  paypalCreateOrder: PropTypes.func,
+  paypalOnApprove: PropTypes.func
 }
 
 export default PaymentMethods
