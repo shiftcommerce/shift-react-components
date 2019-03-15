@@ -26,7 +26,6 @@ test('Renders current step 1 correctly', () => {
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment Method')
 })
 
-
 test('Renders current step 2 correctly', () => {
   // Act
   const wrapper = shallow(<CheckoutSteps currentStep={2} />)
