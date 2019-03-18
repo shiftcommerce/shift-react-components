@@ -6,7 +6,7 @@ import paypal from 'paypal-checkout'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-const PayPalButton = paypal.Buttons
+const PayPalButton = paypal.Buttons.driver('react', { React, ReactDOM })
 
 class PaymentMethods extends Component {
   constructor (props) {
@@ -26,6 +26,10 @@ class PaymentMethods extends Component {
     document.body.appendChild(script)
   }
 
+  paypalEnabled () {
+    return paypalClientID && paypalCreateOrder && paypalOnApprove 
+  }
+
   render () {
     const {
       nextSection,
@@ -42,7 +46,7 @@ class PaymentMethods extends Component {
           <this.PaymentMethodHeader title={ 'Payment Method' } />
 
           <div className='c-payment-methods__options'>
-            { paypalClientID && paypalCreateOrder && paypalOnApprove && <PayPalButton
+            { this.paypalEnabled() && <PayPalButton
               createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
               onApprove={ (data, actions) => paypalOnApprove(data, actions) }
             /> }
