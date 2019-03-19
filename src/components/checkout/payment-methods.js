@@ -1,12 +1,11 @@
 // Libraries
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import paypal from 'paypal-checkout'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-const PayPalButton = paypal.Buttons.driver('react', { React, ReactDOM })
+let PayPalButton;
 
 class PaymentMethods extends Component {
   constructor (props) {
@@ -15,6 +14,12 @@ class PaymentMethods extends Component {
     this.Button = componentMapping('Button')
     this.Head = componentMapping('Head')
     this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
+  }
+
+  componentDidMount () {
+    const paypal = require('paypal-checkout')
+    PayPalButton = paypal.Buttons.driver('react', { React, ReactDOM })
+    this.setState({ showPayPalButton: true })
   }
 
   initializePayPal (paypalClientID) {
@@ -46,7 +51,7 @@ class PaymentMethods extends Component {
           <this.PaymentMethodHeader title={ 'Payment Method' } />
 
           <div className='c-payment-methods__options'>
-            { this.paypalEnabled() && <PayPalButton
+            { this.paypalEnabled() && this.state.showPayPalButton && <PayPalButton
               createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
               onApprove={ (data, actions) => paypalOnApprove(data, actions) }
             /> }
