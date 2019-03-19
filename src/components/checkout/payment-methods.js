@@ -10,7 +10,6 @@ let PayPalButton;
 class PaymentMethods extends Component {
   constructor (props) {
     super(props)
-
     this.Button = componentMapping('Button')
     this.Head = componentMapping('Head')
     this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
@@ -24,10 +23,8 @@ class PaymentMethods extends Component {
 
   initializePayPal (paypalClientID) {
     const script = document.createElement('script')
-
     script.src = `https://www.paypal.com/sdk/js?client-id=${paypalClientID}`
     script.async = true
-
     document.body.appendChild(script)
   }
 
@@ -62,7 +59,7 @@ class PaymentMethods extends Component {
               className='o-button--lrg c-payment-methods__button'
               type='button'
               label={ 'Pay By Credit/Debit Card' }
-              onClick={nextSection}
+              onClick={ () => nextSection() }
             />
           </div>
         </div>

@@ -10,7 +10,8 @@
     "test": "jest",
     "jest-update-snapshot": "jest --updateSnapshot",
     "lint:scss": "stylelint src/scss",
-    "lint:scss:fix": "stylelint src/scss --fix"
+    "lint:scss:fix": "stylelint src/scss --fix",
+    "yalc-push": "nodemon -x 'yalc push'"
   },
   "dependencies": {
     "classnames": "^2.2.6",
