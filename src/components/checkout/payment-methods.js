@@ -16,11 +16,18 @@ class PaymentMethods extends Component {
   }
 
   componentDidMount () {
+    // require the paypal checkout package client-side
     const paypal = require('paypal-checkout')
+    // initialize the paypal btn
     PayPalButton = paypal.Buttons.driver('react', { React, ReactDOM })
+    // set showPayPalButton to true
     this.setState({ showPayPalButton: true })
   }
 
+  /**
+   * Injects the PayPal script on the page
+   * @param  {string} paypalClientID
+   */
   initializePayPal (paypalClientID) {
     const script = document.createElement('script')
     script.src = `https://www.paypal.com/sdk/js?client-id=${paypalClientID}`
@@ -28,13 +35,26 @@ class PaymentMethods extends Component {
     document.body.appendChild(script)
   }
 
+  /**
+   * Checks whether PayPal is enabled or not
+   * @return {boolean}
+   */
   paypalEnabled () {
     return paypalClientID && paypalCreateOrder && paypalOnApprove 
   }
 
+  /**
+   * When a customer selects the default checkout option, this funtion is called and 
+   * it sets the selected payment method in the state
+   */
+  handlePaymentSelection() {
+    const { nextSection, handleSetPaymentMethod } = this.props
+    handleSetPaymentMethod()
+    nextSection()
+  }
+
   render () {
     const {
-      nextSection,
       paypalClientID,
       paypalCreateOrder,
       paypalOnApprove
@@ -59,7 +79,7 @@ class PaymentMethods extends Component {
               className='o-button--lrg c-payment-methods__button'
               type='button'
               label={ 'Pay By Credit/Debit Card' }
-              onClick={ () => nextSection() }
+              onClick={ () => this.handlePaymentSelection() }
             />
           </div>
         </div>
@@ -72,7 +92,8 @@ PaymentMethods.propTypes = {
   nextSection: PropTypes.func,
   paypalClientID: PropTypes.string,
   paypalCreateOrder: PropTypes.func,
-  paypalOnApprove: PropTypes.func
+  paypalOnApprove: PropTypes.func,
+  handleSetPaymentMethod: PropTypes.func
 }
 
 export default PaymentMethods
