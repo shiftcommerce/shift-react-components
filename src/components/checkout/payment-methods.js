@@ -45,9 +45,9 @@ class PaymentMethods extends Component {
 
   /**
    * When a customer selects the default checkout option, this funtion is called and 
-   * it sets the selected payment method in the state
+   * it sets the selected payment method in the state and redirects to the next section
    */
-  handlePaymentSelection(paymentMethod) {
+  handleDefaultPaymentSelection(paymentMethod) {
     const { nextSection, handleSetPaymentMethod } = this.props
     handleSetPaymentMethod(paymentMethod)
     nextSection()
@@ -71,6 +71,7 @@ class PaymentMethods extends Component {
             { this.paypalEnabled() && this.state.showPayPalButton && <PayPalButton
               createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
               onApprove={ (data, actions) => paypalOnApprove(data, actions) }
+              onClick={ () => this.handleSetPaymentMethod('paypal') }
             /> }
 
             <h4 className='c-payment-methods__option-text'>OR</h4>
@@ -79,7 +80,7 @@ class PaymentMethods extends Component {
               className='o-button--lrg c-payment-methods__button'
               type='button'
               label={ 'Pay By Credit/Debit Card' }
-              onClick={ () => this.handlePaymentSelection('default') }
+              onClick={ () => this.handleDefaultPaymentSelection('default') }
             />
           </div>
         </div>
