@@ -39,9 +39,9 @@ class PaymentMethods extends Component {
         <div className='c-payment-methods__options'>
           <this.PaypalButton
             paypalClientID={ paypalClientID }
-            createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
-            onApprove={ (data, actions) => paypalOnApprove(data, actions) }
-            onClick={ () => handleSetPaymentMethod('paypal') }
+            createOrder={ paypalCreateOrder }
+            onApprove={ paypalOnApprove }
+            handleSetPaymentMethod={ handleSetPaymentMethod }
           />
 
           <h4 className='c-payment-methods__option-text'>OR</h4>
