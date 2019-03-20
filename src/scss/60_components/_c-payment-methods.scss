@@ -2,6 +2,8 @@
 @import '../20_tools/__all';
 
 .c-payment-methods {
+  margin-top: $global-spacing-unit-large;
+
   label {
     font-size: .7rem;
     font-weight: bold;

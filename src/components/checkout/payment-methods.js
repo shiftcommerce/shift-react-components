@@ -25,7 +25,7 @@ class PaymentMethods extends Component {
   }
 
   /**
-   * Injects the PayPal script on the page
+   * Includes the PayPal JavaScript SDK 
    * @param  {string} paypalClientID
    */
   initializePayPal (paypalClientID) {
@@ -72,7 +72,7 @@ class PaymentMethods extends Component {
               createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
               onApprove={ (data, actions) => paypalOnApprove(data, actions) }
               onClick={ () => this.handleSetPaymentMethod('paypal') }
-            /> }
+            />}
 
             <h4 className='c-payment-methods__option-text'>OR</h4>
 
