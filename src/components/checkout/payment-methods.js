@@ -10,6 +10,9 @@ let PayPalButton;
 class PaymentMethods extends Component {
   constructor (props) {
     super(props)
+    this.state = {
+      showPayPalButton: false
+    }
     this.Button = componentMapping('Button')
     this.Head = componentMapping('Head')
     this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
@@ -39,7 +42,7 @@ class PaymentMethods extends Component {
    * Checks whether PayPal is enabled or not
    * @return {boolean}
    */
-  paypalEnabled () {
+  paypalEnabled (paypalClientID, paypalCreateOrder, paypalOnApprove) {
     return paypalClientID && paypalCreateOrder && paypalOnApprove 
   }
 
@@ -68,11 +71,13 @@ class PaymentMethods extends Component {
           <this.PaymentMethodHeader title={ 'Payment Method' } />
 
           <div className='c-payment-methods__options'>
-            { this.paypalEnabled() && this.state.showPayPalButton && <PayPalButton
-              createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
-              onApprove={ (data, actions) => paypalOnApprove(data, actions) }
-              onClick={ () => this.handleSetPaymentMethod('paypal') }
-            />}
+            { this.paypalEnabled(paypalClientID, paypalCreateOrder, paypalOnApprove) && this.state.showPayPalButton &&
+              <PayPalButton
+                createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
+                onApprove={ (data, actions) => paypalOnApprove(data, actions) }
+                onClick={ () => this.handleSetPaymentMethod('paypal') }
+              />
+            }
 
             <h4 className='c-payment-methods__option-text'>OR</h4>
 
