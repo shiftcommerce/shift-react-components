@@ -79,7 +79,7 @@ class PaymentMethods extends Component {
               className='o-button--lrg c-payment-methods__button'
               type='button'
               label={ 'Pay By Credit/Debit Card' }
-              onClick={ () => this.handlePaymentSelection('paypal') }
+              onClick={ () => this.handlePaymentSelection('default') }
             />
           </div>
         </div>
