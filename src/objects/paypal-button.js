@@ -1,32 +1,39 @@
 // Libraries
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
+let Button;
+
 class PaypalButton extends Component {
-  /**
-   * Renders the PayPal button
-   */
-  renderPayPalButton() {
-    const { paypalClientID, paypalCreateOrder, paypalOnApprove, handleSetPaymentMethod } = this.props
-    const script = document.createElement('script')
-    
-    script.src = `https://www.paypal.com/sdk/js?client-id=${paypalClientID}`
-    script.async = true
-    script.type  = "text/javascript";
-    script.text  = `paypal.Buttons({
-      createOrder: ${(data, actions) => paypalCreateOrder(data, actions)},
-      onApprove: ${(data, actions) => paypalOnApprove(data, actions)},
-      onClick: ${() => handleSetPaymentMethod('paypal')}
-    }).render('#paypal-button-container');`
-    
-    document.body.appendChild(script)
-  }
+  constructor (props) {
+    super(props)
   
+    this.state = {
+      showButton: false
+    }
+  }
+
+  componentDidMount () {
+    Button = window.paypal.Buttons.driver('react', { React, ReactDOM })
+    this.setState({showButton: true })
+  }
+
   render () {
+    const {
+      paypalCreateOrder,
+      paypalOnApprove,
+      handleSetPaymentMethod
+    } = this.props
+
     return (
       <>
-        <div id="paypal-button-container"></div>
-        { this.renderPayPalButton() }
+        <div id="o-paypal-button-container"></div>
+        { this.state.showButton && <Button
+          createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
+          onApprove={ (data, actions) => paypalOnApprove(data, actions) }
+          onClick={ () => handleSetPaymentMethod('paypal') }
+        />}
       </>
     )
   }
