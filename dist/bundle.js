@@ -73221,12 +73221,6 @@ function (_Component) {
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         id: "o-paypal-button-container"
       }), this.state.showButton && external_react_default.a.createElement(Buttons, {
-        style: {
-          fundingicons: 'false'
-        },
-        funding: {
-          allowed: ["card"]
-        },
         createOrder: function createOrder(data, actions) {
           return paypalCreateOrder(data, actions);
         },
