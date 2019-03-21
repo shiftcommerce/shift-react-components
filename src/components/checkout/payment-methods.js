@@ -31,7 +31,7 @@ class PaymentMethods extends Component {
           <this.PaypalButton {...this.props}/>
           <h4 className='c-payment-methods__option-text'>OR</h4>
           <this.Button
-            className='o-button--lrg c-payment-methods__button'
+            className='o-button--sml c-payment-methods__button'
             type='button'
             label={ 'Pay By Credit/Debit Card' }
             onClick={ () => this.handleDefaultPaymentSelection('default') }

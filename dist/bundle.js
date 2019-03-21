@@ -73197,14 +73197,14 @@ function (_Component) {
     value: function componentDidMount() {
       var _this$props = this.props,
           paypalCreateOrder = _this$props.paypalCreateOrder,
-          paypalOnApprove = _this$props.paypalOnApprove;
+          paypalOnApprove = _this$props.paypalOnApprove; // ensure paypal has loaded and required callbacks are present
 
       if (window.paypal && paypalCreateOrder && paypalOnApprove) {
         // load paypal Buttons
         Buttons = window.paypal.Buttons.driver('react', {
           React: external_react_default.a,
           ReactDOM: external_react_dom_default.a
-        }); // enable showButton
+        }); // display PayPal button
 
         this.setState({
           showButton: true
@@ -73221,6 +73221,12 @@ function (_Component) {
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         id: "o-paypal-button-container"
       }), this.state.showButton && external_react_default.a.createElement(Buttons, {
+        style: {
+          fundingicons: 'false'
+        },
+        funding: {
+          allowed: ["card"]
+        },
         createOrder: function createOrder(data, actions) {
           return paypalCreateOrder(data, actions);
         },
@@ -74699,7 +74705,7 @@ function (_Component) {
       }, external_react_default.a.createElement(this.PaypalButton, this.props), external_react_default.a.createElement("h4", {
         className: "c-payment-methods__option-text"
       }, "OR"), external_react_default.a.createElement(this.Button, {
-        className: "o-button--lrg c-payment-methods__button",
+        className: "o-button--sml c-payment-methods__button",
         type: "button",
         label: 'Pay By Credit/Debit Card',
         onClick: function onClick() {
@@ -76412,7 +76418,7 @@ function (_Component) {
         src: "https://js.stripe.com/v3/",
         key: "stripe"
       }), paypalClientID && external_react_default.a.createElement("script", {
-        src: "https://www.paypal.com/sdk/js?components=buttons&client-id=".concat(paypalClientID, "&currency=GBP&disable-funding=credit,sepa&disable-card=amex,visa,mastercard")
+        src: "https://www.paypal.com/sdk/js?client-id=".concat(paypalClientID, "&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper")
       }));
     }
   }]);
