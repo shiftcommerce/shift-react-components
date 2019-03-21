@@ -27,12 +27,9 @@ class PaymentMethods extends Component {
     return (
       <div aria-label='Payment method' className='o-form c-payment-methods'>
         <this.PaymentMethodHeader title={ 'Payment Method' } />
-
         <div className='c-payment-methods__options'>
           <this.PaypalButton {...this.props}/>
-
           <h4 className='c-payment-methods__option-text'>OR</h4>
-
           <this.Button
             className='o-button--lrg c-payment-methods__button'
             type='button'
