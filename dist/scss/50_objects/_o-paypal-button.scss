@@ -1,0 +1,18 @@
+// ==========================================================================
+// # PayPal Button Object
+// ==========================================================================
+
+#o-paypal-button-container {
+  width: 100%;
+  height: auto;
+}
+
+.paypal-buttons {
+  display: inline-flex;
+  height: 50px;
+}
+
+.paypal-button {
+  height: 50px;
+  font-size: .9rem;
+}

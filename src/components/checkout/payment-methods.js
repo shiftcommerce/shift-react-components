@@ -9,7 +9,6 @@ class PaymentMethods extends Component {
   constructor (props) {
     super(props)
     this.Button = componentMapping('Button')
-    this.Head = componentMapping('Head')
     this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
     this.PaypalButton = componentMapping('PaypalButton')
   }
@@ -25,24 +24,12 @@ class PaymentMethods extends Component {
   }
 
   render () {
-    const {
-      paypalClientID,
-      paypalCreateOrder,
-      paypalOnApprove,
-      handleSetPaymentMethod
-    } = this.props
-
     return (
       <div aria-label='Payment method' className='o-form c-payment-methods'>
         <this.PaymentMethodHeader title={ 'Payment Method' } />
 
         <div className='c-payment-methods__options'>
-          <this.PaypalButton
-            paypalClientID={ paypalClientID }
-            createOrder={ paypalCreateOrder }
-            onApprove={ paypalOnApprove }
-            handleSetPaymentMethod={ handleSetPaymentMethod }
-          />
+          <this.PaypalButton {...this.props}/>
 
           <h4 className='c-payment-methods__option-text'>OR</h4>
 

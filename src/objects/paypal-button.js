@@ -3,20 +3,24 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-let Button;
+let Buttons;
 
 class PaypalButton extends Component {
   constructor (props) {
     super(props)
-  
     this.state = {
       showButton: false
     }
   }
 
   componentDidMount () {
-    Button = window.paypal.Buttons.driver('react', { React, ReactDOM })
-    this.setState({showButton: true })
+    const { paypalCreateOrder, paypalOnApprove } = this.props
+    if (window.paypal && paypalCreateOrder && paypalOnApprove) {
+      // load paypal Buttons
+      Buttons = window.paypal.Buttons.driver('react', { React, ReactDOM })
+      // enable showButton
+      this.setState({showButton: true })
+    }
   }
 
   render () {
@@ -29,7 +33,7 @@ class PaypalButton extends Component {
     return (
       <>
         <div id="o-paypal-button-container"></div>
-        { this.state.showButton && <Button
+        { this.state.showButton && <Buttons
           createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
           onApprove={ (data, actions) => paypalOnApprove(data, actions) }
           onClick={ () => handleSetPaymentMethod('paypal') }

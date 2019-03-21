@@ -73190,7 +73190,7 @@ function paypal_button_setPrototypeOf(o, p) { paypal_button_setPrototypeOf = Obj
 
 
 
-var paypal_button_Button;
+var Buttons;
 
 var paypal_button_PaypalButton =
 /*#__PURE__*/
@@ -73212,24 +73212,34 @@ function (_Component) {
   paypal_button_createClass(PaypalButton, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      paypal_button_Button = window.paypal.Buttons.driver('react', {
-        React: external_react_default.a,
-        ReactDOM: external_react_dom_default.a
-      });
-      this.setState({
-        showButton: true
-      });
+      var _this$props = this.props,
+          paypalCreateOrder = _this$props.paypalCreateOrder,
+          paypalOnApprove = _this$props.paypalOnApprove;
+      console.log("::paypalCreateOrder", paypalCreateOrder);
+      console.log("::paypalOnApprove", paypalOnApprove);
+
+      if (window.paypal && paypalCreateOrder && paypalOnApprove) {
+        // load paypal Buttons
+        Buttons = window.paypal.Buttons.driver('react', {
+          React: external_react_default.a,
+          ReactDOM: external_react_dom_default.a
+        }); // enable showButton
+
+        this.setState({
+          showButton: true
+        });
+      }
     }
   }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          paypalCreateOrder = _this$props.paypalCreateOrder,
-          paypalOnApprove = _this$props.paypalOnApprove,
-          handleSetPaymentMethod = _this$props.handleSetPaymentMethod;
+      var _this$props2 = this.props,
+          paypalCreateOrder = _this$props2.paypalCreateOrder,
+          paypalOnApprove = _this$props2.paypalOnApprove,
+          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         id: "o-paypal-button-container"
-      }), this.state.showButton && external_react_default.a.createElement(paypal_button_Button, {
+      }), this.state.showButton && external_react_default.a.createElement(Buttons, {
         createOrder: function createOrder(data, actions) {
           return paypalCreateOrder(data, actions);
         },
@@ -74674,7 +74684,6 @@ function (_Component) {
 
     _this = payment_methods_possibleConstructorReturn(this, payment_methods_getPrototypeOf(PaymentMethods).call(this, props));
     _this.Button = component_mapping('Button');
-    _this.Head = component_mapping('Head');
     _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
     _this.PaypalButton = component_mapping('PaypalButton');
     return _this;
@@ -74699,11 +74708,6 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$props2 = this.props,
-          paypalClientID = _this$props2.paypalClientID,
-          paypalCreateOrder = _this$props2.paypalCreateOrder,
-          paypalOnApprove = _this$props2.paypalOnApprove,
-          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
         className: "o-form c-payment-methods"
@@ -74711,12 +74715,7 @@ function (_Component) {
         title: 'Payment Method'
       }), external_react_default.a.createElement("div", {
         className: "c-payment-methods__options"
-      }, external_react_default.a.createElement(this.PaypalButton, {
-        paypalClientID: paypalClientID,
-        createOrder: paypalCreateOrder,
-        onApprove: paypalOnApprove,
-        handleSetPaymentMethod: handleSetPaymentMethod
-      }), external_react_default.a.createElement("h4", {
+      }, external_react_default.a.createElement(this.PaypalButton, this.props), external_react_default.a.createElement("h4", {
         className: "c-payment-methods__option-text"
       }, "OR"), external_react_default.a.createElement(this.Button, {
         className: "o-button--lrg c-payment-methods__button",
@@ -76418,7 +76417,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       var faviconPath = '../../static/favicon.png';
-      var paypalClientID = 'sb';
+      var paypalClientID = this.props.paypalClientID;
       return external_react_default.a.createElement(this.Head, null, external_react_default.a.createElement("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1, maximum-scale=1.0"
@@ -76431,7 +76430,7 @@ function (_Component) {
       }), external_react_default.a.createElement("script", {
         src: "https://js.stripe.com/v3/",
         key: "stripe"
-      }), external_react_default.a.createElement("script", {
+      }), paypalClientID && external_react_default.a.createElement("script", {
         src: "https://www.paypal.com/sdk/js?components=buttons&client-id=".concat(paypalClientID, "&disable-funding=credit,sepa&disable-card=amex,visa,mastercard")
       }));
     }
@@ -84171,7 +84170,10 @@ function (_Component) {
   }, {
     key: "renderCheckoutHeader",
     value: function renderCheckoutHeader() {
-      return external_react_default.a.createElement(this.CustomHead, null);
+      var paypalClientID = this.props.paypalClientID;
+      return external_react_default.a.createElement(this.CustomHead, {
+        paypalClientID: paypalClientID
+      });
     }
   }, {
     key: "renderSearch",
