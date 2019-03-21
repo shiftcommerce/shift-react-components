@@ -73215,8 +73215,6 @@ function (_Component) {
       var _this$props = this.props,
           paypalCreateOrder = _this$props.paypalCreateOrder,
           paypalOnApprove = _this$props.paypalOnApprove;
-      console.log("::paypalCreateOrder", paypalCreateOrder);
-      console.log("::paypalOnApprove", paypalOnApprove);
 
       if (window.paypal && paypalCreateOrder && paypalOnApprove) {
         // load paypal Buttons
