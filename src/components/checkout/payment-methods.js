@@ -10,7 +10,7 @@ class PaymentMethods extends Component {
     super(props)
     this.Button = componentMapping('Button')
     this.PaymentMethodHeader = componentMapping('PaymentMethodHeader')
-    this.PaypalButton = componentMapping('PaypalButton')
+    this.PayPalButton = componentMapping('PayPalButton')
   }
 
   /**
@@ -28,7 +28,7 @@ class PaymentMethods extends Component {
       <div aria-label='Payment method' className='o-form c-payment-methods'>
         <this.PaymentMethodHeader title={ 'Payment Method' } />
         <div className='c-payment-methods__options'>
-          <this.PaypalButton {...this.props}/>
+          <this.PayPalButton {...this.props}/>
           <h4 className='c-payment-methods__option-text'>OR</h4>
           <this.Button
             className='o-button--sml c-payment-methods__button'

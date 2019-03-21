@@ -26,7 +26,7 @@ import LazyLoad from '../objects/lazy-load'
 import Link from '../objects/link'
 import Loading from '../objects/loading'
 import Logo from '../objects/logo'
-import PaypalButton from '../objects/paypal-button'
+import PayPalButton from '../objects/paypal-button'
 import Rating from '../objects/rating'
 import VariantSelector from '../objects/variant-selector'
 
@@ -116,7 +116,7 @@ const mapping = {
   NavBarOption,
   OrderLineItems,
   OrderList,
-  PaypalButton,
+  PayPalButton,
   PaymentIcons,
   PaymentMethods,
   PaymentMethod,

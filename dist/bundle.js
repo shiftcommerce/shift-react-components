@@ -73175,24 +73175,24 @@ function paypal_button_setPrototypeOf(o, p) { paypal_button_setPrototypeOf = Obj
 
 var Buttons;
 
-var paypal_button_PaypalButton =
+var paypal_button_PayPalButton =
 /*#__PURE__*/
 function (_Component) {
-  paypal_button_inherits(PaypalButton, _Component);
+  paypal_button_inherits(PayPalButton, _Component);
 
-  function PaypalButton(props) {
+  function PayPalButton(props) {
     var _this;
 
-    paypal_button_classCallCheck(this, PaypalButton);
+    paypal_button_classCallCheck(this, PayPalButton);
 
-    _this = paypal_button_possibleConstructorReturn(this, paypal_button_getPrototypeOf(PaypalButton).call(this, props));
+    _this = paypal_button_possibleConstructorReturn(this, paypal_button_getPrototypeOf(PayPalButton).call(this, props));
     _this.state = {
       showButton: false
     };
     return _this;
   }
 
-  paypal_button_createClass(PaypalButton, [{
+  paypal_button_createClass(PayPalButton, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this$props = this.props,
@@ -73234,16 +73234,16 @@ function (_Component) {
     }
   }]);
 
-  return PaypalButton;
+  return PayPalButton;
 }(external_react_["Component"]);
 
-paypal_button_PaypalButton.propTypes = {
+paypal_button_PayPalButton.propTypes = {
   paypalClientID: prop_types_default.a.string,
   paypalCreateOrder: prop_types_default.a.func,
   paypalOnApprove: prop_types_default.a.func,
   handleSetPaymentMethod: prop_types_default.a.func
 };
-/* harmony default export */ var paypal_button = (paypal_button_PaypalButton);
+/* harmony default export */ var paypal_button = (paypal_button_PayPalButton);
 // CONCATENATED MODULE: ./src/objects/rating.js
 function rating_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { rating_typeof = function _typeof(obj) { return typeof obj; }; } else { rating_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return rating_typeof(obj); }
 
@@ -74666,7 +74666,7 @@ function (_Component) {
     _this = payment_methods_possibleConstructorReturn(this, payment_methods_getPrototypeOf(PaymentMethods).call(this, props));
     _this.Button = component_mapping('Button');
     _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
-    _this.PaypalButton = component_mapping('PaypalButton');
+    _this.PayPalButton = component_mapping('PayPalButton');
     return _this;
   }
   /**
@@ -74696,7 +74696,7 @@ function (_Component) {
         title: 'Payment Method'
       }), external_react_default.a.createElement("div", {
         className: "c-payment-methods__options"
-      }, external_react_default.a.createElement(this.PaypalButton, this.props), external_react_default.a.createElement("h4", {
+      }, external_react_default.a.createElement(this.PayPalButton, this.props), external_react_default.a.createElement("h4", {
         className: "c-payment-methods__option-text"
       }, "OR"), external_react_default.a.createElement(this.Button, {
         className: "o-button--sml c-payment-methods__button",
@@ -76728,7 +76728,7 @@ var mapping = {
   NavBarOption: navbar_option,
   OrderLineItems: order_line_items,
   OrderList: order_list,
-  PaypalButton: paypal_button,
+  PayPalButton: paypal_button,
   PaymentIcons: payment_icons,
   PaymentMethods: payment_methods,
   PaymentMethod: payment_method,
@@ -84201,7 +84201,7 @@ function (_Component) {
 /* concated harmony reexport Link */__webpack_require__.d(__webpack_exports__, "Link", function() { return link_Link; });
 /* concated harmony reexport Loading */__webpack_require__.d(__webpack_exports__, "Loading", function() { return objects_loading; });
 /* concated harmony reexport Logo */__webpack_require__.d(__webpack_exports__, "Logo", function() { return logo; });
-/* concated harmony reexport PaypalButton */__webpack_require__.d(__webpack_exports__, "PaypalButton", function() { return paypal_button; });
+/* concated harmony reexport PayPalButton */__webpack_require__.d(__webpack_exports__, "PayPalButton", function() { return paypal_button; });
 /* concated harmony reexport Rating */__webpack_require__.d(__webpack_exports__, "Rating", function() { return objects_rating; });
 /* concated harmony reexport VariantSelector */__webpack_require__.d(__webpack_exports__, "VariantSelector", function() { return variant_selector; });
 /* concated harmony reexport TemplateComponentsManifest */__webpack_require__.d(__webpack_exports__, "TemplateComponentsManifest", function() { return _manifest; });

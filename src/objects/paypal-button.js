@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 let Buttons;
 
-class PaypalButton extends Component {
+class PayPalButton extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -44,11 +44,11 @@ class PaypalButton extends Component {
   }
 }
 
-PaypalButton.propTypes = {
+PayPalButton.propTypes = {
   paypalClientID: PropTypes.string,
   paypalCreateOrder: PropTypes.func,
   paypalOnApprove: PropTypes.func,
   handleSetPaymentMethod: PropTypes.func
 }
 
-export default PaypalButton
+export default PayPalButton
