@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-function AddressFormHeader ({ collapsed, title, onClick }) {
+function AddressFormHeader ({ collapsed, title, onClick, showEditButton }) {
   const Button = componentMapping('Button')
 
   return (
@@ -13,7 +13,7 @@ function AddressFormHeader ({ collapsed, title, onClick }) {
       <div className='o-form__header-title c-address-form__header-title'>
         <h2>{ title }</h2>
       </div>
-      { collapsed &&
+      { collapsed && showEditButton &&
           <Button
             label='Edit'
             status='secondary'
@@ -28,7 +28,8 @@ function AddressFormHeader ({ collapsed, title, onClick }) {
 AddressFormHeader.propTypes = {
   collapsed: PropTypes.bool,
   onClick: PropTypes.func,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  showEditButton: PropTypes.bool
 }
 
 export default AddressFormHeader
