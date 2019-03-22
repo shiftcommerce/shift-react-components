@@ -42,8 +42,6 @@ class ForgotPasswordForm extends Component {
       flashMessage
     } = this.props
 
-    console.log(flashMessage)
-
     const initialValues = {
       email: ''
     }
@@ -63,7 +61,7 @@ class ForgotPasswordForm extends Component {
           <Formik
             initialValues={initialValues}
             validationSchema={emailSchema}
-            submitForm={handleSubmit}
+            onSubmit={handleSubmit}
             render={({ errors, status, touched, isSubmitting }) => (
               <Form>
                 <Field type='email' name='email' placeholder='Email' className='o-form__input-field o-form__input-block' />

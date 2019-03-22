@@ -82369,7 +82369,6 @@ function (_Component) {
           className = _this$props.className,
           handleSubmit = _this$props.handleSubmit,
           flashMessage = _this$props.flashMessage;
-      console.log(flashMessage);
       var initialValues = {
         email: ''
       };
@@ -82387,7 +82386,7 @@ function (_Component) {
       }, "Please enter your email address and submit. In doing this an email containing a special link will be mailed to you. Once received, click on this link and you will then have the opportunity to enter a new password."), external_react_default.a.createElement(formik_esm_Formik, {
         initialValues: initialValues,
         validationSchema: emailSchema,
-        submitForm: handleSubmit,
+        onSubmit: handleSubmit,
         render: function render(_ref) {
           var errors = _ref.errors,
               status = _ref.status,
@@ -82473,7 +82472,9 @@ function (_Component) {
 
       var _this$props = this.props,
           className = _this$props.className,
-          handleSubmit = _this$props.handleSubmit;
+          handleSubmit = _this$props.handleSubmit,
+          account = _this$props.account;
+      console.log(this.props);
       var initialValues = {
         password: ''
       };
@@ -82491,13 +82492,15 @@ function (_Component) {
       }, "Please enter your new password"), external_react_default.a.createElement(formik_esm_Formik, {
         initialValues: initialValues,
         validationSchema: passwordSchema,
-        submitForm: handleSubmit,
+        onSubmit: handleSubmit,
         render: function render(_ref) {
           var errors = _ref.errors,
               status = _ref.status,
               touched = _ref.touched,
               isSubmitting = _ref.isSubmitting;
-          return external_react_default.a.createElement(Form, null, external_react_default.a.createElement(Field, {
+          return external_react_default.a.createElement(Form, null, external_react_default.a.createElement(_this2.AccountFormErrors, {
+            errors: account.errors
+          }), external_react_default.a.createElement(Field, {
             type: "password",
             name: "password",
             placeholder: "New Password",

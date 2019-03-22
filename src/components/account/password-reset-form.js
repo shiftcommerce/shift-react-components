@@ -30,8 +30,11 @@ class PasswordResetForm extends Component {
   render() {
     const {
       className,
-      handleSubmit
+      handleSubmit,
+      account
     } = this.props
+
+    console.log(this.props)
 
     const initialValues = {
       password: ''
@@ -52,9 +55,10 @@ class PasswordResetForm extends Component {
           <Formik
             initialValues={initialValues}
             validationSchema={passwordSchema}
-            submitForm={handleSubmit}
+            onSubmit={handleSubmit}
             render={({ errors, status, touched, isSubmitting }) => (
               <Form>
+                <this.AccountFormErrors errors={account.errors} />
                 <Field type='password' name='password' placeholder='New Password' className='o-form__input-field o-form__input-block' />
                 <div className='o-form__input-field__error'>
                   <ErrorMessage name='password' />
