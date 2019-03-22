@@ -74867,11 +74867,13 @@ payment_method_PaymentMethod.propTypes = {
 function payment_method_header_PaymentMethodHeader(_ref) {
   var title = _ref.title,
       collapsed = _ref.collapsed,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      showEditButton = _ref.showEditButton;
   var Button = component_mapping('Button');
+  console.log("2****showEditButton", showEditButton);
   return external_react_default.a.createElement("div", {
     className: "o-form__header  c-payment-method__header"
-  }, external_react_default.a.createElement("h2", null, title), collapsed && external_react_default.a.createElement(Button, {
+  }, external_react_default.a.createElement("h2", null, title), collapsed && showEditButton && external_react_default.a.createElement(Button, {
     "aria-label": "Edit your payment method",
     className: "o-button-edit",
     label: "Edit",
@@ -83817,20 +83819,24 @@ MiniPlaceOrder.propTypes = {
 
 var payment_method_summary_PaymentMethodSummary = function PaymentMethodSummary(_ref) {
   var billingAddress = _ref.billingAddress,
+      paymentMethod = _ref.paymentMethod,
+      showEditButton = _ref.showEditButton,
       onClick = _ref.onClick,
       withErrors = _ref.withErrors;
   var PaymentMethodHeader = component_mapping('PaymentMethodHeader');
+  console.log("1****showEditButton", showEditButton);
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(PaymentMethodHeader, {
     title: 'Payment',
     collapsed: true,
-    onClick: onClick
+    onClick: onClick,
+    showEditButton: showEditButton
   }), external_react_default.a.createElement("div", {
     className: classnames_default()('c-payment-method__summary', {
       'o-form__error': withErrors
     })
   }, external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
     className: "u-bold"
-  }, " Payment Mode: "), external_react_default.a.createElement("span", null, "Credit/Debit Card")), billingAddress && external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
+  }, " Payment Mode: "), external_react_default.a.createElement("span", null, paymentMethod)), billingAddress && external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
     className: "u-bold"
   }, "Billing Address: "), external_react_default.a.createElement("span", {
     className: "u-bold"
@@ -83887,18 +83893,36 @@ function (_Component) {
     return _this;
   }
   /**
-   * Renders the shipping method form, which is a wrapper containing the
-   * shipping methods
-   * @return {string} - HTML markup for the component
+   * Renders the continue button
    */
 
 
   shipping_methods_createClass(ShippingMethods, [{
+    key: "renderContinueButton",
+    value: function renderContinueButton() {
+      var _this$props = this.props,
+          handleFormSubmit = _this$props.handleFormSubmit,
+          isThirdPartyPayment = _this$props.isThirdPartyPayment;
+      var label = isThirdPartyPayment ? 'Review Your Order' : 'Continue To Payment';
+      return external_react_default.a.createElement(this.Button, {
+        className: "o-button--sml",
+        "aria-label": label,
+        label: label,
+        status: "positive",
+        type: "submit",
+        onClick: handleFormSubmit
+      });
+    }
+    /**
+     * Renders the shipping method form, which is a wrapper containing the
+     * shipping methods
+     * @return {string} - HTML markup for the component
+     */
+
+  }, {
     key: "renderForm",
     value: function renderForm() {
-      var _this$props = this.props,
-          cartLineItemsCount = _this$props.cartLineItemsCount,
-          handleFormSubmit = _this$props.handleFormSubmit;
+      var cartLineItemsCount = this.props.cartLineItemsCount;
       return external_react_default.a.createElement("form", {
         className: "o-form__wrapper o-form__background c-shipping-method__list"
       }, external_react_default.a.createElement("div", {
@@ -83907,14 +83931,7 @@ function (_Component) {
         className: "c-shipping-method__list-item-count"
       }, cartLineItemsCount === 1 ? '1 item' : "".concat(cartLineItemsCount, " items"))), external_react_default.a.createElement("div", null, this.renderShippingMethods()), external_react_default.a.createElement("div", {
         className: "o-form__input-group"
-      }, external_react_default.a.createElement(this.Button, {
-        className: "o-button--sml",
-        "aria-label": "Continue to payment",
-        label: "Continue to Payment",
-        status: "positive",
-        type: "submit",
-        onClick: handleFormSubmit
-      })));
+      }, this.renderContinueButton()));
     }
     /**
      * Renders the available shipping methods, which is a set of radio buttons
@@ -83987,7 +84004,8 @@ shipping_methods_ShippingMethods.propTypes = {
   cartShippingMethod: prop_types_default.a.object,
   handleFormSubmit: prop_types_default.a.func,
   handleSetShippingMethod: prop_types_default.a.func,
-  shippingMethods: prop_types_default.a.array
+  shippingMethods: prop_types_default.a.array,
+  isThirdPartyPayment: prop_types_default.a.bool
 };
 /* harmony default export */ var shipping_methods = (shipping_methods_ShippingMethods);
 // CONCATENATED MODULE: ./src/components/checkout/shipping-methods-summary.js
