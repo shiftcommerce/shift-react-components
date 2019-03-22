@@ -14,7 +14,7 @@ class ForgotPasswordForm extends Component {
     this.Button = componentMapping('Button')
   }
 
-  renderSubmitButton() {
+  renderSubmitButton(props) {
     return (
       <this.Button
         className='c-password__button o-button-sml'
@@ -22,6 +22,8 @@ class ForgotPasswordForm extends Component {
         label='SUBMIT'
         status='primary'
         type='submit'
+        disabled={!props.isValid}
+        status={(props.isValid ? 'positive' : 'disabled')}
       />
     )
   }
@@ -62,13 +64,13 @@ class ForgotPasswordForm extends Component {
             initialValues={initialValues}
             validationSchema={emailSchema}
             onSubmit={handleSubmit}
-            render={({ errors, status, touched, isSubmitting }) => (
+            render={(props) => (
               <Form>
                 <Field type='email' name='email' placeholder='Email' className='o-form__input-field o-form__input-block' />
                 <div className='o-form__input-field__error'>
                   <ErrorMessage name='email' />
                 </div>
-                { this.renderSubmitButton() }
+                { this.renderSubmitButton(props) }
               </Form>
             )}
           />

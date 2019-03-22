@@ -4835,7 +4835,7 @@ var difference = __webpack_require__(469);
 var difference_default = /*#__PURE__*/__webpack_require__.n(difference);
 
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
@@ -5682,7 +5682,7 @@ module.exports = parse
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(35);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 /* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_has__WEBPACK_IMPORTED_MODULE_4__);
@@ -6524,104 +6524,12 @@ Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__[/*
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(129);
-
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"] || freeSelf || Function('return this')();
-
-/* harmony default export */ __webpack_exports__["a"] = (root);
-
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayMap = __webpack_require__(34),
-    baseClone = __webpack_require__(217),
-    baseUnset = __webpack_require__(572),
-    castPath = __webpack_require__(62),
-    copyObject = __webpack_require__(64),
-    customOmitClone = __webpack_require__(574),
-    flatRest = __webpack_require__(225),
-    getAllKeysIn = __webpack_require__(148);
-
-/** Used to compose bitmasks for cloning. */
-var CLONE_DEEP_FLAG = 1,
-    CLONE_FLAT_FLAG = 2,
-    CLONE_SYMBOLS_FLAG = 4;
-
-/**
- * The opposite of `_.pick`; this method creates an object composed of the
- * own and inherited enumerable property paths of `object` that are not omitted.
- *
- * **Note:** This method is considerably slower than `_.pick`.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The source object.
- * @param {...(string|string[])} [paths] The property paths to omit.
- * @returns {Object} Returns the new object.
- * @example
- *
- * var object = { 'a': 1, 'b': '2', 'c': 3 };
- *
- * _.omit(object, ['a', 'c']);
- * // => { 'b': '2' }
- */
-var omit = flatRest(function(object, paths) {
-  var result = {};
-  if (object == null) {
-    return result;
-  }
-  var isDeep = false;
-  paths = arrayMap(paths, function(path) {
-    path = castPath(path, object);
-    isDeep || (isDeep = path.length > 1);
-    return path;
-  });
-  copyObject(object, getAllKeysIn(object), result);
-  if (isDeep) {
-    result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG, customOmitClone);
-  }
-  var length = paths.length;
-  while (length--) {
-    baseUnset(result, paths[length]);
-  }
-  return result;
-});
-
-module.exports = omit;
-
-
-/***/ }),
-/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.addMethod = addMethod;
@@ -6695,6 +6603,98 @@ function addMethod(schemaType, name, fn) {
   if (typeof fn !== 'function') throw new TypeError('Method function must be provided');
   schemaType.prototype[name] = fn;
 }
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+/* 23 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(129);
+
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"] || freeSelf || Function('return this')();
+
+/* harmony default export */ __webpack_exports__["a"] = (root);
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayMap = __webpack_require__(34),
+    baseClone = __webpack_require__(217),
+    baseUnset = __webpack_require__(572),
+    castPath = __webpack_require__(62),
+    copyObject = __webpack_require__(64),
+    customOmitClone = __webpack_require__(574),
+    flatRest = __webpack_require__(225),
+    getAllKeysIn = __webpack_require__(148);
+
+/** Used to compose bitmasks for cloning. */
+var CLONE_DEEP_FLAG = 1,
+    CLONE_FLAT_FLAG = 2,
+    CLONE_SYMBOLS_FLAG = 4;
+
+/**
+ * The opposite of `_.pick`; this method creates an object composed of the
+ * own and inherited enumerable property paths of `object` that are not omitted.
+ *
+ * **Note:** This method is considerably slower than `_.pick`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The source object.
+ * @param {...(string|string[])} [paths] The property paths to omit.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ *
+ * _.omit(object, ['a', 'c']);
+ * // => { 'b': '2' }
+ */
+var omit = flatRest(function(object, paths) {
+  var result = {};
+  if (object == null) {
+    return result;
+  }
+  var isDeep = false;
+  paths = arrayMap(paths, function(path) {
+    path = castPath(path, object);
+    isDeep || (isDeep = path.length > 1);
+    return path;
+  });
+  copyObject(object, getAllKeysIn(object), result);
+  if (isDeep) {
+    result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG, customOmitClone);
+  }
+  var length = paths.length;
+  while (length--) {
+    baseUnset(result, paths[length]);
+  }
+  return result;
+});
+
+module.exports = omit;
+
 
 /***/ }),
 /* 25 */
@@ -9327,7 +9327,7 @@ module.exports = baseRest;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = SchemaType;
@@ -9892,7 +9892,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = exports.array = exports.object = exports.boolean = exports.date = exports.number = exports.string = exports.mixed = void 0;
@@ -10518,7 +10518,7 @@ module.exports = function clone(obj) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = inherits;
@@ -10627,7 +10627,7 @@ var esm_extends = __webpack_require__(19);
 var assertThisInitialized = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/Link.js
@@ -16759,7 +16759,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
 /* harmony import */ var _stubFalse_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(478);
 
 
@@ -18161,7 +18161,7 @@ var forEach = __webpack_require__(65);
 var filter = __webpack_require__(166);
 var map = __webpack_require__(39);
 var reduce = __webpack_require__(89);
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var indexOf = __webpack_require__(112);
 var isNaN = __webpack_require__(695);
 var isEmpty = __webpack_require__(31);
@@ -20738,7 +20738,7 @@ module.exports = function(originalModule) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.propagateErrors = propagateErrors;
@@ -20873,7 +20873,7 @@ module.exports = _objectWithoutPropertiesLoose;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = ValidationError;
@@ -30749,7 +30749,7 @@ var sortBy = ['isRefined', 'count:desc', 'name:asc'];
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
@@ -31733,7 +31733,7 @@ module.exports = {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.getIn = getIn;
@@ -44025,7 +44025,7 @@ var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 var objectSpread = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // EXTERNAL MODULE: ./node_modules/algoliasearch-helper/index.js
@@ -48057,7 +48057,7 @@ function stubFalse() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
 
 
 /** Detect free variable `exports`. */
@@ -48662,7 +48662,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = addClass;
@@ -59613,7 +59613,7 @@ var defaults = __webpack_require__(168);
 
 var reduce = __webpack_require__(89);
 var filter = __webpack_require__(166);
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 
 var lib = {
   /**
@@ -68754,7 +68754,7 @@ module.exports = iteratorToArray;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -68834,7 +68834,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = merge;
@@ -68876,7 +68876,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.createErrorFactory = createErrorFactory;
@@ -68997,7 +68997,7 @@ function createValidation(options) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -69045,7 +69045,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = StringSchema;
@@ -69259,7 +69259,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = NumberSchema;
@@ -69429,7 +69429,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -69592,7 +69592,7 @@ module.exports = exports["default"];
 
 var _interopRequireWildcard = __webpack_require__(324);
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = ObjectSchema;
@@ -70389,7 +70389,7 @@ module.exports = createCaseFirst;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = sortFields;
@@ -70576,7 +70576,7 @@ module.exports = exports["default"];
 
 var _interopRequireWildcard = __webpack_require__(324);
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -70796,7 +70796,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -70859,7 +70859,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = setLocale;
@@ -77875,7 +77875,7 @@ function stackHas(key) {
 /* harmony default export */ var _stackHas = (stackHas);
 
 // EXTERNAL MODULE: ./node_modules/lodash-es/_root.js
-var _root = __webpack_require__(22);
+var _root = __webpack_require__(23);
 
 // CONCATENATED MODULE: ./node_modules/lodash-es/_Symbol.js
 
@@ -81945,7 +81945,7 @@ connect(formik_esm_ErrorMessageImpl);
 //# sourceMappingURL=formik.esm.js.map
 
 // EXTERNAL MODULE: ./node_modules/yup/lib/index.js
-var yup_lib = __webpack_require__(24);
+var yup_lib = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./src/components/account/login-form.js
 function login_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { login_form_typeof = function _typeof(obj) { return typeof obj; }; } else { login_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return login_form_typeof(obj); }
@@ -82303,6 +82303,8 @@ function (_Component) {
 // CONCATENATED MODULE: ./src/components/account/forgot-password-form.js
 function forgot_password_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { forgot_password_form_typeof = function _typeof(obj) { return typeof obj; }; } else { forgot_password_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return forgot_password_form_typeof(obj); }
 
+function forgot_password_form_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function forgot_password_form_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function forgot_password_form_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -82344,14 +82346,15 @@ function (_Component) {
 
   forgot_password_form_createClass(ForgotPasswordForm, [{
     key: "renderSubmitButton",
-    value: function renderSubmitButton() {
-      return external_react_default.a.createElement(this.Button, {
+    value: function renderSubmitButton(props) {
+      return external_react_default.a.createElement(this.Button, forgot_password_form_defineProperty({
         className: "c-password__button o-button-sml",
         "aria-label": "Submit",
         label: "SUBMIT",
         status: "primary",
-        type: "submit"
-      });
+        type: "submit",
+        disabled: !props.isValid
+      }, "status", props.isValid ? 'positive' : 'disabled'));
     }
   }, {
     key: "renderFlashMessage",
@@ -82387,11 +82390,7 @@ function (_Component) {
         initialValues: initialValues,
         validationSchema: emailSchema,
         onSubmit: handleSubmit,
-        render: function render(_ref) {
-          var errors = _ref.errors,
-              status = _ref.status,
-              touched = _ref.touched,
-              isSubmitting = _ref.isSubmitting;
+        render: function render(props) {
           return external_react_default.a.createElement(Form, null, external_react_default.a.createElement(Field, {
             type: "email",
             name: "email",
@@ -82401,7 +82400,7 @@ function (_Component) {
             className: "o-form__input-field__error"
           }, external_react_default.a.createElement(ErrorMessage, {
             name: "email"
-          })), _this2.renderSubmitButton());
+          })), _this2.renderSubmitButton(props));
         }
       })));
     }
@@ -82413,6 +82412,8 @@ function (_Component) {
 /* harmony default export */ var forgot_password_form = (forgot_password_form_ForgotPasswordForm);
 // CONCATENATED MODULE: ./src/components/account/password-reset-form.js
 function password_reset_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { password_reset_form_typeof = function _typeof(obj) { return typeof obj; }; } else { password_reset_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return password_reset_form_typeof(obj); }
+
+function password_reset_form_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function password_reset_form_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -82456,14 +82457,15 @@ function (_Component) {
 
   password_reset_form_createClass(PasswordResetForm, [{
     key: "renderSubmitButton",
-    value: function renderSubmitButton() {
-      return external_react_default.a.createElement(this.Button, {
+    value: function renderSubmitButton(props) {
+      return external_react_default.a.createElement(this.Button, password_reset_form_defineProperty({
         className: "c-password__button o-button-sml",
         "aria-label": "Submit",
         label: "submit",
         status: "primary",
-        type: "submit"
-      });
+        type: "submit",
+        disabled: !props.isValid
+      }, "status", props.isValid ? 'positive' : 'disabled'));
     }
   }, {
     key: "render",
@@ -82474,12 +82476,12 @@ function (_Component) {
           className = _this$props.className,
           handleSubmit = _this$props.handleSubmit,
           account = _this$props.account;
-      console.log(this.props);
       var initialValues = {
         password: ''
       };
       var passwordSchema = yup_lib["object"]().shape({
-        password: yup_lib["string"]().min(5, 'Password must be at least 5 characters').max(30, 'Password must be shorter than 30 characters').required('Required')
+        password: yup_lib["string"]().min(5, 'Password must be at least 5 characters').max(30, 'Password must be shorter than 30 characters').required('Required'),
+        confirmPassword: yup_lib["string"]().required('Required').oneOf([yup_lib["ref"]('password'), null], 'Must match')
       });
       return external_react_default.a.createElement("div", {
         className: classnames_default()('o-form', className)
@@ -82493,11 +82495,7 @@ function (_Component) {
         initialValues: initialValues,
         validationSchema: passwordSchema,
         onSubmit: handleSubmit,
-        render: function render(_ref) {
-          var errors = _ref.errors,
-              status = _ref.status,
-              touched = _ref.touched,
-              isSubmitting = _ref.isSubmitting;
+        render: function render(props) {
           return external_react_default.a.createElement(Form, null, external_react_default.a.createElement(_this2.AccountFormErrors, {
             errors: account.errors
           }), external_react_default.a.createElement(Field, {
@@ -82509,7 +82507,16 @@ function (_Component) {
             className: "o-form__input-field__error"
           }, external_react_default.a.createElement(ErrorMessage, {
             name: "password"
-          })), _this2.renderSubmitButton());
+          })), external_react_default.a.createElement(Field, {
+            type: "password",
+            name: "confirmPassword",
+            placeholder: "Confirm Password",
+            className: "o-form__input-field o-form__input-block"
+          }), external_react_default.a.createElement("div", {
+            className: "o-form__input-field__error"
+          }, external_react_default.a.createElement(ErrorMessage, {
+            name: "confirmPassword"
+          })), _this2.renderSubmitButton(props));
         }
       })));
     }

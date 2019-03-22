@@ -15,7 +15,7 @@ class PasswordResetForm extends Component {
     this.AccountFormErrors = componentMapping('FormErrors')
   }
 
-  renderSubmitButton() {
+  renderSubmitButton(props) {
     return (
       <this.Button
         className='c-password__button o-button-sml'
@@ -23,6 +23,8 @@ class PasswordResetForm extends Component {
         label='submit'
         status='primary'
         type='submit'
+        disabled={!props.isValid}
+        status={(props.isValid ? 'positive' : 'disabled')}
       />
     )
   }
@@ -34,8 +36,6 @@ class PasswordResetForm extends Component {
       account
     } = this.props
 
-    console.log(this.props)
-
     const initialValues = {
       password: ''
     }
@@ -45,6 +45,9 @@ class PasswordResetForm extends Component {
         .min(5, 'Password must be at least 5 characters')
         .max(30, 'Password must be shorter than 30 characters')
         .required('Required'),
+      confirmPassword: Yup.string()
+        .required('Required')
+        .oneOf([Yup.ref('password'), null], 'Must match')
     })
 
     return (
@@ -56,14 +59,18 @@ class PasswordResetForm extends Component {
             initialValues={initialValues}
             validationSchema={passwordSchema}
             onSubmit={handleSubmit}
-            render={({ errors, status, touched, isSubmitting }) => (
+            render={(props) => (
               <Form>
                 <this.AccountFormErrors errors={account.errors} />
                 <Field type='password' name='password' placeholder='New Password' className='o-form__input-field o-form__input-block' />
                 <div className='o-form__input-field__error'>
                   <ErrorMessage name='password' />
                 </div>
-                { this.renderSubmitButton() }
+                <Field type='password' name='confirmPassword' placeholder='Confirm Password' className='o-form__input-field o-form__input-block' />
+                <div className='o-form__input-field__error'>
+                  <ErrorMessage name='confirmPassword' />
+                </div>
+                { this.renderSubmitButton(props) }
               </Form>
             )}
           />
