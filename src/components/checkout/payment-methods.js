@@ -34,7 +34,7 @@ class PaymentMethods extends Component {
             className='o-button--sml c-payment-methods__button'
             type='button'
             label={ 'Pay By Credit/Debit Card' }
-            onClick={ () => this.handleDefaultPaymentSelection('default') }
+            onClick={ () => this.handleDefaultPaymentSelection('Credit/Debit Card') }
           />
         </div>
       </div>

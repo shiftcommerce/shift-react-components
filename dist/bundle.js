@@ -73228,7 +73228,7 @@ function (_Component) {
           return paypalOnApprove(data, actions);
         },
         onClick: function onClick() {
-          return handleSetPaymentMethod('paypal');
+          return handleSetPaymentMethod('PayPal');
         }
       }));
     }
@@ -74705,7 +74705,7 @@ function (_Component) {
         type: "button",
         label: 'Pay By Credit/Debit Card',
         onClick: function onClick() {
-          return _this2.handleDefaultPaymentSelection('default');
+          return _this2.handleDefaultPaymentSelection('Credit/Debit Card');
         }
       })));
     }

@@ -37,7 +37,7 @@ class PayPalButton extends Component {
         { this.state.showButton && <Buttons
           createOrder={ (data, actions) => paypalCreateOrder(data, actions) }
           onApprove={ (data, actions) => paypalOnApprove(data, actions) }
-          onClick={ () => handleSetPaymentMethod('paypal') }
+          onClick={ () => handleSetPaymentMethod('PayPal') }
         />}
       </>
     )
