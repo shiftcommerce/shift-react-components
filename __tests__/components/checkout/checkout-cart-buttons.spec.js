@@ -40,7 +40,7 @@ test('does not display a button when no props are passed', () => {
   // Act
   const wrapper = mount(
     <CheckoutCartButtons
-      continueButtonProps={ null }
+      continueButtonProps={null}
     />
   )
 
