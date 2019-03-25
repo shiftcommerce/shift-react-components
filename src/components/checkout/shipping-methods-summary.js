@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
-import { businessDaysFromNow } from '../../lib/business-days-from-now'
+import businessDaysFromNow from '../../lib/business-days-from-now'
 import componentMapping from '../../lib/component-mapping'
 
 function ShippingMethodsSummary ({ onClick, shippingMethod }) {

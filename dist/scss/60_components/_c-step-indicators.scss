@@ -59,6 +59,13 @@
   }
 }
 
+.c-step-indicator__icon {
+  img {
+    height: 15px;
+    width: 15px;
+  }
+}
+
 .c-step-indicator__position {
   display: flex;
   justify-content: center;
