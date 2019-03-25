@@ -82477,7 +82477,8 @@ function (_Component) {
           handleSubmit = _this$props.handleSubmit,
           account = _this$props.account;
       var initialValues = {
-        password: ''
+        password: '',
+        confirmPassword: ''
       };
       var passwordSchema = yup_lib["object"]().shape({
         password: yup_lib["string"]().min(5, 'Password must be at least 5 characters').max(30, 'Password must be shorter than 30 characters').required('Required'),

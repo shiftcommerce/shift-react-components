@@ -37,7 +37,8 @@ class PasswordResetForm extends Component {
     } = this.props
 
     const initialValues = {
-      password: ''
+      password: '',
+      confirmPassword: ''
     }
 
     const passwordSchema = Yup.object().shape({
