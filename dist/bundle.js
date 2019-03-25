@@ -77291,13 +77291,17 @@ function (_PureComponent) {
 
 
 
-/* harmony default export */ var _manifest = ({
+
+var defaultTemplates = {
   banner_image: banner_image,
   email_signup: email_signup,
   generic_grid: generic_grid,
   hero_full: hero_full,
   horizontal_divider: horizontal_divider,
   product_grid: product_grid
+};
+/* harmony default export */ var _manifest = (function () {
+  return Object.assign({}, defaultTemplates, lib_config.get().customTemplateComponents);
 });
 // CONCATENATED MODULE: ./node_modules/tslib/tslib.es6.js
 /*! *****************************************************************************
@@ -83980,7 +83984,7 @@ function (_Component) {
 /* concated harmony reexport Logo */__webpack_require__.d(__webpack_exports__, "Logo", function() { return logo; });
 /* concated harmony reexport Rating */__webpack_require__.d(__webpack_exports__, "Rating", function() { return objects_rating; });
 /* concated harmony reexport VariantSelector */__webpack_require__.d(__webpack_exports__, "VariantSelector", function() { return variant_selector; });
-/* concated harmony reexport TemplateComponentsManifest */__webpack_require__.d(__webpack_exports__, "TemplateComponentsManifest", function() { return _manifest; });
+/* concated harmony reexport buildTemplateComponentsManifest */__webpack_require__.d(__webpack_exports__, "buildTemplateComponentsManifest", function() { return _manifest; });
 /* concated harmony reexport LoginForm */__webpack_require__.d(__webpack_exports__, "LoginForm", function() { return login_form; });
 /* concated harmony reexport RegisterForm */__webpack_require__.d(__webpack_exports__, "RegisterForm", function() { return register_form; });
 /* concated harmony reexport SearchBar */__webpack_require__.d(__webpack_exports__, "SearchBar", function() { return search_bar; });
