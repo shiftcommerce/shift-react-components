@@ -74870,7 +74870,6 @@ function payment_method_header_PaymentMethodHeader(_ref) {
       onClick = _ref.onClick,
       showEditButton = _ref.showEditButton;
   var Button = component_mapping('Button');
-  console.log("2****showEditButton", showEditButton);
   return external_react_default.a.createElement("div", {
     className: "o-form__header  c-payment-method__header"
   }, external_react_default.a.createElement("h2", null, title), collapsed && showEditButton && external_react_default.a.createElement(Button, {
@@ -83824,7 +83823,6 @@ var payment_method_summary_PaymentMethodSummary = function PaymentMethodSummary(
       onClick = _ref.onClick,
       withErrors = _ref.withErrors;
   var PaymentMethodHeader = component_mapping('PaymentMethodHeader');
-  console.log("1****showEditButton", showEditButton);
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(PaymentMethodHeader, {
     title: 'Payment',
     collapsed: true,
