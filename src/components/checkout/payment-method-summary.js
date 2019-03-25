@@ -12,7 +12,7 @@ const PaymentMethodSummary = ({ billingAddress, paymentMethod, showEditButton, o
   return (
     <>
       <PaymentMethodHeader
-        title={ 'Payment' }
+        title={'Payment'}
         collapsed
         onClick={onClick}
         showEditButton={showEditButton}

@@ -26,15 +26,15 @@ class PaymentMethods extends Component {
   render () {
     return (
       <div aria-label='Payment method' className='o-form c-payment-methods'>
-        <this.PaymentMethodHeader title={ 'Payment Method' } />
+        <this.PaymentMethodHeader title={'Payment Method'} />
         <div className='c-payment-methods__options'>
           <this.PayPalButton {...this.props}/>
           <h4 className='c-payment-methods__option-text'>OR</h4>
           <this.Button
             className='o-button--sml c-payment-methods__button'
             type='button'
-            label={ 'Pay By Credit/Debit Card' }
-            onClick={ () => this.handleDefaultPaymentSelection('Credit/Debit Card') }
+            label={'Pay By Credit/Debit Card'}
+            onClick={() => this.handleDefaultPaymentSelection('Credit/Debit Card')}
           />
         </div>
       </div>

@@ -22,7 +22,7 @@ test('renders correctly', () => {
     <PayPalButton 
       paypalCreateOrder={paypalCreateOrder}
       paypalOnApprove={paypalOnApprove}
-      onClick={ onClick }
+      onClick={onClick}
     />
   )
 

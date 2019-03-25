@@ -4,7 +4,7 @@ import React from 'react'
 // Components
 import PaymentMethodHeader from '../../../src/components/checkout/payment-method-header'
 
-test('renders the navigation button when collapsed', () => {
+test('renders the navigation button when collapsed and `showEditButton` is true', () => {
   const wrapper = shallow(<PaymentMethodHeader collapsed title='Test' showEditButton={true} />)
 
   expect(wrapper.find('Button').length).toEqual(1)
