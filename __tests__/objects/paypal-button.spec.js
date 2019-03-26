@@ -28,4 +28,5 @@ test('renders correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(paypal.Buttons.driver).toHaveBeenCalled()
 })

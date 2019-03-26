@@ -19,16 +19,25 @@ class PaymentMethods extends Component {
    */
   handleDefaultPaymentSelection(paymentMethod) {
     const { nextSection, handleSetPaymentMethod } = this.props
-    handleSetPaymentMethod(paymentMethod)
-    nextSection()
+    handleSetPaymentMethod(paymentMethod).then(() => nextSection())
   }
 
   render () {
+    const {
+      paypalCreateOrder,
+      paypalOnApprove,
+      handleSetPaymentMethod
+    } = this.props
+
     return (
       <div aria-label='Payment method' className='o-form c-payment-methods'>
         <this.PaymentMethodHeader title={'Payment Method'} />
         <div className='c-payment-methods__options'>
-          <this.PayPalButton {...this.props}/>
+          <this.PayPalButton 
+            paypalCreateOrder={paypalCreateOrder}
+            paypalOnApprove={paypalOnApprove}
+            handleSetPaymentMethod={handleSetPaymentMethod}
+          />
           <h4 className='c-payment-methods__option-text'>OR</h4>
           <this.Button
             className='o-button--sml c-payment-methods__button'

@@ -74683,14 +74683,19 @@ function (_Component) {
       var _this$props = this.props,
           nextSection = _this$props.nextSection,
           handleSetPaymentMethod = _this$props.handleSetPaymentMethod;
-      handleSetPaymentMethod(paymentMethod);
-      nextSection();
+      handleSetPaymentMethod(paymentMethod).then(function () {
+        return nextSection();
+      });
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
+      var _this$props2 = this.props,
+          paypalCreateOrder = _this$props2.paypalCreateOrder,
+          paypalOnApprove = _this$props2.paypalOnApprove,
+          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
         className: "o-form c-payment-methods"
@@ -74698,7 +74703,11 @@ function (_Component) {
         title: 'Payment Method'
       }), external_react_default.a.createElement("div", {
         className: "c-payment-methods__options"
-      }, external_react_default.a.createElement(this.PayPalButton, this.props), external_react_default.a.createElement("h4", {
+      }, external_react_default.a.createElement(this.PayPalButton, {
+        paypalCreateOrder: paypalCreateOrder,
+        paypalOnApprove: paypalOnApprove,
+        handleSetPaymentMethod: handleSetPaymentMethod
+      }), external_react_default.a.createElement("h4", {
         className: "c-payment-methods__option-text"
       }, "OR"), external_react_default.a.createElement(this.Button, {
         className: "o-button--sml c-payment-methods__button",
