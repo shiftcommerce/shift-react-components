@@ -31,7 +31,7 @@ export { default as VariantSelector } from './objects/variant-selector'
 /**
  * Template Components
  */
-export { default as TemplateComponentsManifest } from './components/template-components/_manifest'
+export { default as buildTemplateComponentsManifest } from './components/template-components/_manifest'
 
 /**
  * Account Components
