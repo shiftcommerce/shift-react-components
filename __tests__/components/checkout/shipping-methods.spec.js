@@ -46,6 +46,7 @@ describe('ShippingMethods', () => {
       handleFormSubmit={handleFormSubmit}
       handleSetShippingMethod={handleSetShippingMethod}
       shippingMethods={shippingMethodsFixture}
+      isThirdPartyPayment={false}
     />)
 
     // Basic checks for classnames and content
@@ -67,3 +68,46 @@ describe('ShippingMethods', () => {
     expect(handleFormSubmit).toHaveBeenCalled()
   })
 })
+
+test('renders Continue To Payment button when card payments are made', () => {
+  const handleFormSubmit = jest.fn()
+  const handleSetShippingMethod = jest.fn()
+  const cartShippingMethod = cartFixture.shipping_method
+  const cartLineItemsCount = cartFixture.line_items_count
+
+  const wrapper = mount(<ShippingMethods
+    cartShippingMethod={cartShippingMethod}
+    cartLineItemsCount={cartLineItemsCount}
+    handleFormSubmit={handleFormSubmit}
+    handleSetShippingMethod={handleSetShippingMethod}
+    shippingMethods={shippingMethodsFixture}
+    isThirdPartyPayment={false}
+  />)
+
+  // Basic checks for classnames and content
+  expect(wrapper).toIncludeText(shippingMethodsFixture[0].label)
+  // Check for estimated delivery
+  expect(wrapper.find({ role: 'button' }).first()).toIncludeText('Continue To Payment')
+})
+
+test('renders Review Your Order button when third party payment is made', () => {
+  const handleFormSubmit = jest.fn()
+  const handleSetShippingMethod = jest.fn()
+  const cartShippingMethod = cartFixture.shipping_method
+  const cartLineItemsCount = cartFixture.line_items_count
+
+  const wrapper = mount(<ShippingMethods
+    cartShippingMethod={cartShippingMethod}
+    cartLineItemsCount={cartLineItemsCount}
+    handleFormSubmit={handleFormSubmit}
+    handleSetShippingMethod={handleSetShippingMethod}
+    shippingMethods={shippingMethodsFixture}
+    isThirdPartyPayment={true}
+  />)
+
+  // Basic checks for classnames and content
+  expect(wrapper).toIncludeText(shippingMethodsFixture[0].label)
+  // Check for estimated delivery
+  expect(wrapper.find({ role: 'button' }).first()).toIncludeText('Review Your Order')
+})
+

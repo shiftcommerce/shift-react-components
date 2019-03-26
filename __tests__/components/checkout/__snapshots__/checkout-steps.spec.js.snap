@@ -31,7 +31,7 @@ exports[`Renders current step 1 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
             >
-              Shipping Address
+              Payment Method
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ exports[`Renders current step 1 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Shipping Method
+              Shipping Address
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ exports[`Renders current step 1 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Payment
+              Shipping Method
             </div>
           </div>
         </div>
@@ -90,6 +90,28 @@ exports[`Renders current step 1 correctly 1`] = `
               className="c-step-indicator__position"
             >
               4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="4"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              5
             </div>
             <div
               className="c-step-indicator__line"
@@ -125,7 +147,7 @@ exports[`Renders current step 2 correctly 1`] = `
           key="0"
         >
           <Link
-            href="/checkout/shipping-address"
+            href="/checkout/payment-method"
           >
             <div
               className="c-step-indicator c-step-indicator--completed"
@@ -144,7 +166,7 @@ exports[`Renders current step 2 correctly 1`] = `
               <div
                 className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
               >
-                Shipping Address
+                Payment Method
               </div>
             </div>
           </Link>
@@ -167,7 +189,7 @@ exports[`Renders current step 2 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
             >
-              Shipping Method
+              Shipping Address
             </div>
           </div>
         </div>
@@ -189,7 +211,7 @@ exports[`Renders current step 2 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Payment
+              Shipping Method
             </div>
           </div>
         </div>
@@ -204,6 +226,28 @@ exports[`Renders current step 2 correctly 1`] = `
               className="c-step-indicator__position"
             >
               4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="4"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              5
             </div>
             <div
               className="c-step-indicator__line"
@@ -239,6 +283,35 @@ exports[`Renders current step 3 correctly 1`] = `
           key="0"
         >
           <Link
+            href="/checkout/payment-method"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                <Image
+                  className="c-step-indicator__icon"
+                  src={Object {}}
+                />
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Payment Method
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <Link
             href="/checkout/shipping-address"
           >
             <div
@@ -265,35 +338,6 @@ exports[`Renders current step 3 correctly 1`] = `
         </div>
         <div
           className="o-header__step"
-          key="1"
-        >
-          <Link
-            href="/checkout/shipping-method"
-          >
-            <div
-              className="c-step-indicator c-step-indicator--completed"
-            >
-              <div
-                className="c-step-indicator__position c-step-indicator__position--completed"
-              >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
-              </div>
-              <div
-                className="c-step-indicator__line c-step-indicator__line--completed"
-              />
-              <div
-                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
-              >
-                Shipping Method
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div
-          className="o-header__step"
           key="2"
         >
           <div
@@ -310,7 +354,7 @@ exports[`Renders current step 3 correctly 1`] = `
             <div
               className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
             >
-              Payment
+              Shipping Method
             </div>
           </div>
         </div>
@@ -325,6 +369,28 @@ exports[`Renders current step 3 correctly 1`] = `
               className="c-step-indicator__position"
             >
               4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="4"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              5
             </div>
             <div
               className="c-step-indicator__line"
@@ -360,6 +426,35 @@ exports[`Renders current step 4 correctly 1`] = `
           key="0"
         >
           <Link
+            href="/checkout/payment-method"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                <Image
+                  className="c-step-indicator__icon"
+                  src={Object {}}
+                />
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Payment Method
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <Link
             href="/checkout/shipping-address"
           >
             <div
@@ -386,7 +481,7 @@ exports[`Renders current step 4 correctly 1`] = `
         </div>
         <div
           className="o-header__step"
-          key="1"
+          key="2"
         >
           <Link
             href="/checkout/shipping-method"
@@ -415,7 +510,157 @@ exports[`Renders current step 4 correctly 1`] = `
         </div>
         <div
           className="o-header__step"
+          key="3"
+        >
+          <div
+            className="c-step-indicator c-step-indicator--active"
+          >
+            <div
+              className="c-step-indicator__position c-step-indicator__position--active"
+            >
+              4
+            </div>
+            <div
+              className="c-step-indicator__line c-step-indicator__line--active"
+            />
+            <div
+              className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="4"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              5
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Review & Submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders current step 5 correctly 1`] = `
+<div
+  className="o-header--checkout"
+>
+  <div
+    className="c-checkout__steps"
+  >
+    <div
+      className="c-step-indicators"
+    >
+      <div
+        className="c-step-indicators__steps"
+      >
+        <div
+          className="o-header__step"
+          key="0"
+        >
+          <Link
+            href="/checkout/payment-method"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                <Image
+                  className="c-step-indicator__icon"
+                  src={Object {}}
+                />
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Payment Method
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="1"
+        >
+          <Link
+            href="/checkout/shipping-address"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                <Image
+                  className="c-step-indicator__icon"
+                  src={Object {}}
+                />
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Shipping Address
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
           key="2"
+        >
+          <Link
+            href="/checkout/shipping-method"
+          >
+            <div
+              className="c-step-indicator c-step-indicator--completed"
+            >
+              <div
+                className="c-step-indicator__position c-step-indicator__position--completed"
+              >
+                <Image
+                  className="c-step-indicator__icon"
+                  src={Object {}}
+                />
+              </div>
+              <div
+                className="c-step-indicator__line c-step-indicator__line--completed"
+              />
+              <div
+                className="c-step-indicator__subtitle c-step-indicator__subtitle--completed"
+              >
+                Shipping Method
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="o-header__step"
+          key="3"
         >
           <Link
             as="/checkout/payment"
@@ -446,7 +691,7 @@ exports[`Renders current step 4 correctly 1`] = `
         </div>
         <div
           className="o-header__step"
-          key="3"
+          key="4"
         >
           <div
             className="c-step-indicator c-step-indicator--active"
@@ -454,7 +699,7 @@ exports[`Renders current step 4 correctly 1`] = `
             <div
               className="c-step-indicator__position c-step-indicator__position--active"
             >
-              4
+              5
             </div>
             <div
               className="c-step-indicator__line c-step-indicator__line--active"
@@ -503,7 +748,7 @@ exports[`Renders steps correctly 1`] = `
             <div
               className="c-step-indicator__subtitle c-step-indicator__subtitle--active"
             >
-              Shipping Address
+              Payment Method
             </div>
           </div>
         </div>
@@ -525,7 +770,7 @@ exports[`Renders steps correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Shipping Method
+              Shipping Address
             </div>
           </div>
         </div>
@@ -547,7 +792,7 @@ exports[`Renders steps correctly 1`] = `
             <div
               className="c-step-indicator__subtitle"
             >
-              Payment
+              Shipping Method
             </div>
           </div>
         </div>
@@ -562,6 +807,28 @@ exports[`Renders steps correctly 1`] = `
               className="c-step-indicator__position"
             >
               4
+            </div>
+            <div
+              className="c-step-indicator__line"
+            />
+            <div
+              className="c-step-indicator__subtitle"
+            >
+              Payment
+            </div>
+          </div>
+        </div>
+        <div
+          className="o-header__step"
+          key="4"
+        >
+          <div
+            className="c-step-indicator"
+          >
+            <div
+              className="c-step-indicator__position"
+            >
+              5
             </div>
             <div
               className="c-step-indicator__line"
