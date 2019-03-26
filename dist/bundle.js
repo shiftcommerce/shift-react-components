@@ -82364,29 +82364,17 @@ function (_Component) {
       }, external_react_default.a.createElement("a", null, "Password reset email sent."), external_react_default.a.createElement("a", null, "Please allow up to 30 mins for the email to arrive."));
     }
   }, {
-    key: "render",
-    value: function render() {
+    key: "renderForm",
+    value: function renderForm(handleSubmit) {
       var _this2 = this;
 
-      var _this$props = this.props,
-          className = _this$props.className,
-          handleSubmit = _this$props.handleSubmit,
-          flashMessage = _this$props.flashMessage;
       var initialValues = {
         email: ''
       };
       var emailSchema = yup_lib["object"]().shape({
         email: yup_lib["string"]().email('Invalid email').required('Email is required')
       });
-      return external_react_default.a.createElement("div", {
-        className: classnames_default()('o-form', className)
-      }, flashMessage && this.renderFlashMessage(), external_react_default.a.createElement("div", {
-        className: "c-password"
-      }, external_react_default.a.createElement("h1", {
-        className: "c-password__title"
-      }, "Forgot Password"), external_react_default.a.createElement("p", {
-        className: "c-password__caption"
-      }, "Please enter your email address and submit. In doing this an email containing a special link will be mailed to you. Once received, click on this link and you will then have the opportunity to enter a new password."), external_react_default.a.createElement(formik_esm_Formik, {
+      return external_react_default.a.createElement(formik_esm_Formik, {
         initialValues: initialValues,
         validationSchema: emailSchema,
         onSubmit: handleSubmit,
@@ -82402,7 +82390,24 @@ function (_Component) {
             name: "email"
           })), _this2.renderSubmitButton(props));
         }
-      })));
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          className = _this$props.className,
+          handleSubmit = _this$props.handleSubmit,
+          flashMessage = _this$props.flashMessage;
+      return external_react_default.a.createElement("div", {
+        className: classnames_default()('o-form', className)
+      }, flashMessage && this.renderFlashMessage(), external_react_default.a.createElement("div", {
+        className: "c-password"
+      }, external_react_default.a.createElement("h1", {
+        className: "c-password__title"
+      }, "Forgot Password"), external_react_default.a.createElement("p", {
+        className: "c-password__caption"
+      }, "Please enter your email address and submit. In doing this an email containing a special link will be mailed to you. Once received, click on this link and you will then have the opportunity to enter a new password."), this.renderForm(handleSubmit)));
     }
   }]);
 
@@ -82468,14 +82473,10 @@ function (_Component) {
       }, "status", props.isValid ? 'positive' : 'disabled'));
     }
   }, {
-    key: "render",
-    value: function render() {
+    key: "renderForm",
+    value: function renderForm(handleSubmit, account) {
       var _this2 = this;
 
-      var _this$props = this.props,
-          className = _this$props.className,
-          handleSubmit = _this$props.handleSubmit,
-          account = _this$props.account;
       var initialValues = {
         password: '',
         confirmPassword: ''
@@ -82484,15 +82485,7 @@ function (_Component) {
         password: yup_lib["string"]().min(5, 'Password must be at least 5 characters').max(30, 'Password must be shorter than 30 characters').required('Required'),
         confirmPassword: yup_lib["string"]().required('Required').oneOf([yup_lib["ref"]('password'), null], 'Must match')
       });
-      return external_react_default.a.createElement("div", {
-        className: classnames_default()('o-form', className)
-      }, external_react_default.a.createElement("div", {
-        className: "c-password"
-      }, external_react_default.a.createElement("h1", {
-        className: "c-password__title"
-      }, "Password Reset"), external_react_default.a.createElement("p", {
-        className: "c-password__caption"
-      }, "Please enter your new password"), external_react_default.a.createElement(formik_esm_Formik, {
+      return external_react_default.a.createElement(formik_esm_Formik, {
         initialValues: initialValues,
         validationSchema: passwordSchema,
         onSubmit: handleSubmit,
@@ -82519,7 +82512,24 @@ function (_Component) {
             name: "confirmPassword"
           })), _this2.renderSubmitButton(props));
         }
-      })));
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          className = _this$props.className,
+          handleSubmit = _this$props.handleSubmit,
+          account = _this$props.account;
+      return external_react_default.a.createElement("div", {
+        className: classnames_default()('o-form', className)
+      }, external_react_default.a.createElement("div", {
+        className: "c-password"
+      }, external_react_default.a.createElement("h1", {
+        className: "c-password__title"
+      }, "Password Reset"), external_react_default.a.createElement("p", {
+        className: "c-password__caption"
+      }, "Please enter your new password"), this.renderForm(handleSubmit, account)));
     }
   }]);
 

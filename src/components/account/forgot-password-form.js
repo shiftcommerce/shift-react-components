@@ -37,13 +37,7 @@ class ForgotPasswordForm extends Component {
     )
   }
 
-  render() {
-    const {
-      className,
-      handleSubmit,
-      flashMessage
-    } = this.props
-
+  renderForm (handleSubmit) {
     const initialValues = {
       email: ''
     }
@@ -55,25 +49,37 @@ class ForgotPasswordForm extends Component {
     })
 
     return (
+      <Formik
+        initialValues={initialValues}
+        validationSchema={emailSchema}
+        onSubmit={handleSubmit}
+        render={(props) => (
+          <Form>
+            <Field type='email' name='email' placeholder='Email' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='email' />
+            </div>
+            {this.renderSubmitButton(props)}
+          </Form>
+        )}
+      />
+    )
+  }
+
+  render() {
+    const {
+      className,
+      handleSubmit,
+      flashMessage
+    } = this.props
+
+    return (
       <div className={classNames('o-form', className)}>
         {flashMessage && this.renderFlashMessage()}
         <div className='c-password'>
           <h1 className='c-password__title'>Forgot Password</h1>
           <p className='c-password__caption'>Please enter your email address and submit. In doing this an email containing a special link will be mailed to you. Once received, click on this link and you will then have the opportunity to enter a new password.</p>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={emailSchema}
-            onSubmit={handleSubmit}
-            render={(props) => (
-              <Form>
-                <Field type='email' name='email' placeholder='Email' className='o-form__input-field o-form__input-block' />
-                <div className='o-form__input-field__error'>
-                  <ErrorMessage name='email' />
-                </div>
-                { this.renderSubmitButton(props) }
-              </Form>
-            )}
-          />
+          { this.renderForm(handleSubmit) }
         </div>
       </div>
     )

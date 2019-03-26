@@ -29,13 +29,7 @@ class PasswordResetForm extends Component {
     )
   }
 
-  render() {
-    const {
-      className,
-      handleSubmit,
-      account
-    } = this.props
-
+  renderForm(handleSubmit, account) {
     const initialValues = {
       password: '',
       confirmPassword: ''
@@ -52,29 +46,41 @@ class PasswordResetForm extends Component {
     })
 
     return (
+      <Formik
+        initialValues={initialValues}
+        validationSchema={passwordSchema}
+        onSubmit={handleSubmit}
+        render={(props) => (
+          <Form>
+            <this.AccountFormErrors errors={account.errors} />
+            <Field type='password' name='password' placeholder='New Password' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='password' />
+            </div>
+            <Field type='password' name='confirmPassword' placeholder='Confirm Password' className='o-form__input-field o-form__input-block' />
+            <div className='o-form__input-field__error'>
+              <ErrorMessage name='confirmPassword' />
+            </div>
+            {this.renderSubmitButton(props)}
+          </Form>
+        )}
+      />
+    )
+  }
+
+  render() {
+    const {
+      className,
+      handleSubmit,
+      account
+    } = this.props
+
+    return (
       <div className={classNames('o-form', className)}>
         <div className='c-password'>
           <h1 className='c-password__title'>Password Reset</h1>
           <p className='c-password__caption'>Please enter your new password</p>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={passwordSchema}
-            onSubmit={handleSubmit}
-            render={(props) => (
-              <Form>
-                <this.AccountFormErrors errors={account.errors} />
-                <Field type='password' name='password' placeholder='New Password' className='o-form__input-field o-form__input-block' />
-                <div className='o-form__input-field__error'>
-                  <ErrorMessage name='password' />
-                </div>
-                <Field type='password' name='confirmPassword' placeholder='Confirm Password' className='o-form__input-field o-form__input-block' />
-                <div className='o-form__input-field__error'>
-                  <ErrorMessage name='confirmPassword' />
-                </div>
-                { this.renderSubmitButton(props) }
-              </Form>
-            )}
-          />
+          { this.renderForm(handleSubmit, account) }
         </div>
       </div>
     )
