@@ -4803,10 +4803,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
-var createInstantSearch = __webpack_require__(456);
+var createInstantSearch = __webpack_require__(455);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
-var createIndex = __webpack_require__(462);
+var createIndex = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createConnector.js
 var createConnector = __webpack_require__(16);
@@ -4835,7 +4835,7 @@ var difference = __webpack_require__(469);
 var difference_default = /*#__PURE__*/__webpack_require__.n(difference);
 
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
@@ -5233,7 +5233,7 @@ var connectInfiniteHits = __webpack_require__(307);
 var connectMenu = __webpack_require__(308);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js + 4 modules
-var connectNumericMenu = __webpack_require__(455);
+var connectNumericMenu = __webpack_require__(456);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectPagination.js
 var connectPagination = __webpack_require__(309);
@@ -5682,7 +5682,7 @@ module.exports = parse
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(35);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 /* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_has__WEBPACK_IMPORTED_MODULE_4__);
@@ -6073,7 +6073,7 @@ var capitalize = function capitalize(key) {
 /* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(13);
 /* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(2);
-/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(26);
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(27);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(182);
 /* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(lodash_isEqual__WEBPACK_IMPORTED_MODULE_10__);
@@ -6524,199 +6524,12 @@ Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__[/*
 
 /***/ }),
 /* 21 */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(129);
-
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"] || freeSelf || Function('return this')();
-
-/* harmony default export */ __webpack_exports__["a"] = (root);
-
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayMap = __webpack_require__(34),
-    baseClone = __webpack_require__(217),
-    baseUnset = __webpack_require__(572),
-    castPath = __webpack_require__(62),
-    copyObject = __webpack_require__(64),
-    customOmitClone = __webpack_require__(574),
-    flatRest = __webpack_require__(225),
-    getAllKeysIn = __webpack_require__(148);
-
-/** Used to compose bitmasks for cloning. */
-var CLONE_DEEP_FLAG = 1,
-    CLONE_FLAT_FLAG = 2,
-    CLONE_SYMBOLS_FLAG = 4;
-
-/**
- * The opposite of `_.pick`; this method creates an object composed of the
- * own and inherited enumerable property paths of `object` that are not omitted.
- *
- * **Note:** This method is considerably slower than `_.pick`.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The source object.
- * @param {...(string|string[])} [paths] The property paths to omit.
- * @returns {Object} Returns the new object.
- * @example
- *
- * var object = { 'a': 1, 'b': '2', 'c': 3 };
- *
- * _.omit(object, ['a', 'c']);
- * // => { 'b': '2' }
- */
-var omit = flatRest(function(object, paths) {
-  var result = {};
-  if (object == null) {
-    return result;
-  }
-  var isDeep = false;
-  paths = arrayMap(paths, function(path) {
-    path = castPath(path, object);
-    isDeep || (isDeep = path.length > 1);
-    return path;
-  });
-  copyObject(object, getAllKeysIn(object), result);
-  if (isDeep) {
-    result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG, customOmitClone);
-  }
-  var length = paths.length;
-  while (length--) {
-    baseUnset(result, paths[length]);
-  }
-  return result;
-});
-
-module.exports = omit;
-
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-/**
- * Checks if `value` is classified as an `Array` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an array, else `false`.
- * @example
- *
- * _.isArray([1, 2, 3]);
- * // => true
- *
- * _.isArray(document.body.children);
- * // => false
- *
- * _.isArray('abc');
- * // => false
- *
- * _.isArray(_.noop);
- * // => false
- */
-var isArray = Array.isArray;
-
-module.exports = isArray;
-
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var freeGlobal = __webpack_require__(196);
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = freeGlobal || freeSelf || Function('return this')();
-
-module.exports = root;
-
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var createFind = __webpack_require__(501),
-    findIndex = __webpack_require__(214);
-
-/**
- * Iterates over elements of `collection`, returning the first element
- * `predicate` returns truthy for. The predicate is invoked with three
- * arguments: (value, index|key, collection).
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Collection
- * @param {Array|Object} collection The collection to inspect.
- * @param {Function} [predicate=_.identity] The function invoked per iteration.
- * @param {number} [fromIndex=0] The index to search from.
- * @returns {*} Returns the matched element, else `undefined`.
- * @example
- *
- * var users = [
- *   { 'user': 'barney',  'age': 36, 'active': true },
- *   { 'user': 'fred',    'age': 40, 'active': false },
- *   { 'user': 'pebbles', 'age': 1,  'active': true }
- * ];
- *
- * _.find(users, function(o) { return o.age < 40; });
- * // => object for 'barney'
- *
- * // The `_.matches` iteratee shorthand.
- * _.find(users, { 'age': 1, 'active': true });
- * // => object for 'pebbles'
- *
- * // The `_.matchesProperty` iteratee shorthand.
- * _.find(users, ['active', false]);
- * // => object for 'fred'
- *
- * // The `_.property` iteratee shorthand.
- * _.find(users, 'active');
- * // => object for 'barney'
- */
-var find = createFind(findIndex);
-
-module.exports = find;
-
-
-/***/ }),
-/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.addMethod = addMethod;
@@ -6790,6 +6603,193 @@ function addMethod(schemaType, name, fn) {
   if (typeof fn !== 'function') throw new TypeError('Method function must be provided');
   schemaType.prototype[name] = fn;
 }
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+/* 23 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(129);
+
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"] || freeSelf || Function('return this')();
+
+/* harmony default export */ __webpack_exports__["a"] = (root);
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayMap = __webpack_require__(34),
+    baseClone = __webpack_require__(217),
+    baseUnset = __webpack_require__(572),
+    castPath = __webpack_require__(62),
+    copyObject = __webpack_require__(64),
+    customOmitClone = __webpack_require__(574),
+    flatRest = __webpack_require__(225),
+    getAllKeysIn = __webpack_require__(148);
+
+/** Used to compose bitmasks for cloning. */
+var CLONE_DEEP_FLAG = 1,
+    CLONE_FLAT_FLAG = 2,
+    CLONE_SYMBOLS_FLAG = 4;
+
+/**
+ * The opposite of `_.pick`; this method creates an object composed of the
+ * own and inherited enumerable property paths of `object` that are not omitted.
+ *
+ * **Note:** This method is considerably slower than `_.pick`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The source object.
+ * @param {...(string|string[])} [paths] The property paths to omit.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ *
+ * _.omit(object, ['a', 'c']);
+ * // => { 'b': '2' }
+ */
+var omit = flatRest(function(object, paths) {
+  var result = {};
+  if (object == null) {
+    return result;
+  }
+  var isDeep = false;
+  paths = arrayMap(paths, function(path) {
+    path = castPath(path, object);
+    isDeep || (isDeep = path.length > 1);
+    return path;
+  });
+  copyObject(object, getAllKeysIn(object), result);
+  if (isDeep) {
+    result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG, customOmitClone);
+  }
+  var length = paths.length;
+  while (length--) {
+    baseUnset(result, paths[length]);
+  }
+  return result;
+});
+
+module.exports = omit;
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports) {
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+module.exports = isArray;
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var freeGlobal = __webpack_require__(196);
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+module.exports = root;
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var createFind = __webpack_require__(501),
+    findIndex = __webpack_require__(214);
+
+/**
+ * Iterates over elements of `collection`, returning the first element
+ * `predicate` returns truthy for. The predicate is invoked with three
+ * arguments: (value, index|key, collection).
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to inspect.
+ * @param {Function} [predicate=_.identity] The function invoked per iteration.
+ * @param {number} [fromIndex=0] The index to search from.
+ * @returns {*} Returns the matched element, else `undefined`.
+ * @example
+ *
+ * var users = [
+ *   { 'user': 'barney',  'age': 36, 'active': true },
+ *   { 'user': 'fred',    'age': 40, 'active': false },
+ *   { 'user': 'pebbles', 'age': 1,  'active': true }
+ * ];
+ *
+ * _.find(users, function(o) { return o.age < 40; });
+ * // => object for 'barney'
+ *
+ * // The `_.matches` iteratee shorthand.
+ * _.find(users, { 'age': 1, 'active': true });
+ * // => object for 'pebbles'
+ *
+ * // The `_.matchesProperty` iteratee shorthand.
+ * _.find(users, ['active', false]);
+ * // => object for 'fred'
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.find(users, 'active');
+ * // => object for 'barney'
+ */
+var find = createFind(findIndex);
+
+module.exports = find;
+
 
 /***/ }),
 /* 28 */
@@ -6913,7 +6913,7 @@ module.exports = keys;
 var baseKeys = __webpack_require__(207),
     getTag = __webpack_require__(61),
     isArguments = __webpack_require__(76),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isArrayLike = __webpack_require__(33),
     isBuffer = __webpack_require__(77),
     isPrototype = __webpack_require__(103),
@@ -6996,7 +6996,7 @@ module.exports = isEmpty;
 var baseMatches = __webpack_require__(502),
     baseMatchesProperty = __webpack_require__(547),
     identity = __webpack_require__(46),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     property = __webpack_require__(552);
 
 /**
@@ -7270,7 +7270,7 @@ module.exports = baseGetTag;
 var arrayMap = __webpack_require__(34),
     baseIteratee = __webpack_require__(32),
     baseMap = __webpack_require__(270),
-    isArray = __webpack_require__(24);
+    isArray = __webpack_require__(25);
 
 /**
  * Creates an array of values by running each element in `collection` thru
@@ -9073,7 +9073,7 @@ module.exports = getNative;
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(25);
+var root = __webpack_require__(26);
 
 /** Built-in value references. */
 var Symbol = root.Symbol;
@@ -9327,7 +9327,7 @@ module.exports = baseRest;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = SchemaType;
@@ -9892,7 +9892,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = exports.array = exports.object = exports.boolean = exports.date = exports.number = exports.string = exports.mixed = void 0;
@@ -10022,7 +10022,7 @@ module.exports = pick;
 /* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(25);
+var root = __webpack_require__(26);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeIsFinite = root.isFinite;
@@ -10260,7 +10260,7 @@ module.exports = getTag;
 /* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(24),
+var isArray = __webpack_require__(25),
     isKey = __webpack_require__(143),
     stringToPath = __webpack_require__(548),
     toString = __webpack_require__(45);
@@ -10363,7 +10363,7 @@ module.exports = copyObject;
 var arrayEach = __webpack_require__(146),
     baseEach = __webpack_require__(111),
     castFunction = __webpack_require__(269),
-    isArray = __webpack_require__(24);
+    isArray = __webpack_require__(25);
 
 /**
  * Iterates over elements of `collection` and invokes `iteratee` for each element.
@@ -10408,7 +10408,7 @@ module.exports = forEach;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(38),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isObjectLike = __webpack_require__(29);
 
 /** `Object#toString` result references. */
@@ -10518,7 +10518,7 @@ module.exports = function clone(obj) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = inherits;
@@ -10554,7 +10554,7 @@ var algoliasearchLite = __webpack_require__(470);
 var algoliasearchLite_default = /*#__PURE__*/__webpack_require__.n(algoliasearchLite);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createInstantSearch.js + 4 modules
-var createInstantSearch = __webpack_require__(456);
+var createInstantSearch = __webpack_require__(455);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/InstantSearch.js
 
@@ -10567,7 +10567,7 @@ var InstantSearch = Object(createInstantSearch["a" /* default */])(algoliasearch
 });
 /* harmony default export */ var widgets_InstantSearch = (InstantSearch);
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createIndex.js + 1 modules
-var createIndex = __webpack_require__(462);
+var createIndex = __webpack_require__(461);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/Index.js
 
@@ -10627,7 +10627,7 @@ var esm_extends = __webpack_require__(19);
 var assertThisInitialized = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/Link.js
@@ -10883,10 +10883,10 @@ var Breadcrumb_BreadcrumbWidget = function BreadcrumbWidget(props) {
 
 /* harmony default export */ var widgets_Breadcrumb = (Object(connectBreadcrumb["a" /* default */])(Breadcrumb_BreadcrumbWidget));
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(457);
+var ClearRefinements = __webpack_require__(462);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(458);
+var CurrentRefinements = __webpack_require__(457);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectHierarchicalMenu.js
 var connectHierarchicalMenu = __webpack_require__(303);
@@ -11581,7 +11581,7 @@ var Menu_MenuWidget = function MenuWidget(props) {
 
 /* harmony default export */ var widgets_Menu = (Object(connectMenu["a" /* default */])(Menu_MenuWidget));
 // EXTERNAL MODULE: ./node_modules/lodash/find.js
-var find = __webpack_require__(26);
+var find = __webpack_require__(27);
 var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/MenuSelect.js
@@ -11730,7 +11730,7 @@ var MenuSelect_MenuSelectWidget = function MenuSelectWidget(props) {
 
 /* harmony default export */ var widgets_MenuSelect = (Object(connectMenu["a" /* default */])(MenuSelect_MenuSelectWidget));
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js + 4 modules
-var connectNumericMenu = __webpack_require__(455);
+var connectNumericMenu = __webpack_require__(456);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread.js
 var objectSpread = __webpack_require__(9);
@@ -12243,7 +12243,7 @@ var Pagination_PaginationWidget = function PaginationWidget(props) {
 
 /* harmony default export */ var widgets_Pagination = (Object(connectPagination["a" /* default */])(Pagination_PaginationWidget));
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(459);
+var Panel = __webpack_require__(458);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectPoweredBy.js
 var connectPoweredBy = __webpack_require__(310);
@@ -12946,7 +12946,7 @@ var RatingMenu_RatingMenuWidget = function RatingMenuWidget(props) {
 
 /* harmony default export */ var widgets_RatingMenu = (Object(connectRange["a" /* default */])(RatingMenu_RatingMenuWidget));
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(461);
+var RefinementList = __webpack_require__(460);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectScrollTo.js
 var connectScrollTo = __webpack_require__(313);
@@ -13156,7 +13156,7 @@ var Snippet_Snippet = function Snippet(props) {
 
 /* harmony default export */ var widgets_Snippet = (Object(connectHighlight["a" /* default */])(components_Snippet));
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(460);
+var SortBy = __webpack_require__(459);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectStats.js
 var connectStats = __webpack_require__(315);
@@ -13720,7 +13720,7 @@ module.exports = isArguments;
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(25),
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(26),
     stubFalse = __webpack_require__(540);
 
 /** Detect free variable `exports`. */
@@ -14136,7 +14136,7 @@ var arrayReduce = __webpack_require__(271),
     baseEach = __webpack_require__(111),
     baseIteratee = __webpack_require__(32),
     baseReduce = __webpack_require__(694),
-    isArray = __webpack_require__(24);
+    isArray = __webpack_require__(25);
 
 /**
  * Reduces `collection` to a value which is the accumulated result of running
@@ -15933,7 +15933,7 @@ function shouldBeQuoted(part) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseOrderBy = __webpack_require__(712),
-    isArray = __webpack_require__(24);
+    isArray = __webpack_require__(25);
 
 /**
  * This method is like `_.sortBy` except that it allows specifying the sort
@@ -16759,7 +16759,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
 /* harmony import */ var _stubFalse_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(478);
 
 
@@ -17088,7 +17088,7 @@ module.exports = function exportedEqual(a, b) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(43),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /* Built-in method references that are verified to be native. */
 var Map = getNative(root, 'Map');
@@ -17364,7 +17364,7 @@ module.exports = nodeUtil;
 /* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(24),
+var isArray = __webpack_require__(25),
     isSymbol = __webpack_require__(79);
 
 /** Used to match property names within property paths. */
@@ -17401,7 +17401,7 @@ module.exports = isKey;
 
 var Symbol = __webpack_require__(44),
     arrayMap = __webpack_require__(34),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isSymbol = __webpack_require__(79);
 
 /** Used as references for various `Number` constants. */
@@ -18161,7 +18161,7 @@ var forEach = __webpack_require__(65);
 var filter = __webpack_require__(166);
 var map = __webpack_require__(39);
 var reduce = __webpack_require__(89);
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var indexOf = __webpack_require__(112);
 var isNaN = __webpack_require__(695);
 var isEmpty = __webpack_require__(31);
@@ -18169,7 +18169,7 @@ var isEqual = __webpack_require__(182);
 var isUndefined = __webpack_require__(273);
 var isString = __webpack_require__(66);
 var isFunction = __webpack_require__(58);
-var find = __webpack_require__(26);
+var find = __webpack_require__(27);
 var trim = __webpack_require__(274);
 
 var defaults = __webpack_require__(168);
@@ -19945,7 +19945,7 @@ module.exports = isArrayLikeObject;
 var arrayFilter = __webpack_require__(204),
     baseFilter = __webpack_require__(693),
     baseIteratee = __webpack_require__(32),
-    isArray = __webpack_require__(24);
+    isArray = __webpack_require__(25);
 
 /**
  * Iterates over elements of `collection`, returning an array of all elements
@@ -20738,7 +20738,7 @@ module.exports = function(originalModule) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.propagateErrors = propagateErrors;
@@ -20873,7 +20873,7 @@ module.exports = _objectWithoutPropertiesLoose;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = ValidationError;
@@ -23329,7 +23329,7 @@ module.exports = equalArrays;
 /* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(25);
+var root = __webpack_require__(26);
 
 /** Built-in value references. */
 var Uint8Array = root.Uint8Array;
@@ -23412,7 +23412,7 @@ module.exports = getAllKeys;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(139),
-    isArray = __webpack_require__(24);
+    isArray = __webpack_require__(25);
 
 /**
  * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
@@ -23499,7 +23499,7 @@ module.exports = stubArray;
 
 var baseTimes = __webpack_require__(538),
     isArguments = __webpack_require__(76),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isBuffer = __webpack_require__(77),
     isIndex = __webpack_require__(78),
     isTypedArray = __webpack_require__(102);
@@ -23610,7 +23610,7 @@ module.exports = overArg;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(43),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /* Built-in method references that are verified to be native. */
 var WeakMap = getNative(root, 'WeakMap');
@@ -23711,7 +23711,7 @@ module.exports = hasIn;
 
 var castPath = __webpack_require__(62),
     isArguments = __webpack_require__(76),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isIndex = __webpack_require__(78),
     isLength = __webpack_require__(141),
     toKey = __webpack_require__(63);
@@ -23908,7 +23908,7 @@ var Stack = __webpack_require__(96),
     initCloneArray = __webpack_require__(563),
     initCloneByTag = __webpack_require__(564),
     initCloneObject = __webpack_require__(222),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isBuffer = __webpack_require__(77),
     isMap = __webpack_require__(568),
     isObject = __webpack_require__(28),
@@ -24087,7 +24087,7 @@ module.exports = defineProperty;
 /* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(25);
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(26);
 
 /** Detect free variable `exports`. */
 var freeExports =  true && exports && !exports.nodeType && exports;
@@ -26346,7 +26346,7 @@ var findIndex = __webpack_require__(214);
 var get = __webpack_require__(35);
 
 var sumBy = __webpack_require__(708);
-var find = __webpack_require__(26);
+var find = __webpack_require__(27);
 var includes = __webpack_require__(710);
 var map = __webpack_require__(39);
 var orderBy = __webpack_require__(123);
@@ -27208,7 +27208,7 @@ var composeArgs = __webpack_require__(284),
     getHolder = __webpack_require__(90),
     reorder = __webpack_require__(729),
     replaceHolders = __webpack_require__(67),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_BIND_FLAG = 1,
@@ -27558,7 +27558,7 @@ module.exports = setWrapToString;
 
 
 var reduce = __webpack_require__(89);
-var find = __webpack_require__(26);
+var find = __webpack_require__(27);
 var startsWith = __webpack_require__(733);
 
 /**
@@ -30749,7 +30749,7 @@ var sortBy = ['isRefined', 'count:desc', 'name:asc'];
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
@@ -30951,7 +30951,7 @@ function _cleanUp(props, searchState, context) {
 
 "use strict";
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(26);
+/* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(27);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
@@ -31733,7 +31733,7 @@ module.exports = {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.getIn = getIn;
@@ -43995,278 +43995,6 @@ module.exports = exports["default"];
 
 "use strict";
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(2);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
-
-
-
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
-}
-// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
-var isEmpty = __webpack_require__(31);
-var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
-
-// EXTERNAL MODULE: ./node_modules/lodash/find.js
-var find = __webpack_require__(26);
-var find_default = /*#__PURE__*/__webpack_require__.n(find);
-
-// EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createConnector.js
-var createConnector = __webpack_require__(16);
-
-// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
-var indexUtils = __webpack_require__(7);
-
-// CONCATENATED MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
-
-
-
-
-
-
-
-
-function stringifyItem(item) {
-  if (typeof item.start === 'undefined' && typeof item.end === 'undefined') {
-    return '';
-  }
-
-  return "".concat(item.start ? item.start : '', ":").concat(item.end ? item.end : '');
-}
-
-function parseItem(value) {
-  if (value.length === 0) {
-    return {
-      start: null,
-      end: null
-    };
-  }
-
-  var _value$split = value.split(':'),
-      _value$split2 = _slicedToArray(_value$split, 2),
-      startStr = _value$split2[0],
-      endStr = _value$split2[1];
-
-  return {
-    start: startStr.length > 0 ? parseInt(startStr, 10) : null,
-    end: endStr.length > 0 ? parseInt(endStr, 10) : null
-  };
-}
-
-var namespace = 'multiRange';
-
-function getId(props) {
-  return props.attribute;
-}
-
-function getCurrentRefinement(props, searchState, context) {
-  return Object(indexUtils["b" /* getCurrentRefinementValue */])(props, searchState, context, "".concat(namespace, ".").concat(getId(props)), '', function (currentRefinement) {
-    if (currentRefinement === '') {
-      return '';
-    }
-
-    return currentRefinement;
-  });
-}
-
-function isRefinementsRangeIncludesInsideItemRange(stats, start, end) {
-  return stats.min > start && stats.min < end || stats.max > start && stats.max < end;
-}
-
-function isItemRangeIncludedInsideRefinementsRange(stats, start, end) {
-  return start > stats.min && start < stats.max || end > stats.min && end < stats.max;
-}
-
-function itemHasRefinement(attribute, results, value) {
-  var stats = results.getFacetByName(attribute) ? results.getFacetStats(attribute) : null;
-  var range = value.split(':');
-  var start = Number(range[0]) === 0 || value === '' ? Number.NEGATIVE_INFINITY : Number(range[0]);
-  var end = Number(range[1]) === 0 || value === '' ? Number.POSITIVE_INFINITY : Number(range[1]);
-  return !(Boolean(stats) && (isRefinementsRangeIncludesInsideItemRange(stats, start, end) || isItemRangeIncludedInsideRefinementsRange(stats, start, end)));
-}
-
-function _refine(props, searchState, nextRefinement, context) {
-  var nextValue = Object(defineProperty["a" /* default */])({}, getId(props, searchState), nextRefinement);
-
-  var resetPage = true;
-  return Object(indexUtils["f" /* refineValue */])(searchState, nextValue, context, resetPage, namespace);
-}
-
-function _cleanUp(props, searchState, context) {
-  return Object(indexUtils["a" /* cleanUpValue */])(searchState, context, "".concat(namespace, ".").concat(getId(props)));
-}
-/**
- * connectNumericMenu connector provides the logic to build a widget that will
- * give the user the ability to select a range value for a numeric attribute.
- * Ranges are defined statically.
- * @name connectNumericMenu
- * @requirements The attribute passed to the `attribute` prop must be holding numerical values.
- * @kind connector
- * @propType {string} attribute - the name of the attribute in the records
- * @propType {{label: string, start: number, end: number}[]} items - List of options. With a text label, and upper and lower bounds.
- * @propType {string} [defaultRefinement] - the value of the item selected by default, follow the shape of a `string` with a pattern of `'{start}:{end}'`.
- * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @providedPropType {function} refine - a function to select a range.
- * @providedPropType {function} createURL - a function to generate a URL for the corresponding search state
- * @providedPropType {string} currentRefinement - the refinement currently applied.  follow the shape of a `string` with a pattern of `'{start}:{end}'` which corresponds to the current selected item. For instance, when the selected item is `{start: 10, end: 20}`, the searchState of the widget is `'10:20'`. When `start` isn't defined, the searchState of the widget is `':{end}'`, and the same way around when `end` isn't defined. However, when neither `start` nor `end` are defined, the searchState is an empty string.
- * @providedPropType {array.<{isRefined: boolean, label: string, value: string, isRefined: boolean, noRefinement: boolean}>} items - the list of ranges the NumericMenu can display.
- */
-
-
-/* harmony default export */ var connectNumericMenu = __webpack_exports__["a"] = (Object(createConnector["a" /* default */])({
-  displayName: 'AlgoliaNumericMenu',
-  propTypes: {
-    id: prop_types_default.a.string,
-    attribute: prop_types_default.a.string.isRequired,
-    items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
-      label: prop_types_default.a.node,
-      start: prop_types_default.a.number,
-      end: prop_types_default.a.number
-    })).isRequired,
-    transformItems: prop_types_default.a.func
-  },
-  getProvidedProps: function getProvidedProps(props, searchState, searchResults) {
-    var attribute = props.attribute;
-    var currentRefinement = getCurrentRefinement(props, searchState, this.context);
-    var results = Object(indexUtils["d" /* getResults */])(searchResults, this.context);
-    var items = props.items.map(function (item) {
-      var value = stringifyItem(item);
-      return {
-        label: item.label,
-        value: value,
-        isRefined: value === currentRefinement,
-        noRefinement: results ? itemHasRefinement(getId(props), results, value) : false
-      };
-    });
-    var stats = results && results.getFacetByName(attribute) ? results.getFacetStats(attribute) : null;
-
-    var refinedItem = find_default()(items, function (item) {
-      return item.isRefined === true;
-    });
-
-    if (!items.some(function (item) {
-      return item.value === '';
-    })) {
-      items.push({
-        value: '',
-        isRefined: isEmpty_default()(refinedItem),
-        noRefinement: !stats,
-        label: 'All'
-      });
-    }
-
-    var transformedItems = props.transformItems ? props.transformItems(items) : items;
-    return {
-      items: transformedItems,
-      currentRefinement: currentRefinement,
-      canRefine: transformedItems.length > 0 && transformedItems.some(function (item) {
-        return item.noRefinement === false;
-      })
-    };
-  },
-  refine: function refine(props, searchState, nextRefinement) {
-    return _refine(props, searchState, nextRefinement, this.context);
-  },
-  cleanUp: function cleanUp(props, searchState) {
-    return _cleanUp(props, searchState, this.context);
-  },
-  getSearchParameters: function getSearchParameters(searchParameters, props, searchState) {
-    var attribute = props.attribute;
-
-    var _parseItem = parseItem(getCurrentRefinement(props, searchState, this.context)),
-        start = _parseItem.start,
-        end = _parseItem.end;
-
-    searchParameters = searchParameters.addDisjunctiveFacet(attribute);
-
-    if (start) {
-      searchParameters = searchParameters.addNumericRefinement(attribute, '>=', start);
-    }
-
-    if (end) {
-      searchParameters = searchParameters.addNumericRefinement(attribute, '<=', end);
-    }
-
-    return searchParameters;
-  },
-  getMetadata: function getMetadata(props, searchState) {
-    var _this = this;
-
-    var id = getId(props);
-    var value = getCurrentRefinement(props, searchState, this.context);
-    var items = [];
-    var index = Object(indexUtils["c" /* getIndexId */])(this.context);
-
-    if (value !== '') {
-      var _find2 = find_default()(props.items, function (item) {
-        return stringifyItem(item) === value;
-      }),
-          label = _find2.label;
-
-      items.push({
-        label: "".concat(props.attribute, ": ").concat(label),
-        attribute: props.attribute,
-        currentRefinement: label,
-        value: function value(nextState) {
-          return _refine(props, nextState, '', _this.context);
-        }
-      });
-    }
-
-    return {
-      id: id,
-      index: index,
-      items: items
-    };
-  }
-}));
-
-/***/ }),
-/* 456 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 var classCallCheck = __webpack_require__(10);
 
@@ -44297,7 +44025,7 @@ var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 var objectSpread = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 var omit_default = /*#__PURE__*/__webpack_require__.n(omit);
 
 // EXTERNAL MODULE: ./node_modules/algoliasearch-helper/index.js
@@ -45043,54 +44771,74 @@ function createInstantSearch(defaultAlgoliaClient, root) {
 }
 
 /***/ }),
-/* 457 */
+/* 456 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(0);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
-var connectCurrentRefinements = __webpack_require__(302);
-
-// EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
-var PanelCallbackHandler = __webpack_require__(20);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-var classCallCheck = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
-var createClass = __webpack_require__(11);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 1 modules
-var possibleConstructorReturn = __webpack_require__(14);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
-var getPrototypeOf = __webpack_require__(12);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__(13);
-
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(2);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
+function _iterableToArrayLimit(arr, i) {
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+
+
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+}
+// EXTERNAL MODULE: ./node_modules/lodash/isEmpty.js
+var isEmpty = __webpack_require__(31);
+var isEmpty_default = /*#__PURE__*/__webpack_require__.n(isEmpty);
+
+// EXTERNAL MODULE: ./node_modules/lodash/find.js
+var find = __webpack_require__(27);
+var find_default = /*#__PURE__*/__webpack_require__.n(find);
 
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
 var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
-// EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(4);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createConnector.js
+var createConnector = __webpack_require__(16);
 
-// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/translatable.js
-var translatable = __webpack_require__(183);
+// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/indexUtils.js
+var indexUtils = __webpack_require__(7);
 
-// EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/core/utils.js
-var utils = __webpack_require__(15);
-
-// CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+// CONCATENATED MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectNumericMenu.js
 
 
 
@@ -45099,104 +44847,203 @@ var utils = __webpack_require__(15);
 
 
 
-
-
-
-var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
-
-var ClearRefinements_ClearRefinements =
-/*#__PURE__*/
-function (_Component) {
-  Object(inherits["a" /* default */])(ClearRefinements, _Component);
-
-  function ClearRefinements() {
-    Object(classCallCheck["a" /* default */])(this, ClearRefinements);
-
-    return Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(ClearRefinements).apply(this, arguments));
+function stringifyItem(item) {
+  if (typeof item.start === 'undefined' && typeof item.end === 'undefined') {
+    return '';
   }
 
-  Object(createClass["a" /* default */])(ClearRefinements, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          items = _this$props.items,
-          canRefine = _this$props.canRefine,
-          refine = _this$props.refine,
-          translate = _this$props.translate,
-          className = _this$props.className;
-      return external_react_default.a.createElement("div", {
-        className: classnames_default()(cx(''), className)
-      }, external_react_default.a.createElement("button", {
-        className: cx('button', !canRefine && 'button--disabled'),
-        onClick: function onClick() {
-          return refine(items);
-        },
-        disabled: !canRefine
-      }, translate('reset')));
+  return "".concat(item.start ? item.start : '', ":").concat(item.end ? item.end : '');
+}
+
+function parseItem(value) {
+  if (value.length === 0) {
+    return {
+      start: null,
+      end: null
+    };
+  }
+
+  var _value$split = value.split(':'),
+      _value$split2 = _slicedToArray(_value$split, 2),
+      startStr = _value$split2[0],
+      endStr = _value$split2[1];
+
+  return {
+    start: startStr.length > 0 ? parseInt(startStr, 10) : null,
+    end: endStr.length > 0 ? parseInt(endStr, 10) : null
+  };
+}
+
+var namespace = 'multiRange';
+
+function getId(props) {
+  return props.attribute;
+}
+
+function getCurrentRefinement(props, searchState, context) {
+  return Object(indexUtils["b" /* getCurrentRefinementValue */])(props, searchState, context, "".concat(namespace, ".").concat(getId(props)), '', function (currentRefinement) {
+    if (currentRefinement === '') {
+      return '';
     }
-  }]);
 
-  return ClearRefinements;
-}(external_react_["Component"]);
+    return currentRefinement;
+  });
+}
 
-Object(defineProperty["a" /* default */])(ClearRefinements_ClearRefinements, "propTypes", {
-  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
-  canRefine: prop_types_default.a.bool.isRequired,
-  refine: prop_types_default.a.func.isRequired,
-  translate: prop_types_default.a.func.isRequired,
-  className: prop_types_default.a.string
-});
+function isRefinementsRangeIncludesInsideItemRange(stats, start, end) {
+  return stats.min > start && stats.min < end || stats.max > start && stats.max < end;
+}
 
-Object(defineProperty["a" /* default */])(ClearRefinements_ClearRefinements, "defaultProps", {
-  className: ''
-});
+function isItemRangeIncludedInsideRefinementsRange(stats, start, end) {
+  return start > stats.min && start < stats.max || end > stats.min && end < stats.max;
+}
 
-/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
-  reset: 'Clear all filters'
-})(ClearRefinements_ClearRefinements));
-// CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
+function itemHasRefinement(attribute, results, value) {
+  var stats = results.getFacetByName(attribute) ? results.getFacetStats(attribute) : null;
+  var range = value.split(':');
+  var start = Number(range[0]) === 0 || value === '' ? Number.NEGATIVE_INFINITY : Number(range[0]);
+  var end = Number(range[1]) === 0 || value === '' ? Number.POSITIVE_INFINITY : Number(range[1]);
+  return !(Boolean(stats) && (isRefinementsRangeIncludesInsideItemRange(stats, start, end) || isItemRangeIncludedInsideRefinementsRange(stats, start, end)));
+}
 
+function _refine(props, searchState, nextRefinement, context) {
+  var nextValue = Object(defineProperty["a" /* default */])({}, getId(props, searchState), nextRefinement);
 
+  var resetPage = true;
+  return Object(indexUtils["f" /* refineValue */])(searchState, nextValue, context, resetPage, namespace);
+}
 
-
+function _cleanUp(props, searchState, context) {
+  return Object(indexUtils["a" /* cleanUpValue */])(searchState, context, "".concat(namespace, ".").concat(getId(props)));
+}
 /**
- * The ClearRefinements widget displays a button that lets the user clean every refinement applied
- * to the search.
- * @name ClearRefinements
- * @kind widget
+ * connectNumericMenu connector provides the logic to build a widget that will
+ * give the user the ability to select a range value for a numeric attribute.
+ * Ranges are defined statically.
+ * @name connectNumericMenu
+ * @requirements The attribute passed to the `attribute` prop must be holding numerical values.
+ * @kind connector
+ * @propType {string} attribute - the name of the attribute in the records
+ * @propType {{label: string, start: number, end: number}[]} items - List of options. With a text label, and upper and lower bounds.
+ * @propType {string} [defaultRefinement] - the value of the item selected by default, follow the shape of a `string` with a pattern of `'{start}:{end}'`.
  * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
- * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
- * @themeKey ais-ClearRefinements - the root div of the widget
- * @themeKey ais-ClearRefinements-button - the clickable button
- * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
- * @translationKey reset - the clear all button value
- * @example
- * import React from 'react';
- * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
- *
- * const App = () => (
- *   <InstantSearch
- *     appId="latency"
- *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
- *     indexName="instant_search"
- *   >
- *     <ClearRefinements />
- *     <RefinementList
- *       attribute="brand"
- *       defaultRefinement={['Apple']}
- *     />
- *   </InstantSearch>
- * );
+ * @providedPropType {function} refine - a function to select a range.
+ * @providedPropType {function} createURL - a function to generate a URL for the corresponding search state
+ * @providedPropType {string} currentRefinement - the refinement currently applied.  follow the shape of a `string` with a pattern of `'{start}:{end}'` which corresponds to the current selected item. For instance, when the selected item is `{start: 10, end: 20}`, the searchState of the widget is `'10:20'`. When `start` isn't defined, the searchState of the widget is `':{end}'`, and the same way around when `end` isn't defined. However, when neither `start` nor `end` are defined, the searchState is an empty string.
+ * @providedPropType {array.<{isRefined: boolean, label: string, value: string, isRefined: boolean, noRefinement: boolean}>} items - the list of ranges the NumericMenu can display.
  */
 
-var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
-  return external_react_default.a.createElement(PanelCallbackHandler["a" /* default */], props, external_react_default.a.createElement(components_ClearRefinements, props));
-};
 
-/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
+/* harmony default export */ var connectNumericMenu = __webpack_exports__["a"] = (Object(createConnector["a" /* default */])({
+  displayName: 'AlgoliaNumericMenu',
+  propTypes: {
+    id: prop_types_default.a.string,
+    attribute: prop_types_default.a.string.isRequired,
+    items: prop_types_default.a.arrayOf(prop_types_default.a.shape({
+      label: prop_types_default.a.node,
+      start: prop_types_default.a.number,
+      end: prop_types_default.a.number
+    })).isRequired,
+    transformItems: prop_types_default.a.func
+  },
+  getProvidedProps: function getProvidedProps(props, searchState, searchResults) {
+    var attribute = props.attribute;
+    var currentRefinement = getCurrentRefinement(props, searchState, this.context);
+    var results = Object(indexUtils["d" /* getResults */])(searchResults, this.context);
+    var items = props.items.map(function (item) {
+      var value = stringifyItem(item);
+      return {
+        label: item.label,
+        value: value,
+        isRefined: value === currentRefinement,
+        noRefinement: results ? itemHasRefinement(getId(props), results, value) : false
+      };
+    });
+    var stats = results && results.getFacetByName(attribute) ? results.getFacetStats(attribute) : null;
+
+    var refinedItem = find_default()(items, function (item) {
+      return item.isRefined === true;
+    });
+
+    if (!items.some(function (item) {
+      return item.value === '';
+    })) {
+      items.push({
+        value: '',
+        isRefined: isEmpty_default()(refinedItem),
+        noRefinement: !stats,
+        label: 'All'
+      });
+    }
+
+    var transformedItems = props.transformItems ? props.transformItems(items) : items;
+    return {
+      items: transformedItems,
+      currentRefinement: currentRefinement,
+      canRefine: transformedItems.length > 0 && transformedItems.some(function (item) {
+        return item.noRefinement === false;
+      })
+    };
+  },
+  refine: function refine(props, searchState, nextRefinement) {
+    return _refine(props, searchState, nextRefinement, this.context);
+  },
+  cleanUp: function cleanUp(props, searchState) {
+    return _cleanUp(props, searchState, this.context);
+  },
+  getSearchParameters: function getSearchParameters(searchParameters, props, searchState) {
+    var attribute = props.attribute;
+
+    var _parseItem = parseItem(getCurrentRefinement(props, searchState, this.context)),
+        start = _parseItem.start,
+        end = _parseItem.end;
+
+    searchParameters = searchParameters.addDisjunctiveFacet(attribute);
+
+    if (start) {
+      searchParameters = searchParameters.addNumericRefinement(attribute, '>=', start);
+    }
+
+    if (end) {
+      searchParameters = searchParameters.addNumericRefinement(attribute, '<=', end);
+    }
+
+    return searchParameters;
+  },
+  getMetadata: function getMetadata(props, searchState) {
+    var _this = this;
+
+    var id = getId(props);
+    var value = getCurrentRefinement(props, searchState, this.context);
+    var items = [];
+    var index = Object(indexUtils["c" /* getIndexId */])(this.context);
+
+    if (value !== '') {
+      var _find2 = find_default()(props.items, function (item) {
+        return stringifyItem(item) === value;
+      }),
+          label = _find2.label;
+
+      items.push({
+        label: "".concat(props.attribute, ": ").concat(label),
+        attribute: props.attribute,
+        currentRefinement: label,
+        value: function value(nextState) {
+          return _refine(props, nextState, '', _this.context);
+        }
+      });
+    }
+
+    return {
+      id: id,
+      index: index,
+      items: items
+    };
+  }
+}));
 
 /***/ }),
-/* 458 */
+/* 457 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45339,7 +45186,7 @@ var CurrentRefinements_CurrentRefinementsWidget = function CurrentRefinementsWid
 /* harmony default export */ var widgets_CurrentRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(CurrentRefinements_CurrentRefinementsWidget));
 
 /***/ }),
-/* 459 */
+/* 458 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45511,7 +45358,7 @@ Object(defineProperty["a" /* default */])(Panel_Panel, "defaultProps", {
 /* harmony default export */ var widgets_Panel = __webpack_exports__["a"] = (components_Panel);
 
 /***/ }),
-/* 460 */
+/* 459 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45657,7 +45504,7 @@ Object(defineProperty["a" /* default */])(SortBy_SortBy, "defaultProps", {
 /* harmony default export */ var widgets_SortBy = __webpack_exports__["a"] = (Object(connectSortBy["a" /* default */])(components_SortBy));
 
 /***/ }),
-/* 461 */
+/* 460 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45897,7 +45744,7 @@ var RefinementList_RefinementListWidget = function RefinementListWidget(props) {
 /* harmony default export */ var widgets_RefinementList = __webpack_exports__["a"] = (Object(connectRefinementList["a" /* default */])(RefinementList_RefinementListWidget));
 
 /***/ }),
-/* 462 */
+/* 461 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46098,6 +45945,159 @@ var createIndex_createIndex = function createIndex(defaultRoot) {
 };
 
 /* harmony default export */ var core_createIndex = __webpack_exports__["a"] = (createIndex_createIndex);
+
+/***/ }),
+/* 462 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectCurrentRefinements.js
+var connectCurrentRefinements = __webpack_require__(302);
+
+// EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/PanelCallbackHandler.js
+var PanelCallbackHandler = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+var classCallCheck = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
+var createClass = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 1 modules
+var possibleConstructorReturn = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
+var getPrototypeOf = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
+var inherits = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(4);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/translatable.js
+var translatable = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/core/utils.js
+var utils = __webpack_require__(15);
+
+// CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/ClearRefinements.js
+
+
+
+
+
+
+
+
+
+
+
+var cx = Object(utils["b" /* createClassNames */])('ClearRefinements');
+
+var ClearRefinements_ClearRefinements =
+/*#__PURE__*/
+function (_Component) {
+  Object(inherits["a" /* default */])(ClearRefinements, _Component);
+
+  function ClearRefinements() {
+    Object(classCallCheck["a" /* default */])(this, ClearRefinements);
+
+    return Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(ClearRefinements).apply(this, arguments));
+  }
+
+  Object(createClass["a" /* default */])(ClearRefinements, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          items = _this$props.items,
+          canRefine = _this$props.canRefine,
+          refine = _this$props.refine,
+          translate = _this$props.translate,
+          className = _this$props.className;
+      return external_react_default.a.createElement("div", {
+        className: classnames_default()(cx(''), className)
+      }, external_react_default.a.createElement("button", {
+        className: cx('button', !canRefine && 'button--disabled'),
+        onClick: function onClick() {
+          return refine(items);
+        },
+        disabled: !canRefine
+      }, translate('reset')));
+    }
+  }]);
+
+  return ClearRefinements;
+}(external_react_["Component"]);
+
+Object(defineProperty["a" /* default */])(ClearRefinements_ClearRefinements, "propTypes", {
+  items: prop_types_default.a.arrayOf(prop_types_default.a.object).isRequired,
+  canRefine: prop_types_default.a.bool.isRequired,
+  refine: prop_types_default.a.func.isRequired,
+  translate: prop_types_default.a.func.isRequired,
+  className: prop_types_default.a.string
+});
+
+Object(defineProperty["a" /* default */])(ClearRefinements_ClearRefinements, "defaultProps", {
+  className: ''
+});
+
+/* harmony default export */ var components_ClearRefinements = (Object(translatable["a" /* default */])({
+  reset: 'Clear all filters'
+})(ClearRefinements_ClearRefinements));
+// CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js
+
+
+
+
+/**
+ * The ClearRefinements widget displays a button that lets the user clean every refinement applied
+ * to the search.
+ * @name ClearRefinements
+ * @kind widget
+ * @propType {function} [transformItems] - Function to modify the items being displayed, e.g. for filtering or sorting them. Takes an items as parameter and expects it back in return.
+ * @propType {boolean} [clearsQuery=false] - Pass true to also clear the search query
+ * @themeKey ais-ClearRefinements - the root div of the widget
+ * @themeKey ais-ClearRefinements-button - the clickable button
+ * @themeKey ais-ClearRefinements-button--disabled - the disabled clickable button
+ * @translationKey reset - the clear all button value
+ * @example
+ * import React from 'react';
+ * import { InstantSearch, ClearRefinements, RefinementList } from 'react-instantsearch-dom';
+ *
+ * const App = () => (
+ *   <InstantSearch
+ *     appId="latency"
+ *     apiKey="6be0576ff61c053d5f9a3225e2a90f76"
+ *     indexName="instant_search"
+ *   >
+ *     <ClearRefinements />
+ *     <RefinementList
+ *       attribute="brand"
+ *       defaultRefinement={['Apple']}
+ *     />
+ *   </InstantSearch>
+ * );
+ */
+
+var ClearRefinements_ClearRefinementsWidget = function ClearRefinementsWidget(props) {
+  return external_react_default.a.createElement(PanelCallbackHandler["a" /* default */], props, external_react_default.a.createElement(components_ClearRefinements, props));
+};
+
+/* harmony default export */ var widgets_ClearRefinements = __webpack_exports__["a"] = (Object(connectCurrentRefinements["a" /* default */])(ClearRefinements_ClearRefinementsWidget));
 
 /***/ }),
 /* 463 */
@@ -48057,7 +48057,7 @@ function stubFalse() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
 
 
 /** Detect free variable `exports`. */
@@ -48662,7 +48662,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = addClass;
@@ -50738,7 +50738,7 @@ module.exports = isMasked;
 /* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(25);
+var root = __webpack_require__(26);
 
 /** Used to detect overreaching core-js shims. */
 var coreJsData = root['__core-js_shared__'];
@@ -51094,7 +51094,7 @@ var Stack = __webpack_require__(96),
     equalByTag = __webpack_require__(536),
     equalObjects = __webpack_require__(537),
     getTag = __webpack_require__(61),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isBuffer = __webpack_require__(77),
     isTypedArray = __webpack_require__(102);
 
@@ -51618,7 +51618,7 @@ module.exports = nativeKeys;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(43),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /* Built-in method references that are verified to be native. */
 var DataView = getNative(root, 'DataView');
@@ -51631,7 +51631,7 @@ module.exports = DataView;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(43),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /* Built-in method references that are verified to be native. */
 var Promise = getNative(root, 'Promise');
@@ -51644,7 +51644,7 @@ module.exports = Promise;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(43),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /* Built-in method references that are verified to be native. */
 var Set = getNative(root, 'Set');
@@ -52590,7 +52590,7 @@ module.exports = customOmitClone;
 
 var Symbol = __webpack_require__(44),
     isArguments = __webpack_require__(76),
-    isArray = __webpack_require__(24);
+    isArray = __webpack_require__(25);
 
 /** Built-in value references. */
 var spreadableSymbol = Symbol ? Symbol.isConcatSpreadable : undefined;
@@ -59316,7 +59316,7 @@ var assignMergeValue = __webpack_require__(277),
     copyArray = __webpack_require__(82),
     initCloneObject = __webpack_require__(222),
     isArguments = __webpack_require__(76),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isArrayLikeObject = __webpack_require__(165),
     isBuffer = __webpack_require__(77),
     isFunction = __webpack_require__(58),
@@ -59613,7 +59613,7 @@ var defaults = __webpack_require__(168);
 
 var reduce = __webpack_require__(89);
 var filter = __webpack_require__(166);
-var omit = __webpack_require__(23);
+var omit = __webpack_require__(24);
 
 var lib = {
   /**
@@ -60158,7 +60158,7 @@ module.exports = partial;
 /***/ (function(module, exports, __webpack_require__) {
 
 var createCtor = __webpack_require__(114),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_BIND_FLAG = 1;
@@ -60197,7 +60197,7 @@ var apply = __webpack_require__(150),
     createRecurry = __webpack_require__(286),
     getHolder = __webpack_require__(90),
     replaceHolders = __webpack_require__(67),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /**
  * Creates a function that wraps `func` to enable currying.
@@ -60377,7 +60377,7 @@ module.exports = realNames;
 var LazyWrapper = __webpack_require__(171),
     LodashWrapper = __webpack_require__(288),
     baseLodash = __webpack_require__(172),
-    isArray = __webpack_require__(24),
+    isArray = __webpack_require__(25),
     isObjectLike = __webpack_require__(29),
     wrapperClone = __webpack_require__(725);
 
@@ -60697,7 +60697,7 @@ module.exports = reorder;
 
 var apply = __webpack_require__(150),
     createCtor = __webpack_require__(114),
-    root = __webpack_require__(25);
+    root = __webpack_require__(26);
 
 /** Used to compose bitmasks for function metadata. */
 var WRAP_BIND_FLAG = 1;
@@ -60950,7 +60950,7 @@ var map = __webpack_require__(39);
 var reduce = __webpack_require__(89);
 var orderBy = __webpack_require__(123);
 var trim = __webpack_require__(274);
-var find = __webpack_require__(26);
+var find = __webpack_require__(27);
 var pickBy = __webpack_require__(735);
 
 var prepareHierarchicalFacetSortBy = __webpack_require__(291);
@@ -68754,7 +68754,7 @@ module.exports = iteratorToArray;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -68834,7 +68834,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = merge;
@@ -68876,7 +68876,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.createErrorFactory = createErrorFactory;
@@ -68997,7 +68997,7 @@ function createValidation(options) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -69045,7 +69045,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = StringSchema;
@@ -69259,7 +69259,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = NumberSchema;
@@ -69429,7 +69429,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -69592,7 +69592,7 @@ module.exports = exports["default"];
 
 var _interopRequireWildcard = __webpack_require__(324);
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = ObjectSchema;
@@ -70389,7 +70389,7 @@ module.exports = createCaseFirst;
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = sortFields;
@@ -70576,7 +70576,7 @@ module.exports = exports["default"];
 
 var _interopRequireWildcard = __webpack_require__(324);
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -70796,7 +70796,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = void 0;
@@ -70859,7 +70859,7 @@ module.exports = exports["default"];
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(21);
+var _interopRequireDefault = __webpack_require__(22);
 
 exports.__esModule = true;
 exports.default = setLocale;
@@ -73689,7 +73689,7 @@ function (_Component) {
 
 /* harmony default export */ var product_menu = (Object(connectStateResults["a" /* default */])(product_menu_ProductMenu));
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/SortBy.js + 1 modules
-var SortBy = __webpack_require__(460);
+var SortBy = __webpack_require__(459);
 
 // CONCATENATED MODULE: ./src/components/products/listing/product-menu-options.js
 function product_menu_options_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { product_menu_options_typeof = function _typeof(obj) { return typeof obj; }; } else { product_menu_options_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return product_menu_options_typeof(obj); }
@@ -75484,16 +75484,16 @@ function (_Component) {
 }(external_react_["Component"]);
 /* harmony default export */ var search_bar = (search_bar_SearchBar);
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/Panel.js + 1 modules
-var Panel = __webpack_require__(459);
+var Panel = __webpack_require__(458);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/RefinementList.js + 1 modules
-var RefinementList = __webpack_require__(461);
+var RefinementList = __webpack_require__(460);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/ClearRefinements.js + 1 modules
-var ClearRefinements = __webpack_require__(457);
+var ClearRefinements = __webpack_require__(462);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-dom/dist/es/widgets/CurrentRefinements.js + 1 modules
-var CurrentRefinements = __webpack_require__(458);
+var CurrentRefinements = __webpack_require__(457);
 
 // CONCATENATED MODULE: ./src/components/search/search-filters.js
 function search_filters_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { search_filters_typeof = function _typeof(obj) { return typeof obj; }; } else { search_filters_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return search_filters_typeof(obj); }
@@ -77879,7 +77879,7 @@ function stackHas(key) {
 /* harmony default export */ var _stackHas = (stackHas);
 
 // EXTERNAL MODULE: ./node_modules/lodash-es/_root.js
-var _root = __webpack_require__(22);
+var _root = __webpack_require__(23);
 
 // CONCATENATED MODULE: ./node_modules/lodash-es/_Symbol.js
 
@@ -81949,7 +81949,7 @@ connect(formik_esm_ErrorMessageImpl);
 //# sourceMappingURL=formik.esm.js.map
 
 // EXTERNAL MODULE: ./node_modules/yup/lib/index.js
-var yup_lib = __webpack_require__(27);
+var yup_lib = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./src/components/account/login-form.js
 function login_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { login_form_typeof = function _typeof(obj) { return typeof obj; }; } else { login_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return login_form_typeof(obj); }
@@ -82304,6 +82304,243 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var register_form = (register_form_RegisterForm);
+// CONCATENATED MODULE: ./src/components/account/forgot-password-form.js
+function forgot_password_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { forgot_password_form_typeof = function _typeof(obj) { return typeof obj; }; } else { forgot_password_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return forgot_password_form_typeof(obj); }
+
+function forgot_password_form_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function forgot_password_form_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function forgot_password_form_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function forgot_password_form_createClass(Constructor, protoProps, staticProps) { if (protoProps) forgot_password_form_defineProperties(Constructor.prototype, protoProps); if (staticProps) forgot_password_form_defineProperties(Constructor, staticProps); return Constructor; }
+
+function forgot_password_form_possibleConstructorReturn(self, call) { if (call && (forgot_password_form_typeof(call) === "object" || typeof call === "function")) { return call; } return forgot_password_form_assertThisInitialized(self); }
+
+function forgot_password_form_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function forgot_password_form_getPrototypeOf(o) { forgot_password_form_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return forgot_password_form_getPrototypeOf(o); }
+
+function forgot_password_form_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) forgot_password_form_setPrototypeOf(subClass, superClass); }
+
+function forgot_password_form_setPrototypeOf(o, p) { forgot_password_form_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return forgot_password_form_setPrototypeOf(o, p); }
+
+// Libraries
+
+
+
+ // lib
+
+
+
+var forgot_password_form_ForgotPasswordForm =
+/*#__PURE__*/
+function (_Component) {
+  forgot_password_form_inherits(ForgotPasswordForm, _Component);
+
+  function ForgotPasswordForm(props) {
+    var _this;
+
+    forgot_password_form_classCallCheck(this, ForgotPasswordForm);
+
+    _this = forgot_password_form_possibleConstructorReturn(this, forgot_password_form_getPrototypeOf(ForgotPasswordForm).call(this, props));
+    _this.Button = component_mapping('Button');
+    return _this;
+  }
+
+  forgot_password_form_createClass(ForgotPasswordForm, [{
+    key: "renderSubmitButton",
+    value: function renderSubmitButton(props) {
+      return external_react_default.a.createElement(this.Button, forgot_password_form_defineProperty({
+        className: "c-password__button o-button-sml",
+        "aria-label": "Submit",
+        label: "SUBMIT",
+        status: "primary",
+        type: "submit",
+        disabled: !props.isValid
+      }, "status", props.isValid ? 'positive' : 'disabled'));
+    }
+  }, {
+    key: "renderFlashMessage",
+    value: function renderFlashMessage() {
+      return external_react_default.a.createElement("div", {
+        className: "c-password__flash-message"
+      }, external_react_default.a.createElement("a", null, "Password reset email sent."), external_react_default.a.createElement("a", null, "Please allow up to 30 mins for the email to arrive."));
+    }
+  }, {
+    key: "renderForm",
+    value: function renderForm(handleSubmit) {
+      var _this2 = this;
+
+      var initialValues = {
+        email: ''
+      };
+      var emailSchema = yup_lib["object"]().shape({
+        email: yup_lib["string"]().email('Invalid email').required('Email is required')
+      });
+      return external_react_default.a.createElement(formik_esm_Formik, {
+        initialValues: initialValues,
+        validationSchema: emailSchema,
+        onSubmit: handleSubmit,
+        render: function render(props) {
+          return external_react_default.a.createElement(Form, null, external_react_default.a.createElement(Field, {
+            type: "email",
+            name: "email",
+            placeholder: "Email",
+            className: "o-form__input-field o-form__input-block"
+          }), external_react_default.a.createElement("div", {
+            className: "o-form__input-field__error"
+          }, external_react_default.a.createElement(ErrorMessage, {
+            name: "email"
+          })), _this2.renderSubmitButton(props));
+        }
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          className = _this$props.className,
+          handleSubmit = _this$props.handleSubmit,
+          flashMessage = _this$props.flashMessage;
+      return external_react_default.a.createElement("div", {
+        className: classnames_default()('o-form', className)
+      }, flashMessage && this.renderFlashMessage(), external_react_default.a.createElement("div", {
+        className: "c-password"
+      }, external_react_default.a.createElement("h1", {
+        className: "c-password__title"
+      }, "Forgot Password"), external_react_default.a.createElement("p", {
+        className: "c-password__caption"
+      }, "Please enter your email address and submit. In doing this an email containing a special link will be mailed to you. Once received, click on this link and you will then have the opportunity to enter a new password."), this.renderForm(handleSubmit)));
+    }
+  }]);
+
+  return ForgotPasswordForm;
+}(external_react_["Component"]);
+
+/* harmony default export */ var forgot_password_form = (forgot_password_form_ForgotPasswordForm);
+// CONCATENATED MODULE: ./src/components/account/password-reset-form.js
+function password_reset_form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { password_reset_form_typeof = function _typeof(obj) { return typeof obj; }; } else { password_reset_form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return password_reset_form_typeof(obj); }
+
+function password_reset_form_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function password_reset_form_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function password_reset_form_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function password_reset_form_createClass(Constructor, protoProps, staticProps) { if (protoProps) password_reset_form_defineProperties(Constructor.prototype, protoProps); if (staticProps) password_reset_form_defineProperties(Constructor, staticProps); return Constructor; }
+
+function password_reset_form_possibleConstructorReturn(self, call) { if (call && (password_reset_form_typeof(call) === "object" || typeof call === "function")) { return call; } return password_reset_form_assertThisInitialized(self); }
+
+function password_reset_form_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function password_reset_form_getPrototypeOf(o) { password_reset_form_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return password_reset_form_getPrototypeOf(o); }
+
+function password_reset_form_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) password_reset_form_setPrototypeOf(subClass, superClass); }
+
+function password_reset_form_setPrototypeOf(o, p) { password_reset_form_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return password_reset_form_setPrototypeOf(o, p); }
+
+// Libraries
+
+
+
+ // lib
+
+
+
+var password_reset_form_PasswordResetForm =
+/*#__PURE__*/
+function (_Component) {
+  password_reset_form_inherits(PasswordResetForm, _Component);
+
+  function PasswordResetForm(props) {
+    var _this;
+
+    password_reset_form_classCallCheck(this, PasswordResetForm);
+
+    _this = password_reset_form_possibleConstructorReturn(this, password_reset_form_getPrototypeOf(PasswordResetForm).call(this, props));
+    _this.Button = component_mapping('Button');
+    _this.AccountFormErrors = component_mapping('FormErrors');
+    return _this;
+  }
+
+  password_reset_form_createClass(PasswordResetForm, [{
+    key: "renderSubmitButton",
+    value: function renderSubmitButton(props) {
+      return external_react_default.a.createElement(this.Button, password_reset_form_defineProperty({
+        className: "c-password__button o-button-sml",
+        "aria-label": "Submit",
+        label: "submit",
+        status: "primary",
+        type: "submit",
+        disabled: !props.isValid
+      }, "status", props.isValid ? 'positive' : 'disabled'));
+    }
+  }, {
+    key: "renderForm",
+    value: function renderForm(handleSubmit, account) {
+      var _this2 = this;
+
+      var initialValues = {
+        password: '',
+        confirmPassword: ''
+      };
+      var passwordSchema = yup_lib["object"]().shape({
+        password: yup_lib["string"]().min(5, 'Password must be at least 5 characters').max(30, 'Password must be shorter than 30 characters').required('Required'),
+        confirmPassword: yup_lib["string"]().required('Required').oneOf([yup_lib["ref"]('password'), null], 'Must match')
+      });
+      return external_react_default.a.createElement(formik_esm_Formik, {
+        initialValues: initialValues,
+        validationSchema: passwordSchema,
+        onSubmit: handleSubmit,
+        render: function render(props) {
+          return external_react_default.a.createElement(Form, null, external_react_default.a.createElement(_this2.AccountFormErrors, {
+            errors: account.errors
+          }), external_react_default.a.createElement(Field, {
+            type: "password",
+            name: "password",
+            placeholder: "New Password",
+            className: "o-form__input-field o-form__input-block"
+          }), external_react_default.a.createElement("div", {
+            className: "o-form__input-field__error"
+          }, external_react_default.a.createElement(ErrorMessage, {
+            name: "password"
+          })), external_react_default.a.createElement(Field, {
+            type: "password",
+            name: "confirmPassword",
+            placeholder: "Confirm Password",
+            className: "o-form__input-field o-form__input-block"
+          }), external_react_default.a.createElement("div", {
+            className: "o-form__input-field__error"
+          }, external_react_default.a.createElement(ErrorMessage, {
+            name: "confirmPassword"
+          })), _this2.renderSubmitButton(props));
+        }
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          className = _this$props.className,
+          handleSubmit = _this$props.handleSubmit,
+          account = _this$props.account;
+      return external_react_default.a.createElement("div", {
+        className: classnames_default()('o-form', className)
+      }, external_react_default.a.createElement("div", {
+        className: "c-password"
+      }, external_react_default.a.createElement("h1", {
+        className: "c-password__title"
+      }, "Password Reset"), external_react_default.a.createElement("p", {
+        className: "c-password__caption"
+      }, "Please enter your new password"), this.renderForm(handleSubmit, account)));
+    }
+  }]);
+
+  return PasswordResetForm;
+}(external_react_["Component"]);
+
+/* harmony default export */ var password_reset_form = (password_reset_form_PasswordResetForm);
 // CONCATENATED MODULE: ./src/components/products/display/product-display.js
 function product_display_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { product_display_typeof = function _typeof(obj) { return typeof obj; }; } else { product_display_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return product_display_typeof(obj); }
 
@@ -83987,6 +84224,8 @@ function (_Component) {
 /* concated harmony reexport buildTemplateComponentsManifest */__webpack_require__.d(__webpack_exports__, "buildTemplateComponentsManifest", function() { return _manifest; });
 /* concated harmony reexport LoginForm */__webpack_require__.d(__webpack_exports__, "LoginForm", function() { return login_form; });
 /* concated harmony reexport RegisterForm */__webpack_require__.d(__webpack_exports__, "RegisterForm", function() { return register_form; });
+/* concated harmony reexport ForgotPasswordForm */__webpack_require__.d(__webpack_exports__, "ForgotPasswordForm", function() { return forgot_password_form; });
+/* concated harmony reexport PasswordResetForm */__webpack_require__.d(__webpack_exports__, "PasswordResetForm", function() { return password_reset_form; });
 /* concated harmony reexport SearchBar */__webpack_require__.d(__webpack_exports__, "SearchBar", function() { return search_bar; });
 /* concated harmony reexport SearchFilters */__webpack_require__.d(__webpack_exports__, "SearchFilters", function() { return search_filters; });
 /* concated harmony reexport SearchHits */__webpack_require__.d(__webpack_exports__, "SearchHits", function() { return search_hits; });
@@ -84077,6 +84316,8 @@ function (_Component) {
 /**
  * Account Components
  */
+
+
 
 
 
