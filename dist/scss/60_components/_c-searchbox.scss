@@ -1,22 +1,22 @@
-@import '../../10_settings/__all';
-@import '../../20_tools/__all';
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
-.ais-SearchBox {
+.c-searchbox {
   width: 100%;
 }
 
-.ais-SearchBox-form {
+.c-searchbox__form {
   display: flex;
 }
 
-.ais-SearchBox-input,
-.ais-SearchBox-submit {
+.c-searchbox__input,
+.c-searchbox__submit {
   border: 1px solid $border-default;
   background-color: $background-white;
   height: 3rem;
 }
 
-.ais-SearchBox-input {
+.c-searchbox__input {
   flex-grow: 1;
   border-right: none;
   border-radius: 6px 0 0 6px;
@@ -33,7 +33,7 @@
   }
 }
 
-.ais-SearchBox-submit {
+.c-searchbox__submit {
   border-left: none;
   border-radius: 0 6px 6px 0;
   background-image: url('data:image/svg+xml;charset=UTF8,<?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="338 179.4 15.372 19.971" width="15.372" height="19.971"><g><circle vector-effect="non-scaling-stroke" cx="0" cy="0" r="1" transform="matrix(6.5,0,0,6.5,345.5,186.9)" fill="none" stroke-width="2" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><line x1="349" y1="193" x2="352" y2="198" vector-effect="non-scaling-stroke" stroke-width="2" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/></g></svg>');
@@ -48,9 +48,4 @@
   svg {
     display: none;
   }
-}
-
-// Don't show the reset button
-.ais-SearchBox-reset {
-  display: none;
 }
