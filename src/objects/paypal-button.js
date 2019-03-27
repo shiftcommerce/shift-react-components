@@ -45,7 +45,6 @@ class PayPalButton extends Component {
 }
 
 PayPalButton.propTypes = {
-  paypalClientID: PropTypes.string,
   paypalCreateOrder: PropTypes.func,
   paypalOnApprove: PropTypes.func,
   handleSetPaymentMethod: PropTypes.func

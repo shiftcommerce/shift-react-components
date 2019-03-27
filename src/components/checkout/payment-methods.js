@@ -53,7 +53,6 @@ class PaymentMethods extends Component {
 
 PaymentMethods.propTypes = {
   nextSection: PropTypes.func,
-  paypalClientID: PropTypes.string,
   paypalCreateOrder: PropTypes.func,
   paypalOnApprove: PropTypes.func,
   handleSetPaymentMethod: PropTypes.func

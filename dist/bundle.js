@@ -73238,7 +73238,6 @@ function (_Component) {
 }(external_react_["Component"]);
 
 paypal_button_PayPalButton.propTypes = {
-  paypalClientID: prop_types_default.a.string,
   paypalCreateOrder: prop_types_default.a.func,
   paypalOnApprove: prop_types_default.a.func,
   handleSetPaymentMethod: prop_types_default.a.func
@@ -74725,7 +74724,6 @@ function (_Component) {
 
 payment_methods_PaymentMethods.propTypes = {
   nextSection: prop_types_default.a.func,
-  paypalClientID: prop_types_default.a.string,
   paypalCreateOrder: prop_types_default.a.func,
   paypalOnApprove: prop_types_default.a.func,
   handleSetPaymentMethod: prop_types_default.a.func
@@ -76410,7 +76408,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       var faviconPath = '../../static/favicon.png';
-      var paypalClientID = this.props.paypalClientID;
+      var payPalClientID = this.props.payPalClientID;
       return external_react_default.a.createElement(this.Head, null, external_react_default.a.createElement("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1, maximum-scale=1.0"
@@ -76423,8 +76421,8 @@ function (_Component) {
       }), external_react_default.a.createElement("script", {
         src: "https://js.stripe.com/v3/",
         key: "stripe"
-      }), paypalClientID && external_react_default.a.createElement("script", {
-        src: "https://www.paypal.com/sdk/js?client-id=".concat(paypalClientID, "&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper")
+      }), payPalClientID && external_react_default.a.createElement("script", {
+        src: "https://www.paypal.com/sdk/js?client-id=".concat(payPalClientID, "&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper")
       }));
     }
   }]);
@@ -84181,9 +84179,9 @@ function (_Component) {
   }, {
     key: "renderCheckoutHeader",
     value: function renderCheckoutHeader() {
-      var paypalClientID = this.props.paypalClientID;
+      var payPalClientID = this.props.payPalClientID;
       return external_react_default.a.createElement(this.CustomHead, {
-        paypalClientID: paypalClientID
+        payPalClientID: payPalClientID
       });
     }
   }, {

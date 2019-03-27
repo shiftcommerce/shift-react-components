@@ -98,9 +98,9 @@ export class Layout extends Component {
   }
 
   renderCheckoutHeader () {
-    const { paypalClientID } = this.props
+    const { payPalClientID } = this.props
     return (
-      <this.CustomHead paypalClientID={paypalClientID} />
+      <this.CustomHead payPalClientID={payPalClientID} />
     )
   }
 
