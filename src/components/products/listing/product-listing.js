@@ -32,14 +32,14 @@ export class ProductListing extends Component {
   }
 
   render () {
-    const { filterCategory, title, facets, indexName, onCategoryCleared } = this.props
+    const { title, facets, indexName } = this.props
 
     return (
       <>
         <this.ProductMenu title={title} />
         <this.Breadcrumb />
         <div className='c-product-listing-wrapper'>
-          <this.SearchFilters filterCategory={filterCategory} facets={facets} filtersShown={this.state.filtersShown} onCategoryCleared={onCategoryCleared} toggleFiltering={this.toggleFiltering} />
+          <this.SearchFilters facets={facets} filtersShown={this.state.filtersShown} toggleFiltering={this.toggleFiltering} />
           <div className={classNames('c-product-listing')}>
             <div className='c-product-listing__menu'>
               <this.ProductMenuOptions indexName={indexName} toggleFiltering={this.toggleFiltering} />
