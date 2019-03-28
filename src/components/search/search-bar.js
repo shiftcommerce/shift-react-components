@@ -1,10 +1,11 @@
 // Libraries
 import React, { Component } from 'react'
+import classNames from 'classNames'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
 export class SearchBar extends Component {
   render () {
-    const { currentRefinement, refine } = this.props
+    const { currentRefinement, filterCategory, onCategoryFilterCleared, refine } = this.props
 
     return (
       <div className='c-searchbar'>
@@ -17,8 +18,19 @@ export class SearchBar extends Component {
               onSubmit={e => e.preventDefault()}
               role='search'
             >
+              { filterCategory && <div
+                className='c-searchbox__filter'
+              >
+                <span className='c-searchbox__category-name'>{ filterCategory }</span>
+                <div
+                  className='c-searchbox__clear-filter'
+                  onClick={onCategoryFilterCleared}
+                ></div>
+              </div> }
               <input
-                className='c-searchbox__input'
+                className={classNames('c-searchbox__input', {
+                  'c-searchbox__input--with-filter': filterCategory
+                })}
                 onChange={event => refine(event.currentTarget.value)}
                 type='search'
                 value={currentRefinement}
