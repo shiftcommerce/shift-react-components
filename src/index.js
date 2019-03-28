@@ -38,6 +38,8 @@ export { default as buildTemplateComponentsManifest } from './components/templat
  */
 export { default as LoginForm } from './components/account/login-form'
 export { default as RegisterForm } from './components/account/register-form'
+export { default as ForgotPasswordForm } from './components/account/forgot-password-form'
+export { default as PasswordResetForm } from './components/account/password-reset-form'
 
 /**
  * Search Components
