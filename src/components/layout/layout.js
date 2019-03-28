@@ -104,9 +104,19 @@ export class Layout extends Component {
   }
 
   renderSearch () {
+    const {
+      search: { filterCategory },
+      onCategoryFilterCleared,
+      query
+    } = this.props
+
     return (
       <span className='c-header__search'>
-        <this.SearchBar query={this.props.query} />
+        <this.SearchBar
+          filterCategory={filterCategory}
+          onCategoryFilterCleared={onCategoryFilterCleared}
+          query={query}
+        />
       </span>
     )
   }
