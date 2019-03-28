@@ -1,25 +1,34 @@
-@import '../../10_settings/__all';
-@import '../../20_tools/__all';
+@import '../10_settings/__all';
+@import '../20_tools/__all';
 
 .c-searchbox {
   width: 100%;
 }
 
 .c-searchbox__form {
-  display: flex;
+	display: flex;
+}
+
+.c-searchbox__input,
+.c-searchbox__submit,
+.c-searchbox__filter {
+  border: 1px solid $border-default;
+  height: 3rem;
 }
 
 .c-searchbox__input,
 .c-searchbox__submit {
-  border: 1px solid $border-default;
   background-color: $background-white;
-  height: 3rem;
+}
+
+.c-searchbox__input,
+.c-searchbox__filter {
+  border-radius: 6px 0 0 6px;
+  border-right: none;
 }
 
 .c-searchbox__input {
   flex-grow: 1;
-  border-right: none;
-  border-radius: 6px 0 0 6px;
   color: $text-dark;
   font-size: 1em;
   font-weight: 500;
@@ -30,6 +39,11 @@
 
   &:focus {
     outline: none;
+  }
+
+  &--with-filter {
+    border-radius: 0;
+    border-left: none;
   }
 }
 
@@ -43,9 +57,23 @@
   right: -.6em;
   left: initial;
   cursor: pointer;
+}
 
-  // Don't show the default magnifying glass icon
-  svg {
-    display: none;
-  }
+.c-searchbox__filter {
+  background-color: $light-grey;
+  padding-left: $global-spacing-unit-small;
+  padding-right: $global-spacing-unit-small;
+  font-size: .9em;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-searchbox__clear-filter {
+  background-image: url('data:image/svg+xml;charset=UTF8,<?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10px;
+  width: 10px;
+  margin-left: $global-spacing-unit-small;
 }
