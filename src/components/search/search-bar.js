@@ -1,6 +1,6 @@
 // Libraries
 import React, { Component } from 'react'
-import classNames from 'classNames'
+import classNames from 'classnames'
 import { connectSearchBox } from 'react-instantsearch-dom'
 
 export class SearchBar extends Component {
