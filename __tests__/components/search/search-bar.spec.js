@@ -31,5 +31,5 @@ test('Renders the algolia SearchBox and checks the placeholder', () => {
   )
 
   // Assert
-  expect(wrapper.find('.ais-SearchBox-input').prop('placeholder')).toBe('Search here…')
+  expect(wrapper.find('.c-searchbox__input').prop('placeholder')).toBe('Search here…')
 })

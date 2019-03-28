@@ -127,7 +127,7 @@ exports[`renders the children inside it 1`] = `
         <span
           className="c-header__search"
         >
-          <SearchBar />
+          <AlgoliaSearchBox(SearchBar) />
         </span>
       </div>
     </div>
@@ -381,7 +381,7 @@ exports[`renders the header 1`] = `
         <span
           className="c-header__search"
         >
-          <SearchBar />
+          <AlgoliaSearchBox(SearchBar) />
         </span>
       </div>
     </div>
@@ -619,7 +619,7 @@ exports[`renders the navbar for non-checkout pages 1`] = `
         <span
           className="c-header__search"
         >
-          <SearchBar />
+          <AlgoliaSearchBox(SearchBar) />
         </span>
       </div>
     </div>

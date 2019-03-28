@@ -66048,6 +66048,7 @@ function (_Component) {
         onChange: function onChange(event) {
           return refine(event.currentTarget.value);
         },
+        placeholder: 'Search here…',
         type: "search",
         value: currentRefinement
       }), external_react_default.a.createElement("button", {

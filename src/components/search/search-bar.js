@@ -32,6 +32,7 @@ export class SearchBar extends Component {
                   'c-searchbox__input--with-filter': filterCategory
                 })}
                 onChange={event => refine(event.currentTarget.value)}
+                placeholder={'Search here…'}
                 type='search'
                 value={currentRefinement}
               />
