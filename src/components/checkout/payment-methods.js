@@ -19,7 +19,8 @@ class PaymentMethods extends Component {
    */
   handleDefaultPaymentSelection(paymentMethod) {
     const { nextSection, handleSetPaymentMethod } = this.props
-    handleSetPaymentMethod(paymentMethod).then(() => nextSection())
+    handleSetPaymentMethod(paymentMethod)
+    nextSection()
   }
 
   render () {

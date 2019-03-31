@@ -74682,9 +74682,8 @@ function (_Component) {
       var _this$props = this.props,
           nextSection = _this$props.nextSection,
           handleSetPaymentMethod = _this$props.handleSetPaymentMethod;
-      handleSetPaymentMethod(paymentMethod).then(function () {
-        return nextSection();
-      });
+      handleSetPaymentMethod(paymentMethod);
+      nextSection();
     }
   }, {
     key: "render",
