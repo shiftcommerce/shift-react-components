@@ -7,32 +7,7 @@ import Sticky from 'react-stickyfill'
 import { decimalPrice } from '../../lib/decimal-price'
 import componentMapping from '../../lib/component-mapping'
 
-function CheckoutCartTotal ({ continueButtonProps, discountSummaries, paymentError, shippingDiscount, shippingDiscountName, shippingTotal, subTotal, total }) {
-  const Button = componentMapping('Button')
-  const Link = componentMapping('Link')
-
-  const renderButtons = (continueButtonProps) => (
-    <div className='c-cart-summary-buttons'>
-      { renderContinueShoppingButton() }
-      { renderContinueButton() }
-    </div>
-  )
-
-  const renderContinueButton = () => (
-    <Button
-      className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml'
-      type='button'
-      {...continueButtonProps}
-    />
-  )
-
-  const renderContinueShoppingButton = () => (
-    <Link
-      href='/'
-      className='c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml'>
-      Continue Shopping
-    </Link>
-  )
+function CheckoutCartTotal ({ discountSummaries, paymentError, shippingDiscount, shippingDiscountName, shippingTotal, subTotal, total }) {
 
   const renderPromotions = () => discountSummaries.map(discountSummary => (
     <dl className='c-cart-summary__promotion' key={ discountSummary.id }>
@@ -73,14 +48,12 @@ function CheckoutCartTotal ({ continueButtonProps, discountSummaries, paymentErr
           </dl>
           { paymentError && <div className='c-checkout-cart-total__payment-error'>{ paymentError }</div> }
         </div>
-        { renderButtons() }
       </div>
     </Sticky>
   )
 }
 
 CheckoutCartTotal.propTypes = {
-  continueButtonProps: PropTypes.object.isRequired,
   discountSummaries: PropTypes.arrayOf(PropTypes.object).isRequired,
   paymentError: PropTypes.string,
   shippingDiscount: PropTypes.number,

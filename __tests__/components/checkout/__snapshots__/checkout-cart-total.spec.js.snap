@@ -2,7 +2,6 @@
 
 exports[`renders payment errors 1`] = `
 <CheckoutCartTotal
-  continueButtonProps={Object {}}
   discountSummaries={Array []}
   paymentError="Payment authentication failed"
   shippingTotal={5}
@@ -65,33 +64,6 @@ exports[`renders payment errors 1`] = `
           Payment authentication failed
         </div>
       </div>
-      <div
-        className="c-cart-summary-buttons"
-      >
-        <Link
-          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
-          href="/"
-        >
-          <a
-            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
-            href="/"
-          >
-            Continue Shopping
-          </a>
-        </Link>
-        <Button
-          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
-          type="button"
-        >
-          <button
-            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml o-button"
-            disabled={false}
-            role="button"
-            tabIndex="0"
-            type="button"
-          />
-        </Button>
-      </div>
     </div>
   </Sticker>
 </CheckoutCartTotal>
@@ -99,7 +71,6 @@ exports[`renders payment errors 1`] = `
 
 exports[`renders the cart's total, subtotal and shipping cost 1`] = `
 <CheckoutCartTotal
-  continueButtonProps={Object {}}
   discountSummaries={Array []}
   shippingTotal={5}
   subTotal={15}
@@ -155,33 +126,6 @@ exports[`renders the cart's total, subtotal and shipping cost 1`] = `
             * Including VAT
           </dt>
         </dl>
-      </div>
-      <div
-        className="c-cart-summary-buttons"
-      >
-        <Link
-          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
-          href="/"
-        >
-          <a
-            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue o-button--sml"
-            href="/"
-          >
-            Continue Shopping
-          </a>
-        </Link>
-        <Button
-          className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml"
-          type="button"
-        >
-          <button
-            className="c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed o-button--sml o-button"
-            disabled={false}
-            role="button"
-            tabIndex="0"
-            type="button"
-          />
-        </Button>
       </div>
     </div>
   </Sticker>

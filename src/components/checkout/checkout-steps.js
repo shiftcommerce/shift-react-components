@@ -15,10 +15,11 @@ function CheckoutSteps ({ currentStep, stepActions }) {
 
   const renderCheckoutSteps = () => {
     const checkoutSteps = [
-      { position: 1, title: 'Shipping Address', href: '/checkout/shipping-address' },
-      { position: 2, title: 'Shipping Method', href: '/checkout/shipping-method' },
-      { position: 3, title: 'Payment', href: '/checkout/payment', as: '/checkout/payment', shallow: true },
-      { position: 4, title: 'Review & Submit' }
+      { position: 1, title: 'Payment Method', href: '/checkout/payment-method' },
+      { position: 2, title: 'Shipping Address', href: '/checkout/shipping-address' },
+      { position: 3, title: 'Shipping Method', href: '/checkout/shipping-method' },
+      { position: 4, title: 'Payment', href: '/checkout/payment', as: '/checkout/payment', shallow: true },
+      { position: 5, title: 'Review & Submit' }
     ]
 
     const checkoutData = checkoutSteps.map((step, index) =>
@@ -76,7 +77,7 @@ function CheckoutSteps ({ currentStep, stepActions }) {
 }
 
 CheckoutSteps.propTypes = {
-  currentStep: PropTypes.oneOf([1, 2, 3, 4]),
+  currentStep: PropTypes.oneOf([1, 2, 3, 4, 5]),
   stepActions: PropTypes.objectOf(PropTypes.func)
 }
 
