@@ -39,7 +39,7 @@ class PaymentMethods extends Component {
             paypalOnApprove={paypalOnApprove}
             handleSetPaymentMethod={handleSetPaymentMethod}
           />
-          <h4 className='c-payment-methods__option-text'>OR</h4>
+          <p className='c-payment-methods__option-text u-bold'>OR</p>
           <this.Button
             className='o-button--sml c-payment-methods__button'
             type='button'

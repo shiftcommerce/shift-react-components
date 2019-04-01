@@ -65186,8 +65186,8 @@ function (_Component) {
         paypalCreateOrder: paypalCreateOrder,
         paypalOnApprove: paypalOnApprove,
         handleSetPaymentMethod: handleSetPaymentMethod
-      }), external_react_default.a.createElement("h4", {
-        className: "c-payment-methods__option-text"
+      }), external_react_default.a.createElement("p", {
+        className: "c-payment-methods__option-text u-bold"
       }, "OR"), external_react_default.a.createElement(this.Button, {
         className: "o-button--sml c-payment-methods__button",
         type: "button",
