@@ -20,7 +20,7 @@ class PayPalButton extends Component {
       // load paypal Buttons
       Buttons = window.paypal.Buttons.driver('react', { React, ReactDOM })
       // display PayPal button
-      this.setState({showButton: true })
+      this.setState({ showButton: true })
     }
   }
 

@@ -22,13 +22,15 @@ class ShippingMethods extends Component {
   renderContinueButton () {
     const { handleFormSubmit, isThirdPartyPayment} = this.props
     const label = isThirdPartyPayment ? 'Review Your Order' : 'Continue To Payment'
-    return <this.Button
-      className='o-button--sml'
-      aria-label={label}
-      label={label}
-      status='positive'
-      type='submit' onClick={handleFormSubmit}
-    />
+    return (
+      <this.Button
+        className='o-button--sml'
+        aria-label={label}
+        label={label}
+        status='positive'
+        type='submit' onClick={handleFormSubmit}
+      />
+    )
   }
 
   /**
