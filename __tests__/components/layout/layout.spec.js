@@ -26,6 +26,7 @@ test('renders the header', () => {
   const wrapper = shallow(
     <Layout
       router={{ pathname: '/' }}
+      search={{}}
       shrunk={initialState.shrunk}
       ShowClass={initialState.toggleShowClass}
       skipHeader={initialState.skipHeader}
@@ -55,6 +56,7 @@ test('renders the navbar for non-checkout pages', () => {
   const wrapper = shallow(
     <Layout
       router={{ pathname: '/' }}
+      search={{}}
       shrunk={initialState.shrunk}
       ShowClass={initialState.toggleShowClass}
       skipHeader={initialState.skipHeader}
@@ -70,7 +72,10 @@ test('renders the navbar for non-checkout pages', () => {
 test('renders the footer', () => {
   // Act
   const wrapper = shallow(
-    <Layout router={{ pathname: '/' }} />
+    <Layout
+      router={{ pathname: '/' }}
+      search={{}}
+    />
   )
 
   // Assert
@@ -91,6 +96,7 @@ test('renders the children inside it', () => {
   const wrapper = shallow(
     <Layout
       router={{ pathname: '/' }}
+      search={{}}
       shrunk={initialState.shrunk}
       ShowClass={initialState.toggleShowClass}
       skipHeader={initialState.skipHeader}
@@ -117,6 +123,7 @@ test('for checkout pages renders the custom head only', () => {
   const wrapper = shallow(
     <Layout
       router={{ pathname: '/checkout/shipping-address' }}
+      search={{}}
       shrunk={initialState.shrunk}
       ShowClass={initialState.toggleShowClass}
       skipHeader={initialState.skipHeader}

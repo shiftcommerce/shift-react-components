@@ -32,13 +32,15 @@ export { default as VariantSelector } from './objects/variant-selector'
 /**
  * Template Components
  */
-export { default as TemplateComponentsManifest } from './components/template-components/_manifest'
+export { default as buildTemplateComponentsManifest } from './components/template-components/_manifest'
 
 /**
  * Account Components
  */
 export { default as LoginForm } from './components/account/login-form'
 export { default as RegisterForm } from './components/account/register-form'
+export { default as ForgotPasswordForm } from './components/account/forgot-password-form'
+export { default as PasswordResetForm } from './components/account/password-reset-form'
 
 /**
  * Search Components
