@@ -13,12 +13,14 @@ class CustomHead extends Component {
 
   render () {
     const faviconPath = '../../static/favicon.png'
+    const { payPalClientID } = this.props
 
     return (
       <this.Head>
         <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0' />
         <link rel='icon' type='image/png' sizes='32x32' href={faviconPath} key='favicon' />
         <script src='https://js.stripe.com/v3/' key='stripe' />
+        { payPalClientID && <script src={`https://www.paypal.com/sdk/js?client-id=${payPalClientID}&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper`} /> }
       </this.Head>
     )
   }

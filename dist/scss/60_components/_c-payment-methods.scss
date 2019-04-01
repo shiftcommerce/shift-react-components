@@ -1,0 +1,70 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-payment-methods {
+  margin-top: $global-spacing-unit-large;
+
+  label {
+    font-size: .7rem;
+    font-weight: bold;
+  }
+
+  &__header {
+    @include breakpoint(tablet) {
+      padding-left: 0;
+      padding-right: 0;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    @include breakpoint(desktop) {
+      padding-top: $global-spacing-unit-small;
+      width: 90%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    h2 {
+      margin-top: 0;
+    }
+  }
+  
+  &__options {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    margin: $global-spacing-unit-small 0;
+  
+    @include breakpoint(desktop) {
+      padding-bottom: $global-spacing-unit-small;
+      margin-top: $global-spacing-unit-small;
+      justify-content: space-between;
+    }
+  }
+  
+  &__option-text {
+    color: $medium-grey;
+  }
+  
+  &__button {
+    display: flex;
+    justify-content: center;
+    font-size: .7rem;
+    text-transform: uppercase;
+    width: 50%;
+    margin: 1.5%;
+    color: $text-light;
+    background-color: $background-primary;
+  
+    @include breakpoint(desktop) {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    &--active {
+      background-color: $background-positive;
+    }
+  }
+}

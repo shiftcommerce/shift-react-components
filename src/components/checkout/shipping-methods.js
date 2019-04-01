@@ -17,12 +17,29 @@ class ShippingMethods extends Component {
   }
 
   /**
+   * Renders the continue button
+   */
+  renderContinueButton () {
+    const { handleFormSubmit, isThirdPartyPayment} = this.props
+    const label = isThirdPartyPayment ? 'Review Your Order' : 'Continue To Payment'
+    return (
+      <this.Button
+        className='o-button--sml'
+        aria-label={label}
+        label={label}
+        status='positive'
+        type='submit' onClick={handleFormSubmit}
+      />
+    )
+  }
+
+  /**
    * Renders the shipping method form, which is a wrapper containing the
    * shipping methods
    * @return {string} - HTML markup for the component
    */
   renderForm () {
-    const { cartLineItemsCount, handleFormSubmit } = this.props
+    const { cartLineItemsCount } = this.props
 
     return (
       <form className='o-form__wrapper o-form__background c-shipping-method__list'>
@@ -31,11 +48,7 @@ class ShippingMethods extends Component {
         </div>
         <div>{ this.renderShippingMethods() }</div>
         <div className='o-form__input-group'>
-          <this.Button
-            className='o-button--sml' aria-label='Continue to payment'
-            label='Continue to Payment' status='positive'
-            type='submit' onClick={handleFormSubmit}
-          />
+          { this.renderContinueButton() }
         </div>
       </form>
     )
@@ -92,7 +105,8 @@ ShippingMethods.propTypes = {
   cartShippingMethod: PropTypes.object,
   handleFormSubmit: PropTypes.func,
   handleSetShippingMethod: PropTypes.func,
-  shippingMethods: PropTypes.array
+  shippingMethods: PropTypes.array,
+  isThirdPartyPayment: PropTypes.bool
 }
 
 export default ShippingMethods

@@ -1,0 +1,61 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-checkout-cart-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: $global-spacing-unit-small 0;
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    padding-bottom: $global-spacing-unit-small;
+    margin-top: $global-spacing-unit-small;
+    justify-content: space-between;
+  }
+
+  &__cta {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: $global-spacing-unit-small 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+    &--proceed {
+      background: $background-positive;
+      color: $text-light;
+  
+      &:visited {
+        color: $text-light;
+      }
+  
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($background-positive, .2);
+          color: $text-light;
+        }
+      }
+    }
+  
+    &--continue {
+      background: $background-secondary;
+      color: $text-dark;
+  
+      &:visited {
+        color: $text-dark;
+      }
+  
+      &:hover {
+        @include breakpoint(desktop) {
+          background: transparentize($background-secondary, .2);
+        }
+      }
+    }
+  }
+}
