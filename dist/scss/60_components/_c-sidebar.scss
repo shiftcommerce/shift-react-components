@@ -1,0 +1,56 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-sidebar {
+  padding: $global-spacing-unit-small;
+  display: flex;
+
+  @include breakpoint(mobile) {
+    flex-wrap: wrap;
+  }
+}
+
+.c-sidebar__menu {
+  list-style-type: none;
+  flex: 0 1 20%;
+  padding-left: 0;
+  margin: 0;
+
+  @include breakpoint(mobile) {
+    flex-basis: 100%;
+  }
+}
+
+.c-sidebar__menu-item {
+  text-transform: uppercase;
+  padding: $global-spacing-unit-small 0;
+  padding-left: $global-spacing-unit-tiny;
+  border-bottom: 1px solid $border-divider;
+  background-image: url('data:image/svg+xml;charset=UTF8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: lighten($alert-orange, 100%);
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    background-color: lighten($alert-orange, 15%);
+  }
+
+  &:first-of-type {
+    border-top: 1px solid $border-divider;
+  }
+
+  &--current {
+    font-weight: bold;
+  }
+}
+
+.c-sidebar__child {
+  margin-left: $global-spacing-unit;
+  flex: 1;
+
+  @include breakpoint(mobile) {
+    margin-left: 0;
+  }
+}

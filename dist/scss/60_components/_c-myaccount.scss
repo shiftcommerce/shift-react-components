@@ -1,0 +1,23 @@
+@import '../10_settings/__all';
+@import '../20_tools/__all';
+
+.c-myaccount-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $global-spacing-unit-small;
+  margin: $global-spacing-unit-small 0;
+}
+
+.c-myaccount-header__title {
+  text-transform: uppercase;
+  margin: 0;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2em;
+  }
+}
+
+.c-myaccount-header__logout-button {
+  margin: 0;
+}
