@@ -34,7 +34,6 @@
     width: 60%;
     font-size: .8em;
     margin-top: $global-spacing-unit-small;
-    padding-bottom: $global-spacing-unit-small;
 
     @include breakpoint(tablet) {
       font-size: 1em;
