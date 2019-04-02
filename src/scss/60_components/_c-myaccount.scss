@@ -7,17 +7,17 @@
   align-items: center;
   padding: 0 $global-spacing-unit-small;
   margin: $global-spacing-unit-small 0;
+}
 
-  &__title {
-    text-transform: uppercase;
-    margin: 0;
+.c-myaccount-header__title {
+  text-transform: uppercase;
+  margin: 0;
 
-    @include breakpoint(mobile) {
-      font-size: 1.2em;
-    }
+  @include breakpoint(mobile) {
+    font-size: 1.2em;
   }
+}
 
-  &__logout-button {
-    margin: 0;
-  }
+.c-myaccount-header__logout-button {
+  margin: 0;
 }
