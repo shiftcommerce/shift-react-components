@@ -10,6 +10,7 @@ test('Renders steps correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText('Payment Method')
   expect(wrapper).toIncludeText('Shipping Address')
   expect(wrapper).toIncludeText('Shipping Method')
   expect(wrapper).toIncludeText('Payment')
@@ -22,7 +23,7 @@ test('Renders current step 1 correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Shipping Address')
+  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment Method')
 })
 
 test('Renders current step 2 correctly', () => {
@@ -31,8 +32,7 @@ test('Renders current step 2 correctly', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('Link').length).toEqual(1)
-  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Shipping Method')
+  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Shipping Address')
 })
 
 test('Renders current step 3 correctly', () => {
@@ -42,7 +42,7 @@ test('Renders current step 3 correctly', () => {
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find('Link').length).toEqual(2)
-  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment')
+  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Shipping Method')
 })
 
 test('Renders current step 4 correctly', () => {
@@ -52,13 +52,23 @@ test('Renders current step 4 correctly', () => {
   // Assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find('Link').length).toEqual(3)
+  expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Payment')
+})
+
+test('Renders current step 5 correctly', () => {
+  // Act
+  const wrapper = shallow(<CheckoutSteps currentStep={5} />)
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find('Link').length).toEqual(4)
   expect(wrapper.find('.c-step-indicator--active')).toIncludeText('Review & Submit')
 })
 
 test('Provides onClick handlers to links', () => {
   // Act
   const wrapper = mount(<CheckoutSteps
-    currentStep={4}
+    currentStep={5}
     stepActions={{
       3: () => 'onClick test'
     }}

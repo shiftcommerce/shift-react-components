@@ -85,7 +85,7 @@ class CartTableSummary extends PureComponent {
           <this.Link href='/slug?slug=/homepage' as='/' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue'>
             Continue Shopping
           </this.Link>
-          <this.Link href='/checkout/shipping-address' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed'>
+          <this.Link href='/checkout/payment-method' className='o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed'>
             Checkout
           </this.Link>
         </section>
