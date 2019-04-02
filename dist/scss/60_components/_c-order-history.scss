@@ -3,7 +3,6 @@
 
 .c-order-history {
   margin-top: $global-spacing-unit-tiny;
-  padding: $global-spacing-unit-small;
 
   @include breakpoint(desktop) {
     margin-top: 0;
@@ -19,26 +18,6 @@
     text-transform: uppercase;
   }
 }
-
-.c-order-history__banner {
-  display: grid;
-  grid-template-columns: [col1-start] 50% [col2-start] 50% [end];
-
-  h1 {
-    font-size: 1.2em;
-    margin: auto;
-    text-transform: uppercase;
-  }
-}
-
-.c-order-history__banner-button {
-  margin: auto;
-  width: 100%;
-}
-
-  .c-order-history__banner-button-icon {
-    width: 100%;
-  }
 
 .c-order-history__nav {
   background-color: $background-positive;
