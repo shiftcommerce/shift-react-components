@@ -1,6 +1,9 @@
 @import "../10_settings/_all";
+@import "../20_tools/_all";
 
 .o-footer {
   width: 100%;
-  padding-top: $global-spacing-unit-large;
+  @include breakpoint(desktop) {
+    padding-top: $global-spacing-unit-large;
+  }
 }
