@@ -1,6 +1,6 @@
 @import '../10_settings/__all';
 
-.c-flash {
+.o-flash {
   background: $background-dark;
   color: white;
   text-align: center;
@@ -8,10 +8,10 @@
   margin-bottom: $global-spacing-unit-small;
 }
 
-.c-flash--success {
+.o-flash--success {
   background: $text-success;
 }
 
-.c-flash--error {
+.o-flash--error {
   background: $text-alert;
 }

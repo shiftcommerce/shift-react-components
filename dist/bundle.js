@@ -62790,6 +62790,17 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var dropdown_select = (withValidationMessage(dropdown_select_DropdownSelect));
+// CONCATENATED MODULE: ./src/objects/flash.js
+// Libraries
+
+/* harmony default export */ var flash = (function (_ref) {
+  var text = _ref.text,
+      modifier = _ref.modifier;
+  var classes = modifier ? "o-flash o-flash--".concat(modifier) : 'o-flash';
+  return external_react_default.a.createElement("div", {
+    className: classes
+  }, text);
+});
 // CONCATENATED MODULE: ./src/objects/head.js
 // Libraries
 
@@ -68404,6 +68415,7 @@ function (_PureComponent) {
 
 
 
+
 /**
  * PDP Components
  */
@@ -68475,6 +68487,7 @@ var mapping = {
   ConditionalLink: conditional_link,
   CustomHead: custom_head,
   DropdownSelect: dropdown_select,
+  Flash: flash,
   Footer: layout_footer,
   FormErrors: form_errors,
   Head: Head,
@@ -73962,6 +73975,7 @@ function (_Component) {
 
     _this = details_possibleConstructorReturn(this, details_getPrototypeOf(AccountDetails).call(this, props));
     _this.Button = component_mapping('Button');
+    _this.Flash = component_mapping('Flash');
     return _this;
   }
 
@@ -73970,14 +73984,16 @@ function (_Component) {
     value: function renderFlash(status) {
       switch (status) {
         case 'success':
-          return external_react_default.a.createElement("div", {
-            className: "c-flash c-flash--success"
-          }, "Your details were successfully updated.");
+          return external_react_default.a.createElement(this.Flash, {
+            modifier: "success",
+            text: "Your details were successfully updated."
+          });
 
         case 'error':
-          return external_react_default.a.createElement("div", {
-            className: "c-flash c-flash--error"
-          }, "Oops, there was an error submitting your form.");
+          return external_react_default.a.createElement(this.Flash, {
+            modifier: "error",
+            text: "Oops, there was an error submitting your form."
+          });
       }
     }
   }, {

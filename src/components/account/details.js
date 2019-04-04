@@ -11,14 +11,15 @@ class AccountDetails extends Component {
     super(props)
 
     this.Button = componentMapping('Button')
+    this.Flash = componentMapping('Flash')
   }
 
   renderFlash (status) {
     switch (status) {
       case 'success':
-        return (<div className='c-flash c-flash--success'>Your details were successfully updated.</div>)
+        return (<this.Flash modifier='success' text='Your details were successfully updated.' />)
       case 'error':
-        return (<div className='c-flash c-flash--error'>Oops, there was an error submitting your form.</div>)
+        return (<this.Flash modifier='error' text='Oops, there was an error submitting your form.' />)
     }
   }
 
