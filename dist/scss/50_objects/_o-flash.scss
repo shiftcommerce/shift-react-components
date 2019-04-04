@@ -1,0 +1,17 @@
+@import '../10_settings/__all';
+
+.o-flash {
+  background: $background-dark;
+  color: white;
+  text-align: center;
+  padding: $global-spacing-unit-small;
+  margin-bottom: $global-spacing-unit-small;
+}
+
+.o-flash--success {
+  background: $text-success;
+}
+
+.o-flash--error {
+  background: $text-alert;
+}

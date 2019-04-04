@@ -19,6 +19,7 @@ import Button from '../objects/button'
 import Checkbox from '../objects/checkbox'
 import ConditionalLink from '../objects/conditional-link'
 import DropdownSelect from '../objects/dropdown-select'
+import Flash from '../objects/flash'
 import Head from '../objects/head'
 import Image from '../objects/image'
 import Input from '../objects/input'
@@ -101,6 +102,7 @@ const mapping = {
   ConditionalLink,
   CustomHead,
   DropdownSelect,
+  Flash,
   Footer,
   FormErrors,
   Head,

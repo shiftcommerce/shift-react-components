@@ -18,6 +18,7 @@
 
   @include breakpoint(mobile) {
     flex-basis: 100%;
+    margin-bottom: $global-spacing-unit-small;
   }
 }
 
