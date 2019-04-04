@@ -68194,9 +68194,7 @@ function (_PureComponent) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          cart = _this$props.cart,
-          className = _this$props.className;
+      var cart = this.props.cart;
       var lineItemsCount = cart.line_items_count || 0;
       var lineItems = cart.line_items;
       var miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed;

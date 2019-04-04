@@ -80,13 +80,10 @@ class Minibag extends PureComponent {
   }
 
   render () {
-    const { cart, className } = this.props
+    const { cart } = this.props
     const lineItemsCount = cart.line_items_count || 0
     const lineItems = cart.line_items
     const miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed
-
-    console.log({miniBagDisplayed})
-    console.log(this.props)
 
     return <>
         { (miniBagDisplayed && lineItemsCount > 0) && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total) }
