@@ -68198,10 +68198,6 @@ function (_PureComponent) {
       var lineItemsCount = cart.line_items_count || 0;
       var lineItems = cart.line_items;
       var miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed;
-      console.log({
-        miniBagDisplayed: miniBagDisplayed
-      });
-      console.log(this.props);
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && lineItemsCount > 0 && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total));
     }
   }]);
