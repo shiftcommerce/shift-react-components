@@ -74012,7 +74012,7 @@ function (_Component) {
         email: yup_lib["string"]().email('Invalid email').required('Required'),
         emailConfirmation: yup_lib["string"]().required('Required').oneOf([yup_lib["ref"]('email'), null], 'Must match')
       });
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(formik_esm_Formik, {
+      return external_react_default.a.createElement(formik_esm_Formik, {
         enableReinitialize: true,
         initialValues: {
           firstName: firstName || '',
@@ -74080,7 +74080,7 @@ function (_Component) {
             disabled: !submitEnabled
           }, "status", submitEnabled ? 'positive' : 'disabled'))));
         }
-      }));
+      });
     }
   }]);
 
