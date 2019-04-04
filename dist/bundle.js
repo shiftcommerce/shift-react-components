@@ -74015,9 +74015,10 @@ function (_Component) {
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(formik_esm_Formik, {
         enableReinitialize: true,
         initialValues: {
-          firstName: firstName,
-          lastName: lastName,
-          email: email
+          firstName: firstName || '',
+          lastName: lastName || '',
+          email: email || '',
+          emailConfirmation: ''
         },
         validationSchema: validationSchema,
         onSubmit: handleSubmit,

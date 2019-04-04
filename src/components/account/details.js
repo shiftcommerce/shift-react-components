@@ -43,7 +43,12 @@ class AccountDetails extends Component {
       <>
         <Formik
           enableReinitialize
-          initialValues={{ firstName, lastName, email }}
+          initialValues={{
+            firstName: firstName || '',
+            lastName: lastName || '',
+            email: email || '',
+            emailConfirmation: ''
+          }}
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
           render={({ isSubmitting, isValid, status }) => {
