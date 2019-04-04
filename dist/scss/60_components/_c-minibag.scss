@@ -79,6 +79,10 @@
   .c-minibag__line-item {
     padding: 5px;
     display: flex;
+
+    @include breakpoint(tablet) {
+      justify-content: space-between
+    }
   }
 
   .c-minibag__line-items-section {
@@ -87,6 +91,14 @@
 
     .c-minibag__line-item-images {
       width: 70%;
+
+      @include breakpoint(tablet) {
+        width: 20%;
+      }
+
+      @include breakpoint(desktop) {
+        width: 70%;
+      }
     }
 
     .c-minibag__line-item-information {
@@ -105,6 +117,10 @@
 
       .c-minibag__line-item-information-title {
         font-weight: bold;
+
+        @include breakpoint(tablet) {
+          font-size: 14pxpx;
+        }
       }
 
       .c-minibag__line-item-information-params {
@@ -115,15 +131,17 @@
 
     .c-minibag__dropdown-container {
       background-color: white;
-      height: 92vh;
       padding: 0 20px 20px 20px;
       box-shadow: 0 2px 2px #8e8e8e;
       display: flex;
       flex-direction: column;
+      height: calc(100vh - #{$global-header-height-mobile} + 72px);
 
       @include breakpoint(desktop) {
         width: 350px;
         max-height: 580px;
+        min-height: 350px;
+        height: 100%;
       }
     }
 

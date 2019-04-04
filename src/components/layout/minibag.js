@@ -89,7 +89,7 @@ class Minibag extends PureComponent {
     console.log(this.props)
 
     return <>
-        { miniBagDisplayed && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total) }
+        { (miniBagDisplayed && lineItemsCount > 0) && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total) }
     </>
   }
 }

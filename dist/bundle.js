@@ -14487,7 +14487,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
-/* harmony import */ var _stubFalse_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(433);
+/* harmony import */ var _stubFalse_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(432);
 
 
 
@@ -41948,12 +41948,6 @@ module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5v
 
 /***/ }),
 /* 431 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODYuMSAzNDAuNiI+PHBhdGggZD0iTTI3NC4xLDM0MC42SDEyYTEyLDEyLDAsMCwxLTEyLTEyTDMwLDk5LjhhMTIsMTIsMCwwLDEsMTItMTJIMjQ0LjFhMTIsMTIsMCwwLDEsMTIsMTJsMzAsMjI4LjhBMTIsMTIsMCwwLDEsMjc0LjEsMzQwLjZaIiBmaWxsPSIjMjMxZjIwIi8+PHBhdGggZD0iTTgzLjcsMTAzLjFhMTIuNywxMi43LDAsMCwxLTMuNC0uNSwxMC4xLDEwLjEsMCwwLDEtNi4xLTEyLjhsMjguMS03OC4yQTEwLjEsMTAuMSwwLDAsMSwxMTEuNyw1aDY2LjJhOS45LDkuOSwwLDAsMSw5LjUsN0wyMTIsOTAuMWExMCwxMCwwLDEsMS0xOSw2TDE3MC42LDI1SDExOC43TDkzLjEsOTYuNUExMCwxMCwwLDAsMSw4My43LDEwMy4xWiIgZmlsbD0iIzIzMWYyMCIgc3Ryb2tlPSIjMjMxZjIwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMTAiLz48L3N2Zz4K"
-
-/***/ }),
-/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41975,7 +41969,7 @@ exports.default = _react2.default.createContext || _implementation2.default;
 module.exports = exports['default'];
 
 /***/ }),
-/* 433 */
+/* 432 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42000,7 +41994,7 @@ function stubFalse() {
 
 
 /***/ }),
-/* 434 */
+/* 433 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42044,16 +42038,22 @@ function cloneBuffer(buffer, isDeep) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(158)(module)))
 
 /***/ }),
-/* 435 */
+/* 434 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj4KPHBhdGggZmlsbD0iI0ZGRiIgZD0ibTcuNyw0MDQuNmMwLDAgMTE1LjIsMTI5LjcgMTM4LjIsMTgyLjY4bDk5LDBjNDEuNS0xMjYuNyAyMDIuNy00MjkuMSAzNDAuOTItNTM1LjFjMjguNi0zNi44LTQzLjMtNTItMTAxLjM1LTI3LjYyLTg3LjUsMzYuNy0yNTIuNSwzMTcuMi0yODMuMywzODQuNjQtNDMuNywxMS41LTg5LjgtNzMuNy04OS44NC03My43eiIvPgo8L3N2Zz4g"
 
 /***/ }),
-/* 436 */
+/* 435 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMzAgMzAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwIDMwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0yNy40NSwyMy4zMmMtMC44Mi0wLjg4LTIuNy0xLjgzLTcuMjctMy40NGMtMS40OS0wLjUzLTEuNS0wLjg1LTEuNS0xLjk3YzAtMC4xMiwwLTEuNDcsMC0xLjQ3CgljMC41Ni0wLjU3LDAuODYtMy4wMywwLjg2LTMuMDNjMC41LDAuMTMsMS40MS0wLjc2LDEuNjktMS45NmMwLjI4LTEuMTktMC4xOS0yLjI1LTAuNjktMi4zOGMtMC4wNi0wLjAxLDAuMTctMi42MSwwLjE3LTMuNzYKCWMwLTEuNzItMC41Mi0yLjg3LTIuMTItMi44N2MtMC40Mi0wLjctMS4xMy0xLjE1LTMuMDQtMS4xNWMtMi4wMiwwLTIuOTMsMS4xNS00LjgzLDEuMTVjLTAuODQsMC0xLjAyLDEuMzctMS4wMiwyLjg0CgljMCwxLjU1LDAuMiwzLjc3LDAuMTcsMy43OGMtMC41LDAuMTMtMC45NywxLjE4LTAuNjksMi4zOGMwLjI4LDEuMiwxLjIsMi4wOCwxLjY5LDEuOTZjMCwwLDAuMzIsMi40NiwwLjg5LDMuMDNjMCwwLDAsMS4zLDAsMS40NwoJYzAsMS4xMi0wLjAyLDEuNDQtMS41LDEuOTdjLTQuNTcsMS42MS02LjQ1LDIuNTYtNy4yNywzLjQ0Yy0xLjEzLDEuMjMtMS41NSwzLjU4LTEuNTUsNS41aDkuNzVoOC4wNEgyOQoJQzI5LDI2LjksMjguNTksMjQuNTQsMjcuNDUsMjMuMzJ6Ii8+Cjwvc3ZnPgo="
+
+/***/ }),
+/* 436 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyODYuMSAzNDAuNiI+PHBhdGggZD0iTTI3NC4xLDM0MC42SDEyYTEyLDEyLDAsMCwxLTEyLTEyTDMwLDk5LjhhMTIsMTIsMCwwLDEsMTItMTJIMjQ0LjFhMTIsMTIsMCwwLDEsMTIsMTJsMzAsMjI4LjhBMTIsMTIsMCwwLDEsMjc0LjEsMzQwLjZaIiBmaWxsPSIjMjMxZjIwIi8+PHBhdGggZD0iTTgzLjcsMTAzLjFhMTIuNywxMi43LDAsMCwxLTMuNC0uNSwxMC4xLDEwLjEsMCwwLDEtNi4xLTEyLjhsMjguMS03OC4yQTEwLjEsMTAuMSwwLDAsMSwxMTEuNyw1aDY2LjJhOS45LDkuOSwwLDAsMSw5LjUsN0wyMTIsOTAuMWExMCwxMCwwLDEsMS0xOSw2TDE3MC42LDI1SDExOC43TDkzLjEsOTYuNUExMCwxMCwwLDAsMSw4My43LDEwMy4xWiIgZmlsbD0iIzIzMWYyMCIgc3Ryb2tlPSIjMjMxZjIwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMTAiLz48L3N2Zz4K"
 
 /***/ }),
 /* 437 */
@@ -68204,7 +68204,7 @@ function (_PureComponent) {
         miniBagDisplayed: miniBagDisplayed
       });
       console.log(this.props);
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total));
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && lineItemsCount > 0 && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total));
     }
   }]);
 
@@ -69392,7 +69392,7 @@ var hoist_non_react_statics_cjs = __webpack_require__(165);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // EXTERNAL MODULE: ./node_modules/create-react-context/lib/index.js
-var create_react_context_lib = __webpack_require__(432);
+var create_react_context_lib = __webpack_require__(431);
 var create_react_context_lib_default = /*#__PURE__*/__webpack_require__.n(create_react_context_lib);
 
 // CONCATENATED MODULE: ./node_modules/lodash-es/_listCacheClear.js
@@ -71197,7 +71197,7 @@ function baseAssignIn(object, source) {
 /* harmony default export */ var _baseAssignIn = (baseAssignIn);
 
 // EXTERNAL MODULE: ./node_modules/lodash-es/_cloneBuffer.js
-var _cloneBuffer = __webpack_require__(434);
+var _cloneBuffer = __webpack_require__(433);
 
 // CONCATENATED MODULE: ./node_modules/lodash-es/_copyArray.js
 /**
@@ -75477,7 +75477,7 @@ CheckoutCartTotal.propTypes = {
 };
 /* harmony default export */ var checkout_cart_total = (CheckoutCartTotal);
 // EXTERNAL MODULE: ./src/static/white-check.svg
-var white_check = __webpack_require__(435);
+var white_check = __webpack_require__(434);
 var white_check_default = /*#__PURE__*/__webpack_require__.n(white_check);
 
 // CONCATENATED MODULE: ./src/components/checkout/checkout-steps.js
@@ -75839,11 +75839,11 @@ ShippingMethodsSummary.propTypes = {
 };
 /* harmony default export */ var shipping_methods_summary = (ShippingMethodsSummary);
 // EXTERNAL MODULE: ./src/static/account-icon.svg
-var account_icon = __webpack_require__(436);
+var account_icon = __webpack_require__(435);
 var account_icon_default = /*#__PURE__*/__webpack_require__.n(account_icon);
 
 // EXTERNAL MODULE: ./src/static/bag-icon.svg
-var bag_icon = __webpack_require__(431);
+var bag_icon = __webpack_require__(436);
 var bag_icon_default = /*#__PURE__*/__webpack_require__.n(bag_icon);
 
 // CONCATENATED MODULE: ./src/components/layout/layout.js
