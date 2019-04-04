@@ -40,62 +40,60 @@ class AccountDetails extends Component {
     })
 
     return (
-      <>
-        <Formik
-          enableReinitialize
-          initialValues={{
-            firstName: firstName || '',
-            lastName: lastName || '',
-            email: email || '',
-            emailConfirmation: ''
-          }}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-          render={({ isSubmitting, isValid, status }) => {
-            const submitEnabled = isValid && !isSubmitting
-            return (
-              <>
-                {this.renderFlash(status)}
-                <Form>
-                  <label className='o-form__input-label' htmlFor="firstName">First name</label>
-                  <Field type='text' name='firstName' className='o-form__input-field o-form__input-block' />
-                  <div className='o-form__input-field__error'>
-                    <ErrorMessage name='firstName' />
-                  </div>
+      <Formik
+        enableReinitialize
+        initialValues={{
+          firstName: firstName || '',
+          lastName: lastName || '',
+          email: email || '',
+          emailConfirmation: ''
+        }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+        render={({ isSubmitting, isValid, status }) => {
+          const submitEnabled = isValid && !isSubmitting
+          return (
+            <>
+              {this.renderFlash(status)}
+              <Form>
+                <label className='o-form__input-label' htmlFor="firstName">First name</label>
+                <Field type='text' name='firstName' className='o-form__input-field o-form__input-block' />
+                <div className='o-form__input-field__error'>
+                  <ErrorMessage name='firstName' />
+                </div>
 
-                  <label className='o-form__input-label' htmlFor="lastName">Last name</label>
-                  <Field type='text' name='lastName' className='o-form__input-field o-form__input-block' />
-                  <div className='o-form__input-field__error'>
-                    <ErrorMessage name='lastName' />
-                  </div>
+                <label className='o-form__input-label' htmlFor="lastName">Last name</label>
+                <Field type='text' name='lastName' className='o-form__input-field o-form__input-block' />
+                <div className='o-form__input-field__error'>
+                  <ErrorMessage name='lastName' />
+                </div>
 
-                  <label className='o-form__input-label' htmlFor="email">Email</label>
-                  <Field type='email' name='email' className='o-form__input-field o-form__input-block' />
-                  <div className='o-form__input-field__error'>
-                    <ErrorMessage name='email' />
-                  </div>
+                <label className='o-form__input-label' htmlFor="email">Email</label>
+                <Field type='email' name='email' className='o-form__input-field o-form__input-block' />
+                <div className='o-form__input-field__error'>
+                  <ErrorMessage name='email' />
+                </div>
 
-                  <label className='o-form__input-label' htmlFor="emailConfirmation">Email confirmation</label>
-                  <Field type='email' name='emailConfirmation' className='o-form__input-field o-form__input-block' />
-                  <div className='o-form__input-field__error'>
-                    <ErrorMessage name='emailConfirmation' />
-                  </div>
+                <label className='o-form__input-label' htmlFor="emailConfirmation">Email confirmation</label>
+                <Field type='email' name='emailConfirmation' className='o-form__input-field o-form__input-block' />
+                <div className='o-form__input-field__error'>
+                  <ErrorMessage name='emailConfirmation' />
+                </div>
 
-                  <this.Button
-                    className='c-password__button o-button-sml u-margin-top-none u-margin-bottom-none'
-                    aria-label='Update details'
-                    label='Update details'
-                    status='primary'
-                    type='submit'
-                    disabled={!submitEnabled}
-                    status={submitEnabled ? 'positive' : 'disabled'}
-                  />
-                </Form>
-              </>
-            )
-          }}
-        />
-      </>
+                <this.Button
+                  className='c-password__button o-button-sml u-margin-top-none u-margin-bottom-none'
+                  aria-label='Update details'
+                  label='Update details'
+                  status='primary'
+                  type='submit'
+                  disabled={!submitEnabled}
+                  status={submitEnabled ? 'positive' : 'disabled'}
+                />
+              </Form>
+            </>
+          )
+        }}
+      />
     )
   }
 }
