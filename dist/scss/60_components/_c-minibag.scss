@@ -16,10 +16,6 @@
     @include breakpoint(desktop) {
       font-size: 1em;
     }
-
-    &:hover~.c-minibag__dropdown {
-      display: block;
-    }
   }
 
   .c-minibag__cart-image {
@@ -62,7 +58,6 @@
   .c-minibag__dropdown {
     position: relative;
     display: flex;
-    // background-color: rgba(255, 255, 255, .60);
 
     @include breakpoint(desktop) {
       position: absolute;
@@ -107,7 +102,7 @@
 
     .c-minibag__line-item-total {
       margin-right: 10px;
-      color: #F06A52;
+      color: $accent-global;
     }
 
     .c-minibag__line-item-subtotal {
@@ -119,7 +114,7 @@
         font-weight: bold;
 
         @include breakpoint(tablet) {
-          font-size: 14pxpx;
+          font-size: 14px;
         }
       }
 
@@ -132,7 +127,7 @@
     .c-minibag__dropdown-container {
       background-color: white;
       padding: 0 20px 20px 20px;
-      box-shadow: 0 2px 2px #8e8e8e;
+      box-shadow: 0 2px 2px $border-default;
       display: flex;
       flex-direction: column;
       height: calc(100vh - #{$global-header-height-mobile} + 72px);
@@ -146,7 +141,7 @@
     }
 
       .c-minibag__dropdown-header {
-        border-bottom: 1px solid #DADADA;
+        border-bottom: 1px solid $border-default;
         position: relative;
       }
 
@@ -172,7 +167,7 @@
       .c-minibag__dropdown-review {
         display: flex;
         flex-direction: column;
-        border-top: 1px solid #DADADA;
+        border-top: 1px solid $border-default;
       }
 
         .c-minibag__dropdown-review-total {

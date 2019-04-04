@@ -73,7 +73,7 @@ export class Layout extends Component {
   }
 
   /**
- * Renders the minibag, which links to the cart page
+ * Renders the basket icon
  * @param  {number} lineItemsCount
  * @return {string} - HTML markup for the component
  */
@@ -97,7 +97,7 @@ export class Layout extends Component {
 
     return (
       <div className={classNames(className, 'c-header__minibag c-minibag')}>
-        {this.renderCartLink(lineItemsCount)}
+        { this.renderCartLink(lineItemsCount) }
       </div>
     )
   }
@@ -119,7 +119,12 @@ export class Layout extends Component {
               { this.renderMobileNav() }
               { this.renderHeaderAccount(loggedIn) }
               { this.renderBasket() }
-              <this.Minibag cart={cart} deleteItem={this.props.deleteItem} miniBagDisplayed={this.props.minibagDisplayed} toggleMiniBag={this.props.toggleMiniBag} />
+              <this.Minibag
+                cart={cart}
+                deleteItem={this.props.deleteItem} 
+                miniBagDisplayed={this.props.minibagDisplayed} 
+                toggleMiniBag={this.props.toggleMiniBag} 
+              />
               { this.renderSearch() }
             </div>
           </div>

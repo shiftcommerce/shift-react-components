@@ -75948,7 +75948,7 @@ function (_Component) {
       }
     }
     /**
-    * Renders the minibag, which links to the cart page
+    * Renders the basket icon
     * @param  {number} lineItemsCount
     * @return {string} - HTML markup for the component
     */
