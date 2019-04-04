@@ -4719,6 +4719,27 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
 
 /***/ }),
 /* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4773,27 +4794,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	} else {}
 }());
 
-
-/***/ }),
-/* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _defineProperty; });
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
 
 /***/ }),
 /* 5 */
@@ -5144,7 +5144,7 @@ module.exports = parse
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return refineValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCurrentRefinementValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cleanUpValue; });
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_2__);
@@ -5351,7 +5351,7 @@ function _assertThisInitialized(self) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
-/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 
 function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
@@ -5386,7 +5386,7 @@ function _objectSpread(target) {
 /* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(13);
 /* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(15);
 /* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7);
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(3);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(30);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(163);
@@ -6377,7 +6377,7 @@ var getPrototypeOf = __webpack_require__(13);
 var inherits = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(4);
+var defineProperty = __webpack_require__(3);
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
@@ -20164,7 +20164,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _classnames = __webpack_require__(3);
+var _classnames = __webpack_require__(4);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -21985,7 +21985,7 @@ module.exports = shortOut;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
@@ -23479,7 +23479,7 @@ module.exports = setMonth
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
@@ -23699,7 +23699,7 @@ var highlight = function highlight(_ref) {
 /* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
 /* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(15);
 /* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(16);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lodash_has__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(0);
@@ -23799,7 +23799,7 @@ function translatable(defaultTranslations) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
@@ -24093,7 +24093,7 @@ var sortBy = ['isRefined', 'count:desc', 'name:asc'];
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(86);
 /* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
@@ -27301,7 +27301,7 @@ module.exports = '2.26.1';
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var lodash_isFinite__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
 /* harmony import */ var lodash_isFinite__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isFinite__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
@@ -62228,7 +62228,7 @@ function (_Component) {
 
 /* harmony default export */ var navbar_option = (navbar_option_NavBarOption);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(3);
+var classnames = __webpack_require__(4);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // CONCATENATED MODULE: ./src/objects/breadcrumb.js
@@ -63963,7 +63963,7 @@ var getPrototypeOf = __webpack_require__(13);
 var inherits = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(4);
+var defineProperty = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/core/utils.js
 
@@ -68060,10 +68060,6 @@ function (_Component) {
   return Footer;
 }(external_react_["Component"]);
 /* harmony default export */ var layout_footer = (footer_Footer);
-// EXTERNAL MODULE: ./src/static/bag-icon.svg
-var bag_icon = __webpack_require__(431);
-var bag_icon_default = /*#__PURE__*/__webpack_require__.n(bag_icon);
-
 // CONCATENATED MODULE: ./src/components/layout/minibag.js
 function minibag_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { minibag_typeof = function _typeof(obj) { return typeof obj; }; } else { minibag_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return minibag_typeof(obj); }
 
@@ -68084,10 +68080,8 @@ function minibag_inherits(subClass, superClass) { if (typeof superClass !== "fun
 function minibag_setPrototypeOf(o, p) { minibag_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return minibag_setPrototypeOf(o, p); }
 
 // Libraries
-
  // Lib
 
- // Assets
 
 
 
@@ -68107,47 +68101,95 @@ function (_PureComponent) {
     _this.Link = component_mapping('Link');
     return _this;
   }
-  /**
-   * Renders the minibag, which links to the cart page
-   * @param  {number} lineItemCount
-   * @return {string} - HTML markup for the component
-   */
-
 
   minibag_createClass(Minibag, [{
-    key: "renderCartLink",
-    value: function renderCartLink(lineItemCount) {
-      return external_react_default.a.createElement(this.Link, {
-        href: "/cart",
-        className: "c-minibag__cart"
-      }, external_react_default.a.createElement("div", {
-        className: "c-minibag__cart-image"
-      }, external_react_default.a.createElement("span", {
-        className: "c-minibag__cart-image-count"
-      }, lineItemCount), external_react_default.a.createElement(this.Image, {
-        className: "c-minibag__cart-image-icon",
-        src: bag_icon_default.a
-      })), external_react_default.a.createElement("span", {
-        className: "c-minibag__cart-label"
-      }, "Basket"));
-    }
-    /**
-     * Renders the checkout link. Disabled if the cart is empty
-     * @param  {number} lineItemCount
-     * @return {string} - HTML markup for the component
-     */
+    key: "renderLineItems",
+    value: function renderLineItems(lineItems, lineItemsCount) {
+      var _this2 = this;
 
+      if (lineItemsCount) {
+        var cartData = lineItems.sort(function (item1, item2) {
+          return parseInt(item1.id) - parseInt(item2.id);
+        }).map(function (lineItem) {
+          return external_react_default.a.createElement("div", {
+            className: "c-minibag__line-item",
+            key: lineItem.item.sku
+          }, external_react_default.a.createElement("div", {
+            className: "c-minibag__line-item-information"
+          }, external_react_default.a.createElement("div", {
+            className: "c-minibag__line-item-information-title"
+          }, external_react_default.a.createElement("p", null, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("a", {
+            className: "c-minibag__line-item-total"
+          }, "\xA3", decimalPrice(lineItem.total)), external_react_default.a.createElement("a", {
+            className: "c-minibag__line-item-subtotal"
+          }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement("div", {
+            className: "c-minibag__line-item-information-params"
+          }, external_react_default.a.createElement("p", null, "QUANTITY: ", lineItem.unit_quantity), external_react_default.a.createElement("a", {
+            className: "c-line-items__delete-button",
+            "data-id": lineItem.id,
+            onClick: _this2.props.deleteItem
+          }, "Remove"))), external_react_default.a.createElement("div", {
+            className: "c-minibag__line-item-images"
+          }, external_react_default.a.createElement(_this2.Link, {
+            href: "/slug?slug=".concat(lineItem.item.product.canonical_path)
+          }, external_react_default.a.createElement(_this2.Image, {
+            className: "c-minibag__line-item-image",
+            src: lineItem.item.picture_url,
+            alt: lineItem.item.title,
+            key: lineItem.item.product.slug,
+            "aria-label": lineItem.item.title
+          }))));
+        });
+        return cartData;
+      }
+
+      return null;
+    }
   }, {
-    key: "renderCheckoutLink",
-    value: function renderCheckoutLink(lineItemCount) {
+    key: "renderMiniBagDropdown",
+    value: function renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
+      var _this3 = this;
+
+      var miniBagTotal = total - shippingTotal;
       return external_react_default.a.createElement("div", {
-        className: "c-minibag__checkout"
+        className: "c-minibag__dropdown"
+      }, external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-container"
+      }, external_react_default.a.createElement("section", {
+        className: "c-minibag__dropdown-header"
+      }, external_react_default.a.createElement("h1", {
+        className: "c-minibag__dropdown-title"
+      }, " Shopping Basket ", external_react_default.a.createElement("a", {
+        className: "c-checkout-cart__amount"
+      }, "(", lineItemsCount, ")")), external_react_default.a.createElement("input", {
+        id: "minibag",
+        type: "checkbox",
+        className: "c-minibag__dropdown-checkbox",
+        checked: this.props.miniBagDisplayed,
+        readOnly: true
+      }), external_react_default.a.createElement("label", {
+        htmlFor: "minibag",
+        className: "c-minibag__dropdown-cross",
+        onClick: this.props.toggleMiniBag
+      })), external_react_default.a.createElement("div", {
+        className: "c-minibag__line-items-section"
+      }, this.renderLineItems(lineItems, lineItemsCount)), external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-review"
+      }, external_react_default.a.createElement("span", {
+        className: "c-minibag__dropdown-review-total"
+      }, external_react_default.a.createElement("h4", null, "Total:"), external_react_default.a.createElement("h4", null, "\xA3", decimalPrice(miniBagTotal))), external_react_default.a.createElement("span", {
+        className: "c-minibag__dropdown-review-buttons"
       }, external_react_default.a.createElement(this.Link, {
-        href: lineItemCount > 0 ? '/checkout' : '',
-        className: classnames_default()('o-button o-button--primary', {
-          'o-button--disabled': lineItemCount === 0
-        })
-      }, "Checkout"));
+        href: "/cart",
+        className: "o-button o-button--sml o-button--primary"
+      }, "view shopping basket"), external_react_default.a.createElement(this.Button, {
+        label: "continue shopping",
+        className: "o-button--sml",
+        status: "primary",
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag;
+        }
+      })))));
     }
   }, {
     key: "render",
@@ -68155,10 +68197,14 @@ function (_PureComponent) {
       var _this$props = this.props,
           cart = _this$props.cart,
           className = _this$props.className;
-      var lineItemCount = cart.line_items_count || 0;
-      return external_react_default.a.createElement("div", {
-        className: classnames_default()(className, 'c-header__minibag c-minibag')
-      }, this.renderCartLink(lineItemCount), this.renderCheckoutLink(lineItemCount));
+      var lineItemsCount = cart.line_items_count || 0;
+      var lineItems = cart.line_items;
+      var miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed;
+      console.log({
+        miniBagDisplayed: miniBagDisplayed
+      });
+      console.log(this.props);
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total));
     }
   }]);
 
@@ -75796,6 +75842,10 @@ ShippingMethodsSummary.propTypes = {
 var account_icon = __webpack_require__(436);
 var account_icon_default = /*#__PURE__*/__webpack_require__.n(account_icon);
 
+// EXTERNAL MODULE: ./src/static/bag-icon.svg
+var bag_icon = __webpack_require__(431);
+var bag_icon_default = /*#__PURE__*/__webpack_require__.n(bag_icon);
+
 // CONCATENATED MODULE: ./src/components/layout/layout.js
 function layout_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { layout_typeof = function _typeof(obj) { return typeof obj; }; } else { layout_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return layout_typeof(obj); }
 
@@ -75820,6 +75870,7 @@ function layout_setPrototypeOf(o, p) { layout_setPrototypeOf = Object.setPrototy
  // Lib
 
  // Assets
+
 
 
 var layout_Layout =
@@ -75902,13 +75953,47 @@ function (_Component) {
         return null;
       }
     }
+    /**
+    * Renders the minibag, which links to the cart page
+    * @param  {number} lineItemsCount
+    * @return {string} - HTML markup for the component
+    */
+
+  }, {
+    key: "renderCartLink",
+    value: function renderCartLink(lineItemsCount) {
+      return external_react_default.a.createElement("span", {
+        className: "c-minibag__cart",
+        onClick: this.props.toggleMiniBag
+      }, external_react_default.a.createElement("div", {
+        className: "c-minibag__cart-image"
+      }, external_react_default.a.createElement("span", {
+        className: "c-minibag__cart-image-count"
+      }, lineItemsCount), external_react_default.a.createElement(this.Image, {
+        className: "c-minibag__cart-image-icon",
+        src: bag_icon_default.a
+      })), external_react_default.a.createElement("span", {
+        className: "c-minibag__cart-label"
+      }, "Basket"));
+    }
+  }, {
+    key: "renderBasket",
+    value: function renderBasket() {
+      var _this$props2 = this.props,
+          cart = _this$props2.cart,
+          className = _this$props2.className;
+      var lineItemsCount = cart.line_items_count || 0;
+      return external_react_default.a.createElement("div", {
+        className: classnames_default()(className, 'c-header__minibag c-minibag')
+      }, this.renderCartLink(lineItemsCount));
+    }
   }, {
     key: "renderHeader",
     value: function renderHeader() {
-      var _this$props2 = this.props,
-          cart = _this$props2.cart,
-          loggedIn = _this$props2.loggedIn,
-          shrunk = _this$props2.shrunk;
+      var _this$props3 = this.props,
+          cart = _this$props3.cart,
+          loggedIn = _this$props3.loggedIn,
+          shrunk = _this$props3.shrunk;
       var headerClasses = classnames_default()('o-header', {
         'o-header--shrunk': shrunk
       });
@@ -75920,8 +76005,11 @@ function (_Component) {
         className: "o-header__top-wrapper"
       }, external_react_default.a.createElement(this.Logo, {
         className: "o-header__logo"
-      }), this.renderMobileNav(), this.renderHeaderAccount(loggedIn), external_react_default.a.createElement(this.Minibag, {
-        cart: cart
+      }), this.renderMobileNav(), this.renderHeaderAccount(loggedIn), this.renderBasket(), external_react_default.a.createElement(this.Minibag, {
+        cart: cart,
+        deleteItem: this.props.deleteItem,
+        miniBagDisplayed: this.props.minibagDisplayed,
+        toggleMiniBag: this.props.toggleMiniBag
       }), this.renderSearch())), this.renderNav()));
     }
   }, {
@@ -75932,10 +76020,10 @@ function (_Component) {
   }, {
     key: "renderSearch",
     value: function renderSearch() {
-      var _this$props3 = this.props,
-          filterCategory = _this$props3.search.filterCategory,
-          onCategoryFilterCleared = _this$props3.onCategoryFilterCleared,
-          query = _this$props3.query;
+      var _this$props4 = this.props,
+          filterCategory = _this$props4.search.filterCategory,
+          onCategoryFilterCleared = _this$props4.onCategoryFilterCleared,
+          query = _this$props4.query;
       return external_react_default.a.createElement("span", {
         className: "c-header__search"
       }, external_react_default.a.createElement(this.SearchBar, {
@@ -75947,9 +76035,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props4 = this.props,
-          skipHeader = _this$props4.skipHeader,
-          children = _this$props4.children;
+      var _this$props5 = this.props,
+          skipHeader = _this$props5.skipHeader,
+          children = _this$props5.children;
       var bodyClasses = classnames_default()({
         'o-body': skipHeader
       });

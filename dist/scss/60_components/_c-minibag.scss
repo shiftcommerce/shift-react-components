@@ -16,6 +16,10 @@
     @include breakpoint(desktop) {
       font-size: 1em;
     }
+
+    &:hover~.c-minibag__dropdown {
+      display: block;
+    }
   }
 
   .c-minibag__cart-image {
@@ -55,6 +59,122 @@
       padding-left: $global-spacing-unit-small;
     }
 
-  .c-minibag__checkout {
-    display: none;
+  .c-minibag__dropdown {
+    position: relative;
+    display: flex;
+    // background-color: rgba(255, 255, 255, .60);
+
+    @include breakpoint(desktop) {
+      position: absolute;
+      top: 72px;
+      width: 80%;
+      justify-content: flex-end;
+      left: 0;
+      right: 0;
+      margin: auto;
+      max-width: 1200px;
+    }
   }
+
+  .c-minibag__line-item {
+    padding: 5px;
+    display: flex;
+  }
+
+  .c-minibag__line-items-section {
+    overflow: scroll;
+  }
+
+    .c-minibag__line-item-images {
+      width: 70%;
+    }
+
+    .c-minibag__line-item-information {
+      font-size: .8em;
+    }
+
+    .c-minibag__line-item-total {
+      margin-right: 10px;
+      color: #F06A52;
+    }
+
+    .c-minibag__line-item-subtotal {
+      color: $font-dark-grey;
+      text-decoration: line-through;
+    }
+
+      .c-minibag__line-item-information-title {
+        font-weight: bold;
+      }
+
+      .c-minibag__line-item-information-params {
+        p {
+          font-size: 10px;
+        }
+      }
+
+    .c-minibag__dropdown-container {
+      background-color: white;
+      height: 92vh;
+      padding: 0 20px 20px 20px;
+      box-shadow: 0 2px 2px #8e8e8e;
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(desktop) {
+        width: 350px;
+        max-height: 580px;
+      }
+    }
+
+      .c-minibag__dropdown-header {
+        border-bottom: 1px solid #DADADA;
+        position: relative;
+      }
+
+      .c-minibag__dropdown-checkbox {
+        display: none;
+      }
+
+      .c-minibag__dropdown-cross {
+        background: url("data:image/svg+xml;charset=UTF8,<svg xmlns='http://www.w3.org/2000/svg' width='612' height='612'><path d='M612 36.004L576.521.603 306 270.608 35.478.603 0 36.004l270.522 270.007L0 575.997l35.478 35.4L306 341.411l270.521 269.986 35.479-35.4-270.541-269.986z'/></svg>") no-repeat center;
+        height: 4em;
+        width: 1em;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        background-size: 70%;
+        cursor: pointer;
+      }
+
+      .c-minibag__dropdown-title {
+        width: 100%;
+      }
+
+      .c-minibag__dropdown-review {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #DADADA;
+      }
+
+        .c-minibag__dropdown-review-total {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .c-minibag__dropdown-review-buttons {
+          display: flex;
+          flex-direction: column;
+
+          button {
+            margin: 0;
+
+            &:first-of-type {
+              margin-top: 5px;
+            }
+          }
+
+          a {
+            margin: 0;
+          }
+        }
