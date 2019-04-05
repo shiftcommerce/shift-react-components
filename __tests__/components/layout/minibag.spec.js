@@ -5,7 +5,7 @@ import React from 'react'
 import MiniBag from '../../../src/components/layout/minibag'
 
 describe('Minibag', () => {
-  test('renders the minibag links', () => {
+  test('doesnt render when there is no lineitems', () => {
     // arrange
     const cart = {
       line_items: [],
@@ -15,30 +15,72 @@ describe('Minibag', () => {
 
     // act
     const wrapper = mount(
-      <MiniBag cart={cart} className={className} />
+      <MiniBag cart={cart} className={className} miniBagDisplayed={true} />
     )
 
     // assert
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper).toIncludeText('Basket')
-    expect(wrapper.find('.c-minibag__cart-image-count')).toIncludeText('0')
-    expect(wrapper.find('.c-header__minibag')).toHaveClassName(className)
   })
 
-  test('renders the line item quantity as expected, when line items are present', () => {
+  test('doesnt render when miniBagDisplayed is false', () => {
     // arrange
     const cart = {
       line_items: [
         {
-          title: 'test',
-          price: 10,
-          discount: 0,
-          quantity: 2,
-          sku: '123',
-          image_url: '',
-          size: 'size - 8',
-          productSku: '1231',
-          productID: 1
+          id: '311',
+          item: {
+            picture_url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg',
+            product: {
+              canonical_path: '/jugs/seed_product_40',
+              slug: 'jugs/seed_product_40',
+              title: 'First product'
+            },
+            title: 'First variant'
+          },
+          item_id: 321,
+          item_type: 'Variant',
+          line_item_discounts: [
+            {
+              id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8846',
+              line_item_number: 1,
+              promotion_id: 21,
+              total: 1.5
+            }
+          ],
+          sku: '3008557600817',
+          stock_available_level: 85,
+          sub_total: 6.77,
+          total: 5.27,
+          total_discount: 1.5,
+          unit_quantity: 1
+        },
+        {
+          id: '310',
+          item: {
+            picture_url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg',
+            product: {
+              canonical_path: '/jugs/seed_product_39',
+              slug: 'jugs/seed_product_39',
+              title: 'Second product'
+            },
+            title: 'Second variant'
+          },
+          item_id: 321,
+          item_type: 'Variant',
+          line_item_discounts: [
+            {
+              id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8846',
+              line_item_number: 1,
+              promotion_id: 21,
+              total: 1.5
+            }
+          ],
+          sku: '3008557600817',
+          stock_available_level: 85,
+          sub_total: 6.77,
+          total: 5.27,
+          total_discount: 1.5,
+          unit_quantity: 1
         }
       ],
       line_items_count: 2
@@ -46,27 +88,72 @@ describe('Minibag', () => {
 
     // act
     const wrapper = mount(
-      <MiniBag cart={cart} />
+      <MiniBag cart={cart} miniBagDisplayed={false} />
     )
 
     // assert
-    expect(wrapper.find('.c-minibag__cart-image-count')).toIncludeText('2')
+    expect(wrapper).toMatchSnapshot()
   })
 
-  test('renders an active checkout button when cart has items', () => {
+  test('renders when miniBagDisplayed is true', () => {
     // arrange
     const cart = {
       line_items: [
         {
-          title: 'test',
-          price: 10,
-          discount: 0,
-          quantity: 2,
-          sku: '123',
-          image_url: '',
-          size: 'size - 8',
-          productSku: '1231',
-          productID: 1
+          id: '311',
+          item: {
+            picture_url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg',
+            product: {
+              canonical_path: '/jugs/seed_product_40',
+              slug: 'jugs/seed_product_40',
+              title: 'First product'
+            },
+            title: 'First variant'
+          },
+          item_id: 321,
+          item_type: 'Variant',
+          line_item_discounts: [
+            {
+              id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8846',
+              line_item_number: 1,
+              promotion_id: 21,
+              total: 1.5
+            }
+          ],
+          sku: '3008557600817',
+          stock_available_level: 85,
+          sub_total: 6.77,
+          total: 5.27,
+          total_discount: 1.5,
+          unit_quantity: 1
+        },
+        {
+          id: '310',
+          item: {
+            picture_url: 'https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg',
+            product: {
+              canonical_path: '/jugs/seed_product_39',
+              slug: 'jugs/seed_product_39',
+              title: 'Second product'
+            },
+            title: 'Second variant'
+          },
+          item_id: 321,
+          item_type: 'Variant',
+          line_item_discounts: [
+            {
+              id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8846',
+              line_item_number: 1,
+              promotion_id: 21,
+              total: 1.5
+            }
+          ],
+          sku: '3008557600817',
+          stock_available_level: 85,
+          sub_total: 6.77,
+          total: 5.27,
+          total_discount: 1.5,
+          unit_quantity: 1
         }
       ],
       line_items_count: 2
@@ -74,29 +161,13 @@ describe('Minibag', () => {
 
     // act
     const wrapper = mount(
-      <MiniBag cart={cart} />
+      <MiniBag cart={cart} miniBagDisplayed={true} />
     )
 
     // assert
     expect(wrapper).toMatchSnapshot()
-    expect(wrapper.find('.c-minibag__checkout .o-button a')).toIncludeText('Checkout')
-    expect(wrapper.find('.c-minibag__checkout .o-button a')).not.toHaveClassName('o-button--disabled')
-  })
-
-  test('renders a disabled checkout button when cart is empty', () => {
-    // arrange
-    const cart = {
-      line_items: [],
-      line_items_count: 0
-    }
-
-    // act
-    const wrapper = mount(
-      <MiniBag cart={cart} />
-    )
-
-    // assert
-    expect(wrapper).toMatchSnapshot()
-    expect(wrapper.find('.c-minibag__checkout .o-button a')).toHaveClassName('o-button--disabled')
+    expect(wrapper).toIncludeText('Shopping Basket')
+    const firstItem = wrapper.find('.c-minibag__line-items-section').first()
+    expect(firstItem).toIncludeText('Second product - Second variant')
   })
 })
