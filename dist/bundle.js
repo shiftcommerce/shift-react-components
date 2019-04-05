@@ -68122,10 +68122,9 @@ function (_PureComponent) {
             className: "c-minibag__line-item-total"
           }, "\xA3", decimalPrice(lineItem.total)), external_react_default.a.createElement("a", {
             className: "c-minibag__line-item-subtotal"
-          }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement("div", {
+          }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement("div", null, external_react_default.a.createElement("p", {
             className: "c-minibag__line-item-information-params"
-          }, external_react_default.a.createElement("p", null, "QUANTITY: ", lineItem.unit_quantity), external_react_default.a.createElement("a", {
-            className: "c-line-items__delete-button",
+          }, "QUANTITY: ", lineItem.unit_quantity), external_react_default.a.createElement("a", {
             "data-id": lineItem.id,
             onClick: _this2.props.deleteItem
           }, "Remove"))), external_react_default.a.createElement("div", {
@@ -68177,14 +68176,14 @@ function (_PureComponent) {
         className: "c-minibag__dropdown-review"
       }, external_react_default.a.createElement("span", {
         className: "c-minibag__dropdown-review-total"
-      }, external_react_default.a.createElement("h4", null, "Total:"), external_react_default.a.createElement("h4", null, "\xA3", decimalPrice(miniBagTotal))), external_react_default.a.createElement("span", {
-        className: "c-minibag__dropdown-review-buttons"
+      }, external_react_default.a.createElement("h4", null, "Total:"), external_react_default.a.createElement("h4", null, "\xA3", decimalPrice(miniBagTotal))), external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-buttons"
       }, external_react_default.a.createElement(this.Link, {
         href: "/cart",
-        className: "o-button o-button--sml o-button--primary"
+        className: "o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
       }, "view shopping basket"), external_react_default.a.createElement(this.Button, {
         label: "continue shopping",
-        className: "o-button--sml",
+        className: "o-button--sml c-minibag__dropdown-buttons--link",
         status: "primary",
         onClick: function onClick() {
           return _this3.props.toggleMiniBag;

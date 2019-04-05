@@ -27,9 +27,9 @@ class Minibag extends PureComponent {
                 <a className='c-minibag__line-item-total'>&pound;{decimalPrice(lineItem.total)}</a>
                 <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a>
               </div>
-              <div className='c-minibag__line-item-information-params'>
-                <p>QUANTITY: {lineItem.unit_quantity}</p>
-                <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
+              <div>
+                <p className='c-minibag__line-item-information-params'>QUANTITY: {lineItem.unit_quantity}</p>
+                <a data-id={lineItem.id} onClick={this.props.deleteItem} >
                   Remove
                 </a>
               </div>
@@ -67,12 +67,12 @@ class Minibag extends PureComponent {
               <h4>Total:</h4>
               <h4>&pound;{ decimalPrice(miniBagTotal) }</h4>
             </span>
-            <span className='c-minibag__dropdown-review-buttons'>
-              <this.Link href='/cart' className='o-button o-button--sml o-button--primary'>
+            <div className='c-minibag__dropdown-buttons'>
+              <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link'>
                 view shopping basket
               </this.Link>
-              <this.Button label='continue shopping' className='o-button--sml' status='primary' onClick={() => this.props.toggleMiniBag} />
-            </span>
+              <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={() => this.props.toggleMiniBag} />
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 @import '../10_settings/__all';
 @import '../20_tools/__all';
 
+$minibag-border-style: 1px solid $border-default !important;
+
 .c-minibag {
 }
 
@@ -72,7 +74,7 @@
   }
 
   .c-minibag__line-item {
-    padding: 5px;
+    padding: $global-spacing-unit-tiny;
     display: flex;
 
     @include breakpoint(tablet) {
@@ -101,7 +103,7 @@
     }
 
     .c-minibag__line-item-total {
-      margin-right: 10px;
+      margin-right: $global-spacing-unit-small;
       color: $accent-global;
     }
 
@@ -119,15 +121,14 @@
       }
 
       .c-minibag__line-item-information-params {
-        p {
-          font-size: 10px;
-        }
+        font-size: 10px;
       }
 
     .c-minibag__dropdown-container {
       background-color: white;
-      padding: 0 20px 20px 20px;
-      box-shadow: 0 2px 2px $border-default;
+      padding: $global-spacing-unit;
+      padding-top: 0;
+      box-shadow: 0 2px 2px $medium-grey;
       display: flex;
       flex-direction: column;
       height: calc(100vh - #{$global-header-height-mobile} + 72px);
@@ -141,7 +142,7 @@
     }
 
       .c-minibag__dropdown-header {
-        border-bottom: 1px solid $border-default;
+        border-bottom: $minibag-border-style;
         position: relative;
       }
 
@@ -154,8 +155,8 @@
         height: 4em;
         width: 1em;
         position: absolute;
-        right: 4px;
-        top: 4px;
+        right: $global-spacing-unit-tiny;
+        top: $global-spacing-unit-tiny;
         background-size: 70%;
         cursor: pointer;
       }
@@ -167,7 +168,7 @@
       .c-minibag__dropdown-review {
         display: flex;
         flex-direction: column;
-        border-top: 1px solid $border-default;
+        border-top: $minibag-border-style;
       }
 
         .c-minibag__dropdown-review-total {
@@ -175,19 +176,14 @@
           justify-content: space-between;
         }
 
-        .c-minibag__dropdown-review-buttons {
-          display: flex;
-          flex-direction: column;
-
-          button {
+        .c-minibag__dropdown-buttons {
+          &--link {
             margin: 0;
+            width: 100%;
+            cursor: pointer;
 
             &:first-of-type {
-              margin-top: 5px;
+              margin-top: $global-spacing-unit-tiny;
             }
-          }
-
-          a {
-            margin: 0;
           }
         }
