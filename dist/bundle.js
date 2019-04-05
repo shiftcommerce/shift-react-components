@@ -68323,46 +68323,42 @@ function (_PureComponent) {
 
   minibag_createClass(Minibag, [{
     key: "renderLineItems",
-    value: function renderLineItems(lineItems, lineItemsCount) {
+    value: function renderLineItems(lineItems) {
       var _this2 = this;
 
-      if (lineItemsCount) {
-        var cartData = lineItems.sort(function (item1, item2) {
-          return parseInt(item1.id) - parseInt(item2.id);
-        }).map(function (lineItem) {
-          return external_react_default.a.createElement("div", {
-            className: "c-minibag__line-item",
-            key: lineItem.item.sku
-          }, external_react_default.a.createElement("div", {
-            className: "c-minibag__line-item-information"
-          }, external_react_default.a.createElement("div", {
-            className: "c-minibag__line-item-information-title"
-          }, external_react_default.a.createElement("p", null, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("a", {
-            className: "c-minibag__line-item-total"
-          }, "\xA3", decimalPrice(lineItem.total)), external_react_default.a.createElement("a", {
-            className: "c-minibag__line-item-subtotal"
-          }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement("div", null, external_react_default.a.createElement("p", {
-            className: "c-minibag__line-item-information-params"
-          }, "QUANTITY: ", lineItem.unit_quantity), external_react_default.a.createElement("a", {
-            className: "c-minibag__line-item--delete",
-            "data-id": lineItem.id,
-            onClick: _this2.props.deleteItem
-          }, "Remove"))), external_react_default.a.createElement("div", {
-            className: "c-minibag__line-item-images"
-          }, external_react_default.a.createElement(_this2.Link, {
-            href: "/slug?slug=".concat(lineItem.item.product.canonical_path)
-          }, external_react_default.a.createElement(_this2.Image, {
-            className: "c-minibag__line-item-image",
-            src: lineItem.item.picture_url,
-            alt: lineItem.item.title,
-            key: lineItem.item.product.slug,
-            "aria-label": lineItem.item.title
-          }))));
-        });
-        return cartData;
-      }
-
-      return null;
+      var cartData = lineItems.sort(function (item1, item2) {
+        return parseInt(item1.id) - parseInt(item2.id);
+      }).map(function (lineItem) {
+        return external_react_default.a.createElement("div", {
+          className: "c-minibag__line-item",
+          key: lineItem.item.sku
+        }, external_react_default.a.createElement("div", {
+          className: "c-minibag__line-item-information"
+        }, external_react_default.a.createElement("div", {
+          className: "c-minibag__line-item-information-title"
+        }, external_react_default.a.createElement("p", null, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("a", {
+          className: "c-minibag__line-item-total"
+        }, "\xA3", decimalPrice(lineItem.total)), external_react_default.a.createElement("a", {
+          className: "c-minibag__line-item-subtotal"
+        }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement("div", null, external_react_default.a.createElement("p", {
+          className: "c-minibag__line-item-information-params"
+        }, "QUANTITY: ", lineItem.unit_quantity), external_react_default.a.createElement("a", {
+          className: "c-minibag__line-item--delete",
+          "data-id": lineItem.id,
+          onClick: _this2.props.deleteItem
+        }, "Remove"))), external_react_default.a.createElement("div", {
+          className: "c-minibag__line-item-images"
+        }, external_react_default.a.createElement(_this2.Link, {
+          href: "/slug?slug=".concat(lineItem.item.product.canonical_path)
+        }, external_react_default.a.createElement(_this2.Image, {
+          className: "c-minibag__line-item-image",
+          src: lineItem.item.picture_url,
+          alt: lineItem.item.title,
+          key: lineItem.item.product.slug,
+          "aria-label": lineItem.item.title
+        }))));
+      });
+      return cartData;
     }
   }, {
     key: "renderMiniBagDropdown",
@@ -68393,7 +68389,7 @@ function (_PureComponent) {
         onClick: this.props.toggleMiniBag
       })), external_react_default.a.createElement("div", {
         className: "c-minibag__line-items-section"
-      }, this.renderLineItems(lineItems, lineItemsCount)), external_react_default.a.createElement("div", {
+      }, this.renderLineItems(lineItems)), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review"
       }, external_react_default.a.createElement("span", {
         className: "c-minibag__dropdown-review-total"

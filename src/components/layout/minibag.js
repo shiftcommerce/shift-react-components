@@ -16,37 +16,33 @@ class Minibag extends PureComponent {
 
 
 
-  renderLineItems (lineItems, lineItemsCount) {
-    if (lineItemsCount) {
-      const cartData = lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
-        return (
-          <div className='c-minibag__line-item' key={lineItem.item.sku}>
-            <div className='c-minibag__line-item-information'>
-              <div className='c-minibag__line-item-information-title'>
-                <p>{`${lineItem.item.product.title} - ${lineItem.item.title}`}</p>
-                <a className='c-minibag__line-item-total'>&pound;{decimalPrice(lineItem.total)}</a>
-                <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a>
-              </div>
-              <div>
-                <p className='c-minibag__line-item-information-params'>QUANTITY: {lineItem.unit_quantity}</p>
-                <a className='c-minibag__line-item--delete' data-id={lineItem.id} onClick={this.props.deleteItem} >
-                  Remove
-                </a>
-              </div>
+  renderLineItems (lineItems) {
+    const cartData = lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
+      return (
+        <div className='c-minibag__line-item' key={lineItem.item.sku}>
+          <div className='c-minibag__line-item-information'>
+            <div className='c-minibag__line-item-information-title'>
+              <p>{`${lineItem.item.product.title} - ${lineItem.item.title}`}</p>
+              <a className='c-minibag__line-item-total'>&pound;{decimalPrice(lineItem.total)}</a>
+              <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a>
             </div>
-            <div className='c-minibag__line-item-images'>
-              <this.Link href={`/slug?slug=${lineItem.item.product.canonical_path}`}>
-                <this.Image className='c-minibag__line-item-image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
-              </this.Link>
+            <div>
+              <p className='c-minibag__line-item-information-params'>QUANTITY: {lineItem.unit_quantity}</p>
+              <a className='c-minibag__line-item--delete' data-id={lineItem.id} onClick={this.props.deleteItem} >
+                Remove
+              </a>
             </div>
           </div>
-        )
-      })
+          <div className='c-minibag__line-item-images'>
+            <this.Link href={`/slug?slug=${lineItem.item.product.canonical_path}`}>
+              <this.Image className='c-minibag__line-item-image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
+            </this.Link>
+          </div>
+        </div>
+      )
+    })
 
-      return cartData
-    }
-    
-    return null
+    return cartData
   }
 
   renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
@@ -61,7 +57,7 @@ class Minibag extends PureComponent {
             <label htmlFor='minibag' className='c-minibag__dropdown-cross' onClick={this.props.toggleMiniBag} />
           </section>
           <div className='c-minibag__line-items-section'>
-            { this.renderLineItems(lineItems, lineItemsCount) }
+            { this.renderLineItems(lineItems) }
           </div>
           <div className='c-minibag__dropdown-review'>
             <span className='c-minibag__dropdown-review-total'>
