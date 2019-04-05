@@ -19,6 +19,7 @@ import Button from '../objects/button'
 import Checkbox from '../objects/checkbox'
 import ConditionalLink from '../objects/conditional-link'
 import DropdownSelect from '../objects/dropdown-select'
+import Flash from '../objects/flash'
 import Head from '../objects/head'
 import Image from '../objects/image'
 import Input from '../objects/input'
@@ -26,6 +27,7 @@ import LazyLoad from '../objects/lazy-load'
 import Link from '../objects/link'
 import Loading from '../objects/loading'
 import Logo from '../objects/logo'
+import PayPalButton from '../objects/paypal-button'
 import Rating from '../objects/rating'
 import VariantSelector from '../objects/variant-selector'
 
@@ -51,6 +53,7 @@ import AddressForm from '../components/checkout/address-form'
 import AddressFormHeader from '../components/checkout/address-form-header'
 import LineItems from '../components/cart/line-items'
 import PaymentIcons from '../components/cart/payment-icons'
+import PaymentMethods from '../components/checkout/payment-methods'
 import PaymentMethod from '../components/checkout/payment-method'
 import PaymentMethodHeader from '../components/checkout/payment-method-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
@@ -99,6 +102,7 @@ const mapping = {
   ConditionalLink,
   CustomHead,
   DropdownSelect,
+  Flash,
   Footer,
   FormErrors,
   Head,
@@ -114,7 +118,9 @@ const mapping = {
   NavBarOption,
   OrderLineItems,
   OrderList,
+  PayPalButton,
   PaymentIcons,
+  PaymentMethods,
   PaymentMethod,
   PaymentMethodHeader,
   ProductCarousel,

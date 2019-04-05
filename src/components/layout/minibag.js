@@ -29,7 +29,7 @@ class Minibag extends PureComponent {
               </div>
               <div>
                 <p className='c-minibag__line-item-information-params'>QUANTITY: {lineItem.unit_quantity}</p>
-                <a data-id={lineItem.id} onClick={this.props.deleteItem} >
+                <a className='c-minibag__line-item--delete' data-id={lineItem.id} onClick={this.props.deleteItem} >
                   Remove
                 </a>
               </div>

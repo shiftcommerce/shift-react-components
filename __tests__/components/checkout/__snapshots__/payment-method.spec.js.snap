@@ -5,7 +5,9 @@ exports[`renders the payment method header and stripe payment component 1`] = `
   aria-label="Payment method"
   className="dummy-classname o-form c-payment-method"
 >
-  <PaymentMethodHeader />
+  <PaymentMethodHeader
+    title="Payment"
+  />
   <div
     className="c-payment-method__section"
     style={

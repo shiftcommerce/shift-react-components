@@ -82,6 +82,11 @@ $minibag-border-style: 1px solid $border-default !important;
     }
   }
 
+    .c-minibag__line-item--delete {
+      font-size: .9em;
+      cursor: pointer;
+    }
+
   .c-minibag__line-items-section {
     overflow: scroll;
   }

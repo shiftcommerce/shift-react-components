@@ -25,6 +25,7 @@ export { default as LazyLoad } from './objects/lazy-load'
 export { default as Link } from './objects/link'
 export { default as Loading } from './objects/loading'
 export { default as Logo } from './objects/logo'
+export { default as PayPalButton } from './objects/paypal-button'
 export { default as Rating } from './objects/rating'
 export { default as VariantSelector } from './objects/variant-selector'
 
@@ -36,10 +37,16 @@ export { default as buildTemplateComponentsManifest } from './components/templat
 /**
  * Account Components
  */
+export { default as AccountAddresses } from './components/account/addresses'
+export { default as AccountDetails } from './components/account/details'
+export { default as AccountOrders } from './components/account/orders'
+export { default as AccountPassword } from './components/account/password'
 export { default as LoginForm } from './components/account/login-form'
 export { default as RegisterForm } from './components/account/register-form'
 export { default as ForgotPasswordForm } from './components/account/forgot-password-form'
+export { default as MyAccountHeader } from './components/account/my-account-header'
 export { default as PasswordResetForm } from './components/account/password-reset-form'
+export { default as Sidebar } from './components/account/sidebar'
 
 /**
  * Search Components
@@ -102,11 +109,13 @@ export { default as AddressFormHeader } from './components/checkout/address-form
 export { default as AddressFormSummary } from './components/checkout/address-form-summary'
 export { default as CheckoutAddressForm } from './components/checkout/address-form'
 export { default as CheckoutCart } from './components/checkout/checkout-cart'
+export { default as CheckoutCartButtons } from './components/checkout/checkout-cart-buttons'
 export { default as CheckoutCartTotal } from './components/checkout/checkout-cart-total'
 export { default as CheckoutSteps } from './components/checkout/checkout-steps'
 export { default as LineItems } from './components/cart/line-items'
 export { default as MiniPlaceOrder } from './components/checkout/mini-place-order'
 export { default as PaymentIcons } from './components/cart/payment-icons'
+export { default as PaymentMethods } from './components/checkout/payment-methods'
 export { default as PaymentMethod } from './components/checkout/payment-method'
 export { default as PaymentMethodHeader } from './components/checkout/payment-method-header'
 export { default as PaymentMethodSummary } from './components/checkout/payment-method-summary'
