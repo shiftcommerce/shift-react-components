@@ -150,6 +150,9 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
   miniBagDisplayed={true}
 >
   <div
+    className="c-minibag__overlay"
+  />
+  <div
     className="c-minibag__dropdown"
   >
     <div
@@ -365,13 +368,11 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
           <Button
             className="o-button--sml c-minibag__dropdown-buttons--link"
             label="continue shopping"
-            onClick={[Function]}
             status="primary"
           >
             <button
               className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
               disabled={false}
-              onClick={[Function]}
               role="button"
               tabIndex="0"
             >

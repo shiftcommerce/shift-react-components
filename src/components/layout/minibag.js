@@ -51,7 +51,8 @@ class Minibag extends PureComponent {
 
   renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
     const miniBagTotal = total - shippingTotal
-    return (
+    return <>
+      <div className='c-minibag__overlay' onClick={this.props.toggleMiniBag} />
       <div className='c-minibag__dropdown'>
         <div className='c-minibag__dropdown-container'>
           <section className='c-minibag__dropdown-header'>
@@ -71,12 +72,12 @@ class Minibag extends PureComponent {
               <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link'>
                 view shopping basket
               </this.Link>
-              <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={() => this.props.toggleMiniBag} />
+              <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={this.props.toggleMiniBag} />
             </div>
           </div>
         </div>
       </div>
-    )
+    </>
   }
 
   render () {

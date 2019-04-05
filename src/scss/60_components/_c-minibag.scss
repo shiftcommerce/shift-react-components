@@ -57,6 +57,18 @@ $minibag-border-style: 1px solid $border-default !important;
       padding-left: $global-spacing-unit-small;
     }
 
+  .c-minibag__overlay {
+    @include breakpoint(desktop) {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
   .c-minibag__dropdown {
     position: relative;
     display: flex;
@@ -70,6 +82,7 @@ $minibag-border-style: 1px solid $border-default !important;
       right: 0;
       margin: auto;
       max-width: 1200px;
+      height: 100vh;
     }
   }
 
@@ -143,6 +156,7 @@ $minibag-border-style: 1px solid $border-default !important;
         max-height: 580px;
         min-height: 350px;
         height: 100%;
+        z-index: 2;
       }
     }
 

@@ -68367,10 +68367,11 @@ function (_PureComponent) {
   }, {
     key: "renderMiniBagDropdown",
     value: function renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
-      var _this3 = this;
-
       var miniBagTotal = total - shippingTotal;
-      return external_react_default.a.createElement("div", {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
+        className: "c-minibag__overlay",
+        onClick: this.props.toggleMiniBag
+      }), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown"
       }, external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-container"
@@ -68405,10 +68406,8 @@ function (_PureComponent) {
         label: "continue shopping",
         className: "o-button--sml c-minibag__dropdown-buttons--link",
         status: "primary",
-        onClick: function onClick() {
-          return _this3.props.toggleMiniBag;
-        }
-      })))));
+        onClick: this.props.toggleMiniBag
+      }))))));
     }
   }, {
     key: "render",
