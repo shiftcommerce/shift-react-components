@@ -75789,7 +75789,7 @@ function (_PureComponent) {
         as: "/",
         className: "o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue"
       }, "Continue Shopping"), external_react_default.a.createElement(this.Link, {
-        href: "/checkout/payment-method",
+        href: "/checkout/payment",
         className: "o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
       }, "Checkout")));
     }

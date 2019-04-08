@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Components
-import CustomHead from '../../../src/components/layout/custom-head'
 import Layout from '../../../src/components/layout/layout'
 import Minibag from '../../../src/components/layout/minibag'
 import NavBar from '../../../src/components/navigation/navbar'
@@ -137,7 +136,7 @@ test('renders the children inside it', () => {
   expect(wrapper).toMatchSnapshot()
 })
 
-test('for checkout pages renders the custom head only', () => {
+test('for checkout pages navbar doesnt render', () => {
   // Arrange
   const initialState = {
     shrunk: false,
@@ -166,7 +165,6 @@ test('for checkout pages renders the custom head only', () => {
 
   // Assert
   expect(wrapper.find(NavBar).exists()).toBe(false)
-  expect(wrapper.find(CustomHead).exists()).toBe(false)
 })
 
 describe('basket', () => {
