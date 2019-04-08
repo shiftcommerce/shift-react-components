@@ -1,160 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Minibag renders a disabled checkout button when cart is empty 1`] = `
-<Minibag
-  cart={
-    Object {
-      "line_items": Array [],
-      "line_items_count": 0,
-    }
-  }
->
-  <div
-    className="c-header__minibag c-minibag"
-  >
-    <Link
-      className="c-minibag__cart"
-      href="/cart"
-    >
-      <a
-        className="c-minibag__cart"
-        href="/cart"
-      >
-        <div
-          className="c-minibag__cart-image"
-        >
-          <span
-            className="c-minibag__cart-image-count"
-          >
-            0
-          </span>
-          <Image
-            className="c-minibag__cart-image-icon"
-            src={Object {}}
-          >
-            <div
-              className="c-minibag__cart-image-icon"
-            >
-              <picture>
-                <img
-                  className="o-image"
-                  src={Object {}}
-                  srcSet="[object Object] 769w"
-                />
-              </picture>
-            </div>
-          </Image>
-        </div>
-        <span
-          className="c-minibag__cart-label"
-        >
-          Basket
-        </span>
-      </a>
-    </Link>
-    <div
-      className="c-minibag__checkout"
-    >
-      <Link
-        className="o-button o-button--primary o-button--disabled"
-        href=""
-      >
-        <a
-          className="o-button o-button--primary o-button--disabled"
-          href=""
-        >
-          Checkout
-        </a>
-      </Link>
-    </div>
-  </div>
-</Minibag>
-`;
-
-exports[`Minibag renders an active checkout button when cart has items 1`] = `
+exports[`Minibag doesnt render when miniBagDisplayed is false 1`] = `
 <Minibag
   cart={
     Object {
       "line_items": Array [
         Object {
-          "discount": 0,
-          "image_url": "",
-          "price": 10,
-          "productID": 1,
-          "productSku": "1231",
-          "quantity": 2,
-          "size": "size - 8",
-          "sku": "123",
-          "title": "test",
+          "id": "311",
+          "item": Object {
+            "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg",
+            "product": Object {
+              "canonical_path": "/jugs/seed_product_40",
+              "slug": "jugs/seed_product_40",
+              "title": "First product",
+            },
+            "title": "First variant",
+          },
+          "item_id": 321,
+          "item_type": "Variant",
+          "line_item_discounts": Array [
+            Object {
+              "id": "2a720d8d-ae39-462e-b2e2-4c49ca5c8846",
+              "line_item_number": 1,
+              "promotion_id": 21,
+              "total": 1.5,
+            },
+          ],
+          "sku": "3008557600817",
+          "stock_available_level": 85,
+          "sub_total": 6.77,
+          "total": 5.27,
+          "total_discount": 1.5,
+          "unit_quantity": 1,
+        },
+        Object {
+          "id": "310",
+          "item": Object {
+            "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg",
+            "product": Object {
+              "canonical_path": "/jugs/seed_product_39",
+              "slug": "jugs/seed_product_39",
+              "title": "Second product",
+            },
+            "title": "Second variant",
+          },
+          "item_id": 321,
+          "item_type": "Variant",
+          "line_item_discounts": Array [
+            Object {
+              "id": "2a720d8d-ae39-462e-b2e2-4c49ca5c8846",
+              "line_item_number": 1,
+              "promotion_id": 21,
+              "total": 1.5,
+            },
+          ],
+          "sku": "3008557600817",
+          "stock_available_level": 85,
+          "sub_total": 6.77,
+          "total": 5.27,
+          "total_discount": 1.5,
+          "unit_quantity": 1,
         },
       ],
       "line_items_count": 2,
     }
   }
->
-  <div
-    className="c-header__minibag c-minibag"
-  >
-    <Link
-      className="c-minibag__cart"
-      href="/cart"
-    >
-      <a
-        className="c-minibag__cart"
-        href="/cart"
-      >
-        <div
-          className="c-minibag__cart-image"
-        >
-          <span
-            className="c-minibag__cart-image-count"
-          >
-            2
-          </span>
-          <Image
-            className="c-minibag__cart-image-icon"
-            src={Object {}}
-          >
-            <div
-              className="c-minibag__cart-image-icon"
-            >
-              <picture>
-                <img
-                  className="o-image"
-                  src={Object {}}
-                  srcSet="[object Object] 769w"
-                />
-              </picture>
-            </div>
-          </Image>
-        </div>
-        <span
-          className="c-minibag__cart-label"
-        >
-          Basket
-        </span>
-      </a>
-    </Link>
-    <div
-      className="c-minibag__checkout"
-    >
-      <Link
-        className="o-button o-button--primary"
-        href="/checkout"
-      >
-        <a
-          className="o-button o-button--primary"
-          href="/checkout"
-        >
-          Checkout
-        </a>
-      </Link>
-    </div>
-  </div>
-</Minibag>
+  miniBagDisplayed={false}
+/>
 `;
 
-exports[`Minibag renders the minibag links 1`] = `
+exports[`Minibag doesnt render when there is no lineitems 1`] = `
 <Minibag
   cart={
     Object {
@@ -163,64 +78,309 @@ exports[`Minibag renders the minibag links 1`] = `
     }
   }
   className="dummy-classname"
+  miniBagDisplayed={true}
+/>
+`;
+
+exports[`Minibag renders when miniBagDisplayed is true 1`] = `
+<Minibag
+  cart={
+    Object {
+      "line_items": Array [
+        Object {
+          "id": "310",
+          "item": Object {
+            "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg",
+            "product": Object {
+              "canonical_path": "/jugs/seed_product_39",
+              "slug": "jugs/seed_product_39",
+              "title": "Second product",
+            },
+            "title": "Second variant",
+          },
+          "item_id": 321,
+          "item_type": "Variant",
+          "line_item_discounts": Array [
+            Object {
+              "id": "2a720d8d-ae39-462e-b2e2-4c49ca5c8846",
+              "line_item_number": 1,
+              "promotion_id": 21,
+              "total": 1.5,
+            },
+          ],
+          "sku": "3008557600817",
+          "stock_available_level": 85,
+          "sub_total": 6.77,
+          "total": 5.27,
+          "total_discount": 1.5,
+          "unit_quantity": 1,
+        },
+        Object {
+          "id": "311",
+          "item": Object {
+            "picture_url": "https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg",
+            "product": Object {
+              "canonical_path": "/jugs/seed_product_40",
+              "slug": "jugs/seed_product_40",
+              "title": "First product",
+            },
+            "title": "First variant",
+          },
+          "item_id": 321,
+          "item_type": "Variant",
+          "line_item_discounts": Array [
+            Object {
+              "id": "2a720d8d-ae39-462e-b2e2-4c49ca5c8846",
+              "line_item_number": 1,
+              "promotion_id": 21,
+              "total": 1.5,
+            },
+          ],
+          "sku": "3008557600817",
+          "stock_available_level": 85,
+          "sub_total": 6.77,
+          "total": 5.27,
+          "total_discount": 1.5,
+          "unit_quantity": 1,
+        },
+      ],
+      "line_items_count": 2,
+    }
+  }
+  miniBagDisplayed={true}
 >
   <div
-    className="dummy-classname c-header__minibag c-minibag"
+    className="c-minibag__overlay"
+  />
+  <div
+    className="c-minibag__dropdown"
   >
-    <Link
-      className="c-minibag__cart"
-      href="/cart"
+    <div
+      className="c-minibag__dropdown-container"
     >
-      <a
-        className="c-minibag__cart"
-        href="/cart"
+      <section
+        className="c-minibag__dropdown-header"
+      >
+        <h1
+          className="c-minibag__dropdown-title"
+        >
+           Shopping Basket 
+          <a
+            className="c-checkout-cart__amount"
+          >
+            (
+            2
+            )
+          </a>
+        </h1>
+        <input
+          checked={true}
+          className="c-minibag__dropdown-checkbox"
+          id="minibag"
+          readOnly={true}
+          type="checkbox"
+        />
+        <label
+          className="c-minibag__dropdown-cross"
+          htmlFor="minibag"
+        />
+      </section>
+      <div
+        className="c-minibag__line-items-section"
       >
         <div
-          className="c-minibag__cart-image"
+          className="c-minibag__line-item"
         >
-          <span
-            className="c-minibag__cart-image-count"
-          >
-            0
-          </span>
-          <Image
-            className="c-minibag__cart-image-icon"
-            src={Object {}}
+          <div
+            className="c-minibag__line-item-information"
           >
             <div
-              className="c-minibag__cart-image-icon"
+              className="c-minibag__line-item-information-title"
             >
-              <picture>
-                <img
-                  className="o-image"
-                  src={Object {}}
-                  srcSet="[object Object] 769w"
-                />
-              </picture>
+              <p>
+                Second product - Second variant
+              </p>
+              <a
+                className="c-minibag__line-item-total"
+              >
+                £
+                5.27
+              </a>
+              <a
+                className="c-minibag__line-item-subtotal"
+              >
+                £
+                6.77
+              </a>
             </div>
-          </Image>
+            <div>
+              <p
+                className="c-minibag__line-item-information-params"
+              >
+                QUANTITY: 
+                1
+              </p>
+              <a
+                className="c-minibag__line-item--delete"
+                data-id="310"
+              >
+                Remove
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-minibag__line-item-images"
+          >
+            <Link
+              href="/slug?slug=/jugs/seed_product_39"
+            >
+              <a
+                href="/slug?slug=/jugs/seed_product_39"
+              >
+                <Image
+                  alt="Second variant"
+                  aria-label="Second variant"
+                  className="c-minibag__line-item-image"
+                  key="jugs/seed_product_39"
+                  src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
+                >
+                  <div
+                    className="c-minibag__line-item-image"
+                  >
+                    <picture>
+                      <img
+                        alt="Second variant"
+                        aria-label="Second variant"
+                        className="o-image"
+                        src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
+                        srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg 769w"
+                      />
+                    </picture>
+                  </div>
+                </Image>
+              </a>
+            </Link>
+          </div>
         </div>
-        <span
-          className="c-minibag__cart-label"
+        <div
+          className="c-minibag__line-item"
         >
-          Basket
-        </span>
-      </a>
-    </Link>
-    <div
-      className="c-minibag__checkout"
-    >
-      <Link
-        className="o-button o-button--primary o-button--disabled"
-        href=""
+          <div
+            className="c-minibag__line-item-information"
+          >
+            <div
+              className="c-minibag__line-item-information-title"
+            >
+              <p>
+                First product - First variant
+              </p>
+              <a
+                className="c-minibag__line-item-total"
+              >
+                £
+                5.27
+              </a>
+              <a
+                className="c-minibag__line-item-subtotal"
+              >
+                £
+                6.77
+              </a>
+            </div>
+            <div>
+              <p
+                className="c-minibag__line-item-information-params"
+              >
+                QUANTITY: 
+                1
+              </p>
+              <a
+                className="c-minibag__line-item--delete"
+                data-id="311"
+              >
+                Remove
+              </a>
+            </div>
+          </div>
+          <div
+            className="c-minibag__line-item-images"
+          >
+            <Link
+              href="/slug?slug=/jugs/seed_product_40"
+            >
+              <a
+                href="/slug?slug=/jugs/seed_product_40"
+              >
+                <Image
+                  alt="First variant"
+                  aria-label="First variant"
+                  className="c-minibag__line-item-image"
+                  key="jugs/seed_product_40"
+                  src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
+                >
+                  <div
+                    className="c-minibag__line-item-image"
+                  >
+                    <picture>
+                      <img
+                        alt="First variant"
+                        aria-label="First variant"
+                        className="o-image"
+                        src="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg"
+                        srcSet="https://shift-platform-dev.s3-eu-west-1.amazonaws.com/uploads/asset_file/asset_file/131/1537803713.5364385-SCS-04-CJ_coffee_jug_600ml.jpg 769w"
+                      />
+                    </picture>
+                  </div>
+                </Image>
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c-minibag__dropdown-review"
       >
-        <a
-          className="o-button o-button--primary o-button--disabled"
-          href=""
+        <span
+          className="c-minibag__dropdown-review-total"
         >
-          Checkout
-        </a>
-      </Link>
+          <h4>
+            Total:
+          </h4>
+          <h4>
+            £
+            NaN
+          </h4>
+        </span>
+        <div
+          className="c-minibag__dropdown-buttons"
+        >
+          <Link
+            className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+            href="/cart"
+          >
+            <a
+              className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+              href="/cart"
+            >
+              view shopping basket
+            </a>
+          </Link>
+          <Button
+            className="o-button--sml c-minibag__dropdown-buttons--link"
+            label="continue shopping"
+            status="primary"
+          >
+            <button
+              className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
+              disabled={false}
+              role="button"
+              tabIndex="0"
+            >
+              continue shopping
+            </button>
+          </Button>
+        </div>
+      </div>
     </div>
   </div>
 </Minibag>

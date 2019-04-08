@@ -33,6 +33,7 @@ $custom-text-color: map-get(map-get($color-variations, primary), color);
   border-color: $text-primary;
   background: $button-base-color;
   color: $text-primary;
+  text-align: center;
 
   &:focus {
     box-shadow: rgba($background-secondary, .2) 0 0 0 2px;

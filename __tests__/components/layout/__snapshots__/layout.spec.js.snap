@@ -123,7 +123,41 @@ exports[`renders the children inside it 1`] = `
             Sign In
           </Link>
         </div>
-        <Minibag />
+        <div
+          className="c-header__minibag c-minibag"
+        >
+          <span
+            className="c-minibag__cart"
+          >
+            <div
+              className="c-minibag__cart-image"
+            >
+              <span
+                className="c-minibag__cart-image-count"
+              >
+                0
+              </span>
+              <Image
+                className="c-minibag__cart-image-icon"
+                src={Object {}}
+              />
+            </div>
+            <span
+              className="c-minibag__cart-label"
+            >
+              Basket
+            </span>
+          </span>
+        </div>
+        <Minibag
+          cart={
+            Object {
+              "line_items": Array [],
+              "line_items_count": 0,
+            }
+          }
+          miniBagDisplayed={false}
+        />
         <span
           className="c-header__search"
         >
@@ -377,7 +411,41 @@ exports[`renders the header 1`] = `
             Sign In
           </Link>
         </div>
-        <Minibag />
+        <div
+          className="c-header__minibag c-minibag"
+        >
+          <span
+            className="c-minibag__cart"
+          >
+            <div
+              className="c-minibag__cart-image"
+            >
+              <span
+                className="c-minibag__cart-image-count"
+              >
+                0
+              </span>
+              <Image
+                className="c-minibag__cart-image-icon"
+                src={Object {}}
+              />
+            </div>
+            <span
+              className="c-minibag__cart-label"
+            >
+              Basket
+            </span>
+          </span>
+        </div>
+        <Minibag
+          cart={
+            Object {
+              "line_items": Array [],
+              "line_items_count": 0,
+            }
+          }
+          miniBagDisplayed={false}
+        />
         <span
           className="c-header__search"
         >
@@ -615,7 +683,41 @@ exports[`renders the navbar for non-checkout pages 1`] = `
             Sign In
           </Link>
         </div>
-        <Minibag />
+        <div
+          className="c-header__minibag c-minibag"
+        >
+          <span
+            className="c-minibag__cart"
+          >
+            <div
+              className="c-minibag__cart-image"
+            >
+              <span
+                className="c-minibag__cart-image-count"
+              >
+                0
+              </span>
+              <Image
+                className="c-minibag__cart-image-icon"
+                src={Object {}}
+              />
+            </div>
+            <span
+              className="c-minibag__cart-label"
+            >
+              Basket
+            </span>
+          </span>
+        </div>
+        <Minibag
+          cart={
+            Object {
+              "line_items": Array [],
+              "line_items_count": 0,
+            }
+          }
+          miniBagDisplayed={false}
+        />
         <span
           className="c-header__search"
         >

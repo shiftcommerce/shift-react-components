@@ -1,13 +1,10 @@
 // Libraries
 import React, { PureComponent } from 'react'
-import classNames from 'classnames'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
-
-// Assets
-import imgBagIcon from '../../static/bag-icon.svg'
-
+import { decimalPrice } from '../../lib/decimal-price'
+ 
 class Minibag extends PureComponent {
   constructor () {
     super()
@@ -17,52 +14,77 @@ class Minibag extends PureComponent {
     this.Link = componentMapping('Link')
   }
 
-  /**
-   * Renders the minibag, which links to the cart page
-   * @param  {number} lineItemCount
-   * @return {string} - HTML markup for the component
-   */
-  renderCartLink (lineItemCount) {
-    return (
-      <this.Link href='/cart' className='c-minibag__cart'>
-        <div className='c-minibag__cart-image'>
-          <span className='c-minibag__cart-image-count' >
-            { lineItemCount }
-          </span>
-          <this.Image className='c-minibag__cart-image-icon' src={imgBagIcon} />
+
+
+  renderLineItems (lineItems) {
+    const cartData = lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
+      return (
+        <div className='c-minibag__line-item' key={lineItem.item.sku}>
+          <div className='c-minibag__line-item-information'>
+            <div className='c-minibag__line-item-information-title'>
+              <p>{`${lineItem.item.product.title} - ${lineItem.item.title}`}</p>
+              <a className='c-minibag__line-item-total'>&pound;{decimalPrice(lineItem.total)}</a>
+              <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a>
+            </div>
+            <div>
+              <p className='c-minibag__line-item-information-params'>QUANTITY: {lineItem.unit_quantity}</p>
+              <a className='c-minibag__line-item--delete' data-id={lineItem.id} onClick={this.props.deleteItem} >
+                Remove
+              </a>
+            </div>
+          </div>
+          <div className='c-minibag__line-item-images'>
+            <this.Link href={`/slug?slug=${lineItem.item.product.canonical_path}`}>
+              <this.Image className='c-minibag__line-item-image' src={lineItem.item.picture_url} alt={lineItem.item.title} key={lineItem.item.product.slug} aria-label={lineItem.item.title} />
+            </this.Link>
+          </div>
         </div>
-        <span className='c-minibag__cart-label'>Basket</span>
-      </this.Link>
-    )
+      )
+    })
+
+    return cartData
   }
 
-  /**
-   * Renders the checkout link. Disabled if the cart is empty
-   * @param  {number} lineItemCount
-   * @return {string} - HTML markup for the component
-   */
-  renderCheckoutLink (lineItemCount) {
-    return (
-      <div className='c-minibag__checkout'>
-        <this.Link
-          href={(lineItemCount > 0) ? '/checkout' : ''}
-          className={classNames('o-button o-button--primary', { 'o-button--disabled': (lineItemCount === 0) })}>
-            Checkout
-        </this.Link>
+  renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
+    const miniBagTotal = total - shippingTotal
+    return <>
+      <div className='c-minibag__overlay' onClick={this.props.toggleMiniBag} />
+      <div className='c-minibag__dropdown'>
+        <div className='c-minibag__dropdown-container'>
+          <section className='c-minibag__dropdown-header'>
+            <h1 className='c-minibag__dropdown-title'> Shopping Basket <a className='c-checkout-cart__amount'>({lineItemsCount})</a></h1>
+            <input id='minibag' type='checkbox' className='c-minibag__dropdown-checkbox' checked={this.props.miniBagDisplayed} readOnly />
+            <label htmlFor='minibag' className='c-minibag__dropdown-cross' onClick={this.props.toggleMiniBag} />
+          </section>
+          <div className='c-minibag__line-items-section'>
+            { this.renderLineItems(lineItems) }
+          </div>
+          <div className='c-minibag__dropdown-review'>
+            <span className='c-minibag__dropdown-review-total'>
+              <h4>Total:</h4>
+              <h4>&pound;{ decimalPrice(miniBagTotal) }</h4>
+            </span>
+            <div className='c-minibag__dropdown-buttons'>
+              <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link'>
+                view shopping basket
+              </this.Link>
+              <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={this.props.toggleMiniBag} />
+            </div>
+          </div>
+        </div>
       </div>
-    )
+    </>
   }
 
   render () {
-    const { cart, className } = this.props
-    const lineItemCount = cart.line_items_count || 0
+    const { cart } = this.props
+    const lineItemsCount = cart.line_items_count || 0
+    const lineItems = cart.line_items
+    const miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed
 
-    return (
-      <div className={classNames(className, 'c-header__minibag c-minibag')}>
-        { this.renderCartLink(lineItemCount) }
-        { this.renderCheckoutLink(lineItemCount) }
-      </div>
-    )
+    return <>
+        { (miniBagDisplayed && lineItemsCount > 0) && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total) }
+    </>
   }
 }
 
