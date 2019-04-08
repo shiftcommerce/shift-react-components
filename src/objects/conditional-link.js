@@ -13,11 +13,11 @@ class ConditionalLink extends Component {
   }
 
   render () {
-    const { href, children } = this.props
+    const { href, children, className } = this.props
 
     if (href) {
       return (
-        <this.Link href={`/slug?slug=${href}`} as={href}>
+        <this.Link href={`/slug?slug=${href}`} as={href} className={className}>
           { children }
         </this.Link>
       )
