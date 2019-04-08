@@ -5382,9 +5382,9 @@ function _objectSpread(target) {
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 /* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 /* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
-/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(16);
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(15);
 /* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
-/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(15);
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
 /* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(4);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(30);
@@ -5836,39 +5836,6 @@ function _getPrototypeOf(o) {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inherits; });
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-/***/ }),
-/* 16 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
@@ -5898,6 +5865,39 @@ function _possibleConstructorReturn(self, call) {
   }
 
   return Object(assertThisInitialized["a" /* default */])(self);
+}
+
+/***/ }),
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inherits; });
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
 }
 
 /***/ }),
@@ -6368,13 +6368,13 @@ var classCallCheck = __webpack_require__(12);
 var createClass = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 1 modules
-var possibleConstructorReturn = __webpack_require__(16);
+var possibleConstructorReturn = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__(15);
+var inherits = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(4);
@@ -23697,9 +23697,9 @@ var highlight = function highlight(_ref) {
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
 /* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
-/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(16);
+/* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
 /* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(14);
-/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(15);
+/* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(16);
 /* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(17);
@@ -64064,13 +64064,13 @@ var classCallCheck = __webpack_require__(12);
 var createClass = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 1 modules
-var possibleConstructorReturn = __webpack_require__(16);
+var possibleConstructorReturn = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__(15);
+var inherits = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(4);
@@ -68130,72 +68130,6 @@ function (_Component) {
 }(external_react_["Component"]);
 
 /* harmony default export */ var error_details = (error_details_StaticPageErrorDetails);
-// CONCATENATED MODULE: ./src/components/layout/custom-head.js
-function custom_head_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { custom_head_typeof = function _typeof(obj) { return typeof obj; }; } else { custom_head_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return custom_head_typeof(obj); }
-
-function custom_head_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function custom_head_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function custom_head_createClass(Constructor, protoProps, staticProps) { if (protoProps) custom_head_defineProperties(Constructor.prototype, protoProps); if (staticProps) custom_head_defineProperties(Constructor, staticProps); return Constructor; }
-
-function custom_head_possibleConstructorReturn(self, call) { if (call && (custom_head_typeof(call) === "object" || typeof call === "function")) { return call; } return custom_head_assertThisInitialized(self); }
-
-function custom_head_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function custom_head_getPrototypeOf(o) { custom_head_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return custom_head_getPrototypeOf(o); }
-
-function custom_head_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) custom_head_setPrototypeOf(subClass, superClass); }
-
-function custom_head_setPrototypeOf(o, p) { custom_head_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return custom_head_setPrototypeOf(o, p); }
-
-// Libraries
- // Lib
-
-
-
-var custom_head_CustomHead =
-/*#__PURE__*/
-function (_Component) {
-  custom_head_inherits(CustomHead, _Component);
-
-  function CustomHead(props) {
-    var _this;
-
-    custom_head_classCallCheck(this, CustomHead);
-
-    _this = custom_head_possibleConstructorReturn(this, custom_head_getPrototypeOf(CustomHead).call(this, props));
-    _this.Head = component_mapping('Head');
-    return _this;
-  }
-
-  custom_head_createClass(CustomHead, [{
-    key: "render",
-    value: function render() {
-      var faviconPath = '../../static/favicon.png';
-      var payPalClientID = this.props.payPalClientID;
-      return external_react_default.a.createElement(this.Head, null, external_react_default.a.createElement("meta", {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1, maximum-scale=1.0"
-      }), external_react_default.a.createElement("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: faviconPath,
-        key: "favicon"
-      }), external_react_default.a.createElement("script", {
-        src: "https://js.stripe.com/v3/",
-        key: "stripe"
-      }), payPalClientID && external_react_default.a.createElement("script", {
-        src: "https://www.paypal.com/sdk/js?client-id=".concat(payPalClientID, "&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper")
-      }));
-    }
-  }]);
-
-  return CustomHead;
-}(external_react_["Component"]);
-
-/* harmony default export */ var custom_head = (custom_head_CustomHead);
 // EXTERNAL MODULE: ./src/static/facebook.svg
 var facebook = __webpack_require__(428);
 var facebook_default = /*#__PURE__*/__webpack_require__.n(facebook);
@@ -68513,7 +68447,6 @@ function (_PureComponent) {
 
 
 
-
 var mapping = {
   AddressBook: address_book,
   AddressForm: address_form,
@@ -68522,7 +68455,6 @@ var mapping = {
   Button: objects_button,
   Checkbox: objects_checkbox,
   ConditionalLink: conditional_link,
-  CustomHead: custom_head,
   DropdownSelect: dropdown_select,
   Flash: flash,
   Footer: layout_footer,
@@ -75789,7 +75721,7 @@ function (_PureComponent) {
         as: "/",
         className: "o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue"
       }, "Continue Shopping"), external_react_default.a.createElement(this.Link, {
-        href: "/checkout/payment",
+        href: "/checkout/payment-method",
         className: "o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--proceed"
       }, "Checkout")));
     }
@@ -76540,7 +76472,7 @@ function (_Component) {
     layout_classCallCheck(this, Layout);
 
     _this = layout_possibleConstructorReturn(this, layout_getPrototypeOf(Layout).call(this, props));
-    _this.CustomHead = component_mapping('CustomHead');
+    _this.Head = component_mapping('Head');
     _this.Footer = component_mapping('Footer');
     _this.Image = component_mapping('Image');
     _this.Link = component_mapping('Link');
@@ -76653,7 +76585,16 @@ function (_Component) {
       var headerClasses = classnames_default()('o-header', {
         'o-header--shrunk': shrunk
       });
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.CustomHead, null), external_react_default.a.createElement("div", {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.Head, null, external_react_default.a.createElement("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1, maximum-scale=1.0"
+      }), external_react_default.a.createElement("link", {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "../../static/favicon.png",
+        key: "favicon"
+      })), external_react_default.a.createElement("div", {
         className: headerClasses
       }, external_react_default.a.createElement("div", {
         className: "o-header__top"
@@ -76672,9 +76613,23 @@ function (_Component) {
     key: "renderCheckoutHeader",
     value: function renderCheckoutHeader() {
       var payPalClientID = this.props.payPalClientID;
-      return external_react_default.a.createElement(this.CustomHead, {
+      return external_react_default.a.createElement(this.Head, {
         payPalClientID: payPalClientID
-      });
+      }, external_react_default.a.createElement("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1, maximum-scale=1.0"
+      }), external_react_default.a.createElement("link", {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "../../static/favicon.png",
+        key: "favicon"
+      }), external_react_default.a.createElement("script", {
+        src: "https://js.stripe.com/v3/",
+        key: "stripe"
+      }), payPalClientID && external_react_default.a.createElement("script", {
+        src: "https://www.paypal.com/sdk/js?client-id=".concat(payPalClientID, "&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper")
+      }));
     }
   }, {
     key: "renderSearch",
@@ -76712,7 +76667,7 @@ function (_Component) {
 }(external_react_["Component"]);
 /* harmony default export */ var layout = (layout_Layout);
 // CONCATENATED MODULE: ./src/index.js
-/* concated harmony reexport Config */__webpack_require__.d(__webpack_exports__, "Config", function() { return lib_config; });
+/* concated harmony reexport ShiftComponentsConfig */__webpack_require__.d(__webpack_exports__, "ShiftComponentsConfig", function() { return lib_config; });
 /* concated harmony reexport componentMapping */__webpack_require__.d(__webpack_exports__, "componentMapping", function() { return component_mapping; });
 /* concated harmony reexport FormErrors */__webpack_require__.d(__webpack_exports__, "FormErrors", function() { return form_errors; });
 /* concated harmony reexport Breadcrumb */__webpack_require__.d(__webpack_exports__, "Breadcrumb", function() { return breadcrumb; });
@@ -76792,7 +76747,6 @@ function (_Component) {
 /* concated harmony reexport StripeWrapper */__webpack_require__.d(__webpack_exports__, "StripeWrapper", function() { return stripe_wrapper; });
 /* concated harmony reexport NavBar */__webpack_require__.d(__webpack_exports__, "NavBar", function() { return navbar; });
 /* concated harmony reexport NavBarOption */__webpack_require__.d(__webpack_exports__, "NavBarOption", function() { return navbar_option; });
-/* concated harmony reexport CustomHead */__webpack_require__.d(__webpack_exports__, "CustomHead", function() { return custom_head; });
 /* concated harmony reexport Footer */__webpack_require__.d(__webpack_exports__, "Footer", function() { return layout_footer; });
 /* concated harmony reexport Layout */__webpack_require__.d(__webpack_exports__, "Layout", function() { return layout; });
 /* concated harmony reexport Minibag */__webpack_require__.d(__webpack_exports__, "Minibag", function() { return minibag; });
@@ -76931,7 +76885,6 @@ function (_Component) {
 /**
  * Layout Components
  */
-
 
 
 

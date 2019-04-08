@@ -134,7 +134,6 @@ export { default as NavBarOption } from './components/navigation/navbar-option'
 /**
  * Layout Components
  */
-export { default as CustomHead } from './components/layout/custom-head'
 export { default as Footer } from './components/layout/footer'
 export { default as Layout } from './components/layout/layout'
 export { default as Minibag } from './components/layout/minibag'
