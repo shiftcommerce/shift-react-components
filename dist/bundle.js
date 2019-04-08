@@ -74086,6 +74086,7 @@ function (_Component) {
             addressBook: addressBook,
             addressFormDisplayed: false,
             currentAddressId: currentAddressId,
+            onAddressDeleted: onAddressDeleted,
             onBookAddressSelected: onBookAddressSelected,
             onNewAddress: onNewAddress
           }), (addingNewAddress || currentAddress) && external_react_default.a.createElement(Form, {

@@ -93,6 +93,7 @@ class AccountAddresses extends Component {
                 addressBook={addressBook}
                 addressFormDisplayed={false}
                 currentAddressId={currentAddressId}
+                onAddressDeleted={onAddressDeleted}
                 onBookAddressSelected={onBookAddressSelected}
                 onNewAddress={onNewAddress}
               />
