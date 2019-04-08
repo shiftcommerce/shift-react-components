@@ -7,6 +7,7 @@ import componentMapping from '../../lib/component-mapping'
 
 // Assets
 import accountIcon from '../../static/account-icon.svg'
+import imgBagIcon from '../../static/bag-icon.svg'
 
 export class Layout extends Component {
   constructor (props) {
@@ -71,6 +72,36 @@ export class Layout extends Component {
     }
   }
 
+  /**
+ * Renders the basket icon
+ * @param  {number} lineItemsCount
+ * @return {string} - HTML markup for the component
+ */
+  renderCartLink(lineItemsCount) {
+    return (
+      <span className='c-minibag__cart' onClick={this.props.toggleMiniBag}>
+        <div className='c-minibag__cart-image'>
+          <span className='c-minibag__cart-image-count' >
+            {lineItemsCount}
+          </span>
+          <this.Image className='c-minibag__cart-image-icon' src={imgBagIcon} />
+        </div>
+        <span className='c-minibag__cart-label'>Basket</span>
+      </span>
+    )
+  }
+
+  renderBasket () {
+    const { cart, className } = this.props
+    const lineItemsCount = cart.line_items_count || 0
+
+    return (
+      <div className={classNames(className, 'c-header__minibag c-minibag')}>
+        { this.renderCartLink(lineItemsCount) }
+      </div>
+    )
+  }
+
   renderHeader () {
     const { cart, loggedIn, shrunk } = this.props
 
@@ -87,7 +118,13 @@ export class Layout extends Component {
               <this.Logo className='o-header__logo' />
               { this.renderMobileNav() }
               { this.renderHeaderAccount(loggedIn) }
-              <this.Minibag cart={cart} />
+              { this.renderBasket() }
+              <this.Minibag
+                cart={cart}
+                deleteItem={this.props.deleteItem} 
+                miniBagDisplayed={this.props.minibagDisplayed} 
+                toggleMiniBag={this.props.toggleMiniBag} 
+              />
               { this.renderSearch() }
             </div>
           </div>

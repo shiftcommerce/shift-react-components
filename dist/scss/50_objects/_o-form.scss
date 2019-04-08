@@ -221,6 +221,10 @@ $input-checkbox-spacing: 8px !default;
   margin-bottom: $global-spacing-unit-small;
 }
 
+.o-form__input-label {
+  font-weight: bold;
+}
+
 .o-form__wrapper {
   margin-bottom: $global-spacing-unit-small;
   padding: $global-spacing-unit-small;
