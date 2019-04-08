@@ -88,7 +88,6 @@ import StaticPageErrorDetails from '../components/static-page/error-details'
 /**
  * Layout Components
  */
-import CustomHead from '../components/layout/custom-head'
 import Footer from '../components/layout/footer'
 import Minibag from '../components/layout/minibag'
 
@@ -100,7 +99,6 @@ const mapping = {
   Button,
   Checkbox,
   ConditionalLink,
-  CustomHead,
   DropdownSelect,
   Flash,
   Footer,
