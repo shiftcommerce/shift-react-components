@@ -6,8 +6,11 @@ import { Formik, Form, Field } from 'formik'
 import AccountAddresses from '../../../src/components/account/addresses'
 import AddressBook from '../../../src/components/checkout/address-book'
 
+// Static
+import countries from '../../fixtures/countries'
+
 test('renders the form when adding a new address', () => {
-  const wrapper = mount(<AccountAddresses addingNewAddress addressBook={[]} />)
+  const wrapper = mount(<AccountAddresses addingNewAddress addressBook={[]} countries={countries} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -16,7 +19,7 @@ test('renders the form when adding a new address', () => {
 })
 
 test('renders the form when editing an existing address', () => {
-  const wrapper = mount(<AccountAddresses currentAddress={{}} addressBook={[]} />)
+  const wrapper = mount(<AccountAddresses currentAddress={{}} addressBook={[]} countries={countries} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -25,7 +28,7 @@ test('renders the form when editing an existing address', () => {
 })
 
 test("doesn't render a form when not editting or adding new addresses", () => {
-  const wrapper = mount(<AccountAddresses addressBook={[]} />)
+  const wrapper = mount(<AccountAddresses addressBook={[]} countries={countries} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -34,7 +37,7 @@ test("doesn't render a form when not editting or adding new addresses", () => {
 })
 
 test('renders the address book', () => {
-  const wrapper = mount(<AccountAddresses addressBook={[]} />)
+  const wrapper = mount(<AccountAddresses addressBook={[]} countries={countries} />)
 
   // Assert
   expect(wrapper).toMatchSnapshot()

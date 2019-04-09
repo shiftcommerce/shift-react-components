@@ -3,6 +3,20 @@
 exports[`doesn't render a form when not editting or adding new addresses 1`] = `
 <AccountAddresses
   addressBook={Array []}
+  countries={
+    Array [
+      Object {
+        "id": 1,
+        "title": "United Kingdom",
+        "value": "GB",
+      },
+      Object {
+        "id": 2,
+        "title": "United States",
+        "value": "US",
+      },
+    ]
+  }
 >
   <Formik
     enableReinitialize={true}
@@ -20,6 +34,8 @@ exports[`doesn't render a form when not editting or adding new addresses 1`] = `
         "lastName": "",
         "phone": "",
         "postcode": "",
+        "preferredBilling": "",
+        "preferredShipping": "",
       }
     }
     isInitialValid={false}
@@ -330,6 +346,20 @@ exports[`doesn't render a form when not editting or adding new addresses 1`] = `
 exports[`renders the address book 1`] = `
 <AccountAddresses
   addressBook={Array []}
+  countries={
+    Array [
+      Object {
+        "id": 1,
+        "title": "United Kingdom",
+        "value": "GB",
+      },
+      Object {
+        "id": 2,
+        "title": "United States",
+        "value": "US",
+      },
+    ]
+  }
 >
   <Formik
     enableReinitialize={true}
@@ -347,6 +377,8 @@ exports[`renders the address book 1`] = `
         "lastName": "",
         "phone": "",
         "postcode": "",
+        "preferredBilling": "",
+        "preferredShipping": "",
       }
     }
     isInitialValid={false}
@@ -658,6 +690,20 @@ exports[`renders the form when adding a new address 1`] = `
 <AccountAddresses
   addingNewAddress={true}
   addressBook={Array []}
+  countries={
+    Array [
+      Object {
+        "id": 1,
+        "title": "United Kingdom",
+        "value": "GB",
+      },
+      Object {
+        "id": 2,
+        "title": "United States",
+        "value": "US",
+      },
+    ]
+  }
 >
   <Formik
     enableReinitialize={true}
@@ -675,6 +721,8 @@ exports[`renders the form when adding a new address 1`] = `
         "lastName": "",
         "phone": "",
         "postcode": "",
+        "preferredBilling": "",
+        "preferredShipping": "",
       }
     }
     isInitialValid={false}
@@ -1004,6 +1052,8 @@ exports[`renders the form when adding a new address 1`] = `
               "lastName": "",
               "phone": "",
               "postcode": "",
+              "preferredBilling": "",
+              "preferredShipping": "",
             },
             "isSubmitting": false,
             "isValid": false,
@@ -1317,6 +1367,8 @@ exports[`renders the form when adding a new address 1`] = `
               "lastName": "",
               "phone": "",
               "postcode": "",
+              "preferredBilling": "",
+              "preferredShipping": "",
             },
           }
         }
@@ -1365,6 +1417,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -1678,6 +1732,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -1698,12 +1754,14 @@ exports[`renders the form when adding a new address 1`] = `
                     Choose…
                   </option>
                   <option
-                    value="uk"
+                    key="1"
+                    value="GB"
                   >
                     United Kingdom
                   </option>
                   <option
-                    value="us"
+                    key="2"
+                    value="US"
                   >
                     United States
                   </option>
@@ -1745,6 +1803,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -2058,6 +2118,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -2102,6 +2164,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -2415,6 +2479,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -2456,6 +2522,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -2769,6 +2837,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -2813,6 +2883,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -3126,6 +3198,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -3167,6 +3241,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -3480,6 +3556,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -3524,6 +3602,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -3837,6 +3917,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -3878,6 +3960,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -4191,6 +4275,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -4235,6 +4321,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -4548,6 +4636,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -4589,6 +4679,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -4902,6 +4994,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -4946,6 +5040,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -5259,6 +5355,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -5300,6 +5398,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -5613,6 +5713,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -5657,6 +5759,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -5970,6 +6074,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -6011,6 +6117,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -6324,6 +6432,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -6368,6 +6478,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -6681,6 +6793,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -6722,6 +6836,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -7035,6 +7151,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -7079,6 +7197,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -7392,6 +7512,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -7433,6 +7555,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -7746,6 +7870,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -7790,6 +7916,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -8103,6 +8231,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -8144,6 +8274,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -8457,6 +8589,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -8501,6 +8635,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -8814,6 +8950,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -8855,6 +8993,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": false,
@@ -9168,6 +9308,8 @@ exports[`renders the form when adding a new address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -9212,6 +9354,8 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": false,
@@ -9525,12 +9669,1458 @@ exports[`renders the form when adding a new address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
                 name="label"
               />
             </FormikConnect(ErrorMessageImpl)>
+          </div>
+          <div
+            className="o-form__checkbox-group"
+          >
+            <FormikConnect(FieldInner)
+              checked=""
+              name="preferredShipping"
+              type="checkbox"
+            >
+              <FieldInner
+                checked=""
+                formik={
+                  Object {
+                    "dirty": false,
+                    "errors": Object {},
+                    "handleBlur": [Function],
+                    "handleChange": [Function],
+                    "handleReset": [Function],
+                    "handleSubmit": [Function],
+                    "initialValues": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                    "isSubmitting": false,
+                    "isValid": false,
+                    "isValidating": false,
+                    "registerField": [Function],
+                    "resetForm": [Function],
+                    "setError": [Function],
+                    "setErrors": [Function],
+                    "setFieldError": [Function],
+                    "setFieldTouched": [Function],
+                    "setFieldValue": [Function],
+                    "setFormikState": [Function],
+                    "setStatus": [Function],
+                    "setSubmitting": [Function],
+                    "setTouched": [Function],
+                    "setValues": [Function],
+                    "status": undefined,
+                    "submitCount": 0,
+                    "submitForm": [Function],
+                    "touched": Object {},
+                    "unregisterField": [Function],
+                    "validate": undefined,
+                    "validateField": [Function],
+                    "validateForm": [Function],
+                    "validateOnBlur": true,
+                    "validateOnChange": true,
+                    "validationSchema": ObjectSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_defaultDefault": [Function],
+                      "_deps": Array [],
+                      "_excludedEdges": Array [],
+                      "_exclusive": Object {},
+                      "_mutate": false,
+                      "_nodes": Array [
+                        "email",
+                        "phone",
+                        "city",
+                        "postcode",
+                        "addressLine1",
+                        "lastName",
+                        "firstName",
+                        "countryCode",
+                      ],
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "object",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "fields": Object {
+                        "addressLine1": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "city": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "countryCode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "email": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "firstName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "lastName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "phone": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "postcode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                      },
+                      "tests": Array [],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                    "values": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                  }
+                }
+                name="preferredShipping"
+                type="checkbox"
+              >
+                <input
+                  checked=""
+                  name="preferredShipping"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </FieldInner>
+            </FormikConnect(FieldInner)>
+            <label
+              className="o-form__input-label"
+              htmlFor="preferredShipping"
+            >
+              Preferred shipping address
+            </label>
+            <div
+              className="o-form__input-field__error"
+            >
+              <FormikConnect(ErrorMessageImpl)
+                name="preferredShipping"
+              >
+                <ErrorMessageImpl
+                  formik={
+                    Object {
+                      "dirty": false,
+                      "errors": Object {},
+                      "handleBlur": [Function],
+                      "handleChange": [Function],
+                      "handleReset": [Function],
+                      "handleSubmit": [Function],
+                      "initialValues": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                      "isSubmitting": false,
+                      "isValid": false,
+                      "isValidating": false,
+                      "registerField": [Function],
+                      "resetForm": [Function],
+                      "setError": [Function],
+                      "setErrors": [Function],
+                      "setFieldError": [Function],
+                      "setFieldTouched": [Function],
+                      "setFieldValue": [Function],
+                      "setFormikState": [Function],
+                      "setStatus": [Function],
+                      "setSubmitting": [Function],
+                      "setTouched": [Function],
+                      "setValues": [Function],
+                      "status": undefined,
+                      "submitCount": 0,
+                      "submitForm": [Function],
+                      "touched": Object {},
+                      "unregisterField": [Function],
+                      "validate": undefined,
+                      "validateField": [Function],
+                      "validateForm": [Function],
+                      "validateOnBlur": true,
+                      "validateOnChange": true,
+                      "validationSchema": ObjectSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_defaultDefault": [Function],
+                        "_deps": Array [],
+                        "_excludedEdges": Array [],
+                        "_exclusive": Object {},
+                        "_mutate": false,
+                        "_nodes": Array [
+                          "email",
+                          "phone",
+                          "city",
+                          "postcode",
+                          "addressLine1",
+                          "lastName",
+                          "firstName",
+                          "countryCode",
+                        ],
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "object",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "fields": Object {
+                          "addressLine1": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "city": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "countryCode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "email": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "firstName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "lastName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "phone": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "postcode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "tests": Array [],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                      "values": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                    }
+                  }
+                  name="preferredShipping"
+                />
+              </FormikConnect(ErrorMessageImpl)>
+            </div>
+          </div>
+          <div
+            className="o-form__checkbox-group"
+          >
+            <FormikConnect(FieldInner)
+              checked=""
+              name="preferredBilling"
+              type="checkbox"
+            >
+              <FieldInner
+                checked=""
+                formik={
+                  Object {
+                    "dirty": false,
+                    "errors": Object {},
+                    "handleBlur": [Function],
+                    "handleChange": [Function],
+                    "handleReset": [Function],
+                    "handleSubmit": [Function],
+                    "initialValues": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                    "isSubmitting": false,
+                    "isValid": false,
+                    "isValidating": false,
+                    "registerField": [Function],
+                    "resetForm": [Function],
+                    "setError": [Function],
+                    "setErrors": [Function],
+                    "setFieldError": [Function],
+                    "setFieldTouched": [Function],
+                    "setFieldValue": [Function],
+                    "setFormikState": [Function],
+                    "setStatus": [Function],
+                    "setSubmitting": [Function],
+                    "setTouched": [Function],
+                    "setValues": [Function],
+                    "status": undefined,
+                    "submitCount": 0,
+                    "submitForm": [Function],
+                    "touched": Object {},
+                    "unregisterField": [Function],
+                    "validate": undefined,
+                    "validateField": [Function],
+                    "validateForm": [Function],
+                    "validateOnBlur": true,
+                    "validateOnChange": true,
+                    "validationSchema": ObjectSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_defaultDefault": [Function],
+                      "_deps": Array [],
+                      "_excludedEdges": Array [],
+                      "_exclusive": Object {},
+                      "_mutate": false,
+                      "_nodes": Array [
+                        "email",
+                        "phone",
+                        "city",
+                        "postcode",
+                        "addressLine1",
+                        "lastName",
+                        "firstName",
+                        "countryCode",
+                      ],
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "object",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "fields": Object {
+                        "addressLine1": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "city": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "countryCode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "email": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "firstName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "lastName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "phone": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "postcode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                      },
+                      "tests": Array [],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                    "values": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                  }
+                }
+                name="preferredBilling"
+                type="checkbox"
+              >
+                <input
+                  checked=""
+                  name="preferredBilling"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </FieldInner>
+            </FormikConnect(FieldInner)>
+            <label
+              className="o-form__input-label"
+              htmlFor="preferredBilling"
+            >
+              Preferred billing address
+            </label>
+            <div
+              className="o-form__input-field__error"
+            >
+              <FormikConnect(ErrorMessageImpl)
+                name="preferredBilling"
+              >
+                <ErrorMessageImpl
+                  formik={
+                    Object {
+                      "dirty": false,
+                      "errors": Object {},
+                      "handleBlur": [Function],
+                      "handleChange": [Function],
+                      "handleReset": [Function],
+                      "handleSubmit": [Function],
+                      "initialValues": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                      "isSubmitting": false,
+                      "isValid": false,
+                      "isValidating": false,
+                      "registerField": [Function],
+                      "resetForm": [Function],
+                      "setError": [Function],
+                      "setErrors": [Function],
+                      "setFieldError": [Function],
+                      "setFieldTouched": [Function],
+                      "setFieldValue": [Function],
+                      "setFormikState": [Function],
+                      "setStatus": [Function],
+                      "setSubmitting": [Function],
+                      "setTouched": [Function],
+                      "setValues": [Function],
+                      "status": undefined,
+                      "submitCount": 0,
+                      "submitForm": [Function],
+                      "touched": Object {},
+                      "unregisterField": [Function],
+                      "validate": undefined,
+                      "validateField": [Function],
+                      "validateForm": [Function],
+                      "validateOnBlur": true,
+                      "validateOnChange": true,
+                      "validationSchema": ObjectSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_defaultDefault": [Function],
+                        "_deps": Array [],
+                        "_excludedEdges": Array [],
+                        "_exclusive": Object {},
+                        "_mutate": false,
+                        "_nodes": Array [
+                          "email",
+                          "phone",
+                          "city",
+                          "postcode",
+                          "addressLine1",
+                          "lastName",
+                          "firstName",
+                          "countryCode",
+                        ],
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "object",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "fields": Object {
+                          "addressLine1": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "city": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "countryCode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "email": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "firstName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "lastName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "phone": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "postcode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "tests": Array [],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                      "values": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                    }
+                  }
+                  name="preferredBilling"
+                />
+              </FormikConnect(ErrorMessageImpl)>
+            </div>
           </div>
           <Button
             aria-label="Update details"
@@ -9561,6 +11151,20 @@ exports[`renders the form when adding a new address 1`] = `
 exports[`renders the form when editing an existing address 1`] = `
 <AccountAddresses
   addressBook={Array []}
+  countries={
+    Array [
+      Object {
+        "id": 1,
+        "title": "United Kingdom",
+        "value": "GB",
+      },
+      Object {
+        "id": 2,
+        "title": "United States",
+        "value": "US",
+      },
+    ]
+  }
   currentAddress={Object {}}
 >
   <Formik
@@ -9579,6 +11183,8 @@ exports[`renders the form when editing an existing address 1`] = `
         "lastName": "",
         "phone": "",
         "postcode": "",
+        "preferredBilling": "",
+        "preferredShipping": "",
       }
     }
     isInitialValid={true}
@@ -9908,6 +11514,8 @@ exports[`renders the form when editing an existing address 1`] = `
               "lastName": "",
               "phone": "",
               "postcode": "",
+              "preferredBilling": "",
+              "preferredShipping": "",
             },
             "isSubmitting": false,
             "isValid": true,
@@ -10221,6 +11829,8 @@ exports[`renders the form when editing an existing address 1`] = `
               "lastName": "",
               "phone": "",
               "postcode": "",
+              "preferredBilling": "",
+              "preferredShipping": "",
             },
           }
         }
@@ -10269,6 +11879,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -10582,6 +12194,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -10602,12 +12216,14 @@ exports[`renders the form when editing an existing address 1`] = `
                     Choose…
                   </option>
                   <option
-                    value="uk"
+                    key="1"
+                    value="GB"
                   >
                     United Kingdom
                   </option>
                   <option
-                    value="us"
+                    key="2"
+                    value="US"
                   >
                     United States
                   </option>
@@ -10649,6 +12265,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -10962,6 +12580,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -11006,6 +12626,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -11319,6 +12941,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -11360,6 +12984,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -11673,6 +13299,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -11717,6 +13345,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -12030,6 +13660,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -12071,6 +13703,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -12384,6 +14018,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -12428,6 +14064,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -12741,6 +14379,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -12782,6 +14422,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -13095,6 +14737,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -13139,6 +14783,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -13452,6 +15098,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -13493,6 +15141,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -13806,6 +15456,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -13850,6 +15502,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -14163,6 +15817,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -14204,6 +15860,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -14517,6 +16175,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -14561,6 +16221,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -14874,6 +16536,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -14915,6 +16579,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -15228,6 +16894,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -15272,6 +16940,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -15585,6 +17255,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -15626,6 +17298,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -15939,6 +17613,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -15983,6 +17659,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -16296,6 +17974,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -16337,6 +18017,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -16650,6 +18332,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -16694,6 +18378,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -17007,6 +18693,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -17048,6 +18736,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -17361,6 +19051,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -17405,6 +19097,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -17718,6 +19412,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
@@ -17759,6 +19455,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                   "isSubmitting": false,
                   "isValid": true,
@@ -18072,6 +19770,8 @@ exports[`renders the form when editing an existing address 1`] = `
                     "lastName": "",
                     "phone": "",
                     "postcode": "",
+                    "preferredBilling": "",
+                    "preferredShipping": "",
                   },
                 }
               }
@@ -18116,6 +19816,8 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                     "isSubmitting": false,
                     "isValid": true,
@@ -18429,12 +20131,1458 @@ exports[`renders the form when editing an existing address 1`] = `
                       "lastName": "",
                       "phone": "",
                       "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
                     },
                   }
                 }
                 name="label"
               />
             </FormikConnect(ErrorMessageImpl)>
+          </div>
+          <div
+            className="o-form__checkbox-group"
+          >
+            <FormikConnect(FieldInner)
+              checked=""
+              name="preferredShipping"
+              type="checkbox"
+            >
+              <FieldInner
+                checked=""
+                formik={
+                  Object {
+                    "dirty": false,
+                    "errors": Object {},
+                    "handleBlur": [Function],
+                    "handleChange": [Function],
+                    "handleReset": [Function],
+                    "handleSubmit": [Function],
+                    "initialValues": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                    "isSubmitting": false,
+                    "isValid": true,
+                    "isValidating": false,
+                    "registerField": [Function],
+                    "resetForm": [Function],
+                    "setError": [Function],
+                    "setErrors": [Function],
+                    "setFieldError": [Function],
+                    "setFieldTouched": [Function],
+                    "setFieldValue": [Function],
+                    "setFormikState": [Function],
+                    "setStatus": [Function],
+                    "setSubmitting": [Function],
+                    "setTouched": [Function],
+                    "setValues": [Function],
+                    "status": undefined,
+                    "submitCount": 0,
+                    "submitForm": [Function],
+                    "touched": Object {},
+                    "unregisterField": [Function],
+                    "validate": undefined,
+                    "validateField": [Function],
+                    "validateForm": [Function],
+                    "validateOnBlur": true,
+                    "validateOnChange": true,
+                    "validationSchema": ObjectSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_defaultDefault": [Function],
+                      "_deps": Array [],
+                      "_excludedEdges": Array [],
+                      "_exclusive": Object {},
+                      "_mutate": false,
+                      "_nodes": Array [
+                        "email",
+                        "phone",
+                        "city",
+                        "postcode",
+                        "addressLine1",
+                        "lastName",
+                        "firstName",
+                        "countryCode",
+                      ],
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "object",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "fields": Object {
+                        "addressLine1": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "city": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "countryCode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "email": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "firstName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "lastName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "phone": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "postcode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                      },
+                      "tests": Array [],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                    "values": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                  }
+                }
+                name="preferredShipping"
+                type="checkbox"
+              >
+                <input
+                  checked=""
+                  name="preferredShipping"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </FieldInner>
+            </FormikConnect(FieldInner)>
+            <label
+              className="o-form__input-label"
+              htmlFor="preferredShipping"
+            >
+              Preferred shipping address
+            </label>
+            <div
+              className="o-form__input-field__error"
+            >
+              <FormikConnect(ErrorMessageImpl)
+                name="preferredShipping"
+              >
+                <ErrorMessageImpl
+                  formik={
+                    Object {
+                      "dirty": false,
+                      "errors": Object {},
+                      "handleBlur": [Function],
+                      "handleChange": [Function],
+                      "handleReset": [Function],
+                      "handleSubmit": [Function],
+                      "initialValues": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                      "isSubmitting": false,
+                      "isValid": true,
+                      "isValidating": false,
+                      "registerField": [Function],
+                      "resetForm": [Function],
+                      "setError": [Function],
+                      "setErrors": [Function],
+                      "setFieldError": [Function],
+                      "setFieldTouched": [Function],
+                      "setFieldValue": [Function],
+                      "setFormikState": [Function],
+                      "setStatus": [Function],
+                      "setSubmitting": [Function],
+                      "setTouched": [Function],
+                      "setValues": [Function],
+                      "status": undefined,
+                      "submitCount": 0,
+                      "submitForm": [Function],
+                      "touched": Object {},
+                      "unregisterField": [Function],
+                      "validate": undefined,
+                      "validateField": [Function],
+                      "validateForm": [Function],
+                      "validateOnBlur": true,
+                      "validateOnChange": true,
+                      "validationSchema": ObjectSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_defaultDefault": [Function],
+                        "_deps": Array [],
+                        "_excludedEdges": Array [],
+                        "_exclusive": Object {},
+                        "_mutate": false,
+                        "_nodes": Array [
+                          "email",
+                          "phone",
+                          "city",
+                          "postcode",
+                          "addressLine1",
+                          "lastName",
+                          "firstName",
+                          "countryCode",
+                        ],
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "object",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "fields": Object {
+                          "addressLine1": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "city": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "countryCode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "email": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "firstName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "lastName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "phone": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "postcode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "tests": Array [],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                      "values": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                    }
+                  }
+                  name="preferredShipping"
+                />
+              </FormikConnect(ErrorMessageImpl)>
+            </div>
+          </div>
+          <div
+            className="o-form__checkbox-group"
+          >
+            <FormikConnect(FieldInner)
+              checked=""
+              name="preferredBilling"
+              type="checkbox"
+            >
+              <FieldInner
+                checked=""
+                formik={
+                  Object {
+                    "dirty": false,
+                    "errors": Object {},
+                    "handleBlur": [Function],
+                    "handleChange": [Function],
+                    "handleReset": [Function],
+                    "handleSubmit": [Function],
+                    "initialValues": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                    "isSubmitting": false,
+                    "isValid": true,
+                    "isValidating": false,
+                    "registerField": [Function],
+                    "resetForm": [Function],
+                    "setError": [Function],
+                    "setErrors": [Function],
+                    "setFieldError": [Function],
+                    "setFieldTouched": [Function],
+                    "setFieldValue": [Function],
+                    "setFormikState": [Function],
+                    "setStatus": [Function],
+                    "setSubmitting": [Function],
+                    "setTouched": [Function],
+                    "setValues": [Function],
+                    "status": undefined,
+                    "submitCount": 0,
+                    "submitForm": [Function],
+                    "touched": Object {},
+                    "unregisterField": [Function],
+                    "validate": undefined,
+                    "validateField": [Function],
+                    "validateForm": [Function],
+                    "validateOnBlur": true,
+                    "validateOnChange": true,
+                    "validationSchema": ObjectSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_defaultDefault": [Function],
+                      "_deps": Array [],
+                      "_excludedEdges": Array [],
+                      "_exclusive": Object {},
+                      "_mutate": false,
+                      "_nodes": Array [
+                        "email",
+                        "phone",
+                        "city",
+                        "postcode",
+                        "addressLine1",
+                        "lastName",
+                        "firstName",
+                        "countryCode",
+                      ],
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "object",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "fields": Object {
+                        "addressLine1": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "city": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "countryCode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "email": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "firstName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "lastName": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "phone": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                            "undefined": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                        "postcode": StringSchema {
+                          "_blacklist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "_conditions": Array [],
+                          "_deps": Array [],
+                          "_exclusive": Object {
+                            "required": false,
+                          },
+                          "_mutate": false,
+                          "_options": Object {
+                            "abortEarly": true,
+                            "recursive": true,
+                          },
+                          "_type": "string",
+                          "_typeError": [Function],
+                          "_whitelist": RefSet {
+                            "list": Set {},
+                            "refs": Map {},
+                          },
+                          "tests": Array [
+                            [Function],
+                            [Function],
+                          ],
+                          "transforms": Array [
+                            [Function],
+                          ],
+                        },
+                      },
+                      "tests": Array [],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                    "values": Object {
+                      "addressLine1": "",
+                      "addressLine2": "",
+                      "city": "",
+                      "company": "",
+                      "countryCode": "",
+                      "county": "",
+                      "email": "",
+                      "firstName": "",
+                      "label": "",
+                      "lastName": "",
+                      "phone": "",
+                      "postcode": "",
+                      "preferredBilling": "",
+                      "preferredShipping": "",
+                    },
+                  }
+                }
+                name="preferredBilling"
+                type="checkbox"
+              >
+                <input
+                  checked=""
+                  name="preferredBilling"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </FieldInner>
+            </FormikConnect(FieldInner)>
+            <label
+              className="o-form__input-label"
+              htmlFor="preferredBilling"
+            >
+              Preferred billing address
+            </label>
+            <div
+              className="o-form__input-field__error"
+            >
+              <FormikConnect(ErrorMessageImpl)
+                name="preferredBilling"
+              >
+                <ErrorMessageImpl
+                  formik={
+                    Object {
+                      "dirty": false,
+                      "errors": Object {},
+                      "handleBlur": [Function],
+                      "handleChange": [Function],
+                      "handleReset": [Function],
+                      "handleSubmit": [Function],
+                      "initialValues": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                      "isSubmitting": false,
+                      "isValid": true,
+                      "isValidating": false,
+                      "registerField": [Function],
+                      "resetForm": [Function],
+                      "setError": [Function],
+                      "setErrors": [Function],
+                      "setFieldError": [Function],
+                      "setFieldTouched": [Function],
+                      "setFieldValue": [Function],
+                      "setFormikState": [Function],
+                      "setStatus": [Function],
+                      "setSubmitting": [Function],
+                      "setTouched": [Function],
+                      "setValues": [Function],
+                      "status": undefined,
+                      "submitCount": 0,
+                      "submitForm": [Function],
+                      "touched": Object {},
+                      "unregisterField": [Function],
+                      "validate": undefined,
+                      "validateField": [Function],
+                      "validateForm": [Function],
+                      "validateOnBlur": true,
+                      "validateOnChange": true,
+                      "validationSchema": ObjectSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_defaultDefault": [Function],
+                        "_deps": Array [],
+                        "_excludedEdges": Array [],
+                        "_exclusive": Object {},
+                        "_mutate": false,
+                        "_nodes": Array [
+                          "email",
+                          "phone",
+                          "city",
+                          "postcode",
+                          "addressLine1",
+                          "lastName",
+                          "firstName",
+                          "countryCode",
+                        ],
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "object",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "fields": Object {
+                          "addressLine1": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "city": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "countryCode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "email": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "firstName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "lastName": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "phone": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                              "undefined": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                          "postcode": StringSchema {
+                            "_blacklist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "_conditions": Array [],
+                            "_deps": Array [],
+                            "_exclusive": Object {
+                              "required": false,
+                            },
+                            "_mutate": false,
+                            "_options": Object {
+                              "abortEarly": true,
+                              "recursive": true,
+                            },
+                            "_type": "string",
+                            "_typeError": [Function],
+                            "_whitelist": RefSet {
+                              "list": Set {},
+                              "refs": Map {},
+                            },
+                            "tests": Array [
+                              [Function],
+                              [Function],
+                            ],
+                            "transforms": Array [
+                              [Function],
+                            ],
+                          },
+                        },
+                        "tests": Array [],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                      "values": Object {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "company": "",
+                        "countryCode": "",
+                        "county": "",
+                        "email": "",
+                        "firstName": "",
+                        "label": "",
+                        "lastName": "",
+                        "phone": "",
+                        "postcode": "",
+                        "preferredBilling": "",
+                        "preferredShipping": "",
+                      },
+                    }
+                  }
+                  name="preferredBilling"
+                />
+              </FormikConnect(ErrorMessageImpl)>
+            </div>
           </div>
           <Button
             aria-label="Update details"
