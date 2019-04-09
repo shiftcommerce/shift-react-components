@@ -74062,6 +74062,7 @@ function (_Component) {
       var _this$props = this.props,
           addingNewAddress = _this$props.addingNewAddress,
           addressBook = _this$props.addressBook,
+          countries = _this$props.countries,
           currentAddress = _this$props.currentAddress,
           currentAddressId = _this$props.currentAddressId,
           onAddressCreated = _this$props.onAddressCreated,
@@ -74112,11 +74113,12 @@ function (_Component) {
             placeholder: "Choose\u2026"
           }, external_react_default.a.createElement("option", {
             value: ""
-          }, "Choose\u2026"), external_react_default.a.createElement("option", {
-            value: "uk"
-          }, "United Kingdom"), external_react_default.a.createElement("option", {
-            value: "us"
-          }, "United States"))), external_react_default.a.createElement("label", {
+          }, "Choose\u2026"), countries.map(function (c) {
+            return external_react_default.a.createElement("option", {
+              value: c.value,
+              key: c.id
+            }, c.title);
+          }))), external_react_default.a.createElement("label", {
             className: "o-form__input-label",
             htmlFor: "firstName"
           }, "First name *"), external_react_default.a.createElement(Field, {

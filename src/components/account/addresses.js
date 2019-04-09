@@ -52,6 +52,7 @@ class AccountAddresses extends Component {
     const {
       addingNewAddress,
       addressBook,
+      countries,
       currentAddress,
       currentAddressId,
       onAddressCreated,
@@ -107,8 +108,11 @@ class AccountAddresses extends Component {
                 <div className='o-form__input-group'>
                   <Field component='select' name='countryCode' className='o-form__input-field o-form__input-block' placeholder='Choose…'>
                     <option value=''>Choose…</option>
-                    <option value='gb'>United Kingdom</option>
-                    <option value='us'>United States</option>
+                    { countries.map(c => {
+                      return (
+                        <option value={c.value} key={c.id}>{c.title}</option>
+                      )
+                    }) }
                   </Field>
                 </div>
 
