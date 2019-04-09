@@ -76623,7 +76623,7 @@ function (_Component) {
       var bodyClasses = classnames_default()({
         'o-body': skipHeader
       });
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, skipHeader ? this.renderHeader() : this.renderCheckoutHeader(), external_react_default.a.createElement("div", {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, skipHeader ? this.renderHeader() : null, external_react_default.a.createElement("div", {
         className: bodyClasses
       }, children), external_react_default.a.createElement("div", {
         className: "o-footer"

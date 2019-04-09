@@ -132,7 +132,6 @@ export class Layout extends Component {
     )
   }
 
-
   renderSearch () {
     const {
       search: { filterCategory },
@@ -160,7 +159,7 @@ export class Layout extends Component {
 
     return (
       <>
-        { skipHeader ? this.renderHeader() : this.renderCheckoutHeader() }
+        { skipHeader ? this.renderHeader() : null }
         <div className={bodyClasses}>
           { children }
         </div>
