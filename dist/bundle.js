@@ -76472,7 +76472,6 @@ function (_Component) {
     layout_classCallCheck(this, Layout);
 
     _this = layout_possibleConstructorReturn(this, layout_getPrototypeOf(Layout).call(this, props));
-    _this.Head = component_mapping('Head');
     _this.Footer = component_mapping('Footer');
     _this.Image = component_mapping('Image');
     _this.Link = component_mapping('Link');
@@ -76585,16 +76584,7 @@ function (_Component) {
       var headerClasses = classnames_default()('o-header', {
         'o-header--shrunk': shrunk
       });
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.Head, null, external_react_default.a.createElement("meta", {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1, maximum-scale=1.0"
-      }), external_react_default.a.createElement("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "../../static/favicon.png",
-        key: "favicon"
-      })), external_react_default.a.createElement("div", {
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: headerClasses
       }, external_react_default.a.createElement("div", {
         className: "o-header__top"
@@ -76608,28 +76598,6 @@ function (_Component) {
         miniBagDisplayed: this.props.minibagDisplayed,
         toggleMiniBag: this.props.toggleMiniBag
       }), this.renderSearch())), this.renderNav()));
-    }
-  }, {
-    key: "renderCheckoutHeader",
-    value: function renderCheckoutHeader() {
-      var payPalClientID = this.props.payPalClientID;
-      return external_react_default.a.createElement(this.Head, {
-        payPalClientID: payPalClientID
-      }, external_react_default.a.createElement("meta", {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1, maximum-scale=1.0"
-      }), external_react_default.a.createElement("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "../../static/favicon.png",
-        key: "favicon"
-      }), external_react_default.a.createElement("script", {
-        src: "https://js.stripe.com/v3/",
-        key: "stripe"
-      }), payPalClientID && external_react_default.a.createElement("script", {
-        src: "https://www.paypal.com/sdk/js?client-id=".concat(payPalClientID, "&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper")
-      }));
     }
   }, {
     key: "renderSearch",
@@ -76667,7 +76635,7 @@ function (_Component) {
 }(external_react_["Component"]);
 /* harmony default export */ var layout = (layout_Layout);
 // CONCATENATED MODULE: ./src/index.js
-/* concated harmony reexport ShiftComponentsConfig */__webpack_require__.d(__webpack_exports__, "ShiftComponentsConfig", function() { return lib_config; });
+/* concated harmony reexport Config */__webpack_require__.d(__webpack_exports__, "Config", function() { return lib_config; });
 /* concated harmony reexport componentMapping */__webpack_require__.d(__webpack_exports__, "componentMapping", function() { return component_mapping; });
 /* concated harmony reexport FormErrors */__webpack_require__.d(__webpack_exports__, "FormErrors", function() { return form_errors; });
 /* concated harmony reexport Breadcrumb */__webpack_require__.d(__webpack_exports__, "Breadcrumb", function() { return breadcrumb; });
