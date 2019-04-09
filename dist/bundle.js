@@ -74100,7 +74100,9 @@ function (_Component) {
           }, external_react_default.a.createElement("label", {
             className: "o-form__input-label",
             htmlFor: "countryCode"
-          }, "Country *"), external_react_default.a.createElement(Field, {
+          }, "Country *"), external_react_default.a.createElement("div", {
+            className: "o-form__input-group"
+          }, external_react_default.a.createElement(Field, {
             component: "select",
             name: "countryCode",
             className: "o-form__input-field o-form__input-block",
@@ -74111,7 +74113,7 @@ function (_Component) {
             value: "uk"
           }, "United Kingdom"), external_react_default.a.createElement("option", {
             value: "us"
-          }, "United States")), external_react_default.a.createElement("label", {
+          }, "United States"))), external_react_default.a.createElement("label", {
             className: "o-form__input-label",
             htmlFor: "firstName"
           }, "First name *"), external_react_default.a.createElement(Field, {

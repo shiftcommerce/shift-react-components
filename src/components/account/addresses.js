@@ -102,11 +102,13 @@ class AccountAddresses extends Component {
               />
               { (addingNewAddress || currentAddress) && <Form className="o-form__wrapper o-form__background">
                 <label className='o-form__input-label' htmlFor='countryCode'>Country *</label>
-                <Field component="select" name="countryCode" className='o-form__input-field o-form__input-block' placeholder='Choose…'>
-                  <option value="">Choose…</option>
-                  <option value="uk">United Kingdom</option>
-                  <option value="us">United States</option>
-                </Field>
+                <div className='o-form__input-group'>
+                  <Field component='select' name='countryCode' className='o-form__input-field o-form__input-block' placeholder='Choose…'>
+                    <option value=''>Choose…</option>
+                    <option value='uk'>United Kingdom</option>
+                    <option value='us'>United States</option>
+                  </Field>
+                </div>
 
                 <label className='o-form__input-label' htmlFor='firstName'>First name *</label>
                 <Field type='text' name='firstName' className='o-form__input-field o-form__input-block' />
