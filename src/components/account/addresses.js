@@ -23,7 +23,7 @@ class AccountAddresses extends Component {
       countryCode: t(currentAddress, 'country').safeObject || '',
       firstName: t(currentAddress, 'first_name').safeObject || '',
       lastName: t(currentAddress, 'last_name').safeObject || '',
-      company: t(currentAddress, 'meta_attributes.company.value').safeObject || '',
+      company: t(currentAddress, 'meta_attributes.company_name.value').safeObject || '',
       addressLine1: t(currentAddress, 'address_line_1').safeObject || '',
       addressLine2: t(currentAddress, 'address_line_2').safeObject || '',
       postcode: t(currentAddress, 'postcode').safeObject || '',
@@ -39,13 +39,16 @@ class AccountAddresses extends Component {
     switch (status) {
       case 'success-created':
         return (<this.Flash modifier='success' text='Address saved.' />)
+      case 'success-updated':
+        return (<this.Flash modifier='success' text='Address updated.' />)
       case 'error':
         return (<this.Flash modifier='error' text='Oops, there was an error submitting your form.' />)
     }
   }
 
   render () {
-    const { addingNewAddress,
+    const {
+      addingNewAddress,
       addressBook,
       currentAddress,
       currentAddressId,
@@ -92,7 +95,7 @@ class AccountAddresses extends Component {
               <this.AddressBook
                 addressBook={addressBook}
                 addressFormDisplayed={false}
-                currentAddressId={currentAddressId}
+                currentAddressId={currentAddress && currentAddress.id}
                 onAddressDeleted={onAddressDeleted}
                 onBookAddressSelected={onBookAddressSelected}
                 onNewAddress={onNewAddress}

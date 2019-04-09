@@ -74018,7 +74018,7 @@ function (_Component) {
         countryCode: lib_default()(currentAddress, 'country').safeObject || '',
         firstName: lib_default()(currentAddress, 'first_name').safeObject || '',
         lastName: lib_default()(currentAddress, 'last_name').safeObject || '',
-        company: lib_default()(currentAddress, 'meta_attributes.company.value').safeObject || '',
+        company: lib_default()(currentAddress, 'meta_attributes.company_name.value').safeObject || '',
         addressLine1: lib_default()(currentAddress, 'address_line_1').safeObject || '',
         addressLine2: lib_default()(currentAddress, 'address_line_2').safeObject || '',
         postcode: lib_default()(currentAddress, 'postcode').safeObject || '',
@@ -74037,6 +74037,12 @@ function (_Component) {
           return external_react_default.a.createElement(this.Flash, {
             modifier: "success",
             text: "Address saved."
+          });
+
+        case 'success-updated':
+          return external_react_default.a.createElement(this.Flash, {
+            modifier: "success",
+            text: "Address updated."
           });
 
         case 'error':
@@ -74085,7 +74091,7 @@ function (_Component) {
           return external_react_default.a.createElement(external_react_default.a.Fragment, null, _this2.renderFlash(status), external_react_default.a.createElement(_this2.AddressBook, {
             addressBook: addressBook,
             addressFormDisplayed: false,
-            currentAddressId: currentAddressId,
+            currentAddressId: currentAddress && currentAddress.id,
             onAddressDeleted: onAddressDeleted,
             onBookAddressSelected: onBookAddressSelected,
             onNewAddress: onNewAddress
