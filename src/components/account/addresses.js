@@ -31,7 +31,9 @@ class AccountAddresses extends Component {
       county: t(currentAddress, 'state').safeObject || '',
       phone: t(currentAddress, 'meta_attributes.phone_number.value').safeObject || '',
       email: t(currentAddress, 'meta_attributes.email.value').safeObject || '',
-      label: t(currentAddress, 'meta_attributes.label.value').safeObject || ''
+      label: t(currentAddress, 'meta_attributes.label.value').safeObject || '',
+      preferredShipping: t(currentAddress, 'preferred_shipping').safeObject || '',
+      preferredBilling: t(currentAddress, 'preferred_billing').safeObject || ''
     }
   }
 
@@ -87,7 +89,7 @@ class AccountAddresses extends Component {
         initialValues={this.getCurrentAddress()}
         validationSchema={validationSchema}
         onSubmit={currentAddress ? onAddressUpdated : onAddressCreated}
-        render={({ isSubmitting, isValid, status }) => {
+        render={({ isSubmitting, isValid, status, values }) => {
           const submitEnabled = isValid && !isSubmitting
           return (
             <>
@@ -105,7 +107,7 @@ class AccountAddresses extends Component {
                 <div className='o-form__input-group'>
                   <Field component='select' name='countryCode' className='o-form__input-field o-form__input-block' placeholder='Choose…'>
                     <option value=''>Choose…</option>
-                    <option value='uk'>United Kingdom</option>
+                    <option value='gb'>United Kingdom</option>
                     <option value='us'>United States</option>
                   </Field>
                 </div>
@@ -174,6 +176,22 @@ class AccountAddresses extends Component {
                 <Field type='text' name='label' className='o-form__input-field o-form__input-block' />
                 <div className='o-form__input-field__error'>
                   <ErrorMessage name='label' />
+                </div>
+
+                <div className='o-form__checkbox-group'>
+                  <Field type='checkbox' name='preferredShipping' checked={values.preferredShipping} />
+                  <label className='o-form__input-label' htmlFor='preferredShipping'>Preferred shipping address</label>
+                  <div className='o-form__input-field__error'>
+                    <ErrorMessage name='preferredShipping' />
+                  </div>
+                </div>
+
+                <div className='o-form__checkbox-group'>
+                  <Field type='checkbox' name='preferredBilling' checked={values.preferredBilling} />
+                  <label className='o-form__input-label' htmlFor='preferredBilling'>Preferred billing address</label>
+                  <div className='o-form__input-field__error'>
+                    <ErrorMessage name='preferredBilling' />
+                  </div>
                 </div>
 
                 <this.Button

@@ -74026,7 +74026,9 @@ function (_Component) {
         county: lib_default()(currentAddress, 'state').safeObject || '',
         phone: lib_default()(currentAddress, 'meta_attributes.phone_number.value').safeObject || '',
         email: lib_default()(currentAddress, 'meta_attributes.email.value').safeObject || '',
-        label: lib_default()(currentAddress, 'meta_attributes.label.value').safeObject || ''
+        label: lib_default()(currentAddress, 'meta_attributes.label.value').safeObject || '',
+        preferredShipping: lib_default()(currentAddress, 'preferred_shipping').safeObject || '',
+        preferredBilling: lib_default()(currentAddress, 'preferred_billing').safeObject || ''
       };
     }
   }, {
@@ -74086,7 +74088,8 @@ function (_Component) {
         render: function render(_ref) {
           var isSubmitting = _ref.isSubmitting,
               isValid = _ref.isValid,
-              status = _ref.status;
+              status = _ref.status,
+              values = _ref.values;
           var submitEnabled = isValid && !isSubmitting;
           return external_react_default.a.createElement(external_react_default.a.Fragment, null, _this2.renderFlash(status), external_react_default.a.createElement(_this2.AddressBook, {
             addressBook: addressBook,
@@ -74234,7 +74237,33 @@ function (_Component) {
             className: "o-form__input-field__error"
           }, external_react_default.a.createElement(ErrorMessage, {
             name: "label"
-          })), external_react_default.a.createElement(_this2.Button, addresses_defineProperty({
+          })), external_react_default.a.createElement("div", {
+            className: "o-form__checkbox-group"
+          }, external_react_default.a.createElement(Field, {
+            type: "checkbox",
+            name: "preferredShipping",
+            checked: values.preferredShipping
+          }), external_react_default.a.createElement("label", {
+            className: "o-form__input-label",
+            htmlFor: "preferredShipping"
+          }, "Preferred shipping address"), external_react_default.a.createElement("div", {
+            className: "o-form__input-field__error"
+          }, external_react_default.a.createElement(ErrorMessage, {
+            name: "preferredShipping"
+          }))), external_react_default.a.createElement("div", {
+            className: "o-form__checkbox-group"
+          }, external_react_default.a.createElement(Field, {
+            type: "checkbox",
+            name: "preferredBilling",
+            checked: values.preferredBilling
+          }), external_react_default.a.createElement("label", {
+            className: "o-form__input-label",
+            htmlFor: "preferredBilling"
+          }, "Preferred billing address"), external_react_default.a.createElement("div", {
+            className: "o-form__input-field__error"
+          }, external_react_default.a.createElement(ErrorMessage, {
+            name: "preferredBilling"
+          }))), external_react_default.a.createElement(_this2.Button, addresses_defineProperty({
             className: "c-password__button o-button-sml u-margin-top-none u-margin-bottom-none",
             "aria-label": "Update details",
             label: currentAddress ? 'Update address' : 'Create address',

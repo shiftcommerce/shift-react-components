@@ -254,3 +254,9 @@ $input-checkbox-spacing: 8px !default;
     font-size: .7em;
   }
 }
+
+.o-form__checkbox-group {
+  display: flex;
+  align-items: center;
+  margin: $global-spacing-unit-small 0;
+}
