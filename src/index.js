@@ -6,7 +6,7 @@ import './scss/app'
 /**
  * Lib
  */
-export { default as ShiftComponentsConfig } from './lib/config'
+export { default as Config } from './lib/config'
 export { default as componentMapping } from './lib/component-mapping'
 export { default as FormErrors } from './lib/form-errors'
 

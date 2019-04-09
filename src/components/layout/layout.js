@@ -13,7 +13,6 @@ export class Layout extends Component {
   constructor (props) {
     super(props)
 
-    this.Head = componentMapping('Head')
     this.Footer = componentMapping('Footer')
     this.Image = componentMapping('Image')
     this.Link = componentMapping('Link')
@@ -111,10 +110,6 @@ export class Layout extends Component {
 
     return (
       <>
-        <this.Head>
-          <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0' />
-          <link rel='icon' type='image/png' sizes='32x32' href='../../static/favicon.png' key='favicon' />
-        </this.Head>
         <div className={ headerClasses }>
           <div className='o-header__top'>
             <div className='o-header__top-wrapper'>
@@ -134,18 +129,6 @@ export class Layout extends Component {
           { this.renderNav() }
         </div>
       </>
-    )
-  }
-
-  renderCheckoutHeader () {
-    const { payPalClientID } = this.props
-    return (
-      <this.Head payPalClientID={payPalClientID}>
-        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0' />
-        <link rel='icon' type='image/png' sizes='32x32' href='../../static/favicon.png' key='favicon' />
-        <script src='https://js.stripe.com/v3/' key='stripe' />
-        {payPalClientID && <script src={`https://www.paypal.com/sdk/js?client-id=${payPalClientID}&currency=GBP&intent=authorize&commit=false&disable-funding=credit,sepa&disable-card=amex,visa,mastercard,discover,jcb,elo,hiper`} />}
-      </this.Head>
     )
   }
 
@@ -176,7 +159,7 @@ export class Layout extends Component {
 
     return (
       <>
-        { skipHeader ? this.renderHeader() : this.renderCheckoutHeader() }
+        { skipHeader ? this.renderHeader() : null }
         <div className={bodyClasses}>
           { children }
         </div>

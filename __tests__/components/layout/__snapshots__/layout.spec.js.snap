@@ -2,19 +2,6 @@
 
 exports[`renders the children inside it 1`] = `
 <Fragment>
-  <Head>
-    <meta
-      content="width=device-width, initial-scale=1, maximum-scale=1.0"
-      name="viewport"
-    />
-    <link
-      href="../../static/favicon.png"
-      key="favicon"
-      rel="icon"
-      sizes="32x32"
-      type="image/png"
-    />
-  </Head>
   <div
     className="o-header"
   >
@@ -288,23 +275,6 @@ exports[`renders the children inside it 1`] = `
 
 exports[`renders the footer 1`] = `
 <Fragment>
-  <Head>
-    <meta
-      content="width=device-width, initial-scale=1, maximum-scale=1.0"
-      name="viewport"
-    />
-    <link
-      href="../../static/favicon.png"
-      key="favicon"
-      rel="icon"
-      sizes="32x32"
-      type="image/png"
-    />
-    <script
-      key="stripe"
-      src="https://js.stripe.com/v3/"
-    />
-  </Head>
   <div
     className=""
   />
@@ -318,19 +288,6 @@ exports[`renders the footer 1`] = `
 
 exports[`renders the header 1`] = `
 <Fragment>
-  <Head>
-    <meta
-      content="width=device-width, initial-scale=1, maximum-scale=1.0"
-      name="viewport"
-    />
-    <link
-      href="../../static/favicon.png"
-      key="favicon"
-      rel="icon"
-      sizes="32x32"
-      type="image/png"
-    />
-  </Head>
   <div
     className="o-header"
   >
@@ -602,19 +559,6 @@ exports[`renders the header 1`] = `
 
 exports[`renders the navbar for non-checkout pages 1`] = `
 <Fragment>
-  <Head>
-    <meta
-      content="width=device-width, initial-scale=1, maximum-scale=1.0"
-      name="viewport"
-    />
-    <link
-      href="../../static/favicon.png"
-      key="favicon"
-      rel="icon"
-      sizes="32x32"
-      type="image/png"
-    />
-  </Head>
   <div
     className="o-header"
   >
