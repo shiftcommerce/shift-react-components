@@ -6,7 +6,7 @@ import './scss/app'
 /**
  * Lib
  */
-export { default as Config } from './lib/config'
+export { default as ShiftComponentsConfig } from './lib/config'
 export { default as componentMapping } from './lib/component-mapping'
 export { default as FormErrors } from './lib/form-errors'
 
@@ -134,7 +134,6 @@ export { default as NavBarOption } from './components/navigation/navbar-option'
 /**
  * Layout Components
  */
-export { default as CustomHead } from './components/layout/custom-head'
 export { default as Footer } from './components/layout/footer'
 export { default as Layout } from './components/layout/layout'
 export { default as Minibag } from './components/layout/minibag'
