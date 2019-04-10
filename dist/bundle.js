@@ -62635,12 +62635,14 @@ function (_Component) {
     value: function render() {
       var _this$props = this.props,
           href = _this$props.href,
-          children = _this$props.children;
+          children = _this$props.children,
+          className = _this$props.className;
 
       if (href) {
         return external_react_default.a.createElement(this.Link, {
           href: "/slug?slug=".concat(href),
-          as: href
+          as: href,
+          className: className
         }, children);
       } else {
         return children;
