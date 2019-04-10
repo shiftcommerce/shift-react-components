@@ -76686,12 +76686,14 @@ function (_PureComponent) {
           onClick = _this$props.onClick,
           paymentMethod = _this$props.paymentMethod,
           title = _this$props.title;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.PaymentMethodHeader, {
+      return external_react_default.a.createElement("div", {
+        className: 'c-payment-methods__summary'
+      }, external_react_default.a.createElement(this.PaymentMethodHeader, {
         collapsed: true,
         onClick: onClick,
         title: title
       }), external_react_default.a.createElement("div", {
-        className: 'c-payment-methods__summary'
+        className: 'c-payment-methods__summary-information'
       }, this.renderPaymentMethodInformation(paymentMethod)));
     }
   }]);

@@ -30,16 +30,16 @@ class PaymentMethodsSummary extends PureComponent {
   render () {
     const { onClick, paymentMethod, title } = this.props
     return (
-      <>
+      <div className={'c-payment-methods__summary'}>
         <this.PaymentMethodHeader
           collapsed
           onClick={onClick}
           title={title}
         />
-        <div className={'c-payment-methods__summary'}>
-          { this.renderPaymentMethodInformation(paymentMethod) }
+        <div className={'c-payment-methods__summary-information'}>
+          {this.renderPaymentMethodInformation(paymentMethod)}
         </div>
-      </>
+      </div>
     )
   }
 }

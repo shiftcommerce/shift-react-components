@@ -69,24 +69,16 @@
   }
   
   &__summary {
-    font-size: .75rem;
-    width: 95%;
-    margin: auto;
+    margin-top: $global-spacing-unit-large;
     padding-bottom: $global-spacing-unit-small;
-    border-bottom: 1px solid $border-default;
-    padding-left: 2px;
-  
+
     @include breakpoint(tablet) {
       padding-left: 0;
     }
-  
-    @include breakpoint(desktop) {
+
+    &-information {
       width: 90%;
-      margin: 0;
-    }
-  
-    p {
-      margin: 0;
+      border-bottom: 1px solid $border-default;
     }
   }
 }

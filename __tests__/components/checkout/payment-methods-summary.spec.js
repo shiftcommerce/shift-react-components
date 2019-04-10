@@ -9,9 +9,11 @@ test("renders the shipping methods summary", () => {
   const paymentMethod = 'credit-card'
 
   // Act
-  const wrapper = shallow(<PaymentMethodsSummary paymentMethod={paymentMethod}/>)
+  const wrapper = shallow(<PaymentMethodsSummary paymentMethod={paymentMethod} title={'test'}/>)
 
   // Assert
-  expect(wrapper.find('div')).toMatchSelector('.c-payment-methods__summary')
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find('div').first()).toMatchSelector('.c-payment-methods__summary')
+  expect(wrapper.find('div').last()).toMatchSelector('.c-payment-methods__summary-information')
   expect(wrapper).toIncludeText(paymentMethod)
 })
