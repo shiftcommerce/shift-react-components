@@ -5947,7 +5947,7 @@ module.exports = has;
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
-    default: obj
+    "default": obj
   };
 }
 
@@ -19385,13 +19385,24 @@ var EXITING = 'exiting';
  * it's used to animate the mounting and unmounting of a component, but can also
  * be used to describe in-place transition states as well.
  *
+ * ---
+ *
+ * **Note**: `Transition` is a platform-agnostic base component. If you're using
+ * transitions in CSS, you'll probably want to use
+ * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
+ * instead. It inherits all the features of `Transition`, but contains
+ * additional features necessary to play nice with CSS transitions (hence the
+ * name of the component).
+ *
+ * ---
+ *
  * By default the `Transition` component does not alter the behavior of the
- * component it renders, it only tracks "enter" and "exit" states for the components.
- * It's up to you to give meaning and effect to those states. For example we can
- * add styles to a component when it enters or exits:
+ * component it renders, it only tracks "enter" and "exit" states for the
+ * components. It's up to you to give meaning and effect to those states. For
+ * example we can add styles to a component when it enters or exits:
  *
  * ```jsx
- * import Transition from 'react-transition-group/Transition';
+ * import { Transition } from 'react-transition-group';
  *
  * const duration = 300;
  *
@@ -19407,7 +19418,7 @@ var EXITING = 'exiting';
  *
  * const Fade = ({ in: inProp }) => (
  *   <Transition in={inProp} timeout={duration}>
- *     {(state) => (
+ *     {state => (
  *       <div style={{
  *         ...defaultStyle,
  *         ...transitionStyles[state]
@@ -19419,60 +19430,43 @@ var EXITING = 'exiting';
  * );
  * ```
  *
- * As noted the `Transition` component doesn't _do_ anything by itself to its child component.
- * What it does do is track transition states over time so you can update the
- * component (such as by adding styles or classes) when it changes states.
- *
  * There are 4 main states a Transition can be in:
  *  - `'entering'`
  *  - `'entered'`
  *  - `'exiting'`
  *  - `'exited'`
  *
- * Transition state is toggled via the `in` prop. When `true` the component begins the
- * "Enter" stage. During this stage, the component will shift from its current transition state,
- * to `'entering'` for the duration of the transition and then to the `'entered'` stage once
- * it's complete. Let's take the following example:
+ * Transition state is toggled via the `in` prop. When `true` the component
+ * begins the "Enter" stage. During this stage, the component will shift from
+ * its current transition state, to `'entering'` for the duration of the
+ * transition and then to the `'entered'` stage once it's complete. Let's take
+ * the following example (we'll use the
+ * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
  *
  * ```jsx
- * state = { in: false };
- *
- * toggleEnterState = () => {
- *   this.setState({ in: true });
- * }
- *
- * render() {
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
  *   return (
  *     <div>
- *       <Transition in={this.state.in} timeout={500} />
- *       <button onClick={this.toggleEnterState}>Click to Enter</button>
+ *       <Transition in={inProp} timeout={500}>
+ *         {state => (
+ *           // ...
+ *         )}
+ *       </Transition>
+ *       <button onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
  *     </div>
  *   );
  * }
  * ```
  *
- * When the button is clicked the component will shift to the `'entering'` state and
- * stay there for 500ms (the value of `timeout`) before it finally switches to `'entered'`.
+ * When the button is clicked the component will shift to the `'entering'` state
+ * and stay there for 500ms (the value of `timeout`) before it finally switches
+ * to `'entered'`.
  *
- * When `in` is `false` the same thing happens except the state moves from `'exiting'` to `'exited'`.
- *
- * ## Timing
- *
- * Timing is often the trickiest part of animation, mistakes can result in slight delays
- * that are hard to pin down. A common example is when you want to add an exit transition,
- * you should set the desired final styles when the state is `'exiting'`. That's when the
- * transition to those styles will start and, if you matched the `timeout` prop with the
- * CSS Transition duration, it will end exactly when the state changes to `'exited'`.
- *
- * > **Note**: For simpler transitions the `Transition` component might be enough, but
- * > take into account that it's platform-agnostic, while the `CSSTransition` component
- * > [forces reflows](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
- * > in order to make more complex transitions more predictable. For example, even though
- * > classes `example-enter` and `example-enter-active` are applied immediately one after
- * > another, you can still transition from one to the other because of the forced reflow
- * > (read [this issue](https://github.com/reactjs/react-transition-group/issues/159#issuecomment-322761171)
- * > for more info). Take this into account when choosing between `Transition` and
- * > `CSSTransition`.
+ * When `in` is `false` the same thing happens except the state moves from
+ * `'exiting'` to `'exited'`.
  */
 
 exports.EXITING = EXITING;
@@ -19723,17 +19717,19 @@ function (_React$Component) {
 
   _proto.onTransitionEnd = function onTransitionEnd(node, timeout, handler) {
     this.setNextCallback(handler);
+    var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
 
-    if (node) {
-      if (this.props.addEndListener) {
-        this.props.addEndListener(node, this.nextCallback);
-      }
-
-      if (timeout != null) {
-        setTimeout(this.nextCallback, timeout);
-      }
-    } else {
+    if (!node || doesNotHaveTimeoutOrListener) {
       setTimeout(this.nextCallback, 0);
+      return;
+    }
+
+    if (this.props.addEndListener) {
+      this.props.addEndListener(node, this.nextCallback);
+    }
+
+    if (timeout != null) {
+      setTimeout(this.nextCallback, timeout);
     }
   };
 
@@ -28138,7 +28134,7 @@ function _interopRequireWildcard(obj) {
       }
     }
 
-    newObj.default = obj;
+    newObj["default"] = obj;
     return newObj;
   }
 }
@@ -42436,17 +42432,64 @@ var removeClass = function removeClass(node, classes) {
   });
 };
 /**
- * A `Transition` component using CSS transitions and animations.
- * It's inspired by the excellent [ng-animate](http://www.nganimate.org/) library.
+ * A transition component inspired by the excellent
+ * [ng-animate](http://www.nganimate.org/) library, you should use it if you're
+ * using CSS transitions or animations. It's built upon the
+ * [`Transition`](https://reactcommunity.org/react-transition-group/transition)
+ * component, so it inherits all of its props.
  *
  * `CSSTransition` applies a pair of class names during the `appear`, `enter`,
- * and `exit` stages of the transition. The first class is applied and then a
- * second "active" class in order to activate the css animation. After the animation,
- * matching `done` class names are applied to persist the animation state.
+ * and `exit` states of the transition. The first class is applied and then a
+ * second `*-active` class in order to activate the CSSS transition. After the
+ * transition, matching `*-done` class names are applied to persist the
+ * transition state.
  *
- * When the `in` prop is toggled to `true` the Component will get
- * the `example-enter` CSS class and the `example-enter-active` CSS class
- * added in the next tick. This is a convention based on the `classNames` prop.
+ * ```jsx
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
+ *   return (
+ *     <div>
+ *       <CSSTransition in={inProp} timeout={200} classNames="my-node">
+ *         <div>
+ *           {"I'll receive my-node-* classes"}
+ *         </div>
+ *       </CSSTransition>
+ *       <button type="button" onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
+ *     </div>
+ *   );
+ * }
+ * ```
+ *
+ * When the `in` prop is set to `true`, the child component will first receive
+ * the class `example-enter`, then the `example-enter-active` will be added in
+ * the next tick. `CSSTransition` [forces a
+ * reflow](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
+ * between before adding the `example-enter-active`. This is an important trick
+ * because it allows us to transition between `example-enter` and
+ * `example-enter-active` even though they were added immediately one after
+ * another. Most notably, this is what makes it possible for us to animate
+ * _appearance_.
+ *
+ * ```css
+ * .my-node-enter {
+ *   opacity: 0;
+ * }
+ * .my-node-enter-active {
+ *   opacity: 1;
+ *   transition: opacity 200ms;
+ * }
+ * .my-node-exit {
+ *   opacity: 1;
+ * }
+ * .my-node-exit-active {
+ *   opacity: 0;
+ *   transition: opacity: 200ms;
+ * }
+ * ```
+ *
+ * `*-active` classes represent which styles you want to animate **to**.
  */
 
 
@@ -42489,8 +42532,11 @@ function (_React$Component) {
     };
 
     _this.onEntered = function (node, appearing) {
-      var _this$getClassNames3 = _this.getClassNames('enter'),
-          doneClassName = _this$getClassNames3.doneClassName;
+      var appearClassName = _this.getClassNames('appear').doneClassName;
+
+      var enterClassName = _this.getClassNames('enter').doneClassName;
+
+      var doneClassName = appearing ? appearClassName + " " + enterClassName : enterClassName;
 
       _this.removeClasses(node, appearing ? 'appear' : 'enter');
 
@@ -42502,8 +42548,8 @@ function (_React$Component) {
     };
 
     _this.onExit = function (node) {
-      var _this$getClassNames4 = _this.getClassNames('exit'),
-          className = _this$getClassNames4.className;
+      var _this$getClassNames3 = _this.getClassNames('exit'),
+          className = _this$getClassNames3.className;
 
       _this.removeClasses(node, 'appear');
 
@@ -42517,8 +42563,8 @@ function (_React$Component) {
     };
 
     _this.onExiting = function (node) {
-      var _this$getClassNames5 = _this.getClassNames('exit'),
-          activeClassName = _this$getClassNames5.activeClassName;
+      var _this$getClassNames4 = _this.getClassNames('exit'),
+          activeClassName = _this$getClassNames4.activeClassName;
 
       _this.reflowAndAddClass(node, activeClassName);
 
@@ -42528,8 +42574,8 @@ function (_React$Component) {
     };
 
     _this.onExited = function (node) {
-      var _this$getClassNames6 = _this.getClassNames('exit'),
-          doneClassName = _this$getClassNames6.doneClassName;
+      var _this$getClassNames5 = _this.getClassNames('exit'),
+          doneClassName = _this$getClassNames5.doneClassName;
 
       _this.removeClasses(node, 'exit');
 
@@ -42542,9 +42588,11 @@ function (_React$Component) {
 
     _this.getClassNames = function (type) {
       var classNames = _this.props.classNames;
-      var className = typeof classNames !== 'string' ? classNames[type] : classNames + '-' + type;
-      var activeClassName = typeof classNames !== 'string' ? classNames[type + 'Active'] : className + '-active';
-      var doneClassName = typeof classNames !== 'string' ? classNames[type + 'Done'] : className + '-done';
+      var isStringClassNames = typeof classNames === 'string';
+      var prefix = isStringClassNames && classNames ? classNames + '-' : '';
+      var className = isStringClassNames ? prefix + type : classNames[type];
+      var activeClassName = isStringClassNames ? className + '-active' : classNames[type + 'Active'];
+      var doneClassName = isStringClassNames ? className + '-done' : classNames[type + 'Done'];
       return {
         className: className,
         activeClassName: activeClassName,
@@ -42558,10 +42606,10 @@ function (_React$Component) {
   var _proto = CSSTransition.prototype;
 
   _proto.removeClasses = function removeClasses(node, type) {
-    var _this$getClassNames7 = this.getClassNames(type),
-        className = _this$getClassNames7.className,
-        activeClassName = _this$getClassNames7.activeClassName,
-        doneClassName = _this$getClassNames7.doneClassName;
+    var _this$getClassNames6 = this.getClassNames(type),
+        className = _this$getClassNames6.className,
+        activeClassName = _this$getClassNames6.activeClassName,
+        doneClassName = _this$getClassNames6.doneClassName;
 
     className && removeClass(node, className);
     activeClassName && removeClass(node, activeClassName);
@@ -42597,6 +42645,9 @@ function (_React$Component) {
   return CSSTransition;
 }(_react.default.Component);
 
+CSSTransition.defaultProps = {
+  classNames: ''
+};
 CSSTransition.propTypes =  false ? undefined : {};
 var _default = CSSTransition;
 exports.default = _default;
@@ -68824,9 +68875,7 @@ function (_PureComponent) {
       // The object keys are named like this:
       // `slide1_image`, `slide2_image`, `slide3_image`, ...
 
-      var _arr = generic_grid_toConsumableArray(Array(12).keys());
-
-      for (var _i = 0; _i < _arr.length; _i++) {
+      for (var _i = 0, _arr = generic_grid_toConsumableArray(Array(12).keys()); _i < _arr.length; _i++) {
         var i = _arr[_i];
         var slideImage = componentData["slide".concat(i + 1, "_image")];
         var slideText = componentData["slide".concat(i + 1, "_text")];
@@ -69175,9 +69224,7 @@ function (_PureComponent) {
     value: function products(componentData) {
       var products = [];
 
-      var _arr = product_grid_toConsumableArray(Array(4).keys());
-
-      for (var _i = 0; _i < _arr.length; _i++) {
+      for (var _i = 0, _arr = product_grid_toConsumableArray(Array(4).keys()); _i < _arr.length; _i++) {
         var i = _arr[_i];
         var product = componentData.products[i];
         products.push(external_react_default.a.createElement(this.ProductListingCard, {
@@ -72703,6 +72750,9 @@ var isEmptyChildren = function (children) {
 var isPromise = function (value) {
   return formik_esm_isObject(value) && formik_esm_isFunction(value.then);
 };
+var isInputEvent = function (value) {
+  return value && formik_esm_isObject(value) && formik_esm_isObject(value.target);
+};
 function getActiveElement(doc) {
   doc = doc || (typeof document !== 'undefined' ? document : undefined);
 
@@ -72881,21 +72931,21 @@ function (_super) {
     };
 
     _this.handleChange = function (eventOrPath) {
-      var executeChange = function (eventOrTextValue, maybePath) {
+      var executeChange = function (eventOrValue, maybePath) {
         var field = maybePath;
-        var val = eventOrTextValue;
-        var parsed;
+        var value;
 
-        if (!isString(eventOrTextValue)) {
-          if (eventOrTextValue.persist) {
-            eventOrTextValue.persist();
+        if (isInputEvent(eventOrValue)) {
+          var event_1 = eventOrValue;
+
+          if (event_1.persist) {
+            event_1.persist();
           }
 
-          var _a = eventOrTextValue.target,
+          var _a = event_1.target,
               type = _a.type,
               name_1 = _a.name,
               id = _a.id,
-              value = _a.value,
               checked = _a.checked,
               outerHTML = _a.outerHTML;
           field = maybePath ? maybePath : name_1 ? name_1 : id;
@@ -72908,28 +72958,46 @@ function (_super) {
             });
           }
 
-          val = /number|range/.test(type) ? (parsed = parseFloat(value), formik_esm_isNaN(parsed) ? '' : parsed) : /checkbox/.test(type) ? checked : value;
+          value = event_1.target.value;
+
+          if (/number|range/.test(type)) {
+            var parsed = parseFloat(event_1.target.value);
+            value = formik_esm_isNaN(parsed) ? '' : parsed;
+          }
+
+          if (/checkbox/.test(type)) {
+            value = checked;
+          }
+        } else {
+          value = eventOrValue;
         }
 
         if (field) {
           _this.setState(function (prevState) {
             return __assign({}, prevState, {
-              values: setIn(prevState.values, field, val)
+              values: setIn(prevState.values, field, value)
             });
           }, function () {
             if (_this.props.validateOnChange) {
-              _this.runValidations(setIn(_this.state.values, field, val));
+              _this.runValidations(setIn(_this.state.values, field, value));
             }
           });
         }
       };
 
       if (isString(eventOrPath)) {
-        return formik_esm_isFunction(_this.hcCache[eventOrPath]) ? _this.hcCache[eventOrPath] : _this.hcCache[eventOrPath] = function (event) {
-          return executeChange(event, eventOrPath);
-        };
+        var path_1 = eventOrPath;
+
+        if (!formik_esm_isFunction(_this.hcCache[path_1])) {
+          _this.hcCache[path_1] = function (eventOrValue) {
+            return executeChange(eventOrValue, path_1);
+          };
+        }
+
+        return _this.hcCache[path_1];
       } else {
-        executeChange(eventOrPath);
+        var event_2 = eventOrPath;
+        executeChange(event_2);
       }
     };
 
@@ -72994,24 +73062,30 @@ function (_super) {
       _this.props.onSubmit(_this.state.values, _this.getFormikActions());
     };
 
-    _this.handleBlur = function (eventOrString) {
-      var executeBlur = function (e, path) {
-        if (e.persist) {
-          e.persist();
-        }
+    _this.handleBlur = function (eventOrPath) {
+      var executeBlur = function (maybeEvent, maybePath) {
+        var field = maybePath;
 
-        var _a = e.target,
-            name = _a.name,
-            id = _a.id,
-            outerHTML = _a.outerHTML;
-        var field = path ? path : name ? name : id;
+        if (isInputEvent(maybeEvent)) {
+          var event_3 = maybeEvent;
 
-        if (!field && "production" !== 'production') {
-          warnAboutMissingIdentifier({
-            htmlContent: outerHTML,
-            documentationAnchorLink: 'handleblur-e-any--void',
-            handlerName: 'handleBlur'
-          });
+          if (event_3.persist) {
+            event_3.persist();
+          }
+
+          var _a = event_3.target,
+              name_2 = _a.name,
+              id = _a.id,
+              outerHTML = _a.outerHTML;
+          field = name_2 ? name_2 : id;
+
+          if (!field && "production" !== 'production') {
+            warnAboutMissingIdentifier({
+              htmlContent: outerHTML,
+              documentationAnchorLink: 'handleblur-e-reactfocuseventany--void',
+              handlerName: 'handleBlur'
+            });
+          }
         }
 
         _this.setState(function (prevState) {
@@ -73025,12 +73099,19 @@ function (_super) {
         }
       };
 
-      if (isString(eventOrString)) {
-        return formik_esm_isFunction(_this.hbCache[eventOrString]) ? _this.hbCache[eventOrString] : _this.hbCache[eventOrString] = function (event) {
-          return executeBlur(event, eventOrString);
-        };
+      if (isString(eventOrPath)) {
+        var path_2 = eventOrPath;
+
+        if (!formik_esm_isFunction(_this.hbCache[path_2])) {
+          _this.hbCache[path_2] = function (event) {
+            return executeBlur(event, path_2);
+          };
+        }
+
+        return _this.hbCache[path_2];
       } else {
-        executeBlur(eventOrString);
+        var event_4 = eventOrPath;
+        executeBlur(event_4);
       }
     };
 
@@ -76548,6 +76629,93 @@ payment_method_summary_PaymentMethodSummary.propTypes = {
   withErrors: prop_types_default.a.bool
 };
 /* harmony default export */ var payment_method_summary = (payment_method_summary_PaymentMethodSummary);
+// CONCATENATED MODULE: ./src/components/checkout/payment-methods-summary.js
+function payment_methods_summary_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { payment_methods_summary_typeof = function _typeof(obj) { return typeof obj; }; } else { payment_methods_summary_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return payment_methods_summary_typeof(obj); }
+
+function payment_methods_summary_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function payment_methods_summary_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function payment_methods_summary_createClass(Constructor, protoProps, staticProps) { if (protoProps) payment_methods_summary_defineProperties(Constructor.prototype, protoProps); if (staticProps) payment_methods_summary_defineProperties(Constructor, staticProps); return Constructor; }
+
+function payment_methods_summary_possibleConstructorReturn(self, call) { if (call && (payment_methods_summary_typeof(call) === "object" || typeof call === "function")) { return call; } return payment_methods_summary_assertThisInitialized(self); }
+
+function payment_methods_summary_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function payment_methods_summary_getPrototypeOf(o) { payment_methods_summary_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return payment_methods_summary_getPrototypeOf(o); }
+
+function payment_methods_summary_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) payment_methods_summary_setPrototypeOf(subClass, superClass); }
+
+function payment_methods_summary_setPrototypeOf(o, p) { payment_methods_summary_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return payment_methods_summary_setPrototypeOf(o, p); }
+
+// Libraries
+
+ // Lib
+
+
+
+var payment_methods_summary_PaymentMethodsSummary =
+/*#__PURE__*/
+function (_PureComponent) {
+  payment_methods_summary_inherits(PaymentMethodsSummary, _PureComponent);
+
+  function PaymentMethodsSummary(props) {
+    var _this;
+
+    payment_methods_summary_classCallCheck(this, PaymentMethodsSummary);
+
+    _this = payment_methods_summary_possibleConstructorReturn(this, payment_methods_summary_getPrototypeOf(PaymentMethodsSummary).call(this, props));
+    _this.Image = component_mapping('Image');
+    _this.PaymentMethodHeader = component_mapping('PaymentMethodHeader');
+    return _this;
+  }
+
+  payment_methods_summary_createClass(PaymentMethodsSummary, [{
+    key: "renderPaymentMethodInformation",
+    value: function renderPaymentMethodInformation(paymentMethod) {
+      if (paymentMethod === 'PayPal') {
+        return external_react_default.a.createElement(this.Image, {
+          src: "/static/payments/pay-pal.svg",
+          className: "c-payment-methods__image"
+        });
+      } else {
+        return this.renderCardInformation(paymentMethod);
+      }
+    }
+  }, {
+    key: "renderCardInformation",
+    value: function renderCardInformation(paymentMethod) {
+      return external_react_default.a.createElement("p", null, paymentMethod);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          onClick = _this$props.onClick,
+          paymentMethod = _this$props.paymentMethod,
+          showEditButton = _this$props.showEditButton,
+          title = _this$props.title;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.PaymentMethodHeader, {
+        collapsed: true,
+        onClick: onClick,
+        title: title,
+        showEditButton: showEditButton
+      }), external_react_default.a.createElement("div", {
+        className: 'c-payment-methods__summary'
+      }, this.renderPaymentMethodInformation(paymentMethod)));
+    }
+  }]);
+
+  return PaymentMethodsSummary;
+}(external_react_["PureComponent"]);
+
+payment_methods_summary_PaymentMethodsSummary.propTypes = {
+  onClick: prop_types_default.a.func,
+  paymentMethod: prop_types_default.a.string.isRequired,
+  showEditButton: prop_types_default.a.bool,
+  title: prop_types_default.a.string.isRequired
+};
+/* harmony default export */ var payment_methods_summary = (payment_methods_summary_PaymentMethodsSummary);
 // CONCATENATED MODULE: ./src/components/checkout/shipping-methods.js
 function shipping_methods_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { shipping_methods_typeof = function _typeof(obj) { return typeof obj; }; } else { shipping_methods_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return shipping_methods_typeof(obj); }
 
@@ -77020,6 +77188,7 @@ function (_Component) {
 /* concated harmony reexport PaymentMethod */__webpack_require__.d(__webpack_exports__, "PaymentMethod", function() { return payment_method; });
 /* concated harmony reexport PaymentMethodHeader */__webpack_require__.d(__webpack_exports__, "PaymentMethodHeader", function() { return payment_method_header; });
 /* concated harmony reexport PaymentMethodSummary */__webpack_require__.d(__webpack_exports__, "PaymentMethodSummary", function() { return payment_method_summary; });
+/* concated harmony reexport PaymentMethodsSummary */__webpack_require__.d(__webpack_exports__, "PaymentMethodsSummary", function() { return payment_methods_summary; });
 /* concated harmony reexport ShippingMethods */__webpack_require__.d(__webpack_exports__, "ShippingMethods", function() { return shipping_methods; });
 /* concated harmony reexport ShippingMethodsHeader */__webpack_require__.d(__webpack_exports__, "ShippingMethodsHeader", function() { return shipping_methods_header; });
 /* concated harmony reexport ShippingMethodsSummary */__webpack_require__.d(__webpack_exports__, "ShippingMethodsSummary", function() { return shipping_methods_summary; });
@@ -77135,6 +77304,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 

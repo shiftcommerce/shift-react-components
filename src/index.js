@@ -119,6 +119,7 @@ export { default as PaymentMethods } from './components/checkout/payment-methods
 export { default as PaymentMethod } from './components/checkout/payment-method'
 export { default as PaymentMethodHeader } from './components/checkout/payment-method-header'
 export { default as PaymentMethodSummary } from './components/checkout/payment-method-summary'
+export { default as PaymentMethodsSummary } from './components/checkout/payment-methods-summary'
 export { default as ShippingMethods } from './components/checkout/shipping-methods'
 export { default as ShippingMethodsHeader } from './components/checkout/shipping-methods-header'
 export { default as ShippingMethodsSummary } from './components/checkout/shipping-methods-summary'
