@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-function AddressFormSummary ({ addressLine1, city, firstName, lastName, onClick, postcode, showEditButton }) {
+function AddressFormSummary ({ addressLine1, city, firstName, lastName, onClick, postcode }) {
   const AddressFormHeader = componentMapping('AddressFormHeader')
 
   return (
@@ -14,7 +14,6 @@ function AddressFormSummary ({ addressLine1, city, firstName, lastName, onClick,
         collapsed
         onClick={onClick}
         title='Shipping Address'
-        showEditButton={showEditButton}
       />
       <div className='o-form__wrapper--collapsed c-address-form__summary'>
         <p className='u-bold'>{ firstName } { lastName } </p>
@@ -30,8 +29,7 @@ AddressFormSummary.propTypes = {
   firstName: PropTypes.string,
   lastName: PropTypes.string,
   onClick: PropTypes.func,
-  postcode: PropTypes.string,
-  showEditButton: PropTypes.bool
+  postcode: PropTypes.string
 }
 
 export default AddressFormSummary

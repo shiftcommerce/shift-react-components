@@ -64907,14 +64907,13 @@ function (_Component) {
 function address_form_header_AddressFormHeader(_ref) {
   var collapsed = _ref.collapsed,
       title = _ref.title,
-      onClick = _ref.onClick,
-      showEditButton = _ref.showEditButton;
+      onClick = _ref.onClick;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header c-address-form__header"
   }, external_react_default.a.createElement("div", {
     className: "o-form__header-title c-address-form__header-title"
-  }, external_react_default.a.createElement("h2", null, title)), collapsed && showEditButton && external_react_default.a.createElement(Button, {
+  }, external_react_default.a.createElement("h2", null, title)), collapsed && external_react_default.a.createElement(Button, {
     label: "Edit",
     status: "secondary",
     className: "o-button-edit",
@@ -64925,8 +64924,7 @@ function address_form_header_AddressFormHeader(_ref) {
 address_form_header_AddressFormHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
   onClick: prop_types_default.a.func,
-  title: prop_types_default.a.string.isRequired,
-  showEditButton: prop_types_default.a.bool
+  title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var address_form_header = (address_form_header_AddressFormHeader);
 // CONCATENATED MODULE: ./src/components/cart/line-items.js
@@ -76251,14 +76249,12 @@ function AddressFormSummary(_ref) {
       firstName = _ref.firstName,
       lastName = _ref.lastName,
       onClick = _ref.onClick,
-      postcode = _ref.postcode,
-      showEditButton = _ref.showEditButton;
+      postcode = _ref.postcode;
   var AddressFormHeader = component_mapping('AddressFormHeader');
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(AddressFormHeader, {
     collapsed: true,
     onClick: onClick,
-    title: "Shipping Address",
-    showEditButton: showEditButton
+    title: "Shipping Address"
   }), external_react_default.a.createElement("div", {
     className: "o-form__wrapper--collapsed c-address-form__summary"
   }, external_react_default.a.createElement("p", {
@@ -76272,8 +76268,7 @@ AddressFormSummary.propTypes = {
   firstName: prop_types_default.a.string,
   lastName: prop_types_default.a.string,
   onClick: prop_types_default.a.func,
-  postcode: prop_types_default.a.string,
-  showEditButton: prop_types_default.a.bool
+  postcode: prop_types_default.a.string
 };
 /* harmony default export */ var address_form_summary = (AddressFormSummary);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart.js
@@ -76600,15 +76595,13 @@ MiniPlaceOrder.propTypes = {
 var payment_method_summary_PaymentMethodSummary = function PaymentMethodSummary(_ref) {
   var billingAddress = _ref.billingAddress,
       paymentMethod = _ref.paymentMethod,
-      showEditButton = _ref.showEditButton,
       onClick = _ref.onClick,
       withErrors = _ref.withErrors;
   var PaymentMethodHeader = component_mapping('PaymentMethodHeader');
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(PaymentMethodHeader, {
     title: 'Payment',
     collapsed: true,
-    onClick: onClick,
-    showEditButton: showEditButton
+    onClick: onClick
   }), external_react_default.a.createElement("div", {
     className: classnames_default()('c-payment-method__summary', {
       'o-form__error': withErrors
