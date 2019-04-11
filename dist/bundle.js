@@ -64907,13 +64907,14 @@ function (_Component) {
 function address_form_header_AddressFormHeader(_ref) {
   var collapsed = _ref.collapsed,
       title = _ref.title,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      showEditButton = _ref.showEditButton;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header c-address-form__header"
   }, external_react_default.a.createElement("div", {
     className: "o-form__header-title c-address-form__header-title"
-  }, external_react_default.a.createElement("h2", null, title)), collapsed && external_react_default.a.createElement(Button, {
+  }, external_react_default.a.createElement("h2", null, title)), collapsed && showEditButton && external_react_default.a.createElement(Button, {
     label: "Edit",
     status: "secondary",
     className: "o-button-edit",
@@ -64924,6 +64925,7 @@ function address_form_header_AddressFormHeader(_ref) {
 address_form_header_AddressFormHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
   onClick: prop_types_default.a.func,
+  showEditButton: prop_types_default.a.bool,
   title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var address_form_header = (address_form_header_AddressFormHeader);
@@ -65414,11 +65416,12 @@ payment_method_PaymentMethod.propTypes = {
 function payment_method_header_PaymentMethodHeader(_ref) {
   var title = _ref.title,
       collapsed = _ref.collapsed,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      showEditButton = _ref.showEditButton;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header  c-payment-method__header"
-  }, external_react_default.a.createElement("h2", null, title), collapsed && external_react_default.a.createElement(Button, {
+  }, external_react_default.a.createElement("h2", null, title), collapsed && showEditButton && external_react_default.a.createElement(Button, {
     "aria-label": "Edit your payment method",
     className: "o-button-edit",
     label: "Edit",
@@ -65428,9 +65431,10 @@ function payment_method_header_PaymentMethodHeader(_ref) {
 }
 
 payment_method_header_PaymentMethodHeader.propTypes = {
-  title: prop_types_default.a.string.isRequired,
   collapsed: prop_types_default.a.bool,
-  onClick: prop_types_default.a.func
+  onClick: prop_types_default.a.func,
+  showEditButton: prop_types_default.a.bool,
+  title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var payment_method_header = (payment_method_header_PaymentMethodHeader);
 // CONCATENATED MODULE: ./src/components/checkout/shipping-methods-header.js
@@ -76249,12 +76253,14 @@ function AddressFormSummary(_ref) {
       firstName = _ref.firstName,
       lastName = _ref.lastName,
       onClick = _ref.onClick,
-      postcode = _ref.postcode;
+      postcode = _ref.postcode,
+      showEditButton = _ref.showEditButton;
   var AddressFormHeader = component_mapping('AddressFormHeader');
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(AddressFormHeader, {
     collapsed: true,
     onClick: onClick,
-    title: "Shipping Address"
+    title: "Shipping Address",
+    showEditButton: showEditButton
   }), external_react_default.a.createElement("div", {
     className: "o-form__wrapper--collapsed c-address-form__summary"
   }, external_react_default.a.createElement("p", {
@@ -76268,7 +76274,8 @@ AddressFormSummary.propTypes = {
   firstName: prop_types_default.a.string,
   lastName: prop_types_default.a.string,
   onClick: prop_types_default.a.func,
-  postcode: prop_types_default.a.string
+  postcode: prop_types_default.a.string,
+  showEditButton: prop_types_default.a.bool
 };
 /* harmony default export */ var address_form_summary = (AddressFormSummary);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart.js
@@ -76595,13 +76602,15 @@ MiniPlaceOrder.propTypes = {
 var payment_method_summary_PaymentMethodSummary = function PaymentMethodSummary(_ref) {
   var billingAddress = _ref.billingAddress,
       paymentMethod = _ref.paymentMethod,
+      showEditButton = _ref.showEditButton,
       onClick = _ref.onClick,
       withErrors = _ref.withErrors;
   var PaymentMethodHeader = component_mapping('PaymentMethodHeader');
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(PaymentMethodHeader, {
     title: 'Payment',
     collapsed: true,
-    onClick: onClick
+    onClick: onClick,
+    showEditButton: showEditButton
   }), external_react_default.a.createElement("div", {
     className: classnames_default()('c-payment-method__summary', {
       'o-form__error': withErrors
@@ -76618,6 +76627,7 @@ var payment_method_summary_PaymentMethodSummary = function PaymentMethodSummary(
 payment_method_summary_PaymentMethodSummary.propTypes = {
   billingAddress: prop_types_default.a.object,
   onClick: prop_types_default.a.func,
+  showEditButton: prop_types_default.a.bool,
   withErrors: prop_types_default.a.bool
 };
 /* harmony default export */ var payment_method_summary = (payment_method_summary_PaymentMethodSummary);
@@ -76685,13 +76695,15 @@ function (_PureComponent) {
       var _this$props = this.props,
           onClick = _this$props.onClick,
           paymentMethod = _this$props.paymentMethod,
+          showEditButton = _this$props.showEditButton,
           title = _this$props.title;
       return external_react_default.a.createElement("div", {
         className: 'c-payment-methods__summary'
       }, external_react_default.a.createElement(this.PaymentMethodHeader, {
         collapsed: true,
         onClick: onClick,
-        title: title
+        title: title,
+        showEditButton: showEditButton
       }), external_react_default.a.createElement("div", {
         className: 'c-payment-methods__summary-information'
       }, this.renderPaymentMethodInformation(paymentMethod)));
@@ -76704,6 +76716,7 @@ function (_PureComponent) {
 payment_methods_summary_PaymentMethodsSummary.propTypes = {
   onClick: prop_types_default.a.func,
   paymentMethod: prop_types_default.a.string.isRequired,
+  showEditButton: prop_types_default.a.bool,
   title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var payment_methods_summary = (payment_methods_summary_PaymentMethodsSummary);

@@ -6,7 +6,7 @@ import classNames from 'classnames'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-const PaymentMethodSummary = ({ billingAddress, paymentMethod, onClick, withErrors }) => {
+const PaymentMethodSummary = ({ billingAddress, paymentMethod, showEditButton, onClick, withErrors }) => {
   const PaymentMethodHeader = componentMapping('PaymentMethodHeader')
 
   return (
@@ -15,6 +15,7 @@ const PaymentMethodSummary = ({ billingAddress, paymentMethod, onClick, withErro
         title={'Payment'}
         collapsed
         onClick={onClick}
+        showEditButton={showEditButton}
       />
       <div className={classNames('c-payment-method__summary', { 'o-form__error': withErrors })}>
         <p>
@@ -36,6 +37,7 @@ const PaymentMethodSummary = ({ billingAddress, paymentMethod, onClick, withErro
 PaymentMethodSummary.propTypes = {
   billingAddress: PropTypes.object,
   onClick: PropTypes.func,
+  showEditButton: PropTypes.bool,
   withErrors: PropTypes.bool
 }
 

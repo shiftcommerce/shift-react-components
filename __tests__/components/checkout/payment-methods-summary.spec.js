@@ -13,7 +13,7 @@ test("renders the shipping methods summary", () => {
   const paymentMethod = 'credit-card'
 
   // Act
-  const wrapper = shallow(<PaymentMethodsSummary paymentMethod={paymentMethod} title={'test'}/>)
+  const wrapper = shallow(<PaymentMethodsSummary paymentMethod={paymentMethod} title={'test'} showEditButton={true}/>)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
@@ -24,12 +24,12 @@ test("renders the shipping methods summary", () => {
 })
 
 
-test("renders the PayPal image", () => {
+test('renders the PayPal image and does not render edit button', () => {
   // Arrange
   const paymentMethod = 'PayPal'
 
   // Act
-  const wrapper = shallow(<PaymentMethodsSummary paymentMethod={paymentMethod} title={'test'}/>)
+  const wrapper = shallow(<PaymentMethodsSummary paymentMethod={paymentMethod} title={'test'} showEditButton={false}/>)
 
   // Assert
   expect(wrapper).toMatchSnapshot()
