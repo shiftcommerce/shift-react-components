@@ -101,7 +101,7 @@ $minibag-border-style: 1px solid $border-default !important;
     }
 
   .c-minibag__line-items-section {
-    overflow: scroll;
+    overflow: auto;
   }
 
     .c-minibag__line-item-images {
