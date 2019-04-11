@@ -79,6 +79,20 @@
     &-information {
       width: 90%;
       border-bottom: 1px solid $border-default;
+
+      &-card-image {
+        flex-basis: 20%;
+        padding-bottom: $global-spacing-unit-small;
+
+        @include breakpoint(desktop) {
+          flex-basis: 10%;
+        }
+
+        img {
+          height: 20px;
+          margin-right: $global-spacing-unit-small;
+        }
+      }
     }
   }
 }

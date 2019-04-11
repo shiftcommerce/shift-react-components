@@ -15,7 +15,7 @@ class PaymentMethodsSummary extends PureComponent {
 
   renderPaymentMethodInformation (paymentMethod) {
     if (paymentMethod === 'PayPal') {
-      return <this.Image src='/static/payments/pay-pal.svg' className='c-payment-methods__image' />
+      return <this.Image src='/static/payments/pay-pal.svg' className='c-payment-methods__summary-information-card-image' />
     } else {
       return this.renderCardInformation(paymentMethod)
     }

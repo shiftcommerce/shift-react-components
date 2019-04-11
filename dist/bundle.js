@@ -57643,7 +57643,7 @@ function (_PureComponent) {
       if (paymentMethod === 'PayPal') {
         return external_react_default.a.createElement(this.Image, {
           src: "/static/payments/pay-pal.svg",
-          className: "c-payment-methods__image"
+          className: "c-payment-methods__summary-information-card-image"
         });
       } else {
         return this.renderCardInformation(paymentMethod);
