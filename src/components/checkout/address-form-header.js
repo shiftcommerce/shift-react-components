@@ -13,13 +13,12 @@ function AddressFormHeader ({ collapsed, title, onClick }) {
       <div className='o-form__header-title c-address-form__header-title'>
         <h2>{ title }</h2>
       </div>
-      { collapsed &&
-          <Button
-            label='Edit'
-            status='secondary'
-            className='o-button-edit'
-            onClick={onClick}
-          />
+      { collapsed && <Button
+          label='Edit'
+          status='secondary'
+          className='o-button-edit'
+          onClick={onClick}
+        />
       }
     </div>
   )
