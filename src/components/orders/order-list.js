@@ -1,7 +1,9 @@
 // Libraries
 import React, { PureComponent } from 'react'
-import dateFns from 'date-fns'
+import moment from 'moment-business-days'
 import t from 'typy'
+
+moment.locale('en-gb')
 
 // Lib
 import { penceToPounds } from '../../lib/pence-to-pounds'
@@ -104,7 +106,7 @@ class OrderList extends PureComponent {
     return (
       <>
         {orders.data.map((order) => {
-          const orderDate = dateFns.format(new Date(order.placed_at), 'MMM D, YYYY')
+          const orderDate = moment(new Date(order.placed_at)).format('MMM D, YYYY')
           const total = penceToPounds(t(order, 'pricing.total_inc_tax').safeObject)
 
           return (
