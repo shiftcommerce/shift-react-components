@@ -102,7 +102,7 @@ export class Layout extends Component {
   }
 
   renderHeader () {
-    const { cart, loggedIn, shrunk } = this.props
+    const { cart, deleteItem, loggedIn, minibagDisplayed, onItemQuantityUpdated, shrunk } = this.props
 
     const headerClasses = classNames('o-header', {
       'o-header--shrunk': shrunk
@@ -119,8 +119,9 @@ export class Layout extends Component {
               { this.renderBasket() }
               <this.Minibag
                 cart={cart}
-                deleteItem={this.props.deleteItem} 
-                miniBagDisplayed={this.props.minibagDisplayed} 
+                deleteItem={deleteItem} 
+                miniBagDisplayed={minibagDisplayed} 
+                onItemQuantityUpdated={onItemQuantityUpdated}
                 toggleMiniBag={this.props.toggleMiniBag} 
               />
               { this.renderSearch() }

@@ -13641,24 +13641,13 @@ var EXITING = 'exiting';
  * it's used to animate the mounting and unmounting of a component, but can also
  * be used to describe in-place transition states as well.
  *
- * ---
- *
- * **Note**: `Transition` is a platform-agnostic base component. If you're using
- * transitions in CSS, you'll probably want to use
- * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
- * instead. It inherits all the features of `Transition`, but contains
- * additional features necessary to play nice with CSS transitions (hence the
- * name of the component).
- *
- * ---
- *
  * By default the `Transition` component does not alter the behavior of the
- * component it renders, it only tracks "enter" and "exit" states for the
- * components. It's up to you to give meaning and effect to those states. For
- * example we can add styles to a component when it enters or exits:
+ * component it renders, it only tracks "enter" and "exit" states for the components.
+ * It's up to you to give meaning and effect to those states. For example we can
+ * add styles to a component when it enters or exits:
  *
  * ```jsx
- * import { Transition } from 'react-transition-group';
+ * import Transition from 'react-transition-group/Transition';
  *
  * const duration = 300;
  *
@@ -13674,7 +13663,7 @@ var EXITING = 'exiting';
  *
  * const Fade = ({ in: inProp }) => (
  *   <Transition in={inProp} timeout={duration}>
- *     {state => (
+ *     {(state) => (
  *       <div style={{
  *         ...defaultStyle,
  *         ...transitionStyles[state]
@@ -13686,43 +13675,60 @@ var EXITING = 'exiting';
  * );
  * ```
  *
+ * As noted the `Transition` component doesn't _do_ anything by itself to its child component.
+ * What it does do is track transition states over time so you can update the
+ * component (such as by adding styles or classes) when it changes states.
+ *
  * There are 4 main states a Transition can be in:
  *  - `'entering'`
  *  - `'entered'`
  *  - `'exiting'`
  *  - `'exited'`
  *
- * Transition state is toggled via the `in` prop. When `true` the component
- * begins the "Enter" stage. During this stage, the component will shift from
- * its current transition state, to `'entering'` for the duration of the
- * transition and then to the `'entered'` stage once it's complete. Let's take
- * the following example (we'll use the
- * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
+ * Transition state is toggled via the `in` prop. When `true` the component begins the
+ * "Enter" stage. During this stage, the component will shift from its current transition state,
+ * to `'entering'` for the duration of the transition and then to the `'entered'` stage once
+ * it's complete. Let's take the following example:
  *
  * ```jsx
- * function App() {
- *   const [inProp, setInProp] = useState(false);
+ * state = { in: false };
+ *
+ * toggleEnterState = () => {
+ *   this.setState({ in: true });
+ * }
+ *
+ * render() {
  *   return (
  *     <div>
- *       <Transition in={inProp} timeout={500}>
- *         {state => (
- *           // ...
- *         )}
- *       </Transition>
- *       <button onClick={() => setInProp(true)}>
- *         Click to Enter
- *       </button>
+ *       <Transition in={this.state.in} timeout={500} />
+ *       <button onClick={this.toggleEnterState}>Click to Enter</button>
  *     </div>
  *   );
  * }
  * ```
  *
- * When the button is clicked the component will shift to the `'entering'` state
- * and stay there for 500ms (the value of `timeout`) before it finally switches
- * to `'entered'`.
+ * When the button is clicked the component will shift to the `'entering'` state and
+ * stay there for 500ms (the value of `timeout`) before it finally switches to `'entered'`.
  *
- * When `in` is `false` the same thing happens except the state moves from
- * `'exiting'` to `'exited'`.
+ * When `in` is `false` the same thing happens except the state moves from `'exiting'` to `'exited'`.
+ *
+ * ## Timing
+ *
+ * Timing is often the trickiest part of animation, mistakes can result in slight delays
+ * that are hard to pin down. A common example is when you want to add an exit transition,
+ * you should set the desired final styles when the state is `'exiting'`. That's when the
+ * transition to those styles will start and, if you matched the `timeout` prop with the
+ * CSS Transition duration, it will end exactly when the state changes to `'exited'`.
+ *
+ * > **Note**: For simpler transitions the `Transition` component might be enough, but
+ * > take into account that it's platform-agnostic, while the `CSSTransition` component
+ * > [forces reflows](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
+ * > in order to make more complex transitions more predictable. For example, even though
+ * > classes `example-enter` and `example-enter-active` are applied immediately one after
+ * > another, you can still transition from one to the other because of the forced reflow
+ * > (read [this issue](https://github.com/reactjs/react-transition-group/issues/159#issuecomment-322761171)
+ * > for more info). Take this into account when choosing between `Transition` and
+ * > `CSSTransition`.
  */
 
 exports.EXITING = EXITING;
@@ -27733,64 +27739,17 @@ var removeClass = function removeClass(node, classes) {
   });
 };
 /**
- * A transition component inspired by the excellent
- * [ng-animate](http://www.nganimate.org/) library, you should use it if you're
- * using CSS transitions or animations. It's built upon the
- * [`Transition`](https://reactcommunity.org/react-transition-group/transition)
- * component, so it inherits all of its props.
+ * A `Transition` component using CSS transitions and animations.
+ * It's inspired by the excellent [ng-animate](http://www.nganimate.org/) library.
  *
  * `CSSTransition` applies a pair of class names during the `appear`, `enter`,
- * and `exit` states of the transition. The first class is applied and then a
- * second `*-active` class in order to activate the CSSS transition. After the
- * transition, matching `*-done` class names are applied to persist the
- * transition state.
+ * and `exit` stages of the transition. The first class is applied and then a
+ * second "active" class in order to activate the css animation. After the animation,
+ * matching `done` class names are applied to persist the animation state.
  *
- * ```jsx
- * function App() {
- *   const [inProp, setInProp] = useState(false);
- *   return (
- *     <div>
- *       <CSSTransition in={inProp} timeout={200} classNames="my-node">
- *         <div>
- *           {"I'll receive my-node-* classes"}
- *         </div>
- *       </CSSTransition>
- *       <button type="button" onClick={() => setInProp(true)}>
- *         Click to Enter
- *       </button>
- *     </div>
- *   );
- * }
- * ```
- *
- * When the `in` prop is set to `true`, the child component will first receive
- * the class `example-enter`, then the `example-enter-active` will be added in
- * the next tick. `CSSTransition` [forces a
- * reflow](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
- * between before adding the `example-enter-active`. This is an important trick
- * because it allows us to transition between `example-enter` and
- * `example-enter-active` even though they were added immediately one after
- * another. Most notably, this is what makes it possible for us to animate
- * _appearance_.
- *
- * ```css
- * .my-node-enter {
- *   opacity: 0;
- * }
- * .my-node-enter-active {
- *   opacity: 1;
- *   transition: opacity 200ms;
- * }
- * .my-node-exit {
- *   opacity: 1;
- * }
- * .my-node-exit-active {
- *   opacity: 0;
- *   transition: opacity: 200ms;
- * }
- * ```
- *
- * `*-active` classes represent which styles you want to animate **to**.
+ * When the `in` prop is toggled to `true` the Component will get
+ * the `example-enter` CSS class and the `example-enter-active` CSS class
+ * added in the next tick. This is a convention based on the `classNames` prop.
  */
 
 
@@ -27833,11 +27792,8 @@ function (_React$Component) {
     };
 
     _this.onEntered = function (node, appearing) {
-      var appearClassName = _this.getClassNames('appear').doneClassName;
-
-      var enterClassName = _this.getClassNames('enter').doneClassName;
-
-      var doneClassName = appearing ? appearClassName + " " + enterClassName : enterClassName;
+      var _this$getClassNames3 = _this.getClassNames('enter'),
+          doneClassName = _this$getClassNames3.doneClassName;
 
       _this.removeClasses(node, appearing ? 'appear' : 'enter');
 
@@ -27849,8 +27805,8 @@ function (_React$Component) {
     };
 
     _this.onExit = function (node) {
-      var _this$getClassNames3 = _this.getClassNames('exit'),
-          className = _this$getClassNames3.className;
+      var _this$getClassNames4 = _this.getClassNames('exit'),
+          className = _this$getClassNames4.className;
 
       _this.removeClasses(node, 'appear');
 
@@ -27864,8 +27820,8 @@ function (_React$Component) {
     };
 
     _this.onExiting = function (node) {
-      var _this$getClassNames4 = _this.getClassNames('exit'),
-          activeClassName = _this$getClassNames4.activeClassName;
+      var _this$getClassNames5 = _this.getClassNames('exit'),
+          activeClassName = _this$getClassNames5.activeClassName;
 
       _this.reflowAndAddClass(node, activeClassName);
 
@@ -27875,8 +27831,8 @@ function (_React$Component) {
     };
 
     _this.onExited = function (node) {
-      var _this$getClassNames5 = _this.getClassNames('exit'),
-          doneClassName = _this$getClassNames5.doneClassName;
+      var _this$getClassNames6 = _this.getClassNames('exit'),
+          doneClassName = _this$getClassNames6.doneClassName;
 
       _this.removeClasses(node, 'exit');
 
@@ -27889,11 +27845,9 @@ function (_React$Component) {
 
     _this.getClassNames = function (type) {
       var classNames = _this.props.classNames;
-      var isStringClassNames = typeof classNames === 'string';
-      var prefix = isStringClassNames && classNames ? classNames + '-' : '';
-      var className = isStringClassNames ? prefix + type : classNames[type];
-      var activeClassName = isStringClassNames ? className + '-active' : classNames[type + 'Active'];
-      var doneClassName = isStringClassNames ? className + '-done' : classNames[type + 'Done'];
+      var className = typeof classNames !== 'string' ? classNames[type] : classNames + '-' + type;
+      var activeClassName = typeof classNames !== 'string' ? classNames[type + 'Active'] : className + '-active';
+      var doneClassName = typeof classNames !== 'string' ? classNames[type + 'Done'] : className + '-done';
       return {
         className: className,
         activeClassName: activeClassName,
@@ -27907,10 +27861,10 @@ function (_React$Component) {
   var _proto = CSSTransition.prototype;
 
   _proto.removeClasses = function removeClasses(node, type) {
-    var _this$getClassNames6 = this.getClassNames(type),
-        className = _this$getClassNames6.className,
-        activeClassName = _this$getClassNames6.activeClassName,
-        doneClassName = _this$getClassNames6.doneClassName;
+    var _this$getClassNames7 = this.getClassNames(type),
+        className = _this$getClassNames7.className,
+        activeClassName = _this$getClassNames7.activeClassName,
+        doneClassName = _this$getClassNames7.doneClassName;
 
     className && removeClass(node, className);
     activeClassName && removeClass(node, activeClassName);
@@ -27946,9 +27900,6 @@ function (_React$Component) {
   return CSSTransition;
 }(_react.default.Component);
 
-CSSTransition.defaultProps = {
-  classNames: ''
-};
 CSSTransition.propTypes =  false ? undefined : {};
 var _default = CSSTransition;
 exports.default = _default;
@@ -43676,6 +43627,12 @@ function (_Component) {
 // CONCATENATED MODULE: ./src/objects/dropdown-select.js
 function dropdown_select_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { dropdown_select_typeof = function _typeof(obj) { return typeof obj; }; } else { dropdown_select_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return dropdown_select_typeof(obj); }
 
+function dropdown_select_extends() { dropdown_select_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return dropdown_select_extends.apply(this, arguments); }
+
+function dropdown_select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = dropdown_select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function dropdown_select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function dropdown_select_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function dropdown_select_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -43763,8 +43720,11 @@ function (_Component) {
           required = _this$props3.required,
           className = _this$props3.className,
           validationMessage = _this$props3.validationMessage,
-          disabled = _this$props3.disabled;
-      return external_react_default.a.createElement("select", {
+          disabled = _this$props3.disabled,
+          skipPrompt = _this$props3.skipPrompt,
+          otherProps = dropdown_select_objectWithoutProperties(_this$props3, ["name", "value", "prompt", "options", "required", "className", "validationMessage", "disabled", "skipPrompt"]);
+
+      return external_react_default.a.createElement("select", dropdown_select_extends({
         className: classnames_default()('o-form__input-block o-form__input-field', className, {
           'o-form__input-field__error': validationMessage
         }),
@@ -43776,7 +43736,7 @@ function (_Component) {
         onChange: this.triggerChange,
         onBlur: this.triggerBlur,
         disabled: disabled
-      }, external_react_default.a.createElement("option", {
+      }, otherProps), !skipPrompt && external_react_default.a.createElement("option", {
         role: "option",
         value: "",
         "aria-setsize": options.length,
@@ -49272,6 +49232,7 @@ function (_PureComponent) {
     _this.Button = component_mapping('Button');
     _this.Image = component_mapping('Image');
     _this.Link = component_mapping('Link');
+    _this.DropdownSelect = component_mapping('DropdownSelect');
     return _this;
   }
 
@@ -49280,7 +49241,8 @@ function (_PureComponent) {
     value: function renderLineItems(lineItems) {
       var _this2 = this;
 
-      var cartData = lineItems.sort(function (item1, item2) {
+      var onItemQuantityUpdated = this.props.onItemQuantityUpdated;
+      return lineItems.sort(function (item1, item2) {
         return parseInt(item1.id) - parseInt(item2.id);
       }).map(function (lineItem) {
         return external_react_default.a.createElement("div", {
@@ -49294,13 +49256,19 @@ function (_PureComponent) {
           className: "c-minibag__line-item-total"
         }, "\xA3", decimalPrice(lineItem.total)), external_react_default.a.createElement("a", {
           className: "c-minibag__line-item-subtotal"
-        }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement("div", null, external_react_default.a.createElement("p", {
-          className: "c-minibag__line-item-information-params"
-        }, "QUANTITY: ", lineItem.unit_quantity), external_react_default.a.createElement("a", {
+        }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement(_this2.DropdownSelect, {
+          className: "c-minibag__quantity",
+          "data-id": lineItem.id,
+          label: "Quantity",
+          onChange: onItemQuantityUpdated,
+          options: _this2.renderQuantityOptions(lineItem),
+          skipPrompt: true,
+          value: lineItem.unit_quantity
+        }), external_react_default.a.createElement("a", {
           className: "c-minibag__line-item--delete",
           "data-id": lineItem.id,
           onClick: _this2.props.deleteItem
-        }, "Remove"))), external_react_default.a.createElement("div", {
+        }, "Remove")), external_react_default.a.createElement("div", {
           className: "c-minibag__line-item-images"
         }, external_react_default.a.createElement(_this2.Link, {
           href: "/slug?slug=".concat(lineItem.item.product.canonical_path)
@@ -49312,7 +49280,34 @@ function (_PureComponent) {
           "aria-label": lineItem.item.title
         }))));
       });
-      return cartData;
+    }
+    /**
+    * Builds options prop for the DropdownSelect component.  
+    * @param {Object} lineItem - A line item from cart.
+    */
+
+  }, {
+    key: "renderQuantityOptions",
+    value: function renderQuantityOptions(lineItem) {
+      // Render options from 1 to 10 or maximum available stock, whichever is lower.
+      var maxStock = Math.min(10, lineItem.stock_available_level);
+      var baseOptions = Array.from({
+        length: maxStock
+      }, function (_, i) {
+        return {
+          title: i + 1,
+          value: i + 1
+        };
+      }); // Render an additional option with the current quantity if it is higher than the maximum above.
+
+      if (lineItem.unit_quantity > maxStock) {
+        baseOptions.push({
+          title: lineItem.unit_quantity,
+          value: lineItem.unit_quantity
+        });
+      }
+
+      return baseOptions;
     }
   }, {
     key: "renderMiniBagDropdown",
@@ -53723,9 +53718,6 @@ var isEmptyChildren = function (children) {
 var isPromise = function (value) {
   return formik_esm_isObject(value) && formik_esm_isFunction(value.then);
 };
-var isInputEvent = function (value) {
-  return value && formik_esm_isObject(value) && formik_esm_isObject(value.target);
-};
 function getActiveElement(doc) {
   doc = doc || (typeof document !== 'undefined' ? document : undefined);
 
@@ -53904,21 +53896,21 @@ function (_super) {
     };
 
     _this.handleChange = function (eventOrPath) {
-      var executeChange = function (eventOrValue, maybePath) {
+      var executeChange = function (eventOrTextValue, maybePath) {
         var field = maybePath;
-        var value;
+        var val = eventOrTextValue;
+        var parsed;
 
-        if (isInputEvent(eventOrValue)) {
-          var event_1 = eventOrValue;
-
-          if (event_1.persist) {
-            event_1.persist();
+        if (!isString(eventOrTextValue)) {
+          if (eventOrTextValue.persist) {
+            eventOrTextValue.persist();
           }
 
-          var _a = event_1.target,
+          var _a = eventOrTextValue.target,
               type = _a.type,
               name_1 = _a.name,
               id = _a.id,
+              value = _a.value,
               checked = _a.checked,
               outerHTML = _a.outerHTML;
           field = maybePath ? maybePath : name_1 ? name_1 : id;
@@ -53931,46 +53923,28 @@ function (_super) {
             });
           }
 
-          value = event_1.target.value;
-
-          if (/number|range/.test(type)) {
-            var parsed = parseFloat(event_1.target.value);
-            value = formik_esm_isNaN(parsed) ? '' : parsed;
-          }
-
-          if (/checkbox/.test(type)) {
-            value = checked;
-          }
-        } else {
-          value = eventOrValue;
+          val = /number|range/.test(type) ? (parsed = parseFloat(value), formik_esm_isNaN(parsed) ? '' : parsed) : /checkbox/.test(type) ? checked : value;
         }
 
         if (field) {
           _this.setState(function (prevState) {
             return __assign({}, prevState, {
-              values: setIn(prevState.values, field, value)
+              values: setIn(prevState.values, field, val)
             });
           }, function () {
             if (_this.props.validateOnChange) {
-              _this.runValidations(setIn(_this.state.values, field, value));
+              _this.runValidations(setIn(_this.state.values, field, val));
             }
           });
         }
       };
 
       if (isString(eventOrPath)) {
-        var path_1 = eventOrPath;
-
-        if (!formik_esm_isFunction(_this.hcCache[path_1])) {
-          _this.hcCache[path_1] = function (eventOrValue) {
-            return executeChange(eventOrValue, path_1);
-          };
-        }
-
-        return _this.hcCache[path_1];
+        return formik_esm_isFunction(_this.hcCache[eventOrPath]) ? _this.hcCache[eventOrPath] : _this.hcCache[eventOrPath] = function (event) {
+          return executeChange(event, eventOrPath);
+        };
       } else {
-        var event_2 = eventOrPath;
-        executeChange(event_2);
+        executeChange(eventOrPath);
       }
     };
 
@@ -54035,30 +54009,24 @@ function (_super) {
       _this.props.onSubmit(_this.state.values, _this.getFormikActions());
     };
 
-    _this.handleBlur = function (eventOrPath) {
-      var executeBlur = function (maybeEvent, maybePath) {
-        var field = maybePath;
+    _this.handleBlur = function (eventOrString) {
+      var executeBlur = function (e, path) {
+        if (e.persist) {
+          e.persist();
+        }
 
-        if (isInputEvent(maybeEvent)) {
-          var event_3 = maybeEvent;
+        var _a = e.target,
+            name = _a.name,
+            id = _a.id,
+            outerHTML = _a.outerHTML;
+        var field = path ? path : name ? name : id;
 
-          if (event_3.persist) {
-            event_3.persist();
-          }
-
-          var _a = event_3.target,
-              name_2 = _a.name,
-              id = _a.id,
-              outerHTML = _a.outerHTML;
-          field = name_2 ? name_2 : id;
-
-          if (!field && "production" !== 'production') {
-            warnAboutMissingIdentifier({
-              htmlContent: outerHTML,
-              documentationAnchorLink: 'handleblur-e-reactfocuseventany--void',
-              handlerName: 'handleBlur'
-            });
-          }
+        if (!field && "production" !== 'production') {
+          warnAboutMissingIdentifier({
+            htmlContent: outerHTML,
+            documentationAnchorLink: 'handleblur-e-any--void',
+            handlerName: 'handleBlur'
+          });
         }
 
         _this.setState(function (prevState) {
@@ -54072,19 +54040,12 @@ function (_super) {
         }
       };
 
-      if (isString(eventOrPath)) {
-        var path_2 = eventOrPath;
-
-        if (!formik_esm_isFunction(_this.hbCache[path_2])) {
-          _this.hbCache[path_2] = function (event) {
-            return executeBlur(event, path_2);
-          };
-        }
-
-        return _this.hbCache[path_2];
+      if (isString(eventOrString)) {
+        return formik_esm_isFunction(_this.hbCache[eventOrString]) ? _this.hbCache[eventOrString] : _this.hbCache[eventOrString] = function (event) {
+          return executeBlur(event, eventOrString);
+        };
       } else {
-        var event_4 = eventOrPath;
-        executeBlur(event_4);
+        executeBlur(eventOrString);
       }
     };
 
@@ -57941,7 +57902,10 @@ function (_Component) {
     value: function renderHeader() {
       var _this$props3 = this.props,
           cart = _this$props3.cart,
+          deleteItem = _this$props3.deleteItem,
           loggedIn = _this$props3.loggedIn,
+          minibagDisplayed = _this$props3.minibagDisplayed,
+          onItemQuantityUpdated = _this$props3.onItemQuantityUpdated,
           shrunk = _this$props3.shrunk;
       var headerClasses = classnames_default()('o-header', {
         'o-header--shrunk': shrunk
@@ -57956,8 +57920,9 @@ function (_Component) {
         className: "o-header__logo"
       }), this.renderMobileNav(), this.renderHeaderAccount(loggedIn), this.renderBasket(), external_react_default.a.createElement(this.Minibag, {
         cart: cart,
-        deleteItem: this.props.deleteItem,
-        miniBagDisplayed: this.props.minibagDisplayed,
+        deleteItem: deleteItem,
+        miniBagDisplayed: minibagDisplayed,
+        onItemQuantityUpdated: onItemQuantityUpdated,
         toggleMiniBag: this.props.toggleMiniBag
       }), this.renderSearch())), this.renderNav()));
     }

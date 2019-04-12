@@ -12,12 +12,12 @@ class Minibag extends PureComponent {
     this.Button = componentMapping('Button')
     this.Image = componentMapping('Image')
     this.Link = componentMapping('Link')
+    this.DropdownSelect = componentMapping('DropdownSelect')
   }
 
-
-
   renderLineItems (lineItems) {
-    const cartData = lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
+    const { onItemQuantityUpdated } = this.props
+    return lineItems.sort((item1, item2) => parseInt(item1.id) - parseInt(item2.id)).map((lineItem) => {
       return (
         <div className='c-minibag__line-item' key={lineItem.item.sku}>
           <div className='c-minibag__line-item-information'>
@@ -26,12 +26,18 @@ class Minibag extends PureComponent {
               <a className='c-minibag__line-item-total'>&pound;{decimalPrice(lineItem.total)}</a>
               <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a>
             </div>
-            <div>
-              <p className='c-minibag__line-item-information-params'>QUANTITY: {lineItem.unit_quantity}</p>
-              <a className='c-minibag__line-item--delete' data-id={lineItem.id} onClick={this.props.deleteItem} >
-                Remove
-              </a>
-            </div>
+            <this.DropdownSelect
+              className='c-minibag__quantity'
+              data-id={lineItem.id}
+              label='Quantity'
+              onChange={onItemQuantityUpdated}
+              options={this.renderQuantityOptions(lineItem)}
+              skipPrompt
+              value={lineItem.unit_quantity}
+            />
+            <a className='c-minibag__line-item--delete' data-id={lineItem.id} onClick={this.props.deleteItem} >
+              Remove
+            </a>
           </div>
           <div className='c-minibag__line-item-images'>
             <this.Link href={`/slug?slug=${lineItem.item.product.canonical_path}`}>
@@ -41,8 +47,29 @@ class Minibag extends PureComponent {
         </div>
       )
     })
+  }
 
-    return cartData
+  /**
+  * Builds options prop for the DropdownSelect component.  
+  * @param {Object} lineItem - A line item from cart.
+  */
+  renderQuantityOptions (lineItem) {
+    // Render options from 1 to 10 or maximum available stock, whichever is lower.
+    const maxStock = Math.min(10, lineItem.stock_available_level)
+    const baseOptions = Array.from({length: maxStock}, (_, i) => ({
+      title: i+1,
+      value: i+1
+    }))
+
+    // Render an additional option with the current quantity if it is higher than the maximum above.
+    if (lineItem.unit_quantity > maxStock) {
+      baseOptions.push({
+        title: lineItem.unit_quantity,
+        value: lineItem.unit_quantity
+      })
+    }
+
+    return baseOptions
   }
 
   renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
