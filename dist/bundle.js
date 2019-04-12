@@ -46678,7 +46678,7 @@ function (_Component) {
         className: "o-payment-method__address-summary  c-payment-method__address-summary"
       }, external_react_default.a.createElement("p", {
         className: "u-bold"
-      }, "".concat(shippingAddress.first_name, " ").concat(shippingAddress.last_name)), external_react_default.a.createElement("p", null, shippingAddress.address_line_1), external_react_default.a.createElement("p", null, shippingAddress.address_line_2), external_react_default.a.createElement("p", null, shippingAddress.city), external_react_default.a.createElement("p", null, shippingAddress.postcode)))), !billingAsShipping && external_react_default.a.createElement(external_react_default.a.Fragment, null, addressBook.length && external_react_default.a.createElement(this.AddressBook, {
+      }, "".concat(shippingAddress.first_name, " ").concat(shippingAddress.last_name)), external_react_default.a.createElement("p", null, shippingAddress.address_line_1), external_react_default.a.createElement("p", null, shippingAddress.address_line_2), external_react_default.a.createElement("p", null, shippingAddress.city), external_react_default.a.createElement("p", null, shippingAddress.postcode)))), !billingAsShipping && external_react_default.a.createElement(external_react_default.a.Fragment, null, addressBook.length !== 0 && external_react_default.a.createElement(this.AddressBook, {
         addressBook: addressBook,
         formName: "shippingAddress",
         currentAddressId: billingAddress.id,
