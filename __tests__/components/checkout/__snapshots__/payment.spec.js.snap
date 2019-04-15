@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the payment method header and stripe payment component 1`] = `
+exports[`renders the payment header and stripe payment component 1`] = `
 <div
   aria-label="Payment method"
   className="dummy-classname o-form c-payment-method"
 >
-  <PaymentMethodHeader
+  <PaymentHeader
     title="Payment"
   />
   <div
