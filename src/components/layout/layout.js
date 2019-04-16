@@ -105,7 +105,7 @@ export class Layout extends Component {
     const { cart, deleteItem, loggedIn, minibagDisplayed, onItemQuantityUpdated, shrunk } = this.props
 
     const headerClasses = classNames('o-header', {
-      'o-header--shrunk': shrunk
+      'o-header--shrunk': shrunk || minibagDisplayed
     })
 
     return (

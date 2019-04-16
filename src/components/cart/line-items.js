@@ -24,6 +24,7 @@ class LineItems extends Component {
   renderOptions (lineItem) {
     return (
       <this.DropdownSelect
+        className='c-line-items__quantity-select'
         data-id={lineItem.id}
         label='Quantity'
         onChange={this.props.updateQuantity}
@@ -66,13 +67,6 @@ class LineItems extends Component {
   renderButtonsAndTotal (lineItem) {
     return (
       <>
-        <div className='c-line-items__remove'>
-          <div className='c-line-items__delete'>
-            <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
-              Delete
-            </a>
-          </div>
-        </div>
         <div className='c-line-items__amounts'>
           { lineItem.sub_total !== lineItem.total && (
             <>
@@ -104,6 +98,13 @@ class LineItems extends Component {
             </span>
           </div>
         </div>
+        <div className='c-line-items__remove'>
+          <div className='c-line-items__delete'>
+            <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
+              Delete
+            </a>
+          </div>
+        </div>
       </div>
     )
   }
@@ -117,19 +118,9 @@ class LineItems extends Component {
   renderParams (lineItem) {
     return (
       <>
-        <div className='c-line-items__colour'>
-          <div className='c-line-items__param u-bold'>
-            <span>Colour</span>
-          </div>
-        </div>
         <div className='c-line-items__quantity'>
-          <div className='c-line-items__param u-bold'><span>Quantity</span></div>
-        </div>
-        <div className='c-line-items__param c-line-items__colour-selected'>
-          <span>Grey</span>
-        </div>
-        <div className='c-line-items__param c-line-items__quantity-selected'>
-          <span>{ this.renderOptions(lineItem) }</span>
+          <div className='c-line-items__quantity-header'><span>Quantity</span></div>
+          { this.renderOptions(lineItem) }
         </div>
       </>
     )

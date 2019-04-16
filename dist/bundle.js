@@ -45912,6 +45912,7 @@ function (_Component) {
     key: "renderOptions",
     value: function renderOptions(lineItem) {
       return external_react_default.a.createElement(this.DropdownSelect, {
+        className: "c-line-items__quantity-select",
         "data-id": lineItem.id,
         label: "Quantity",
         onChange: this.props.updateQuantity,
@@ -45959,14 +45960,6 @@ function (_Component) {
     key: "renderButtonsAndTotal",
     value: function renderButtonsAndTotal(lineItem) {
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        className: "c-line-items__remove"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__delete"
-      }, external_react_default.a.createElement("a", {
-        className: "c-line-items__delete-button",
-        "data-id": lineItem.id,
-        onClick: this.props.deleteItem
-      }, "Delete"))), external_react_default.a.createElement("div", {
         className: "c-line-items__amounts"
       }, lineItem.sub_total !== lineItem.total && external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("a", {
         className: "c-line-items__amount"
@@ -45993,7 +45986,15 @@ function (_Component) {
         className: "c-line-items__details-title u-bold"
       }, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("div", {
         className: "c-line-items__details-sku"
-      }, external_react_default.a.createElement("span", null, lineItem.sku))));
+      }, external_react_default.a.createElement("span", null, lineItem.sku))), external_react_default.a.createElement("div", {
+        className: "c-line-items__remove"
+      }, external_react_default.a.createElement("div", {
+        className: "c-line-items__delete"
+      }, external_react_default.a.createElement("a", {
+        className: "c-line-items__delete-button",
+        "data-id": lineItem.id,
+        onClick: this.props.deleteItem
+      }, "Delete"))));
     }
     /**
      * Render the parameters block of the line item, which contains the variants
@@ -46006,18 +46007,10 @@ function (_Component) {
     key: "renderParams",
     value: function renderParams(lineItem) {
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        className: "c-line-items__colour"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__param u-bold"
-      }, external_react_default.a.createElement("span", null, "Colour"))), external_react_default.a.createElement("div", {
         className: "c-line-items__quantity"
       }, external_react_default.a.createElement("div", {
-        className: "c-line-items__param u-bold"
-      }, external_react_default.a.createElement("span", null, "Quantity"))), external_react_default.a.createElement("div", {
-        className: "c-line-items__param c-line-items__colour-selected"
-      }, external_react_default.a.createElement("span", null, "Grey")), external_react_default.a.createElement("div", {
-        className: "c-line-items__param c-line-items__quantity-selected"
-      }, external_react_default.a.createElement("span", null, this.renderOptions(lineItem))));
+        className: "c-line-items__quantity-header"
+      }, external_react_default.a.createElement("span", null, "Quantity")), this.renderOptions(lineItem)));
     }
     /**
      * Render the line item rows
@@ -49367,7 +49360,7 @@ function (_PureComponent) {
         className: "c-minibag__dropdown-review"
       }, external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review-totals"
-      }, external_react_default.a.createElement("div", {
+      }, cart.discount_summaries.length > 0 && external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review-total-line"
       }, external_react_default.a.createElement("p", null, "Subtotal:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(cart.sub_total))), cart.discount_summaries.map(function (discount) {
         return external_react_default.a.createElement("div", {
@@ -56892,7 +56885,7 @@ function (_PureComponent) {
         singular: "item",
         count: cart.line_items_count || 0,
         showCount: false
-      }), " in your shopping basket"), external_react_default.a.createElement("p", {
+      }), " in your shopping basket."), external_react_default.a.createElement("p", {
         className: "c-cart-table__description"
       }, external_react_default.a.createElement(build_default.a, {
         singular: "This",
@@ -56903,7 +56896,7 @@ function (_PureComponent) {
         singular: "item",
         count: cart.line_items_count || 0,
         showCount: false
-      }), " will be saved for 48 hours depending on availability")));
+      }), " will be saved for 48 hours depending on availability.")));
     }
     /**
      * Render the estimated delivery date
@@ -56920,7 +56913,9 @@ function (_PureComponent) {
         className: "c-cart-table__header-grid-item c-cart-table__header-grid-item--b"
       }, external_react_default.a.createElement("h1", {
         className: "c-cart-table__title"
-      }, "Estimated Delivery"), external_react_default.a.createElement("p", null, "We will deliver your item: ", external_react_default.a.createElement("a", null, businessDaysFromNow(workingDays).format('dddd Do MMMM'))));
+      }, "Estimated Delivery"), external_react_default.a.createElement("p", {
+        className: "c-cart-table__description"
+      }, "We will deliver your item: ", businessDaysFromNow(workingDays).format('dddd Do MMMM'), "."));
     }
   }, {
     key: "render",
@@ -56933,11 +56928,7 @@ function (_PureComponent) {
         className: classnames_default()(className, 'c-cart-table__header')
       }, this.props.breadcrumb, external_react_default.a.createElement("div", {
         className: "c-cart-table__header-grid"
-      }, this.renderBasketDetails(cart), this.renderDeliveryEstimate(shippingMethod)), external_react_default.a.createElement("div", {
-        className: "c-cart-table__header-total"
-      }, external_react_default.a.createElement("h4", {
-        className: "c-cart-table__total"
-      }, "\xA3", decimalPrice(cart.total || 0))));
+      }, this.renderBasketDetails(cart), this.renderDeliveryEstimate(shippingMethod)));
     }
   }]);
 
@@ -57941,7 +57932,7 @@ function (_Component) {
           onItemQuantityUpdated = _this$props3.onItemQuantityUpdated,
           shrunk = _this$props3.shrunk;
       var headerClasses = classnames_default()('o-header', {
-        'o-header--shrunk': shrunk
+        'o-header--shrunk': shrunk || minibagDisplayed
       });
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: headerClasses
