@@ -49330,10 +49330,14 @@ function (_PureComponent) {
   }, {
     key: "renderMiniBagDropdown",
     value: function renderMiniBagDropdown(lineItemsCount, lineItems, cart) {
+      var _this3 = this;
+
       var miniBagTotal = cart.total - cart.shipping_total;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: "c-minibag__overlay",
-        onClick: this.props.toggleMiniBag
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
       }), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown"
       }, external_react_default.a.createElement("div", {
@@ -49353,7 +49357,9 @@ function (_PureComponent) {
       }), external_react_default.a.createElement("label", {
         htmlFor: "minibag",
         className: "c-minibag__dropdown-cross",
-        onClick: this.props.toggleMiniBag
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
       })), external_react_default.a.createElement("div", {
         className: "c-minibag__line-items-section"
       }, this.renderLineItems(lineItems)), external_react_default.a.createElement("div", {
@@ -49377,7 +49383,9 @@ function (_PureComponent) {
         label: "continue shopping",
         className: "o-button--sml c-minibag__dropdown-buttons--link",
         status: "primary",
-        onClick: this.props.toggleMiniBag
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
       }))))));
     }
   }, {

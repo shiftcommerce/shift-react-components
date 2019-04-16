@@ -75,13 +75,13 @@ class Minibag extends PureComponent {
   renderMiniBagDropdown(lineItemsCount, lineItems, cart) {
     const miniBagTotal = cart.total - cart.shipping_total
     return <>
-      <div className='c-minibag__overlay' onClick={this.props.toggleMiniBag} />
+      <div className='c-minibag__overlay' onClick={() => this.props.toggleMiniBag(false)} />
       <div className='c-minibag__dropdown'>
         <div className='c-minibag__dropdown-container'>
           <section className='c-minibag__dropdown-header'>
             <h1 className='c-minibag__dropdown-title'> Shopping Basket <a className='c-checkout-cart__amount'>({lineItemsCount})</a></h1>
             <input id='minibag' type='checkbox' className='c-minibag__dropdown-checkbox' checked={this.props.miniBagDisplayed} readOnly />
-            <label htmlFor='minibag' className='c-minibag__dropdown-cross' onClick={this.props.toggleMiniBag} />
+            <label htmlFor='minibag' className='c-minibag__dropdown-cross' onClick={() => this.props.toggleMiniBag(false)} />
           </section>
           <div className='c-minibag__line-items-section'>
             { this.renderLineItems(lineItems) }
@@ -107,7 +107,7 @@ class Minibag extends PureComponent {
               <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link'>
                 view shopping basket
               </this.Link>
-              <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={this.props.toggleMiniBag} />
+              <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={() => this.props.toggleMiniBag(false)} />
             </div>
           </div>
         </div>
