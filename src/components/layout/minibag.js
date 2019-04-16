@@ -72,8 +72,8 @@ class Minibag extends PureComponent {
     return baseOptions
   }
 
-  renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
-    const miniBagTotal = total - shippingTotal
+  renderMiniBagDropdown(lineItemsCount, lineItems, cart) {
+    const miniBagTotal = cart.total - cart.shipping_total
     return <>
       <div className='c-minibag__overlay' onClick={this.props.toggleMiniBag} />
       <div className='c-minibag__dropdown'>
@@ -87,10 +87,22 @@ class Minibag extends PureComponent {
             { this.renderLineItems(lineItems) }
           </div>
           <div className='c-minibag__dropdown-review'>
-            <span className='c-minibag__dropdown-review-total'>
-              <h4>Total:</h4>
-              <h4>&pound;{ decimalPrice(miniBagTotal) }</h4>
-            </span>
+            <div className='c-minibag__dropdown-review-totals'>
+              <div className='c-minibag__dropdown-review-total-line'>
+                <p>Subtotal:</p>
+                <p>£{ decimalPrice(cart.sub_total) }</p>
+              </div>
+              { cart.discount_summaries.map(discount => (
+                <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion'>
+                  <p>{ discount.name }:</p>
+                  <p>- £{ decimalPrice(discount.total) }</p>
+                </div>
+              ))}
+              <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main'>
+                <p>Total:</p>
+                <p>£{ decimalPrice(miniBagTotal) }</p>
+              </div>
+            </div>
             <div className='c-minibag__dropdown-buttons'>
               <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link'>
                 view shopping basket
@@ -110,7 +122,7 @@ class Minibag extends PureComponent {
     const miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed
 
     return <>
-        { (miniBagDisplayed && lineItemsCount > 0) && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total) }
+        { (miniBagDisplayed && lineItemsCount > 0) && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart) }
     </>
   }
 }

@@ -43761,9 +43761,10 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var skipLabel = this.props.skipLabel;
       return external_react_default.a.createElement("div", {
         className: classnames_default()('o-form__input-group')
-      }, this.renderLabel(), this.renderDropdown(), this.props.renderValidationMessage());
+      }, !skipLabel && this.renderLabel(), this.renderDropdown(), this.props.renderValidationMessage());
     }
   }]);
 
@@ -45894,8 +45895,9 @@ function (_Component) {
     line_items_classCallCheck(this, LineItems);
 
     _this = line_items_possibleConstructorReturn(this, line_items_getPrototypeOf(LineItems).call(this, props));
-    _this.Link = component_mapping('Link');
+    _this.DropdownSelect = component_mapping('DropdownSelect');
     _this.Image = component_mapping('Image');
+    _this.Link = component_mapping('Link');
     return _this;
   }
   /**
@@ -45909,20 +45911,43 @@ function (_Component) {
   line_items_createClass(LineItems, [{
     key: "renderOptions",
     value: function renderOptions(lineItem) {
-      var availableQuantity = Array.from(Array(Math.min(lineItem.stock_available_level, 11)).keys());
-      availableQuantity.shift();
-      return external_react_default.a.createElement("select", {
-        value: lineItem.unit_quantity,
+      return external_react_default.a.createElement(this.DropdownSelect, {
+        "data-id": lineItem.id,
+        label: "Quantity",
         onChange: this.props.updateQuantity,
-        "data-id": lineItem.id
-      }, availableQuantity.map(function (index) {
-        return external_react_default.a.createElement("option", {
-          key: index,
-          value: index,
-          "aria-setsize": index,
-          "aria-posinset": index + 1
-        }, index);
-      }));
+        options: this.renderQuantityOptions(lineItem),
+        skipLabel: true,
+        skipPrompt: true,
+        value: lineItem.unit_quantity
+      });
+    }
+    /**
+    * Builds options prop for the DropdownSelect component.  
+    * @param {Object} lineItem - A line item from cart.
+    */
+
+  }, {
+    key: "renderQuantityOptions",
+    value: function renderQuantityOptions(lineItem) {
+      // Render options from 1 to 10 or maximum available stock, whichever is lower.
+      var maxStock = Math.min(10, lineItem.stock_available_level);
+      var baseOptions = Array.from({
+        length: maxStock
+      }, function (_, i) {
+        return {
+          title: i + 1,
+          value: i + 1
+        };
+      }); // Render an additional option with the current quantity if it is higher than the maximum above.
+
+      if (lineItem.unit_quantity > maxStock) {
+        baseOptions.push({
+          title: lineItem.unit_quantity,
+          value: lineItem.unit_quantity
+        });
+      }
+
+      return baseOptions;
     }
     /**
      * Render the prices and actions block of the line item
@@ -49311,8 +49336,8 @@ function (_PureComponent) {
     }
   }, {
     key: "renderMiniBagDropdown",
-    value: function renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
-      var miniBagTotal = total - shippingTotal;
+    value: function renderMiniBagDropdown(lineItemsCount, lineItems, cart) {
+      var miniBagTotal = cart.total - cart.shipping_total;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: "c-minibag__overlay",
         onClick: this.props.toggleMiniBag
@@ -49340,9 +49365,17 @@ function (_PureComponent) {
         className: "c-minibag__line-items-section"
       }, this.renderLineItems(lineItems)), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review"
-      }, external_react_default.a.createElement("span", {
-        className: "c-minibag__dropdown-review-total"
-      }, external_react_default.a.createElement("h4", null, "Total:"), external_react_default.a.createElement("h4", null, "\xA3", decimalPrice(miniBagTotal))), external_react_default.a.createElement("div", {
+      }, external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-review-totals"
+      }, external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-review-total-line"
+      }, external_react_default.a.createElement("p", null, "Subtotal:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(cart.sub_total))), cart.discount_summaries.map(function (discount) {
+        return external_react_default.a.createElement("div", {
+          className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion"
+        }, external_react_default.a.createElement("p", null, discount.name, ":"), external_react_default.a.createElement("p", null, "- \xA3", decimalPrice(discount.total)));
+      }), external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main"
+      }, external_react_default.a.createElement("p", null, "Total:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(miniBagTotal)))), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-buttons"
       }, external_react_default.a.createElement(this.Link, {
         href: "/cart",
@@ -49361,7 +49394,7 @@ function (_PureComponent) {
       var lineItemsCount = cart.line_items_count || 0;
       var lineItems = cart.line_items;
       var miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && lineItemsCount > 0 && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total));
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && lineItemsCount > 0 && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart));
     }
   }]);
 

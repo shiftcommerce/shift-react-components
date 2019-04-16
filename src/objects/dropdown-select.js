@@ -76,9 +76,11 @@ class DropdownSelect extends Component {
   }
 
   render () {
+    const { skipLabel } = this.props
+
     return (
       <div className={classNames('o-form__input-group')}>
-        { this.renderLabel() }
+        { !skipLabel && this.renderLabel() }
         { this.renderDropdown() }
         { this.props.renderValidationMessage() }
       </div>
