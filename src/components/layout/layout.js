@@ -78,7 +78,7 @@ export class Layout extends Component {
  */
   renderCartLink(lineItemsCount) {
     return (
-      <span className='c-minibag__cart' onClick={this.props.toggleMiniBag}>
+      <span className='c-minibag__cart' onClick={() => this.props.toggleMiniBag(true)}>
         <div className='c-minibag__cart-image'>
           <span className='c-minibag__cart-image-count' >
             {lineItemsCount}

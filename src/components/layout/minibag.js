@@ -93,7 +93,7 @@ class Minibag extends PureComponent {
                 <p>£{ decimalPrice(cart.sub_total) }</p>
               </div> }
               { cart.discount_summaries.map(discount => (
-                <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion'>
+                <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion' key={discount.id}>
                   <p>{ discount.name }:</p>
                   <p>- £{ decimalPrice(discount.total) }</p>
                 </div>

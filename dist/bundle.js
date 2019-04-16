@@ -43722,7 +43722,9 @@ function (_Component) {
           validationMessage = _this$props3.validationMessage,
           disabled = _this$props3.disabled,
           skipPrompt = _this$props3.skipPrompt,
-          otherProps = dropdown_select_objectWithoutProperties(_this$props3, ["name", "value", "prompt", "options", "required", "className", "validationMessage", "disabled", "skipPrompt"]);
+          skipLabel = _this$props3.skipLabel,
+          renderValidationMessage = _this$props3.renderValidationMessage,
+          otherProps = dropdown_select_objectWithoutProperties(_this$props3, ["name", "value", "prompt", "options", "required", "className", "validationMessage", "disabled", "skipPrompt", "skipLabel", "renderValidationMessage"]);
 
       return external_react_default.a.createElement("select", dropdown_select_extends({
         className: classnames_default()('o-form__input-block o-form__input-field', className, {
@@ -49370,7 +49372,8 @@ function (_PureComponent) {
         className: "c-minibag__dropdown-review-total-line"
       }, external_react_default.a.createElement("p", null, "Subtotal:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(cart.sub_total))), cart.discount_summaries.map(function (discount) {
         return external_react_default.a.createElement("div", {
-          className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion"
+          className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion",
+          key: discount.id
         }, external_react_default.a.createElement("p", null, discount.name, ":"), external_react_default.a.createElement("p", null, "- \xA3", decimalPrice(discount.total)));
       }), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main"
@@ -57904,9 +57907,13 @@ function (_Component) {
   }, {
     key: "renderCartLink",
     value: function renderCartLink(lineItemsCount) {
+      var _this2 = this;
+
       return external_react_default.a.createElement("span", {
         className: "c-minibag__cart",
-        onClick: this.props.toggleMiniBag
+        onClick: function onClick() {
+          return _this2.props.toggleMiniBag(true);
+        }
       }, external_react_default.a.createElement("div", {
         className: "c-minibag__cart-image"
       }, external_react_default.a.createElement("span", {
