@@ -127,6 +127,7 @@ exports[`renders the children inside it 1`] = `
         >
           <span
             className="c-minibag__cart"
+            onClick={[Function]}
           >
             <div
               className="c-minibag__cart-image"
@@ -413,6 +414,7 @@ exports[`renders the header 1`] = `
         >
           <span
             className="c-minibag__cart"
+            onClick={[Function]}
           >
             <div
               className="c-minibag__cart-image"
@@ -684,6 +686,7 @@ exports[`renders the navbar for non-checkout pages 1`] = `
         >
           <span
             className="c-minibag__cart"
+            onClick={[Function]}
           >
             <div
               className="c-minibag__cart-image"

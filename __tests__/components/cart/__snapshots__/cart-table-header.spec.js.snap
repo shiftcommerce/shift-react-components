@@ -187,7 +187,7 @@ exports[`renders correct messages when cart has items 1`] = `
                 items
               </span>
             </Plural>
-             in your shopping basket
+             in your shopping basket.
           </p>
           <p
             className="c-cart-table__description"
@@ -224,7 +224,7 @@ exports[`renders correct messages when cart has items 1`] = `
                 items
               </span>
             </Plural>
-             will be saved for 48 hours depending on availability
+             will be saved for 48 hours depending on availability.
           </p>
         </div>
       </div>
@@ -236,23 +236,14 @@ exports[`renders correct messages when cart has items 1`] = `
         >
           Estimated Delivery
         </h1>
-        <p>
+        <p
+          className="c-cart-table__description"
+        >
           We will deliver your item: 
-          <a>
-            Wednesday 5th December
-          </a>
+          Wednesday 5th December
+          .
         </p>
       </div>
-    </div>
-    <div
-      className="c-cart-table__header-total"
-    >
-      <h4
-        className="c-cart-table__total"
-      >
-        £
-        5.27
-      </h4>
     </div>
   </section>
 </CartTableHeader>
@@ -335,7 +326,7 @@ exports[`renders correct messages when cart is empty 1`] = `
                 items
               </span>
             </Plural>
-             in your shopping basket
+             in your shopping basket.
           </p>
           <p
             className="c-cart-table__description"
@@ -372,7 +363,7 @@ exports[`renders correct messages when cart is empty 1`] = `
                 items
               </span>
             </Plural>
-             will be saved for 48 hours depending on availability
+             will be saved for 48 hours depending on availability.
           </p>
         </div>
       </div>
@@ -384,23 +375,14 @@ exports[`renders correct messages when cart is empty 1`] = `
         >
           Estimated Delivery
         </h1>
-        <p>
+        <p
+          className="c-cart-table__description"
+        >
           We will deliver your item: 
-          <a>
-            Wednesday 5th December
-          </a>
+          Wednesday 5th December
+          .
         </p>
       </div>
-    </div>
-    <div
-      className="c-cart-table__header-total"
-    >
-      <h4
-        className="c-cart-table__total"
-      >
-        £
-        0.00
-      </h4>
     </div>
   </section>
 </CartTableHeader>
