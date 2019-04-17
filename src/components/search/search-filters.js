@@ -62,13 +62,14 @@ class SearchFilters extends Component {
       return (
         <>
           {
-            facets.map((facet, index) => {
+            facets.map((facet) => {
               const { source, searchable, aggregation_type, label } = facet
+
               let filter;
-              console.log({facet})
+
               switch (aggregation_type) {
                 case 'list':
-                  filter = <RefinementList attribute={source} searchable={searchable}  showMore={true} limit={3} />
+                  filter = <RefinementList attribute={source} searchable={searchable} showMore={true} limit={3} />
                   break;
                 case 'hierarchy':
                   filter = <HierarchicalMenu attribute={source} searchable={searchable} />
@@ -77,14 +78,14 @@ class SearchFilters extends Component {
                   filter = <RangeInput attribute={source} />
                   break;
                 case 'rating':
-                  filter = <RatingMenu attribute={source}/>
+                  filter = <RatingMenu attribute={source} />
                   break;
                 default:
                   // no-op
               }
 
               return (
-                <Panel className='c-product-listing-filter__body-option' key={index} header={header(label)} >
+                <Panel className='c-product-listing-filter__body-option' key={label} header={header(label)}>
                   {filter}
                 </Panel>
               )
