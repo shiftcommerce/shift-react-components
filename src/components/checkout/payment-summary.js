@@ -15,7 +15,7 @@ class PaymentSummary extends PureComponent {
 
   renderBillingAddress() {
     const { paymentMethod, billingAddress } = this.props
-    
+
     if (billingAddress) {
       return(
         <>
@@ -24,16 +24,16 @@ class PaymentSummary extends PureComponent {
         </>
       )
     } else {
-      return <span className='u-bold'>{ paymentMethod }</span>
+      return paymentMethod
     }
   }
 
   render () {
-    const { onClick, showEditButton, withErrors } = this.props
+    const { onClick, showEditButton, title, withErrors } = this.props
     return (
       <>
         <this.PaymentHeader
-          title={'Payment'}
+          title={title}
           collapsed
           onClick={onClick}
           showEditButton={showEditButton}
@@ -53,6 +53,7 @@ PaymentSummary.propTypes = {
   billingAddress: PropTypes.object,
   onClick: PropTypes.func,
   showEditButton: PropTypes.bool,
+  title: PropTypes.string.isRequired,
   withErrors: PropTypes.bool
 }
 

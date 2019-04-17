@@ -57525,7 +57525,7 @@ function (_Component) {
         "aria-label": "Payment method",
         className: classnames_default()(className, 'o-form c-payment')
       }, external_react_default.a.createElement(this.PaymentHeader, {
-        title: 'Payment'
+        title: 'Payment & Billing Address'
       }), external_react_default.a.createElement("div", {
         className: "c-payment__section",
         style: {
@@ -57641,9 +57641,7 @@ function (_PureComponent) {
           className: "u-bold"
         }, billingAddress.first_name, " ", billingAddress.last_name, " "), external_react_default.a.createElement("span", null, billingAddress.address_line_1, ", ", billingAddress.city, ", ", billingAddress.postcode));
       } else {
-        return external_react_default.a.createElement("span", {
-          className: "u-bold"
-        }, paymentMethod);
+        return paymentMethod;
       }
     }
   }, {
@@ -57652,9 +57650,10 @@ function (_PureComponent) {
       var _this$props2 = this.props,
           onClick = _this$props2.onClick,
           showEditButton = _this$props2.showEditButton,
+          title = _this$props2.title,
           withErrors = _this$props2.withErrors;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.PaymentHeader, {
-        title: 'Payment',
+        title: title,
         collapsed: true,
         onClick: onClick,
         showEditButton: showEditButton
@@ -57675,6 +57674,7 @@ payment_summary_PaymentSummary.propTypes = {
   billingAddress: prop_types_default.a.object,
   onClick: prop_types_default.a.func,
   showEditButton: prop_types_default.a.bool,
+  title: prop_types_default.a.string.isRequired,
   withErrors: prop_types_default.a.bool
 };
 /* harmony default export */ var payment_summary = (payment_summary_PaymentSummary);
