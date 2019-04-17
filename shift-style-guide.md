@@ -23,14 +23,13 @@ const firstName = "John"
 
 ### File Names
 
-We use snake case for file names
+We use kebab case for file names
 
 ```example-file.js```
 
 ### Code Indentation
 
 We always use 2 spaces for indentation.
-
 
 ### Curly Spacing
 
@@ -53,7 +52,7 @@ export { foo }
 
 ### Eslint config
 
-```jsx
+```json
 {
   "parser": "babel-eslint",
   "parserOptions": {
@@ -109,7 +108,7 @@ export { foo }
 
 We follow this approach to make it easier for the front-end devs to search for a selector in the codebase.
 
-```jsx
+```css
 
 .foo {
   color: red;
@@ -123,7 +122,7 @@ We follow this approach to make it easier for the front-end devs to search for a
 
 We still indent if it is a child of a selector e.g:
 
-```jsx
+```css
 .foo {
   color: red;
 }
@@ -133,3 +132,21 @@ We still indent if it is a child of a selector e.g:
   }
 ```
 
+### Stylelint
+
+We use Stylelint to lint our SCSS.
+As a ruleset for this we use `stylelint-config-recommended-scss`, with the following extra rules:
+
+```json
+// .stylelintrc
+{
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "selector-max-empty-lines": 0,
+    "value-list-max-empty-lines": 0,
+    "indentation": 2,
+    "no-eol-whitespace": true,
+    "no-descending-specificity": null
+  }
+}
+```
