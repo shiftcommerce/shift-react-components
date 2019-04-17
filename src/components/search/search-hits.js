@@ -96,20 +96,6 @@ const SearchResults = (results) => {
 }
 
 /**
- * Groups variants (i.e. hits) by product reference, returns an array of arrays,
- * each sub-array is a group of variants
- * @param {array} hits
- * @return {string} - HTML markup for the component
- */
-const groupVariants = (hits) => {
-  return Object.values(hits.reduce((products, variant) => {
-    if (!products[variant.product_reference]) products[variant.product_reference] = []
-    products[variant.product_reference].push(variant)
-    return products
-  }, {}))
-}
-
-/**
  * Wraps SearchResults in connectInfiniteHits (Algolia connector)
  * @param {function} SearchResults
  * @return {string} - HTML markup for the component
