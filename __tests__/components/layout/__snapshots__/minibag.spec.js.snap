@@ -787,10 +787,12 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
           <Link
             className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
             href="/cart"
+            onClick={[Function]}
           >
             <a
               className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
               href="/cart"
+              onClick={[Function]}
             >
               view shopping basket
             </a>

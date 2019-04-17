@@ -104,7 +104,7 @@ class Minibag extends PureComponent {
               </div>
             </div>
             <div className='c-minibag__dropdown-buttons'>
-              <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link'>
+              <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link' onClick={ () => this.props.toggleMiniBag(false) }>
                 view shopping basket
               </this.Link>
               <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={() => this.props.toggleMiniBag(false)} />

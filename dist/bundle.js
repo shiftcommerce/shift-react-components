@@ -49381,7 +49381,10 @@ function (_PureComponent) {
         className: "c-minibag__dropdown-buttons"
       }, external_react_default.a.createElement(this.Link, {
         href: "/cart",
-        className: "o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+        className: "o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link",
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
       }, "view shopping basket"), external_react_default.a.createElement(this.Button, {
         label: "continue shopping",
         className: "o-button--sml c-minibag__dropdown-buttons--link",
@@ -57943,11 +57946,10 @@ function (_Component) {
           cart = _this$props3.cart,
           deleteItem = _this$props3.deleteItem,
           loggedIn = _this$props3.loggedIn,
-          minibagDisplayed = _this$props3.minibagDisplayed,
           onItemQuantityUpdated = _this$props3.onItemQuantityUpdated,
           shrunk = _this$props3.shrunk;
       var headerClasses = classnames_default()('o-header', {
-        'o-header--shrunk': shrunk || minibagDisplayed
+        'o-header--shrunk': shrunk || cart.miniBagDisplayed
       });
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: headerClasses
@@ -57960,7 +57962,7 @@ function (_Component) {
       }), this.renderMobileNav(), this.renderHeaderAccount(loggedIn), this.renderBasket(), external_react_default.a.createElement(this.Minibag, {
         cart: cart,
         deleteItem: deleteItem,
-        miniBagDisplayed: minibagDisplayed,
+        miniBagDisplayed: cart.miniBagDisplayed,
         onItemQuantityUpdated: onItemQuantityUpdated,
         toggleMiniBag: this.props.toggleMiniBag
       }), this.renderSearch())), this.renderNav()));
