@@ -7,7 +7,7 @@ import ProductListingCard from '../products/listing/product-listing-card'
 
 /**
  * This is only exported for testing
- * @param {array} variantGroups
+ * @param {array} hits
  * @return {string} - HTML markup for the component
  */
 const BaseSearchHits = (hits) => {
