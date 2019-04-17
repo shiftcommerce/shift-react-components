@@ -30,4 +30,4 @@ import { Button } from '@shiftcommerce/shift-react-components
 
 ### Style Guide
 
-in progress...
+[Shift Style Guide](https://github.com/shiftcommerce/shift-react-components/blob/master/shift-style-guide.md)
