@@ -41,9 +41,9 @@ class Payment extends Component {
       order
     } = this.props
     return (
-      <div aria-label='Payment method' className={classNames(className, 'o-form c-payment-method')}>
+      <div aria-label='Payment method' className={classNames(className, 'o-form c-payment')}>
         <this.PaymentHeader title={'Payment'}/>
-        <div className='c-payment-method__section' style={{ display: 'block' }}>
+        <div className='c-payment__section' style={{ display: 'block' }}>
           <this.StripePayment
             addingNewAddress={addingNewAddress}
             addressBook={addressBook}

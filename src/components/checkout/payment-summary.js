@@ -1,37 +1,52 @@
 // Libraries
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-const PaymentSummary = ({ billingAddress, paymentMethod, showEditButton, onClick, withErrors }) => {
-  const PaymentHeader = componentMapping('PaymentHeader')
+class PaymentSummary extends PureComponent {
+  constructor (props) {
+    super(props)
 
-  return (
-    <>
-      <PaymentHeader
-        title={'Payment'}
-        collapsed
-        onClick={onClick}
-        showEditButton={showEditButton}
-      />
-      <div className={classNames('c-payment-method__summary', { 'o-form__error': withErrors })}>
-        <p>
-          <span className='u-bold'> Payment Mode: </span>
-          <span>{ paymentMethod }</span>
-        </p>
-        { billingAddress &&
+    this.PaymentHeader = componentMapping('PaymentHeader')
+  }
+
+  renderBillingAddress() {
+    const { paymentMethod, billingAddress } = this.props
+    
+    if (billingAddress) {
+      return(
+        <>
+          <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
+          <span>{ billingAddress.address_line_1 }, { billingAddress.city }, { billingAddress.postcode }</span>
+        </>
+      )
+    } else {
+      return <span className='u-bold'>{ paymentMethod }</span>
+    }
+  }
+
+  render () {
+    const { onClick, showEditButton, withErrors } = this.props
+    return (
+      <>
+        <this.PaymentHeader
+          title={'Payment'}
+          collapsed
+          onClick={onClick}
+          showEditButton={showEditButton}
+        />
+        <div className={classNames('c-payment__summary', { 'o-form__error': withErrors })}>
           <p>
             <span className='u-bold'>Billing Address: </span>
-            <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
-            <span>{ billingAddress.address_line_1 }, { billingAddress.city }, { billingAddress.postcode }</span>
+            { this.renderBillingAddress() }
           </p>
-        }
-      </div>
-    </>
-  )
+        </div>
+      </>
+    )
+  }
 }
 
 PaymentSummary.propTypes = {

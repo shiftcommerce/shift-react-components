@@ -3,13 +3,13 @@
 exports[`renders the payment header and stripe payment component 1`] = `
 <div
   aria-label="Payment method"
-  className="dummy-classname o-form c-payment-method"
+  className="dummy-classname o-form c-payment"
 >
   <PaymentHeader
     title="Payment"
   />
   <div
-    className="c-payment-method__section"
+    className="c-payment__section"
     style={
       Object {
         "display": "block",

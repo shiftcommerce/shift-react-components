@@ -17,8 +17,8 @@ test("renders the shipping methods summary", () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('div').first()).toMatchSelector('.c-payment-methods__summary')
-  expect(wrapper.find('div').last()).toMatchSelector('.c-payment-methods__summary-information')
+  expect(wrapper.find('div').first()).toMatchSelector('.c-payment-method__summary')
+  expect(wrapper.find('div').last()).toMatchSelector('.c-payment-method__summary-information')
   expect(wrapper.find(PaymentMethodHeader).length).toEqual(1)
   expect(wrapper).toIncludeText(paymentMethod)
 })
@@ -33,8 +33,8 @@ test('renders the PayPal image and does not render edit button', () => {
 
   // Assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper.find('div').first()).toMatchSelector('.c-payment-methods__summary')
-  expect(wrapper.find('div').last()).toMatchSelector('.c-payment-methods__summary-information')
+  expect(wrapper.find('div').first()).toMatchSelector('.c-payment-method__summary')
+  expect(wrapper.find('div').last()).toMatchSelector('.c-payment-method__summary-information')
   expect(wrapper.find(PaymentMethodHeader).length).toEqual(1)
   expect(wrapper.find(Image).length).toEqual(1)
 })

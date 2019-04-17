@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 function PaymentHeader ({ title, collapsed, onClick, showEditButton }) {
   const Button = componentMapping('Button')
   return (
-    <div className='o-form__header  c-payment-method__header'>
+    <div className='o-form__header  c-payment__header'>
       <h2>{ title }</h2>
       { collapsed && showEditButton && <Button
         aria-label='Edit your payment method'

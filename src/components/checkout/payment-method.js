@@ -31,17 +31,17 @@ class PaymentMethod extends Component {
     } = this.props
 
     return (
-      <div aria-label='Payment method' className='o-form c-payment-methods'>
+      <div aria-label='Payment method' className='o-form c-payment-method'>
         <this.PaymentMethodHeader title={'Payment Method'} />
-        <div className='c-payment-methods__options'>
+        <div className='c-payment-method__options'>
           <this.PayPalButton 
             paypalCreateOrder={paypalCreateOrder}
             paypalOnApprove={paypalOnApprove}
             handleSetPaymentMethod={handleSetPaymentMethod}
           />
-          <p className='c-payment-methods__option-text u-bold'>OR</p>
+          <p className='c-payment-method__option-text u-bold'>OR</p>
           <this.Button
-            className='o-button--sml c-payment-methods__button'
+            className='o-button--sml c-payment-method__button'
             type='button'
             label={'Pay By Credit/Debit Card'}
             onClick={() => this.handleDefaultPaymentSelection('Credit/Debit Card')}

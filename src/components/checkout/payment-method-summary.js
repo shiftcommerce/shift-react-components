@@ -15,7 +15,7 @@ class PaymentMethodSummary extends PureComponent {
 
   renderPaymentMethodInformation (paymentMethod) {
     if (paymentMethod === 'PayPal') {
-      return <this.Image src='/static/payments/pay-pal.svg' className='c-payment-methods__summary-information-card-image' />
+      return <this.Image src='/static/payments/pay-pal.svg' className='c-payment-method__summary-information-card-image' />
     } else {
       return this.renderCardInformation(paymentMethod)
     }
@@ -30,14 +30,14 @@ class PaymentMethodSummary extends PureComponent {
   render () {
     const { onClick, paymentMethod, showEditButton, title } = this.props
     return (
-      <div className={'c-payment-methods__summary'}>
+      <div className={'c-payment-method__summary'}>
         <this.PaymentMethodHeader
           collapsed
           onClick={onClick}
           title={title}
           showEditButton={showEditButton}
         />
-        <div className={'c-payment-methods__summary-information'}>
+        <div className={'c-payment-method__summary-information'}>
           {this.renderPaymentMethodInformation(paymentMethod)}
         </div>
       </div>
