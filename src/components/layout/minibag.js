@@ -83,33 +83,38 @@ class Minibag extends PureComponent {
             <input id='minibag' type='checkbox' className='c-minibag__dropdown-checkbox' checked={this.props.miniBagDisplayed} readOnly />
             <label htmlFor='minibag' className='c-minibag__dropdown-cross' onClick={() => this.props.toggleMiniBag(false)} />
           </section>
-          <div className='c-minibag__line-items-section'>
-            { this.renderLineItems(lineItems) }
-          </div>
-          <div className='c-minibag__dropdown-review'>
-            <div className='c-minibag__dropdown-review-totals'>
-              { cart.discount_summaries.length > 0 && <div className='c-minibag__dropdown-review-total-line'>
-                <p>Subtotal:</p>
-                <p>£{ decimalPrice(cart.sub_total) }</p>
-              </div> }
-              { cart.discount_summaries.map(discount => (
-                <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion' key={discount.id}>
-                  <p>{ discount.name }:</p>
-                  <p>- £{ decimalPrice(discount.total) }</p>
+          { lineItemsCount > 0 && <>
+            <div className='c-minibag__line-items-section'>
+              { this.renderLineItems(lineItems) }
+            </div>
+            <div className='c-minibag__dropdown-review'>
+              <div className='c-minibag__dropdown-review-totals'>
+                { cart.discount_summaries.length > 0 && <div className='c-minibag__dropdown-review-total-line'>
+                  <p>Subtotal:</p>
+                  <p>£{ decimalPrice(cart.sub_total) }</p>
+                </div> }
+                { cart.discount_summaries.map(discount => (
+                  <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion' key={discount.id}>
+                    <p>{ discount.name }:</p>
+                    <p>- £{ decimalPrice(discount.total) }</p>
+                  </div>
+                ))}
+                <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main'>
+                  <p>Total:</p>
+                  <p>£{ decimalPrice(miniBagTotal) }</p>
                 </div>
-              ))}
-              <div className='c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main'>
-                <p>Total:</p>
-                <p>£{ decimalPrice(miniBagTotal) }</p>
               </div>
             </div>
+          </> }
+          { lineItemsCount === 0 && <p>
+            Your bag is empty. 
+          </p> }
             <div className='c-minibag__dropdown-buttons'>
               <this.Link href='/cart' className='o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link' onClick={ () => this.props.toggleMiniBag(false) }>
                 view shopping basket
               </this.Link>
               <this.Button label='continue shopping' className='o-button--sml c-minibag__dropdown-buttons--link' status='primary' onClick={() => this.props.toggleMiniBag(false)} />
             </div>
-          </div>
         </div>
       </div>
     </>
@@ -122,7 +127,7 @@ class Minibag extends PureComponent {
     const miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed
 
     return <>
-        { (miniBagDisplayed && lineItemsCount > 0) && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart) }
+        { miniBagDisplayed && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart) }
     </>
   }
 }

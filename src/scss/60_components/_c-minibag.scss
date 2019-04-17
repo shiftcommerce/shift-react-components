@@ -179,7 +179,6 @@ $minibag-border-style: 1px solid $border-default !important;
       @include breakpoint(desktop) {
         width: 350px;
         max-height: 580px;
-        min-height: 350px;
         height: 100%;
         z-index: 2;
       }

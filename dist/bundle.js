@@ -49362,7 +49362,7 @@ function (_PureComponent) {
         onClick: function onClick() {
           return _this3.props.toggleMiniBag(false);
         }
-      })), external_react_default.a.createElement("div", {
+      })), lineItemsCount > 0 && external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: "c-minibag__line-items-section"
       }, this.renderLineItems(lineItems)), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review"
@@ -49377,7 +49377,7 @@ function (_PureComponent) {
         }, external_react_default.a.createElement("p", null, discount.name, ":"), external_react_default.a.createElement("p", null, "- \xA3", decimalPrice(discount.total)));
       }), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main"
-      }, external_react_default.a.createElement("p", null, "Total:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(miniBagTotal)))), external_react_default.a.createElement("div", {
+      }, external_react_default.a.createElement("p", null, "Total:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(miniBagTotal)))))), lineItemsCount === 0 && external_react_default.a.createElement("p", null, "Your bag is empty."), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-buttons"
       }, external_react_default.a.createElement(this.Link, {
         href: "/cart",
@@ -49392,7 +49392,7 @@ function (_PureComponent) {
         onClick: function onClick() {
           return _this3.props.toggleMiniBag(false);
         }
-      }))))));
+      })))));
     }
   }, {
     key: "render",
@@ -49401,7 +49401,7 @@ function (_PureComponent) {
       var lineItemsCount = cart.line_items_count || 0;
       var lineItems = cart.line_items;
       var miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && lineItemsCount > 0 && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart));
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart));
     }
   }]);
 

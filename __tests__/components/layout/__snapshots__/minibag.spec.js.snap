@@ -79,7 +79,84 @@ exports[`Minibag doesnt render when there is no lineitems 1`] = `
   }
   className="dummy-classname"
   miniBagDisplayed={true}
-/>
+>
+  <div
+    className="c-minibag__overlay"
+    onClick={[Function]}
+  />
+  <div
+    className="c-minibag__dropdown"
+  >
+    <div
+      className="c-minibag__dropdown-container"
+    >
+      <section
+        className="c-minibag__dropdown-header"
+      >
+        <h1
+          className="c-minibag__dropdown-title"
+        >
+           Shopping Basket 
+          <a
+            className="c-checkout-cart__amount"
+          >
+            (
+            0
+            )
+          </a>
+        </h1>
+        <input
+          checked={true}
+          className="c-minibag__dropdown-checkbox"
+          id="minibag"
+          readOnly={true}
+          type="checkbox"
+        />
+        <label
+          className="c-minibag__dropdown-cross"
+          htmlFor="minibag"
+          onClick={[Function]}
+        />
+      </section>
+      <p>
+        Your bag is empty.
+      </p>
+      <div
+        className="c-minibag__dropdown-buttons"
+      >
+        <Link
+          className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+          href="/cart"
+          onClick={[Function]}
+        >
+          <a
+            className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+            href="/cart"
+            onClick={[Function]}
+          >
+            view shopping basket
+          </a>
+        </Link>
+        <Button
+          className="o-button--sml c-minibag__dropdown-buttons--link"
+          label="continue shopping"
+          onClick={[Function]}
+          status="primary"
+        >
+          <button
+            className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            continue shopping
+          </button>
+        </Button>
+      </div>
+    </div>
+  </div>
+</Minibag>
 `;
 
 exports[`Minibag renders when miniBagDisplayed is true 1`] = `
@@ -781,39 +858,39 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
             </p>
           </div>
         </div>
-        <div
-          className="c-minibag__dropdown-buttons"
+      </div>
+      <div
+        className="c-minibag__dropdown-buttons"
+      >
+        <Link
+          className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+          href="/cart"
+          onClick={[Function]}
         >
-          <Link
+          <a
             className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
             href="/cart"
             onClick={[Function]}
           >
-            <a
-              className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
-              href="/cart"
-              onClick={[Function]}
-            >
-              view shopping basket
-            </a>
-          </Link>
-          <Button
-            className="o-button--sml c-minibag__dropdown-buttons--link"
-            label="continue shopping"
+            view shopping basket
+          </a>
+        </Link>
+        <Button
+          className="o-button--sml c-minibag__dropdown-buttons--link"
+          label="continue shopping"
+          onClick={[Function]}
+          status="primary"
+        >
+          <button
+            className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
+            disabled={false}
             onClick={[Function]}
-            status="primary"
+            role="button"
+            tabIndex="0"
           >
-            <button
-              className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              tabIndex="0"
-            >
-              continue shopping
-            </button>
-          </Button>
-        </div>
+            continue shopping
+          </button>
+        </Button>
       </div>
     </div>
   </div>
