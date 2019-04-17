@@ -11,7 +11,7 @@ import ProductListingCard from '../products/listing/product-listing-card'
  * @return {string} - HTML markup for the component
  */
 const BaseSearchHits = (hits) => {
-  return hits.map((hit, index) => {
+  return hits.map((hit) => {
     return <ProductListingCard
       title={hit.product_title}
       assetFileUrl={hit.product_asset_files[0].source}
