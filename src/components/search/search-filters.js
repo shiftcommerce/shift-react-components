@@ -64,7 +64,6 @@ class SearchFilters extends Component {
           {
             facets.map((facet) => {
               const { source, searchable, aggregation_type, label } = facet
-
               let filter;
 
               switch (aggregation_type) {
