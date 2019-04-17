@@ -13,7 +13,7 @@ exports[`renders the PayPal image and does not render edit button 1`] = `
     className="c-payment-method__summary-information"
   >
     <Image
-      className="c-payment-methods__summary-information-card-image"
+      className="c-payment-method__summary-information-card-image"
       src="/static/payments/pay-pal.svg"
     />
   </div>
