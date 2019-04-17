@@ -1,10 +1,13 @@
 // Libraries
 import React, { Component } from 'react'
 import {
-  RefinementList,
-  CurrentRefinements,
   ClearRefinements,
-  Panel
+  CurrentRefinements,
+  HierarchicalMenu,
+  Panel,
+  RangeInput,
+  RatingMenu,
+  RefinementList
 } from 'react-instantsearch-dom'
 import classNames from 'classnames'
 
@@ -56,16 +59,37 @@ class SearchFilters extends Component {
 
   renderRefinements (facets) {
     if (facets) {
-      // Orders facets
-      const orderedFacets = facets.sort()
-
       return (
         <>
-          {orderedFacets.map((facet, index) => {
-            return <Panel className='c-product-listing-filter__body-option' key={index} header={header(facet)} >
-              <RefinementList attribute={facet} showMore={true} limit={3} />
-            </Panel>
-          }) }
+          {
+            facets.map((facet, index) => {
+              const { source, searchable, aggregation_type, label } = facet
+              let filter;
+              console.log({facet})
+              switch (aggregation_type) {
+                case 'list':
+                  filter = <RefinementList attribute={source} searchable={searchable}  showMore={true} limit={3} />
+                  break;
+                case 'hierarchy':
+                  filter = <HierarchicalMenu attribute={source} searchable={searchable} />
+                  break;
+                case 'range':
+                  filter = <RangeInput attribute={source} />
+                  break;
+                case 'rating':
+                  filter = <RatingMenu attribute={source}/>
+                  break;
+                default:
+                  // no-op
+              }
+
+              return (
+                <Panel className='c-product-listing-filter__body-option' key={index} header={header(label)} >
+                  {filter}
+                </Panel>
+              )
+            })
+          }
         </>
       )
     }
@@ -92,7 +116,7 @@ class SearchFilters extends Component {
             <this.SearchRatingFilter attribute='product_rating' min={0} max={5} />
           </Panel>
           <Panel className='c-product-listing-filter__body-option' header={header('Price')}>
-            <this.SearchSlider attribute='variant_meta_data.eu.price' precision={0} formatLabel={value => `£${value}`} />
+            <this.SearchSlider attribute='current_price' precision={0} formatLabel={value => `£${value}`} />
           </Panel>
         </div>
       </>
