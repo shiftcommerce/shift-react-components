@@ -3,9 +3,8 @@
 # Shift React Components
 ## Purpose
 
-This repo is all extracted components/objects from the shift-front-end.
-It holds all the styles for components.
-These have been extracted to allow clients to use our pre-built components/objects in other projects if needed.
+This repository contains a library of React components that are built to be integrated with the data that the SHIFT Platform produces. They should be ready to go out of the box and integrated into any React site that is utilising `shift-node-api`.
+These have been extracted to allow clients to use some of our pre-built components/objects in other projects if needed.
 If needed you can overwrite the styles but these have been made with the intention to be used out-of-the-box.
 
 
