@@ -30,8 +30,11 @@ class ProductMenuOptions extends PureComponent {
           <SortBy defaultRefinement={indexName}
             items={[
               { value: indexName, label: 'Featured' },
-              { value: `${indexName}_product_rating_asc`, label: 'Rating asc.' },
-              { value: `${indexName}_product_rating_desc`, label: 'Rating desc.' }
+              { value: `${indexName}_price_asc`, label: 'Price asc.' },
+              { value: `${indexName}_price_desc`, label: 'Price desc.' },
+              { value: `${indexName}_created_at_desc`, label: 'Newest' },
+              { value: `${indexName}_total_purchases_desc`, label: 'Most Popular' },
+              { value: `${indexName}_rating_desc`, label: 'Rating desc.' }
             ]}
           />
           <this.Button className='c-product-listing__menu-options-sort-by-button u-hidden-d' />
