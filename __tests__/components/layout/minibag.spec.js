@@ -108,7 +108,8 @@ describe('Minibag', () => {
               slug: 'jugs/seed_product_40',
               title: 'First product'
             },
-            title: 'First variant'
+            title: 'First variant',
+            sku: '3008557600817'
           },
           item_id: 321,
           item_type: 'Variant',
@@ -120,7 +121,6 @@ describe('Minibag', () => {
               total: 1.5
             }
           ],
-          sku: '3008557600817',
           stock_available_level: 85,
           sub_total: 6.77,
           total: 5.27,
@@ -136,7 +136,8 @@ describe('Minibag', () => {
               slug: 'jugs/seed_product_39',
               title: 'Second product'
             },
-            title: 'Second variant'
+            title: 'Second variant',
+            sku: '3008557600818'
           },
           item_id: 321,
           item_type: 'Variant',
@@ -148,7 +149,6 @@ describe('Minibag', () => {
               total: 1.5
             }
           ],
-          sku: '3008557600817',
           stock_available_level: 85,
           sub_total: 6.77,
           total: 5.27,
@@ -156,12 +156,13 @@ describe('Minibag', () => {
           unit_quantity: 1
         }
       ],
-      line_items_count: 2
+      line_items_count: 2,
+      discount_summaries: []
     }
 
     // act
     const wrapper = mount(
-      <MiniBag cart={cart} miniBagDisplayed={true} />
+      <MiniBag cart={cart} miniBagDisplayed={true} onItemQuantityUpdated={jest.fn()} />
     )
 
     // assert
