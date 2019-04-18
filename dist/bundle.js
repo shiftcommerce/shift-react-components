@@ -49274,7 +49274,7 @@ function (_PureComponent) {
           className: "c-minibag__line-item-information-title"
         }, external_react_default.a.createElement("p", null, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("a", {
           className: "c-minibag__line-item-total"
-        }, "\xA3", decimalPrice(lineItem.total)), external_react_default.a.createElement("a", {
+        }, "\xA3", decimalPrice(lineItem.total)), lineItem.line_item_discounts.length > 0 && external_react_default.a.createElement("a", {
           className: "c-minibag__line-item-subtotal"
         }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement(_this2.DropdownSelect, {
           className: "c-minibag__quantity",

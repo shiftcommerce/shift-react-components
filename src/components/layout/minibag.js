@@ -24,7 +24,7 @@ class Minibag extends PureComponent {
             <div className='c-minibag__line-item-information-title'>
               <p>{`${lineItem.item.product.title} - ${lineItem.item.title}`}</p>
               <a className='c-minibag__line-item-total'>&pound;{decimalPrice(lineItem.total)}</a>
-              <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a>
+              { lineItem.line_item_discounts.length > 0 && <a className='c-minibag__line-item-subtotal'>&pound;{decimalPrice(lineItem.sub_total)}</a> }
             </div>
             <this.DropdownSelect
               className='c-minibag__quantity'
