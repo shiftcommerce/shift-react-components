@@ -2,9 +2,7 @@
 @import '../20_tools/__all';
 
 .c-coupon-form {
-  @include breakpoint(desktop) {
-    margin-bottom: $global-spacing-unit-small;
-  }
+  margin-bottom: $global-spacing-unit-small;
 }
 
 .c-coupon-form__title {

@@ -127,6 +127,7 @@ exports[`renders the children inside it 1`] = `
         >
           <span
             className="c-minibag__cart"
+            onClick={[Function]}
           >
             <div
               className="c-minibag__cart-image"
@@ -155,7 +156,6 @@ exports[`renders the children inside it 1`] = `
               "line_items_count": 0,
             }
           }
-          miniBagDisplayed={false}
         />
         <span
           className="c-header__search"
@@ -413,6 +413,7 @@ exports[`renders the header 1`] = `
         >
           <span
             className="c-minibag__cart"
+            onClick={[Function]}
           >
             <div
               className="c-minibag__cart-image"
@@ -441,7 +442,6 @@ exports[`renders the header 1`] = `
               "line_items_count": 0,
             }
           }
-          miniBagDisplayed={false}
         />
         <span
           className="c-header__search"
@@ -684,6 +684,7 @@ exports[`renders the navbar for non-checkout pages 1`] = `
         >
           <span
             className="c-minibag__cart"
+            onClick={[Function]}
           >
             <div
               className="c-minibag__cart-image"
@@ -712,7 +713,6 @@ exports[`renders the navbar for non-checkout pages 1`] = `
               "line_items_count": 0,
             }
           }
-          miniBagDisplayed={false}
         />
         <span
           className="c-header__search"

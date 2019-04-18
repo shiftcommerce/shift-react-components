@@ -16,7 +16,15 @@ class DropdownSelect extends Component {
   renderOptions (options) {
     return (
       options && options.map((option, idx) =>
-        <option role='option' key={idx} value={option.value || option} aria-setsize={options.length} aria-posinset={idx + 1} >{ option.title || option }</option>
+        <option
+          role='option'
+          key={idx}
+          value={option.value || option}
+          aria-setsize={options.length}
+          aria-posinset={idx + 1}
+        >
+          { option.title || option }
+        </option>
       )
     )
   }
@@ -36,7 +44,7 @@ class DropdownSelect extends Component {
   }
 
   renderDropdown () {
-    const { name, value, prompt, options, required, className, validationMessage, disabled } = this.props
+    const { name, value, prompt, options, required, className, validationMessage, disabled, skipPrompt, skipLabel, renderValidationMessage, ...otherProps } = this.props
 
     return (
       <select
@@ -49,8 +57,9 @@ class DropdownSelect extends Component {
         onChange={this.triggerChange}
         onBlur={this.triggerBlur}
         disabled={disabled}
+        {...otherProps}
       >
-        <option role='option' value='' aria-setsize={options.length} aria-posinset='0'>{ prompt }</option>
+        { !skipPrompt && <option role='option' value='' aria-setsize={options.length} aria-posinset='0'>{ prompt }</option> }
         { this.renderOptions(options) }
       </select>
     )
@@ -67,9 +76,11 @@ class DropdownSelect extends Component {
   }
 
   render () {
+    const { skipLabel } = this.props
+
     return (
       <div className={classNames('o-form__input-group')}>
-        { this.renderLabel() }
+        { !skipLabel && this.renderLabel() }
         { this.renderDropdown() }
         { this.props.renderValidationMessage() }
       </div>
