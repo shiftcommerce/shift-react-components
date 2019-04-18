@@ -57632,26 +57632,19 @@ function (_PureComponent) {
   payment_summary_createClass(PaymentSummary, [{
     key: "renderBillingAddress",
     value: function renderBillingAddress() {
-      var _this$props = this.props,
-          paymentMethod = _this$props.paymentMethod,
-          billingAddress = _this$props.billingAddress;
-
-      if (billingAddress) {
-        return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("span", {
-          className: "u-bold"
-        }, billingAddress.first_name, " ", billingAddress.last_name, " "), external_react_default.a.createElement("span", null, billingAddress.address_line_1, ", ", billingAddress.city, ", ", billingAddress.postcode));
-      } else {
-        return paymentMethod;
-      }
+      var billingAddress = this.props.billingAddress;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("span", {
+        className: "u-bold"
+      }, billingAddress.first_name, " ", billingAddress.last_name, " "), external_react_default.a.createElement("span", null, billingAddress.address_line_1, ", ", billingAddress.city, ", ", billingAddress.postcode));
     }
   }, {
     key: "render",
     value: function render() {
-      var _this$props2 = this.props,
-          onClick = _this$props2.onClick,
-          showEditButton = _this$props2.showEditButton,
-          title = _this$props2.title,
-          withErrors = _this$props2.withErrors;
+      var _this$props = this.props,
+          onClick = _this$props.onClick,
+          showEditButton = _this$props.showEditButton,
+          title = _this$props.title,
+          withErrors = _this$props.withErrors;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.PaymentHeader, {
         title: title,
         collapsed: true,

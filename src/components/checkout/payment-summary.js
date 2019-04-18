@@ -14,18 +14,14 @@ class PaymentSummary extends PureComponent {
   }
 
   renderBillingAddress() {
-    const { paymentMethod, billingAddress } = this.props
+    const { billingAddress } = this.props
 
-    if (billingAddress) {
-      return(
-        <>
-          <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
-          <span>{ billingAddress.address_line_1 }, { billingAddress.city }, { billingAddress.postcode }</span>
-        </>
-      )
-    } else {
-      return paymentMethod
-    }
+    return(
+      <>
+        <span className='u-bold'>{ billingAddress.first_name } { billingAddress.last_name } </span>
+        <span>{ billingAddress.address_line_1 }, { billingAddress.city }, { billingAddress.postcode }</span>
+      </>
+    )
   }
 
   render () {
