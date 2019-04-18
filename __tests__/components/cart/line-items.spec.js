@@ -8,10 +8,11 @@ import cartFixture from '../../fixtures/cart'
 
 test('renders line items correctly, on initial load', () => {
   // Act
-  const wrapper = shallow(
+  const wrapper = mount(
     <LineItems
       lineItems={cartFixture.line_items}
       lineItemsCount={cartFixture.line_items_count}
+      updateQuantity={jest.fn()}
     />
   )
 
@@ -37,7 +38,8 @@ test('renders line items sorted by their id', () => {
           slug: 'jugs/seed_product_40',
           title: 'First product'
         },
-        title: 'First variant'
+        title: 'First variant',
+        sku: '3008557600817'
       },
       item_id: 321,
       item_type: 'Variant',
@@ -49,7 +51,6 @@ test('renders line items sorted by their id', () => {
           total: 1.5
         }
       ],
-      sku: '3008557600817',
       stock_available_level: 85,
       sub_total: 6.77,
       total: 5.27,
@@ -65,19 +66,19 @@ test('renders line items sorted by their id', () => {
           slug: 'jugs/seed_product_39',
           title: 'Second product'
         },
-        title: 'Second variant'
+        title: 'Second variant',
+        sku: '3008557600818'
       },
       item_id: 321,
       item_type: 'Variant',
       line_item_discounts: [
         {
-          id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8846',
+          id: '2a720d8d-ae39-462e-b2e2-4c49ca5c8847',
           line_item_number: 1,
           promotion_id: 21,
           total: 1.5
         }
       ],
-      sku: '3008557600817',
       stock_available_level: 85,
       sub_total: 6.77,
       total: 5.27,
@@ -103,7 +104,7 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
   const updateQuantity = jest.fn()
 
   // act
-  const wrapper = shallow(
+  const wrapper = mount(
     <LineItems
       lineItems={cartFixture.line_items}
       lineItemsCount={cartFixture.line_items_count}
@@ -112,7 +113,8 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
   )
 
   // assert
-  wrapper.find('select').simulate('change', { target: { value: 3 } })
+  // Below isn't ideal but wrapper.find('select').simulate('change') causes Node to crash for some reason
+  wrapper.find('select').prop('onChange')()
   expect(wrapper).toMatchSnapshot()
   expect(updateQuantity).toHaveBeenCalled()
 })

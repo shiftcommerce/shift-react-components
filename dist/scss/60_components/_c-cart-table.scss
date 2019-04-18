@@ -33,8 +33,6 @@
   }
 
   h4 {
-    margin-top: $global-spacing-unit-tiny;
-
     @include breakpoint(tablet) {
       font-size: 1em;
     }
@@ -99,15 +97,6 @@
     }
   }
 
-  .c-cart-table__total {
-    font-weight: 300;
-    float: right;
-
-    @include breakpoint(desktop) {
-      display: none;
-    }
-  }
-
   .c-cart-table__amount {
     color: $background-positive;
 
@@ -138,8 +127,6 @@
   }
 
     .c-cart-table__header-grid {
-      width: 70%;
-
       @include breakpoint(tablet) {
         font-size: 1em;
       }
@@ -149,7 +136,6 @@
         grid-template-columns: [col1-start] 48% [col2-start] 48% [col2-end];
         grid-template-rows: [row1-start] 100% [row1-end];
         grid-gap: 4%;
-        width: 100%;
       }
     }
 
@@ -202,14 +188,6 @@
           }
         }
       }
-
-    .c-cart-table__header-total {
-      width: 30%;
-
-      @include breakpoint(tablet) {
-        font-size: 1em;
-      }
-    }
 
   .c-cart-table__icons {
     p {

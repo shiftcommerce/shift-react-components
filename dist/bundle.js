@@ -43627,6 +43627,12 @@ function (_Component) {
 // CONCATENATED MODULE: ./src/objects/dropdown-select.js
 function dropdown_select_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { dropdown_select_typeof = function _typeof(obj) { return typeof obj; }; } else { dropdown_select_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return dropdown_select_typeof(obj); }
 
+function dropdown_select_extends() { dropdown_select_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return dropdown_select_extends.apply(this, arguments); }
+
+function dropdown_select_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = dropdown_select_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function dropdown_select_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function dropdown_select_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function dropdown_select_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -43714,8 +43720,13 @@ function (_Component) {
           required = _this$props3.required,
           className = _this$props3.className,
           validationMessage = _this$props3.validationMessage,
-          disabled = _this$props3.disabled;
-      return external_react_default.a.createElement("select", {
+          disabled = _this$props3.disabled,
+          skipPrompt = _this$props3.skipPrompt,
+          skipLabel = _this$props3.skipLabel,
+          renderValidationMessage = _this$props3.renderValidationMessage,
+          otherProps = dropdown_select_objectWithoutProperties(_this$props3, ["name", "value", "prompt", "options", "required", "className", "validationMessage", "disabled", "skipPrompt", "skipLabel", "renderValidationMessage"]);
+
+      return external_react_default.a.createElement("select", dropdown_select_extends({
         className: classnames_default()('o-form__input-block o-form__input-field', className, {
           'o-form__input-field__error': validationMessage
         }),
@@ -43727,7 +43738,7 @@ function (_Component) {
         onChange: this.triggerChange,
         onBlur: this.triggerBlur,
         disabled: disabled
-      }, external_react_default.a.createElement("option", {
+      }, otherProps), !skipPrompt && external_react_default.a.createElement("option", {
         role: "option",
         value: "",
         "aria-setsize": options.length,
@@ -43752,9 +43763,10 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var skipLabel = this.props.skipLabel;
       return external_react_default.a.createElement("div", {
         className: classnames_default()('o-form__input-group')
-      }, this.renderLabel(), this.renderDropdown(), this.props.renderValidationMessage());
+      }, !skipLabel && this.renderLabel(), this.renderDropdown(), this.props.renderValidationMessage());
     }
   }]);
 
@@ -45885,8 +45897,9 @@ function (_Component) {
     line_items_classCallCheck(this, LineItems);
 
     _this = line_items_possibleConstructorReturn(this, line_items_getPrototypeOf(LineItems).call(this, props));
-    _this.Link = component_mapping('Link');
+    _this.DropdownSelect = component_mapping('DropdownSelect');
     _this.Image = component_mapping('Image');
+    _this.Link = component_mapping('Link');
     return _this;
   }
   /**
@@ -45900,20 +45913,44 @@ function (_Component) {
   line_items_createClass(LineItems, [{
     key: "renderOptions",
     value: function renderOptions(lineItem) {
-      var availableQuantity = Array.from(Array(Math.min(lineItem.stock_available_level, 11)).keys());
-      availableQuantity.shift();
-      return external_react_default.a.createElement("select", {
-        value: lineItem.unit_quantity,
+      return external_react_default.a.createElement(this.DropdownSelect, {
+        className: "c-line-items__quantity-select",
+        "data-id": lineItem.id,
+        label: "Quantity",
         onChange: this.props.updateQuantity,
-        "data-id": lineItem.id
-      }, availableQuantity.map(function (index) {
-        return external_react_default.a.createElement("option", {
-          key: index,
-          value: index,
-          "aria-setsize": index,
-          "aria-posinset": index + 1
-        }, index);
-      }));
+        options: this.renderQuantityOptions(lineItem),
+        skipLabel: true,
+        skipPrompt: true,
+        value: lineItem.unit_quantity
+      });
+    }
+    /**
+    * Builds options prop for the DropdownSelect component.  
+    * @param {Object} lineItem - A line item from cart.
+    */
+
+  }, {
+    key: "renderQuantityOptions",
+    value: function renderQuantityOptions(lineItem) {
+      // Render options from 1 to 10 or maximum available stock, whichever is lower.
+      var maxStock = Math.min(10, lineItem.stock_available_level);
+      var baseOptions = Array.from({
+        length: maxStock
+      }, function (_, i) {
+        return {
+          title: i + 1,
+          value: i + 1
+        };
+      }); // Render an additional option with the current quantity if it is higher than the maximum above.
+
+      if (lineItem.unit_quantity > maxStock) {
+        baseOptions.push({
+          title: lineItem.unit_quantity,
+          value: lineItem.unit_quantity
+        });
+      }
+
+      return baseOptions;
     }
     /**
      * Render the prices and actions block of the line item
@@ -45925,14 +45962,6 @@ function (_Component) {
     key: "renderButtonsAndTotal",
     value: function renderButtonsAndTotal(lineItem) {
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        className: "c-line-items__remove"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__delete"
-      }, external_react_default.a.createElement("a", {
-        className: "c-line-items__delete-button",
-        "data-id": lineItem.id,
-        onClick: this.props.deleteItem
-      }, "Delete"))), external_react_default.a.createElement("div", {
         className: "c-line-items__amounts"
       }, lineItem.sub_total !== lineItem.total && external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("a", {
         className: "c-line-items__amount"
@@ -45959,7 +45988,15 @@ function (_Component) {
         className: "c-line-items__details-title u-bold"
       }, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("div", {
         className: "c-line-items__details-sku"
-      }, external_react_default.a.createElement("span", null, lineItem.sku))));
+      }, external_react_default.a.createElement("span", null, lineItem.sku))), external_react_default.a.createElement("div", {
+        className: "c-line-items__remove"
+      }, external_react_default.a.createElement("div", {
+        className: "c-line-items__delete"
+      }, external_react_default.a.createElement("a", {
+        className: "c-line-items__delete-button",
+        "data-id": lineItem.id,
+        onClick: this.props.deleteItem
+      }, "Delete"))));
     }
     /**
      * Render the parameters block of the line item, which contains the variants
@@ -45972,18 +46009,10 @@ function (_Component) {
     key: "renderParams",
     value: function renderParams(lineItem) {
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        className: "c-line-items__colour"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__param u-bold"
-      }, external_react_default.a.createElement("span", null, "Colour"))), external_react_default.a.createElement("div", {
         className: "c-line-items__quantity"
       }, external_react_default.a.createElement("div", {
-        className: "c-line-items__param u-bold"
-      }, external_react_default.a.createElement("span", null, "Quantity"))), external_react_default.a.createElement("div", {
-        className: "c-line-items__param c-line-items__colour-selected"
-      }, external_react_default.a.createElement("span", null, "Grey")), external_react_default.a.createElement("div", {
-        className: "c-line-items__param c-line-items__quantity-selected"
-      }, external_react_default.a.createElement("span", null, this.renderOptions(lineItem))));
+        className: "c-line-items__quantity-header"
+      }, external_react_default.a.createElement("span", null, "Quantity")), this.renderOptions(lineItem)));
     }
     /**
      * Render the line item rows
@@ -49223,6 +49252,7 @@ function (_PureComponent) {
     _this.Button = component_mapping('Button');
     _this.Image = component_mapping('Image');
     _this.Link = component_mapping('Link');
+    _this.DropdownSelect = component_mapping('DropdownSelect');
     return _this;
   }
 
@@ -49231,7 +49261,8 @@ function (_PureComponent) {
     value: function renderLineItems(lineItems) {
       var _this2 = this;
 
-      var cartData = lineItems.sort(function (item1, item2) {
+      var onItemQuantityUpdated = this.props.onItemQuantityUpdated;
+      return lineItems.sort(function (item1, item2) {
         return parseInt(item1.id) - parseInt(item2.id);
       }).map(function (lineItem) {
         return external_react_default.a.createElement("div", {
@@ -49243,15 +49274,21 @@ function (_PureComponent) {
           className: "c-minibag__line-item-information-title"
         }, external_react_default.a.createElement("p", null, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("a", {
           className: "c-minibag__line-item-total"
-        }, "\xA3", decimalPrice(lineItem.total)), external_react_default.a.createElement("a", {
+        }, "\xA3", decimalPrice(lineItem.total)), lineItem.line_item_discounts.length > 0 && external_react_default.a.createElement("a", {
           className: "c-minibag__line-item-subtotal"
-        }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement("div", null, external_react_default.a.createElement("p", {
-          className: "c-minibag__line-item-information-params"
-        }, "QUANTITY: ", lineItem.unit_quantity), external_react_default.a.createElement("a", {
+        }, "\xA3", decimalPrice(lineItem.sub_total))), external_react_default.a.createElement(_this2.DropdownSelect, {
+          className: "c-minibag__quantity",
+          "data-id": lineItem.id,
+          label: "Quantity",
+          onChange: onItemQuantityUpdated,
+          options: _this2.renderQuantityOptions(lineItem),
+          skipPrompt: true,
+          value: lineItem.unit_quantity
+        }), external_react_default.a.createElement("a", {
           className: "c-minibag__line-item--delete",
           "data-id": lineItem.id,
           onClick: _this2.props.deleteItem
-        }, "Remove"))), external_react_default.a.createElement("div", {
+        }, "Remove")), external_react_default.a.createElement("div", {
           className: "c-minibag__line-item-images"
         }, external_react_default.a.createElement(_this2.Link, {
           href: "/slug?slug=".concat(lineItem.item.product.canonical_path)
@@ -49263,15 +49300,46 @@ function (_PureComponent) {
           "aria-label": lineItem.item.title
         }))));
       });
-      return cartData;
+    }
+    /**
+    * Builds options prop for the DropdownSelect component.  
+    * @param {Object} lineItem - A line item from cart.
+    */
+
+  }, {
+    key: "renderQuantityOptions",
+    value: function renderQuantityOptions(lineItem) {
+      // Render options from 1 to 10 or maximum available stock, whichever is lower.
+      var maxStock = Math.min(10, lineItem.stock_available_level);
+      var baseOptions = Array.from({
+        length: maxStock
+      }, function (_, i) {
+        return {
+          title: i + 1,
+          value: i + 1
+        };
+      }); // Render an additional option with the current quantity if it is higher than the maximum above.
+
+      if (lineItem.unit_quantity > maxStock) {
+        baseOptions.push({
+          title: lineItem.unit_quantity,
+          value: lineItem.unit_quantity
+        });
+      }
+
+      return baseOptions;
     }
   }, {
     key: "renderMiniBagDropdown",
-    value: function renderMiniBagDropdown(lineItemsCount, lineItems, total, shippingTotal) {
-      var miniBagTotal = total - shippingTotal;
+    value: function renderMiniBagDropdown(lineItemsCount, lineItems, cart) {
+      var _this3 = this;
+
+      var miniBagTotal = cart.total - cart.shipping_total;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: "c-minibag__overlay",
-        onClick: this.props.toggleMiniBag
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
       }), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown"
       }, external_react_default.a.createElement("div", {
@@ -49291,24 +49359,40 @@ function (_PureComponent) {
       }), external_react_default.a.createElement("label", {
         htmlFor: "minibag",
         className: "c-minibag__dropdown-cross",
-        onClick: this.props.toggleMiniBag
-      })), external_react_default.a.createElement("div", {
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
+      })), lineItemsCount > 0 && external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: "c-minibag__line-items-section"
       }, this.renderLineItems(lineItems)), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-review"
-      }, external_react_default.a.createElement("span", {
-        className: "c-minibag__dropdown-review-total"
-      }, external_react_default.a.createElement("h4", null, "Total:"), external_react_default.a.createElement("h4", null, "\xA3", decimalPrice(miniBagTotal))), external_react_default.a.createElement("div", {
+      }, external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-review-totals"
+      }, cart.discount_summaries.length > 0 && external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-review-total-line"
+      }, external_react_default.a.createElement("p", null, "Subtotal:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(cart.sub_total))), cart.discount_summaries.map(function (discount) {
+        return external_react_default.a.createElement("div", {
+          className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--promotion",
+          key: discount.id
+        }, external_react_default.a.createElement("p", null, discount.name, ":"), external_react_default.a.createElement("p", null, "- \xA3", decimalPrice(discount.total)));
+      }), external_react_default.a.createElement("div", {
+        className: "c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main"
+      }, external_react_default.a.createElement("p", null, "Total:"), external_react_default.a.createElement("p", null, "\xA3", decimalPrice(miniBagTotal)))))), lineItemsCount === 0 && external_react_default.a.createElement("p", null, "Your bag is empty."), external_react_default.a.createElement("div", {
         className: "c-minibag__dropdown-buttons"
       }, external_react_default.a.createElement(this.Link, {
         href: "/cart",
-        className: "o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+        className: "o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link",
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
       }, "view shopping basket"), external_react_default.a.createElement(this.Button, {
         label: "continue shopping",
         className: "o-button--sml c-minibag__dropdown-buttons--link",
         status: "primary",
-        onClick: this.props.toggleMiniBag
-      }))))));
+        onClick: function onClick() {
+          return _this3.props.toggleMiniBag(false);
+        }
+      })))));
     }
   }, {
     key: "render",
@@ -49317,7 +49401,7 @@ function (_PureComponent) {
       var lineItemsCount = cart.line_items_count || 0;
       var lineItems = cart.line_items;
       var miniBagDisplayed = cart.miniBagDisplayed || this.props.miniBagDisplayed;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && lineItemsCount > 0 && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart.total, cart.shipping_total));
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, miniBagDisplayed && this.renderMiniBagDropdown(lineItemsCount, lineItems, cart));
     }
   }]);
 
@@ -56815,7 +56899,7 @@ function (_PureComponent) {
         singular: "item",
         count: cart.line_items_count || 0,
         showCount: false
-      }), " in your shopping basket"), external_react_default.a.createElement("p", {
+      }), " in your shopping basket."), external_react_default.a.createElement("p", {
         className: "c-cart-table__description"
       }, external_react_default.a.createElement(build_default.a, {
         singular: "This",
@@ -56826,7 +56910,7 @@ function (_PureComponent) {
         singular: "item",
         count: cart.line_items_count || 0,
         showCount: false
-      }), " will be saved for 48 hours depending on availability")));
+      }), " will be saved for 48 hours depending on availability.")));
     }
     /**
      * Render the estimated delivery date
@@ -56843,7 +56927,9 @@ function (_PureComponent) {
         className: "c-cart-table__header-grid-item c-cart-table__header-grid-item--b"
       }, external_react_default.a.createElement("h1", {
         className: "c-cart-table__title"
-      }, "Estimated Delivery"), external_react_default.a.createElement("p", null, "We will deliver your item: ", external_react_default.a.createElement("a", null, businessDaysFromNow(workingDays).format('dddd Do MMMM'))));
+      }, "Estimated Delivery"), external_react_default.a.createElement("p", {
+        className: "c-cart-table__description"
+      }, "We will deliver your item: ", businessDaysFromNow(workingDays).format('dddd Do MMMM'), "."));
     }
   }, {
     key: "render",
@@ -56856,11 +56942,7 @@ function (_PureComponent) {
         className: classnames_default()(className, 'c-cart-table__header')
       }, this.props.breadcrumb, external_react_default.a.createElement("div", {
         className: "c-cart-table__header-grid"
-      }, this.renderBasketDetails(cart), this.renderDeliveryEstimate(shippingMethod)), external_react_default.a.createElement("div", {
-        className: "c-cart-table__header-total"
-      }, external_react_default.a.createElement("h4", {
-        className: "c-cart-table__total"
-      }, "\xA3", decimalPrice(cart.total || 0))));
+      }, this.renderBasketDetails(cart), this.renderDeliveryEstimate(shippingMethod)));
     }
   }]);
 
@@ -57828,9 +57910,13 @@ function (_Component) {
   }, {
     key: "renderCartLink",
     value: function renderCartLink(lineItemsCount) {
+      var _this2 = this;
+
       return external_react_default.a.createElement("span", {
         className: "c-minibag__cart",
-        onClick: this.props.toggleMiniBag
+        onClick: function onClick() {
+          return _this2.props.toggleMiniBag(true);
+        }
       }, external_react_default.a.createElement("div", {
         className: "c-minibag__cart-image"
       }, external_react_default.a.createElement("span", {
@@ -57858,10 +57944,12 @@ function (_Component) {
     value: function renderHeader() {
       var _this$props3 = this.props,
           cart = _this$props3.cart,
+          deleteItem = _this$props3.deleteItem,
           loggedIn = _this$props3.loggedIn,
+          onItemQuantityUpdated = _this$props3.onItemQuantityUpdated,
           shrunk = _this$props3.shrunk;
       var headerClasses = classnames_default()('o-header', {
-        'o-header--shrunk': shrunk
+        'o-header--shrunk': shrunk || cart.miniBagDisplayed
       });
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
         className: headerClasses
@@ -57873,8 +57961,9 @@ function (_Component) {
         className: "o-header__logo"
       }), this.renderMobileNav(), this.renderHeaderAccount(loggedIn), this.renderBasket(), external_react_default.a.createElement(this.Minibag, {
         cart: cart,
-        deleteItem: this.props.deleteItem,
-        miniBagDisplayed: this.props.minibagDisplayed,
+        deleteItem: deleteItem,
+        miniBagDisplayed: cart.miniBagDisplayed,
+        onItemQuantityUpdated: onItemQuantityUpdated,
         toggleMiniBag: this.props.toggleMiniBag
       }), this.renderSearch())), this.renderNav()));
     }

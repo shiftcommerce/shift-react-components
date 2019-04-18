@@ -10,8 +10,9 @@ class LineItems extends Component {
   constructor (props) {
     super(props)
 
-    this.Link = componentMapping('Link')
+    this.DropdownSelect = componentMapping('DropdownSelect')
     this.Image = componentMapping('Image')
+    this.Link = componentMapping('Link')
   }
 
   /**
@@ -21,20 +22,41 @@ class LineItems extends Component {
    * @todo extract this out into it's own service class
    */
   renderOptions (lineItem) {
-    let availableQuantity = Array.from(Array(Math.min(lineItem.stock_available_level, 11)).keys())
-    availableQuantity.shift()
-
     return (
-      <select value={lineItem.unit_quantity} onChange={this.props.updateQuantity} data-id={lineItem.id}>
-        { availableQuantity.map(index => {
-          return (
-            <option key={index} value={index} aria-setsize={index} aria-posinset={index + 1}>
-              { index }
-            </option>
-          )
-        }) }
-      </select>
+      <this.DropdownSelect
+        className='c-line-items__quantity-select'
+        data-id={lineItem.id}
+        label='Quantity'
+        onChange={this.props.updateQuantity}
+        options={this.renderQuantityOptions(lineItem)}
+        skipLabel
+        skipPrompt
+        value={lineItem.unit_quantity}
+      />
     )
+  }
+
+  /**
+  * Builds options prop for the DropdownSelect component.  
+  * @param {Object} lineItem - A line item from cart.
+  */
+  renderQuantityOptions (lineItem) {
+    // Render options from 1 to 10 or maximum available stock, whichever is lower.
+    const maxStock = Math.min(10, lineItem.stock_available_level)
+    const baseOptions = Array.from({length: maxStock}, (_, i) => ({
+      title: i+1,
+      value: i+1
+    }))
+
+    // Render an additional option with the current quantity if it is higher than the maximum above.
+    if (lineItem.unit_quantity > maxStock) {
+      baseOptions.push({
+        title: lineItem.unit_quantity,
+        value: lineItem.unit_quantity
+      })
+    }
+
+    return baseOptions
   }
 
   /**
@@ -45,13 +67,6 @@ class LineItems extends Component {
   renderButtonsAndTotal (lineItem) {
     return (
       <>
-        <div className='c-line-items__remove'>
-          <div className='c-line-items__delete'>
-            <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
-              Delete
-            </a>
-          </div>
-        </div>
         <div className='c-line-items__amounts'>
           { lineItem.sub_total !== lineItem.total && (
             <>
@@ -83,6 +98,13 @@ class LineItems extends Component {
             </span>
           </div>
         </div>
+        <div className='c-line-items__remove'>
+          <div className='c-line-items__delete'>
+            <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
+              Delete
+            </a>
+          </div>
+        </div>
       </div>
     )
   }
@@ -96,19 +118,9 @@ class LineItems extends Component {
   renderParams (lineItem) {
     return (
       <>
-        <div className='c-line-items__colour'>
-          <div className='c-line-items__param u-bold'>
-            <span>Colour</span>
-          </div>
-        </div>
         <div className='c-line-items__quantity'>
-          <div className='c-line-items__param u-bold'><span>Quantity</span></div>
-        </div>
-        <div className='c-line-items__param c-line-items__colour-selected'>
-          <span>Grey</span>
-        </div>
-        <div className='c-line-items__param c-line-items__quantity-selected'>
-          <span>{ this.renderOptions(lineItem) }</span>
+          <div className='c-line-items__quantity-header'><span>Quantity</span></div>
+          { this.renderOptions(lineItem) }
         </div>
       </>
     )

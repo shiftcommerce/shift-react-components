@@ -82,6 +82,9 @@ $minibag-border-style: 1px solid $border-default !important;
       right: 0;
       margin: auto;
       max-width: 1200px;
+    }
+
+    @include breakpoint(mobile) {
       height: 100vh;
     }
   }
@@ -89,6 +92,8 @@ $minibag-border-style: 1px solid $border-default !important;
   .c-minibag__line-item {
     padding: $global-spacing-unit-tiny;
     display: flex;
+    border-bottom: $minibag-border-style;
+    align-items: center;
 
     @include breakpoint(tablet) {
       justify-content: space-between
@@ -98,26 +103,42 @@ $minibag-border-style: 1px solid $border-default !important;
     .c-minibag__line-item--delete {
       font-size: .9em;
       cursor: pointer;
+      line-height: 2;
     }
 
+  .c-minibag__quantity {
+    display: inline-block;
+    width: auto;
+    margin-left: $global-spacing-unit-tiny;
+  }
+
   .c-minibag__line-items-section {
-    overflow: scroll;
+    overflow: auto;
+    flex-grow: 1;
+
+    &::-webkit-scrollbar {
+      background-color: white;
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $border-default;
+    }
   }
 
     .c-minibag__line-item-images {
-      width: 70%;
-
-      @include breakpoint(tablet) {
-        width: 20%;
-      }
-
-      @include breakpoint(desktop) {
-        width: 70%;
-      }
+      flex-basis: 30%;
+      flex-shrink: 0;
+      flex-grow: 0;
     }
 
     .c-minibag__line-item-information {
       font-size: .8em;
+      flex-grow: 1;
     }
 
     .c-minibag__line-item-total {
@@ -128,6 +149,10 @@ $minibag-border-style: 1px solid $border-default !important;
     .c-minibag__line-item-subtotal {
       color: $font-dark-grey;
       text-decoration: line-through;
+
+      &:hover {
+        text-decoration: line-through;
+      }
     }
 
       .c-minibag__line-item-information-title {
@@ -149,12 +174,11 @@ $minibag-border-style: 1px solid $border-default !important;
       box-shadow: 0 2px 2px $medium-grey;
       display: flex;
       flex-direction: column;
-      height: calc(100vh - #{$global-header-height-mobile} + 72px);
+      height: calc(100vh - 40px);
 
       @include breakpoint(desktop) {
         width: 350px;
         max-height: 580px;
-        min-height: 350px;
         height: 100%;
         z-index: 2;
       }
@@ -185,14 +209,29 @@ $minibag-border-style: 1px solid $border-default !important;
       }
 
       .c-minibag__dropdown-review {
-        display: flex;
-        flex-direction: column;
-        border-top: $minibag-border-style;
       }
 
-        .c-minibag__dropdown-review-total {
+        .c-minibag__dropdown-review-totals {
+          margin: $global-spacing-unit-small 0;
+        }
+
+        .c-minibag__dropdown-review-total-line {
           display: flex;
           justify-content: space-between;
+          font-size: .8em;
+
+          p {
+            margin: $global-spacing-unit-tiny 0;
+          }
+
+          &--promotion {
+            color: $text-error;
+          }
+
+          &--main {
+            font-size: .9em;
+            font-weight: bold;
+          }
         }
 
         .c-minibag__dropdown-buttons {
@@ -200,9 +239,10 @@ $minibag-border-style: 1px solid $border-default !important;
             margin: 0;
             width: 100%;
             cursor: pointer;
+            margin-top: $global-spacing-unit-tiny;
 
-            &:first-of-type {
-              margin-top: $global-spacing-unit-tiny;
+            &:nth-child(1) {
+              margin-top: 0;
             }
           }
         }
