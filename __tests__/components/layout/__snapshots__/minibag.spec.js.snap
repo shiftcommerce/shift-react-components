@@ -79,13 +79,91 @@ exports[`Minibag doesnt render when there is no lineitems 1`] = `
   }
   className="dummy-classname"
   miniBagDisplayed={true}
-/>
+>
+  <div
+    className="c-minibag__overlay"
+    onClick={[Function]}
+  />
+  <div
+    className="c-minibag__dropdown"
+  >
+    <div
+      className="c-minibag__dropdown-container"
+    >
+      <section
+        className="c-minibag__dropdown-header"
+      >
+        <h1
+          className="c-minibag__dropdown-title"
+        >
+           Shopping Basket 
+          <a
+            className="c-checkout-cart__amount"
+          >
+            (
+            0
+            )
+          </a>
+        </h1>
+        <input
+          checked={true}
+          className="c-minibag__dropdown-checkbox"
+          id="minibag"
+          readOnly={true}
+          type="checkbox"
+        />
+        <label
+          className="c-minibag__dropdown-cross"
+          htmlFor="minibag"
+          onClick={[Function]}
+        />
+      </section>
+      <p>
+        Your bag is empty.
+      </p>
+      <div
+        className="c-minibag__dropdown-buttons"
+      >
+        <Link
+          className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+          href="/cart"
+          onClick={[Function]}
+        >
+          <a
+            className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+            href="/cart"
+            onClick={[Function]}
+          >
+            view shopping basket
+          </a>
+        </Link>
+        <Button
+          className="o-button--sml c-minibag__dropdown-buttons--link"
+          label="continue shopping"
+          onClick={[Function]}
+          status="primary"
+        >
+          <button
+            className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
+          >
+            continue shopping
+          </button>
+        </Button>
+      </div>
+    </div>
+  </div>
+</Minibag>
 `;
 
 exports[`Minibag renders when miniBagDisplayed is true 1`] = `
 <Minibag
   cart={
     Object {
+      "discount_summaries": Array [],
       "line_items": Array [
         Object {
           "id": "310",
@@ -96,6 +174,7 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
               "slug": "jugs/seed_product_39",
               "title": "Second product",
             },
+            "sku": "3008557600818",
             "title": "Second variant",
           },
           "item_id": 321,
@@ -108,7 +187,6 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
               "total": 1.5,
             },
           ],
-          "sku": "3008557600817",
           "stock_available_level": 85,
           "sub_total": 6.77,
           "total": 5.27,
@@ -124,6 +202,7 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
               "slug": "jugs/seed_product_40",
               "title": "First product",
             },
+            "sku": "3008557600817",
             "title": "First variant",
           },
           "item_id": 321,
@@ -136,7 +215,6 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
               "total": 1.5,
             },
           ],
-          "sku": "3008557600817",
           "stock_available_level": 85,
           "sub_total": 6.77,
           "total": 5.27,
@@ -148,9 +226,11 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
     }
   }
   miniBagDisplayed={true}
+  onItemQuantityUpdated={[MockFunction]}
 >
   <div
     className="c-minibag__overlay"
+    onClick={[Function]}
   />
   <div
     className="c-minibag__dropdown"
@@ -183,6 +263,7 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
         <label
           className="c-minibag__dropdown-cross"
           htmlFor="minibag"
+          onClick={[Function]}
         />
       </section>
       <div
@@ -190,6 +271,7 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
       >
         <div
           className="c-minibag__line-item"
+          key="3008557600818"
         >
           <div
             className="c-minibag__line-item-information"
@@ -213,20 +295,230 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
                 6.77
               </a>
             </div>
-            <div>
-              <p
-                className="c-minibag__line-item-information-params"
-              >
-                QUANTITY: 
-                1
-              </p>
-              <a
-                className="c-minibag__line-item--delete"
+            <_class
+              className="c-minibag__quantity"
+              data-id="310"
+              label="Quantity"
+              onChange={[MockFunction]}
+              options={
+                Array [
+                  Object {
+                    "title": 1,
+                    "value": 1,
+                  },
+                  Object {
+                    "title": 2,
+                    "value": 2,
+                  },
+                  Object {
+                    "title": 3,
+                    "value": 3,
+                  },
+                  Object {
+                    "title": 4,
+                    "value": 4,
+                  },
+                  Object {
+                    "title": 5,
+                    "value": 5,
+                  },
+                  Object {
+                    "title": 6,
+                    "value": 6,
+                  },
+                  Object {
+                    "title": 7,
+                    "value": 7,
+                  },
+                  Object {
+                    "title": 8,
+                    "value": 8,
+                  },
+                  Object {
+                    "title": 9,
+                    "value": 9,
+                  },
+                  Object {
+                    "title": 10,
+                    "value": 10,
+                  },
+                ]
+              }
+              skipPrompt={true}
+              value={1}
+            >
+              <DropdownSelect
+                className="c-minibag__quantity"
                 data-id="310"
+                label="Quantity"
+                onChange={[MockFunction]}
+                options={
+                  Array [
+                    Object {
+                      "title": 1,
+                      "value": 1,
+                    },
+                    Object {
+                      "title": 2,
+                      "value": 2,
+                    },
+                    Object {
+                      "title": 3,
+                      "value": 3,
+                    },
+                    Object {
+                      "title": 4,
+                      "value": 4,
+                    },
+                    Object {
+                      "title": 5,
+                      "value": 5,
+                    },
+                    Object {
+                      "title": 6,
+                      "value": 6,
+                    },
+                    Object {
+                      "title": 7,
+                      "value": 7,
+                    },
+                    Object {
+                      "title": 8,
+                      "value": 8,
+                    },
+                    Object {
+                      "title": 9,
+                      "value": 9,
+                    },
+                    Object {
+                      "title": 10,
+                      "value": 10,
+                    },
+                  ]
+                }
+                renderValidationMessage={[Function]}
+                skipPrompt={true}
+                value={1}
               >
-                Remove
-              </a>
-            </div>
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    className="o-form__label"
+                  >
+                    <b>
+                      Quantity
+                    </b>
+                  </label>
+                  <select
+                    className="o-form__input-block o-form__input-field c-minibag__quantity"
+                    data-id="310"
+                    label="Quantity"
+                    onBlur={[Function]}
+                    onChange={[MockFunction]}
+                    role="listbox"
+                    value={1}
+                  >
+                    <option
+                      aria-posinset={1}
+                      aria-setsize={10}
+                      key="0"
+                      role="option"
+                      value={1}
+                    >
+                      1
+                    </option>
+                    <option
+                      aria-posinset={2}
+                      aria-setsize={10}
+                      key="1"
+                      role="option"
+                      value={2}
+                    >
+                      2
+                    </option>
+                    <option
+                      aria-posinset={3}
+                      aria-setsize={10}
+                      key="2"
+                      role="option"
+                      value={3}
+                    >
+                      3
+                    </option>
+                    <option
+                      aria-posinset={4}
+                      aria-setsize={10}
+                      key="3"
+                      role="option"
+                      value={4}
+                    >
+                      4
+                    </option>
+                    <option
+                      aria-posinset={5}
+                      aria-setsize={10}
+                      key="4"
+                      role="option"
+                      value={5}
+                    >
+                      5
+                    </option>
+                    <option
+                      aria-posinset={6}
+                      aria-setsize={10}
+                      key="5"
+                      role="option"
+                      value={6}
+                    >
+                      6
+                    </option>
+                    <option
+                      aria-posinset={7}
+                      aria-setsize={10}
+                      key="6"
+                      role="option"
+                      value={7}
+                    >
+                      7
+                    </option>
+                    <option
+                      aria-posinset={8}
+                      aria-setsize={10}
+                      key="7"
+                      role="option"
+                      value={8}
+                    >
+                      8
+                    </option>
+                    <option
+                      aria-posinset={9}
+                      aria-setsize={10}
+                      key="8"
+                      role="option"
+                      value={9}
+                    >
+                      9
+                    </option>
+                    <option
+                      aria-posinset={10}
+                      aria-setsize={10}
+                      key="9"
+                      role="option"
+                      value={10}
+                    >
+                      10
+                    </option>
+                  </select>
+                </div>
+              </DropdownSelect>
+            </_class>
+            <a
+              className="c-minibag__line-item--delete"
+              data-id="310"
+            >
+              Remove
+            </a>
           </div>
           <div
             className="c-minibag__line-item-images"
@@ -264,6 +556,7 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
         </div>
         <div
           className="c-minibag__line-item"
+          key="3008557600817"
         >
           <div
             className="c-minibag__line-item-information"
@@ -287,20 +580,230 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
                 6.77
               </a>
             </div>
-            <div>
-              <p
-                className="c-minibag__line-item-information-params"
-              >
-                QUANTITY: 
-                1
-              </p>
-              <a
-                className="c-minibag__line-item--delete"
+            <_class
+              className="c-minibag__quantity"
+              data-id="311"
+              label="Quantity"
+              onChange={[MockFunction]}
+              options={
+                Array [
+                  Object {
+                    "title": 1,
+                    "value": 1,
+                  },
+                  Object {
+                    "title": 2,
+                    "value": 2,
+                  },
+                  Object {
+                    "title": 3,
+                    "value": 3,
+                  },
+                  Object {
+                    "title": 4,
+                    "value": 4,
+                  },
+                  Object {
+                    "title": 5,
+                    "value": 5,
+                  },
+                  Object {
+                    "title": 6,
+                    "value": 6,
+                  },
+                  Object {
+                    "title": 7,
+                    "value": 7,
+                  },
+                  Object {
+                    "title": 8,
+                    "value": 8,
+                  },
+                  Object {
+                    "title": 9,
+                    "value": 9,
+                  },
+                  Object {
+                    "title": 10,
+                    "value": 10,
+                  },
+                ]
+              }
+              skipPrompt={true}
+              value={1}
+            >
+              <DropdownSelect
+                className="c-minibag__quantity"
                 data-id="311"
+                label="Quantity"
+                onChange={[MockFunction]}
+                options={
+                  Array [
+                    Object {
+                      "title": 1,
+                      "value": 1,
+                    },
+                    Object {
+                      "title": 2,
+                      "value": 2,
+                    },
+                    Object {
+                      "title": 3,
+                      "value": 3,
+                    },
+                    Object {
+                      "title": 4,
+                      "value": 4,
+                    },
+                    Object {
+                      "title": 5,
+                      "value": 5,
+                    },
+                    Object {
+                      "title": 6,
+                      "value": 6,
+                    },
+                    Object {
+                      "title": 7,
+                      "value": 7,
+                    },
+                    Object {
+                      "title": 8,
+                      "value": 8,
+                    },
+                    Object {
+                      "title": 9,
+                      "value": 9,
+                    },
+                    Object {
+                      "title": 10,
+                      "value": 10,
+                    },
+                  ]
+                }
+                renderValidationMessage={[Function]}
+                skipPrompt={true}
+                value={1}
               >
-                Remove
-              </a>
-            </div>
+                <div
+                  className="o-form__input-group"
+                >
+                  <label
+                    className="o-form__label"
+                  >
+                    <b>
+                      Quantity
+                    </b>
+                  </label>
+                  <select
+                    className="o-form__input-block o-form__input-field c-minibag__quantity"
+                    data-id="311"
+                    label="Quantity"
+                    onBlur={[Function]}
+                    onChange={[MockFunction]}
+                    role="listbox"
+                    value={1}
+                  >
+                    <option
+                      aria-posinset={1}
+                      aria-setsize={10}
+                      key="0"
+                      role="option"
+                      value={1}
+                    >
+                      1
+                    </option>
+                    <option
+                      aria-posinset={2}
+                      aria-setsize={10}
+                      key="1"
+                      role="option"
+                      value={2}
+                    >
+                      2
+                    </option>
+                    <option
+                      aria-posinset={3}
+                      aria-setsize={10}
+                      key="2"
+                      role="option"
+                      value={3}
+                    >
+                      3
+                    </option>
+                    <option
+                      aria-posinset={4}
+                      aria-setsize={10}
+                      key="3"
+                      role="option"
+                      value={4}
+                    >
+                      4
+                    </option>
+                    <option
+                      aria-posinset={5}
+                      aria-setsize={10}
+                      key="4"
+                      role="option"
+                      value={5}
+                    >
+                      5
+                    </option>
+                    <option
+                      aria-posinset={6}
+                      aria-setsize={10}
+                      key="5"
+                      role="option"
+                      value={6}
+                    >
+                      6
+                    </option>
+                    <option
+                      aria-posinset={7}
+                      aria-setsize={10}
+                      key="6"
+                      role="option"
+                      value={7}
+                    >
+                      7
+                    </option>
+                    <option
+                      aria-posinset={8}
+                      aria-setsize={10}
+                      key="7"
+                      role="option"
+                      value={8}
+                    >
+                      8
+                    </option>
+                    <option
+                      aria-posinset={9}
+                      aria-setsize={10}
+                      key="8"
+                      role="option"
+                      value={9}
+                    >
+                      9
+                    </option>
+                    <option
+                      aria-posinset={10}
+                      aria-setsize={10}
+                      key="9"
+                      role="option"
+                      value={10}
+                    >
+                      10
+                    </option>
+                  </select>
+                </div>
+              </DropdownSelect>
+            </_class>
+            <a
+              className="c-minibag__line-item--delete"
+              data-id="311"
+            >
+              Remove
+            </a>
           </div>
           <div
             className="c-minibag__line-item-images"
@@ -340,46 +843,54 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
       <div
         className="c-minibag__dropdown-review"
       >
-        <span
-          className="c-minibag__dropdown-review-total"
-        >
-          <h4>
-            Total:
-          </h4>
-          <h4>
-            £
-            NaN
-          </h4>
-        </span>
         <div
-          className="c-minibag__dropdown-buttons"
+          className="c-minibag__dropdown-review-totals"
         >
-          <Link
+          <div
+            className="c-minibag__dropdown-review-total-line c-minibag__dropdown-review-total-line--main"
+          >
+            <p>
+              Total:
+            </p>
+            <p>
+              £
+              NaN
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c-minibag__dropdown-buttons"
+      >
+        <Link
+          className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
+          href="/cart"
+          onClick={[Function]}
+        >
+          <a
             className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
             href="/cart"
+            onClick={[Function]}
           >
-            <a
-              className="o-button o-button--sml o-button--primary c-minibag__dropdown-buttons--link"
-              href="/cart"
-            >
-              view shopping basket
-            </a>
-          </Link>
-          <Button
-            className="o-button--sml c-minibag__dropdown-buttons--link"
-            label="continue shopping"
-            status="primary"
+            view shopping basket
+          </a>
+        </Link>
+        <Button
+          className="o-button--sml c-minibag__dropdown-buttons--link"
+          label="continue shopping"
+          onClick={[Function]}
+          status="primary"
+        >
+          <button
+            className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
+            disabled={false}
+            onClick={[Function]}
+            role="button"
+            tabIndex="0"
           >
-            <button
-              className="o-button--sml c-minibag__dropdown-buttons--link o-button o-button--primary"
-              disabled={false}
-              role="button"
-              tabIndex="0"
-            >
-              continue shopping
-            </button>
-          </Button>
-        </div>
+            continue shopping
+          </button>
+        </Button>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 {
   "name": "@shiftcommerce/shift-react-components",
-  "version": "0.9.3",
+  "version": "0.10.0",
   "main": "dist/bundle.js",
   "license": "MIT",
   "scripts": {

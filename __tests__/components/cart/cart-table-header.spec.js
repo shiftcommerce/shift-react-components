@@ -22,7 +22,6 @@ test('renders correct messages when cart has items', () => {
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('Wednesday 5th December') // estimated delivery date
   expect(wrapper).toIncludeText('You have 2 items in your shopping basket')
-  expect(wrapper).toIncludeText('£5.27') // cart total price
   expect(wrapper.find('section')).toHaveClassName(className)
 
   dateSpy.mockRestore()
@@ -47,7 +46,6 @@ test('renders correct messages when cart is empty', () => {
   // assert
   expect(wrapper).toMatchSnapshot()
   expect(wrapper).toIncludeText('You have 0 items in your shopping basket')
-  expect(wrapper).toIncludeText('£0.00')
 
   dateSpy.mockRestore()
 })

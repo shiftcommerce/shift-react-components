@@ -78,7 +78,7 @@ export class Layout extends Component {
  */
   renderCartLink(lineItemsCount) {
     return (
-      <span className='c-minibag__cart' onClick={this.props.toggleMiniBag}>
+      <span className='c-minibag__cart' onClick={() => this.props.toggleMiniBag(true)}>
         <div className='c-minibag__cart-image'>
           <span className='c-minibag__cart-image-count' >
             {lineItemsCount}
@@ -102,10 +102,10 @@ export class Layout extends Component {
   }
 
   renderHeader () {
-    const { cart, loggedIn, shrunk } = this.props
+    const { cart, deleteItem, loggedIn, onItemQuantityUpdated, shrunk } = this.props
 
     const headerClasses = classNames('o-header', {
-      'o-header--shrunk': shrunk
+      'o-header--shrunk': shrunk || cart.miniBagDisplayed
     })
 
     return (
@@ -119,8 +119,9 @@ export class Layout extends Component {
               { this.renderBasket() }
               <this.Minibag
                 cart={cart}
-                deleteItem={this.props.deleteItem} 
-                miniBagDisplayed={this.props.minibagDisplayed} 
+                deleteItem={deleteItem} 
+                miniBagDisplayed={cart.miniBagDisplayed} 
+                onItemQuantityUpdated={onItemQuantityUpdated}
                 toggleMiniBag={this.props.toggleMiniBag} 
               />
               { this.renderSearch() }

@@ -19,8 +19,8 @@ class CartTableHeader extends PureComponent {
       <div className='c-cart-table__header-grid-item c-cart-table__header-grid-item--a'>
         <h1 className='c-cart-table__title'>Your Shopping Basket <a className='c-cart-table__amount'>({ cart.line_items_count || 0 })</a></h1>
         <div className='c-cart-table__text'>
-          <p className='c-cart-table__description'>You have <a>{ cart.line_items_count || 0 }</a> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> in your shopping basket</p>
-          <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.line_items_count || 0} showCount={false} /> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> will be saved for 48 hours depending on availability</p>
+          <p className='c-cart-table__description'>You have <a>{ cart.line_items_count || 0 }</a> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> in your shopping basket.</p>
+          <p className='c-cart-table__description'><Pluralize singular='This' plural='These' count={cart.line_items_count || 0} showCount={false} /> <Pluralize singular='item' count={cart.line_items_count || 0} showCount={false} /> will be saved for 48 hours depending on availability.</p>
         </div>
       </div>
     )
@@ -38,7 +38,7 @@ class CartTableHeader extends PureComponent {
     return (
       <div className='c-cart-table__header-grid-item c-cart-table__header-grid-item--b'>
         <h1 className='c-cart-table__title'>Estimated Delivery</h1>
-        <p>We will deliver your item: <a>{ businessDaysFromNow(workingDays).format('dddd Do MMMM') }</a></p>
+        <p className='c-cart-table__description'>We will deliver your item: { businessDaysFromNow(workingDays).format('dddd Do MMMM') }.</p>
       </div>
     )
   }
@@ -52,9 +52,6 @@ class CartTableHeader extends PureComponent {
         <div className='c-cart-table__header-grid'>
           { this.renderBasketDetails(cart) }
           { this.renderDeliveryEstimate(shippingMethod) }
-        </div>
-        <div className='c-cart-table__header-total'>
-          <h4 className='c-cart-table__total'>£{ decimalPrice(cart.total || 0) }</h4>
         </div>
       </section>
     )

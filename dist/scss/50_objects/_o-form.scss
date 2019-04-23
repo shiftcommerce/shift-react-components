@@ -197,6 +197,8 @@ $input-checkbox-spacing: 8px !default;
   }
 
   select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     background-color: $background-white;
     background-image: url("data:image/svg+xml;charset=UTF8,<svg width='100%' height='100%' viewBox='0 0 40 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;'><g id='Layer1'><g><path d='M13.111,1.124L19.492,8.886L25.911,1.105' style='fill:none;stroke:black;stroke-width:2.21px;'/></g></g></svg>");
@@ -204,6 +206,7 @@ $input-checkbox-spacing: 8px !default;
     background-repeat: no-repeat;
     background-size: 30px;
     font-size: .8em;
+    padding-right: $global-spacing-unit;
   }
 }
 
