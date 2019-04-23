@@ -27,6 +27,7 @@ class Payment extends PureComponent {
       checkout,
       countries,
       currentAddress,
+      headerTitle,
       loggedIn,
       nextStepAvailable,
       nextSection,
@@ -38,12 +39,11 @@ class Payment extends PureComponent {
       onShowField,
       onCardTokenReceived,
       setCardErrors,
-      order,
-      title
+      order
     } = this.props
     return (
       <div aria-label='Payment method' className={classNames(className, 'o-form c-payment')}>
-        <this.PaymentHeader title={title}/>
+        <this.PaymentHeader title={headerTitle}/>
         <div className='c-payment__section' style={{ display: 'block' }}>
           <this.StripePayment
             addingNewAddress={addingNewAddress}
@@ -88,6 +88,7 @@ Payment.propTypes = {
   checkout: PropTypes.object,
   countries: PropTypes.array,
   currentAddress: PropTypes.object,
+  headerTitle: PropTypes.string.isRequired,
   loggedIn: PropTypes.bool,
   nextStepAvailable: PropTypes.func,
   nextSection: PropTypes.func,
@@ -99,8 +100,7 @@ Payment.propTypes = {
   onShowField: PropTypes.func,
   onCardTokenReceived: PropTypes.func,
   order: PropTypes.object,
-  setCardErrors: PropTypes.func,
-  title: PropTypes.string.isRequired
+  setCardErrors: PropTypes.func
 }
 
 export default Payment

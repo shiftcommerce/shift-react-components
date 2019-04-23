@@ -57681,6 +57681,7 @@ function (_PureComponent) {
           checkout = _this$props.checkout,
           countries = _this$props.countries,
           currentAddress = _this$props.currentAddress,
+          headerTitle = _this$props.headerTitle,
           loggedIn = _this$props.loggedIn,
           nextStepAvailable = _this$props.nextStepAvailable,
           nextSection = _this$props.nextSection,
@@ -57692,13 +57693,12 @@ function (_PureComponent) {
           onShowField = _this$props.onShowField,
           onCardTokenReceived = _this$props.onCardTokenReceived,
           setCardErrors = _this$props.setCardErrors,
-          order = _this$props.order,
-          title = _this$props.title;
+          order = _this$props.order;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
         className: classnames_default()(className, 'o-form c-payment')
       }, external_react_default.a.createElement(this.PaymentHeader, {
-        title: title
+        title: headerTitle
       }), external_react_default.a.createElement("div", {
         className: "c-payment__section",
         style: {
@@ -57747,6 +57747,7 @@ payment_Payment.propTypes = {
   checkout: prop_types_default.a.object,
   countries: prop_types_default.a.array,
   currentAddress: prop_types_default.a.object,
+  headerTitle: prop_types_default.a.string.isRequired,
   loggedIn: prop_types_default.a.bool,
   nextStepAvailable: prop_types_default.a.func,
   nextSection: prop_types_default.a.func,
@@ -57758,8 +57759,7 @@ payment_Payment.propTypes = {
   onShowField: prop_types_default.a.func,
   onCardTokenReceived: prop_types_default.a.func,
   order: prop_types_default.a.object,
-  setCardErrors: prop_types_default.a.func,
-  title: prop_types_default.a.string.isRequired
+  setCardErrors: prop_types_default.a.func
 };
 /* harmony default export */ var payment = (payment_Payment);
 // CONCATENATED MODULE: ./src/components/checkout/payment-summary.js
