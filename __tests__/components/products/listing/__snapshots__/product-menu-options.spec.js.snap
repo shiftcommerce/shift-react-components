@@ -39,12 +39,24 @@ exports[`renders correctly 1`] = `
             "value": "test_index",
           },
           Object {
-            "label": "Rating asc.",
-            "value": "test_index_product_rating_asc",
+            "label": "Price asc.",
+            "value": "test_index_price_asc",
+          },
+          Object {
+            "label": "Price desc.",
+            "value": "test_index_price_desc",
+          },
+          Object {
+            "label": "Newest",
+            "value": "test_index_created_at_desc",
+          },
+          Object {
+            "label": "Most Popular",
+            "value": "test_index_total_purchases_desc",
           },
           Object {
             "label": "Rating desc.",
-            "value": "test_index_product_rating_desc",
+            "value": "test_index_rating_desc",
           },
         ]
       }
