@@ -23,21 +23,27 @@ class AddressFormSummary extends PureComponent {
 
     return(
       <div className='o-form__wrapper--collapsed c-address-form__summary'>
-        <p className='u-bold'>{ firstName } { lastName } </p>
-        <span>{ addressLine1 }, { city }, { postcode }</span>
+        <p className='u-bold'>{firstName} {lastName} </p>
+        <span>{addressLine1}, {city}, {postcode}</span>
       </div>
     )
   }
 
   render () {
-    const { headerTitle, onClick, showEditButton } = this.props
+    const {
+      collapsed,
+      headerTitle,
+      onClick,
+      showEditButton
+    } = this.props
+
     return (
       <>
         <this.AddressFormHeader
-          collapsed
+          collapsed={collapsed}
           onClick={onClick}
-          title={headerTitle}
           showEditButton={showEditButton}
+          title={headerTitle}
         />
         {this.renderAddress()}
       </>
@@ -48,13 +54,13 @@ class AddressFormSummary extends PureComponent {
 AddressFormSummary.propTypes = {
   addressLine1: PropTypes.string,
   city: PropTypes.string,
+  collapsed: PropTypes.bool,
   firstName: PropTypes.string,
+  headerTitle: PropTypes.string.isRequired,
   lastName: PropTypes.string,
   onClick: PropTypes.func,
   postcode: PropTypes.string,
-  showEditButton: PropTypes.bool,
-  headerTitle: PropTypes.string.isRequired
+  showEditButton: PropTypes.bool
 }
-
 
 export default AddressFormSummary

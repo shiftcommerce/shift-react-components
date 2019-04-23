@@ -45878,37 +45878,76 @@ function (_Component) {
 }(external_react_["Component"]);
 /* harmony default export */ var address_form = (address_form_AddressForm);
 // CONCATENATED MODULE: ./src/components/checkout/address-form-header.js
+function address_form_header_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_form_header_typeof = function _typeof(obj) { return typeof obj; }; } else { address_form_header_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_form_header_typeof(obj); }
+
+function address_form_header_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function address_form_header_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function address_form_header_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_form_header_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_form_header_defineProperties(Constructor, staticProps); return Constructor; }
+
+function address_form_header_possibleConstructorReturn(self, call) { if (call && (address_form_header_typeof(call) === "object" || typeof call === "function")) { return call; } return address_form_header_assertThisInitialized(self); }
+
+function address_form_header_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function address_form_header_getPrototypeOf(o) { address_form_header_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_form_header_getPrototypeOf(o); }
+
+function address_form_header_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_form_header_setPrototypeOf(subClass, superClass); }
+
+function address_form_header_setPrototypeOf(o, p) { address_form_header_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_form_header_setPrototypeOf(o, p); }
+
 // Libraries
 
  // Lib
 
 
 
-function AddressFormHeader(_ref) {
-  var collapsed = _ref.collapsed,
-      title = _ref.title,
-      onClick = _ref.onClick,
-      showEditButton = _ref.showEditButton;
-  var Button = component_mapping('Button');
-  return external_react_default.a.createElement("div", {
-    className: "o-form__header c-address-form__header"
-  }, external_react_default.a.createElement("div", {
-    className: "o-form__header-title c-address-form__header-title"
-  }, external_react_default.a.createElement("h2", null, title)), collapsed && showEditButton && external_react_default.a.createElement(Button, {
-    label: "Edit",
-    status: "secondary",
-    className: "o-button-edit",
-    onClick: onClick
-  }));
-}
+var address_form_header_AddressFormHeader =
+/*#__PURE__*/
+function (_PureComponent) {
+  address_form_header_inherits(AddressFormHeader, _PureComponent);
 
-AddressFormHeader.propTypes = {
+  function AddressFormHeader(props) {
+    var _this;
+
+    address_form_header_classCallCheck(this, AddressFormHeader);
+
+    _this = address_form_header_possibleConstructorReturn(this, address_form_header_getPrototypeOf(AddressFormHeader).call(this, props));
+    _this.Button = component_mapping('Button');
+    return _this;
+  }
+
+  address_form_header_createClass(AddressFormHeader, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          collapsed = _this$props.collapsed,
+          title = _this$props.title,
+          onClick = _this$props.onClick,
+          showEditButton = _this$props.showEditButton;
+      return external_react_default.a.createElement("div", {
+        className: "o-form__header c-address-form__header"
+      }, external_react_default.a.createElement("div", {
+        className: "o-form__header-title c-address-form__header-title"
+      }, external_react_default.a.createElement("h2", null, title)), collapsed && showEditButton && external_react_default.a.createElement(this.Button, {
+        label: "Edit",
+        status: "secondary",
+        className: "o-button-edit",
+        onClick: onClick
+      }));
+    }
+  }]);
+
+  return AddressFormHeader;
+}(external_react_["PureComponent"]);
+
+address_form_header_AddressFormHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
   onClick: prop_types_default.a.func,
   showEditButton: prop_types_default.a.bool,
   title: prop_types_default.a.string.isRequired
 };
-/* harmony default export */ var address_form_header = (AddressFormHeader);
+/* harmony default export */ var address_form_header = (address_form_header_AddressFormHeader);
 // CONCATENATED MODULE: ./src/components/cart/line-items.js
 function line_items_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { line_items_typeof = function _typeof(obj) { return typeof obj; }; } else { line_items_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return line_items_typeof(obj); }
 
@@ -57244,14 +57283,15 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
+          collapsed = _this$props2.collapsed,
           headerTitle = _this$props2.headerTitle,
           onClick = _this$props2.onClick,
           showEditButton = _this$props2.showEditButton;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.AddressFormHeader, {
-        collapsed: true,
+        collapsed: collapsed,
         onClick: onClick,
-        title: headerTitle,
-        showEditButton: showEditButton
+        showEditButton: showEditButton,
+        title: headerTitle
       }), this.renderAddress());
     }
   }]);
@@ -57262,12 +57302,13 @@ function (_PureComponent) {
 address_form_summary_AddressFormSummary.propTypes = {
   addressLine1: prop_types_default.a.string,
   city: prop_types_default.a.string,
+  collapsed: prop_types_default.a.bool,
   firstName: prop_types_default.a.string,
+  headerTitle: prop_types_default.a.string.isRequired,
   lastName: prop_types_default.a.string,
   onClick: prop_types_default.a.func,
   postcode: prop_types_default.a.string,
-  showEditButton: prop_types_default.a.bool,
-  headerTitle: prop_types_default.a.string.isRequired
+  showEditButton: prop_types_default.a.bool
 };
 /* harmony default export */ var address_form_summary = (address_form_summary_AddressFormSummary);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart.js

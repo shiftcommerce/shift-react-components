@@ -2,7 +2,6 @@
 import React from 'react'
 
 // Components
-import AddressFormHeader from '../../../src/components/checkout/address-form-header'
 import AddressFormSummary from '../../../src/components/checkout/address-form-summary'
 
 test("renders the addresss summary", () => {
@@ -22,9 +21,10 @@ test("renders the addresss summary", () => {
       city={city}
       firstName={firstName}
       lastName={lastName}
-      onClick={jest.fn()}
+      onClick={() => jest.fn()}
       postcode={postcode}
       showEditButton={true}
+      collapsed={false}
     />
   )
 
@@ -34,6 +34,5 @@ test("renders the addresss summary", () => {
   expect(wrapper).toIncludeText(city)
   expect(wrapper).toIncludeText(firstName)
   expect(wrapper).toIncludeText(lastName)
-  expect(wrapper.find(AddressFormHeader).length).toEqual(1)
   expect(wrapper.find('div')).toMatchSelector('.c-address-form__summary')
 })

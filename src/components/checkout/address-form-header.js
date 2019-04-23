@@ -1,27 +1,40 @@
 // Libraries
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-function AddressFormHeader ({ collapsed, title, onClick, showEditButton }) {
-  const Button = componentMapping('Button')
+class AddressFormHeader extends PureComponent {
+  constructor (props) {
+    super(props)
 
-  return (
-    <div className='o-form__header c-address-form__header'>
-      <div className='o-form__header-title c-address-form__header-title'>
-        <h2>{ title }</h2>
+    this.Button = componentMapping('Button')
+  }
+
+  render () {
+    const {
+      collapsed,
+      title,
+      onClick,
+      showEditButton
+    } = this.props
+
+    return (
+      <div className='o-form__header c-address-form__header'>
+        <div className='o-form__header-title c-address-form__header-title'>
+          <h2>{ title }</h2>
+        </div>
+        { collapsed && showEditButton && <this.Button
+            label='Edit'
+            status='secondary'
+            className='o-button-edit'
+            onClick={onClick}
+          />
+        }
       </div>
-      { collapsed && showEditButton && <Button
-          label='Edit'
-          status='secondary'
-          className='o-button-edit'
-          onClick={onClick}
-        />
-      }
-    </div>
-  )
+    )
+  }
 }
 
 AddressFormHeader.propTypes = {

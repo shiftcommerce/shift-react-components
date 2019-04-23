@@ -9,7 +9,7 @@ test('renders the navigation button when collapsed', () => {
   const title = 'Shipping Address'
 
   // Act
-  const wrapper = shallow(<AddressFormHeader collapsed title={title} showEditButton={true}/>)
+  const wrapper = shallow(<AddressFormHeader collapsed={true} title={title} showEditButton={true}/>)
 
   // Arrange
   expect(wrapper.find('Button').length).toEqual(1)

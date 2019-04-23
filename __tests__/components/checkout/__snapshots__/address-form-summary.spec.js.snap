@@ -2,9 +2,9 @@
 
 exports[`renders the addresss summary 1`] = `
 <Fragment>
-  <Component
-    collapsed={true}
-    onClick={[MockFunction]}
+  <AddressFormHeader
+    collapsed={false}
+    onClick={[Function]}
     showEditButton={true}
     title="test"
   />
