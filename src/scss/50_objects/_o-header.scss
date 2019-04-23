@@ -16,29 +16,29 @@
     margin-right: auto;
     position: static;
   }
+}
 
-  &--shrunk {
-    @include breakpoint(mobile-tablet) {
-      .o-header__logo {
-        max-height: 0;
-        margin-bottom: 0;
-        overflow: hidden;
-      }
+.o-header--shrunk {
+  @include breakpoint(mobile-tablet) {
+    .o-header__logo {
+      max-height: 0;
+      margin-bottom: 0;
+      overflow: hidden;
     }
   }
+}
 
-  &--checkout {
-    background: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 99;
+.o-header--checkout {
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 
-    @include breakpoint(desktop) {
-      margin: auto;
-      max-width: $global-body-max-width;
-      position: static;
-    }
+  @include breakpoint(desktop) {
+    margin: auto;
+    max-width: $global-body-max-width;
+    position: static;
   }
 }
 

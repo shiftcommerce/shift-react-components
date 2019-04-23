@@ -2,7 +2,13 @@
 @import '../20_tools/__all';
 
 .c-payment-method {
-  margin-top: $global-spacing-unit-large;
+  margin-top: $global-spacing-unit-huge;
+  border-bottom: 1px solid $border-default;
+
+  @include breakpoint(desktop) {
+    margin-top: $global-spacing-unit-large;
+    border-bottom: 0px;
+  }
 
   label {
     font-size: .7rem;
@@ -34,7 +40,6 @@
 .c-payment-method__options {
   display: flex;
   flex-direction: column;
-  width: 95%;
   text-align: center;
   margin: $global-spacing-unit-small $global-spacing-unit-tiny;
 
@@ -61,7 +66,6 @@
 
   @include breakpoint(desktop) {
     margin-left: 0;
-    width: 50%;
   }
 }
 
