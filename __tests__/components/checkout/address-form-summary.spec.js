@@ -3,6 +3,7 @@ import React from 'react'
 
 // Components
 import AddressFormSummary from '../../../src/components/checkout/address-form-summary'
+import AddressFormHeader from '../../../src/components/checkout/address-form-header'
 
 test("renders the addresss summary", () => {
   // Arrange
@@ -34,5 +35,6 @@ test("renders the addresss summary", () => {
   expect(wrapper).toIncludeText(city)
   expect(wrapper).toIncludeText(firstName)
   expect(wrapper).toIncludeText(lastName)
+  expect(wrapper.find(AddressFormHeader).length).toEqual(1)
   expect(wrapper.find('div')).toMatchSelector('.c-address-form__summary')
 })

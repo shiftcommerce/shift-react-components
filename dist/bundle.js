@@ -57283,12 +57283,11 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
-          collapsed = _this$props2.collapsed,
           headerTitle = _this$props2.headerTitle,
           onClick = _this$props2.onClick,
           showEditButton = _this$props2.showEditButton;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.AddressFormHeader, {
-        collapsed: collapsed,
+        collapsed: true,
         onClick: onClick,
         showEditButton: showEditButton,
         title: headerTitle
@@ -57302,7 +57301,6 @@ function (_PureComponent) {
 address_form_summary_AddressFormSummary.propTypes = {
   addressLine1: prop_types_default.a.string,
   city: prop_types_default.a.string,
-  collapsed: prop_types_default.a.bool,
   firstName: prop_types_default.a.string,
   headerTitle: prop_types_default.a.string.isRequired,
   lastName: prop_types_default.a.string,

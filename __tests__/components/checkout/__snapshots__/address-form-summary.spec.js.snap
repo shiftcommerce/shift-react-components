@@ -3,7 +3,7 @@
 exports[`renders the addresss summary 1`] = `
 <Fragment>
   <AddressFormHeader
-    collapsed={false}
+    collapsed={true}
     onClick={[Function]}
     showEditButton={true}
     title="test"

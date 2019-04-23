@@ -31,7 +31,6 @@ class AddressFormSummary extends PureComponent {
 
   render () {
     const {
-      collapsed,
       headerTitle,
       onClick,
       showEditButton
@@ -40,7 +39,7 @@ class AddressFormSummary extends PureComponent {
     return (
       <>
         <this.AddressFormHeader
-          collapsed={collapsed}
+          collapsed
           onClick={onClick}
           showEditButton={showEditButton}
           title={headerTitle}
@@ -54,7 +53,6 @@ class AddressFormSummary extends PureComponent {
 AddressFormSummary.propTypes = {
   addressLine1: PropTypes.string,
   city: PropTypes.string,
-  collapsed: PropTypes.bool,
   firstName: PropTypes.string,
   headerTitle: PropTypes.string.isRequired,
   lastName: PropTypes.string,
