@@ -42,7 +42,7 @@ export class Layout extends Component {
     const signedIn = loggedIn ? 'My Account' : 'Sign In'
 
     return (
-      <div className='c-header__account' onClick={this.props.toggleDropDown}>
+      <div className='c-header__account' onMouseOver={this.props.toggleDropDown}>
         <this.Image className='c-header__account-image' src={accountIcon} />
         <this.Link href='/account/login'>{ signedIn }</this.Link>
         { this.renderAccountDropDown() }

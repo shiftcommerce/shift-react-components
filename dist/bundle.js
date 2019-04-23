@@ -57867,7 +57867,7 @@ function (_Component) {
       var signedIn = loggedIn ? 'My Account' : 'Sign In';
       return external_react_default.a.createElement("div", {
         className: "c-header__account",
-        onClick: this.props.toggleDropDown
+        onMouseOver: this.props.toggleDropDown
       }, external_react_default.a.createElement(this.Image, {
         className: "c-header__account-image",
         src: account_icon_default.a
