@@ -57867,7 +57867,7 @@ function (_Component) {
       var signedIn = loggedIn ? 'My Account' : 'Sign In';
       return external_react_default.a.createElement("div", {
         className: "c-header__account",
-        onMouseOver: this.props.toggleDropDown
+        onMouseEnter: this.props.toggleDropDown
       }, external_react_default.a.createElement(this.Image, {
         className: "c-header__account-image",
         src: account_icon_default.a
@@ -57887,7 +57887,8 @@ function (_Component) {
         return external_react_default.a.createElement("div", {
           className: classnames_default()('c-header__dropdown-wrapper', addShowClass)
         }, external_react_default.a.createElement("div", {
-          className: classnames_default()('c-header__account-dropdown', addShowClass)
+          className: classnames_default()('c-header__account-dropdown', addShowClass),
+          onMouseLeave: this.props.toggleDropDown
         }, external_react_default.a.createElement("div", {
           className: "c-header__callout"
         }), external_react_default.a.createElement(this.Link, {

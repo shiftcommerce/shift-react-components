@@ -42,7 +42,7 @@ export class Layout extends Component {
     const signedIn = loggedIn ? 'My Account' : 'Sign In'
 
     return (
-      <div className='c-header__account' onMouseOver={this.props.toggleDropDown}>
+      <div className='c-header__account' onMouseEnter={this.props.toggleDropDown}>
         <this.Image className='c-header__account-image' src={accountIcon} />
         <this.Link href='/account/login'>{ signedIn }</this.Link>
         { this.renderAccountDropDown() }
@@ -58,7 +58,7 @@ export class Layout extends Component {
     if (loggedIn) {
       return (
         <div className={classNames('c-header__dropdown-wrapper', addShowClass)} >
-          <div className={classNames('c-header__account-dropdown', addShowClass)} >
+          <div className={classNames('c-header__account-dropdown', addShowClass)} onMouseLeave={this.props.toggleDropDown} >
             <div className='c-header__callout' />
             <this.Link href='/account/myaccount'>Order History</this.Link>
             <this.Link href='/account/forgotpassword'>Change Password</this.Link>
