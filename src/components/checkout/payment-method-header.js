@@ -3,7 +3,7 @@ import React from 'react'
 import componentMapping from '../../lib/component-mapping'
 import PropTypes from 'prop-types'
 
-function PaymentMethodHeader ({ title, collapsed, onClick, showEditButton }) {
+function PaymentMethodHeader ({ collapsed, onClick, showEditButton, title }) {
   const Button = componentMapping('Button')
   return (
     <div className='o-form__header c-payment-method__header'>

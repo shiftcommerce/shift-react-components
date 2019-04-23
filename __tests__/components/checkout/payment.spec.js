@@ -7,10 +7,14 @@ import PaymentHeader from '../../../src/components/checkout/payment-header'
 import StripePayment from '../../../src/components/checkout/stripe-payment'
 
 test('renders the payment header and stripe payment component', () => {
+  // Arrange
   const dummyClassName = 'dummy-classname'
+  const title = 'Payment Details'
 
-  const wrapper = shallow(<Payment cart={{}} order={{}} className={dummyClassName} />)
+  // Act
+  const wrapper = shallow(<Payment cart={{}} order={{}} title={title} className={dummyClassName} />)
 
+  // Arrange
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find('div').first()).toHaveClassName(dummyClassName)
   expect(wrapper.find(PaymentHeader).length).toEqual(1)

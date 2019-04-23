@@ -1,12 +1,12 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class Payment extends Component {
+class Payment extends PureComponent {
   constructor (props) {
     super(props)
 
@@ -38,11 +38,12 @@ class Payment extends Component {
       onShowField,
       onCardTokenReceived,
       setCardErrors,
-      order
+      order,
+      title
     } = this.props
     return (
       <div aria-label='Payment method' className={classNames(className, 'o-form c-payment')}>
-        <this.PaymentHeader title={'Payment & Billing Address'}/>
+        <this.PaymentHeader title={title}/>
         <div className='c-payment__section' style={{ display: 'block' }}>
           <this.StripePayment
             addingNewAddress={addingNewAddress}
@@ -97,8 +98,9 @@ Payment.propTypes = {
   onNewAddress: PropTypes.func,
   onShowField: PropTypes.func,
   onCardTokenReceived: PropTypes.func,
+  order: PropTypes.object,
   setCardErrors: PropTypes.func,
-  order: PropTypes.object
+  title: PropTypes.string.isRequired
 }
 
 export default Payment

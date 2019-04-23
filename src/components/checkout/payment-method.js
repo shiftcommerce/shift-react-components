@@ -1,11 +1,11 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class PaymentMethod extends Component {
+class PaymentMethod extends PureComponent {
   constructor (props) {
     super(props)
     this.Button = componentMapping('Button')

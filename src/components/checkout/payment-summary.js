@@ -25,11 +25,11 @@ class PaymentSummary extends PureComponent {
   }
 
   render () {
-    const { onClick, showEditButton, title, withErrors } = this.props
+    const { headerTitle, onClick, showEditButton, withErrors } = this.props
     return (
       <>
         <this.PaymentHeader
-          title={title}
+          title={headerTitle}
           collapsed
           onClick={onClick}
           showEditButton={showEditButton}
@@ -47,9 +47,9 @@ class PaymentSummary extends PureComponent {
 
 PaymentSummary.propTypes = {
   billingAddress: PropTypes.object,
+  headerTitle: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   showEditButton: PropTypes.bool,
-  title: PropTypes.string.isRequired,
   withErrors: PropTypes.bool
 }
 

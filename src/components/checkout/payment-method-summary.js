@@ -28,13 +28,13 @@ class PaymentMethodSummary extends PureComponent {
   }
 
   render () {
-    const { onClick, paymentMethod, showEditButton, title } = this.props
+    const { headerTitle, onClick, paymentMethod, showEditButton } = this.props
     return (
       <div className={'c-payment-method__summary'}>
         <this.PaymentMethodHeader
           collapsed
           onClick={onClick}
-          title={title}
+          title={headerTitle}
           showEditButton={showEditButton}
         />
         <div className={'c-payment-method__summary-information'}>
@@ -49,7 +49,7 @@ PaymentMethodSummary.propTypes = {
   onClick: PropTypes.func,
   paymentMethod: PropTypes.string.isRequired,
   showEditButton: PropTypes.bool,
-  title: PropTypes.string.isRequired
+  headerTitle: PropTypes.string.isRequired
 }
 
 export default PaymentMethodSummary

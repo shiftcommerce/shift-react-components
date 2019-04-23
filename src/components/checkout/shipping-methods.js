@@ -1,5 +1,5 @@
 // Libraries
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
@@ -8,7 +8,7 @@ import businessDaysFromNow from '../../lib/business-days-from-now'
 import componentMapping from '../../lib/component-mapping'
 import { decimalPrice } from '../../lib/decimal-price'
 
-class ShippingMethods extends Component {
+class ShippingMethods extends PureComponent {
   constructor () {
     super()
 
@@ -93,7 +93,7 @@ class ShippingMethods extends Component {
 
     return (
       <div aria-label='Shipping Methods' className={classNames(this.props.className, 'o-form c-shipping-method')}>
-        <this.ShippingMethodsHeader />
+        <this.ShippingMethodsHeader title={'Shipping Method'}/>
         { this.renderForm() }
       </div>
     )

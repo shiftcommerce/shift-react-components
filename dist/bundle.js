@@ -45884,7 +45884,7 @@ function (_Component) {
 
 
 
-function address_form_header_AddressFormHeader(_ref) {
+function AddressFormHeader(_ref) {
   var collapsed = _ref.collapsed,
       title = _ref.title,
       onClick = _ref.onClick,
@@ -45902,13 +45902,13 @@ function address_form_header_AddressFormHeader(_ref) {
   }));
 }
 
-address_form_header_AddressFormHeader.propTypes = {
+AddressFormHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
   onClick: prop_types_default.a.func,
   showEditButton: prop_types_default.a.bool,
   title: prop_types_default.a.string.isRequired
 };
-/* harmony default export */ var address_form_header = (address_form_header_AddressFormHeader);
+/* harmony default export */ var address_form_header = (AddressFormHeader);
 // CONCATENATED MODULE: ./src/components/cart/line-items.js
 function line_items_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { line_items_typeof = function _typeof(obj) { return typeof obj; }; } else { line_items_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return line_items_typeof(obj); }
 
@@ -46196,8 +46196,8 @@ function payment_method_setPrototypeOf(o, p) { payment_method_setPrototypeOf = O
 
 var payment_method_PaymentMethod =
 /*#__PURE__*/
-function (_Component) {
-  payment_method_inherits(PaymentMethod, _Component);
+function (_PureComponent) {
+  payment_method_inherits(PaymentMethod, _PureComponent);
 
   function PaymentMethod(props) {
     var _this;
@@ -46259,7 +46259,7 @@ function (_Component) {
   }]);
 
   return PaymentMethod;
-}(external_react_["Component"]);
+}(external_react_["PureComponent"]);
 
 payment_method_PaymentMethod.propTypes = {
   nextSection: prop_types_default.a.func,
@@ -46275,10 +46275,10 @@ payment_method_PaymentMethod.propTypes = {
 
 
 function PaymentMethodHeader(_ref) {
-  var title = _ref.title,
-      collapsed = _ref.collapsed,
+  var collapsed = _ref.collapsed,
       onClick = _ref.onClick,
-      showEditButton = _ref.showEditButton;
+      showEditButton = _ref.showEditButton,
+      title = _ref.title;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header c-payment-method__header"
@@ -46305,10 +46305,10 @@ PaymentMethodHeader.propTypes = {
 
 
 function PaymentHeader(_ref) {
-  var title = _ref.title,
-      collapsed = _ref.collapsed,
+  var collapsed = _ref.collapsed,
       onClick = _ref.onClick,
-      showEditButton = _ref.showEditButton;
+      showEditButton = _ref.showEditButton,
+      title = _ref.title;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header  c-payment__header"
@@ -46337,11 +46337,12 @@ PaymentHeader.propTypes = {
 
 function shipping_methods_header_ShippingMethodsHeader(_ref) {
   var collapsed = _ref.collapsed,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      title = _ref.title;
   var Button = component_mapping('Button');
   return external_react_default.a.createElement("div", {
     className: "o-form__header c-shipping-method__header"
-  }, external_react_default.a.createElement("h2", null, "Your Shipping Method"), collapsed && external_react_default.a.createElement(Button, {
+  }, external_react_default.a.createElement("h2", null, title), collapsed && external_react_default.a.createElement(Button, {
     "aria-label": "Edit your shipping method",
     label: "Edit",
     status: "secondary",
@@ -46352,7 +46353,8 @@ function shipping_methods_header_ShippingMethodsHeader(_ref) {
 
 shipping_methods_header_ShippingMethodsHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
-  onClick: prop_types_default.a.func
+  onClick: prop_types_default.a.func,
+  title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var shipping_methods_header = (shipping_methods_header_ShippingMethodsHeader);
 // EXTERNAL MODULE: ./node_modules/react-stripe-elements/es/index.js
@@ -57184,43 +57186,90 @@ coupon_form_CouponForm.propTypes = {
 };
 /* harmony default export */ var coupon_form = (coupon_form_CouponForm);
 // CONCATENATED MODULE: ./src/components/checkout/address-form-summary.js
+function address_form_summary_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { address_form_summary_typeof = function _typeof(obj) { return typeof obj; }; } else { address_form_summary_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return address_form_summary_typeof(obj); }
+
+function address_form_summary_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function address_form_summary_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function address_form_summary_createClass(Constructor, protoProps, staticProps) { if (protoProps) address_form_summary_defineProperties(Constructor.prototype, protoProps); if (staticProps) address_form_summary_defineProperties(Constructor, staticProps); return Constructor; }
+
+function address_form_summary_possibleConstructorReturn(self, call) { if (call && (address_form_summary_typeof(call) === "object" || typeof call === "function")) { return call; } return address_form_summary_assertThisInitialized(self); }
+
+function address_form_summary_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function address_form_summary_getPrototypeOf(o) { address_form_summary_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return address_form_summary_getPrototypeOf(o); }
+
+function address_form_summary_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) address_form_summary_setPrototypeOf(subClass, superClass); }
+
+function address_form_summary_setPrototypeOf(o, p) { address_form_summary_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return address_form_summary_setPrototypeOf(o, p); }
+
 // Libraries
 
  // Lib
 
 
 
-function AddressFormSummary(_ref) {
-  var addressLine1 = _ref.addressLine1,
-      city = _ref.city,
-      firstName = _ref.firstName,
-      lastName = _ref.lastName,
-      onClick = _ref.onClick,
-      postcode = _ref.postcode,
-      showEditButton = _ref.showEditButton;
-  var AddressFormHeader = component_mapping('AddressFormHeader');
-  return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(AddressFormHeader, {
-    collapsed: true,
-    onClick: onClick,
-    title: "Shipping Address",
-    showEditButton: showEditButton
-  }), external_react_default.a.createElement("div", {
-    className: "o-form__wrapper--collapsed c-address-form__summary"
-  }, external_react_default.a.createElement("p", {
-    className: "u-bold"
-  }, firstName, " ", lastName, " "), external_react_default.a.createElement("span", null, addressLine1, ", ", city, ", ", postcode)));
-}
+var address_form_summary_AddressFormSummary =
+/*#__PURE__*/
+function (_PureComponent) {
+  address_form_summary_inherits(AddressFormSummary, _PureComponent);
 
-AddressFormSummary.propTypes = {
+  function AddressFormSummary(props) {
+    var _this;
+
+    address_form_summary_classCallCheck(this, AddressFormSummary);
+
+    _this = address_form_summary_possibleConstructorReturn(this, address_form_summary_getPrototypeOf(AddressFormSummary).call(this, props));
+    _this.AddressFormHeader = component_mapping('AddressFormHeader');
+    return _this;
+  }
+
+  address_form_summary_createClass(AddressFormSummary, [{
+    key: "renderAddress",
+    value: function renderAddress() {
+      var _this$props = this.props,
+          addressLine1 = _this$props.addressLine1,
+          city = _this$props.city,
+          firstName = _this$props.firstName,
+          lastName = _this$props.lastName,
+          postcode = _this$props.postcode;
+      return external_react_default.a.createElement("div", {
+        className: "o-form__wrapper--collapsed c-address-form__summary"
+      }, external_react_default.a.createElement("p", {
+        className: "u-bold"
+      }, firstName, " ", lastName, " "), external_react_default.a.createElement("span", null, addressLine1, ", ", city, ", ", postcode));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          headerTitle = _this$props2.headerTitle,
+          onClick = _this$props2.onClick,
+          showEditButton = _this$props2.showEditButton;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.AddressFormHeader, {
+        collapsed: true,
+        onClick: onClick,
+        title: headerTitle,
+        showEditButton: showEditButton
+      }), this.renderAddress());
+    }
+  }]);
+
+  return AddressFormSummary;
+}(external_react_["PureComponent"]);
+
+address_form_summary_AddressFormSummary.propTypes = {
   addressLine1: prop_types_default.a.string,
   city: prop_types_default.a.string,
   firstName: prop_types_default.a.string,
   lastName: prop_types_default.a.string,
   onClick: prop_types_default.a.func,
   postcode: prop_types_default.a.string,
-  showEditButton: prop_types_default.a.bool
+  showEditButton: prop_types_default.a.bool,
+  headerTitle: prop_types_default.a.string.isRequired
 };
-/* harmony default export */ var address_form_summary = (AddressFormSummary);
+/* harmony default export */ var address_form_summary = (address_form_summary_AddressFormSummary);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart.js
 // Libraries
 
@@ -57562,8 +57611,8 @@ function payment_setPrototypeOf(o, p) { payment_setPrototypeOf = Object.setProto
 
 var payment_Payment =
 /*#__PURE__*/
-function (_Component) {
-  payment_inherits(Payment, _Component);
+function (_PureComponent) {
+  payment_inherits(Payment, _PureComponent);
 
   function Payment(props) {
     var _this;
@@ -57602,12 +57651,13 @@ function (_Component) {
           onShowField = _this$props.onShowField,
           onCardTokenReceived = _this$props.onCardTokenReceived,
           setCardErrors = _this$props.setCardErrors,
-          order = _this$props.order;
+          order = _this$props.order,
+          title = _this$props.title;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
         className: classnames_default()(className, 'o-form c-payment')
       }, external_react_default.a.createElement(this.PaymentHeader, {
-        title: 'Payment & Billing Address'
+        title: title
       }), external_react_default.a.createElement("div", {
         className: "c-payment__section",
         style: {
@@ -57642,7 +57692,7 @@ function (_Component) {
   }]);
 
   return Payment;
-}(external_react_["Component"]);
+}(external_react_["PureComponent"]);
 
 payment_Payment.propTypes = {
   addingNewAddress: prop_types_default.a.bool,
@@ -57666,8 +57716,9 @@ payment_Payment.propTypes = {
   onNewAddress: prop_types_default.a.func,
   onShowField: prop_types_default.a.func,
   onCardTokenReceived: prop_types_default.a.func,
+  order: prop_types_default.a.object,
   setCardErrors: prop_types_default.a.func,
-  order: prop_types_default.a.object
+  title: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var payment = (payment_Payment);
 // CONCATENATED MODULE: ./src/components/checkout/payment-summary.js
@@ -57723,12 +57774,12 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          headerTitle = _this$props.headerTitle,
           onClick = _this$props.onClick,
           showEditButton = _this$props.showEditButton,
-          title = _this$props.title,
           withErrors = _this$props.withErrors;
       return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.PaymentHeader, {
-        title: title,
+        title: headerTitle,
         collapsed: true,
         onClick: onClick,
         showEditButton: showEditButton
@@ -57747,9 +57798,9 @@ function (_PureComponent) {
 
 payment_summary_PaymentSummary.propTypes = {
   billingAddress: prop_types_default.a.object,
+  headerTitle: prop_types_default.a.string.isRequired,
   onClick: prop_types_default.a.func,
   showEditButton: prop_types_default.a.bool,
-  title: prop_types_default.a.string.isRequired,
   withErrors: prop_types_default.a.bool
 };
 /* harmony default export */ var payment_summary = (payment_summary_PaymentSummary);
@@ -57815,16 +57866,16 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          headerTitle = _this$props.headerTitle,
           onClick = _this$props.onClick,
           paymentMethod = _this$props.paymentMethod,
-          showEditButton = _this$props.showEditButton,
-          title = _this$props.title;
+          showEditButton = _this$props.showEditButton;
       return external_react_default.a.createElement("div", {
         className: 'c-payment-method__summary'
       }, external_react_default.a.createElement(this.PaymentMethodHeader, {
         collapsed: true,
         onClick: onClick,
-        title: title,
+        title: headerTitle,
         showEditButton: showEditButton
       }), external_react_default.a.createElement("div", {
         className: 'c-payment-method__summary-information'
@@ -57839,7 +57890,7 @@ payment_method_summary_PaymentMethodSummary.propTypes = {
   onClick: prop_types_default.a.func,
   paymentMethod: prop_types_default.a.string.isRequired,
   showEditButton: prop_types_default.a.bool,
-  title: prop_types_default.a.string.isRequired
+  headerTitle: prop_types_default.a.string.isRequired
 };
 /* harmony default export */ var payment_method_summary = (payment_method_summary_PaymentMethodSummary);
 // CONCATENATED MODULE: ./src/components/checkout/shipping-methods.js
@@ -57872,8 +57923,8 @@ function shipping_methods_setPrototypeOf(o, p) { shipping_methods_setPrototypeOf
 
 var shipping_methods_ShippingMethods =
 /*#__PURE__*/
-function (_Component) {
-  shipping_methods_inherits(ShippingMethods, _Component);
+function (_PureComponent) {
+  shipping_methods_inherits(ShippingMethods, _PureComponent);
 
   function ShippingMethods() {
     var _this;
@@ -57985,12 +58036,14 @@ function (_Component) {
       return external_react_default.a.createElement("div", {
         "aria-label": "Shipping Methods",
         className: classnames_default()(this.props.className, 'o-form c-shipping-method')
-      }, external_react_default.a.createElement(this.ShippingMethodsHeader, null), this.renderForm());
+      }, external_react_default.a.createElement(this.ShippingMethodsHeader, {
+        title: 'Shipping Method'
+      }), this.renderForm());
     }
   }]);
 
   return ShippingMethods;
-}(external_react_["Component"]);
+}(external_react_["PureComponent"]);
 
 shipping_methods_ShippingMethods.propTypes = {
   cartLineItemsCount: prop_types_default.a.number,
@@ -58010,14 +58063,16 @@ shipping_methods_ShippingMethods.propTypes = {
 
 
 function ShippingMethodsSummary(_ref) {
-  var onClick = _ref.onClick,
+  var headerTitle = _ref.headerTitle,
+      onClick = _ref.onClick,
       shippingMethod = _ref.shippingMethod;
   var ShippingMethodsHeader = component_mapping('ShippingMethodsHeader');
   return external_react_default.a.createElement("div", {
     className: "o-form c-shipping-method"
   }, external_react_default.a.createElement(ShippingMethodsHeader, {
     collapsed: true,
-    onClick: onClick
+    onClick: onClick,
+    title: headerTitle
   }), external_react_default.a.createElement("div", {
     className: "o-form__wrapper--collapsed c-shipping-method__summary"
   }, external_react_default.a.createElement("p", {
@@ -58028,6 +58083,7 @@ function ShippingMethodsSummary(_ref) {
 }
 
 ShippingMethodsSummary.propTypes = {
+  headerTitle: prop_types_default.a.string.isRequired,
   onClick: prop_types_default.a.func,
   shippingMethod: prop_types_default.a.object
 };

@@ -6,7 +6,7 @@ exports[`renders the payment header and stripe payment component 1`] = `
   className="dummy-classname o-form c-payment"
 >
   <PaymentHeader
-    title="Payment & Billing Address"
+    title="Payment Details"
   />
   <div
     className="c-payment__section"

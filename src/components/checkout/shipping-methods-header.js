@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-function ShippingMethodsHeader ({ collapsed, onClick }) {
+function ShippingMethodsHeader ({ collapsed, onClick, title }) {
   const Button = componentMapping('Button')
 
   return (
     <div className='o-form__header c-shipping-method__header'>
-      <h2>Your Shipping Method</h2>
+      <h2>{title}</h2>
 
       { collapsed &&
           <Button
@@ -27,7 +27,8 @@ function ShippingMethodsHeader ({ collapsed, onClick }) {
 
 ShippingMethodsHeader.propTypes = {
   collapsed: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  title: PropTypes.string.isRequired
 }
 
 export default ShippingMethodsHeader

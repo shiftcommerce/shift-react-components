@@ -5,13 +5,13 @@ import React from 'react'
 import PaymentSummary from '../../../src/components/checkout/payment-summary'
 
 test("doesn't add errors class when there are no errors", () => {
-  const wrapper = shallow(<PaymentSummary title={'Paymment'} billingAddress={{}} />)
+  const wrapper = shallow(<PaymentSummary headerTitle={'Paymment'} billingAddress={{}} />)
 
   expect(wrapper.find('div')).not.toMatchSelector('.o-form__error')
 })
 
 test('add errors class when errors are present', () => {
-  const wrapper = shallow(<PaymentSummary title={'Paymment'} billingAddress={{}} withErrors={true} />)
+  const wrapper = shallow(<PaymentSummary headerTitle={'Paymment'} billingAddress={{}} withErrors={true} />)
 
   expect(wrapper.find('div')).toMatchSelector('.o-form__error')
 })
