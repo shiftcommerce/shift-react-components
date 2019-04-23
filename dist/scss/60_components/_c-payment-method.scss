@@ -7,7 +7,7 @@
 
   @include breakpoint(desktop) {
     margin-top: $global-spacing-unit-large;
-    border-bottom: 0px;
+    border-bottom: 0;
   }
 
   label {
