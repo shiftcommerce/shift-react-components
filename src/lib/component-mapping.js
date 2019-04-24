@@ -51,6 +51,7 @@ import ProductMenuOptions from '../components/products/listing/product-menu-opti
 import AddressBook from '../components/checkout/address-book'
 import AddressForm from '../components/checkout/address-form'
 import AddressFormHeader from '../components/checkout/address-form-header'
+import CheckoutStepIcon from '../components/checkout/checkout-step-icon'
 import LineItems from '../components/cart/line-items'
 import PaymentIcons from '../components/cart/payment-icons'
 import PaymentMethod from '../components/checkout/payment-method'
@@ -99,6 +100,7 @@ const mapping = {
   Breadcrumb,
   Button,
   Checkbox,
+  CheckoutStepIcon,
   ConditionalLink,
   DropdownSelect,
   Flash,
