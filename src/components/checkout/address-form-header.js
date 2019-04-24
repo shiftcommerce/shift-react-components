@@ -1,11 +1,11 @@
 // Libraries
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class AddressFormHeader extends PureComponent {
+class AddressFormHeader extends Component {
   constructor (props) {
     super(props)
 
