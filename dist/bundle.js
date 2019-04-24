@@ -13641,13 +13641,24 @@ var EXITING = 'exiting';
  * it's used to animate the mounting and unmounting of a component, but can also
  * be used to describe in-place transition states as well.
  *
+ * ---
+ *
+ * **Note**: `Transition` is a platform-agnostic base component. If you're using
+ * transitions in CSS, you'll probably want to use
+ * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
+ * instead. It inherits all the features of `Transition`, but contains
+ * additional features necessary to play nice with CSS transitions (hence the
+ * name of the component).
+ *
+ * ---
+ *
  * By default the `Transition` component does not alter the behavior of the
- * component it renders, it only tracks "enter" and "exit" states for the components.
- * It's up to you to give meaning and effect to those states. For example we can
- * add styles to a component when it enters or exits:
+ * component it renders, it only tracks "enter" and "exit" states for the
+ * components. It's up to you to give meaning and effect to those states. For
+ * example we can add styles to a component when it enters or exits:
  *
  * ```jsx
- * import Transition from 'react-transition-group/Transition';
+ * import { Transition } from 'react-transition-group';
  *
  * const duration = 300;
  *
@@ -13663,7 +13674,7 @@ var EXITING = 'exiting';
  *
  * const Fade = ({ in: inProp }) => (
  *   <Transition in={inProp} timeout={duration}>
- *     {(state) => (
+ *     {state => (
  *       <div style={{
  *         ...defaultStyle,
  *         ...transitionStyles[state]
@@ -13675,60 +13686,43 @@ var EXITING = 'exiting';
  * );
  * ```
  *
- * As noted the `Transition` component doesn't _do_ anything by itself to its child component.
- * What it does do is track transition states over time so you can update the
- * component (such as by adding styles or classes) when it changes states.
- *
  * There are 4 main states a Transition can be in:
  *  - `'entering'`
  *  - `'entered'`
  *  - `'exiting'`
  *  - `'exited'`
  *
- * Transition state is toggled via the `in` prop. When `true` the component begins the
- * "Enter" stage. During this stage, the component will shift from its current transition state,
- * to `'entering'` for the duration of the transition and then to the `'entered'` stage once
- * it's complete. Let's take the following example:
+ * Transition state is toggled via the `in` prop. When `true` the component
+ * begins the "Enter" stage. During this stage, the component will shift from
+ * its current transition state, to `'entering'` for the duration of the
+ * transition and then to the `'entered'` stage once it's complete. Let's take
+ * the following example (we'll use the
+ * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
  *
  * ```jsx
- * state = { in: false };
- *
- * toggleEnterState = () => {
- *   this.setState({ in: true });
- * }
- *
- * render() {
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
  *   return (
  *     <div>
- *       <Transition in={this.state.in} timeout={500} />
- *       <button onClick={this.toggleEnterState}>Click to Enter</button>
+ *       <Transition in={inProp} timeout={500}>
+ *         {state => (
+ *           // ...
+ *         )}
+ *       </Transition>
+ *       <button onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
  *     </div>
  *   );
  * }
  * ```
  *
- * When the button is clicked the component will shift to the `'entering'` state and
- * stay there for 500ms (the value of `timeout`) before it finally switches to `'entered'`.
+ * When the button is clicked the component will shift to the `'entering'` state
+ * and stay there for 500ms (the value of `timeout`) before it finally switches
+ * to `'entered'`.
  *
- * When `in` is `false` the same thing happens except the state moves from `'exiting'` to `'exited'`.
- *
- * ## Timing
- *
- * Timing is often the trickiest part of animation, mistakes can result in slight delays
- * that are hard to pin down. A common example is when you want to add an exit transition,
- * you should set the desired final styles when the state is `'exiting'`. That's when the
- * transition to those styles will start and, if you matched the `timeout` prop with the
- * CSS Transition duration, it will end exactly when the state changes to `'exited'`.
- *
- * > **Note**: For simpler transitions the `Transition` component might be enough, but
- * > take into account that it's platform-agnostic, while the `CSSTransition` component
- * > [forces reflows](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
- * > in order to make more complex transitions more predictable. For example, even though
- * > classes `example-enter` and `example-enter-active` are applied immediately one after
- * > another, you can still transition from one to the other because of the forced reflow
- * > (read [this issue](https://github.com/reactjs/react-transition-group/issues/159#issuecomment-322761171)
- * > for more info). Take this into account when choosing between `Transition` and
- * > `CSSTransition`.
+ * When `in` is `false` the same thing happens except the state moves from
+ * `'exiting'` to `'exited'`.
  */
 
 exports.EXITING = EXITING;
@@ -27739,17 +27733,64 @@ var removeClass = function removeClass(node, classes) {
   });
 };
 /**
- * A `Transition` component using CSS transitions and animations.
- * It's inspired by the excellent [ng-animate](http://www.nganimate.org/) library.
+ * A transition component inspired by the excellent
+ * [ng-animate](http://www.nganimate.org/) library, you should use it if you're
+ * using CSS transitions or animations. It's built upon the
+ * [`Transition`](https://reactcommunity.org/react-transition-group/transition)
+ * component, so it inherits all of its props.
  *
  * `CSSTransition` applies a pair of class names during the `appear`, `enter`,
- * and `exit` stages of the transition. The first class is applied and then a
- * second "active" class in order to activate the css animation. After the animation,
- * matching `done` class names are applied to persist the animation state.
+ * and `exit` states of the transition. The first class is applied and then a
+ * second `*-active` class in order to activate the CSSS transition. After the
+ * transition, matching `*-done` class names are applied to persist the
+ * transition state.
  *
- * When the `in` prop is toggled to `true` the Component will get
- * the `example-enter` CSS class and the `example-enter-active` CSS class
- * added in the next tick. This is a convention based on the `classNames` prop.
+ * ```jsx
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
+ *   return (
+ *     <div>
+ *       <CSSTransition in={inProp} timeout={200} classNames="my-node">
+ *         <div>
+ *           {"I'll receive my-node-* classes"}
+ *         </div>
+ *       </CSSTransition>
+ *       <button type="button" onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
+ *     </div>
+ *   );
+ * }
+ * ```
+ *
+ * When the `in` prop is set to `true`, the child component will first receive
+ * the class `example-enter`, then the `example-enter-active` will be added in
+ * the next tick. `CSSTransition` [forces a
+ * reflow](https://github.com/reactjs/react-transition-group/blob/5007303e729a74be66a21c3e2205e4916821524b/src/CSSTransition.js#L208-L215)
+ * between before adding the `example-enter-active`. This is an important trick
+ * because it allows us to transition between `example-enter` and
+ * `example-enter-active` even though they were added immediately one after
+ * another. Most notably, this is what makes it possible for us to animate
+ * _appearance_.
+ *
+ * ```css
+ * .my-node-enter {
+ *   opacity: 0;
+ * }
+ * .my-node-enter-active {
+ *   opacity: 1;
+ *   transition: opacity 200ms;
+ * }
+ * .my-node-exit {
+ *   opacity: 1;
+ * }
+ * .my-node-exit-active {
+ *   opacity: 0;
+ *   transition: opacity: 200ms;
+ * }
+ * ```
+ *
+ * `*-active` classes represent which styles you want to animate **to**.
  */
 
 
@@ -27792,8 +27833,11 @@ function (_React$Component) {
     };
 
     _this.onEntered = function (node, appearing) {
-      var _this$getClassNames3 = _this.getClassNames('enter'),
-          doneClassName = _this$getClassNames3.doneClassName;
+      var appearClassName = _this.getClassNames('appear').doneClassName;
+
+      var enterClassName = _this.getClassNames('enter').doneClassName;
+
+      var doneClassName = appearing ? appearClassName + " " + enterClassName : enterClassName;
 
       _this.removeClasses(node, appearing ? 'appear' : 'enter');
 
@@ -27805,8 +27849,8 @@ function (_React$Component) {
     };
 
     _this.onExit = function (node) {
-      var _this$getClassNames4 = _this.getClassNames('exit'),
-          className = _this$getClassNames4.className;
+      var _this$getClassNames3 = _this.getClassNames('exit'),
+          className = _this$getClassNames3.className;
 
       _this.removeClasses(node, 'appear');
 
@@ -27820,8 +27864,8 @@ function (_React$Component) {
     };
 
     _this.onExiting = function (node) {
-      var _this$getClassNames5 = _this.getClassNames('exit'),
-          activeClassName = _this$getClassNames5.activeClassName;
+      var _this$getClassNames4 = _this.getClassNames('exit'),
+          activeClassName = _this$getClassNames4.activeClassName;
 
       _this.reflowAndAddClass(node, activeClassName);
 
@@ -27831,8 +27875,8 @@ function (_React$Component) {
     };
 
     _this.onExited = function (node) {
-      var _this$getClassNames6 = _this.getClassNames('exit'),
-          doneClassName = _this$getClassNames6.doneClassName;
+      var _this$getClassNames5 = _this.getClassNames('exit'),
+          doneClassName = _this$getClassNames5.doneClassName;
 
       _this.removeClasses(node, 'exit');
 
@@ -27845,9 +27889,11 @@ function (_React$Component) {
 
     _this.getClassNames = function (type) {
       var classNames = _this.props.classNames;
-      var className = typeof classNames !== 'string' ? classNames[type] : classNames + '-' + type;
-      var activeClassName = typeof classNames !== 'string' ? classNames[type + 'Active'] : className + '-active';
-      var doneClassName = typeof classNames !== 'string' ? classNames[type + 'Done'] : className + '-done';
+      var isStringClassNames = typeof classNames === 'string';
+      var prefix = isStringClassNames && classNames ? classNames + '-' : '';
+      var className = isStringClassNames ? prefix + type : classNames[type];
+      var activeClassName = isStringClassNames ? className + '-active' : classNames[type + 'Active'];
+      var doneClassName = isStringClassNames ? className + '-done' : classNames[type + 'Done'];
       return {
         className: className,
         activeClassName: activeClassName,
@@ -27861,10 +27907,10 @@ function (_React$Component) {
   var _proto = CSSTransition.prototype;
 
   _proto.removeClasses = function removeClasses(node, type) {
-    var _this$getClassNames7 = this.getClassNames(type),
-        className = _this$getClassNames7.className,
-        activeClassName = _this$getClassNames7.activeClassName,
-        doneClassName = _this$getClassNames7.doneClassName;
+    var _this$getClassNames6 = this.getClassNames(type),
+        className = _this$getClassNames6.className,
+        activeClassName = _this$getClassNames6.activeClassName,
+        doneClassName = _this$getClassNames6.doneClassName;
 
     className && removeClass(node, className);
     activeClassName && removeClass(node, activeClassName);
@@ -27900,6 +27946,9 @@ function (_React$Component) {
   return CSSTransition;
 }(_react.default.Component);
 
+CSSTransition.defaultProps = {
+  classNames: ''
+};
 CSSTransition.propTypes =  false ? undefined : {};
 var _default = CSSTransition;
 exports.default = _default;
@@ -45860,6 +45909,24 @@ address_form_header_AddressFormHeader.propTypes = {
   showEditButton: prop_types_default.a.bool
 };
 /* harmony default export */ var address_form_header = (address_form_header_AddressFormHeader);
+// EXTERNAL MODULE: ./src/static/white-check.svg
+var white_check = __webpack_require__(250);
+var white_check_default = /*#__PURE__*/__webpack_require__.n(white_check);
+
+// CONCATENATED MODULE: ./src/components/checkout/checkout-step-icon.js
+// Libraries
+ // Lib
+
+ // Assets
+
+
+/* harmony default export */ var checkout_step_icon = (function () {
+  var Image = component_mapping('Image');
+  return external_react_default.a.createElement(Image, {
+    className: "c-step-indicator__icon",
+    src: white_check_default.a
+  });
+});
 // CONCATENATED MODULE: ./src/components/cart/line-items.js
 function line_items_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { line_items_typeof = function _typeof(obj) { return typeof obj; }; } else { line_items_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return line_items_typeof(obj); }
 
@@ -49472,6 +49539,7 @@ function (_PureComponent) {
 
 
 
+
 /**
  * Order Components
  */
@@ -49509,6 +49577,7 @@ var mapping = {
   Breadcrumb: breadcrumb,
   Button: objects_button,
   Checkbox: objects_checkbox,
+  CheckoutStepIcon: checkout_step_icon,
   ConditionalLink: conditional_link,
   DropdownSelect: dropdown_select,
   Flash: flash,
@@ -53758,6 +53827,9 @@ var isEmptyChildren = function (children) {
 var isPromise = function (value) {
   return formik_esm_isObject(value) && formik_esm_isFunction(value.then);
 };
+var isInputEvent = function (value) {
+  return value && formik_esm_isObject(value) && formik_esm_isObject(value.target);
+};
 function getActiveElement(doc) {
   doc = doc || (typeof document !== 'undefined' ? document : undefined);
 
@@ -53936,21 +54008,21 @@ function (_super) {
     };
 
     _this.handleChange = function (eventOrPath) {
-      var executeChange = function (eventOrTextValue, maybePath) {
+      var executeChange = function (eventOrValue, maybePath) {
         var field = maybePath;
-        var val = eventOrTextValue;
-        var parsed;
+        var value;
 
-        if (!isString(eventOrTextValue)) {
-          if (eventOrTextValue.persist) {
-            eventOrTextValue.persist();
+        if (isInputEvent(eventOrValue)) {
+          var event_1 = eventOrValue;
+
+          if (event_1.persist) {
+            event_1.persist();
           }
 
-          var _a = eventOrTextValue.target,
+          var _a = event_1.target,
               type = _a.type,
               name_1 = _a.name,
               id = _a.id,
-              value = _a.value,
               checked = _a.checked,
               outerHTML = _a.outerHTML;
           field = maybePath ? maybePath : name_1 ? name_1 : id;
@@ -53963,28 +54035,46 @@ function (_super) {
             });
           }
 
-          val = /number|range/.test(type) ? (parsed = parseFloat(value), formik_esm_isNaN(parsed) ? '' : parsed) : /checkbox/.test(type) ? checked : value;
+          value = event_1.target.value;
+
+          if (/number|range/.test(type)) {
+            var parsed = parseFloat(event_1.target.value);
+            value = formik_esm_isNaN(parsed) ? '' : parsed;
+          }
+
+          if (/checkbox/.test(type)) {
+            value = checked;
+          }
+        } else {
+          value = eventOrValue;
         }
 
         if (field) {
           _this.setState(function (prevState) {
             return __assign({}, prevState, {
-              values: setIn(prevState.values, field, val)
+              values: setIn(prevState.values, field, value)
             });
           }, function () {
             if (_this.props.validateOnChange) {
-              _this.runValidations(setIn(_this.state.values, field, val));
+              _this.runValidations(setIn(_this.state.values, field, value));
             }
           });
         }
       };
 
       if (isString(eventOrPath)) {
-        return formik_esm_isFunction(_this.hcCache[eventOrPath]) ? _this.hcCache[eventOrPath] : _this.hcCache[eventOrPath] = function (event) {
-          return executeChange(event, eventOrPath);
-        };
+        var path_1 = eventOrPath;
+
+        if (!formik_esm_isFunction(_this.hcCache[path_1])) {
+          _this.hcCache[path_1] = function (eventOrValue) {
+            return executeChange(eventOrValue, path_1);
+          };
+        }
+
+        return _this.hcCache[path_1];
       } else {
-        executeChange(eventOrPath);
+        var event_2 = eventOrPath;
+        executeChange(event_2);
       }
     };
 
@@ -54049,24 +54139,30 @@ function (_super) {
       _this.props.onSubmit(_this.state.values, _this.getFormikActions());
     };
 
-    _this.handleBlur = function (eventOrString) {
-      var executeBlur = function (e, path) {
-        if (e.persist) {
-          e.persist();
-        }
+    _this.handleBlur = function (eventOrPath) {
+      var executeBlur = function (maybeEvent, maybePath) {
+        var field = maybePath;
 
-        var _a = e.target,
-            name = _a.name,
-            id = _a.id,
-            outerHTML = _a.outerHTML;
-        var field = path ? path : name ? name : id;
+        if (isInputEvent(maybeEvent)) {
+          var event_3 = maybeEvent;
 
-        if (!field && "production" !== 'production') {
-          warnAboutMissingIdentifier({
-            htmlContent: outerHTML,
-            documentationAnchorLink: 'handleblur-e-any--void',
-            handlerName: 'handleBlur'
-          });
+          if (event_3.persist) {
+            event_3.persist();
+          }
+
+          var _a = event_3.target,
+              name_2 = _a.name,
+              id = _a.id,
+              outerHTML = _a.outerHTML;
+          field = name_2 ? name_2 : id;
+
+          if (!field && "production" !== 'production') {
+            warnAboutMissingIdentifier({
+              htmlContent: outerHTML,
+              documentationAnchorLink: 'handleblur-e-reactfocuseventany--void',
+              handlerName: 'handleBlur'
+            });
+          }
         }
 
         _this.setState(function (prevState) {
@@ -54080,12 +54176,19 @@ function (_super) {
         }
       };
 
-      if (isString(eventOrString)) {
-        return formik_esm_isFunction(_this.hbCache[eventOrString]) ? _this.hbCache[eventOrString] : _this.hbCache[eventOrString] = function (event) {
-          return executeBlur(event, eventOrString);
-        };
+      if (isString(eventOrPath)) {
+        var path_2 = eventOrPath;
+
+        if (!formik_esm_isFunction(_this.hbCache[path_2])) {
+          _this.hbCache[path_2] = function (event) {
+            return executeBlur(event, path_2);
+          };
+        }
+
+        return _this.hbCache[path_2];
       } else {
-        executeBlur(eventOrString);
+        var event_4 = eventOrPath;
+        executeBlur(event_4);
       }
     };
 
@@ -57405,25 +57508,19 @@ CheckoutCartTotal.propTypes = {
   total: prop_types_default.a.number.isRequired
 };
 /* harmony default export */ var checkout_cart_total = (CheckoutCartTotal);
-// EXTERNAL MODULE: ./src/static/white-check.svg
-var white_check = __webpack_require__(250);
-var white_check_default = /*#__PURE__*/__webpack_require__.n(white_check);
-
 // CONCATENATED MODULE: ./src/components/checkout/checkout-steps.js
 // Libraries
 
 
  // Lib
 
- // Assets
-
 
 
 function CheckoutSteps(_ref) {
   var currentStep = _ref.currentStep,
       stepActions = _ref.stepActions;
+  var CheckoutStepIcon = component_mapping('CheckoutStepIcon');
   var Link = component_mapping('Link');
-  var Image = component_mapping('Image');
 
   var renderCheckoutSteps = function renderCheckoutSteps() {
     var checkoutSteps = [{
@@ -57461,10 +57558,7 @@ function CheckoutSteps(_ref) {
 
   var renderCheckoutStep = function renderCheckoutStep(step) {
     var stepCompleted = step.position < currentStep;
-    var content = stepCompleted ? external_react_default.a.createElement(Image, {
-      className: "c-step-indicator__icon",
-      src: white_check_default.a
-    }) : step.position;
+    var content = stepCompleted ? external_react_default.a.createElement(CheckoutStepIcon, null) : step.position;
     var active = step.position === currentStep;
 
     if (stepCompleted) {
@@ -57705,7 +57799,9 @@ function (_Component) {
             "aria-label": method.sku
           }, external_react_default.a.createElement("label", {
             htmlFor: method.sku,
-            className: "c-shipping-method__radio"
+            className: classnames_default()('c-shipping-method__radio', {
+              'c-shipping-method__radio--selected': method.id === cartShippingMethod.id
+            })
           }, external_react_default.a.createElement("input", {
             className: "c-shipping-method__radio-input",
             id: "".concat(method.sku, "_").concat(method.id),
@@ -58069,6 +58165,7 @@ function (_Component) {
 /* concated harmony reexport CheckoutCartButtons */__webpack_require__.d(__webpack_exports__, "CheckoutCartButtons", function() { return checkout_cart_buttons; });
 /* concated harmony reexport CheckoutCartTotal */__webpack_require__.d(__webpack_exports__, "CheckoutCartTotal", function() { return checkout_cart_total; });
 /* concated harmony reexport CheckoutSteps */__webpack_require__.d(__webpack_exports__, "CheckoutSteps", function() { return checkout_steps; });
+/* concated harmony reexport CheckoutStepIcon */__webpack_require__.d(__webpack_exports__, "CheckoutStepIcon", function() { return checkout_step_icon; });
 /* concated harmony reexport LineItems */__webpack_require__.d(__webpack_exports__, "LineItems", function() { return line_items; });
 /* concated harmony reexport MiniPlaceOrder */__webpack_require__.d(__webpack_exports__, "MiniPlaceOrder", function() { return mini_place_order; });
 /* concated harmony reexport PaymentIcons */__webpack_require__.d(__webpack_exports__, "PaymentIcons", function() { return payment_icons; });
@@ -58191,6 +58288,7 @@ function (_Component) {
 /**
  * Cart/Checkout Components
  */
+
 
 
 
