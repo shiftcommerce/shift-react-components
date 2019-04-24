@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
       Sort by:
     </h2>
     <AlgoliaSortBy(SortBy)
-      defaultRefinement="test_index"
+      defaultRefinement="test_index_rating_desc"
       items={
         Array [
           Object {

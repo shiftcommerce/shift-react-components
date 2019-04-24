@@ -12,7 +12,8 @@ test('renders correctly', () => {
   const initialProps = {
     toggleFiltering: () => (null),
     filterCount: 3,
-    indexName: 'test_index'
+    indexName: 'test_index_rating_desc',
+    indexNameWithoutDefaultSortOrder: 'test_index'
   }
 
   // Act
