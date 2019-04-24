@@ -29,7 +29,7 @@ class ProductMenuOptions extends PureComponent {
           <h2 className='c-product-listing__menu-options-sort-by-title'>Sort by:</h2>
           <SortBy defaultRefinement={indexName}
             items={[
-              { value: indexName, label: 'Featured' },
+              { value: indexNameWithoutDefaultSortOrder, label: 'Featured' },
               { value: `${indexNameWithoutDefaultSortOrder}_price_asc`, label: 'Price asc.' },
               { value: `${indexNameWithoutDefaultSortOrder}_price_desc`, label: 'Price desc.' },
               { value: `${indexNameWithoutDefaultSortOrder}_created_at_desc`, label: 'Newest' },
