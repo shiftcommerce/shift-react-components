@@ -57885,10 +57885,10 @@ function (_Component) {
 
       if (loggedIn) {
         return external_react_default.a.createElement("div", {
-          className: classnames_default()('c-header__dropdown-wrapper', addShowClass)
-        }, external_react_default.a.createElement("div", {
-          className: classnames_default()('c-header__account-dropdown', addShowClass),
+          className: classnames_default()('c-header__dropdown-wrapper', addShowClass),
           onMouseLeave: this.props.toggleDropDown
+        }, external_react_default.a.createElement("div", {
+          className: classnames_default()('c-header__account-dropdown', addShowClass)
         }, external_react_default.a.createElement("div", {
           className: "c-header__callout"
         }), external_react_default.a.createElement(this.Link, {

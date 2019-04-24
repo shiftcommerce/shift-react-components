@@ -82,7 +82,7 @@
   top: -10px;
 
   @include breakpoint(desktop) {
-    left: $global-spacing-unit-large;
+    left: 160px;
   }
 }
 
