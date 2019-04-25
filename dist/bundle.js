@@ -2371,7 +2371,7 @@ var keys = __webpack_require__(23);
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 
 // EXTERNAL MODULE: ./node_modules/lodash/difference.js
-var difference = __webpack_require__(242);
+var difference = __webpack_require__(243);
 var difference_default = /*#__PURE__*/__webpack_require__.n(difference);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectConfigure.js
@@ -9472,7 +9472,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
-/* harmony import */ var _stubFalse_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(248);
+/* harmony import */ var _stubFalse_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(249);
 
 
 
@@ -27124,6 +27124,12 @@ exports.Thumbs = _Thumbs2.default;
 
 /***/ }),
 /* 242 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj4KPHBhdGggZmlsbD0iI0ZGRiIgZD0ibTcuNyw0MDQuNmMwLDAgMTE1LjIsMTI5LjcgMTM4LjIsMTgyLjY4bDk5LDBjNDEuNS0xMjYuNyAyMDIuNy00MjkuMSAzNDAuOTItNTM1LjFjMjguNi0zNi44LTQzLjMtNTItMTAxLjM1LTI3LjYyLTg3LjUsMzYuNy0yNTIuNSwzMTcuMi0yODMuMywzODQuNjQtNDMuNywxMS41LTg5LjgtNzMuNy04OS44NC03My43eiIvPgo8L3N2Zz4g"
+
+/***/ }),
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseDifference = __webpack_require__(422),
@@ -27162,7 +27168,7 @@ module.exports = difference;
 
 
 /***/ }),
-/* 243 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27226,25 +27232,25 @@ module.exports = exports['default'];
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2OCA2OCI+PGNpcmNsZSBjeD0iMzQiIGN5PSIzNCIgcj0iMzQiIGZpbGw9IiMzYzViOTYiLz48cGF0aCBkPSJNMzYuMiA0OC4xOVYzNS4yNGg0LjM0bC42NS01LjA0SDM2LjJ2LTMuMjJjMC0xLjQ2LjQxLTIuNDYgMi41LTIuNDZoMi42N3YtNC41MWMtLjQ2LS4wNi0yLjA1LS4yLTMuODktLjItMy44NSAwLTYuNDkgMi4zNS02LjQ5IDYuNjd2My43MmgtNC4zNnY1LjA0aDQuMzZ2MTIuOTRoNS4yMXoiIGZpbGw9IiNmZmYiLz48L3N2Zz4K"
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNjggNjgiPjxzdHlsZT4uc3Qxe2ZpbGw6I2ZmZn08L3N0eWxlPjxjaXJjbGUgY3g9IjM0IiBjeT0iMzQiIHI9IjM0IiBmaWxsPSIjOWUzOWNkIi8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTM0IDIyLjM5YzMuNzggMCA0LjIzLjAxIDUuNzIuMDggMS4zOC4wNiAyLjEzLjI5IDIuNjMuNDkuNjYuMjYgMS4xMy41NiAxLjYzIDEuMDZzLjguOTcgMS4wNiAxLjYzYy4xOS41LjQyIDEuMjUuNDkgMi42My4wNyAxLjQ5LjA4IDEuOTQuMDggNS43MnMtLjAxIDQuMjMtLjA4IDUuNzJjLS4wNiAxLjM4LS4yOSAyLjEzLS40OSAyLjYzLS4yNi42Ni0uNTYgMS4xMy0xLjA2IDEuNjNzLS45Ny44LTEuNjMgMS4wNmMtLjUuMTktMS4yNS40Mi0yLjYzLjQ5LTEuNDkuMDctMS45NC4wOC01LjcyLjA4cy00LjIzLS4wMS01LjcyLS4wOGMtMS4zOC0uMDYtMi4xMy0uMjktMi42My0uNDktLjY2LS4yNi0xLjEzLS41Ni0xLjYzLTEuMDZzLS44LS45Ny0xLjA2LTEuNjNjLS4xOS0uNS0uNDItMS4yNS0uNDktMi42My0uMDctMS40OS0uMDgtMS45NC0uMDgtNS43MnMuMDEtNC4yMy4wOC01LjcyYy4wNi0xLjM4LjI5LTIuMTMuNDktMi42My4yNi0uNjYuNTYtMS4xMyAxLjA2LTEuNjNzLjk3LS44IDEuNjMtMS4wNmMuNS0uMTkgMS4yNS0uNDIgMi42My0uNDkgMS40OS0uMDcgMS45NC0uMDggNS43Mi0uMDhtMC0yLjU1Yy0zLjg1IDAtNC4zMy4wMi01Ljg0LjA5LTEuNTEuMDctMi41NC4zMS0zLjQ0LjY2LS45My4zNi0xLjcyLjg1LTIuNTEgMS42M2E2LjkxIDYuOTEgMCAwIDAtMS42MyAyLjUxYy0uMzUuOS0uNTkgMS45My0uNjYgMy40NC0uMDcgMS41MS0uMDkgMS45OS0uMDkgNS44NCAwIDMuODUuMDIgNC4zMy4wOSA1Ljg0LjA3IDEuNTEuMzEgMi41NC42NiAzLjQ0LjM2LjkzLjg1IDEuNzIgMS42MyAyLjUxYTYuOTEgNi45MSAwIDAgMCAyLjUxIDEuNjNjLjkuMzUgMS45My41OSAzLjQ0LjY2IDEuNTEuMDcgMS45OS4wOSA1Ljg0LjA5czQuMzMtLjAyIDUuODQtLjA5YzEuNTEtLjA3IDIuNTQtLjMxIDMuNDQtLjY2LjkzLS4zNiAxLjcyLS44NSAyLjUxLTEuNjNhNi45MSA2LjkxIDAgMCAwIDEuNjMtMi41MWMuMzUtLjkuNTktMS45My42Ni0zLjQ0LjA3LTEuNTEuMDktMS45OS4wOS01Ljg0cy0uMDItNC4zMy0uMDktNS44NGMtLjA3LTEuNTEtLjMxLTIuNTQtLjY2LTMuNDQtLjM2LS45My0uODUtMS43Mi0xLjYzLTIuNTFhNi45MSA2LjkxIDAgMCAwLTIuNTEtMS42M2MtLjktLjM1LTEuOTMtLjU5LTMuNDQtLjY2LTEuNTEtLjA4LTEuOTktLjA5LTUuODQtLjA5eiIvPjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zNCAyNi43M2MtNC4wMiAwLTcuMjcgMy4yNi03LjI3IDcuMjdzMy4yNiA3LjI3IDcuMjcgNy4yNyA3LjI3LTMuMjYgNy4yNy03LjI3LTMuMjUtNy4yNy03LjI3LTcuMjd6bTAgMTEuOTljLTIuNjEgMC00LjcyLTIuMTEtNC43Mi00LjcyczIuMTEtNC43MiA0LjcyLTQuNzIgNC43MiAyLjExIDQuNzIgNC43Mi0yLjExIDQuNzItNC43MiA0LjcyeiIvPjxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjQxLjU2IiBjeT0iMjYuNDQiIHI9IjEuNyIvPjwvc3ZnPg=="
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2OCA2OCI+PGNpcmNsZSBjeD0iMzQiIGN5PSIzNCIgcj0iMzQiIGZpbGw9IiMyYmEzZWYiLz48cGF0aCBkPSJNMjguMjkgNDYuNWMxMS42IDAgMTcuOTUtOS42MiAxNy45NS0xNy45NSAwLS4yNyAwLS41NC0uMDEtLjgxIDEuMjMtLjg5IDIuMy0yIDMuMTUtMy4yNy0xLjEzLjUtMi4zNS44NC0zLjYzIDFhNi4zNiA2LjM2IDAgMCAwIDIuNzgtMy40OWMtMS4yMi43My0yLjU3IDEuMjQtNC4wMSAxLjUzYTYuMjYyIDYuMjYyIDAgMCAwLTQuNi0xLjk5Yy0zLjQ4IDAtNi4zMSAyLjgzLTYuMzEgNi4zMSAwIC40OS4wNi45Ny4xNiAxLjQ0LTUuMjQtLjI3LTkuODktMi43OC0xMy02LjU5YTYuMzI2IDYuMzI2IDAgMCAwIDEuOTUgOC40MmMtMS4wMy0uMDQtMi0uMzItMi44Ny0uNzl2LjA5YzAgMy4wNSAyLjE4IDUuNjEgNS4wNiA2LjE5LS41My4xNS0xLjA4LjIyLTEuNjYuMjItLjQxIDAtLjgtLjA0LTEuMTgtLjExLjggMi41MSAzLjE0IDQuMzMgNS44OSA0LjM4LTIuMTYgMS43LTQuODggMi43MS03Ljg0IDIuNzEtLjUgMC0xLjAxLS4wMi0xLjUtLjA5IDIuOCAxLjc1IDYuMTIgMi44IDkuNjcgMi44IiBmaWxsPSIjZmZmIi8+PC9zdmc+Cg=="
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27266,7 +27272,7 @@ exports.default = _react2.default.createContext || _implementation2.default;
 module.exports = exports['default'];
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27291,7 +27297,7 @@ function stubFalse() {
 
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27333,12 +27339,6 @@ function cloneBuffer(buffer, isDeep) {
 /* harmony default export */ __webpack_exports__["a"] = (cloneBuffer);
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(136)(module)))
-
-/***/ }),
-/* 250 */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIj4KPHBhdGggZmlsbD0iI0ZGRiIgZD0ibTcuNyw0MDQuNmMwLDAgMTE1LjIsMTI5LjcgMTM4LjIsMTgyLjY4bDk5LDBjNDEuNS0xMjYuNyAyMDIuNy00MjkuMSAzNDAuOTItNTM1LjFjMjguNi0zNi44LTQzLjMtNTItMTAxLjM1LTI3LjYyLTg3LjUsMzYuNy0yNTIuNSwzMTcuMi0yODMuMywzODQuNjQtNDMuNywxMS41LTg5LjgtNzMuNy04OS44NC03My43eiIvPgo8L3N2Zz4g"
 
 /***/ }),
 /* 251 */
@@ -45910,7 +45910,7 @@ address_form_header_AddressFormHeader.propTypes = {
 };
 /* harmony default export */ var address_form_header = (address_form_header_AddressFormHeader);
 // EXTERNAL MODULE: ./src/static/white-check.svg
-var white_check = __webpack_require__(250);
+var white_check = __webpack_require__(242);
 var white_check_default = /*#__PURE__*/__webpack_require__.n(white_check);
 
 // CONCATENATED MODULE: ./src/components/checkout/checkout-step-icon.js
@@ -48931,7 +48931,7 @@ var SearchRefinements = Object(connectors["connectCurrentRefinements"])(function
 });
 /* harmony default export */ var search_refinements = (SearchRefinements);
 // EXTERNAL MODULE: ./node_modules/react-input-range/lib/js/index.js
-var js = __webpack_require__(243);
+var js = __webpack_require__(244);
 var js_default = /*#__PURE__*/__webpack_require__.n(js);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/connectors/connectRange.js
@@ -49198,15 +49198,15 @@ function (_Component) {
 
 /* harmony default export */ var error_details = (error_details_StaticPageErrorDetails);
 // EXTERNAL MODULE: ./src/static/facebook.svg
-var facebook = __webpack_require__(244);
+var facebook = __webpack_require__(245);
 var facebook_default = /*#__PURE__*/__webpack_require__.n(facebook);
 
 // EXTERNAL MODULE: ./src/static/instagram.svg
-var instagram = __webpack_require__(245);
+var instagram = __webpack_require__(246);
 var instagram_default = /*#__PURE__*/__webpack_require__.n(instagram);
 
 // EXTERNAL MODULE: ./src/static/twitter.svg
-var twitter = __webpack_require__(246);
+var twitter = __webpack_require__(247);
 var twitter_default = /*#__PURE__*/__webpack_require__.n(twitter);
 
 // CONCATENATED MODULE: ./src/components/layout/footer.js
@@ -50662,7 +50662,7 @@ var hoist_non_react_statics_cjs = __webpack_require__(143);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // EXTERNAL MODULE: ./node_modules/create-react-context/lib/index.js
-var create_react_context_lib = __webpack_require__(247);
+var create_react_context_lib = __webpack_require__(248);
 var create_react_context_lib_default = /*#__PURE__*/__webpack_require__.n(create_react_context_lib);
 
 // CONCATENATED MODULE: ./node_modules/lodash-es/_listCacheClear.js
@@ -52467,7 +52467,7 @@ function baseAssignIn(object, source) {
 /* harmony default export */ var _baseAssignIn = (baseAssignIn);
 
 // EXTERNAL MODULE: ./node_modules/lodash-es/_cloneBuffer.js
-var _cloneBuffer = __webpack_require__(249);
+var _cloneBuffer = __webpack_require__(250);
 
 // CONCATENATED MODULE: ./node_modules/lodash-es/_copyArray.js
 /**
@@ -56830,12 +56830,12 @@ function (_Component) {
         className: "u-sticky"
       }, external_react_default.a.createElement("div", null, external_react_default.a.createElement("dl", {
         "aria-label": "Order subtotal"
-      }, external_react_default.a.createElement("dt", null, "Total products:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.sub_total))), external_react_default.a.createElement("dl", {
+      }, external_react_default.a.createElement("dt", null, "Total products:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.total_inc_tax - order.shipping_total))), external_react_default.a.createElement("dl", {
         "aria-label": "Order shipping costs"
       }, external_react_default.a.createElement("dt", null, "Shipping costs:"), external_react_default.a.createElement("dd", null, "\xA3", order.shipping_total)), external_react_default.a.createElement("dl", {
         "aria-label": "Order total",
         className: "u-bold"
-      }, external_react_default.a.createElement("dt", null, "TOTAL:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.total))), external_react_default.a.createElement("dl", null, external_react_default.a.createElement("dt", null, "* Including VAT")))));
+      }, external_react_default.a.createElement("dt", null, "TOTAL:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.total_inc_tax))), external_react_default.a.createElement("dl", null, external_react_default.a.createElement("dt", null, "* Including VAT")))));
     }
   }, {
     key: "render",
@@ -56849,7 +56849,7 @@ function (_Component) {
         className: "c-order__summary-header-title"
       }, external_react_default.a.createElement("h2", null, "Your Order")), external_react_default.a.createElement("div", {
         className: "c-order__summary-header-total"
-      }, external_react_default.a.createElement("h2", null, "\xA3", decimalPrice(order.total)))), this.renderLineItems(order), external_react_default.a.createElement("div", {
+      }, external_react_default.a.createElement("h2", null, "\xA3", decimalPrice(order.total_inc_tax)))), this.renderLineItems(order), external_react_default.a.createElement("div", {
         className: "c-order__summary-totals"
       }, this.renderOrderTotals(order)));
     }
