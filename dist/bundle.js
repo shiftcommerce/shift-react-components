@@ -45904,8 +45904,8 @@ function address_form_header_setPrototypeOf(o, p) { address_form_header_setProto
 
 var address_form_header_AddressFormHeader =
 /*#__PURE__*/
-function (_PureComponent) {
-  address_form_header_inherits(AddressFormHeader, _PureComponent);
+function (_Component) {
+  address_form_header_inherits(AddressFormHeader, _Component);
 
   function AddressFormHeader(props) {
     var _this;
@@ -45939,7 +45939,7 @@ function (_PureComponent) {
   }]);
 
   return AddressFormHeader;
-}(external_react_["PureComponent"]);
+}(external_react_["Component"]);
 
 address_form_header_AddressFormHeader.propTypes = {
   collapsed: prop_types_default.a.bool,
