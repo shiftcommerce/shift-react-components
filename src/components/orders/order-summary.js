@@ -107,7 +107,7 @@ class OrderSummary extends Component {
           <div>
             <dl aria-label='Order subtotal'>
               <dt>Total products:</dt>
-              <dd>&pound;{ decimalPrice(order.sub_total) }</dd>
+              <dd>&pound;{ decimalPrice(order.total_inc_tax - order.shipping_total) }</dd>
             </dl>
             <dl aria-label='Order shipping costs'>
               <dt>Shipping costs:</dt>
@@ -115,7 +115,7 @@ class OrderSummary extends Component {
             </dl>
             <dl aria-label='Order total' className='u-bold'>
               <dt>TOTAL:</dt>
-              <dd>&pound;{ decimalPrice(order.total) }</dd>
+              <dd>&pound;{ decimalPrice(order.total_inc_tax) }</dd>
             </dl>
             <dl>
               <dt>* Including VAT</dt>
@@ -137,7 +137,7 @@ class OrderSummary extends Component {
           </div>
 
           <div className='c-order__summary-header-total'>
-            <h2>&pound;{ decimalPrice(order.total) }</h2>
+            <h2>&pound;{ decimalPrice(order.total_inc_tax) }</h2>
           </div>
         </div>
 

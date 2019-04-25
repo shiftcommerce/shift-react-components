@@ -56764,12 +56764,12 @@ function (_Component) {
         className: "u-sticky"
       }, external_react_default.a.createElement("div", null, external_react_default.a.createElement("dl", {
         "aria-label": "Order subtotal"
-      }, external_react_default.a.createElement("dt", null, "Total products:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.sub_total))), external_react_default.a.createElement("dl", {
+      }, external_react_default.a.createElement("dt", null, "Total products:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.total_inc_tax - order.shipping_total))), external_react_default.a.createElement("dl", {
         "aria-label": "Order shipping costs"
       }, external_react_default.a.createElement("dt", null, "Shipping costs:"), external_react_default.a.createElement("dd", null, "\xA3", order.shipping_total)), external_react_default.a.createElement("dl", {
         "aria-label": "Order total",
         className: "u-bold"
-      }, external_react_default.a.createElement("dt", null, "TOTAL:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.total))), external_react_default.a.createElement("dl", null, external_react_default.a.createElement("dt", null, "* Including VAT")))));
+      }, external_react_default.a.createElement("dt", null, "TOTAL:"), external_react_default.a.createElement("dd", null, "\xA3", decimalPrice(order.total_inc_tax))), external_react_default.a.createElement("dl", null, external_react_default.a.createElement("dt", null, "* Including VAT")))));
     }
   }, {
     key: "render",
@@ -56783,7 +56783,7 @@ function (_Component) {
         className: "c-order__summary-header-title"
       }, external_react_default.a.createElement("h2", null, "Your Order")), external_react_default.a.createElement("div", {
         className: "c-order__summary-header-total"
-      }, external_react_default.a.createElement("h2", null, "\xA3", decimalPrice(order.total)))), this.renderLineItems(order), external_react_default.a.createElement("div", {
+      }, external_react_default.a.createElement("h2", null, "\xA3", decimalPrice(order.total_inc_tax)))), this.renderLineItems(order), external_react_default.a.createElement("div", {
         className: "c-order__summary-totals"
       }, this.renderOrderTotals(order)));
     }

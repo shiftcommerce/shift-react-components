@@ -140,7 +140,7 @@ exports[`renders correctly 1`] = `
       "sub_total": 106.81,
       "tax": 0,
       "test": true,
-      "total": 110.26,
+      "total_inc_tax": 110.26,
     }
   }
 >
