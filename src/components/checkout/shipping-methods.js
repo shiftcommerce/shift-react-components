@@ -70,7 +70,7 @@ class ShippingMethods extends Component {
             onClick={() => handleSetShippingMethod(method)}
             aria-label={method.sku}
           >
-            <label htmlFor={method.sku} className='c-shipping-method__radio'>
+            <label htmlFor={method.sku} className={classNames('c-shipping-method__radio', { 'c-shipping-method__radio--selected': (method.id === cartShippingMethod.id) })}>
               <input className='c-shipping-method__radio-input' id={`${method.sku}_${method.id}`} value={method.sku} type='radio'
                 name='shipping_method'
                 checked={method.id === cartShippingMethod.id} onChange={() => handleSetShippingMethod(method)} />
