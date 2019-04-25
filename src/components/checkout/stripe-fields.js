@@ -25,8 +25,6 @@ class StripeFields extends Component {
     if (!prevProps.cardTokenRequested && this.props.cardTokenRequested) {
       const billingAddress = this.props.billingAddress
 
-      console.log('calling stripe')
-
       this.props.stripe.createToken({
         name: `${billingAddress.first_name} ${billingAddress.last_name}`,
         address_city: billingAddress.city,
