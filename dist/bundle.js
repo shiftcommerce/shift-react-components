@@ -46519,7 +46519,6 @@ function (_Component) {
 
       if (!prevProps.cardTokenRequested && this.props.cardTokenRequested) {
         var billingAddress = this.props.billingAddress;
-        console.log('calling stripe');
         this.props.stripe.createToken({
           name: "".concat(billingAddress.first_name, " ").concat(billingAddress.last_name),
           address_city: billingAddress.city,
