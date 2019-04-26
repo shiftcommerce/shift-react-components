@@ -1,22 +1,37 @@
 // Libraries
-import React from 'react'
-import componentMapping from '../../lib/component-mapping'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-function PaymentHeader ({ collapsed, onClick, showEditButton, title }) {
-  const Button = componentMapping('Button')
-  return (
-    <div className='o-form__header  c-payment__header'>
-      <h2>{ title }</h2>
-      { collapsed && showEditButton && <Button
-        aria-label='Edit your payment method'
-        className='o-button-edit'
-        label='Edit'
-        status='secondary'
-        onClick={onClick}
-      /> }
-    </div>
-  )
+// Lib
+import componentMapping from '../../lib/component-mapping'
+
+class PaymentHeader extends PureComponent {
+  constructor (props) {
+    super(props)
+    this.Button = componentMapping('Button')
+  }
+
+  render () {
+    const {
+      collapsed,
+      onClick,
+      showEditButton,
+      title
+    } = this.props
+
+    return (
+      <div className='o-form__header  c-payment__header'>
+        <h2>{ title }</h2>
+        { collapsed && showEditButton && <this.Button
+          aria-label='Edit your payment method'
+          className='o-button-edit'
+          label='Edit'
+          status='secondary'
+          onClick={onClick}
+        /> }
+      </div>
+    )
+  }
 }
 
 PaymentHeader.propTypes = {

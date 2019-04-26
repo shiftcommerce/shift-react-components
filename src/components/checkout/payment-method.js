@@ -53,10 +53,10 @@ class PaymentMethod extends PureComponent {
 }
 
 PaymentMethod.propTypes = {
+  handleSetPaymentMethod: PropTypes.func,
   nextSection: PropTypes.func,
   paypalCreateOrder: PropTypes.func,
-  paypalOnApprove: PropTypes.func,
-  handleSetPaymentMethod: PropTypes.func
+  paypalOnApprove: PropTypes.func
 }
 
 export default PaymentMethod
