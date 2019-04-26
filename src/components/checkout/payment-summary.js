@@ -10,6 +10,7 @@ class PaymentSummary extends PureComponent {
   constructor (props) {
     super(props)
 
+    this.Flash = componentMapping('Flash')
     this.PaymentHeader = componentMapping('PaymentHeader')
   }
 
@@ -25,7 +26,7 @@ class PaymentSummary extends PureComponent {
   }
 
   render () {
-    const { headerTitle, onClick, showEditButton, withErrors } = this.props
+    const { errorMessage, headerTitle, onClick, showEditButton, withErrors } = this.props
     return (
       <>
         <this.PaymentHeader
@@ -35,6 +36,7 @@ class PaymentSummary extends PureComponent {
           showEditButton={showEditButton}
         />
         <div className={classNames('c-payment__summary', { 'o-form__error': withErrors })}>
+         { errorMessage && <this.Flash text={errorMessage} modifier={'error'}/> }
           <p>
             <span className='u-bold'>Billing Address: </span>
             { this.renderBillingAddress() }
@@ -47,6 +49,7 @@ class PaymentSummary extends PureComponent {
 
 PaymentSummary.propTypes = {
   billingAddress: PropTypes.object,
+  errorMessage: PropTypes.string,
   headerTitle: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   showEditButton: PropTypes.bool,

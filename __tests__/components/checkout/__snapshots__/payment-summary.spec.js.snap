@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders error messages 1`] = `
+<Fragment>
+  <PaymentHeader
+    collapsed={true}
+    title="Payment Details"
+  />
+  <div
+    className="c-payment__summary"
+  >
+    <_default
+      modifier="error"
+      text="Something went wrong"
+    />
+    <p>
+      <span
+        className="u-bold"
+      >
+        Billing Address: 
+      </span>
+      <span
+        className="u-bold"
+      >
+         
+         
+      </span>
+      <span>
+        , 
+        , 
+      </span>
+    </p>
+  </div>
+</Fragment>
+`;

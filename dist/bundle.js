@@ -57848,6 +57848,7 @@ function (_PureComponent) {
     payment_summary_classCallCheck(this, PaymentSummary);
 
     _this = payment_summary_possibleConstructorReturn(this, payment_summary_getPrototypeOf(PaymentSummary).call(this, props));
+    _this.Flash = component_mapping('Flash');
     _this.PaymentHeader = component_mapping('PaymentHeader');
     return _this;
   }
@@ -57864,6 +57865,7 @@ function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          errorMessage = _this$props.errorMessage,
           headerTitle = _this$props.headerTitle,
           onClick = _this$props.onClick,
           showEditButton = _this$props.showEditButton,
@@ -57877,7 +57879,10 @@ function (_PureComponent) {
         className: classnames_default()('c-payment__summary', {
           'o-form__error': withErrors
         })
-      }, external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
+      }, errorMessage && external_react_default.a.createElement(this.Flash, {
+        text: errorMessage,
+        modifier: 'error'
+      }), external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
         className: "u-bold"
       }, "Billing Address: "), this.renderBillingAddress())));
     }
@@ -57888,6 +57893,7 @@ function (_PureComponent) {
 
 payment_summary_PaymentSummary.propTypes = {
   billingAddress: prop_types_default.a.object,
+  errorMessage: prop_types_default.a.string,
   headerTitle: prop_types_default.a.string.isRequired,
   onClick: prop_types_default.a.func,
   showEditButton: prop_types_default.a.bool,
@@ -58018,6 +58024,7 @@ function (_PureComponent) {
 
     _this = shipping_methods_possibleConstructorReturn(this, shipping_methods_getPrototypeOf(ShippingMethods).call(this));
     _this.Button = component_mapping('Button');
+    _this.Flash = component_mapping('Flash');
     _this.ShippingMethodsHeader = component_mapping('ShippingMethodsHeader');
     return _this;
   }
@@ -58116,7 +58123,11 @@ function (_PureComponent) {
   }, {
     key: "render",
     value: function render() {
-      if (!this.props.shippingMethods) {
+      var _this$props3 = this.props,
+          errorMessage = _this$props3.errorMessage,
+          shippingMethods = _this$props3.shippingMethods;
+
+      if (!shippingMethods) {
         return null;
       }
 
@@ -58125,6 +58136,9 @@ function (_PureComponent) {
         className: classnames_default()(this.props.className, 'o-form c-shipping-method')
       }, external_react_default.a.createElement(this.ShippingMethodsHeader, {
         title: 'Shipping Method'
+      }), errorMessage && external_react_default.a.createElement(this.Flash, {
+        text: errorMessage,
+        modifier: 'error'
       }), this.renderForm());
     }
   }]);
@@ -58135,6 +58149,7 @@ function (_PureComponent) {
 shipping_methods_ShippingMethods.propTypes = {
   cartLineItemsCount: prop_types_default.a.number,
   cartShippingMethod: prop_types_default.a.object,
+  errorMessage: prop_types_default.a.string,
   handleFormSubmit: prop_types_default.a.func,
   handleSetShippingMethod: prop_types_default.a.func,
   shippingMethods: prop_types_default.a.array,
