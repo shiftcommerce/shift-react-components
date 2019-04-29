@@ -415,7 +415,7 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
                     data-id="310"
                     label="Quantity"
                     onBlur={[Function]}
-                    onChange={[MockFunction]}
+                    onChange={[Function]}
                     role="listbox"
                     value={1}
                   >
@@ -700,7 +700,7 @@ exports[`Minibag renders when miniBagDisplayed is true 1`] = `
                     data-id="311"
                     label="Quantity"
                     onBlur={[Function]}
-                    onChange={[MockFunction]}
+                    onChange={[Function]}
                     role="listbox"
                     value={1}
                   >
