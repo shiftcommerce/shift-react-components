@@ -43773,7 +43773,10 @@ function (_Component) {
           skipPrompt = _this$props3.skipPrompt,
           skipLabel = _this$props3.skipLabel,
           renderValidationMessage = _this$props3.renderValidationMessage,
-          otherProps = dropdown_select_objectWithoutProperties(_this$props3, ["name", "value", "prompt", "options", "required", "className", "validationMessage", "disabled", "skipPrompt", "skipLabel", "renderValidationMessage"]);
+          formName = _this$props3.formName,
+          onChange = _this$props3.onChange,
+          onBlur = _this$props3.onBlur,
+          otherProps = dropdown_select_objectWithoutProperties(_this$props3, ["name", "value", "prompt", "options", "required", "className", "validationMessage", "disabled", "skipPrompt", "skipLabel", "renderValidationMessage", "formName", "onChange", "onBlur"]);
 
       return external_react_default.a.createElement("select", dropdown_select_extends({
         className: classnames_default()('o-form__input-block o-form__input-field', className, {

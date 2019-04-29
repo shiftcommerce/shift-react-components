@@ -44,7 +44,7 @@ class DropdownSelect extends Component {
   }
 
   renderDropdown () {
-    const { name, value, prompt, options, required, className, validationMessage, disabled, skipPrompt, skipLabel, renderValidationMessage, ...otherProps } = this.props
+    const { name, value, prompt, options, required, className, validationMessage, disabled, skipPrompt, skipLabel, renderValidationMessage, formName, onChange, onBlur, ...otherProps } = this.props
 
     return (
       <select
