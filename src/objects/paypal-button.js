@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-let Buttons;
+// Lib
+import componentMapping from '../lib/component-mapping'
+
+let PayPalButtons;
 
 class PayPalButton extends Component {
   constructor (props) {
@@ -11,6 +14,7 @@ class PayPalButton extends Component {
     this.state = {
       showButton: false
     }
+    this.Button = componentMapping('Button')
   }
 
   componentDidMount () {
@@ -18,7 +22,7 @@ class PayPalButton extends Component {
     // ensure paypal has loaded and required callbacks are present
     if (window.paypal && paypalCreateOrder && paypalOnApprove) {
       // load paypal Buttons
-      Buttons = window.paypal.Buttons.driver('react', { React, ReactDOM })
+      PayPalButtons = window.paypal.Buttons.driver('react', { React, ReactDOM })
       // display PayPal button
       this.setState({ showButton: true })
     }
@@ -26,28 +30,32 @@ class PayPalButton extends Component {
 
   render () {
     const {
+      handleSetPaymentMethod,
       paypalCreateOrder,
       paypalOnApprove,
-      handleSetPaymentMethod
+      mockPayPalApproval,
+      enableTestPayPalButton
     } = this.props
 
     return (
       <>
-        <div id="o-paypal-button-container"></div>
-        { this.state.showButton && <Buttons
+        { this.state.showButton && <PayPalButtons
           createOrder={(data, actions) => paypalCreateOrder(data, actions)}
           onApprove={(data, actions) => paypalOnApprove(data, actions)}
           onClick={() => handleSetPaymentMethod('PayPal')}
         /> }
+        { enableTestPayPalButton && <this.Button label={'Test PayPal Button'} onClick={() => mockPayPalApproval()} /> }
       </>
     )
   }
 }
 
 PayPalButton.propTypes = {
+  handleSetPaymentMethod: PropTypes.func,
+  mockPayPalApproval: PropTypes.func,
   paypalCreateOrder: PropTypes.func,
   paypalOnApprove: PropTypes.func,
-  handleSetPaymentMethod: PropTypes.func
+  enableTestPayPalButton: PropTypes.bool
 }
 
 export default PayPalButton

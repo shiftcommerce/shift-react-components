@@ -44473,8 +44473,10 @@ function paypal_button_setPrototypeOf(o, p) { paypal_button_setPrototypeOf = Obj
 // Libraries
 
 
+ // Lib
 
-var Buttons;
+
+var PayPalButtons;
 
 var paypal_button_PayPalButton =
 /*#__PURE__*/
@@ -44490,6 +44492,7 @@ function (_Component) {
     _this.state = {
       showButton: false
     };
+    _this.Button = component_mapping('Button');
     return _this;
   }
 
@@ -44502,7 +44505,7 @@ function (_Component) {
 
       if (window.paypal && paypalCreateOrder && paypalOnApprove) {
         // load paypal Buttons
-        Buttons = window.paypal.Buttons.driver('react', {
+        PayPalButtons = window.paypal.Buttons.driver('react', {
           React: external_react_default.a,
           ReactDOM: external_react_dom_default.a
         }); // display PayPal button
@@ -44516,12 +44519,12 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
+          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod,
           paypalCreateOrder = _this$props2.paypalCreateOrder,
           paypalOnApprove = _this$props2.paypalOnApprove,
-          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("div", {
-        id: "o-paypal-button-container"
-      }), this.state.showButton && external_react_default.a.createElement(Buttons, {
+          mockPayPalApproval = _this$props2.mockPayPalApproval,
+          enableTestPayPalButton = _this$props2.enableTestPayPalButton;
+      return external_react_default.a.createElement(external_react_default.a.Fragment, null, this.state.showButton && external_react_default.a.createElement(PayPalButtons, {
         createOrder: function createOrder(data, actions) {
           return paypalCreateOrder(data, actions);
         },
@@ -44531,6 +44534,11 @@ function (_Component) {
         onClick: function onClick() {
           return handleSetPaymentMethod('PayPal');
         }
+      }), enableTestPayPalButton && external_react_default.a.createElement(this.Button, {
+        label: 'Test PayPal Button',
+        onClick: function onClick() {
+          return mockPayPalApproval();
+        }
       }));
     }
   }]);
@@ -44539,9 +44547,11 @@ function (_Component) {
 }(external_react_["Component"]);
 
 paypal_button_PayPalButton.propTypes = {
+  handleSetPaymentMethod: prop_types_default.a.func,
+  mockPayPalApproval: prop_types_default.a.func,
   paypalCreateOrder: prop_types_default.a.func,
   paypalOnApprove: prop_types_default.a.func,
-  handleSetPaymentMethod: prop_types_default.a.func
+  enableTestPayPalButton: prop_types_default.a.bool
 };
 /* harmony default export */ var paypal_button = (paypal_button_PayPalButton);
 // CONCATENATED MODULE: ./src/objects/rating.js
@@ -46291,9 +46301,11 @@ function (_PureComponent) {
       var _this2 = this;
 
       var _this$props2 = this.props,
+          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod,
+          mockPayPalApproval = _this$props2.mockPayPalApproval,
           paypalCreateOrder = _this$props2.paypalCreateOrder,
           paypalOnApprove = _this$props2.paypalOnApprove,
-          handleSetPaymentMethod = _this$props2.handleSetPaymentMethod;
+          enableTestPayPalButton = _this$props2.enableTestPayPalButton;
       return external_react_default.a.createElement("div", {
         "aria-label": "Payment method",
         className: "o-form c-payment-method"
@@ -46304,7 +46316,9 @@ function (_PureComponent) {
       }, external_react_default.a.createElement(this.PayPalButton, {
         paypalCreateOrder: paypalCreateOrder,
         paypalOnApprove: paypalOnApprove,
-        handleSetPaymentMethod: handleSetPaymentMethod
+        handleSetPaymentMethod: handleSetPaymentMethod,
+        mockPayPalApproval: mockPayPalApproval,
+        enableTestPayPalButton: enableTestPayPalButton
       }), external_react_default.a.createElement("p", {
         className: "c-payment-method__option-text u-bold"
       }, "OR"), external_react_default.a.createElement(this.Button, {
@@ -46323,9 +46337,11 @@ function (_PureComponent) {
 
 payment_method_PaymentMethod.propTypes = {
   handleSetPaymentMethod: prop_types_default.a.func,
+  mockPayPalApproval: prop_types_default.a.func,
   nextSection: prop_types_default.a.func,
   paypalCreateOrder: prop_types_default.a.func,
-  paypalOnApprove: prop_types_default.a.func
+  paypalOnApprove: prop_types_default.a.func,
+  enableTestPayPalButton: prop_types_default.a.bool
 };
 /* harmony default export */ var payment_method = (payment_method_PaymentMethod);
 // CONCATENATED MODULE: ./src/components/checkout/payment-method-header.js

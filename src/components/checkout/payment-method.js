@@ -25,9 +25,11 @@ class PaymentMethod extends PureComponent {
 
   render () {
     const {
+      handleSetPaymentMethod,
+      mockPayPalApproval,
       paypalCreateOrder,
       paypalOnApprove,
-      handleSetPaymentMethod
+      enableTestPayPalButton
     } = this.props
 
     return (
@@ -38,6 +40,8 @@ class PaymentMethod extends PureComponent {
             paypalCreateOrder={paypalCreateOrder}
             paypalOnApprove={paypalOnApprove}
             handleSetPaymentMethod={handleSetPaymentMethod}
+            mockPayPalApproval={mockPayPalApproval}
+            enableTestPayPalButton={enableTestPayPalButton}
           />
           <p className='c-payment-method__option-text u-bold'>OR</p>
           <this.Button
@@ -54,9 +58,11 @@ class PaymentMethod extends PureComponent {
 
 PaymentMethod.propTypes = {
   handleSetPaymentMethod: PropTypes.func,
+  mockPayPalApproval: PropTypes.func,
   nextSection: PropTypes.func,
   paypalCreateOrder: PropTypes.func,
-  paypalOnApprove: PropTypes.func
+  paypalOnApprove: PropTypes.func,
+  enableTestPayPalButton: PropTypes.bool
 }
 
 export default PaymentMethod
