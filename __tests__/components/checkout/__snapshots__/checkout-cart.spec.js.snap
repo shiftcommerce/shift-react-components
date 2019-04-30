@@ -359,7 +359,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                     className="o-form__input-block o-form__input-field c-line-items__quantity-select"
                     label="Quantity"
                     onBlur={[Function]}
-                    onChange={[MockFunction]}
+                    onChange={[Function]}
                     role="listbox"
                     value={2}
                   >
@@ -648,7 +648,7 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                     className="o-form__input-block o-form__input-field c-line-items__quantity-select"
                     label="Quantity"
                     onBlur={[Function]}
-                    onChange={[MockFunction]}
+                    onChange={[Function]}
                     role="listbox"
                     value={1}
                   >
@@ -1089,7 +1089,7 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
                     className="o-form__input-block o-form__input-field c-line-items__quantity-select"
                     label="Quantity"
                     onBlur={[Function]}
-                    onChange={[MockFunction]}
+                    onChange={[Function]}
                     role="listbox"
                     value={2}
                   >

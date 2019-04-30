@@ -155,10 +155,7 @@ exports[`Renders current step 2 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -291,10 +288,7 @@ exports[`Renders current step 3 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -320,10 +314,7 @@ exports[`Renders current step 3 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -434,10 +425,7 @@ exports[`Renders current step 4 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -463,10 +451,7 @@ exports[`Renders current step 4 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -492,10 +477,7 @@ exports[`Renders current step 4 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -584,10 +566,7 @@ exports[`Renders current step 5 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -613,10 +592,7 @@ exports[`Renders current step 5 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -642,10 +618,7 @@ exports[`Renders current step 5 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
@@ -673,10 +646,7 @@ exports[`Renders current step 5 correctly 1`] = `
               <div
                 className="c-step-indicator__position c-step-indicator__position--completed"
               >
-                <Image
-                  className="c-step-indicator__icon"
-                  src={Object {}}
-                />
+                <_default />
               </div>
               <div
                 className="c-step-indicator__line c-step-indicator__line--completed"
