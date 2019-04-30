@@ -297,7 +297,7 @@ exports[`renders line items correctly, on initial load 1`] = `
                   data-id="311"
                   label="Quantity"
                   onBlur={[Function]}
-                  onChange={[MockFunction]}
+                  onChange={[Function]}
                   role="listbox"
                   value={1}
                 >
@@ -520,7 +520,16 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
   updateQuantity={
     [MockFunction] {
       "calls": Array [
-        Array [],
+        Array [
+          Object {
+            "target": Object {
+              "value": Object {},
+            },
+          },
+          undefined,
+          undefined,
+          Object {},
+        ],
       ],
       "results": Array [
         Object {
@@ -625,7 +634,16 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
             onChange={
               [MockFunction] {
                 "calls": Array [
-                  Array [],
+                  Array [
+                    Object {
+                      "target": Object {
+                        "value": Object {},
+                      },
+                    },
+                    undefined,
+                    undefined,
+                    Object {},
+                  ],
                 ],
                 "results": Array [
                   Object {
@@ -690,7 +708,16 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
               onChange={
                 [MockFunction] {
                   "calls": Array [
-                    Array [],
+                    Array [
+                      Object {
+                        "target": Object {
+                          "value": Object {},
+                        },
+                      },
+                      undefined,
+                      undefined,
+                      Object {},
+                    ],
                   ],
                   "results": Array [
                     Object {
@@ -757,19 +784,7 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
                   data-id="311"
                   label="Quantity"
                   onBlur={[Function]}
-                  onChange={
-                    [MockFunction] {
-                      "calls": Array [
-                        Array [],
-                      ],
-                      "results": Array [
-                        Object {
-                          "type": "return",
-                          "value": undefined,
-                        },
-                      ],
-                    }
-                  }
+                  onChange={[Function]}
                   role="listbox"
                   value={1}
                 >

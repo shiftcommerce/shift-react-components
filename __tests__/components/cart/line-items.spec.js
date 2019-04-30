@@ -114,7 +114,7 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
 
   // assert
   // Below isn't ideal but wrapper.find('select').simulate('change') causes Node to crash for some reason
-  wrapper.find('select').prop('onChange')()
+  wrapper.find('select').prop('onChange')({ target: { value: {} } })
   expect(wrapper).toMatchSnapshot()
   expect(updateQuantity).toHaveBeenCalled()
 })
