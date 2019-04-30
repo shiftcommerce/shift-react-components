@@ -9,11 +9,16 @@ class StripePayment extends Component {
   constructor (props) {
     super(props)
 
+    this.state = {
+      stripeFieldComplete: false
+    }
+
     this.AddressBook = componentMapping('AddressBook')
     this.AddressForm = componentMapping('AddressForm')
     this.Button = componentMapping('Button')
     this.Checkbox = componentMapping('Checkbox')
     this.StripeWrapper = componentMapping('StripeWrapper')
+    this.setStripeFieldComplete = this.setStripeFieldComplete.bind(this)
   }
 
   renderFormSubmitButton () {
@@ -23,13 +28,19 @@ class StripePayment extends Component {
           aria-label='Review Your Order'
           className='c-address-form__button o-button--sml'
           label='Review Your Order'
-          status={(this.props.nextStepAvailable() ? 'positive' : 'disabled')}
+          status={( this.state.stripeFieldComplete ? 'positive' : 'disabled')}
           type='primary'
-          disabled={!this.props.nextStepAvailable()}
+          disabled={!this.state.stripeFieldComplete}
           onClick={() => this.props.nextSection('complete')}
         />
       </div>
     )
+  }
+
+  setStripeFieldComplete (value) {
+    this.setState({
+      stripeFieldComplete: value
+    })
   }
 
   render () {
@@ -62,6 +73,7 @@ class StripePayment extends Component {
               cardTokenRequested={cardTokenRequested}
               onCardTokenReceived={onCardTokenReceived}
               setCardErrors={setCardErrors}
+              setStripeFieldComplete={this.setStripeFieldComplete}
             />
 
             <div className='o-form__input-group'>
