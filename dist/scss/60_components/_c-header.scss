@@ -10,7 +10,6 @@
   text-align: center;
   border-left: 1px solid $background-light-grey;
   font-size: .8rem;
-  
 
   @include breakpoint(mobile-tablet) {
     flex-basis: 30%;
