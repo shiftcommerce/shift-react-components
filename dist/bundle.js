@@ -46022,7 +46022,7 @@ function (_Component) {
     return _this;
   }
   /**
-   * Render the prices and actions block of the line item
+   * Render the line item quantity
    * @param  {Object} lineItem
    * @return {string} - HTML markup for the component
    * @todo extract this out into it's own service class
@@ -46030,18 +46030,26 @@ function (_Component) {
 
 
   line_items_createClass(LineItems, [{
-    key: "renderOptions",
-    value: function renderOptions(lineItem) {
-      return external_react_default.a.createElement(this.DropdownSelect, {
-        className: "c-line-items__quantity-select",
-        "data-id": lineItem.id,
-        label: "Quantity",
-        onChange: this.props.updateQuantity,
-        options: this.renderQuantityOptions(lineItem),
-        skipLabel: true,
-        skipPrompt: true,
-        value: lineItem.unit_quantity
-      });
+    key: "renderLineItemQuantity",
+    value: function renderLineItemQuantity(lineItem) {
+      var updateQuantity = this.props.updateQuantity;
+
+      if (updateQuantity) {
+        return external_react_default.a.createElement(this.DropdownSelect, {
+          className: "c-line-items__quantity-select",
+          "data-id": lineItem.id,
+          label: "Quantity",
+          onChange: this.props.updateQuantity,
+          options: this.renderQuantityOptions(lineItem),
+          skipLabel: true,
+          skipPrompt: true,
+          value: lineItem.unit_quantity
+        });
+      } else {
+        return external_react_default.a.createElement("span", {
+          className: "c-line-items__quantity-amount"
+        }, lineItem.unit_quantity);
+      }
     }
     /**
     * Builds options prop for the DropdownSelect component.  
@@ -46131,7 +46139,7 @@ function (_Component) {
         className: "c-line-items__quantity"
       }, external_react_default.a.createElement("div", {
         className: "c-line-items__quantity-header"
-      }, external_react_default.a.createElement("span", null, "Quantity")), this.renderOptions(lineItem)));
+      }, external_react_default.a.createElement("span", null, "Quantity")), this.renderLineItemQuantity(lineItem)));
     }
     /**
      * Render the line item rows
@@ -57436,8 +57444,8 @@ function CheckoutCart(_ref) {
   }), " will be saved for 48 hours depending on availablility")))), external_react_default.a.createElement(LineItems, {
     deleteItem: deleteItem,
     lineItems: lineItems,
-    lineItemsCount: lineItemsCount,
-    updateQuantity: updateQuantity
+    lineItemsCount: lineItemsCount // updateQuantity={updateQuantity}
+
   }));
 }
 

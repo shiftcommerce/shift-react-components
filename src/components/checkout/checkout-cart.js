@@ -26,7 +26,7 @@ function CheckoutCart ({ deleteItem, lineItems, lineItemsCount, total, updateQua
         deleteItem={deleteItem}
         lineItems={lineItems}
         lineItemsCount={lineItemsCount}
-        updateQuantity={updateQuantity}
+        // updateQuantity={updateQuantity}
       />
     </>
   )

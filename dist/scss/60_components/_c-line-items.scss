@@ -55,14 +55,18 @@
     align-items: center;
   }
 
-    .c-line-items__quantity-header {
-      font-weight: bold;
-    }
+  .c-line-items__quantity-header {
+    font-weight: bold;
+  }
 
-    .c-line-items__quantity-select {
-      flex-grow: 1;
-      margin-left: $global-spacing-unit-small;
-    }
+  .c-line-items__quantity-amount {
+    margin-left: $global-spacing-unit-small;
+  }
+
+  .c-line-items__quantity-select {
+    flex-grow: 1;
+    margin-left: $global-spacing-unit-small;
+  }
 
   .c-line-items__amounts {
     width: 100%;

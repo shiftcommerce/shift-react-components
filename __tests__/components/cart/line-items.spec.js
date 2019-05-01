@@ -1,9 +1,14 @@
 // Libraries
 import React from 'react'
 
+// Components
 import Image from '../../../src/objects/image'
 import LineItems from '../../../src/components/cart/line-items'
 
+// Objects
+import DropdownSelect from '../../../src/objects/dropdown-select'
+
+// Fixtures
 import cartFixture from '../../fixtures/cart'
 
 test('renders line items correctly, on initial load', () => {
@@ -117,4 +122,19 @@ test('trigger updateQuantity function, on change of line item quantity', () => {
   wrapper.find('select').prop('onChange')({ target: { value: {} } })
   expect(wrapper).toMatchSnapshot()
   expect(updateQuantity).toHaveBeenCalled()
+})
+
+test('renders line item quantity if updateQuantity function is not provided', () => {
+  // act
+  const wrapper = mount(
+    <LineItems
+      lineItems={cartFixture.line_items}
+      lineItemsCount={cartFixture.line_items_count}
+    />
+  )
+
+  // assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper).toIncludeText(cartFixture.line_items_count)
+  expect(wrapper.find(DropdownSelect).length).toEqual(0)
 })
