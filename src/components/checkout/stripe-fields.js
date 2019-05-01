@@ -49,7 +49,7 @@ class StripeFields extends Component {
       dataAvailable: Object.assign(this.state.dataAvailable, { [fieldName]: !e.empty })
     })
 
-    e.complete ? this.props.setStripeFieldComplete(true) : this.props.setStripeFieldComplete(false)
+    e.complete ? this.props.setStripeFormComplete(true) : this.props.setStripeFormComplete(false)
 
     this.checkDataValidity()
   }
