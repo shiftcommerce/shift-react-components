@@ -48,6 +48,9 @@ class StripeFields extends Component {
       errors: Object.assign(this.state.errors, { [fieldName]: errorMessage }),
       dataAvailable: Object.assign(this.state.dataAvailable, { [fieldName]: !e.empty })
     })
+
+    e.complete ? this.props.setStripeFormComplete(true) : this.props.setStripeFormComplete(false)
+
     this.checkDataValidity()
   }
 

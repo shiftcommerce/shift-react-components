@@ -46573,6 +46573,7 @@ function (_Component) {
         errors: Object.assign(this.state.errors, stripe_fields_defineProperty({}, fieldName, errorMessage)),
         dataAvailable: Object.assign(this.state.dataAvailable, stripe_fields_defineProperty({}, fieldName, !e.empty))
       });
+      e.complete ? this.props.setStripeFormComplete(true) : this.props.setStripeFormComplete(false);
       this.checkDataValidity();
     }
   }, {
@@ -46632,9 +46633,9 @@ function stripe_payment_createClass(Constructor, protoProps, staticProps) { if (
 
 function stripe_payment_possibleConstructorReturn(self, call) { if (call && (stripe_payment_typeof(call) === "object" || typeof call === "function")) { return call; } return stripe_payment_assertThisInitialized(self); }
 
-function stripe_payment_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function stripe_payment_getPrototypeOf(o) { stripe_payment_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return stripe_payment_getPrototypeOf(o); }
+
+function stripe_payment_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function stripe_payment_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) stripe_payment_setPrototypeOf(subClass, superClass); }
 
@@ -46657,11 +46658,15 @@ function (_Component) {
     stripe_payment_classCallCheck(this, StripePayment);
 
     _this = stripe_payment_possibleConstructorReturn(this, stripe_payment_getPrototypeOf(StripePayment).call(this, props));
+    _this.state = {
+      stripeFormComplete: false
+    };
     _this.AddressBook = component_mapping('AddressBook');
     _this.AddressForm = component_mapping('AddressForm');
     _this.Button = component_mapping('Button');
     _this.Checkbox = component_mapping('Checkbox');
     _this.StripeWrapper = component_mapping('StripeWrapper');
+    _this.setStripeFormComplete = _this.setStripeFormComplete.bind(stripe_payment_assertThisInitialized(_this));
     return _this;
   }
 
@@ -46676,13 +46681,20 @@ function (_Component) {
         "aria-label": "Review Your Order",
         className: "c-address-form__button o-button--sml",
         label: "Review Your Order",
-        status: this.props.nextStepAvailable() ? 'positive' : 'disabled',
+        status: this.state.stripeFormComplete ? 'positive' : 'disabled',
         type: "primary",
-        disabled: !this.props.nextStepAvailable(),
+        disabled: !this.state.stripeFormComplete,
         onClick: function onClick() {
           return _this2.props.nextSection('complete');
         }
       }));
+    }
+  }, {
+    key: "setStripeFormComplete",
+    value: function setStripeFormComplete(value) {
+      this.setState({
+        stripeFormComplete: value
+      });
     }
   }, {
     key: "render",
@@ -46713,7 +46725,8 @@ function (_Component) {
         billingAddress: checkout.billingAddress,
         cardTokenRequested: cardTokenRequested,
         onCardTokenReceived: onCardTokenReceived,
-        setCardErrors: setCardErrors
+        setCardErrors: setCardErrors,
+        setStripeFormComplete: this.setStripeFormComplete
       }), external_react_default.a.createElement("div", {
         className: "o-form__input-group"
       }, external_react_default.a.createElement("label", null, "Billing address *")), external_react_default.a.createElement(this.Checkbox, {
@@ -46829,14 +46842,16 @@ function (_Component) {
           billingAddress = _this$props.billingAddress,
           cardTokenRequested = _this$props.cardTokenRequested,
           onCardTokenReceived = _this$props.onCardTokenReceived,
-          setCardErrors = _this$props.setCardErrors;
+          setCardErrors = _this$props.setCardErrors,
+          setStripeFormComplete = _this$props.setStripeFormComplete;
       return external_react_default.a.createElement(react_stripe_elements_es["StripeProvider"], {
         apiKey: stripeApiKey
       }, external_react_default.a.createElement(react_stripe_elements_es["Elements"], null, external_react_default.a.createElement(this.StripeFields, {
         billingAddress: billingAddress,
         cardTokenRequested: cardTokenRequested,
         onCardTokenReceived: onCardTokenReceived,
-        setCardErrors: setCardErrors
+        setCardErrors: setCardErrors,
+        setStripeFormComplete: setStripeFormComplete
       })));
     }
   }, {
@@ -58297,7 +58312,7 @@ function (_Component) {
       var signedIn = loggedIn ? 'My Account' : 'Sign In';
       return external_react_default.a.createElement("div", {
         className: "c-header__account",
-        onClick: this.props.toggleDropDown
+        onMouseEnter: this.props.toggleDropDown
       }, external_react_default.a.createElement(this.Image, {
         className: "c-header__account-image",
         src: account_icon_default.a
@@ -58317,7 +58332,8 @@ function (_Component) {
         return external_react_default.a.createElement("div", {
           className: classnames_default()('c-header__dropdown-wrapper', addShowClass)
         }, external_react_default.a.createElement("div", {
-          className: classnames_default()('c-header__account-dropdown', addShowClass)
+          className: classnames_default()('c-header__account-dropdown', addShowClass),
+          onMouseLeave: this.props.toggleDropDown
         }, external_react_default.a.createElement("div", {
           className: "c-header__callout"
         }), external_react_default.a.createElement(this.Link, {
