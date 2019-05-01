@@ -19,7 +19,8 @@ class StripeWrapper extends Component {
       billingAddress,
       cardTokenRequested,
       onCardTokenReceived,
-      setCardErrors
+      setCardErrors,
+      setStripeFormComplete
     } = this.props
 
     return (
@@ -30,6 +31,7 @@ class StripeWrapper extends Component {
             cardTokenRequested={cardTokenRequested}
             onCardTokenReceived={onCardTokenReceived}
             setCardErrors={setCardErrors}
+            setStripeFormComplete={setStripeFormComplete}
           />
         </Elements>
       </StripeProvider>
