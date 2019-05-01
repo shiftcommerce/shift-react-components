@@ -23,6 +23,7 @@
     margin-right: $global-spacing-unit-tiny;
     margin-left: $global-spacing-unit-tiny;
     font-size: 1em;
+    position: relative;
   }
 }
 
@@ -40,12 +41,9 @@
 .c-header__account-dropdown {
   display: none;
   position: absolute;
-  top: 117px;
-  background: $background-light-grey;
-  width: 95%;
-  align-items: center;
   flex-direction: column;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+  background: $background-light-grey;
 
   &.show {
     display: flex;
@@ -66,9 +64,9 @@
   }
 
   @include breakpoint(desktop) {
-    top: 75px;
+    top: 51px;
     width: 25%;
-    right: 60px;
+    right: 37%;
   }
 }
 
@@ -82,23 +80,26 @@
   top: -10px;
 
   @include breakpoint(desktop) {
-    left: $global-spacing-unit-large;
+    left: 46%;
   }
 }
 
 .c-header__dropdown-wrapper {
   display: none;
-  position: fixed;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0;
-  left: 0;
+  left: -100vw;
+  right: -100vw;
+  max-width: $global-body-max-width;
+  margin: auto;
   background: transparent;
-  z-index: 1000;
 
-  &.show {
-    display: flex;
-    justify-content: center;
+  @include breakpoint(desktop) {
+    &.show {
+      display: flex;
+    }
   }
 }
 

@@ -46668,7 +46668,7 @@ function (_Component) {
         errors: Object.assign(this.state.errors, stripe_fields_defineProperty({}, fieldName, errorMessage)),
         dataAvailable: Object.assign(this.state.dataAvailable, stripe_fields_defineProperty({}, fieldName, !e.empty))
       });
-      e.complete ? this.props.setStripeFieldComplete(true) : this.props.setStripeFieldComplete(false);
+      e.complete ? this.props.setStripeFormComplete(true) : this.props.setStripeFormComplete(false);
       this.checkDataValidity();
     }
   }, {
@@ -46754,14 +46754,14 @@ function (_Component) {
 
     _this = stripe_payment_possibleConstructorReturn(this, stripe_payment_getPrototypeOf(StripePayment).call(this, props));
     _this.state = {
-      stripeFieldComplete: false
+      stripeFormComplete: false
     };
     _this.AddressBook = component_mapping('AddressBook');
     _this.AddressForm = component_mapping('AddressForm');
     _this.Button = component_mapping('Button');
     _this.Checkbox = component_mapping('Checkbox');
     _this.StripeWrapper = component_mapping('StripeWrapper');
-    _this.setStripeFieldComplete = _this.setStripeFieldComplete.bind(stripe_payment_assertThisInitialized(_this));
+    _this.setStripeFormComplete = _this.setStripeFormComplete.bind(stripe_payment_assertThisInitialized(_this));
     return _this;
   }
 
@@ -46776,19 +46776,19 @@ function (_Component) {
         "aria-label": "Review Your Order",
         className: "c-address-form__button o-button--sml",
         label: "Review Your Order",
-        status: this.state.stripeFieldComplete ? 'positive' : 'disabled',
+        status: this.state.stripeFormComplete ? 'positive' : 'disabled',
         type: "primary",
-        disabled: !this.state.stripeFieldComplete,
+        disabled: !this.state.stripeFormComplete,
         onClick: function onClick() {
           return _this2.props.nextSection('complete');
         }
       }));
     }
   }, {
-    key: "setStripeFieldComplete",
-    value: function setStripeFieldComplete(value) {
+    key: "setStripeFormComplete",
+    value: function setStripeFormComplete(value) {
       this.setState({
-        stripeFieldComplete: value
+        stripeFormComplete: value
       });
     }
   }, {
@@ -46821,7 +46821,7 @@ function (_Component) {
         cardTokenRequested: cardTokenRequested,
         onCardTokenReceived: onCardTokenReceived,
         setCardErrors: setCardErrors,
-        setStripeFieldComplete: this.setStripeFieldComplete
+        setStripeFormComplete: this.setStripeFormComplete
       }), external_react_default.a.createElement("div", {
         className: "o-form__input-group"
       }, external_react_default.a.createElement("label", null, "Billing address *")), external_react_default.a.createElement(this.Checkbox, {
@@ -46938,7 +46938,7 @@ function (_Component) {
           cardTokenRequested = _this$props.cardTokenRequested,
           onCardTokenReceived = _this$props.onCardTokenReceived,
           setCardErrors = _this$props.setCardErrors,
-          setStripeFieldComplete = _this$props.setStripeFieldComplete;
+          setStripeFormComplete = _this$props.setStripeFormComplete;
       return external_react_default.a.createElement(react_stripe_elements_es["StripeProvider"], {
         apiKey: stripeApiKey
       }, external_react_default.a.createElement(react_stripe_elements_es["Elements"], null, external_react_default.a.createElement(this.StripeFields, {
@@ -46946,7 +46946,7 @@ function (_Component) {
         cardTokenRequested: cardTokenRequested,
         onCardTokenReceived: onCardTokenReceived,
         setCardErrors: setCardErrors,
-        setStripeFieldComplete: setStripeFieldComplete
+        setStripeFormComplete: setStripeFormComplete
       })));
     }
   }, {
@@ -58042,7 +58042,7 @@ function (_Component) {
       var signedIn = loggedIn ? 'My Account' : 'Sign In';
       return external_react_default.a.createElement("div", {
         className: "c-header__account",
-        onClick: this.props.toggleDropDown
+        onMouseEnter: this.props.toggleDropDown
       }, external_react_default.a.createElement(this.Image, {
         className: "c-header__account-image",
         src: account_icon_default.a
@@ -58062,7 +58062,8 @@ function (_Component) {
         return external_react_default.a.createElement("div", {
           className: classnames_default()('c-header__dropdown-wrapper', addShowClass)
         }, external_react_default.a.createElement("div", {
-          className: classnames_default()('c-header__account-dropdown', addShowClass)
+          className: classnames_default()('c-header__account-dropdown', addShowClass),
+          onMouseLeave: this.props.toggleDropDown
         }, external_react_default.a.createElement("div", {
           className: "c-header__callout"
         }), external_react_default.a.createElement(this.Link, {
