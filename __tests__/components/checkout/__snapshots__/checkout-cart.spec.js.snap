@@ -42,7 +42,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
   }
   lineItemsCount={3}
   total={25}
-  updateQuantity={[MockFunction]}
 >
   <section
     className="c-checkout-cart__header"
@@ -378,7 +377,6 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
   }
   lineItemsCount={1}
   total={20}
-  updateQuantity={[MockFunction]}
 >
   <section
     className="c-checkout-cart__header"

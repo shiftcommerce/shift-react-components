@@ -57424,8 +57424,7 @@ function CheckoutCart(_ref) {
   var deleteItem = _ref.deleteItem,
       lineItems = _ref.lineItems,
       lineItemsCount = _ref.lineItemsCount,
-      total = _ref.total,
-      updateQuantity = _ref.updateQuantity;
+      total = _ref.total;
   var LineItems = component_mapping('LineItems');
   return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement("section", {
     className: "c-checkout-cart__header"
@@ -57459,8 +57458,7 @@ function CheckoutCart(_ref) {
   }), " will be saved for 48 hours depending on availablility")))), external_react_default.a.createElement(LineItems, {
     deleteItem: deleteItem,
     lineItems: lineItems,
-    lineItemsCount: lineItemsCount // updateQuantity={updateQuantity}
-
+    lineItemsCount: lineItemsCount
   }));
 }
 
@@ -57468,8 +57466,7 @@ CheckoutCart.propTypes = {
   deleteItem: prop_types_default.a.func,
   lineItems: prop_types_default.a.arrayOf(prop_types_default.a.object),
   lineItemsCount: prop_types_default.a.number,
-  total: prop_types_default.a.number,
-  updateQuantity: prop_types_default.a.func
+  total: prop_types_default.a.number
 };
 /* harmony default export */ var checkout_cart = (CheckoutCart);
 // CONCATENATED MODULE: ./src/components/checkout/checkout-cart-buttons.js
