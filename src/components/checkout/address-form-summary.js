@@ -1,5 +1,5 @@
 // Libraries
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Lib
@@ -37,7 +37,7 @@ class AddressFormSummary extends PureComponent {
     } = this.props
 
     return (
-      <>
+      <Fragment>
         <this.AddressFormHeader
           collapsed
           onClick={onClick}
@@ -45,7 +45,7 @@ class AddressFormSummary extends PureComponent {
           title={headerTitle}
         />
         {this.renderAddress()}
-      </>
+      </Fragment>
     )
   }
 }

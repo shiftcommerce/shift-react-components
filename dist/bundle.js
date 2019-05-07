@@ -57388,7 +57388,7 @@ function (_PureComponent) {
           headerTitle = _this$props2.headerTitle,
           onClick = _this$props2.onClick,
           showEditButton = _this$props2.showEditButton;
-      return external_react_default.a.createElement(external_react_default.a.Fragment, null, external_react_default.a.createElement(this.AddressFormHeader, {
+      return external_react_default.a.createElement(external_react_["Fragment"], null, external_react_default.a.createElement(this.AddressFormHeader, {
         collapsed: true,
         onClick: onClick,
         showEditButton: showEditButton,
