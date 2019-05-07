@@ -5,6 +5,10 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
+// Assets
+import payPalIogo from '../../static/payments/pay-pal.svg'
+import creditCardIcon from '../../static/payments/credit-card.svg'
+
 class PaymentMethodSummary extends PureComponent {
   constructor (props) {
     super(props)
@@ -14,11 +18,12 @@ class PaymentMethodSummary extends PureComponent {
   }
 
   renderPaymentMethodInformation (paymentMethod) {
-    if (paymentMethod === 'PayPal') {
-      return <this.Image src='/static/payments/pay-pal.svg' className='c-payment-method__summary-information-card-image' />
-    } else {
-      return <p>{ paymentMethod }</p>
-    }
+    return (
+      <this.Image 
+        src={paymentMethod === 'PayPal' ? payPalIogo : creditCardIcon}
+        className={ paymentMethod === 'PayPal' ? 'c-payment-method__summary-information-pay-pal-image' : 'c-payment-method__summary-information-card-image' }
+      />
+    )
   }
 
   render () {
