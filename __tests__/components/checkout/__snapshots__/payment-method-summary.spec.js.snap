@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the PayPal image and does not render edit button 1`] = `
+<div
+  className="c-payment-method__summary"
+>
+  <PaymentMethodHeader
+    collapsed={true}
+    showEditButton={false}
+    title="test"
+  />
+  <div
+    className="c-payment-method__summary-information"
+  >
+    <Image
+      className="c-payment-method__summary-information-card-image"
+      src="/static/payments/pay-pal.svg"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders the shipping methods summary 1`] = `
+<div
+  className="c-payment-method__summary"
+>
+  <PaymentMethodHeader
+    collapsed={true}
+    showEditButton={true}
+    title="test"
+  />
+  <div
+    className="c-payment-method__summary-information"
+  >
+    <p>
+      credit-card
+    </p>
+  </div>
+</div>
+`;

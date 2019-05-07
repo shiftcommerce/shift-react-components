@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders error messages 1`] = `
+<ShippingMethods
+  cartLineItemsCount={2}
+  cartShippingMethod={
+    Object {
+      "total": 3.45,
+    }
+  }
+  errorMessage="Something went wrong"
+  handleFormSubmit={[MockFunction]}
+  handleSetShippingMethod={[MockFunction]}
+  isThirdPartyPayment={true}
+  shippingMethods={
+    Array [
+      Object {
+        "created_at": "2018-09-24T15:43:27Z",
+        "description": "Click & Collect Next Day - shipping method}",
+        "id": "18",
+        "label": "Click & Collect Next Day",
+        "meta_attributes": Object {
+          "working_days": Object {
+            "data_type": "text",
+            "value": "1",
+          },
+        },
+        "reference": "CCND",
+        "sku": "EXPRESS_3_DAY",
+        "sub_total": 2.08,
+        "tax": 0.42,
+        "tax_rate": 0.2,
+        "total": 2.5,
+        "updated_at": "2018-12-14T10:32:31Z",
+      },
+      Object {
+        "created_at": "2018-09-24T15:43:27Z",
+        "description": "Click & Collect Standard - shipping method}",
+        "id": "19",
+        "label": "Click & Collect Standard",
+        "meta_attributes": Object {
+          "working_days": Object {
+            "data_type": "text",
+            "value": "2",
+          },
+        },
+        "reference": "CCSD",
+        "sku": "EXPRESS_2_DAY",
+        "sub_total": 2,
+        "tax": 0,
+        "tax_rate": 0,
+        "total": 2,
+        "updated_at": "2018-12-14T10:23:49Z",
+      },
+      Object {
+        "created_at": "2018-09-24T15:43:27Z",
+        "description": "Next Day - shipping method}",
+        "id": "20",
+        "label": "Next Day",
+        "meta_attributes": Object {
+          "working_days": Object {
+            "data_type": "text",
+            "value": "1",
+          },
+        },
+        "reference": "NEXT_DAY",
+        "sku": "EXPRESS_1_DAY",
+        "sub_total": 5,
+        "tax": 0,
+        "tax_rate": 0,
+        "total": 5,
+        "updated_at": "2018-12-14T10:24:10Z",
+      },
+      Object {
+        "created_at": "2018-09-24T15:43:27Z",
+        "description": "Standard - shipping method}",
+        "id": "21",
+        "label": "Standard",
+        "meta_attributes": Object {
+          "working_days": Object {
+            "data_type": "text",
+            "value": "2",
+          },
+        },
+        "reference": "STANDARD",
+        "sku": "REGULAR",
+        "sub_total": 1.62,
+        "tax": 0.33,
+        "tax_rate": 0.2,
+        "total": 1.95,
+        "updated_at": "2018-12-14T10:32:01Z",
+      },
+    ]
+  }
+>
+  <div
+    aria-label="Shipping Methods"
+    className="o-form c-shipping-method"
+  >
+    <ShippingMethodsHeader
+      title="Shipping Method"
+    >
+      <div
+        className="o-form__header c-shipping-method__header"
+      >
+        <h2>
+          Shipping Method
+        </h2>
+      </div>
+    </ShippingMethodsHeader>
+    <_default
+      modifier="error"
+      text="Something went wrong"
+    >
+      <div
+        className="o-flash o-flash--error"
+      >
+        Something went wrong
+      </div>
+    </_default>
+    <form
+      className="o-form__wrapper o-form__background c-shipping-method__list"
+    >
+      <div
+        className="c-shipping-method__list-header"
+      >
+        Shipping from ... 
+        <span
+          className="c-shipping-method__list-item-count"
+        >
+          2 items
+        </span>
+      </div>
+      <div>
+        <div
+          aria-label="EXPRESS_3_DAY"
+          className="o-form__input-group c-shipping-method__list-input-group"
+          key="18"
+          onClick={[Function]}
+        >
+          <label
+            className="c-shipping-method__radio"
+            htmlFor="EXPRESS_3_DAY"
+          >
+            <input
+              checked={false}
+              className="c-shipping-method__radio-input"
+              id="EXPRESS_3_DAY_18"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="EXPRESS_3_DAY"
+            />
+            <span
+              className="c-shipping-method__radio-caption"
+            />
+            <span
+              className="c-shipping-method__list-cost"
+            >
+              £
+              2.50
+            </span>
+            <span
+              className="c-shipping-method__list-title"
+            >
+              Click & Collect Next Day
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date-label"
+            >
+              Estimated Delivery: 
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date"
+            >
+              Wednesday 8th May
+            </span>
+          </label>
+        </div>
+        <div
+          aria-label="EXPRESS_2_DAY"
+          className="o-form__input-group c-shipping-method__list-input-group"
+          key="19"
+          onClick={[Function]}
+        >
+          <label
+            className="c-shipping-method__radio"
+            htmlFor="EXPRESS_2_DAY"
+          >
+            <input
+              checked={false}
+              className="c-shipping-method__radio-input"
+              id="EXPRESS_2_DAY_19"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="EXPRESS_2_DAY"
+            />
+            <span
+              className="c-shipping-method__radio-caption"
+            />
+            <span
+              className="c-shipping-method__list-cost"
+            >
+              £
+              2.00
+            </span>
+            <span
+              className="c-shipping-method__list-title"
+            >
+              Click & Collect Standard
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date-label"
+            >
+              Estimated Delivery: 
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date"
+            >
+              Thursday 9th May
+            </span>
+          </label>
+        </div>
+        <div
+          aria-label="EXPRESS_1_DAY"
+          className="o-form__input-group c-shipping-method__list-input-group"
+          key="20"
+          onClick={[Function]}
+        >
+          <label
+            className="c-shipping-method__radio"
+            htmlFor="EXPRESS_1_DAY"
+          >
+            <input
+              checked={false}
+              className="c-shipping-method__radio-input"
+              id="EXPRESS_1_DAY_20"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="EXPRESS_1_DAY"
+            />
+            <span
+              className="c-shipping-method__radio-caption"
+            />
+            <span
+              className="c-shipping-method__list-cost"
+            >
+              £
+              5.00
+            </span>
+            <span
+              className="c-shipping-method__list-title"
+            >
+              Next Day
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date-label"
+            >
+              Estimated Delivery: 
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date"
+            >
+              Wednesday 8th May
+            </span>
+          </label>
+        </div>
+        <div
+          aria-label="REGULAR"
+          className="o-form__input-group c-shipping-method__list-input-group"
+          key="21"
+          onClick={[Function]}
+        >
+          <label
+            className="c-shipping-method__radio"
+            htmlFor="REGULAR"
+          >
+            <input
+              checked={false}
+              className="c-shipping-method__radio-input"
+              id="REGULAR_21"
+              name="shipping_method"
+              onChange={[Function]}
+              type="radio"
+              value="REGULAR"
+            />
+            <span
+              className="c-shipping-method__radio-caption"
+            />
+            <span
+              className="c-shipping-method__list-cost"
+            >
+              £
+              1.95
+            </span>
+            <span
+              className="c-shipping-method__list-title"
+            >
+              Standard
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date-label"
+            >
+              Estimated Delivery: 
+            </span>
+            <span
+              className="c-shipping-method__list-delivery-date"
+            >
+              Thursday 9th May
+            </span>
+          </label>
+        </div>
+      </div>
+      <div
+        className="o-form__input-group"
+      >
+        <Button
+          aria-label="Review Your Order"
+          className="o-button--sml"
+          label="Review Your Order"
+          onClick={[MockFunction]}
+          status="positive"
+          type="submit"
+        >
+          <button
+            aria-label="Review Your Order"
+            className="o-button--sml o-button o-button--positive"
+            disabled={false}
+            onClick={[MockFunction]}
+            role="button"
+            tabIndex="0"
+            type="submit"
+          >
+            Review Your Order
+          </button>
+        </Button>
+      </div>
+    </form>
+  </div>
+</ShippingMethods>
+`;

@@ -5,43 +5,40 @@ import PropTypes from 'prop-types'
 // Lib
 import componentMapping from '../../lib/component-mapping'
 
-class AddressFormHeader extends PureComponent {
+class PaymentHeader extends PureComponent {
   constructor (props) {
     super(props)
-
     this.Button = componentMapping('Button')
   }
 
   render () {
     const {
       collapsed,
-      title,
       onClick,
-      showEditButton
+      showEditButton,
+      title
     } = this.props
 
     return (
-      <div className='o-form__header c-address-form__header'>
-        <div className='o-form__header-title c-address-form__header-title'>
-          <h2>{ title }</h2>
-        </div>
+      <div className='o-form__header  c-payment__header'>
+        <h2>{ title }</h2>
         { collapsed && showEditButton && <this.Button
-            label='Edit'
-            status='secondary'
-            className='o-button-edit'
-            onClick={onClick}
-          />
-        }
+          aria-label='Edit your payment method'
+          className='o-button-edit'
+          label='Edit'
+          status='secondary'
+          onClick={onClick}
+        /> }
       </div>
     )
   }
 }
 
-AddressFormHeader.propTypes = {
+PaymentHeader.propTypes = {
   collapsed: PropTypes.bool,
   onClick: PropTypes.func,
   showEditButton: PropTypes.bool,
   title: PropTypes.string.isRequired
 }
 
-export default AddressFormHeader
+export default PaymentHeader

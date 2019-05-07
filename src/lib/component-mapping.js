@@ -54,9 +54,10 @@ import AddressFormHeader from '../components/checkout/address-form-header'
 import CheckoutStepIcon from '../components/checkout/checkout-step-icon'
 import LineItems from '../components/cart/line-items'
 import PaymentIcons from '../components/cart/payment-icons'
-import PaymentMethods from '../components/checkout/payment-methods'
 import PaymentMethod from '../components/checkout/payment-method'
 import PaymentMethodHeader from '../components/checkout/payment-method-header'
+import Payment from '../components/checkout/payment-method'
+import PaymentHeader from '../components/checkout/payment-header'
 import ShippingMethodsHeader from '../components/checkout/shipping-methods-header'
 import StripeFields from '../components/checkout/stripe-fields'
 import StripePayment from '../components/checkout/stripe-payment'
@@ -120,9 +121,10 @@ const mapping = {
   OrderList,
   PayPalButton,
   PaymentIcons,
-  PaymentMethods,
   PaymentMethod,
   PaymentMethodHeader,
+  Payment,
+  PaymentHeader,
   ProductCarousel,
   ProductEwisForm,
   ProductListingCard,

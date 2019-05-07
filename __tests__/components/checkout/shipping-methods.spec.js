@@ -4,6 +4,10 @@ import React from 'react'
 // Components
 import ShippingMethods from '../../../src/components/checkout/shipping-methods'
 
+// Objects
+import Flash from '../../../src/objects/flash'
+
+// Fixtures
 import cartFixture from '../../fixtures/cart'
 import shippingMethodsFixture from '../../fixtures/shipping-methods'
 
@@ -111,3 +115,27 @@ test('renders Review Your Order button when third party payment is made', () => 
   expect(wrapper.find({ role: 'button' }).first()).toIncludeText('Review Your Order')
 })
 
+test('renders error messages', () => {
+  // Arrange
+  const errorMessage = 'Something went wrong'
+  const handleFormSubmit = jest.fn()
+  const handleSetShippingMethod = jest.fn()
+  const cartShippingMethod = cartFixture.shipping_method
+  const cartLineItemsCount = cartFixture.line_items_count
+
+  // Act
+  const wrapper = mount(<ShippingMethods
+    cartShippingMethod={cartShippingMethod}
+    cartLineItemsCount={cartLineItemsCount}
+    handleFormSubmit={handleFormSubmit}
+    handleSetShippingMethod={handleSetShippingMethod}
+    shippingMethods={shippingMethodsFixture}
+    isThirdPartyPayment={true}
+    errorMessage={errorMessage}
+  />)
+
+  // Assert
+  expect(wrapper).toMatchSnapshot()
+  expect(wrapper.find(Flash).length).toEqual(1)
+  expect(wrapper).toIncludeText(errorMessage)
+})

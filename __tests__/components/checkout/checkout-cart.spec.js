@@ -4,8 +4,6 @@ import React from 'react'
 // Components
 import CheckoutCart from '../../../src/components/checkout/checkout-cart'
 
-const updateQuantityfnc = jest.fn()
-
 describe('Checkout Cart', () => {
   test('renders the correct cart summary with single line item', () => {
     // Arrange
@@ -35,7 +33,6 @@ describe('Checkout Cart', () => {
         lineItems={lineItems}
         lineItemsCount={1}
         total={20}
-        updateQuantity={updateQuantityfnc}
       />
     )
 
@@ -90,7 +87,6 @@ describe('Checkout Cart', () => {
         lineItems={lineItems}
         lineItemsCount={3}
         total={25}
-        updateQuantity={updateQuantityfnc}
       />
     )
 

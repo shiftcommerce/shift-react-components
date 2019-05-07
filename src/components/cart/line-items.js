@@ -16,24 +16,30 @@ class LineItems extends Component {
   }
 
   /**
-   * Render the prices and actions block of the line item
+   * Render the line item quantity
    * @param  {Object} lineItem
    * @return {string} - HTML markup for the component
    * @todo extract this out into it's own service class
    */
-  renderOptions (lineItem) {
-    return (
-      <this.DropdownSelect
-        className='c-line-items__quantity-select'
-        data-id={lineItem.id}
-        label='Quantity'
-        onChange={this.props.updateQuantity}
-        options={this.renderQuantityOptions(lineItem)}
-        skipLabel
-        skipPrompt
-        value={lineItem.unit_quantity}
-      />
-    )
+  renderLineItemQuantity (lineItem) {
+    const { updateQuantity } = this.props
+
+    if (updateQuantity) {
+      return (
+        <this.DropdownSelect
+          className='c-line-items__quantity-select'
+          data-id={lineItem.id}
+          label='Quantity'
+          onChange={this.props.updateQuantity}
+          options={this.renderQuantityOptions(lineItem)}
+          skipLabel
+          skipPrompt
+          value={lineItem.unit_quantity}
+        />
+      )
+    } else {
+      return <span className='c-line-items__quantity-amount'>{lineItem.unit_quantity}</span>
+    }
   }
 
   /**
@@ -120,7 +126,7 @@ class LineItems extends Component {
       <>
         <div className='c-line-items__quantity'>
           <div className='c-line-items__quantity-header'><span>Quantity</span></div>
-          { this.renderOptions(lineItem) }
+          { this.renderLineItemQuantity(lineItem) }
         </div>
       </>
     )

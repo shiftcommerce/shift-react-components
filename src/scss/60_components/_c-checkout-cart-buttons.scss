@@ -27,35 +27,36 @@
   &:hover {
     cursor: pointer;
   }
+}
 
-  &--proceed {
-    background: $background-positive;
+.c-checkout-cart-buttons__cta--proceed {
+  background: $background-positive;
+  color: $text-light;
+  margin-left: $global-spacing-unit-small;
+
+  &:visited {
     color: $text-light;
-
-    &:visited {
-      color: $text-light;
-    }
-
-    &:hover {
-      @include breakpoint(desktop) {
-        background: transparentize($background-positive, .2);
-        color: $text-light;
-      }
-    }
   }
 
-  &--continue {
-    background: $background-secondary;
-    color: $text-dark;
-
-    &:visited {
-      color: $text-dark;
+  &:hover {
+    @include breakpoint(desktop) {
+      background: transparentize($background-positive, .2);
+      color: $text-light;
     }
+  }
+}
 
-    &:hover {
-      @include breakpoint(desktop) {
-        background: transparentize($background-secondary, .2);
-      }
+.c-checkout-cart-buttons__cta--continue {
+  background: $background-secondary;
+  color: $text-dark;
+
+  &:visited {
+    color: $text-dark;
+  }
+
+  &:hover {
+    @include breakpoint(desktop) {
+      background: transparentize($background-secondary, .2);
     }
   }
 }

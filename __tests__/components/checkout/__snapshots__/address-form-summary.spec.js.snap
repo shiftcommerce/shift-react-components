@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the addresss summary 1`] = `
+<Fragment>
+  <AddressFormHeader
+    collapsed={true}
+    onClick={[Function]}
+    showEditButton={true}
+    title="test"
+  />
+  <div
+    className="o-form__wrapper--collapsed c-address-form__summary"
+  >
+    <p
+      className="u-bold"
+    >
+      John
+       
+      Smith
+       
+    </p>
+    <span>
+      112 some street
+      , 
+      Leeds
+      , 
+      LS18DS
+    </span>
+  </div>
+</Fragment>
+`;

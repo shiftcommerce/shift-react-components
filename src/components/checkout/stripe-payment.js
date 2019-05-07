@@ -102,7 +102,7 @@ class StripePayment extends Component {
 
         { !billingAsShipping &&
           <>
-            { addressBook.length && <this.AddressBook
+            { addressBook.length > 0 && <this.AddressBook
               addressBook={addressBook}
               formName='shippingAddress'
               currentAddressId={billingAddress.id}
