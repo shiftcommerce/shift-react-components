@@ -13,8 +13,28 @@ exports[`renders the PayPal image and does not render edit button 1`] = `
     className="c-payment-method__summary-information"
   >
     <Image
+      className="c-payment-method__summary-information-pay-pal-image"
+      src={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`renders the card image and does not render edit button 1`] = `
+<div
+  className="c-payment-method__summary"
+>
+  <PaymentMethodHeader
+    collapsed={true}
+    showEditButton={false}
+    title="test"
+  />
+  <div
+    className="c-payment-method__summary-information"
+  >
+    <Image
       className="c-payment-method__summary-information-card-image"
-      src="/static/payments/pay-pal.svg"
+      src={Object {}}
     />
   </div>
 </div>
@@ -32,9 +52,10 @@ exports[`renders the shipping methods summary 1`] = `
   <div
     className="c-payment-method__summary-information"
   >
-    <p>
-      credit-card
-    </p>
+    <Image
+      className="c-payment-method__summary-information-card-image"
+      src={Object {}}
+    />
   </div>
 </div>
 `;

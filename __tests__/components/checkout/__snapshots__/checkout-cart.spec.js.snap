@@ -221,19 +221,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                 <span />
               </div>
             </div>
-            <div
-              className="c-line-items__remove"
-            >
-              <div
-                className="c-line-items__delete"
-              >
-                <a
-                  className="c-line-items__delete-button"
-                >
-                  Delete
-                </a>
-              </div>
-            </div>
           </div>
           <div
             className="c-line-items__quantity"
@@ -303,19 +290,6 @@ exports[`Checkout Cart renders the correct cart summary with multiple line items
                 className="c-line-items__details-sku"
               >
                 <span />
-              </div>
-            </div>
-            <div
-              className="c-line-items__remove"
-            >
-              <div
-                className="c-line-items__delete"
-              >
-                <a
-                  className="c-line-items__delete-button"
-                >
-                  Delete
-                </a>
               </div>
             </div>
           </div>
@@ -537,19 +511,6 @@ exports[`Checkout Cart renders the correct cart summary with single line item 1`
                 className="c-line-items__details-sku"
               >
                 <span />
-              </div>
-            </div>
-            <div
-              className="c-line-items__remove"
-            >
-              <div
-                className="c-line-items__delete"
-              >
-                <a
-                  className="c-line-items__delete-button"
-                >
-                  Delete
-                </a>
               </div>
             </div>
           </div>

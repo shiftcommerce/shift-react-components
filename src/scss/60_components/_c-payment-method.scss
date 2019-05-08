@@ -87,7 +87,7 @@
   border-bottom: 1px solid $border-default;
 }
 
-.c-payment-method__summary-information-card-image {
+.c-payment-method__summary-information-pay-pal-image {
   flex-basis: 20%;
   padding-bottom: $global-spacing-unit-small;
 
@@ -97,6 +97,20 @@
 
   img {
     height: 20px;
+    margin-right: $global-spacing-unit-small;
+  }
+}
+
+.c-payment-method__summary-information-card-image {
+  flex-basis: 20%;
+  padding-bottom: $global-spacing-unit-small;
+
+  @include breakpoint(desktop) {
+    flex-basis: 10%;
+  }
+
+  img {
+    height: 36px;
     margin-right: $global-spacing-unit-small;
   }
 }
