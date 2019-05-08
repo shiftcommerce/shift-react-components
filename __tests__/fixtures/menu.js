@@ -1,4 +1,4 @@
-const menu = {
+const menu = [{
   id: '14',
   title: 'Main Menu',
   reference: 'mega-menu',
@@ -75,6 +75,7 @@ const menu = {
       meta_attributes: {}
     }
   ],
+  loading: false,
   error: false,
   pagination: {
     total_entries: 1,
@@ -82,8 +83,7 @@ const menu = {
     self: '/reference/v1/menus?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items',
     first: '/reference/v1/menus.json_api?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items&page%5Bnumber%5D=1&page%5Bsize%5D=25',
     last: '/reference/v1/menus.json_api?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items&page%5Bnumber%5D=1&page%5Bsize%5D=25'
-  },
-  loading: false
-}
+  }
+}]
 
 export default menu
