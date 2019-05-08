@@ -82,7 +82,7 @@ export class NavBar extends Component {
 
   render () {
     const { loading, error } = this.props.menu
-    const menuItems = t(this.props, 'menu.menu_items').safeObject
+    const menuItems = t(this.props, 'menu[0].menu_items').safeObject
 
     if (loading) {
       return (<this.Loading />)

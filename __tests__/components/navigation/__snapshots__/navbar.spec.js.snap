@@ -89,93 +89,95 @@ exports[`The navbar renders the error message 1`] = `
 exports[`The navbar renders the nav bar options 1`] = `
 <NavBar
   menu={
-    Object {
-      "error": false,
-      "id": "14",
-      "loading": false,
-      "menu_items": Array [
-        Object {
-          "canonical_path": "/trays",
-          "id": "54",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Trays",
+    Array [
+      Object {
+        "error": false,
+        "id": "14",
+        "loading": false,
+        "menu_items": Array [
+          Object {
+            "canonical_path": "/trays",
+            "id": "54",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Trays",
+          },
+          Object {
+            "canonical_path": "/nonslip-trays",
+            "id": "55",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Nonslip trays",
+          },
+          Object {
+            "canonical_path": "/jugs",
+            "id": "56",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Jugs",
+          },
+          Object {
+            "canonical_path": "/filters",
+            "id": "57",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Filters",
+          },
+          Object {
+            "canonical_path": "/tea",
+            "id": "58",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Tea",
+          },
+          Object {
+            "canonical_path": "/saucers",
+            "id": "60",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Saucers",
+          },
+          Object {
+            "canonical_path": "/cups",
+            "id": "59",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Cups",
+          },
+          Object {
+            "canonical_path": "/coffee",
+            "id": "61",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Coffee",
+          },
+          Object {
+            "canonical_path": "/servers",
+            "id": "63",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Servers",
+          },
+          Object {
+            "canonical_path": "/mugs",
+            "id": "62",
+            "meta_attributes": Object {},
+            "published": true,
+            "title": "Mugs",
+          },
+        ],
+        "pagination": Object {
+          "first": "/reference/v1/menus.json_api?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items&page%5Bnumber%5D=1&page%5Bsize%5D=25",
+          "last": "/reference/v1/menus.json_api?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items&page%5Bnumber%5D=1&page%5Bsize%5D=25",
+          "page_count": 1,
+          "self": "/reference/v1/menus?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items",
+          "total_entries": 1,
         },
-        Object {
-          "canonical_path": "/nonslip-trays",
-          "id": "55",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Nonslip trays",
-        },
-        Object {
-          "canonical_path": "/jugs",
-          "id": "56",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Jugs",
-        },
-        Object {
-          "canonical_path": "/filters",
-          "id": "57",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Filters",
-        },
-        Object {
-          "canonical_path": "/tea",
-          "id": "58",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Tea",
-        },
-        Object {
-          "canonical_path": "/saucers",
-          "id": "60",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Saucers",
-        },
-        Object {
-          "canonical_path": "/cups",
-          "id": "59",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Cups",
-        },
-        Object {
-          "canonical_path": "/coffee",
-          "id": "61",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Coffee",
-        },
-        Object {
-          "canonical_path": "/servers",
-          "id": "63",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Servers",
-        },
-        Object {
-          "canonical_path": "/mugs",
-          "id": "62",
-          "meta_attributes": Object {},
-          "published": true,
-          "title": "Mugs",
-        },
-      ],
-      "pagination": Object {
-        "first": "/reference/v1/menus.json_api?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items&page%5Bnumber%5D=1&page%5Bsize%5D=25",
-        "last": "/reference/v1/menus.json_api?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items&page%5Bnumber%5D=1&page%5Bsize%5D=25",
-        "page_count": 1,
-        "self": "/reference/v1/menus?fields%5Bmenu_items%5D=title%2Cslug%2Cmenu_items%2Citem%2Cbackground_image_link%2Cbackground_image%2Cpublished%2Ccanonical_path%2Cmeta_attributes&fields%5Bmenus%5D=title%2Creference%2Cupdated_at%2Cmenu_items&filter%5Bfilter%5D%5Breference%5D%5Beq%5D=mega-menu&include=menu_items",
-        "total_entries": 1,
+        "reference": "mega-menu",
+        "title": "Main Menu",
+        "updated_at": "2018-11-16T15:19:36Z",
       },
-      "reference": "mega-menu",
-      "title": "Main Menu",
-      "updated_at": "2018-11-16T15:19:36Z",
-    }
+    ]
   }
 />
 `;
