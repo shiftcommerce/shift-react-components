@@ -156,20 +156,6 @@ exports[`renders line item quantity if updateQuantity function is not provided 1
               </span>
             </div>
           </div>
-          <div
-            className="c-line-items__remove"
-          >
-            <div
-              className="c-line-items__delete"
-            >
-              <a
-                className="c-line-items__delete-button"
-                data-id="311"
-              >
-                Delete
-              </a>
-            </div>
-          </div>
         </div>
         <div
           className="c-line-items__quantity"
@@ -370,20 +356,6 @@ exports[`renders line items correctly, on initial load 1`] = `
               <span>
                 3008557600817
               </span>
-            </div>
-          </div>
-          <div
-            className="c-line-items__remove"
-          >
-            <div
-              className="c-line-items__delete"
-            >
-              <a
-                className="c-line-items__delete-button"
-                data-id="311"
-              >
-                Delete
-              </a>
             </div>
           </div>
         </div>
@@ -815,20 +787,6 @@ exports[`trigger updateQuantity function, on change of line item quantity 1`] = 
               <span>
                 3008557600817
               </span>
-            </div>
-          </div>
-          <div
-            className="c-line-items__remove"
-          >
-            <div
-              className="c-line-items__delete"
-            >
-              <a
-                className="c-line-items__delete-button"
-                data-id="311"
-              >
-                Delete
-              </a>
             </div>
           </div>
         </div>

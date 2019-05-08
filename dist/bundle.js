@@ -46080,6 +46080,29 @@ function (_Component) {
       return baseOptions;
     }
     /**
+     * Render remove / delete option
+     * @param  {Object} lineItem
+     * @return {string} - HTML markup for the component
+     */
+
+  }, {
+    key: "renderDeleteOption",
+    value: function renderDeleteOption(lineItem) {
+      var deleteItem = this.props.deleteItem;
+
+      if (deleteItem) {
+        return external_react_default.a.createElement("div", {
+          className: "c-line-items__remove"
+        }, external_react_default.a.createElement("div", {
+          className: "c-line-items__delete"
+        }, external_react_default.a.createElement("a", {
+          className: "c-line-items__delete-button",
+          "data-id": lineItem.id,
+          onClick: deleteItem
+        }, "Delete")));
+      }
+    }
+    /**
      * Render the prices and actions block of the line item
      * @param  {Object} lineItem
      * @return {string} - HTML markup for the component
@@ -46115,15 +46138,7 @@ function (_Component) {
         className: "c-line-items__details-title u-bold"
       }, "".concat(lineItem.item.product.title, " - ").concat(lineItem.item.title)), external_react_default.a.createElement("div", {
         className: "c-line-items__details-sku"
-      }, external_react_default.a.createElement("span", null, lineItem.sku))), external_react_default.a.createElement("div", {
-        className: "c-line-items__remove"
-      }, external_react_default.a.createElement("div", {
-        className: "c-line-items__delete"
-      }, external_react_default.a.createElement("a", {
-        className: "c-line-items__delete-button",
-        "data-id": lineItem.id,
-        onClick: this.props.deleteItem
-      }, "Delete"))));
+      }, external_react_default.a.createElement("span", null, lineItem.sku))), this.renderDeleteOption(lineItem));
     }
     /**
      * Render the parameters block of the line item, which contains the variants
@@ -57421,8 +57436,7 @@ address_form_summary_AddressFormSummary.propTypes = {
 
 
 function CheckoutCart(_ref) {
-  var deleteItem = _ref.deleteItem,
-      lineItems = _ref.lineItems,
+  var lineItems = _ref.lineItems,
       lineItemsCount = _ref.lineItemsCount,
       total = _ref.total;
   var LineItems = component_mapping('LineItems');
@@ -57456,14 +57470,12 @@ function CheckoutCart(_ref) {
     count: lineItemsCount,
     showCount: false
   }), " will be saved for 48 hours depending on availablility")))), external_react_default.a.createElement(LineItems, {
-    deleteItem: deleteItem,
     lineItems: lineItems,
     lineItemsCount: lineItemsCount
   }));
 }
 
 CheckoutCart.propTypes = {
-  deleteItem: prop_types_default.a.func,
   lineItems: prop_types_default.a.arrayOf(prop_types_default.a.object),
   lineItemsCount: prop_types_default.a.number,
   total: prop_types_default.a.number

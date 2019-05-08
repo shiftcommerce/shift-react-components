@@ -66,6 +66,27 @@ class LineItems extends Component {
   }
 
   /**
+   * Render remove / delete option
+   * @param  {Object} lineItem
+   * @return {string} - HTML markup for the component
+   */
+  renderDeleteOption (lineItem) {
+    const { deleteItem } = this.props
+
+    if (deleteItem) {
+      return (
+        <div className='c-line-items__remove'>
+          <div className='c-line-items__delete'>
+            <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={deleteItem} >
+              Delete
+            </a>
+          </div>
+        </div>
+      )
+    }
+  }
+
+  /**
    * Render the prices and actions block of the line item
    * @param  {Object} lineItem
    * @return {string} - HTML markup for the component
@@ -104,13 +125,7 @@ class LineItems extends Component {
             </span>
           </div>
         </div>
-        <div className='c-line-items__remove'>
-          <div className='c-line-items__delete'>
-            <a className='c-line-items__delete-button' data-id={lineItem.id} onClick={this.props.deleteItem} >
-              Delete
-            </a>
-          </div>
-        </div>
+        { this.renderDeleteOption(lineItem) }
       </div>
     )
   }
