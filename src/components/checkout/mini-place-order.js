@@ -21,7 +21,7 @@ function MiniPlaceOrder ({ convertToOrder, isValidOrder, total }) {
           status= {isValidOrder ? 'primary' : 'disabled'}
           disabled= {!isValidOrder}
           onClick={ convertToOrder }
-          className='c-cart-summary__buttons--proceed o-button--sml'
+          className='c-cart-summary-buttons__cta--proceed o-button--sml'
           type='button'
         />
       </div>
