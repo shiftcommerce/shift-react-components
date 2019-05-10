@@ -218,6 +218,7 @@ exports[`ProductGrid component renders correctly 1`] = `
               href="/slug?slug=/trending/seed_product_4"
             >
               <a
+                as="/trending/seed_product_4"
                 href="/slug?slug=/trending/seed_product_4"
               >
                 <div
@@ -365,6 +366,7 @@ exports[`ProductGrid component renders correctly 1`] = `
               href="/slug?slug=/cups/seed_product_2"
             >
               <a
+                as="/cups/seed_product_2"
                 href="/slug?slug=/cups/seed_product_2"
               >
                 <div
@@ -512,6 +514,7 @@ exports[`ProductGrid component renders correctly 1`] = `
               href="/slug?slug=/trending/seed_product_11"
             >
               <a
+                as="/trending/seed_product_11"
                 href="/slug?slug=/trending/seed_product_11"
               >
                 <div
@@ -659,6 +662,7 @@ exports[`ProductGrid component renders correctly 1`] = `
               href="/slug?slug=/trending/seed_product_6"
             >
               <a
+                as="/trending/seed_product_6"
                 href="/slug?slug=/trending/seed_product_6"
               >
                 <div

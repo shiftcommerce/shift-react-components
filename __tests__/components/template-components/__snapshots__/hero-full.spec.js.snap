@@ -81,6 +81,7 @@ exports[`renders the full HeroImage component 1`] = `
           href="/slug?slug=/homeware/dining/glassware"
         >
           <a
+            as="/homeware/dining/glassware"
             href="/slug?slug=/homeware/dining/glassware"
           >
             <LazyLoad
@@ -165,6 +166,7 @@ exports[`renders the full HeroImage component 1`] = `
               href="/slug?slug=/homeware/dining/glassware"
             >
               <a
+                as="/homeware/dining/glassware"
                 className="c-hero__button-icon"
                 href="/slug?slug=/homeware/dining/glassware"
               >

@@ -114,14 +114,19 @@ exports[`renders the children inside it 1`] = `
         <div
           className="c-header__account"
         >
-          <Image
-            className="c-header__account-image"
-            src={Object {}}
-          />
           <Link
+            className="c-header__account-link"
             href="/account/login"
           >
-            Sign In
+            <Image
+              className="c-header__account-image"
+              src={Object {}}
+            />
+            <div
+              className="c-header__account-text"
+            >
+              Sign In
+            </div>
           </Link>
         </div>
         <div
@@ -404,14 +409,19 @@ exports[`renders the header 1`] = `
         <div
           className="c-header__account"
         >
-          <Image
-            className="c-header__account-image"
-            src={Object {}}
-          />
           <Link
+            className="c-header__account-link"
             href="/account/login"
           >
-            Sign In
+            <Image
+              className="c-header__account-image"
+              src={Object {}}
+            />
+            <div
+              className="c-header__account-text"
+            >
+              Sign In
+            </div>
           </Link>
         </div>
         <div
@@ -679,14 +689,19 @@ exports[`renders the navbar for non-checkout pages 1`] = `
         <div
           className="c-header__account"
         >
-          <Image
-            className="c-header__account-image"
-            src={Object {}}
-          />
           <Link
+            className="c-header__account-link"
             href="/account/login"
           >
-            Sign In
+            <Image
+              className="c-header__account-image"
+              src={Object {}}
+            />
+            <div
+              className="c-header__account-text"
+            >
+              Sign In
+            </div>
           </Link>
         </div>
         <div
