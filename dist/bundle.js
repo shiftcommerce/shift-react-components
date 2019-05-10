@@ -199,7 +199,7 @@ function _defineProperty(obj, key, value) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCurrentRefinementValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return cleanUpValue; });
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(31);
 /* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(19);
@@ -390,20 +390,6 @@ function cleanUpValueWithMutliIndex(_ref2) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _assertThisInitialized; });
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-/***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
 /* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 
@@ -427,19 +413,19 @@ function _objectSpread(target) {
 }
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createConnector; });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(29);
-/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var _babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
 /* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(11);
 /* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
 /* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
 /* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(14);
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5);
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(3);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(28);
 /* harmony import */ var lodash_find__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lodash_find__WEBPACK_IMPORTED_MODULE_9__);
@@ -749,6 +735,20 @@ function createConnector(connectorDesc) {
 }
 
 /***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _assertThisInitialized; });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -907,7 +907,7 @@ function _typeof(obj) {
   return _typeof(obj);
 }
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(5);
+var assertThisInitialized = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _possibleConstructorReturn; });
@@ -1442,7 +1442,7 @@ var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread.js
-var objectSpread = __webpack_require__(6);
+var objectSpread = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/lodash/omit.js
 var omit = __webpack_require__(19);
@@ -2188,7 +2188,7 @@ function createInstantSearch(defaultAlgoliaClient, root) {
   }), _temp;
 }
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(5);
+var assertThisInitialized = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-core/dist/es/components/Index.js
 
@@ -2361,7 +2361,7 @@ var createIndex_createIndex = function createIndex(defaultRoot) {
 
 /* harmony default export */ var core_createIndex = (createIndex_createIndex);
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/createConnector.js
-var createConnector = __webpack_require__(7);
+var createConnector = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/react-instantsearch-core/dist/es/core/translatable.js
 var translatable = __webpack_require__(193);
@@ -14954,7 +14954,7 @@ exports.default = Thumbs;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
@@ -16261,10 +16261,10 @@ module.exports = shortOut;
 
 "use strict";
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
 /* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4);
 
 
@@ -21035,7 +21035,7 @@ function getCurrentRefinement(props, searchState, context) {
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 
 
@@ -21161,7 +21161,7 @@ module.exports = basePickBy;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var _core_highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(36);
 
 
@@ -21251,7 +21251,7 @@ var highlight = function highlight(_ref) {
 /* harmony import */ var _babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
 /* harmony import */ var _babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(12);
 /* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5);
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(15);
 /* harmony import */ var lodash_has__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lodash_has__WEBPACK_IMPORTED_MODULE_8__);
@@ -21355,7 +21355,7 @@ function translatable(defaultTranslations) {
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 
 
@@ -21578,10 +21578,10 @@ var sortBy = ['isRefined', 'count:desc', 'name:asc'];
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 
 
 
@@ -21648,7 +21648,7 @@ var sortBy = ['isRefined', 'count:desc', 'name:asc'];
 "use strict";
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(79);
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 
 
@@ -24859,7 +24859,7 @@ module.exports = '2.26.1';
 /* harmony import */ var lodash_isFinite__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isFinite__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
+/* harmony import */ var _core_createConnector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
 /* harmony import */ var _core_indexUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4);
 
 
@@ -43025,7 +43025,7 @@ if (typeof document !== 'undefined' || typeof window !== 'undefined') {
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: ./src/scss/app.scss
-var app = __webpack_require__(550);
+var app = __webpack_require__(552);
 
 // CONCATENATED MODULE: ./src/lib/config.js
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -43252,7 +43252,6 @@ function (_Component) {
       var _this$props$menu = this.props.menu,
           loading = _this$props$menu.loading,
           error = _this$props$menu.error;
-      console.log('menu', this.props.menu);
       var menuItems = lib_default()(this.props, 'menu[0].menu_items').safeObject;
 
       if (loading) {
@@ -44390,6 +44389,10 @@ function (_Component) {
 
 /* harmony default export */ var lazy_load = (lazy_load_LazyLoad);
 // CONCATENATED MODULE: ./src/objects/link.js
+function link_objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = link_objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function link_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 // Libraries
 
 /**
@@ -44399,15 +44402,10 @@ function (_Component) {
  */
 
 function link_Link(props) {
-  var href = props.href,
-      className = props.className,
-      children = props.children,
-      onClick = props.onClick;
-  return external_react_default.a.createElement("a", {
-    href: href,
-    onClick: onClick,
-    className: className
-  }, children);
+  var children = props.children,
+      otherProps = link_objectWithoutProperties(props, ["children"]);
+
+  return external_react_default.a.createElement("a", otherProps, children);
 }
 // EXTERNAL MODULE: ./node_modules/react-loading/dist/react-loading.js
 var react_loading = __webpack_require__(239);
@@ -45241,7 +45239,7 @@ var capitalize = function capitalize(key) {
   return key.length === 0 ? '' : "".concat(key[0].toUpperCase()).concat(key.slice(1));
 };
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(5);
+var assertThisInitialized = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/lodash/has.js
 var has = __webpack_require__(15);
@@ -45277,7 +45275,7 @@ function (_Component) {
 
     _this = Object(possibleConstructorReturn["a" /* default */])(this, (_getPrototypeOf2 = Object(getPrototypeOf["a" /* default */])(Select)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "onChange", function (e) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "onChange", function (e) {
       _this.props.onSelect(e.target.value);
     });
 
@@ -47430,11 +47428,11 @@ function (_Component) {
 
     _this = Object(possibleConstructorReturn["a" /* default */])(this, (_getPrototypeOf2 = Object(getPrototypeOf["a" /* default */])(Panel)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "state", {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "state", {
       canRefine: true
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "setCanRefine", function (nextCanRefine) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "setCanRefine", function (nextCanRefine) {
       _this.setState({
         canRefine: nextCanRefine
       });
@@ -47748,7 +47746,7 @@ var Highlight_Highlight = function Highlight(props) {
 
 /* harmony default export */ var widgets_Highlight = (Object(connectHighlight["a" /* default */])(components_Highlight));
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread.js
-var objectSpread = __webpack_require__(6);
+var objectSpread = __webpack_require__(5);
 
 // CONCATENATED MODULE: ./node_modules/react-instantsearch-dom/dist/es/components/SearchBox.js
 
@@ -47825,11 +47823,11 @@ function (_Component) {
 
     _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(SearchBox).call(this));
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "getQuery", function () {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "getQuery", function () {
       return _this.props.searchAsYouType ? _this.props.currentRefinement : _this.state.query;
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "onInputMount", function (input) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "onInputMount", function (input) {
       _this.input = input;
 
       if (_this.props.__inputRef) {
@@ -47837,7 +47835,7 @@ function (_Component) {
       }
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "onKeyDown", function (e) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "onKeyDown", function (e) {
       if (!_this.props.focusShortcuts) {
         return;
       }
@@ -47867,7 +47865,7 @@ function (_Component) {
       e.preventDefault();
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "onSubmit", function (e) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "onSubmit", function (e) {
       e.preventDefault();
       e.stopPropagation();
 
@@ -47884,7 +47882,7 @@ function (_Component) {
       return false;
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "onChange", function (event) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "onChange", function (event) {
       var _this$props2 = _this.props,
           searchAsYouType = _this$props2.searchAsYouType,
           refine = _this$props2.refine,
@@ -47904,7 +47902,7 @@ function (_Component) {
       }
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "onReset", function (event) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "onReset", function (event) {
       var _this$props3 = _this.props,
           searchAsYouType = _this$props3.searchAsYouType,
           refine = _this$props3.refine,
@@ -48090,7 +48088,7 @@ function (_Component) {
 
     _this = Object(possibleConstructorReturn["a" /* default */])(this, Object(getPrototypeOf["a" /* default */])(List).call(this));
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "onShowMoreClick", function () {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "onShowMoreClick", function () {
       _this.setState(function (state) {
         return {
           extended: !state.extended
@@ -48098,7 +48096,7 @@ function (_Component) {
       });
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "getLimit", function () {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "getLimit", function () {
       var _this$props = _this.props,
           limit = _this$props.limit,
           showMoreLimit = _this$props.showMoreLimit;
@@ -48106,13 +48104,13 @@ function (_Component) {
       return extended ? showMoreLimit : limit;
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "resetQuery", function () {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "resetQuery", function () {
       _this.setState({
         query: ''
       });
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "renderItem", function (item, resetQuery) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "renderItem", function (item, resetQuery) {
       var itemHasChildren = item.items && Boolean(item.items.length);
       return external_react_default.a.createElement("li", {
         key: item.key || item.label,
@@ -48285,17 +48283,17 @@ function (_Component) {
 
     _this = Object(possibleConstructorReturn["a" /* default */])(this, (_getPrototypeOf2 = Object(getPrototypeOf["a" /* default */])(RefinementList)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "state", {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "state", {
       query: ''
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "selectItem", function (item, resetQuery) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "selectItem", function (item, resetQuery) {
       resetQuery();
 
       _this.props.refine(item.value);
     });
 
-    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this)), "renderItem", function (item, resetQuery) {
+    Object(defineProperty["a" /* default */])(Object(assertThisInitialized["a" /* default */])(_this), "renderItem", function (item, resetQuery) {
       var label = _this.props.isFromSearch ? external_react_default.a.createElement(widgets_Highlight, {
         attribute: "label",
         hit: item
@@ -58376,12 +58374,15 @@ function (_Component) {
       return external_react_default.a.createElement("div", {
         className: "c-header__account",
         onMouseEnter: this.props.toggleDropDown
+      }, external_react_default.a.createElement(this.Link, {
+        className: "c-header__account-link",
+        href: "/account/login"
       }, external_react_default.a.createElement(this.Image, {
         className: "c-header__account-image",
         src: account_icon_default.a
-      }), external_react_default.a.createElement(this.Link, {
-        href: "/account/login"
-      }, signedIn), this.renderAccountDropDown());
+      }), external_react_default.a.createElement("div", {
+        className: "c-header__account-text"
+      }, signedIn)), this.renderAccountDropDown());
     }
   }, {
     key: "renderAccountDropDown",
@@ -58400,10 +58401,14 @@ function (_Component) {
         }, external_react_default.a.createElement("div", {
           className: "c-header__callout"
         }), external_react_default.a.createElement(this.Link, {
-          href: "/account/myaccount"
-        }, "Order History"), external_react_default.a.createElement(this.Link, {
-          href: "/account/forgotpassword"
+          href: "/account/myaccount?menu=details"
+        }, "Details"), external_react_default.a.createElement(this.Link, {
+          href: "/account/myaccount?menu=addresses"
+        }, "Addresses"), external_react_default.a.createElement(this.Link, {
+          href: "/account/myaccount?menu=password"
         }, "Change Password"), external_react_default.a.createElement(this.Link, {
+          href: "/account/myaccount?menu=orders"
+        }, "Order History"), external_react_default.a.createElement(this.Link, {
           href: "/account/logout"
         }, "Sign Out")));
       } else {
@@ -58818,7 +58823,9 @@ function (_Component) {
 /* 547 */,
 /* 548 */,
 /* 549 */,
-/* 550 */
+/* 550 */,
+/* 551 */,
+/* 552 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -7,9 +7,8 @@ import React from 'react'
  * @return {string} - HTML markup for the component
  */
 export default function Link (props) {
-  const { href, className, children, onClick } = props
-
+  const { children, ...otherProps} = props
   return (
-    <a href={href} onClick={onClick} className={className}>{ children }</a>
+    <a {...otherProps}>{ children }</a>
   )
 }
