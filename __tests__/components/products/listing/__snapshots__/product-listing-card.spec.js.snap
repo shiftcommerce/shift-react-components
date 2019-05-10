@@ -21,6 +21,7 @@ exports[`renders ProductListingCard correctly 1`] = `
         href="/slug?slug=/products/seed_product_51"
       >
         <a
+          as="/products/seed_product_51"
           href="/slug?slug=/products/seed_product_51"
         >
           <div

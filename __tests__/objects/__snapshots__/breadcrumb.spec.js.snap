@@ -32,6 +32,7 @@ exports[`renders correctly 1`] = `
           href="/home/index"
         >
           <a
+            as="/"
             className="o-breadcrumb__link"
             href="/home/index"
           >
@@ -49,6 +50,7 @@ exports[`renders correctly 1`] = `
           href="/categories/category?id=22bca338-b578-4aee-a302-992764fa3e72"
         >
           <a
+            as="/categories/22bca338-b578-4aee-a302-992764fa3e72"
             className="o-breadcrumb__link"
             href="/categories/category?id=22bca338-b578-4aee-a302-992764fa3e72"
           >
@@ -66,6 +68,7 @@ exports[`renders correctly 1`] = `
           href="/products/product?id=708a0142-e60f-4332-9a8b-1359c5af9ec4"
         >
           <a
+            as="/products/708a0142-e60f-4332-9a8b-1359c5af9ec4"
             className="o-breadcrumb__link"
             href="/products/product?id=708a0142-e60f-4332-9a8b-1359c5af9ec4"
           >

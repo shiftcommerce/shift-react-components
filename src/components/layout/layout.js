@@ -43,8 +43,10 @@ export class Layout extends Component {
 
     return (
       <div className='c-header__account' onMouseEnter={this.props.toggleDropDown}>
-        <this.Image className='c-header__account-image' src={accountIcon} />
-        <this.Link href='/account/login'>{ signedIn }</this.Link>
+        <this.Link className='c-header__account-link' href='/account/login'>
+          <this.Image className='c-header__account-image' src={accountIcon} />
+          <div className='c-header__account-text'>{signedIn}</div>
+        </this.Link >
         { this.renderAccountDropDown() }
       </div>
     )
@@ -60,8 +62,10 @@ export class Layout extends Component {
         <div className={classNames('c-header__dropdown-wrapper', addShowClass)} >
           <div className={classNames('c-header__account-dropdown', addShowClass)} onMouseLeave={this.props.toggleDropDown}>
             <div className='c-header__callout' />
-            <this.Link href='/account/myaccount'>Order History</this.Link>
-            <this.Link href='/account/forgotpassword'>Change Password</this.Link>
+            <this.Link href='/account/myaccount?menu=details'>Details</this.Link>
+            <this.Link href='/account/myaccount?menu=addresses'>Addresses</this.Link>
+            <this.Link href='/account/myaccount?menu=password'>Change Password</this.Link>
+            <this.Link href='/account/myaccount?menu=orders'>Order History</this.Link>
             <this.Link href='/account/logout'>Sign Out</this.Link>
           </div>
         </div>

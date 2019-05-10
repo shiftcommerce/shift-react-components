@@ -27,15 +27,15 @@
   }
 }
 
+.c-header__account-link {
+  display: flex;
+  align-items: center;
+}
+
 .c-header__account-image {
   height: 25px;
   width: 25px;
   margin-right: $global-spacing-unit-tiny;
-
-  @include breakpoint(desktop) {
-    height: 30px;
-    width: 30px;
-  }
 }
 
 .c-header__account-dropdown {
@@ -64,7 +64,6 @@
   }
 
   @include breakpoint(desktop) {
-    top: 51px;
     width: 25%;
     right: 37%;
   }
@@ -89,7 +88,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  top: 0;
+  top: 50px;
   left: -100vw;
   right: -100vw;
   max-width: $global-body-max-width;

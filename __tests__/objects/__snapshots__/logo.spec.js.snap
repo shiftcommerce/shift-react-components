@@ -12,6 +12,7 @@ exports[`renders correctly 1`] = `
       href="/slug?slug=/homepage"
     >
       <a
+        as="/"
         href="/slug?slug=/homepage"
       >
         <Image

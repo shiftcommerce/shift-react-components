@@ -190,6 +190,7 @@ exports[`renders correct messages when cart has items 1`] = `
       href="/slug?slug=/homepage"
     >
       <a
+        as="/"
         className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue"
         href="/slug?slug=/homepage"
       >
@@ -284,6 +285,7 @@ exports[`renders correct messages when cart has no shipping method 1`] = `
       href="/slug?slug=/homepage"
     >
       <a
+        as="/"
         className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue"
         href="/slug?slug=/homepage"
       >
@@ -493,6 +495,7 @@ exports[`renders correct messages when loading shipping methods 1`] = `
       href="/slug?slug=/homepage"
     >
       <a
+        as="/"
         className="o-button--sml c-cart-summary-buttons__cta c-cart-summary-buttons__cta--continue"
         href="/slug?slug=/homepage"
       >
