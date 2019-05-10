@@ -45,31 +45,6 @@
     color: $text-error;
   }
 
-  .c-cart-summary__mini-button-container {
-    display: flex;
-    align-items: center;
-    margin-top: $global-spacing-unit-huge;
-    margin-bottom: -$global-spacing-unit-huge;
-    background-color: $light-grey;
-    border: 1px solid $border-default;
-    justify-content: center;
-
-    @include breakpoint(desktop) {
-      margin-top: $global-spacing-unit-small;
-      margin-bottom: 0;
-    }
-  }
-
-    .c-cart-summary__mini-button-container-item {
-      width: 50%;
-      padding: $global-spacing-unit-tiny;
-
-      @include breakpoint(desktop) {
-        font-size: 1.3rem;
-        width: 25%;
-      }
-    }
-
 .c-cart-summary-buttons {
   display: flex;
   flex-direction: column;

@@ -114,7 +114,6 @@ export { default as CheckoutCartTotal } from './components/checkout/checkout-car
 export { default as CheckoutSteps } from './components/checkout/checkout-steps'
 export { default as CheckoutStepIcon } from './components/checkout/checkout-step-icon'
 export { default as LineItems } from './components/cart/line-items'
-export { default as MiniPlaceOrder } from './components/checkout/mini-place-order'
 export { default as PaymentIcons } from './components/cart/payment-icons'
 export { default as Payment } from './components/checkout/payment'
 export { default as PaymentHeader } from './components/checkout/payment-header'
