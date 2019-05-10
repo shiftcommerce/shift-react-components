@@ -47,7 +47,7 @@ export class Layout extends Component {
           <this.Image className='c-header__account-image' src={accountIcon} />
           <div className='c-header__account-text'>{signedIn}</div>
         </this.Link >
-        {this.renderAccountDropDown()}
+        { this.renderAccountDropDown() }
       </div>
     )
   }
