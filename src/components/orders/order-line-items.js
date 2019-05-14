@@ -21,7 +21,7 @@ class OrderLineItems extends PureComponent {
   * @return {string} - HTML markup for the component
   */
   renderTotal (lineItem) {
-    const total = t(lineItem, 'pricing.line_inc_tax').safeObject
+    const total = t(lineItem, 'pricing.line_total_inc_tax').safeObject
     const formattedTotal = decimalPrice(total)
 
     return (

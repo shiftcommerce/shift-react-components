@@ -47,6 +47,7 @@
 
   &.show {
     display: flex;
+    top: 23px;
   }
 
   a {
@@ -88,7 +89,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  top: 50px;
+  top: 25px;
   left: -100vw;
   right: -100vw;
   max-width: $global-body-max-width;
