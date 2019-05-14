@@ -31,7 +31,7 @@ const orders = {
             each_ex_tax: 1200,
             each_inc_tax: 1440,
             line_ex_tax: 6000,
-            line_inc_tax: 7200,
+            line_total_inc_tax: 7200,
             line_discount_ex_tax: 0,
             line_discount_inc_tax: 0,
             tax_rate: 12000
@@ -74,7 +74,7 @@ const orders = {
             each_ex_tax: 200,
             each_inc_tax: 240,
             line_ex_tax: 400,
-            line_inc_tax: 480,
+            line_total_inc_tax: 480,
             line_discount_ex_tax: 200,
             line_discount_inc_tax: 240,
             tax_rate: 12000
@@ -176,7 +176,7 @@ const orders = {
             each_ex_tax: 120000,
             each_inc_tax: 144000,
             line_ex_tax: 120000,
-            line_inc_tax: 144000,
+            line_total_inc_tax: 144000,
             line_discount_ex_tax: 0,
             line_discount_inc_tax: 0,
             tax_rate: 12000
@@ -291,7 +291,7 @@ const orders = {
             each_ex_tax: 1200,
             each_inc_tax: 1440,
             line_ex_tax: 6000,
-            line_inc_tax: 7200,
+            line_total_inc_tax: 7200,
             line_discount_ex_tax: 0,
             line_discount_inc_tax: 0,
             tax_rate: 12000
@@ -334,7 +334,7 @@ const orders = {
             each_ex_tax: 200,
             each_inc_tax: 240,
             line_ex_tax: 400,
-            line_inc_tax: 480,
+            line_total_inc_tax: 480,
             line_discount_ex_tax: 200,
             line_discount_inc_tax: 240,
             tax_rate: 12000
@@ -436,7 +436,7 @@ const orders = {
             each_ex_tax: 120000,
             each_inc_tax: 144000,
             line_ex_tax: 120000,
-            line_inc_tax: 144000,
+            line_total_inc_tax: 144000,
             line_discount_ex_tax: 0,
             line_discount_inc_tax: 0,
             tax_rate: 12000
