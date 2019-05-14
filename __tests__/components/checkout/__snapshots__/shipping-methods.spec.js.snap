@@ -173,7 +173,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Monday 13th May
+              Wednesday 15th May
             </span>
           </label>
         </div>
@@ -218,7 +218,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Tuesday 14th May
+              Thursday 16th May
             </span>
           </label>
         </div>
@@ -263,7 +263,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Monday 13th May
+              Wednesday 15th May
             </span>
           </label>
         </div>
@@ -308,7 +308,7 @@ exports[`renders error messages 1`] = `
             <span
               className="c-shipping-method__list-delivery-date"
             >
-              Tuesday 14th May
+              Thursday 16th May
             </span>
           </label>
         </div>
