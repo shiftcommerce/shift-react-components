@@ -10,7 +10,6 @@ import componentMapping from '../../lib/component-mapping'
 function ShippingMethodsSummary ({ headerTitle, onClick, shippingMethod }) {
   const ShippingMethodsHeader = componentMapping('ShippingMethodsHeader')
   const EstimatedDelivery = format(businessDaysFromNow(shippingMethod.meta_attributes.working_days.value), 'dddd Do MMMM')
-  console.log('EstimatedDelivery', EstimatedDelivery)
 
   return (
     <div className='o-form c-shipping-method'>
