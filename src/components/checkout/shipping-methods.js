@@ -62,7 +62,6 @@ class ShippingMethods extends PureComponent {
    */
   renderShippingMethods () {
     const { cartShippingMethod, handleSetShippingMethod, shippingMethods } = this.props
-    console.log(shippingMethods)
 
     if (cartShippingMethod) {
       return shippingMethods.map((method) => {

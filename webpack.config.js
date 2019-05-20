@@ -74,7 +74,7 @@ module.exports = {
       { from: './src/scss/', to: 'scss/' }
     ]),
     new BundleAnalyzerPlugin({
-      analyzerMode: process.env.ANALYZE_BUNDLE ? 'server' : 'disabled'
+      analyzerMode: 'server'
     }),
     new DuplicatePackageCheckerPlugin(),
     new ExtractTextPlugin('bundle.css'),

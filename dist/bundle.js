@@ -58712,13 +58712,19 @@ var build_default = /*#__PURE__*/__webpack_require__.n(build);
 // Libraries
 
 function businessDaysFromNow(days) {
-  var parsedDays = parseInt(days);
-  var startDate = new Date(Date.now());
-  var endDate = Object(date_fns["addDays"])(startDate, parsedDays);
-  var rangeOfDays = Object(date_fns["eachDay"])(startDate, endDate);
+  // Convert number of days to integer
+  var parsedDays = parseInt(days); // Calculate start date
+
+  var startDate = new Date(Date.now()); // Calculate end date (startDate + days)
+
+  var endDate = Object(date_fns["addDays"])(startDate, parsedDays); // Create a range of all dates from startDate to endDate
+
+  var rangeOfDays = Object(date_fns["eachDay"])(startDate, endDate); // Filter through the range and remove any non-business days
+
   var removeWeekends = rangeOfDays.filter(function (date) {
     return !Object(date_fns["isWeekend"])(date);
-  });
+  }); // return number of business days from now
+
   return removeWeekends.length;
 }
 // CONCATENATED MODULE: ./src/components/cart/cart-table-header.js
@@ -59886,7 +59892,6 @@ function (_PureComponent) {
           cartShippingMethod = _this$props2.cartShippingMethod,
           handleSetShippingMethod = _this$props2.handleSetShippingMethod,
           shippingMethods = _this$props2.shippingMethods;
-      console.log(shippingMethods);
 
       if (cartShippingMethod) {
         return shippingMethods.map(function (method) {
@@ -59976,6 +59981,8 @@ function ShippingMethodsSummary(_ref) {
       onClick = _ref.onClick,
       shippingMethod = _ref.shippingMethod;
   var ShippingMethodsHeader = component_mapping('ShippingMethodsHeader');
+  var EstimatedDelivery = Object(date_fns["format"])(businessDaysFromNow(shippingMethod.meta_attributes.working_days.value), 'dddd Do MMMM');
+  console.log('EstimatedDelivery', EstimatedDelivery);
   return external_react_default.a.createElement("div", {
     className: "o-form c-shipping-method"
   }, external_react_default.a.createElement(ShippingMethodsHeader, {
@@ -59988,7 +59995,7 @@ function ShippingMethodsSummary(_ref) {
     className: "u-bold"
   }, shippingMethod.label), external_react_default.a.createElement("p", null, external_react_default.a.createElement("span", {
     className: "u-bold"
-  }, "Estimated Delivery"), ": ", Object(date_fns["format"])(businessDaysFromNow(method.meta_attributes.working_days.value), 'dddd Do MMMM'))));
+  }, "Estimated Delivery"), ": ", EstimatedDelivery)));
 }
 
 ShippingMethodsSummary.propTypes = {

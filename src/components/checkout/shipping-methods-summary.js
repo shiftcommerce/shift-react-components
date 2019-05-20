@@ -9,6 +9,8 @@ import componentMapping from '../../lib/component-mapping'
 
 function ShippingMethodsSummary ({ headerTitle, onClick, shippingMethod }) {
   const ShippingMethodsHeader = componentMapping('ShippingMethodsHeader')
+  const EstimatedDelivery = format(businessDaysFromNow(shippingMethod.meta_attributes.working_days.value), 'dddd Do MMMM')
+  console.log('EstimatedDelivery', EstimatedDelivery)
 
   return (
     <div className='o-form c-shipping-method'>
@@ -17,7 +19,7 @@ function ShippingMethodsSummary ({ headerTitle, onClick, shippingMethod }) {
         <p className='u-bold'>{ shippingMethod.label }</p>
         <p>
           <span className='u-bold'>Estimated Delivery</span>: {
-            format(businessDaysFromNow(method.meta_attributes.working_days.value), 'dddd Do MMMM')
+            EstimatedDelivery
           }
         </p>
       </div>
