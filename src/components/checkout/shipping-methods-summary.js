@@ -1,6 +1,7 @@
 // Libraries
 import React from 'react'
 import PropTypes from 'prop-types'
+import { format } from 'date-fns'
 
 // Lib
 import businessDaysFromNow from '../../lib/business-days-from-now'
@@ -16,7 +17,7 @@ function ShippingMethodsSummary ({ headerTitle, onClick, shippingMethod }) {
         <p className='u-bold'>{ shippingMethod.label }</p>
         <p>
           <span className='u-bold'>Estimated Delivery</span>: {
-            businessDaysFromNow(parseInt(shippingMethod.meta_attributes.working_days.value)).format('dddd Do MMMM')
+            format(businessDaysFromNow(method.meta_attributes.working_days.value), 'dddd Do MMMM')
           }
         </p>
       </div>

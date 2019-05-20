@@ -240,7 +240,7 @@ exports[`renders correct messages when cart has items 1`] = `
           className="c-cart-table__description"
         >
           We will deliver your item: 
-          Wednesday 5th December
+          Thursday 1st January
           .
         </p>
       </div>
@@ -379,7 +379,7 @@ exports[`renders correct messages when cart is empty 1`] = `
           className="c-cart-table__description"
         >
           We will deliver your item: 
-          Wednesday 5th December
+          Thursday 1st January
           .
         </p>
       </div>

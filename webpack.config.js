@@ -1,4 +1,3 @@
-const webpack = require('webpack')
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
@@ -81,7 +80,6 @@ module.exports = {
     new ExtractTextPlugin('bundle.css'),
     new StyleLintPlugin({
       syntax: 'scss'
-    }),
-    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /en-gb/)
+    })
   ]
 }
