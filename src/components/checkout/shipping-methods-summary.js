@@ -1,7 +1,7 @@
 // Libraries
 import React from 'react'
 import PropTypes from 'prop-types'
-import { format } from 'date-fns'
+import format from 'date-fns/format'
 
 // Lib
 import businessDaysFromNow from '../../lib/business-days-from-now'

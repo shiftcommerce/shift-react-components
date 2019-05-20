@@ -1,5 +1,7 @@
 // Libraries
-import { addDays, eachDay, isWeekend } from 'date-fns'
+import addDays from 'date-fns/add_days'
+import eachDay from 'date-fns/each_day'
+import isWeekend from 'date-fns/is_weekend'
 
 export default function businessDaysFromNow (days) {
   // Convert number of days to integer

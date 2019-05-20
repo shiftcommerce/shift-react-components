@@ -1,6 +1,6 @@
 // Libraries
 import React, { PureComponent } from 'react'
-import { format } from 'date-fns'
+import format from 'date-fns/format'
 import t from 'typy'
 
 // Lib
