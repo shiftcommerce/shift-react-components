@@ -3,9 +3,9 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import Pluralize from 'react-pluralize'
 import t from 'typy'
+import format from 'date-fns/format'
 
 // Lib
-import { decimalPrice } from '../../lib/decimal-price'
 import businessDaysFromNow from '../../lib/business-days-from-now'
 
 class CartTableHeader extends PureComponent {
@@ -33,12 +33,12 @@ class CartTableHeader extends PureComponent {
    * @todo update to use actual delivery date, currently using data from fixture
    */
   renderDeliveryEstimate (shippingMethod) {
-    const workingDays = parseInt(t(shippingMethod, 'meta_attributes.working_days.value').safeObject)
+    const workingDays = t(shippingMethod, 'meta_attributes.working_days.value').safeObject
 
     return (
       <div className='c-cart-table__header-grid-item c-cart-table__header-grid-item--b'>
         <h1 className='c-cart-table__title'>Estimated Delivery</h1>
-        <p className='c-cart-table__description'>We will deliver your item: { businessDaysFromNow(workingDays).format('dddd Do MMMM') }.</p>
+        <p className='c-cart-table__description'>We will deliver your item: { format(businessDaysFromNow(workingDays), 'dddd Do MMMM') }.</p>
       </div>
     )
   }

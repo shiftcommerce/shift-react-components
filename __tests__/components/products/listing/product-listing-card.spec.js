@@ -10,9 +10,9 @@ import productSearchHit from '../../../fixtures/product-search-hit'
 test('renders ProductListingCard correctly', () => {
   // Act
 
-  // at the moment we dont pass the image size throught algolia,
-  // the fixture will need updating when we do. At the moment
-  // product listing is set to default to 280
+  // Currently we dont pass the image size through algolia,
+  // the fixture will need updating when we do. Currently,
+  // product listing is set to default to 280.
 
   const wrapper = mount(
     <ProductListingCard

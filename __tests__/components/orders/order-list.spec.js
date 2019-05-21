@@ -1,8 +1,6 @@
 // Libraries
 import React from 'react'
-import moment from 'moment-business-days'
-
-moment.locale('en-gb')
+import format from 'date-fns/format'
 
 // Component
 import OrderList from '../../../src/components/orders/order-list'
@@ -24,7 +22,7 @@ test('renders correctly', () => {
   const order = orders.data[0]
   const shippingTotal = instance.renderShippingTotal(order)
   const orderTotal = penceToPounds(order.pricing.total_inc_tax)
-  const orderDate = moment(new Date(order.placed_at)).format('MMM D, YYYY')
+  const orderDate = format(new Date(order.placed_at), 'MMM D, YYYY')
 
   // Assert
   expect(wrapper).toMatchSnapshot()

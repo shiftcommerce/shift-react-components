@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import format from 'date-fns/format'
 
 // Libs
 import businessDaysFromNow from '../../lib/business-days-from-now'
@@ -79,7 +80,7 @@ class ShippingMethods extends PureComponent {
               <span className='c-shipping-method__list-cost'>&pound;{ decimalPrice(method.total) }</span>
               <span className='c-shipping-method__list-title'>{ method.label }</span>
               <span className='c-shipping-method__list-delivery-date-label'>Estimated Delivery: </span>
-              <span className='c-shipping-method__list-delivery-date'>{ businessDaysFromNow(parseInt(method.meta_attributes.working_days.value)).format('dddd Do MMMM') }</span>
+              <span className='c-shipping-method__list-delivery-date'>{ format(businessDaysFromNow(method.meta_attributes.working_days.value), 'dddd Do MMMM') }</span>
             </label>
           </div>
         )
