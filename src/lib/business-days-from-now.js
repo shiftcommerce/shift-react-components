@@ -19,6 +19,6 @@ export default function businessDaysFromNow (days) {
   // Filter through the range and remove any non-business days
   const removeWeekends = rangeOfDays.filter(date => !isWeekend(date))
 
-  // return number of business days from now
-  return removeWeekends.length
+  // return the correct business date
+  return removeWeekends.pop()
 }

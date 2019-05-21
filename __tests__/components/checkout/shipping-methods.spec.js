@@ -1,5 +1,6 @@
 // Libraries
 import React from 'react'
+import MockDate from 'mockdate'
 
 // Components
 import ShippingMethods from '../../../src/components/checkout/shipping-methods'
@@ -12,6 +13,13 @@ import cartFixture from '../../fixtures/cart'
 import shippingMethodsFixture from '../../fixtures/shipping-methods'
 
 describe('ShippingMethods', () => {
+  // Setup mock date for testing business days
+  MockDate.set('5/20/2019')
+
+  afterAll(() => {
+    MockDate.reset()
+  })
+
   test('renders a nothing when shipping methods are loading', () => {
     const wrapper = shallow(<ShippingMethods />)
 
@@ -40,7 +48,7 @@ describe('ShippingMethods', () => {
     expect(wrapper.find('div').first()).toHaveClassName(mockClassName)
     expect(wrapper).toIncludeText(shippingMethodsFixture[0].label)
     // Check for estimated delivery
-    expect(wrapper).toIncludeText('Thursday 1st January')
+    expect(wrapper).toIncludeText('Tuesday 21st May')
 
     // Get the last shipping method in the fixture
     const lastShippingMethodFixture = shippingMethodsFixture[shippingMethodsFixture.length - 1]

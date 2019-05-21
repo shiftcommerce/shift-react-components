@@ -20,7 +20,7 @@ test('renders correct messages when cart has items', () => {
 
   // assert
   expect(wrapper).toMatchSnapshot()
-  expect(wrapper).toIncludeText('Thursday 1st January') // estimated delivery date
+  expect(wrapper).toIncludeText('Wednesday 5th December') // estimated delivery date
   expect(wrapper).toIncludeText('You have 2 items in your shopping basket')
   expect(wrapper.find('section')).toHaveClassName(className)
 

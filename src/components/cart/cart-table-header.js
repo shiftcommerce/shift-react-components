@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import Pluralize from 'react-pluralize'
 import t from 'typy'
-import { format } from 'date-fns'
+import format from 'date-fns/format'
 
 // Lib
 import businessDaysFromNow from '../../lib/business-days-from-now'
@@ -38,7 +38,7 @@ class CartTableHeader extends PureComponent {
     return (
       <div className='c-cart-table__header-grid-item c-cart-table__header-grid-item--b'>
         <h1 className='c-cart-table__title'>Estimated Delivery</h1>
-        <p className='c-cart-table__description'>We will deliver your item: {format(businessDaysFromNow(workingDays), 'dddd Do MMMM') }.</p>
+        <p className='c-cart-table__description'>We will deliver your item: { format(businessDaysFromNow(workingDays), 'dddd Do MMMM') }.</p>
       </div>
     )
   }
